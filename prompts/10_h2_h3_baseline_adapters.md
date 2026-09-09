@@ -1,56 +1,34 @@
-# Prompt 10 — h=2 and h=3 Baseline Adapters
+# Prompt 10 - Claim-Scoped h=2/h=3 Baselines
 
-## Goal
+M5 / P10.1; execute only for the claimed specialization strata.
 
-Integrate specialization baselines without misrepresenting their supported problem scope.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/BASELINE_AUDIT.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `papers/2023-icde-lds.md`
-- `papers/2504.10937v1.md`
-- relevant h=2/h=3 sections of `papers/2408.14022v1.md`
+## Deliver
 
-## Baseline matrix
+Read `BASELINE_AUDIT.md` and the relevant supplied papers. Prioritize LDS-Opt/LDScvx
+for h=2 and the actual LTDScvx implementation for h=3. LDSflow/LTDSflow are optional
+diagnostics. An edge repository is not assumed to contain triangle code.
 
-- `h=2`: LDS-Opt/LDS-DC if authoritative code is obtainable, LDScvx, LDSflow.
-- `h=3`: LTDScvx if authoritative code is obtainable, LTDSflow.
-- Greedy or approximate CDS methods may be included only in a clearly labeled non-exact/effectiveness panel, never in the exact-runtime winner claim.
+For each selected method pin source/license, build or record an explicit blocker,
+audit output/exactness/parameters/timing and wrap common normalized input. Separate
+author code from any approved paper-based reimplementation. Never present h=2/3
+methods as arbitrary-h solutions.
 
-## Deliverables
+## Gate
 
-For each candidate baseline:
+Apply the shared definition-level toy and real smoke validation. Report exact
+available output and tie policy, not invented vertex sets reconstructed from a
+rounded density. Keep exclusions visible. Do not make all historical baselines or
+unavailable code prerequisites for the core correctness release.
 
-1. Record repository/source provenance, commit, license, supported scope, exactness, build status, input/output semantics, and paper defaults in `docs/BASELINE_AUDIT.md`.
-2. Prefer unmodified author code with an external adapter.
-3. Pin source and dependencies.
-4. Convert only the common normalized input into the baseline format.
-5. Parse output into the common exact schema when the baseline exposes enough information.
-6. Validate on tiny graphs for the exact supported `h`:
-   - vertex sets;
-   - exact density;
-   - rank/tie semantics;
-   - behavior when fewer than `k` answers exist.
-7. Label unavailable or non-reproducible methods explicitly; never silently replace them with a home-grown implementation.
-8. Keep separate build/run scripts per baseline.
+## Completion evidence
 
-## Special checks
-
-- Confirm that LDScvx is an edge-density (`h=2`) method.
-- Confirm that LTDScvx/LTDSflow are triangle (`h=3`) methods.
-- Confirm that the 2023 LDS divide-and-conquer implementation is not treated as arbitrary-h.
-- Audit whether public repositories include all algorithms claimed in the papers or only subsets.
-- Audit output tie behavior; normalize reporting but do not alter which solutions the baseline returns.
-
-## Boundaries
-
-- Never include h=2/h=3-only runtime points in an `h>=4` comparison.
-- Never call an approximate method exact.
-- Never compare a reimplementation as the official baseline without a separate label.
-- Never patch algorithm logic merely to make outputs match; investigate first.
-
-## Verification
-
-Produce a baseline status table with `ready`, `blocked-license`, `blocked-source`, `build-failed`, `semantic-mismatch`, or `validated`. Attach commands and tiny-graph results for every `validated` method.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

@@ -1,0 +1,112 @@
+[
+  {
+    "build": "build",
+    "source": "build/generated/build_info.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build/generated/build_info.cpp"
+  },
+  {
+    "build": "build",
+    "source": "src/cli/dispatch.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp"
+  },
+  {
+    "build": "build",
+    "source": "src/io/status.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp"
+  },
+  {
+    "build": "build",
+    "source": "src/cli/main.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp"
+  },
+  {
+    "build": "build",
+    "source": "tests/skeleton_test.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "source": "build-sanitize/generated/build_info.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-sanitize/generated/build_info.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "source": "src/cli/dispatch.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "source": "src/io/status.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "source": "src/cli/main.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "source": "tests/skeleton_test.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp"
+  },
+  {
+    "build": "build-sanitize",
+    "target": "vflhcds",
+    "link_command": "/usr/bin/c++ -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -o vflhcds  libvflhcds_lib.a"
+  },
+  {
+    "build": "build-sanitize",
+    "target": "vflhcds_skeleton_test",
+    "link_command": "/usr/bin/c++ -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -o vflhcds_skeleton_test  libvflhcds_lib.a"
+  },
+  {
+    "build": "build-release",
+    "source": "build-release/generated/build_info.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-release/generated/build_info.cpp"
+  },
+  {
+    "build": "build-release",
+    "source": "src/cli/dispatch.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp"
+  },
+  {
+    "build": "build-release",
+    "source": "src/io/status.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp"
+  },
+  {
+    "build": "build-release",
+    "source": "src/cli/main.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp"
+  },
+  {
+    "build": "build-release",
+    "source": "tests/skeleton_test.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp"
+  },
+  {
+    "build": "build-relwithdebinfo",
+    "source": "build-relwithdebinfo/generated/build_info.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-relwithdebinfo/generated/build_info.cpp"
+  },
+  {
+    "build": "build-relwithdebinfo",
+    "source": "src/cli/dispatch.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp"
+  },
+  {
+    "build": "build-relwithdebinfo",
+    "source": "src/io/status.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp"
+  },
+  {
+    "build": "build-relwithdebinfo",
+    "source": "src/cli/main.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp"
+  },
+  {
+    "build": "build-relwithdebinfo",
+    "source": "tests/skeleton_test.cpp",
+    "compile_command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp"
+  }
+]

@@ -1,54 +1,37 @@
-# Prompt 11 — Unified Experiment Harness and Fairness Controls
+# Prompt 11 - Experiment Harness and Evidence Levels
 
-## Goal
+M5 / P11.1-P11.3; requires executable solver and at least the relevant baseline adapter.
 
-Create a reproducible harness that runs the proposed solver and validated baselines on identical normalized inputs and produces auditable raw results.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `docs/BASELINE_AUDIT.md`
-- `docs/REPRODUCIBILITY.md`
-- all validated CLI/output contracts
+## Deliver
 
-## Deliverables
+Read `EXPERIMENT_PLAN.md` and `REPRODUCIBILITY.md`. Freeze a machine/configuration
+record containing actual datasets/checksums, h/k grid, repeats, seed, thread count,
+timeout and memory budgets before runs. Do not invent confirmations or select
+favorable settings after observing performance.
 
-1. Dataset manifest schema with source, checksum, license/terms, original format, normalization command, normalized fingerprint, `|V|`, `|E|`, and clique statistics where feasible.
-2. One normalization pipeline producing a canonical graph consumed by all adapters.
-3. Experiment configuration files covering:
-   - algorithm and pinned commit;
-   - dataset fingerprint;
-   - `h`, `k`;
-   - repetitions and warm-up policy;
-   - CPU/thread affinity;
-   - memory and timeout limits;
-   - algorithm-specific paper-default parameters;
-   - random execution order seed.
-4. A runner that captures:
-   - command and environment;
-   - start/end time;
-   - wall/user/system time;
-   - peak RSS;
-   - exit/status/timeout/OOM;
-   - stdout/stderr files;
-   - semantic result hash and output-validator result.
-5. Randomized algorithm execution order by block, with recorded seed.
-6. Raw immutable per-run manifests under `results/raw/` and derived tables under `results/derived/`.
-7. Aggregation scripts reporting median and dispersion, not only best time.
-8. Correctness gate: a run is performance-valid only when its output passes semantic validation for the relevant comparison.
-9. Dry-run and local-small configurations suitable for CI.
+Run algorithms on losslessly converted common input; randomized order within each
+block; immutable command/log/manifest/output records; explicit completed, timeout,
+OOM, error and incomplete-output statuses. Preserve all outcomes.
 
-## Fairness rules
+Separate definition-checked, structural-checked and cross-implementation-agreement
+evidence. Strict order comparisons need compatible total ordering; kth ties need
+audited cutoff/count behavior. Unknown q or incomplete ties cannot be certified by
+rounded density agreement.
 
-- Same normalized graph and vertex mapping.
-- Same `h`, `k`, output requirement, timeout, and resource cap.
-- Distinguish preprocessing-inclusive and solver-only time.
-- Distinguish one-time clique-index build from per-query time; report both when amortization is studied.
-- Use one thread unless a separate parallel experiment gives every method an equivalent opportunity.
-- Preserve timeouts/OOMs in tables.
-- Never infer correctness from equal output counts alone.
+Time process-launch-to-output end to end; post-load includes enumeration; post-index
+is only a scope-qualified diagnostic. External validation time/RSS is separate;
+internal baseline verification remains timed. Missing phase values are unavailable,
+not zero. Run a small shared smoke configuration before the main suite.
 
-## Verification
+## Completion evidence
 
-Run a complete small experiment matrix with at least two datasets, two `h` values, two `k` values, and every currently validated applicable algorithm. Re-run aggregation and verify it is deterministic from raw manifests.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

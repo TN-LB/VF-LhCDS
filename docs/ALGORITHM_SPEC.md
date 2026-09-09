@@ -1,307 +1,206 @@
-# Executable Algorithm Specification for VF-LhCDS
+# Algorithm Specification: VF-LhCDS
 
-This document translates the theory into implementation contracts. It does not replace the proof file. If this document conflicts with `papers/veri_free_lhcds_v3_1_submit.md`, the proof file wins and this document must be corrected.
+Authority: `papers/veri_free_lhcds_v3_1_submit.md`. Revision: 2026-09-09.
+Proof-to-implementation clarifications are in `THEORY_TO_CODE_AUDIT.md`.
+They do not silently rewrite the manuscript.
 
-## 1. Input and output contract
+## 1. Domain and output
 
-### Input
+Input: finite nonempty simple undirected `G=(V,E)`, fixed integer `h>=2`, and
+integer `k>=1` (or an explicit `--all` mode). Reject k=0 and invalid h.
+All subgraphs are vertex-induced; connectivity uses ordinary graph edges.
+Preserve the complete declared vertex universe, including isolates. Canonical
+input declares n or a vertex list; raw-data conversion must not invent missing
+isolates or drop vertices that occur only in removed loops.
 
-- finite undirected simple graph `G=(V,E)`, `V` nonempty;
-- integer `h >= 2`;
-- integer `k >= 1`;
-- optional mode:
-  - `fixed-k` default: return the first `min(k,q)` LhCDSes;
-  - `include-kth-ties`: finish the terminal layer containing the kth result.
+`mu_h(S)` counts each contained h-clique exactly once; `mu_h(empty)=0`.
+For nonempty S, `d_h(S)=mu_h(S)/|S|`. S is an LhCDS exactly when it is connected
+and maximal among the h-clique `d_h(S)`-compact sets of G (Defs. 1.1-1.3).
 
-The loader may accept non-simple edge lists, but it must deterministically convert them to a simple graph and report removed self-loops and duplicate undirected edges.
+Rank by decreasing exact density, then lexicographic order of sorted original-ID
+vectors (D006). Original IDs use one declared total order: numeric for canonical
+integer IDs; text IDs require a documented deterministic conversion. Return the
+first `min(k,q)` sets. `--all` runs to exhaustion. Isolates and zero-density
+solutions are not silently filtered. If no h-clique exists (including h>|V|),
+the solutions are exactly the ordinary connected components of G, all of density 0.
 
-### Output
+The default version is fixed-k only. Tie-inclusive output, if later enabled,
+finishes the terminal layer containing the kth output.
 
-For each result, serialize:
-
-- rank;
-- sorted original vertex IDs;
-- `|S|`;
-- exact `mu_h(S)`;
-- exact density numerator and denominator in reduced form;
-- deterministic subset hash;
-- birth-layer index if available.
-
-Results are ordered by decreasing exact density and then by a fixed total order on subsets. The default engineering choice is lexicographic order of sorted original vertex-ID vectors; record this in `DECISIONS.md`.
-
-## 2. Core definitions
-
-For `S subseteq V`:
+## 2. Parametric and interval types
 
 ```text
-Psi_h(S) = { C subseteq S : |C|=h and G[C] is K_h }
-mu_h(S)  = |Psi_h(S)|
-d_h(S)   = mu_h(S) / |S|, S nonempty
+Q_lambda(S) = mu_h(S) - lambda*|S|
+F_h(lambda) = union of all global maximizers of Q_lambda
+ChainInterval = (X,Y,mu_h(X),mu_h(Y)), with X,Y principal-chain sets and X < Y
+OracleBounds = (X,Y_oracle), with X subseteq Y_oracle
 ```
 
-For `U subseteq S`:
+The chain is `empty=B0 < ... < Br=V` (1.11-1.14). A ChainInterval is not merely
+any nested pair. The endpoints are immutable during an oracle query.
+
+Provide two explicit API meanings:
+
+1. `largest_restricted(lambda,X,Y_oracle)`: largest maximizer over
+   `X subseteq T subseteq Y_oracle`; valid for arbitrary nested bounds.
+2. `global_F(lambda,certified_bounds)`: delegates to the restricted primitive,
+   and promises global F only with a recorded containment reason.
+
+Allowed global certificates: full `[empty,V]`; original separator bounds from
+Lemma 1.15; or the query-local restriction of a certified query using Lemma 1.22.
+A runtime subset check is not itself a proof of global containment. The tiny
+reference can independently check containment during tests.
+
+Global standalone queries can return empty or equal X. Only separator-generated
+queries require strict progress `X proper-subset F_h(lambda) subseteq Y`.
+For arbitrary CLI `--x/--y` bounds, label the result `restricted`; do not advertise
+it as global without a valid certificate. See audit O05 for the non-strict extension.
+
+## 3. Exact separator and top-k traversal
 
 ```text
-Delta_h(U;S) = mu_h(S) - mu_h(S\U)
-```
-
-A nonempty `S` is h-clique `lambda`-compact iff:
-
-1. `G[S]` is connected; and
-2. `Delta_h(U;S) >= lambda * |U|` for every `U subseteq S`.
-
-An LhCDS is a connected induced subgraph whose vertex set `S` is maximal h-clique `d_h(S)`-compact in `G`.
-
-## 3. Parametric maximizer
-
-For exact rational `lambda >= 0`:
-
-```text
-Q_lambda(S) = mu_h(S) - lambda * |S|
-F_h(lambda) = inclusion-wise largest maximizer of Q_lambda over S subseteq V
-```
-
-The distinct values of `F_h(lambda)` form a nested principal chain as lambda decreases:
-
-```text
-empty = B_0 proper-subset B_1 proper-subset ... proper-subset B_r = V.
-```
-
-The production algorithm does not need to know `r` in advance.
-
-## 4. Exact separator and recursive solver
-
-For two principal-chain sets `X proper-subset Y`, define:
-
-```text
-d_h(Y,X) = (mu_h(Y)-mu_h(X)) / (|Y|-|X|).
-```
-
-Let `lambda=d_h(Y,X)` and `Z=F_h(lambda)`.
-
-- If `X,Y` are consecutive chain sets, then `Z=Y`.
-- Otherwise, `X proper-subset Z proper-subset Y`.
-
-### Reference pseudocode
-
-```text
-solve_interval(X, Y, remaining_k):
-    if remaining_k == 0:
-        return []
-
-    lambda = reduce_fraction(mu_h(Y)-mu_h(X), |Y|-|X|)
-    Z = exact_F_oracle(lambda, X, Y)
-
-    if Z == Y:
-        candidates = []
+visit(X,Y):                         # original principal-chain endpoints
+    lambda = Fraction(mu(Y)-mu(X), |Y|-|X|)
+    Y_oracle = Y                   # minimum correct version
+    if safe_core and lambda > 0:
+        Y_oracle = Y intersect core_ceil(lambda)(G)
+    Z = global_F(lambda, certified bounds [X,Y_oracle])
+    require X proper-subset Z subseteq Y
+    if Z == Y:                     # NEVER compare with Y_oracle here
+        accepted = []
         for W in connected_components(G[Y\X]):
-            if no_edge_between(W, X):
-                candidates.append(W)
-        sort candidates by fixed subset order
-        return first candidates permitted by remaining_k/tie mode
+            if E(W,X) is empty:
+                accepted.append(W)
+        sort accepted by original-ID subset order
+        emit accepted one by one; stop immediately after k outputs in fixed-k mode
+    else:
+        visit(X,Z)
+        if output limit not reached:
+            visit(Z,Y)
 
-    results = solve_interval(X, Z, remaining_k)
-    if len(results) < remaining_k:
-        results += solve_interval(Z, Y, remaining_k-len(results))
-    return results
+start with visit(empty,V)
 ```
 
-Top-level call:
+An explicit stack pushes right before left. Do not eagerly query the right child
+before left processing finishes. Termination and output order follow 1.15-1.17.
+Every nonterminal split shrinks both intervals. Empty terminal output is valid:
+some layers extend/merge older structure without creating a new leaf.
+
+At a terminal pair, only the components accepted by `E(W,X)=empty` are guaranteed
+to have density lambda. Rejected increment components need not have that density.
+Compute connectivity and anti-adjacency in the original graph, against all of X.
+No deletion-subset/self-denseness/maximality verifier is used by this solver.
+
+## 4. Restricted closure primitive
+
+Require exact reduced `lambda=a/b`, `a>=0`, `b>0`, and `X subseteq Y_oracle`.
+Let `N=|Y_oracle\X|`.
+
+If N=0, return X. If a=0, return Y_oracle without a cut. In a certified global
+zero-lambda query, `F_h(0)=V` forces `Y_oracle=V`. A zero query with a smaller
+uncertified upper bound returns a restricted, not global, optimum.
+
+For positive a and N, enumerate every clique C contained in Y_oracle but not X.
+Aggregate nonempty residual footprints `R=C\X` with multiplicity w(R):
 
 ```text
-solve_interval(empty, V, k)
+mu_h(X union S)-mu_h(X) = sum_R w(R)*1[R subseteq S],  S subseteq Y_oracle\X
 ```
 
-The left interval must be processed before the right interval because its layers have strictly larger densities.
+Cliques crossing the boundary of X are included. Do not enumerate only within
+`Y_oracle\X`. Empty footprint records are never stored.
 
-An iterative stack implementation is allowed only if it is behaviorally identical. To preserve left-first order, push the right child before the left child.
-
-## 5. Exact interval oracle
-
-### 5.1 Preconditions
-
-The oracle receives:
-
-- reduced `lambda=a/b`, `a>=0`, `b>0`;
-- sets `X proper-subset Y` satisfying `X proper-subset F_h(lambda) subseteq Y`;
-- `N=|Y\X|`.
-
-For the basic solver, recursive chain intervals provide the precondition. A reduction may shrink `Y` only when separately proved safe.
-
-If `a=0`, return `Y` directly.
-
-### 5.2 Residual footprints
-
-For every h-clique `C` contained in `Y` but not contained in `X`, define:
+Set `L=N+1` and construct the theorem's network:
 
 ```text
-R = C \ X, where empty != R subseteq Y\X.
+s -> p_R       capacity L*b*w(R)
+p_R -> v       capacity M_inf, for each v in R
+v -> t         capacity L*a-1
+M_inf = 1 + sum_R L*b*w(R) + N*(L*a-1)
 ```
 
-Aggregate equal residual footprints:
+All interval vertices are represented, even when they have no footprint incidence.
+Run exact max flow and take interval vertices reachable from s in the residual
+graph. Return their union with X.
+
+The induced closure weight is:
 
 ```text
-w(R) = number of h-cliques C in Psi_h(Y) with C\X = R.
+W(S) = L*(b*(mu_h(X union S)-mu_h(X))-a*|S|) + |S|.
 ```
 
-The implementation must satisfy, for every `S subseteq Y\X`:
+The primary value is integral, and `L>N`; the secondary term maximizes cardinality
+among primary maximizers. Union closure then selects the unique inclusion-wise
+largest set. This is NOT lexicographic vertex-ID ordering; that is a separate
+output-order rule. Arbitrary min-cut tie handling or a floating epsilon is invalid.
+
+## 5. Numeric contract
+
+Counts, lambda numerators/denominators, objective values, and all semantic
+comparisons are exact. Objective comparisons can be negative: do not subtract
+unsigned values without a signed/big-integer representation or safe comparison.
+
+D005 requires a real automatic arbitrary-precision path, not only an interface.
+Perform exact preflight bounds before selecting the checked unsigned-128 flow
+backend. At a positive query, with `W_total=sum_R w(R)`, check at least:
 
 ```text
-mu_h(X union S) - mu_h(X)
-    = sum over residual footprints R of w(R) * indicator[R subseteq S].
+source_total = (N+1)*b*W_total
+sink_total   = N*((N+1)*a-1)
+M_inf        = 1+source_total+sink_total
 ```
 
-This identity is a first-class unit test.
+Check every product/sum and any larger implementation accumulator. Count and
+fraction arithmetic must also remain exact before the network is allocated.
+For recursive queries, `a<=binom(n,h)`, `b<=n`, `N<=n` provide conservative bounds;
+arbitrary standalone rationals need their actual exact values checked.
 
-### 5.3 Closure network
+If unsafe for fixed width, choose arbitrary precision before construction or
+restart safely from exact data. Test this dispatch with deliberately oversized
+standalone rational parameters, without needing an impossibly large graph.
+Never silently round, wrap, saturate infinity, or publish partial results as exact
+completion. OOM/resource-limit is an explicit run status, not an alternate answer.
 
-Let `L=N+1`. Create:
+## 6. Query-local safe core restriction
 
-- source `s`, sink `t`;
-- one footprint node `p_R` for every residual footprint with positive weight;
-- one vertex node for each `v in Y\X`.
-
-Node weights:
+For positive `lambda_0<=lambda`, Lemma 1.22 gives:
 
 ```text
-omega(p_R) = L * b * w(R)
-omega(v)   = 1 - L * a
+F_h(lambda) subseteq core_ceil(lambda)(G) subseteq core_ceil(lambda_0)(G)
+Y_oracle = Y intersect core_ceil(lambda_0)(G)
 ```
 
-Closure implications:
+Use `lambda_0=lambda` initially; no heuristic threshold estimation is needed.
+The certified original query and this containment establish
+`X proper-subset F_h(lambda) subseteq Y_oracle subseteq Y`.
+Compute N,L,footprints and capacities using Y_oracle, but retain the original
+lambda, chain endpoints, terminal comparison and extraction graph.
 
-```text
-p_R -> v for every v in R.
-```
+Y_oracle need not belong to the principal chain. Shrinking the graph globally or
+permanently deleting its complement would lose lower-density/zero-density results.
+A cached higher-threshold core cannot be reused for a lower query without a proof.
+Peeling uses current h-clique degrees and invalidates each clique once; ordinary
+vertex degree is a substitute only at h=2.
 
-Equivalent s-t network:
+## 7. Counts, caches, and telemetry
 
-- `s -> p_R` capacity `L*b*w(R)`;
-- `p_R -> v` capacity `M_inf` for every `v in R`;
-- `v -> t` capacity `L*a - 1`;
+Reuse stored endpoint `mu_h` values. Canonical set equality is exact, not hash-only.
+All cache keys include graph identity, h, bounds and lambda as applicable.
 
-where a safe exact value is:
+Distinguish:
+- `logical_interval_queries`: one per visited recursion node, including lambda=0;
+- `mincut_calls`: actual positive-network flow executions;
+- `global_oracle_cache_hits`, if a later cache exists;
+- original interval size and reduced oracle size.
 
-```text
-M_inf = 1 + sum_R L*b*w(R) + N*(L*a-1).
-```
+An unmodified complete traversal makes exactly `2r-1` logical queries (1.18).
+It may make fewer cuts. A partial top-k traversal has no proven O(k) call bound.
+Network telemetry reports logical forward arcs separately from residual arcs:
+`N+P+2` nodes and at most `N+(h+1)P` forward arcs (1.20).
 
-All products and sums are checked for overflow before graph construction.
+## 8. Scope boundary
 
-Run a deterministic exact min-cut. Let `S_star` be the interval vertex nodes reachable from `s` in the residual graph after max flow. Return:
-
-```text
-F_h(lambda) = X union S_star.
-```
-
-### 5.4 Tie semantics
-
-The scaled objective represented by the network is equivalent to:
-
-```text
-L*b*(mu_h(X union S)-mu_h(X)-lambda*|S|) + |S|.
-```
-
-Because `L=N+1`, the first term dominates every possible cardinality difference. Therefore the oracle first maximizes `Q_lambda` and then maximizes selected cardinality. Since parametric maximizers are union-closed, this selects the unique inclusion-wise largest maximizer.
-
-Do not replace the `+|S|` term with an epsilon float or an arbitrary min-cut tie rule.
-
-## 6. Terminal layer extraction
-
-When `Z=Y`, compute connected components of the induced graph on `Y\X`. For each component `W`, emit it iff:
-
-```text
-E(W,X) is empty.
-```
-
-Important details:
-
-- Connectivity is ordinary edge connectivity in `G`, not clique adjacency.
-- The adjacency test is against all of `X`.
-- Components rejected due to an edge to `X` are not candidates requiring later verification; they are internal hierarchy structure.
-- Components in the same terminal layer have equal density. Apply the fixed subset order for deterministic fixed-k truncation.
-
-## 7. Safe h-clique-core reduction
-
-For a threshold `t`, the `(t,Psi_h)`-core is the largest induced subgraph in which every vertex belongs to at least `t` h-cliques.
-
-For an oracle query at `lambda`, theory allows restricting to the `ceil(lambda)` h-clique core. In an interval implementation with certified lower bound `lambda_0 <= lambda`, a safe upper set is:
-
-```text
-Y_prime = Y intersect core_{ceil(lambda_0),Psi_h}(G)
-```
-
-provided the theorem's preconditions are checked and `X subseteq Y_prime` remains true. The optimized oracle must assert:
-
-```text
-X proper-subset F_h(lambda) subseteq Y_prime subseteq Y.
-```
-
-Keep this optimization disabled until the basic oracle passes exhaustive tests.
-
-## 8. Required exact data types
-
-### Fraction
-
-```text
-struct Fraction {
-    unsigned integer numerator;
-    unsigned integer denominator;  // positive
-}
-```
-
-Normalize by gcd. Compare using checked cross multiplication or multiprecision integers.
-
-### Counts
-
-`mu_h`, footprint weights, clique degrees, and set sizes are integers. The code must reject an instance if a chosen fixed-width type cannot represent a value; silent wraparound is forbidden.
-
-### Capacities
-
-Recommended production default: checked `unsigned __int128`. Provide decimal formatting utilities. Keep the flow implementation generic enough that a slower multiprecision test backend could be introduced if needed.
-
-## 9. Set and cache semantics
-
-Every set passed to the oracle must be canonical:
-
-- sorted unique internal vertex IDs;
-- hash includes graph identity and `h`;
-- equality is exact set equality, never hash-only equality.
-
-Useful cache keys:
-
-- `mu_h(S)` by canonical set hash plus collision check;
-- oracle result by `(X,Y,a,b,configuration)`;
-- membership marker epochs for repeated filtering.
-
-Caches may change performance only, never output.
-
-## 10. Edge cases that require explicit tests
-
-- graph with one vertex;
-- graph with no h-cliques;
-- disconnected graph;
-- isolated vertices;
-- complete graph;
-- disjoint union of equal-density components;
-- multiple maximizers of `Q_lambda` at a breakpoint;
-- zero-density terminal layer;
-- `h>|V|`;
-- `k` larger than the number of LhCDSes;
-- many cliques sharing the same residual footprint;
-- all residual footprints are singletons;
-- `X=empty`, `Y=V`;
-- capacity near supported numeric limit.
-
-## 11. Non-goals for the first correct version
-
-Do not include these in the initial correctness milestone:
-
-- approximate clique enumeration;
-- sampling;
-- floating-point parametric search;
-- heuristic candidate verification;
-- GPU implementation;
-- distributed execution;
-- unproved pruning;
-- silent fallback to a different objective when memory is exhausted.
+The first implementation has materialized clique storage and fixed-k output only.
+Optional backends/features are tested only once implemented; they do not block the
+minimum correctness milestone. Exact theoretical solvability for fixed h is not
+a practical scalability promise or a proof of an unimplemented optimization.

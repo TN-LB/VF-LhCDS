@@ -1,0 +1,11 @@
+Test project /Users/nost/Documents/VF-LhCDS/build-relwithdebinfo
+    Start 1: m0_cpp_skeleton
+1/3 Test #1: m0_cpp_skeleton ..................   Passed    0.26 sec
+    Start 2: m0_cli_contract
+2/3 Test #2: m0_cli_contract ..................   Passed    0.29 sec
+    Start 3: m0_reference_skeleton
+3/3 Test #3: m0_reference_skeleton ............   Passed    0.31 sec
+
+100% tests passed out of 3
+
+Total Test time (real) =   0.86 sec

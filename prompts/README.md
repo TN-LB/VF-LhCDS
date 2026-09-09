@@ -1,48 +1,34 @@
-# Codex Prompt Index for VF-LhCDS
+# Prompt Index - VF-LhCDS
 
-这些 prompt 按依赖顺序组织。每次只执行一个主 prompt；完成、审查并提交后再进入下一阶段。除非 prompt 明确允许，不要把多个阶段合并成一次大改动。
+Revision 2026-09-09. Use the task IDs and gates in `docs/IMPLEMENTATION_PLAN.md`
+and `docs/TASKS.md`. Filenames are retained where possible; numbering is not a
+requirement to execute all optional work. Every task uses the centralized proof
+obligations, test IDs and decision log rather than duplicating specifications.
 
-## 建议顺序
+| Milestone | Prompts | Scope / dependency |
+|---|---|---|
+| M0 | 00_theory_audit_and_repo_bootstrap.md | Contracts and skeleton only |
+| M1 | 01_exhaustive_reference_oracle.md | Independent truth and independent chain |
+| M2 | 02_graph_and_clique_infrastructure.md; 03_exact_closure_oracle.md | One clique backend, exact restricted/global oracle, real numeric fallback |
+| M3 | 04_divide_and_conquer_solver.md; 05_differential_test_campaign.md; 06_cli_telemetry_and_output_contract.md; 13_correctness_review.md | Fixed-k solver, evidence and unoptimized correctness freeze |
+| M4 optional | 07_safe_clique_core_reduction.md; 08_profile_guided_optimization.md | Query-local safe core; one measured optimization at a time |
+| M5 | 09_ippv_baseline_adapter.md; 09b_dclds_baseline_adapter.md; 10_h2_h3_baseline_adapters.md as applicable; 11_experiment_harness.md; 12_ablation_and_scalability.md; 14_performance_review.md; 15_reproducibility_release.md | Validated claim-scoped comparison and release |
+| Failure path | 99_minimize_a_failure.md | Preserve a counterexample and diagnose the first violated obligation |
 
-| 阶段 | Prompt | 主要产物 | 进入条件 |
-|---|---|---|---|
-| 0 | `00_theory_audit_and_repo_bootstrap.md` | 理论到代码审计、仓库骨架 | 四篇材料已放入 `papers/` |
-| 1 | `01_exhaustive_reference_oracle.md` | Python 小图真值实现 | 阶段 0 的语义问题已记录 |
-| 2 | `02_graph_and_clique_infrastructure.md` | C++ 图和 clique 基础设施 | reference tests 通过 |
-| 3 | `03_exact_closure_oracle.md` | 精确 `F_h(lambda)` oracle | clique 枚举已对拍 |
-| 4 | `04_divide_and_conquer_solver.md` | 完整 top-k solver | oracle differential tests 通过 |
-| 5 | `05_differential_test_campaign.md` | 大规模小图对拍与反例缩减 | 完整 solver 可运行 |
-| 6 | `06_cli_telemetry_and_output_contract.md` | CLI、规范输出、telemetry | 正确性门禁通过 |
-| 7 | `07_safe_clique_core_reduction.md` | 安全高密度 reduction | 无 reduction 版本稳定 |
-| 8 | `08_profile_guided_optimization.md` | 性能优化与回归证据 | 有基准 profile |
-| 9 | `09_ippv_baseline_adapter.md` | IPPV 固定版本和适配器 | baseline provenance 已审计 |
-| 10 | `10_h2_h3_baseline_adapters.md` | LDS/LTDS 系列适配器 | 各基线许可证已确认 |
-| 11 | `11_experiment_harness.md` | 统一实验执行与结果校验 | proposed/baselines 均可运行 |
-| 12 | `12_ablation_and_scalability.md` | 消融、扩展性和参数实验 | 主实验配置冻结 |
-| 13 | `13_correctness_review.md` | 独立正确性审查 | release candidate |
-| 14 | `14_performance_review.md` | 性能与公平性审查 | 主实验已跑至少一轮 |
-| 15 | `15_reproducibility_release.md` | 可复现发布包 | 结论和表格冻结 |
-| Debug | `99_minimize_a_failure.md` | 最小化失败样例 | 任意测试失败 |
+M1 and standalone M2 flow work may proceed in parallel after M0; oracle integration
+needs M1 fixtures and graph/clique infrastructure. M3 needs M1+M2. M4 needs M3.
+Baseline/harness work can proceed independently after contracts are stable and
+must preserve D012's snapshot boundary. It does not block the M3 release.
 
-## 每次启动方式
+Streaming, alternative flow algorithms, parallelism and tie-inclusive mode are
+backlog, not mandatory prompt milestones. DCLDS is a primary baseline task;
+its independence is already recorded and must not be re-asked.
 
-在仓库根目录启动 Codex，然后发送：
+Suggested task request:
 
 ```text
-/plan
-Read AGENTS.md and the files listed in the selected prompt.
-Execute prompts/<PROMPT_FILE>.
-Do not work on later phases.
+Read AGENTS.md and the contract files named in the selected prompt.
+Execute task <ID> using prompts/<filename>.
+Preserve the proof sources and accepted decisions.
+Report actual commands, code/test evidence, seeds and unrun work.
 ```
-
-阶段结束后要求 Codex 使用 `AGENTS.md` 的 Completion report format。测试未运行时，不接受“完成”状态。
-
-## 并行工作规则
-
-只有以下任务适合 worktree 并行：
-
-- baseline provenance/adapter 审计；
-- dataset manifest 和下载脚本；
-- 与核心 solver 无共享接口的结果可视化脚本。
-
-oracle、exact arithmetic、clique index、solver recursion 和 output semantics 不要并行修改，除非接口与回归语料已经冻结。

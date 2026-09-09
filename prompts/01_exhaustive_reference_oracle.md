@@ -1,78 +1,40 @@
-# Prompt 01 — Exhaustive Python Reference Oracle
+# Prompt 01 - Independent Exhaustive Reference
 
-## Goal
+M1 / P01.1-P01.5; requires M0. Obligations O01-O03; tests T01-T03.
 
-Implement an independent, definition-level Python oracle for tiny graphs. It is the correctness anchor for every later C++ component.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ALGORITHM_SPEC.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- `docs/THEORY_TO_CODE_AUDIT.md`
-- `docs/DECISIONS.md`
-- the definitions and characterization theorems in `papers/veri_free_lhcds_v3_1_submit.md`
+## Deliver
 
-## Required behavior
+Implement standard-library-first Python graph normalization, combination clique
+enumeration, ordinary induced connectivity, exact counts/densities/deletion loss,
+compactness and direct LhCDS enumeration. Check ALL deletion subsets and ALL proper
+supersets; do not reduce maximality to one-vertex additions.
 
-Implement under `reference/vflhcds_ref/`:
+Implement exhaustive global F by comparing signed integer values `b*mu(S)-a*|S|`,
+including empty S, and union all maximizing sets. Also expose exhaustive restricted
+maximization for arbitrary nested bounds, clearly labelled as restricted.
 
-1. Deterministic undirected simple graph normalization.
-2. Exact h-clique enumeration by combinations.
-3. Exact `mu_h(S)` and `d_h(S)` using `fractions.Fraction`.
-4. Connectivity of induced subgraphs.
-5. Deletion loss `Delta_h(U; S)`.
-6. Direct test of h-clique `lambda`-compactness by enumerating every `U subseteq S`.
-7. Compactness `eta_h(S)` by exhaustive minimization.
-8. Direct LhCDS test:
-   - connected;
-   - `d_h(S)`-compact;
-   - no proper induced supergraph is also `d_h(S)`-compact.
-9. Exhaustive enumeration of all LhCDSes and deterministic top-k ordering.
-10. Exhaustive largest maximizer `F_h(lambda)` over all vertex subsets, with inclusion-wise largest tie rule.
-11. Optional exhaustive principal-chain extraction for diagnostics.
-12. Canonical JSON serialization containing original vertex IDs, exact numerator/denominator, clique count, and output rank.
+Implement the mandatory independent principal chain from cardinality-line
+intersections and exact midpoint samples (audit B). Do not use the production
+separator recursion, or just scan induced-subgraph densities. Serialize canonical
+truth, exact fractions, IDs, seeds and expected ranks. Default hard guard: n<=12.
 
-Use a hard size guard, default `n <= 12`, to prevent accidental exponential runs. The implementation must not import or call production C++ code.
+## Tests and gate
 
-## Tests
+Run T01-T03, including both-triangles-with-a-bridge maximality, zero-clique ordinary
+components, largest ties and the outer-breakpoint witness. Test relabeling by
+transforming COMPLETE truth and re-sorting before truncation. Reference code must
+not import production or closure code. Run pytest and the reference CLI smoke;
+report actual graph coverage and any unmet tier. No central semantic xfail passes.
 
-Add deterministic tests for:
+## Completion evidence
 
-- empty clique family (`h > clique number`);
-- a single clique;
-- disconnected union of cliques;
-- path, cycle, complete graph, complete bipartite graph;
-- isolated vertices;
-- equal-density/tie cases;
-- `h=2` specialization;
-- `k=1`, `k=q`, and `k>q`;
-- relabeling invariance;
-- exact rational comparisons.
-
-For graphs up to a practical small `n`, cross-check:
-
-- `eta_h(S) <= d_h(S)`;
-- self-denseness characterization;
-- every reported LhCDS satisfies the direct definition;
-- pairwise disjointness of distinct outputs;
-- exhaustive `F_h(lambda)` is inclusion-wise largest among all maximizers.
-
-## Boundaries
-
-- Clarity is more important than speed.
-- Do not reuse the future closure-network algorithm to compute truth.
-- Do not use float for any semantic decision.
-- Do not skip disconnected or zero-clique cases.
-- Do not silently choose a subset tie order; use the approved decision or leave a failing/xfail test linked to `DECISIONS.md`.
-
-## Verification
-
-Run:
-
-```bash
-python -m pytest reference/tests -q
-python -m vflhcds_ref.cli --help
-```
-
-Report test count, any xfails, and the maximum graph size covered by exhaustive tests. Update `docs/CLAIM_TRACEABILITY.md`, `docs/TASKS.md`, and `docs/REPRODUCIBILITY.md`.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

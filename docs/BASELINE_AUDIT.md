@@ -1,211 +1,94 @@
 # Baseline Audit and Integration Checklist
 
-Audit date for this template: 2026-08-19. Re-run the audit before final experiments.
+Revision: 2026-09-09. This is a plan and metadata check, not a baseline build or
+correctness audit. No current commit, license or executable has been validated here.
 
-## 1. Why audit before coding adapters
+## 1. Preserve the already accepted D012 decision
 
-A fair comparison requires more than compiling a repository. Each baseline must be checked for:
+The uploaded decision log already identifies Zhou et al. (PVLDB 2026, DCLDS) as an
+independent parallel study with substantial overlap. Do not ask again whether it
+is the owner's repository. Preserve the uploaded proof/design snapshot and its
+hashes before detailed algorithm comparison. A snapshot now records supplied
+content; it does not independently establish historical priority or novelty.
 
-- exact problem definition;
-- supported motif/clique size;
-- top-k and tie semantics;
-- graph normalization assumptions;
-- correctness guarantees;
-- code version and license;
-- default parameters and hidden preprocessing;
-- output completeness and parseability;
-- thread usage;
-- timing scope.
+DCLDS is a primary related-work and experimental target, not an optional mystery
+repository. Detailed code/theory comparison and adaptation remain future tasks;
+no DCLDS techniques may enter the proposed solver without the approval in D012.
 
-Do not reimplement a baseline from pseudocode unless public code is unavailable and the paper clearly specifies enough detail. A reimplementation must be labeled separately from author code.
+The public publication/repository metadata consulted on 2026-09-09 identify:
 
-## 2. Candidate matrix
+- Yingli Zhou, Taohua Huang, and Yixiang Fang, *Efficient Locally h-Clique Densest
+  Subgraph Discovery via Divide-and-Conquer*, PVLDB 19(10), 2577-2590, 2026,
+  DOI `10.14778/3828612.3828616` [E1].
+- Author repository `s01bvral/DCLDS`; its README uses a different working title
+  and describes LhCDS and density-layer outputs [E2]. Confirm the pinned
+  publication-to-code mapping during integration; do not infer code exactness.
 
-### IPPV — `Elssky/IPPV`
+## 2. Prioritized comparison matrix
 
-**Role:** primary published exact baseline for general `h`.
+| Priority | Method / source | Comparison stratum | Work still required |
+|---|---|---|---|
+| Primary | IPPV, `Elssky/IPPV`, arXiv:2408.14022 | general h | Pin commit/license; build; audit parameters, vertex sets, ties, enumeration and verification timing |
+| Primary | DCLDS, `s01bvral/DCLDS` | general-h target, subject to pinned-code audit | Preserve freeze boundary; map publication to code; audit exact arithmetic/ties, output and timing; independent tests |
+| Claim-dependent | LDS-Opt / LDS-DC (2023 ICDE reference) | h=2 only | Locate licensed author source; otherwise record unavailability; label any reimplementation separately |
+| Claim-dependent | LDScvx, `chenhao-ma/LDScvx` | h=2 only | Pin/build; inspect candidate verification, iteration defaults and exact output |
+| Claim-dependent | LTDScvx (arXiv:2504.10937) | h=3 only | Locate and validate actual triangle implementation, not assumed from LDScvx repository |
+| Optional diagnostic | LDSflow / LTDSflow | h=2 / h=3 | Use if licensed source is available and the diagnostic comparison is informative |
 
-**Paper behavior:** iterative propose-prune-and-verify using h-clique compact-number bounds, candidate decomposition, self-densest testing, and basic/fast flow verification.
+The supplied IPPV paper describes a propose-prune-and-verify framework [E3].
+The supplied convex-programming paper distinguishes edge and triangle density
+methods [E4]. These establish intended scope, not executable validation.
 
-**Public code observations:**
+Do not require every historical baseline to be reimplemented before M3 or M5.
+State an unavailable primary competitor as a limitation and avoid unsupported
+SOTA claims. Specialized methods become necessary when making comparative claims
+in their specific h stratum. No h=2/3-only code is an arbitrary-h baseline.
 
-- C++/CMake project;
-- executable examples use graph, `h`, iteration count `t`, `k`, pattern `p`, and verification mode;
-- README lists 15 datasets and experiments for `h in {3,4,5}` and `k in {5,10,15,20}`;
-- input begins with `n m`, followed by 0-based edges.
+## 3. Adapter contract
 
-**Audit tasks:**
+For each included method: pin source and license, reproduce a documented command,
+convert the same canonical graph losslessly, invoke explicit parameters, capture
+raw outputs/status, and parse already-computed sets without changing selection.
+Record self-loops/duplicates/isolate policy and the vertex-universe checksum.
 
-- pin commit and license;
-- determine exact flag for fast verification and default iteration count;
-- confirm whether timing includes clique enumeration and input loading;
-- verify output lists complete vertex sets and exact densities;
-- check whether vertex IDs must be contiguous and whether duplicate edges are tolerated;
-- reproduce one README command before writing the wrapper.
+Minimal compatibility/output patches are kept as diffs. Changing core algorithms,
+exactness, pruning, or tie selection requires a separately labelled variant.
+Never silently repair invalid outputs. Log build-failed, blocked-license,
+blocked-source, semantic-mismatch and output-incomplete separately.
 
-### LDS-Opt / LDS-DC — 2023 ICDE
+Use direct-definition validation on tiny inputs, then structural checks and
+qualified cross-implementation agreement on larger ones. Counts and connectivity
+alone are not a proof of compactness/maximality. Record missing vertex sets or
+unrecoverable kth ties rather than pretending a strict comparison was possible.
 
-**Role:** `h=2` verification-free hierarchy baseline and specialization check.
-
-**Support:** edge-density LDS only, equivalent to L2CDS.
-
-**Audit tasks:**
-
-- locate author code and license;
-- if unavailable, contact authors or document a paper-based reimplementation;
-- preserve largest-maximizer and top-k ordering semantics;
-- validate on tiny `h=2` instances against the common truth program.
-
-Do not use LDS-Opt as an arbitrary-h baseline.
-
-### LDScvx — `chenhao-ma/LDScvx`
-
-**Role:** strong exact convex-programming baseline for `h=2`.
-
-**Public code observations:**
-
-- C++/CMake repository;
-- example command accepts graph path and `k`;
-- README reports default/reproduction settings for `k` values and memory measurement;
-- code appears to target edge-based LDS.
-
-**Audit tasks:**
-
-- pin commit and license;
-- confirm output format and whether all top-k vertex sets are exposed;
-- confirm Frank-Wolfe iteration default and verification behavior;
-- separate preprocessing, optimization, and verification time if possible;
-- validate against definition-level L2CDS truth.
-
-### LTDScvx
-
-**Role:** strong exact convex-programming baseline for `h=3`.
-
-**Support:** triangle density only, equivalent to L3CDS.
-
-**Audit tasks:**
-
-- locate public author code corresponding to the journal paper;
-- determine whether it is in a separate branch/repository or available on request;
-- pin its Frank-Wolfe iteration setting and triangle enumeration backend;
-- validate output against definition-level L3CDS truth.
-
-Do not infer that the edge-only `LDScvx` repository implements LTDScvx without inspection.
-
-### LDSflow and LTDSflow
-
-**Role:** classical exact flow baselines for `h=2` and `h=3`.
-
-**Audit tasks:**
-
-- obtain author source where licensing allows;
-- identify any core pruning and flow library;
-- confirm candidate and verification time scope;
-- use mainly on graph sizes where they complete under the preregistered timeout.
-
-### Public DCLDS repository — `s01bvral/DCLDS`
-
-**Status:** mandatory provenance/overlap investigation.
-
-Its README claims a divide-and-conquer algorithm for LhCDS, supports clique and other patterns, emits LhCDS and density-decomposition layers, and uses a 15-dataset suite closely overlapping IPPV.
-
-Before using or citing it, determine:
-
-1. Is it your own or a collaborator's repository?
-2. What paper, preprint, submission, or technical report does it implement?
-3. What is its commit history and license?
-4. Is its mathematical algorithm the same as, derived from, or independent of `veri_free_lhcds_v3_1_submit.md`?
-5. Does it use the same exact max-closure residual-footprint oracle, or another density decomposition?
-6. Are its results independently validated?
-7. If independent, is it the most direct current baseline and related-work item?
-
-Do not copy code or claim novelty until these questions are resolved.
-
-## 3. Audit record template
-
-Create one section or YAML/JSON record per baseline with:
+## 4. One audit record per baseline
 
 ```text
-name:
-problem_definition:
-exact_or_approximate:
-supported_h:
-top_k_semantics:
-tie_semantics:
-repository_identifier:
-commit:
-license:
-build_environment:
-compiler_and_flags:
-thread_count:
-input_format:
-preprocessing:
-parameters_and_defaults:
-output_format:
-timing_scope:
-peak_memory_method:
-patches:
-known_failures:
-validation_cases:
-status: pending | buildable | validated | excluded
-exclusion_reason:
+name / publication / intended_problem / supported_h
+repository / commit / license / retrieval_date / publication_code_mapping
+compiler / flags / threads / dependencies / patches
+input_format / normalization / parameters / defaults
+top_k_policy / tie_policy / output_completeness / exact_arithmetic_behavior
+timing_start_stop / enumeration_scope / native_verification_scope / peak_rss_scope
+build_command / smoke_command / raw_logs
+definition_validation_cases / structural_checks / cross_implementation_cases
+status / unresolved_issue / exclusion_reason
 ```
 
-## 4. Wrapper architecture
+Required before the main comparison: reproducible build, one shared toy and one
+real smoke run, exact supported scope, documented output/timing behavior, and
+validation evidence. Documentation or README claims are not this evidence.
 
-Keep each author code in a separate directory or submodule:
+## 5. Source register (metadata only in this revision)
 
-```text
-baselines/
-  ippv/
-  ldscvx/
-  ltdscvx/
-  ldsopt/
-  ldsflow/
-  ltdsflow/
-  dclds_audit/
-  patches/
-```
+[E1] PVLDB publisher record surfaced at
+`https://www.vldb.org/pvldb/vol19/p2577-zhou.pdf` (bibliographic metadata only; no
+new algorithmic techniques imported during this review).
 
-Write wrappers under `tools/baseline_adapters/` that:
+[E2] Author repository: `https://github.com/s01bvral/DCLDS`.
 
-1. convert the canonical normalized graph to baseline input;
-2. run the baseline with explicit parameters;
-3. capture command, environment, stdout, stderr, exit status, wall time, and RSS;
-4. parse outputs into canonical result JSONL;
-5. recompute every reported clique count and density using the independent validator;
-6. run strict or tie-aware comparison.
+[E3] Author preprint metadata: `https://arxiv.org/abs/2408.14022`;
+local supplied text: `papers/2408.14022v1.md`.
 
-The wrapper must not silently repair invalid output. It should mark validation failure and preserve the raw files.
-
-## 5. Patching rules
-
-Allowed minimal patches:
-
-- build compatibility;
-- file paths and CLI output location;
-- deterministic printing of already-computed result sets;
-- disabling hardcoded dataset assumptions;
-- fixing a confirmed bug with a separate upstream-style patch and regression test.
-
-Not allowed under the original baseline name:
-
-- replacing its core algorithm;
-- adding proposed-method optimizations;
-- changing approximation/exactness behavior;
-- changing tie semantics without a separate label;
-- excluding expensive stages from timing while including them for VF-LhCDS.
-
-Every patch is stored as a diff and described in the experiment manifest.
-
-## 6. Baseline acceptance gate
-
-A baseline enters the main comparison only after:
-
-- commit and license are recorded;
-- build is reproducible;
-- at least one toy and one real dataset run succeeds;
-- output passes independent validation;
-- supported `h` and exactness are clear;
-- timing and memory scope are documented;
-- required patches are reviewed.
+[E4] Author preprint metadata: `https://arxiv.org/abs/2504.10937`;
+local supplied text: `papers/2504.10937v1.md`.

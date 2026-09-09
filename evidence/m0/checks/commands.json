@@ -1,0 +1,225 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/verify_papers.py"
+    ],
+    "started_utc": "2026-09-09T09:24:19.636341+00:00",
+    "finished_utc": "2026-09-09T09:24:19.683111+00:00",
+    "exit_code": 0,
+    "log": "01.log",
+    "log_sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build",
+      "-DCMAKE_BUILD_TYPE=Debug"
+    ],
+    "started_utc": "2026-09-09T09:24:19.683737+00:00",
+    "finished_utc": "2026-09-09T09:24:27.543320+00:00",
+    "exit_code": 0,
+    "log": "02.log",
+    "log_sha256": "381b2b9b652914e332972c4ce85df622f8ae116a74bb44588caa73bd13988f04"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build",
+      "-j2"
+    ],
+    "started_utc": "2026-09-09T09:24:27.544513+00:00",
+    "finished_utc": "2026-09-09T09:24:31.285587+00:00",
+    "exit_code": 0,
+    "log": "03.log",
+    "log_sha256": "c71184f82dfb8682b1f2bd3ab366f7c438b77a636b768be06d8fb3775c77c755"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build",
+      "--output-on-failure"
+    ],
+    "started_utc": "2026-09-09T09:24:31.286298+00:00",
+    "finished_utc": "2026-09-09T09:24:33.240314+00:00",
+    "exit_code": 0,
+    "log": "04.log",
+    "log_sha256": "960850ea69c660e08ca9ee8729ccf1c9d6511b372dc45519ca9a0b30d969e558"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "reference/tests",
+      "-q"
+    ],
+    "started_utc": "2026-09-09T09:24:33.240958+00:00",
+    "finished_utc": "2026-09-09T09:24:33.564322+00:00",
+    "exit_code": 0,
+    "log": "05.log",
+    "log_sha256": "35d86279d96ed65491ba8ff0748e1c8e7891711531404dc5d4b9cd6ae33de3ec"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-sanitize",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DVFLHCDS_ENABLE_SANITIZERS=ON"
+    ],
+    "started_utc": "2026-09-09T09:24:33.565082+00:00",
+    "finished_utc": "2026-09-09T09:24:36.437941+00:00",
+    "exit_code": 0,
+    "log": "06.log",
+    "log_sha256": "ae77b0b4b1cd17d379c9f68aa34b5417beb9fc81ee1a46e01872359414b68c5e"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-sanitize",
+      "-j2"
+    ],
+    "started_utc": "2026-09-09T09:24:36.438621+00:00",
+    "finished_utc": "2026-09-09T09:24:39.887613+00:00",
+    "exit_code": 0,
+    "log": "07.log",
+    "log_sha256": "d2f245a2db142c15d33d22652a6c2c3495c64bf7102b2f707501731adb0b0556"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-sanitize",
+      "--output-on-failure"
+    ],
+    "started_utc": "2026-09-09T09:24:39.888458+00:00",
+    "finished_utc": "2026-09-09T09:24:42.590523+00:00",
+    "exit_code": 0,
+    "log": "08.log",
+    "log_sha256": "5a4638f3c9ffc617c560dacb8cb94a06ba6aa807c94806945ebfadede7513521"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-release",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "started_utc": "2026-09-09T09:24:42.591117+00:00",
+    "finished_utc": "2026-09-09T09:24:43.895778+00:00",
+    "exit_code": 0,
+    "log": "09.log",
+    "log_sha256": "dacfbefe59130ed897d8574e7e908b67fc2b8bf4f657c682c6ca77d2548aa630"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-release",
+      "-j2"
+    ],
+    "started_utc": "2026-09-09T09:24:43.897101+00:00",
+    "finished_utc": "2026-09-09T09:24:47.600331+00:00",
+    "exit_code": 0,
+    "log": "10.log",
+    "log_sha256": "d2f245a2db142c15d33d22652a6c2c3495c64bf7102b2f707501731adb0b0556"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-release",
+      "--output-on-failure"
+    ],
+    "started_utc": "2026-09-09T09:24:47.601471+00:00",
+    "finished_utc": "2026-09-09T09:24:48.895065+00:00",
+    "exit_code": 0,
+    "log": "11.log",
+    "log_sha256": "efd9bdf366ec590c589ffb44961636c598cd0780e6affcefbc293de4cf19ff2a"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-relwithdebinfo",
+      "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    ],
+    "started_utc": "2026-09-09T09:24:48.896395+00:00",
+    "finished_utc": "2026-09-09T09:24:50.773399+00:00",
+    "exit_code": 0,
+    "log": "12.log",
+    "log_sha256": "59a0deed89a32cf699e6417b256624589c103459354f981726f2fa9a1f6e436d"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-relwithdebinfo",
+      "-j2"
+    ],
+    "started_utc": "2026-09-09T09:24:50.776860+00:00",
+    "finished_utc": "2026-09-09T09:24:53.900198+00:00",
+    "exit_code": 0,
+    "log": "13.log",
+    "log_sha256": "c71184f82dfb8682b1f2bd3ab366f7c438b77a636b768be06d8fb3775c77c755"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-relwithdebinfo",
+      "--output-on-failure"
+    ],
+    "started_utc": "2026-09-09T09:24:53.901033+00:00",
+    "finished_utc": "2026-09-09T09:24:54.924164+00:00",
+    "exit_code": 0,
+    "log": "14.log",
+    "log_sha256": "ff233363be5a3d7e21dd65ae4c51f9be823cb831637beeaf46d240342c662fba"
+  },
+  {
+    "command": [
+      "build/vflhcds",
+      "print-build-info"
+    ],
+    "started_utc": "2026-09-09T09:24:54.924893+00:00",
+    "finished_utc": "2026-09-09T09:24:54.929928+00:00",
+    "exit_code": 0,
+    "log": "15.log",
+    "log_sha256": "d823b17ee4c787a3763a26f4af1c499568efdcce682f2ed5c96c06f368dbe276"
+  },
+  {
+    "command": [
+      "build-sanitize/vflhcds",
+      "print-build-info"
+    ],
+    "started_utc": "2026-09-09T09:24:54.930769+00:00",
+    "finished_utc": "2026-09-09T09:24:55.107553+00:00",
+    "exit_code": 0,
+    "log": "16.log",
+    "log_sha256": "0fdca80752d925e4ff25160c0c0321dce7e362809ca1b04d7c9fe66ef64a41e0"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/verify_papers.py"
+    ],
+    "started_utc": "2026-09-09T09:24:55.108312+00:00",
+    "finished_utc": "2026-09-09T09:24:55.151577+00:00",
+    "exit_code": 0,
+    "log": "17.log",
+    "log_sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0"
+  }
+]

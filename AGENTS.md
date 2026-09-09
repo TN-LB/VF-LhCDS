@@ -1,166 +1,95 @@
-# AGENTS.md — VF-LhCDS Repository Instructions
+# AGENTS.md - VF-LhCDS Repository Instructions
 
-## Owner-confirmation rule:
-Any ambiguity, assumption, implementation choice, preprocessing choice, parameter choice, baseline configuration, measurement convention, timeout policy, hardware/threading choice, or optimization that could affect algorithm correctness, reported runtime/memory, output contents/order, experimental fairness, or conclusions must not be resolved autonomously.
-You must explicitly ask the project owner for a decision before proceeding with the affected implementation or experiment.
-It must present the alternatives, their expected consequences, and its recommended default, but must not choose on the owner's behalf.
-The confirmed choice must then be recorded in docs/DECISIONS.md with status accepted.
-Independent work that cannot be affected by the unresolved decision may continue.
+## Mission and source priority
 
-## Mission
+Implement and evaluate the exact verification-free top-k algorithm in
+`papers/veri_free_lhcds_v3_1_submit.md`. Mathematical correctness, implementation
+validation and empirical performance are separate claims. Never trade the first
+for the third, and never call finite test agreement a proof.
 
-Implement and experimentally evaluate the exact verification-free top-k locally h-clique densest subgraph algorithm specified in `papers/veri_free_lhcds_v3_1_submit.md`.
+Priority: unchanged proof manuscript; explicit decisions in `docs/DECISIONS.md`;
+`docs/ALGORITHM_SPEC.md` plus its audited clarifications; implementation/evidence
+plans. Other papers specify baselines and related work, not replacement semantics.
+Do not edit any of the four files under `papers/` without a separate requested
+manuscript revision. Preserve D012's independent-development/freeze boundary.
 
-The project has two equal goals:
+## Decision boundary
 
-1. correctness that is traceable to the proof; and
-2. a reproducible performance comparison against exact baselines.
+Carry out theorem-forced clarifications and the routine implementation choices
+already specified in this revised plan without repeatedly asking the owner.
+Do not reopen accepted D005 (real arbitrary-precision fallback), D006 (set order)
+or D012 (independent parallel work) as unresolved questions.
 
-Never trade the first goal for the second.
+Request a decision before a new choice changes the problem definition, output
+policy, theorem assumptions, licensing/use of external techniques, or final
+experimental fairness/conclusions. Record alternatives, consequences and a
+recommended default; block only that affected path. Final dataset/resource/thread/
+timeout choices must be recorded before a benchmark campaign, not silently chosen
+after results. A plan-review default is not a claim of prior owner confirmation.
 
-## Source priority
+If a proof/specification conflict or counterexample appears, document it and stop
+that local path. Do not silently fix the manuscript or hide the failure in output
+validation. Independent unaffected work may continue.
 
-When sources differ, use this priority order:
+## Core mathematical contracts
 
-1. `papers/veri_free_lhcds_v3_1_submit.md` for definitions, theorem assumptions, tie semantics, oracle construction, recursion, and output ordering;
-2. `docs/DECISIONS.md` for explicit engineering choices accepted by the project owner;
-3. `papers/2023-icde-lds.md` only as an `h=2` implementation and proof-organization reference;
-4. `papers/2408.14022v1.md` and `papers/2504.10937v1.md` only for baseline behavior and experimental methodology.
+- Nonempty finite simple undirected graph; fixed h>=2; induced subgraphs; preserve all declared vertices.
+- Exact clique counts, rational densities and capacities; no floating semantic decisions.
+- Oracle largest-set ties are cardinality-based; ranked output ties use the accepted original-ID lexicographic order.
+- Separate largest restricted optimum from global F; global equality requires certified containment.
+- A standalone global query may return empty; strict X<F progress is specific to separator queries.
+- ChainInterval endpoints stay immutable; core reduction changes only Y_oracle, never lambda or recursion endpoints.
+- Use left-first traversal; terminal comparison is Z==original Y.
+- Extract ordinary connected components of original G[Y\X]; emit only those with no edge to all of X.
+- Only emitted components have the terminal layer density; no candidate verifier in the solver path.
+- Fixed-k means min(k,q); k=0 is invalid; preserve zero-density/isolate solutions.
+- A complete basic recursion has 2r-1 logical queries, not necessarily that many mincuts; no O(k) claim follows.
 
-Do not silently repair, generalize, or reinterpret the theory. Record any ambiguity in `docs/DECISIONS.md` and stop that local implementation path until the ambiguity has a documented resolution. Continue with independent tasks when possible.
+## Required minimal implementation
 
-## Mathematical invariants
+Independent Python direct-definition/exhaustive-F/line-envelope reference; C++17
+and CMake; one materialized clique backend; aggregated footprints; one generic
+exact Dinic algorithm with checked 128-bit and actual automatic arbitrary-precision
+execution; one fixed-k solver; minimal CLI and evidence telemetry.
 
-Preserve all of the following:
+Streaming, extra flow algorithms, tie-inclusive output, component scheduling and
+parallel execution are deferred. Do not make them prerequisites for the first
+correctness release or add their dependencies merely for future convenience.
 
-- The input is a finite undirected simple graph with nonempty vertex set.
-- All subgraphs are vertex-induced.
-- `h >= 2` is fixed for a solver run.
-- `mu_h(S)` counts each h-clique contained in `G[S]` exactly once.
-- `d_h(S) = mu_h(S) / |S|` for nonempty `S`.
-- `F_h(lambda)` is the unique inclusion-wise largest maximizer of
-  `Q_lambda(S) = mu_h(S) - lambda * |S|`.
-- Every queried `lambda` is represented as an exact reduced fraction `a/b`.
-- The closure network must implement the largest-maximizer tie rule exactly.
-- The divide-and-conquer traversal is left first, because the left interval contains strictly higher-density layers.
-- A terminal interval emits exactly the connected components `W` of `G[Y \ X]` with no edge to `X`.
-- Output ordering is nonincreasing exact density, then the project-wide deterministic subset order.
-- When `k` exceeds the number of LhCDSes, return all of them.
+## Workflow and tests
 
-Do not use floating-point arithmetic for decisions involving densities, lambdas, capacities, equality, ordering, or stopping conditions.
+Use milestone/task IDs in `docs/TASKS.md` and proof obligations in
+`docs/THEORY_TO_CODE_AUDIT.md`. Name the test, implement the smallest correct
+behavior, run relevant deterministic/differential tests, then optimize only after
+M3. Every semantic optimization needs a written argument, preconditions, a switch,
+and output-equivalence evidence. Timings and backend trace fields are excluded
+from canonical semantic hashes.
 
-## Correctness-first workflow
+Reference code may not call production code. Check every proper superset for
+reference maximality. Construct the expected chain independently of recursive
+separation. Relabel complete truth and re-sort before comparing fixed-k ties.
+Save failing seeds and original/minimized reproducers. Test ASan/UBSan, exact
+numeric limits and real fallback. TSan is required before parallel code is enabled.
 
-Before optimizing a component:
+`review/math_sanity.py` is plan-review evidence only, not a completed production
+reference, flow backend, sanitizer campaign or benchmark.
 
-1. add or identify its reference behavior;
-2. add deterministic unit tests;
-3. add randomized differential tests where applicable;
-4. implement the simplest correct version;
-5. run the smallest relevant test suite;
-6. only then optimize, preserving the same tests.
+## External methods and experiments
 
-A performance optimization is not complete until its output is byte-for-byte identical to the pre-optimization solver on the regression corpus, except for intentionally nonsemantic telemetry fields.
+Pin baseline commits and record licenses, patches, supported h, output semantics
+and timing. DCLDS and IPPV are primary general-h targets; specialized baselines are
+stratified. Do not copy DCLDS techniques into the proposed algorithm without the
+separate approval required by D012, even if a license permits copying.
 
-## Required implementation split
+Use common normalized graphs. Distinguish definition-checked, structural-checked
+and cross-implementation-agreement evidence. Density/connectivity checks do not
+prove LhCDS maximality. Keep external validation outside algorithm timing; include
+any native baseline candidate verification in that baseline's algorithm time.
+Record all completed, timeout, OOM and error runs; no post-hoc favorable selection.
 
-Maintain two paths:
+## Completion report
 
-- `reference/`: readable exhaustive implementation for tiny graphs and truth generation;
-- `src/`: production C++ implementation.
-
-The reference implementation is not optional and must remain independent enough to catch shared bugs. Do not call production code from the exhaustive definition checker.
-
-## Exact arithmetic and overflow
-
-- Prefer reduced rational types for `mu/|S|` and `a/b`.
-- Use checked integer arithmetic for cross multiplication and capacities.
-- The production flow backend may use `unsigned __int128` only with explicit checked construction and a clear failure message when the instance exceeds the supported range.
-- Never allow wraparound, saturation, or conversion through `double`.
-- Tests must include values near the chosen capacity limits.
-
-## Engineering conventions
-
-- Default production language: C++17 or newer, built with CMake.
-- Keep third-party dependencies minimal and documented.
-- Use stable 0-based internal vertex IDs; preserve a reversible map from original IDs.
-- Keep graph preprocessing deterministic: remove self-loops, collapse parallel edges, canonicalize undirected edges, and record counts removed.
-- Use sorted vertex lists for serialized subgraphs.
-- Keep core algorithm modules separate from CLI, logging, and experiment adapters.
-- Do not embed dataset-specific constants in solver code.
-- Do not commit raw large datasets, generated binaries, or large result logs.
-
-## Expected modules
-
-The production implementation should keep these responsibilities separate:
-
-- graph I/O and normalization;
-- h-clique enumeration and optional materialized incidence index;
-- exact rational arithmetic;
-- max-flow/min-cut;
-- residual-footprint aggregation;
-- exact `F_h(lambda)` closure oracle;
-- divide-and-conquer top-k solver;
-- safe clique-core reduction;
-- output validation and deterministic serialization;
-- metrics and experiment harness.
-
-## Testing requirements
-
-At minimum, maintain tests for:
-
-- graph normalization;
-- h-clique enumeration against combination brute force;
-- `mu_h(S)` counts;
-- residual-footprint identity for every subset on tiny instances;
-- closure oracle versus exhaustive maximization of `Q_lambda`;
-- largest-maximizer tie cases;
-- nestedness of `F_h(lambda)` on test instances;
-- separator behavior on known principal-chain intervals;
-- terminal leaf extraction;
-- full top-k output versus exhaustive LhCDS definition;
-- `h=2` specialization versus the edge-based formulation;
-- relabeling and disjoint-union metamorphic tests;
-- overflow detection.
-
-Randomized tests must log the seed and write a minimized reproducer on failure.
-
-## Baseline and licensing rules
-
-- Pin every baseline to a commit hash and record its license before compiling it.
-- Do not copy source from a baseline into the proposed solver unless the license permits it and attribution is recorded.
-- Prefer wrapper/adaptor code around an unmodified baseline.
-- Keep baseline patches minimal, reviewable, and stored as patch files.
-- Never compare an approximate method as though it were an exact LhCDS solver.
-- Never compare `h=2` or `h=3`-only methods as though they support arbitrary `h`.
-
-## Experiment integrity
-
-- Use the same normalized input graph for all algorithms.
-- Record compiler, flags, CPU, memory, OS, thread count, commit hashes, command, timeout, and seed.
-- Report both end-to-end time and solver-only time when available.
-- Record peak RSS, output hashes, exact densities, and timeout/OOM status.
-- Run algorithms in randomized order and report medians plus dispersion, not only the best run.
-- Do not discard completed slow cases or failed cases from aggregate statistics.
-
-## Documentation duties
-
-For each completed task:
-
-- update `docs/TASKS.md`;
-- update `docs/CLAIM_TRACEABILITY.md` when code or tests implement a theorem-dependent claim;
-- update `docs/DECISIONS.md` for any new semantic or engineering decision;
-- update `docs/REPRODUCIBILITY.md` when commands or dependencies change.
-
-## Completion report format
-
-End each substantial Codex task with:
-
-1. Summary of behavior implemented or changed.
-2. Files changed.
-3. Commands run.
-4. Test and benchmark results.
-5. Correctness evidence.
-6. Remaining risks or unanswered decisions.
-
-Do not claim success when tests were skipped. State exactly what was and was not run.
+Report changed files, code symbols, task/obligation IDs, commands, environment,
+fixture/seed manifest, actual results and evidence locations, plus remaining
+limitations. Update tasks and traceability only for executed work. Never mark a
+test or build complete merely because its command is documented.

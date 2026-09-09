@@ -1,272 +1,128 @@
 # Correctness and Validation Plan
 
-## 1. Validation philosophy
+Revision 2026-09-09. Use direct definitions and independent exhaustive parametric
+maximization as separate anchors. Another implementation's output is supporting
+evidence, not a replacement for either. Test IDs below are stable task contracts.
 
-The implementation needs two independent correctness anchors:
+## 1. Independent reference
 
-1. **Definition-level truth:** exhaustive checking of h-clique compactness and maximality on tiny graphs.
-2. **Parametric truth:** exhaustive maximization of `Q_lambda(S)` over all subsets to validate `F_h(lambda)` and the closure network.
-
-The production solver is accepted only when both anchors agree with it. Matching another implementation or baseline is useful evidence, but it is not a substitute for definition-level truth.
-
-## 2. Exhaustive reference model
-
-For a graph with `n` small enough, represent each subset by a bit mask.
-
-### 2.1 Clique enumeration
-
-Enumerate every `h`-subset of vertices and retain it iff all pairwise edges exist. Store each clique as a bit mask.
-
-Then:
+Combination-enumerate cliques; BFS/DFS ordinary connectivity; represent tiny sets
+as masks; use exact integers and fractions. A singleton is connected.
 
 ```text
-mu_h(S) = number of clique masks C with C subseteq S.
+compact(S,a/b): connected(S) and
+    b*(mu(S)-mu(S\U)) >= a*|U| for EVERY U subseteq S
+LhCDS(S): compact(S,d_h(S)) and no proper superset T is compact(T,d_h(S))
+F(lambda): enumerate ALL S including empty, maximize b*mu(S)-a*|S|,
+           union all maximizers and assert that union is also optimal
 ```
 
-### 2.2 Connectivity
-
-A nonempty subset is connected iff a BFS/DFS in the ordinary induced graph reaches all selected vertices. A singleton is connected.
-
-### 2.3 Compactness
-
-For exact `lambda=a/b`, `S` is h-clique lambda-compact iff connected and, for every `U subseteq S`:
-
-```text
-b * (mu_h(S)-mu_h(S\U)) >= a * |U|.
-```
-
-No floating-point division is required.
-
-### 2.4 Definition-level LhCDS
-
-For every connected nonempty `S`:
-
-1. set `lambda=d_h(S)=mu_h(S)/|S|` in reduced form;
-2. verify `S` is h-clique lambda-compact;
-3. verify there is no proper superset `T` of `S` that is h-clique lambda-compact.
-
-If all conditions hold, `S` is an LhCDS.
-
-The maximality check must inspect all supersets in the reference implementation. Do not reduce it to only one-vertex extensions unless a separate proof is encoded.
-
-### 2.5 Exhaustive `F_h(lambda)`
-
-For every subset `S`, compare exact values using:
-
-```text
-b*mu_h(S) - a*|S|.
-```
-
-Collect all maximizers, take their union, and assert that the union is itself a maximizer. Return that union as the inclusion-wise largest maximizer.
-
-This implementation is intentionally different from the closure network.
-
-## 3. Test layers
-
-### Layer A — deterministic unit tests
-
-#### Graph and set utilities
-
-- duplicate edges and reversed duplicates collapse correctly;
-- self-loops are removed;
-- original-ID mapping round-trips;
-- connected components over an induced set are correct;
-- set difference, union, subset, equality, hashing, and serialization are canonical.
-
-#### Exact arithmetic
-
-- gcd reduction;
-- fraction equality and ordering;
-- cross multiplication near numeric limits;
-- checked addition and multiplication report overflow;
-- decimal rendering of 128-bit values.
-
-#### Clique enumeration
-
-- empty graph, path, cycle, complete graph, complete bipartite graph;
-- known triangle and 4-clique counts;
-- production clique tuples equal combination brute force;
-- every stored clique has sorted unique vertices and all edges;
-- incidence counts sum to `h*|Psi_h|`.
-
-#### Flow
-
-- textbook small max-flow networks;
-- multiple minimum cuts;
-- zero-capacity edges if supported;
-- capacities larger than 64-bit but within production type;
-- residual source-side extraction.
-
-### Layer B — residual-footprint identity
-
-For each tiny graph, each nested pair `X subseteq Y`, and every `S subseteq Y\X`:
-
-```text
-mu_h(X union S)-mu_h(X)
-== sum_R w(R)*indicator[R subseteq S].
-```
-
-Also assert:
-
-- every footprint is nonempty;
-- every footprint lies in `Y\X`;
-- `sum_R w(R) = mu_h(Y)-mu_h(X)`;
-- aggregating identical footprints is order independent.
-
-### Layer C — closure oracle differential tests
-
-Generate valid requests and compare production oracle output with exhaustive `F_h(lambda)`.
-
-#### Request generation
-
-1. Global queries: `X=empty`, `Y=V`.
-2. Chain-derived intervals: enumerate distinct exhaustive `F_h` sets and use nested pairs.
-3. Arbitrary valid bounding intervals: choose `X subseteq F_h(lambda) subseteq Y`.
-4. Reduced-core intervals after the optimization is implemented.
-
-#### Lambda set
-
-Include:
-
-- zero;
-- every density `mu_h(S)/|S|` on the graph;
-- every outer density between nested exhaustive chain sets;
-- rationals just above and below breakpoints where representable;
-- random small rationals.
-
-#### Mandatory tie cases
-
-Construct cases where:
-
-- empty and a nonempty set tie;
-- two incomparable sets tie and their union is also a maximizer;
-- multiple nested sets tie at a breakpoint;
-- equal-density disconnected components produce a large union maximizer.
-
-Assert exact equality with the largest maximizer, not merely equal objective value.
-
-### Layer D — divide-and-conquer structural tests
-
-For each exhaustive principal chain:
-
-- distinct `F_h(lambda)` values are nested;
-- critical densities are strictly decreasing after duplicate sets are removed;
-- separator query returns `Y` for consecutive pairs;
-- separator query returns an intermediate chain set for nonconsecutive pairs;
-- left interval densities are strictly larger than right interval densities;
-- full recursion uses no more than `2r-1` oracle calls when no optional reductions add calls.
-
-### Layer E — terminal extraction tests
-
-For each terminal interval `(X,Y)`:
-
-- compute components of `G[Y\X]`;
-- output exactly components with no edge to `X`;
-- compare emitted components with definition-level LhCDSes born at that layer;
-- verify all emitted components have the layer density;
-- verify rejected components are not incorrectly returned at another rank.
-
-Include examples with cross-boundary h-cliques. The extraction condition depends on ordinary edges to `X`, while the oracle must account for all cross-boundary cliques through footprints.
-
-### Layer F — end-to-end differential tests
-
-For each tiny graph and every supported `h`:
-
-1. compute all LhCDSes by definition;
-2. sort by exact density and fixed subset order;
-3. run production solver for every `k` from `1` through `q+2`;
-4. compare exact vertex sets, clique counts, densities, and order.
-
-Also compare fixed-k and tie-inclusive modes.
-
-## 4. Randomized campaign
-
-Suggested initial envelope, adjusted for runtime:
-
-| h | n range | graph probability range | cases per seed batch |
-|---|---:|---:|---:|
-| 2 | 1–14 | 0.05–0.95 | high |
-| 3 | 1–11 | 0.05–0.95 | high |
-| 4 | 1–9 | 0.10–0.95 | medium |
-| 5 | 1–8 | 0.15–0.95 | medium |
-
-Use several generators, not only Erdos-Renyi:
-
-- uniform random graph;
-- planted clique plus sparse background;
-- disjoint dense components;
-- dense core with sparse attachment;
-- chain of components connected by bridges;
-- random graph conditioned on at least one h-clique;
-- adversarial equal-density duplicate components.
-
-Every case records:
-
-- generator name and parameters;
-- seed;
-- normalized edge list;
-- `h` and all tested `k` values;
-- reference and production outputs;
-- oracle trace on failure.
-
-## 5. Metamorphic properties
-
-### Vertex relabeling
-
-A permutation of vertex IDs must permute every output set correspondingly and preserve exact densities.
-
-### Disjoint union
-
-For `G=G1 disjoint-union G2`, outputs must be drawn from components according to their exact global density order. No output may mix vertices across components.
-
-### Isolated vertices
-
-Adding isolated vertices must not alter positive-density LhCDSes. It may add zero-density behavior according to the formal definition; encode the expected result from the reference checker rather than assuming it away.
-
-### Duplicate component
-
-Adding an isomorphic disconnected copy creates corresponding tied outputs. Fixed-k truncation follows the deterministic subset order.
-
-### Input edge order
-
-Reordering, reversing, and duplicating edge-list lines must not change normalized output.
-
-### Backend equivalence
-
-Materialized and streaming clique backends, and all exact flow backends, must return identical outputs and oracle sets.
-
-## 6. Failure minimization
-
-When a randomized test fails:
-
-1. save the original reproducer immediately;
-2. attempt deterministic edge deletion while preserving the mismatch;
-3. attempt vertex deletion and ID compaction;
-4. simplify `lambda`, `X`, and `Y` for oracle failures;
-5. write the minimized case under `tests/regressions/`;
-6. add a named test before fixing the bug.
-
-Never delete a regression fixture after the bug is fixed.
-
-## 7. Sanitizers and static checks
-
-Run on small and medium suites:
-
-- AddressSanitizer;
-- UndefinedBehaviorSanitizer;
-- compiler warnings at a strict level;
-- optional static analyzer on flow and arithmetic modules.
-
-ThreadSanitizer is required before enabling parallel enumeration.
-
-## 8. Correctness release gate
-
-A correctness release candidate is accepted only when:
-
-- all deterministic tests pass;
-- the frozen randomized corpus passes with recorded seeds;
-- no sanitizer issue remains;
-- overflow tests fail closed as designed;
-- materialized and streaming backends agree on their shared feasible corpus;
-- `CLAIM_TRACEABILITY.md` maps every central theorem-dependent behavior to code and tests;
-- a clean build reproduces the same canonical output hashes.
+Maximality quantifies over every proper superset, not only one-vertex extensions.
+No reference function may import production clique, closure or traversal code.
+A default hard guard `n<=12` prevents accidental exponential work; exceeding it
+requires an explicit local test option and is not part of ordinary CI.
+
+The principal-chain reference is mandatory, not optional. Use the independent
+cardinality-line construction in audit clarification B. Do not derive the expected
+chain by rerunning the proposed recursive solver or only scanning subset densities.
+
+## 2. Named obligations and tests
+
+| ID | Required assertion / witness |
+|---|---|
+| T01 | Normalization preserves the declared vertex universe, loops/duplicates are handled deterministically, empty input is rejected, singleton and no-clique outputs are exact ordinary components. |
+| T02 | Full-superset maximality: at h=3 two triangles joined by one ordinary bridge are jointly 1/3-compact, although extending the first triangle by a single new vertex fails. Direct truth returns the connected six-vertex set. |
+| T03 | Independent line-envelope chain includes zero, all true breakpoints and exact midpoint samples; include the outer-density-not-subset-density witness from review results. |
+| T04 | C++ clique tuples/counts/incidences equal combination reference; sum of clique degrees is h times clique count. |
+| T05 | Exact gcd/comparison, signed objective values, checked near-limit arithmetic and actual automatic multiprecision dispatch; nontrivial large rational queries trigger fallback on a tiny graph. |
+| T06 | For every tested nested X,Y and S subseteq Y\X, footprint identity and total weight hold; include boundary-crossing cliques, singleton/repeated footprints, and order independence. |
+| T07 | Exact max-flow/min-cut on independently enumerated tiny cuts, multiple cut ties, >64-bit capacities, residual reachability, and both capacity types. |
+| T08 | Distinguish restricted/global results; empty global F above all densities; X=F; X=Y; lambda=0 with global Y=V; smaller zero upper bound is labelled restricted; malformed bounds rejected. |
+| T09 | Oracle equals the exact LARGEST maximizer, not just the optimal value; test empty/nonempty ties, incomparable tied sets and their union, nested ties and disconnected equal-density sets. |
+| T10 | On every tested principal-chain pair, separator returns Y iff consecutive; otherwise X<Z<Y. Arbitrary nested sets are not accepted as certified chain endpoints. |
+| T11 | Only ordinary-edge anti-adjacent components of G[Y\X] are emitted; emitted density equals lambda. Include K4 plus pendant vertex, a non-emitting terminal layer, and ordinary bridges with no crossing h-clique. |
+| T12 | All fixed-k prefixes for k=1,...,q+2 equal re-ranked direct truth; k=0 rejected; --all equals complete truth; no duplicates; disjoint output sets. |
+| T13 | Basic full runs make exactly 2r-1 LOGICAL interval queries; mincut_calls may be smaller, especially at lambda=0. Test measured forward nodes/arcs separately from residual storage. |
+| T14 | Seeded end-to-end differentials and deterministic failure reduction save original graph, configuration, exact expectations and minimized reproducer. |
+| T15 | Relabel full truth then re-sort before comparing fixed-k prefixes. Test disjoint union, duplicate tied components, added isolates and input-order invariance. |
+| T16 | ASan/UBSan, numeric boundary errors, repeated canonical hashes; verify that solver orchestration never invokes a candidate verifier. |
+| T17 | Core peeling and restricted/full oracle equality; original lambda/endpoints/terminal comparison remain unchanged. Mandatory non-chain upper-bound witness from audit C; lambda=0 bypass; lower thresholds never reuse an unsafe higher core. |
+
+T17 runs only when core reduction is implemented. Streaming, additional flow
+algorithms and tie-inclusive output acquire backend/mode equivalence tests when
+implemented; their absence does not block the first correct version.
+
+## 3. Oracle request generation
+
+Global requests always use `[empty,V]` and may return empty. For bounded global
+requests, first compute exhaustive global F, then choose `X subseteq F subseteq Y`.
+Include equality. Separator-specific tests separately enforce X<F. Uncertified
+arbitrary bounds compare against the exhaustive RESTRICTED maximizer instead.
+
+Query parameters include zero, cardinality-line intersections and midpoints,
+chain outer densities, and seeded exact rationals. "Just above/below" means an
+exact rational between known neighboring breakpoints, never floating epsilon.
+
+A nonnegative exact reduced rational may contain a numerator/denominator beyond
+128 bits. Use that to test real fallback without constructing a huge graph.
+The failure reducer must preserve the kind of request and its containment
+certificate, or reclassify it explicitly as a restricted request.
+
+## 4. Explicit campaign tiers
+
+These are target workloads, not completed results. Record actual coverage and
+runtime; do not substitute counts of queries for counts of distinct graphs.
+
+| Tier | Coverage target | Usage |
+|---|---|---|
+| Smoke | All named deterministic fixtures; every implemented backend; fixed seeds | Every relevant change |
+| Exhaustive-small | All labelled simple graphs with 1<=n<=5, h in {2,3}; every k=1,...,q+2; all chain pairs | Correctness release |
+| Higher-h | Named h=4,5 fixtures including K_h, boundary cliques and h>n; seeded n<=10 graphs | Correctness release |
+| Seeded | 1,000 distinct graph/h cases with n<=10 across random, planted, bridge, tied and disconnected families; at least 10,000 certified or explicitly restricted oracle requests in total | Correctness release |
+| Extended | Additional fixed seeds and n<=12 cases, only within recorded budgets | Release extension, not per-commit CI |
+
+Cache reference counts per graph to avoid recomputing truth for every k.
+Exhaustive-all-graphs and random graph campaigns are different evidence; report
+both. No xfail covering a central semantic obligation passes the release gate.
+If a target cannot run under available resources, record the shortfall and keep
+the gate open instead of describing it as completed.
+
+## 5. Metamorphic details
+
+**Relabeling:** the full family and densities are equivariant; original-ID-based
+fixed-k ties are not necessarily equivariant. Transform complete truth, apply the
+new total order and only then take its prefix. A mapped old prefix can differ
+legitimately at the kth tie. Two disjoint edges with swapped ID blocks detect this.
+
+**Disjoint union:** the complete solution family is the union of component
+families; the global prefix requires exact global sorting. No output mixes
+ordinary connected components. Component-wise solver scheduling is a separate
+optimization and is not implied by a test of this property.
+
+**Isolates:** positive-density solutions remain; each added isolated vertex is a
+new zero-density LhCDS. It may change fixed-k output when k reaches the zero layer.
+
+**Determinism:** compare canonical semantic records (sets/counts/densities/order),
+not timing fields, allocation-dependent trace IDs or backend-specific statistics.
+
+## 6. Failure and release protocol
+
+Save failures before minimizing. Attempt deterministic edge/vertex deletion,
+then simplify h, bounds and lambda only while retaining the same failure and
+valid preconditions. Retain regression fixtures after fixing the bug.
+
+Run ASan/UBSan on applicable small/medium tiers. TSan is required only before
+parallel code is enabled. Keep compiler warnings strict; floating-point display
+is allowed but no floating-point value may enter a semantic decision.
+
+The M3 gate requires executed core tests, declared finite coverage, no known
+mismatch, sanitizer cleanliness, functioning exact fallback and populated
+traceability evidence. It does not require performance improvement, baseline
+availability, optional modes, or a second clique backend.
+
+## 7. Review-only evidence
+
+`review/math_sanity.py` checks mathematical contracts with exhaustive F and direct
+compactness on tiny graphs. It does not implement production max flow, arithmetic
+fallback, CLI or sanitizers. Its results support the plan review only; they are not
+a substitute for any production acceptance gate above.

@@ -1,41 +1,41 @@
-# Prompt 07 — Safe h-Clique Core Reduction
+# Prompt 07 - Safe Query-Local Clique-Core Restriction
 
-## Goal
+M4 / P07.1-P07.3; requires M3 correctness freeze. O10, test T17.
 
-Implement only the high-density reduction justified by the manuscript, and prove behavior equivalence empirically against the unreduced solver.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ALGORITHM_SPEC.md`, safe-reduction section
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- Definition 1.21 and Lemma 1.22 in `papers/veri_free_lhcds_v3_1_submit.md`
-- current no-reduction solver
+## Deliver
 
-## Deliverables
+Implement deterministic current h-clique-degree peeling, invalidating each clique
+once and updating only remaining incidences. Prove the implemented restriction
+matches Lemma 1.22; differential agreement is supporting evidence, not the proof.
 
-1. Deterministic `(t, Psi_h)`-core peeling using exact current h-clique degrees.
-2. Clear API distinguishing:
-   - global graph;
-   - current interval `X subseteq Y`;
-   - certified lower bound `lambda_0`;
-   - restricted upper endpoint `Y' = Y intersect core_{ceil(lambda_0),Psi_h}(G)`.
-3. Assertions/checks for the theorem preconditions before reduction is used.
-4. Mode switch:
-   - `off` (correctness reference);
-   - `safe` (theorem-backed reduction only).
-5. Telemetry for vertices/cliques removed, peeling time, and effect on closure-network size.
-6. Unit tests for clique-degree updates and nested cores.
-7. Differential tests proving byte-identical semantic output between `off` and `safe` modes on the full regression corpus and broad random campaigns.
+For original chain endpoints X,Y, compute the original lambda first. For positive
+lambda use lambda_0=lambda initially, and set
+`Y_oracle=Y intersect core_ceil(lambda_0)(G)`. Certify containment from the original
+query plus Lemma 1.22. Build footprints and N,L from Y_oracle. Bypass at lambda=0.
 
-## Boundaries
-
-- Do not apply a core based on the current query lambda unless the required containment and endpoint assumptions are established exactly.
-- Do not drop `X` vertices.
-- Do not use ordinary degree core as a substitute for h-clique core for `h>2`.
-- Do not introduce heuristic pruning under the name `safe`.
-- Do not change tie behavior when a reduced query is used.
+Never overwrite Y; never recompute lambda from Y_oracle; never compare Z to
+Y_oracle for terminality; never extract from a core-reduced graph. Children remain
+(X,Z),(Z,Y), and terminal extraction uses original G[Y\X]. A cached high-threshold
+core is not automatically safe for a lower query. Do not assert unknown global
+containment as though a runtime check alone proved it.
 
 ## Verification
 
-Run unreduced-vs-reduced differential tests, targeted cases where `Y'` is not a principal-chain set, and cases with boundary-crossing h-cliques. Report reduction ratios and zero semantic mismatches.
+Use off/safe modes with canonical output equality. T17 must include K4 disjoint
+from a triangle with a pendant vertex: the root 2-core is not a chain set, and
+the lower-density output must retain the pendant vertex. Test exact oracle
+set equality, clique degree updates, lower thresholds, zero queries, and boundary
+cliques. Report reduction cost and benefit separately. No heuristic pruning.
+
+## Completion evidence
+
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

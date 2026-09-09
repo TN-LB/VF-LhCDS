@@ -1,42 +1,40 @@
-# Prompt 06 — CLI, Telemetry, and Canonical Output Contract
+# Prompt 06 - Minimal CLI, Output and Evidence
 
-## Goal
+M3 / P06.1; minimal oracle reproducer/counters already exist from P03.5.
 
-Create a stable interface for experiments without changing the validated solver semantics.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ARCHITECTURE.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `docs/REPRODUCIBILITY.md`
-- current solver and tests
+## Deliver
 
-## Deliverables
+Finalize solve (--k or --all), global-or-restricted oracle, graph inspection and
+build-info commands. Use exact decimal count/fraction fields and self-consistent
+complete vertex sets. Validate argument domains and provide explicit error,
+resource-limit, OOM and incomplete statuses. No partial output is exact completion.
 
-1. Production CLI with explicit arguments for input, format, `h`, `k`, output path, trace level, timeout-cooperation flag, reduction mode, and flow backend.
-2. Canonical machine-readable output, preferably JSON Lines plus one run-summary JSON, containing:
-   - schema version;
-   - graph fingerprint and normalized counts;
-   - solver commit/build ID;
-   - exact result rank, density numerator/denominator, clique count, size, sorted original IDs, result hash;
-   - oracle-call count and terminal-layer count;
-   - phase timing and peak internal counters;
-   - completion/timeout/OOM/error status.
-3. A separate human-readable summary mode.
-4. Deterministic output independent of hash-table iteration, thread count (while single-threaded), or input edge order.
-5. Output validator that checks exact densities, vertex validity, ordering, duplicates, disjointness, and optional equality to a reference result.
-6. CLI integration tests and schema examples.
-7. Update `docs/REPRODUCIBILITY.md` with exact build and run commands.
+Default core off, fixed-k output, materialized cliques and automatic exact-capacity
+selection. Do not expose a nonexistent streaming or tie-inclusive mode.
 
-## Boundaries
+Record logical interval queries, actual cuts, original/reduced sizes, cliques,
+footprints, forward/residual sizes, capacity bit length and backend. Keep trace and
+timing records separate from canonical semantic hashes.
 
-- Do not mix logging text into machine-readable stdout.
-- Do not make wall-clock telemetry part of semantic output hashes.
-- Do not introduce default approximations.
-- Do not silently normalize invalid inputs; report all transformations.
-- Do not expose baseline-specific options in the proposed solver CLI.
+Define end-to-end, post-load (includes enumeration), and post-index timing as in
+`EXPERIMENT_PLAN.md`. External validation is separately timed; native baseline
+verification cannot be subtracted. Phase timers must not double-count nested work.
 
 ## Verification
 
-Run the same graph several times with permuted edge order and verify byte-identical semantic outputs. Validate all existing regression cases through the new CLI and output validator.
+Round-trip output/schema fixtures; repeat runs for semantic determinism; test zero,
+empty-global-oracle, malformed inputs and resource-error reporting. No timing or
+validation-status label may overstate what was actually run.
+
+## Completion evidence
+
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

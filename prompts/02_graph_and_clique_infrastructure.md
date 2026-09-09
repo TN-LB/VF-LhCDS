@@ -1,63 +1,39 @@
-# Prompt 02 — Graph and h-Clique Infrastructure
+# Prompt 02 - Graph, Cliques and Exact Data
 
-## Goal
+M2 / P02.1-P02.3; requires M0; comparison fixtures require M1. Tests T01,T04,T05.
 
-Implement deterministic C++ graph I/O/normalization and exact h-clique infrastructure, independently verified against the Python oracle.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ARCHITECTURE.md`
-- `docs/ALGORITHM_SPEC.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- `docs/THEORY_TO_CODE_AUDIT.md`
-- `reference/`
+## Deliver
 
-## Deliverables
+Build a deterministic C++17 graph with explicit vertex universe, sorted adjacency,
+reversible original IDs, canonical edge checksum and induced-component operations.
+Preserve isolates and loop-only declared vertices. Add canonical sets and reusable
+membership markers; set equality is not hash-only.
 
-1. `Graph` representation with:
-   - stable 0-based internal IDs;
-   - reversible mapping to original IDs;
-   - sorted, deduplicated adjacency;
-   - deterministic connected components and induced-subgraph operations.
-2. Input normalization that records:
-   - self-loops removed;
-   - parallel edges collapsed;
-   - direction symmetrization policy;
-   - isolated vertices retained or handled according to `DECISIONS.md`.
-3. A simple exact h-clique enumerator for fixed `h`:
-   - deterministic clique ordering;
-   - no duplicates;
-   - support at least `h=2,3,4,5` on test graphs;
-   - explicit error/guard for unsupported pathological parameters, if needed.
-4. A clique incidence/index interface sufficient for:
-   - total `mu_h(V)`;
-   - `mu_h(S)` for test/diagnostic use;
-   - per-vertex h-clique degree;
-   - clique-core peeling later;
-   - enumerating cliques contained in an interval `Y`.
-5. A debug CLI/tool that prints normalized graph statistics and clique counts.
-6. Unit tests and Python-vs-C++ differential tests on generated tiny graphs.
+Implement one materialized fixed-h clique/incidence backend, with sorted unique
+tuples and deterministic enumeration. Support the documented h domain without an
+undocumented MAX_H cap; h>n yields an empty clique family. Streaming is deferred.
 
-Start with the simplest exact implementation. Do not introduce advanced clique libraries or parallel enumeration in this phase.
+Implement exact counts/fractions and checked integer helpers, including safe signed
+objective comparison and decimal formatting. Keep counts exact before flow dispatch;
+an overflow-only abort is not the D005 automatic arbitrary-precision path.
 
-## Required invariants
+## Tests and boundary
 
-- Every h-clique is emitted exactly once in sorted internal-ID order.
-- `h=2` emits each normalized undirected edge exactly once.
-- The normalized graph and clique list are deterministic across runs.
-- Counts use checked integer types.
-- No graph operation may depend on unordered-container iteration order.
+Compare clique tuples, subset counts and incidences against combination reference;
+check sum(degrees)=h*clique_count. Run the relevant named tests and declared seeded
+tier, recording actual coverage. Do not implement recursion, core reduction,
+parallelism or optional clique backends in this task. C++17 interfaces must not
+silently require std::span/C++20.
 
-## Boundaries
+## Completion evidence
 
-- Do not implement max-flow or the closure oracle.
-- Do not optimize by dropping cliques that cross a future interval boundary.
-- Do not precompute all subsets or use the reference implementation inside production code.
-- Do not add parallelism yet.
-
-## Verification
-
-Run C++ unit tests, CTest, and a differential script that generates at least 1,000 fixed-seed small graphs over multiple `h` values. On failure, save the graph, seed, expected cliques, and actual cliques.
-
-Update `docs/CLAIM_TRACEABILITY.md`, `docs/TASKS.md`, and `docs/REPRODUCIBILITY.md`.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

@@ -1,5 +1,9 @@
 # Experimental Evaluation Plan
 
+Revision: 2026-09-09. Required scope is M5 in `IMPLEMENTATION_PLAN.md`.
+Dataset lists below are candidate pools, not a requirement to run every combination.
+Freeze the actual machine/configuration before measurement; no results are assumed.
+
 ## 1. Research questions
 
 ### RQ1 — Exactness
@@ -27,14 +31,14 @@ How does performance change with graph size, clique count, `h`, `k`, graph densi
 | Algorithm | Exact | Verification-free | Supported comparison | Intended role |
 |---|---:|---:|---|---|
 | VF-LhCDS | yes | yes | `h>=2` | proposed method |
-| IPPV | yes | no | general `h` | primary direct published baseline |
+| IPPV | yes | no | general `h` | primary propose-prune-and-verify baseline |
 | LDS-Opt | yes | yes | `h=2` | hierarchy-based specialization |
 | LDScvx | yes | no | `h=2` | convex-programming LDS baseline |
 | LDSflow | yes | no | `h=2` | classical flow baseline |
 | LTDScvx | yes | no | `h=3` | convex-programming triangle baseline |
 | LTDSflow | yes | no | `h=3` | classical triangle-flow baseline |
 | Greedy/KClist++ variant | no | not applicable | quality/runtime only | heuristic reference, never exact SOTA |
-| DCLDS public repository | to audit | claims D&C | appears general | provenance and overlap must be resolved |
+| DCLDS (PVLDB 2026; D012) | paper-level claim; pinned code to validate | audit pinned implementation | general-h target | primary direct parallel-work baseline; independence already recorded |
 
 Do not aggregate speedups across incomparable `h` values or across exact and heuristic methods without separate labels.
 
@@ -128,7 +132,7 @@ Normalization:
 2. treat edges as undirected;
 3. remove self-loops;
 4. collapse parallel/reversed duplicates;
-5. remove or preserve isolated vertices according to a documented project decision;
+5. preserve all declared vertices, including isolates (D017); capture the vertex universe before removing loops;
 6. remap to contiguous 0-based IDs;
 7. sort canonical edges;
 8. compute checksum and statistics.
@@ -137,7 +141,15 @@ Every run manifest includes the normalized dataset checksum. Baseline-specific c
 
 ## 6. Output equivalence and tie handling
 
-Exact algorithms may use different tie conventions. Compare outputs with two validators:
+Exact algorithms may use different tie conventions. Keep separate evidence levels:
+
+- `definition-checked`: exhaustive compactness and all-superset maximality on tiny inputs;
+- `structural-checked`: IDs, duplicate sets, clique counts, exact densities, ordinary connectivity and ordering;
+- `cross-implementation-agreement`: agreement with a separately audited implementation under an explicit tie policy.
+
+Structural checking and agreement are not a new proof of maximality or output
+completeness. Do not label large outputs definition-checked unless those checks
+actually ran. Compare output selection with the following two comparators:
 
 ### Strict validator
 
@@ -148,7 +160,8 @@ Used when both algorithms implement the same deterministic subset order. Require
 For a requested `k`:
 
 - all outputs with density strictly greater than the kth density must match;
-- every returned set must be a valid LhCDS with the reported density;
+- check that outputs are distinct, have the required count when q is known, and are valid under the recorded evidence level;
+- use a trusted reference cutoff when available; when exact q/cutoff is unknown, explicitly label the comparison as agreement evidence, not a proof of completeness;
 - differences among valid sets tied at the kth density are allowed if the baseline does not expose a compatible total order;
 - the count and tie policy are recorded.
 
@@ -159,7 +172,8 @@ Never call two outputs inconsistent solely because they select different members
 ### Primary
 
 - end-to-end wall-clock time;
-- solver-only wall-clock time after input loading;
+- post-load algorithm time, including initial clique enumeration/indexing;
+- post-index core time only as a separately labelled diagnostic with a comparable boundary;
 - peak resident set size;
 - completed/timeout/OOM/error status;
 - latency to ranks 1, 5, 10, 20, and final `k`.
@@ -187,6 +201,21 @@ Never call two outputs inconsistent solely because they select different members
 - each vertex-set hash;
 - combined ordered-output hash.
 
+### Timing boundaries
+
+`T_e2e`: process launch through complete result serialization, including graph I/O,
+initial enumeration/indexing, algorithmic verification internal to any baseline,
+and output. Common offline dataset normalization is excluded consistently and
+reported separately. External reference/output validation happens after the timed
+algorithm finishes; its time/RSS is recorded separately.
+
+`T_postload`: normalized graph loaded through completion; includes enumeration.
+`T_core`: initial index ready through completion, including query-local enumeration
+or reduction where applicable. It is not comparable across backends/baselines
+without an audited matching scope. Record unavailable phase timing as unavailable,
+not zero. Never subtract a baseline's native candidate verification from its time.
+The primary comparison remains T_e2e and algorithm-process peak RSS.
+
 ## 8. Run protocol
 
 1. Pin code and baseline commits.
@@ -197,7 +226,7 @@ Never call two outputs inconsistent solely because they select different members
 6. Record one immutable manifest and full stdout/stderr per run.
 7. Use `/usr/bin/time -v` or an equivalent wrapper for wall time and peak RSS.
 8. Do not reuse a partially written result after timeout.
-9. Validate output before accepting the run as successful.
+9. Record structural validity and the available semantic/agreement evidence separately before including a run; never infer maximality from counts alone.
 10. Aggregate from manifests, never from manually transcribed numbers.
 
 State whether filesystem cache is warm or uncontrolled. Randomized run order reduces systematic cache bias.
@@ -256,19 +285,23 @@ Include timeouts fairly across the full benchmark set.
 
 ## 11. Ablation matrix
 
-Use named configurations:
+`B0` is the actual M3 implementation: materialized cliques, aggregated footprints,
+endpoint-count reuse, exact auto-capacity backend, fixed-k, core off. Do not list
+already-required primitives as optional improvements or require a streaming B0.
 
-- `B0`: simplest exact solver, streaming or uncached reference production mode;
-- `B1`: materialized clique index;
-- `B2`: aggregated residual footprints;
-- `B3`: safe h-clique-core reduction;
-- `B4`: `mu_h` and oracle caching;
-- `B5`: safe closure-network reductions;
-- `B6`: alternative exact flow backend;
-- `B7`: full optimized solver;
-- `B8`: full-chain enumeration versus top-k early stop.
+| Variant | Comparison | Requirement |
+|---|---|---|
+| B-core | B0 versus query-local safe core | Mandatory only when M4 core is implemented |
+| B-memory | Materialized versus streaming | Optional; only with an implemented streaming backend |
+| B-network | No folding versus proven singleton/network folding | Optional; written equivalence argument required |
+| B-flow | Generic Dinic versus another exact algorithm | Optional; arithmetic dispatch alone is not a new algorithm |
+| B-cache | Endpoint-only reuse versus additional measured cache | Optional; demonstrate actual hits and memory cost |
+| B-stop | Fixed-k early stop versus full-chain execution | Compare fixed-k output with the corresponding full-output PREFIX, not whole-file hashes |
 
-Each ablation reports both output hash equality and performance. A faster but semantically different configuration is not an optimization; it is a different algorithm and must be labeled accordingly.
+Change one feature at a time and report its costs as well as benefits. Compare
+canonical semantic hashes for equivalent full tasks, excluding time and backend
+trace fields. For changed output scope such as B-stop, compare the appropriate
+prefix. Do not require every optional variant to run for project completion.
 
 ## 12. Claim discipline
 
@@ -281,3 +314,12 @@ Allowed claims must match evidence:
 - “Scalable” must state the largest completed graph, h-clique count, memory, hardware, and timeout policy.
 
 Negative or mixed results should be reported. In particular, the exact closure network may be disadvantaged when unique footprint count is close to total clique count; that outcome is scientifically informative.
+
+## 13. Minimal execution order
+
+First freeze one shared small/real smoke configuration with DCLDS and IPPV where
+available. Then expand to the claimed h strata and a resource-feasible candidate
+dataset subset using preregistered criteria. Final timeout/memory/thread/repeat
+values remain configuration work, not invented facts in this revision. Record
+excluded methods and censored runs. Neither a speedup nor every optional figure is
+a completion condition; a fair negative result remains a valid result.

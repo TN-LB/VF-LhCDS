@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-09T09:23:38.638384+00:00",
+  "provenance": "Initial snapshot created during M0 after the owner confirmed no earlier snapshot had been created. All four bytes were also compared against the existing HEAD commit; this is not a historical-priority claim.",
+  "comparison_commit": "60321429ef832d7032d1e6ad96965dd2a95b08aa",
+  "sha256": {
+    "papers/2023-icde-lds.md": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+    "papers/2408.14022v1.md": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+    "papers/2504.10937v1.md": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+    "papers/veri_free_lhcds_v3_1_submit.md": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700"
+  }
+}

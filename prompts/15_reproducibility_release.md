@@ -1,57 +1,35 @@
-# Prompt 15 — Reproducibility and Release Packaging
+# Prompt 15 - Reproducible Release
 
-## Goal
+M5 / P15.1; requires implementation acceptance and actual comparison evidence.
 
-Prepare a release candidate that another researcher can build, validate on tiny graphs, and reproduce selected experiments without hidden state.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/REPRODUCIBILITY.md`
-- `docs/BASELINE_AUDIT.md`
-- `docs/CLAIM_TRACEABILITY.md`
-- correctness and performance reviews
-- all build, dataset, experiment, and aggregation scripts
+## Deliver
 
-## Deliverables
+Assemble build/test/reproduction scripts, pinned dependencies/baseline records,
+normalization and dataset manifests, immutable raw results, aggregation scripts,
+configuration files, exact output schema and documented limitations. Preserve the
+proof snapshot and D012 boundary. No large private/raw datasets are silently bundled.
 
-1. Final root `README.md` with:
-   - problem statement and exact scope;
-   - build dependencies and commands;
-   - input format and normalization;
-   - proposed-solver examples;
-   - tiny correctness-validation command;
-   - experiment quick start;
-   - expected outputs;
-   - supported numeric limits;
-   - citation and license information.
-2. Reproducible environment definition, such as container recipe and/or locked package/toolchain versions.
-3. `scripts/reproduce_smoke.sh` that builds, runs tests, executes tiny proposed/baseline cases, validates outputs, and produces a small summary.
-4. `scripts/reproduce_selected_results.sh` for a documented subset of paper tables/figures.
-5. Dataset download/checksum/normalization manifests without redistributing restricted data.
-6. Baseline fetch/build scripts pinned to commits, respecting licenses.
-7. Versioned result schema and example raw manifests.
-8. Release manifest with git commit, submodule commits, compiler, flags, dependencies, and checksums.
-9. Archive exclusions for raw large datasets, binaries, caches, and massive logs.
-10. Final update to `docs/CLAIM_TRACEABILITY.md`, mapping every released claim to code, tests, configs, and raw result IDs.
+Run a clean correctness smoke and the included baseline smoke, then regenerate
+selected tables from raw manifests. Record environment, commands, checksums and
+actual outcomes. Mark unavailable phase metrics and exclusions explicitly.
 
-## Release gates
+## Gate
 
-- All mandatory correctness tests and sanitizers pass.
-- No unresolved Critical/High correctness findings.
-- Baseline statuses are explicit.
-- Smoke reproduction works from a clean checkout.
-- Output hashes are deterministic.
-- No secret, local absolute path, or untracked dependency is required.
-- The documentation does not claim arbitrary-h support for h=2/h=3 baselines.
+Every reported number must trace to a command, version, dataset checksum, raw log
+and aggregation version. Include known failed/censored cases. Review-only scripts
+are labelled as such, not release acceptance. Never invent a tested build or claim
+all optional modes/baselines exist. Deliver a package only at its actual completed
+reproduction level; performance improvement is not a release requirement.
 
-## Boundaries
+## Completion evidence
 
-- Do not include third-party source or datasets contrary to license.
-- Do not publish fabricated placeholder numbers as results.
-- Do not omit known limitations.
-- Do not mark the release complete when only the developer's existing build directory works.
-
-## Verification
-
-Run the smoke reproduction from a clean build directory or clean worktree. Record total commands, elapsed time, produced files, checksums, and any intentionally skipped large experiments.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

@@ -1,0 +1,35 @@
+ M AGENTS.md
+ M README.md
+ M docs/ALGORITHM_SPEC.md
+ M docs/ARCHITECTURE.md
+ M docs/BASELINE_AUDIT.md
+ M docs/CLAIM_TRACEABILITY.md
+ M docs/CODEX_WORKFLOW.md
+ M docs/CORRECTNESS_TEST_PLAN.md
+ M docs/DECISIONS.md
+ M docs/EXPERIMENT_PLAN.md
+ M docs/IMPLEMENTATION_PLAN.md
+ M docs/REPRODUCIBILITY.md
+ M docs/TASKS.md
+ M prompts/00_theory_audit_and_repo_bootstrap.md
+ M prompts/01_exhaustive_reference_oracle.md
+ M prompts/02_graph_and_clique_infrastructure.md
+ M prompts/03_exact_closure_oracle.md
+ M prompts/04_divide_and_conquer_solver.md
+ M prompts/05_differential_test_campaign.md
+ M prompts/06_cli_telemetry_and_output_contract.md
+ M prompts/07_safe_clique_core_reduction.md
+ M prompts/08_profile_guided_optimization.md
+ M prompts/09_ippv_baseline_adapter.md
+ M prompts/10_h2_h3_baseline_adapters.md
+ M prompts/11_experiment_harness.md
+ M prompts/12_ablation_and_scalability.md
+ M prompts/13_correctness_review.md
+ M prompts/14_performance_review.md
+ M prompts/15_reproducibility_release.md
+ M prompts/99_minimize_a_failure.md
+ M prompts/README.md
+?? docs/PLAN_REVIEW.md
+?? docs/THEORY_TO_CODE_AUDIT.md
+?? evidence/
+?? prompts/09b_dclds_baseline_adapter.md

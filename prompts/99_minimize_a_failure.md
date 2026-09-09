@@ -1,53 +1,34 @@
-# Prompt 99 — Minimize and Diagnose a Correctness Failure
+# Prompt 99 - Preserve, Minimize and Diagnose a Failure
 
-## Goal
+Use on any failed named test or experiment validator. Do not proceed by weakening semantics.
 
-Convert one failing test, seed, output mismatch, crash, or overflow into the smallest reproducible case and identify the violated invariant before changing production logic.
+## Context
 
-## Inputs to provide
-
-- failing command or test name;
-- seed/shard, if randomized;
-- input graph artifact;
-- `h`, `k`, lambda/interval when relevant;
-- expected and actual outputs;
-- build mode and commit.
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
 ## Procedure
 
-1. Reproduce the failure unchanged.
-2. Capture a self-contained failure bundle.
-3. Classify the first divergent layer:
-   - normalization;
-   - clique enumeration/count;
-   - exact arithmetic;
-   - footprint construction;
-   - min-cut/closure extraction;
-   - recursion/terminal extraction;
-   - output ordering/serialization;
-   - reduction;
-   - baseline adapter.
-4. Use the independent Python oracle wherever tractable.
-5. Minimize by attempting, in deterministic order:
-   - remove irrelevant isolated vertices;
-   - remove vertices;
-   - remove edges;
-   - reduce `k`;
-   - reduce `h` only if the same bug remains;
-   - simplify lambda/interval.
-6. State the earliest violated invariant and the exact source theorem/spec section.
-7. Add the minimized case as a regression test before applying a fix.
-8. Make the smallest justified fix.
-9. Run the targeted test, related component tests, then the full required regression tier.
+Save original graph, h/k, IDs, exact lambda, bounds, bound provenance, configuration,
+seed, expected/actual output and logs before edits. Identify the earliest violated
+obligation, not just its downstream symptom.
 
-## Boundaries
+Deterministically remove edges, then vertices, preserving the mismatch. For oracle
+failures, also preserve certified containment/request type; if bounds become
+uncertified, recompute a certificate or explicitly test the restricted objective.
+Simplify parameters only while the same failure remains. Re-rank renamed truth
+when fixed-k ties exist. Do not blame a legitimate kth-tie choice for a mismatch.
 
-- Do not weaken or delete the failing assertion.
-- Do not change expected output without proving the prior expectation was wrong.
-- Do not add floating tolerance.
-- Do not fix a downstream symptom when an upstream invariant first fails.
-- Do not discard the original failure bundle after minimization.
+Create a permanent named regression, explain the source/specification/code conflict,
+fix the earliest cause and rerun the original and reduced cases. Never add an
+approximate fallback or candidate verifier to suppress an exact solver bug.
+If a proof counterexample survives, record it and stop that affected path; do not
+silently edit the manuscript. Report what is and is not resolved.
 
-## Completion report
+## Completion evidence
 
-Include original reproducer, minimized reproducer, root cause, violated invariant, code change, new regression test, commands run, and residual risk.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

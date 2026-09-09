@@ -1,64 +1,33 @@
-# Prompt 12 — Ablation, Scalability, and Stress Experiments
+# Prompt 12 - Scope-Matched Experiments and Ablations
 
-## Goal
+M5 / P12.1; requires frozen experiment configuration and successful shared smoke.
 
-Implement the experiment families needed to explain where VF-LhCDS wins or loses, not only whether it wins on aggregate.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `docs/REPRODUCIBILITY.md`
-- current runner and telemetry schema
+## Deliver
 
-## Required experiment families
+Run the selected general-h cases with validated DCLDS/IPPV, then claimed h=2/h=3
+specializations. Keep graph version, h, k, worker policy and resources comparable.
+Do not reduce the task only for a slow baseline. Retain timeout/OOM/failed cases.
 
-1. Main exact comparison stratified by `h`:
-   - `h=2` applicable exact baselines;
-   - `h=3` applicable exact baselines;
-   - `h=4,5` arbitrary-h exact baselines.
-2. Vary `k`, including small-k and all-output where feasible.
-3. Vary graph size using deterministic induced-subgraph samples or published scale variants.
-4. Vary `h` while reporting the resulting number of h-cliques.
-5. Synthetic structural sweeps:
-   - sparse-to-dense;
-   - planted dense blocks connected by sparse bridges;
-   - high clique-overlap;
-   - many equal-density leaves;
-   - many principal-chain layers;
-   - few layers but huge closure networks.
-6. Ablations, where implementable without changing semantics:
-   - safe core reduction off/on;
-   - footprint aggregation off/on;
-   - clique cache/index strategy;
-   - flow backend;
-   - interval cache off/on;
-   - full output vs early top-k stopping.
-7. Time breakdown and network-size breakdown.
-8. Memory scaling and capacity-bit-width statistics.
-9. Correctness stress on every ablation.
+Use the corrected ablation table: B0 already materializes cliques and aggregates
+footprints. Core off/on is required only when core exists; streaming, folding,
+other flow algorithms and extra caches are optional. Change one feature at a time.
+Full-chain versus early-stop compares the corresponding fixed-k prefix, NOT equal
+whole-output hashes. Log reduction/enumeration/cache overhead, not just flow time.
 
-## Analysis outputs
+Analyze end-to-end time, memory, time-to-result and observed query/network size.
+No 2r-1 bound implies O(k), and a fixed-h polynomial bound is not evidence of
+practical scalability. Scope conclusions to completed/censored evidence; negative
+performance remains reportable. Produce aggregates directly from immutable logs.
 
-Generate machine-readable summary tables and plotting-ready CSV/Parquet, but do not hard-code publication claims. Include:
+## Completion evidence
 
-- speedup ratios only when both runs are valid and completed;
-- timeout-aware tables;
-- oracle-call count and layers emitted;
-- footprint count before/after aggregation;
-- network nodes/arcs;
-- clique enumeration and flow share;
-- peak RSS;
-- result hash agreement.
-
-## Boundaries
-
-- Do not cherry-pick datasets or repetitions after seeing results.
-- Do not use a different `k` or `h` for a slow baseline.
-- Do not exclude preprocessing without also reporting end-to-end time.
-- Do not present a speedup against a timed-out method as an exact finite ratio unless the convention is explicitly defined.
-- Do not conclude SOTA until the direct DCLDS provenance and baseline audit are resolved.
-
-## Verification
-
-Run a small-scale version of every experiment family, validate all outputs, and document the exact commands required for the full campaign.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

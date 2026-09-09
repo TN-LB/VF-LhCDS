@@ -1,0 +1,28 @@
+{
+  "utc": "2026-09-09T09:24:19.549252+00:00",
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "os": "macOS-15.7.7-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "python_executable": "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+  "tools": {
+    "cmake": "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+    "ctest": "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+    "python": "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "clang++": "/usr/bin/clang++",
+    "make": "/usr/bin/make"
+  },
+  "environment": {
+    "PATH": "/Users/nost/Documents/VF-LhCDS/.venv/bin:/Users/nost/.nvm/versions/node/v22.19.0/bin:/opt/homebrew/opt/postgresql@17/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/nost/.codex/tmp/arg0/codex-arg0ZM7lBG:/Users/nost/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/nost/.nvm/versions/node/v22.19.0/bin:/opt/homebrew/opt/postgresql@17/bin:/Users/nost/.sdkman/candidates/java/current/bin:/Users/nost/.sdkman/candidates/gradle/current/bin:/Users/nost/.orbstack/bin:/Users/nost/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/nost/.orbstack/bin",
+    "CC": null,
+    "CXX": null,
+    "CXXFLAGS": null,
+    "LDFLAGS": null,
+    "CMAKE_GENERATOR": null,
+    "ASAN_OPTIONS": null,
+    "UBSAN_OPTIONS": null
+  },
+  "base_commit": "60321429ef832d7032d1e6ad96965dd2a95b08aa",
+  "git_status": " M AGENTS.md\n M README.md\n M docs/ALGORITHM_SPEC.md\n M docs/ARCHITECTURE.md\n M docs/BASELINE_AUDIT.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/CODEX_WORKFLOW.md\n M docs/CORRECTNESS_TEST_PLAN.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/REPRODUCIBILITY.md\n M docs/TASKS.md\n M prompts/00_theory_audit_and_repo_bootstrap.md\n M prompts/01_exhaustive_reference_oracle.md\n M prompts/02_graph_and_clique_infrastructure.md\n M prompts/03_exact_closure_oracle.md\n M prompts/04_divide_and_conquer_solver.md\n M prompts/05_differential_test_campaign.md\n M prompts/06_cli_telemetry_and_output_contract.md\n M prompts/07_safe_clique_core_reduction.md\n M prompts/08_profile_guided_optimization.md\n M prompts/09_ippv_baseline_adapter.md\n M prompts/10_h2_h3_baseline_adapters.md\n M prompts/11_experiment_harness.md\n M prompts/12_ablation_and_scalability.md\n M prompts/13_correctness_review.md\n M prompts/14_performance_review.md\n M prompts/15_reproducibility_release.md\n M prompts/99_minimize_a_failure.md\n M prompts/README.md\n?? .gitignore\n?? CMakeLists.txt\n?? cmake/\n?? docs/BUILD.md\n?? docs/INTERFACE_CONTRACT.md\n?? docs/PLAN_REVIEW.md\n?? docs/THEORY_TO_CODE_AUDIT.md\n?? evidence/\n?? include/\n?? prompts/09b_dclds_baseline_adapter.md\n?? pyproject.toml\n?? reference/\n?? requirements-dev.txt\n?? review/\n?? scripts/\n?? src/\n?? tests/\n?? validation/\n",
+  "scope": "M0 skeleton only; no dataset, random seed, experiment budget or algorithm campaign"
+}

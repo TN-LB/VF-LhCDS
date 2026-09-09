@@ -1,0 +1,24 @@
+{
+  "scope": "M0 bootstrap only; no graph/density result fixtures or random tests executed",
+  "seeds": [],
+  "tests": [
+    {
+      "test": "m0_cpp_skeleton",
+      "source": "tests/skeleton_test.cpp",
+      "cases": "build provenance/library linkage and solve stub refusing success",
+      "source_sha256": "69bc83bd11b5fff971d92367a53b036f5673ca7db5cd0bef3756bf3b03967711"
+    },
+    {
+      "test": "m0_cli_contract",
+      "source": "tests/cli_smoke.py",
+      "cases": "3 diagnostic commands; 7 invalid/unimplemented cases; existing output sentinel preserved",
+      "source_sha256": "c66a7b6d07044c528a7398b341436d880790ab51800701705c54103eb1385c39"
+    },
+    {
+      "test": "m0_reference_skeleton",
+      "source": "reference/tests/test_skeleton.py",
+      "cases": "1 isolated-interpreter package/module import test; no production path added",
+      "source_sha256": "f7539c40dcd1295fede4cb3d6ab9f6a84aedc3acc6977655712d584c661d27ee"
+    }
+  ]
+}

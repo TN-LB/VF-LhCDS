@@ -1,50 +1,36 @@
-# Prompt 14 — Performance, Baseline, and Experimental Fairness Review
+# Prompt 14 - Performance and Comparison Review
 
-## Goal
+M5 / P14.1; requires actual experiment results, not only planned commands.
 
-Review whether measured performance and planned claims are supported by comparable implementations and reproducible evidence.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `docs/BASELINE_AUDIT.md`
-- `docs/REPRODUCIBILITY.md`
-- `docs/CLAIM_TRACEABILITY.md`
-- experiment configs, raw manifests, aggregation scripts, and representative logs
+## Review
 
-## Review checklist
+Inspect raw manifests, environment, dataset/checksum selection, baseline commits/
+licenses/patches, timing boundaries, repeats and all completed/censored outcomes.
+DCLDS independence is already decided, but build/output/timing validation is not.
+Primary competitors must be included or their absence limits conclusions.
 
-1. Proposed solver profile and actual bottleneck.
-2. Baseline provenance, commit, license, patches, and paper/code correspondence.
-3. Correct `h` applicability and exact-vs-approximate labels.
-4. Identical normalized graph, output semantics, `h`, and `k`.
-5. Compiler, flags, CPU, memory, threads, affinity, and resource limits.
-6. End-to-end vs solver-only timing.
-7. One-time preprocessing and clique-index accounting.
-8. Warm-up/repetition/randomized execution order.
-9. Peak RSS and timeout/OOM handling.
-10. Output correctness before inclusion in speed tables.
-11. Aggregation statistics and missing-data treatment.
-12. Whether any result depends on a hand-tuned parameter unique to one dataset.
-13. Whether direct overlapping work such as DCLDS has been resolved and included when appropriate.
-14. Whether each intended paper claim has a traceable table/figure/raw manifest.
+Check endpoint reuse/footprint aggregation are not mislabelled optional improvements;
+core overhead is included; streaming/re-enumeration work is counted; cache benefits
+have real hits; full versus early-stop uses prefix validation; semantic hashes
+exclude telemetry. Baseline candidate verification remains algorithm time.
 
-## Deliverables
+## Deliver
 
-Create `docs/reviews/PERFORMANCE_REVIEW.md` with prioritized findings and a claim-readiness table:
+List evidence-backed bottlenecks, fairness issues, result limitations and unsupported
+claims. Recommend only changes supported by profiles and separate proofs where
+semantics could change. Do not claim SOTA, scalability or speedup from theoretical
+oracle counts or a small favorable subset. Do not change the experiment grid to
+remove unfavorable results.
 
-- claim text;
-- scope (`h`, datasets, `k`, hardware);
-- supporting experiment IDs;
-- baseline validity;
-- status: supported / partially supported / unsupported / blocked.
+## Completion evidence
 
-Include concrete rerun instructions for every blocking issue.
-
-## Boundaries
-
-- Do not rewrite claims to sound stronger than evidence.
-- Do not ignore timeout/OOM cases.
-- Do not compare methods outside their supported `h`.
-- Do not infer SOTA from papers alone when code/provenance is unresolved.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

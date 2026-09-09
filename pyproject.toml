@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["reference/tests"]
+pythonpath = ["reference"]
+addopts = "--strict-config --strict-markers"
+filterwarnings = ["error"]

@@ -1,0 +1,11 @@
+[ 25%] Building CXX object CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o
+[ 25%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o
+[ 37%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o
+[ 50%] Linking CXX static library libvflhcds_lib.a
+[ 50%] Built target vflhcds_lib
+[ 75%] Building CXX object CMakeFiles/vflhcds.dir/src/cli/main.cpp.o
+[ 75%] Building CXX object CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o
+[ 87%] Linking CXX executable vflhcds
+[100%] Linking CXX executable vflhcds_skeleton_test
+[100%] Built target vflhcds
+[100%] Built target vflhcds_skeleton_test

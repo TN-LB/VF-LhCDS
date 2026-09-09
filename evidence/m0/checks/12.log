@@ -1,0 +1,10 @@
+-- The CXX compiler identification is AppleClang 17.0.0.17000603
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python3: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 (found suitable version "3.12.2", minimum required is "3.10") found components: Interpreter
+-- Configuring done (1.2s)
+-- Generating done (0.4s)
+-- Build files have been written to: /Users/nost/Documents/VF-LhCDS/build-relwithdebinfo

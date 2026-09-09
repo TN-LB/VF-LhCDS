@@ -1,326 +1,136 @@
 # VF-LhCDS Software Architecture
 
-## 1. Two-track design
+Revision 2026-09-09. Initial language baseline: C++17 with CMake; Python standard
+library for independent truth. Do not require C++20 `std::span` in a C++17 API.
 
-### Track A: exhaustive reference
-
-Location: `reference/`
-
-Purpose:
-
-- define truth for tiny graphs directly from mathematical definitions;
-- validate the exact `F_h(lambda)` oracle independently;
-- generate deterministic fixtures and minimized counterexamples.
-
-Recommended language: Python 3, standard library first.
-
-### Track B: production solver
-
-Location: `include/vflhcds/`, `src/`
-
-Purpose:
-
-- exact implementation suitable for real graph experiments;
-- modular clique, flow, oracle, recursion, reduction, and telemetry backends;
-- deterministic CLI and canonical output.
-
-Recommended language: C++17 or newer with CMake.
-
-## 2. Production module map
+## 1. Minimal module split
 
 ```text
-io/
-  graph_reader.*           Parse, normalize, remap, checksum
-  result_writer.*          Canonical JSONL/TSV output
-
-core/
-  graph.*                  CSR-like simple undirected graph
-  vertex_set.*             Canonical sorted sets and membership markers
-  fraction.*               Reduced exact fractions and comparisons
-  checked_int.*            Overflow-safe arithmetic and formatting
-
-clique/
-  enumerator.*             Fixed-h degeneracy-oriented enumeration
-  materialized_index.*     Clique tuples and vertex-to-clique incidence
-  streaming_backend.*      Query-local enumeration interface
-  clique_core.*            h-clique degree peeling
-
-flow/
-  maxflow_interface.*
-  dinic128.*               First exact backend
-  residual_reachability.*
-
-oracle/
-  footprint.*              Canonical residual footprint key
-  footprint_aggregator.*
-  closure_network.*
-  exact_f_oracle.*         F_h(lambda) on interval X,Y
-
-solver/
-  mu_cache.*
-  interval.*
-  terminal_extractor.*
-  divide_conquer.*
-  topk_order.*
-
-validation/
-  output_validator.*       Recompute clique count/density and structure checks
-  baseline_normalizer.*
-
-telemetry/
-  counters.*
-  timers.*
-  run_manifest.*
-
-cli/
-  main.cpp
+reference/                    Direct definitions, exhaustive F, independent chain
+include/vflhcds/, src/
+  io/                         Declared-vertex graph reader, canonical result writer
+  core/                       Graph, canonical vertex sets, fractions, exact integers
+  clique/                     Fixed-h enumerator, materialized tuples/incidence
+  flow/                       Dinic<Capacity>, residual reachability
+  oracle/                     Footprints, restricted closure, certified global wrapper
+  solver/                     ChainInterval, terminal extraction, left-first traversal
+  telemetry/                  Logical queries, actual cuts, phase times, run metadata
+  cli/                        solve, oracle, inspect-graph, print-build-info
+validation/                   External checks, not a solver dependency
 ```
 
-## 3. Core interfaces
+After M3, add `clique/core` and query-bound reduction for M4. Streaming, further
+flow algorithms, component scheduling and parallelism are optional extensions.
 
-The exact signatures may differ, but responsibilities should remain explicit.
+## 2. Key interfaces and ownership
+
+The following is an illustrative contract, not compile-ready source:
 
 ```cpp
-struct Fraction {
-    UInt numerator;
-    UInt denominator;
-};
+// Callback receives a sorted tuple valid for the duration of the call (C++17).
+using CliqueCallback = std::function<void(const std::vector<VertexId>&)>;
 
-struct CanonicalSubgraph {
-    std::vector<VertexId> vertices;
-    CliqueCount clique_count;
-    Fraction density;
-};
-
-class CliqueBackend {
-public:
-    virtual CliqueCount count_contained(const VertexSet& s) const = 0;
-    virtual void for_each_clique_in(
-        const VertexSet& y,
-        const std::function<void(std::span<const VertexId>)>& fn) const = 0;
-    virtual void compute_clique_degrees(
-        const VertexSet& s,
-        std::vector<CliqueCount>& out) const = 0;
-};
-
-struct OracleRequest {
+struct ChainInterval {
     VertexSet x;
-    VertexSet y;
-    Fraction lambda;
+    VertexSet y;                  // original chain endpoint; immutable during query
+    ExactCount mu_x;
+    ExactCount mu_y;
 };
 
-struct OracleStats {
-    std::uint64_t cliques_scanned;
-    std::uint64_t unique_footprints;
-    std::uint64_t closure_nodes;
-    std::uint64_t closure_arcs;
-    UInt max_capacity;
-    double build_seconds;
-    double flow_seconds;
+struct RestrictedRequest {
+    VertexSet x;
+    VertexSet y_oracle;            // search bound, not a recursive endpoint
+    ExactFraction lambda;
 };
 
-struct OracleResult {
-    VertexSet f;
-    OracleStats stats;
+enum class BoundOrigin { FullGraph, ChainSeparator, SafeCoreRestriction };
+struct CertifiedGlobalRequest {
+    RestrictedRequest request;
+    BoundOrigin origin;
+    // Record the parent chain query / exact threshold for proof-trace provenance.
 };
 
-class ExactFOracle {
-public:
-    OracleResult solve(const OracleRequest& request);
-};
-
-class DivideConquerSolver {
-public:
-    std::vector<CanonicalSubgraph> solve_top_k(
-        const Graph& graph, int h, std::size_t k, OutputMode mode);
-};
+VertexSet largest_restricted(const RestrictedRequest&);
+VertexSet global_F(const CertifiedGlobalRequest&);
 ```
 
-## 4. Graph representation
+A certificate constructor is internal to validated orchestration; a caller cannot
+make arbitrary bounds certified merely by setting an enum. Debug/test builds
+compare global containment with the exhaustive reference on tiny instances.
+Untrusted CLI bounds use the restricted interface unless independently certified.
 
-Use a deterministic simple undirected graph:
+The solver owns chain endpoints and endpoint counts. An oracle may return Z and
+statistics, but cannot mutate the caller's lambda or endpoints. External output
+validators must not be called to accept/reject candidates inside traversal.
 
-- internal IDs `0..n-1`;
-- sorted adjacency lists or CSR offsets/neighbors;
-- each undirected edge stored twice for adjacency, once in canonical edge list;
-- original-to-internal and internal-to-original mapping;
-- preprocessing summary and graph checksum.
+## 3. Data structures
 
-Required operations:
+Graph: sorted adjacency/CSR, stable internal IDs, explicit vertex universe,
+reversible original-ID map, checksummed canonical edges. Sets: sorted vectors and
+reusable membership markers. Equality always checks full sets, not hashes alone.
 
-- adjacency iteration;
-- fast edge existence for clique enumeration and anti-adjacency checks;
-- induced connected components over a vertex marker;
-- degeneracy order/orientation.
+Materialized cliques and incidence are the only required initial storage backend.
+Footprint keys have sorted unique IDs and support the declared h range; do not
+silently cap arbitrary h through an undocumented MAX_H array. A vector/small-vector
+key is adequate initially. Count each original clique once.
 
-For moderate graphs, sorted adjacency plus two-pointer intersections is a strong initial choice. Do not add a global hash table per adjacency list until profiling shows a need.
+Store endpoint `mu_h` directly with intervals. A separate global oracle cache is
+not required. Measure before adding repeated-query storage and eviction machinery.
 
-## 5. Vertex-set representation
+## 4. Exact flow and arithmetic
 
-Initial recommended representation:
+Implement one deterministic generic Dinic algorithm, with checked unsigned-128
+and arbitrary-precision capacity instantiations. Provide a true automatic dispatch
+path per D005. Exact counts/fractions and signed objective comparisons must remain
+safe before dispatch. Use a documented arbitrary-precision dependency where needed.
 
-- canonical sorted `std::vector<VertexId>` as ownership format;
-- reusable `MembershipMarker` with epoch array for O(1) temporary membership;
-- no permanent `n`-bit copy for every recursion node.
+All reverse-edge indices, capacities, residual updates, total flow and formatting
+are tested. Avoid flow DFS recursion proportional to input size unless protected
+by an explicit safe stack strategy. Source reachability is computed after max flow.
+Record forward arcs separately from residual arcs.
 
-This makes equality, serialization, hashing, and subset differences deterministic. Profile before introducing compressed bitsets.
+## 5. Output and timing contracts
 
-## 6. Clique backends
-
-### 6.1 Materialized backend
-
-Enumerate all h-cliques once and store:
-
-- packed sorted vertex tuples;
-- incidence list from vertex to clique IDs;
-- per-vertex clique degree.
-
-Advantages:
-
-- fast repeated interval filtering;
-- enables exact clique-core peeling;
-- straightforward instrumentation.
-
-Risk: memory proportional to `h*|Psi_h|` plus incidence.
-
-### 6.2 Streaming backend
-
-Enumerate h-cliques inside a query's `Y` without storing the global collection.
-
-Advantages:
-
-- lower peak storage when clique count is huge.
-
-Risk:
-
-- repeated enumeration across oracle calls;
-- harder incremental clique-core support.
-
-Both backends must produce identical canonical clique tuples on test instances.
-
-## 7. Residual-footprint aggregator
-
-For each clique `C` inside `Y`:
-
-1. test whether all vertices are in `X`; if yes, skip;
-2. build sorted `R=C\X`;
-3. increment `w(R)`.
-
-Because `|R|<=h`, use a small fixed-capacity key:
-
-```cpp
-struct FootprintKey {
-    std::uint8_t size;
-    std::array<VertexId, MAX_H> vertices;
-};
-```
-
-If `h` is runtime-unbounded, use an inline-small-vector abstraction or vector key. The supported practical `h` range must be explicit in the CLI and documentation.
-
-A later safe optimization may fold singleton footprints into the corresponding vertex node. It must be derived algebraically and regression-tested before becoming default.
-
-## 8. Flow backend
-
-Start with a self-contained deterministic Dinic implementation using exact unsigned capacity type.
-
-Requirements:
-
-- checked reverse-edge construction;
-- no recursion proportional to graph size if stack depth is risky;
-- deterministic adjacency insertion order;
-- residual source reachability after max flow;
-- capacity and total-flow formatting for telemetry;
-- unit tests on known cuts and large capacities.
-
-Keep an interface boundary so a push-relabel backend can be added for performance comparison without changing the oracle.
-
-## 9. Solver control flow
-
-The solver owns an interval stack or recursion. Each interval stores:
-
-- canonical `X` and `Y`;
-- cached `mu_h(X)` and `mu_h(Y)`;
-- optional certified lower threshold for safe core reduction;
-- depth and parent query ID for telemetry.
-
-For top-k early stopping, count outputs immediately at terminal intervals. In tie-inclusive mode, remember the kth density and continue only through the same terminal layer.
-
-## 10. CLI design
-
-Suggested command:
-
-```text
-vflhcds solve \
-  --graph DATASET.txt \
-  --h 3 \
-  --k 20 \
-  --clique-backend materialized \
-  --flow-backend dinic128 \
-  --core-reduction on \
-  --output results.jsonl \
-  --manifest run.json
-```
-
-Additional commands:
-
-```text
-vflhcds inspect-graph ...
-vflhcds enumerate-cliques ...
-vflhcds oracle --x ... --y ... --lambda a/b ...
-vflhcds validate-output ...
-vflhcds print-build-info
-```
-
-The `oracle` subcommand is especially important for reproducing differential-test failures.
-
-## 11. Canonical result schema
-
-Use JSON Lines or a simple machine-readable format. Example fields:
+Example of a self-consistent output record (a triangle at h=3):
 
 ```json
 {
   "rank": 1,
   "h": 3,
-  "vertex_count": 17,
-  "clique_count": "81",
-  "density_num": "81",
-  "density_den": "17",
-  "vertices": [1, 4, 9],
-  "vertex_hash": "...",
-  "birth_layer": 2
+  "vertex_count": 3,
+  "clique_count": "1",
+  "density_num": "1",
+  "density_den": "3",
+  "vertices": [1, 4, 9]
 }
 ```
 
-Counts are strings if they can exceed JSON's safe integer range.
+Counts and large exact numerator/denominator fields are decimal strings. A stable
+semantic hash covers graph identity, h, ranked sets, counts and exact densities.
+Backend traces and timings are separate, not part of semantic equivalence.
 
-## 12. Telemetry schema
+Minimum CLI contract:
 
-Per run:
+```text
+vflhcds solve --graph G --h 3 --k 20 --core-reduction off --output results.jsonl
+vflhcds solve --graph G --h 3 --all --core-reduction off --output all.jsonl
+vflhcds oracle --graph G --h 3 --lambda a/b             # full-graph global query
+vflhcds oracle --graph G --h 3 --lambda a/b --x X --y Y # labelled restricted query
+```
 
-- graph and dataset checksum;
-- `n`, `m`, `h`, `k`;
-- total h-clique count if known;
-- preprocessing, enumeration, solving, validation, total time;
-- peak RSS;
-- number of oracle calls;
-- number of terminal intervals;
-- recursion depth;
-- total and maximum cliques scanned per oracle;
-- total and maximum unique footprints;
-- total and maximum closure nodes/arcs;
-- total flow time and network build time;
-- output latency for each rank;
-- configuration switches and code commit.
+Default core mode is off until M4 is accepted. Default capacity selection is auto,
+not "128-bit or abort". Explicit backend forcing is for diagnostics and must fail
+clearly rather than claim successful automatic fallback.
 
-Per oracle call, write a compact CSV/JSONL row so bottlenecks can be analyzed without rerunning.
+Record logical interval queries, actual mincuts, original/reduced interval size,
+cliques scanned, unique footprints, forward nodes/arcs, capacity bit length and
+selected backend. Phase timing follows `EXPERIMENT_PLAN.md`; timestamps must not
+be confused with mathematical correctness evidence.
 
-## 13. Build profiles
+## 6. Build/release profiles
 
-Provide at least:
-
-- `Debug`: assertions, sanitizers optional, no benchmark claims;
-- `RelWithDebInfo`: profiling and correctness campaign;
-- `Release`: `-O3 -DNDEBUG`, final experiments;
-- `Sanitize`: ASan + UBSan on small/medium tests.
-
-Avoid `-ffast-math`; exact decision code should not depend on floating point anyway.
+Debug, RelWithDebInfo, Release, and ASan+UBSan profiles are required. Performance
+claims use a recorded release build. TSan/parallel backends are deferred until
+parallel implementation exists. Tests compare reference versus production,
+128-bit versus arbitrary precision on their shared domain, and later off/on core.
+No second clique backend is needed for the first correctness tag.

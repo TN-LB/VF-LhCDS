@@ -1,114 +1,76 @@
-# Verification-Free LhCDS: Codex Implementation Kit
+# VF-LhCDS: Proof-Aligned Implementation Kit
 
-这套文件用于把 `veri_free_lhcds_v3_1_submit.md` 中的理论结果转成一个可验证、可优化、可复现实验的实现工程。默认项目名为 **VF-LhCDS**，可以在建仓库时重命名。
+Revised 2026-09-09. This kit is an implementation/evaluation plan, not an existing
+production solver. The four supplied files under `papers/` are unchanged.
 
-## 1. 权威材料与用途
+## Start here
 
-将以下四份文件放到目标仓库的 `papers/` 目录，文件名保持不变：
+1. `docs/IMPLEMENTATION_PLAN.md`: six milestones M0-M5 and minimal correct scope.
+2. `docs/ALGORITHM_SPEC.md`: executable mathematical contracts.
+3. `docs/THEORY_TO_CODE_AUDIT.md`: exact theorem numbers, proof obligations and clarifications.
+4. `docs/TASKS.md`: dependency-aware tasks; implementation checkboxes remain open.
+5. `docs/CORRECTNESS_TEST_PLAN.md`: independent truth and concrete test IDs.
+6. `docs/PLAN_REVIEW.md`: review findings, changes and the scope of work actually checked.
 
-- `veri_free_lhcds_v3_1_submit.md`：算法语义与正确性的唯一首要来源。
-- `2023-icde-lds.md`：`h=2` 情形的层次结构、分治顺序和工程组织参考。
-- `2408.14022v1.md`：通用 `h` 的精确基线 IPPV，以及实验数据集和参数参考。
-- `2504.10937v1.md`：`h=2` 的 LDScvx 和 `h=3` 的 LTDScvx 基线及实验方法参考。
+The primary source is `papers/veri_free_lhcds_v3_1_submit.md`. The other supplied
+papers are h=2/theory-organization and baseline references. See `AGENTS.md` for
+source priority and decision rules. Accepted D005 (real exact fallback), D006
+(original-ID set ordering) and D012 (independent parallel DCLDS study) remain.
 
-材料之间若有术语、tie-breaking 或问题定义差异，以你的理论稿为准，不允许 Codex 自动“统一”或修正。
-
-## 2. 建议仓库布局
-
-```text
-vf-lhcds/
-├── AGENTS.md
-├── CMakeLists.txt
-├── README.md
-├── papers/
-│   ├── veri_free_lhcds_v3_1_submit.md
-│   ├── 2023-icde-lds.md
-│   ├── 2408.14022v1.md
-│   └── 2504.10937v1.md
-├── docs/
-│   ├── IMPLEMENTATION_PLAN.md
-│   ├── ALGORITHM_SPEC.md
-│   ├── ARCHITECTURE.md
-│   ├── CORRECTNESS_TEST_PLAN.md
-│   ├── EXPERIMENT_PLAN.md
-│   ├── BASELINE_AUDIT.md
-│   ├── REPRODUCIBILITY.md
-│   ├── CLAIM_TRACEABILITY.md
-│   ├── DECISIONS.md
-│   └── TASKS.md
-├── prompts/
-├── reference/                 # Python 小图真值实现
-├── include/vflhcds/
-├── src/
-├── tests/
-├── tools/
-├── scripts/
-├── configs/
-├── datasets/                  # 不提交原始大图
-├── baselines/                 # git submodule 或固定 commit 的外部代码
-└── results/                   # 原始日志、manifest、聚合表
-```
-
-本 kit 中除 `AGENTS.md` 外的根级文档，建议复制到仓库的 `docs/`；`prompts/` 原样复制。
-
-## 3. 推荐实施顺序
-
-1. 运行 `prompts/00_theory_audit_and_repo_bootstrap.md`，只做语义审计和仓库骨架。
-2. 完成 Python 小图真值程序，不先写高性能算法。
-3. 完成 C++ 图与 clique 基础设施。
-4. 独立实现并验证 `F_h(lambda)` 精确 closure oracle。
-5. 接入左优先分治与终止层叶节点抽取。
-6. 做大量 differential testing，达到正确性门禁后再优化。
-7. 加入安全的 clique-core reduction、缓存和网络缩减。
-8. 固定基线 commit、适配统一 I/O，再跑消融和主实验。
-9. 使用 `/review` 分别做正确性审查、性能审查和复现审查。
-
-## 4. 三条不可妥协的原则
-
-### 4.1 先有真值，再有性能
-
-小图 exhaustive oracle 是整个工程的 correctness anchor。任何优化都必须对同一随机种子集合与真值版本做回归。
-
-### 4.2 正确性路径不用浮点数
-
-`lambda=a/b`、密度、断点比较、closure capacity 和输出排序都必须使用精确整数或精确分数。浮点数只允许出现在展示和性能报告中。
-
-### 4.3 基线按 `h` 分层比较
-
-- `h=2`：VF-LhCDS、IPPV、LDS-Opt、LDScvx、LDSflow。
-- `h=3`：VF-LhCDS、IPPV、LTDScvx、LTDSflow。
-- `h>=4`：VF-LhCDS 与支持任意 `h` 的精确方法，例如 IPPV；其他方法不能被描述为通用 LhCDS 基线。
-
-## 5. 当前必须先核实的外部项目
-
-截至 2026-08-19，公开代码库中存在 `s01bvral/DCLDS`，其 README 声称实现了 divide-and-conquer LhCDS。它与本算法主题高度重合。开始写论文性能结论前，应先查明：
-
-- 是否是你或合作者的现有工程；
-- 是否对应已发表、投稿中或未公开论文；
-- 算法定义、oracle、分治 separator 和 tie-breaking 是否相同；
-- 许可证、commit、实验配置和可复现性；
-- 若为独立工作，是否应作为最直接基线或相关工作。
-
-不要在 provenance 未确认前复制其中代码，也不要先声称“新 SOTA”。
-
-## 6. Codex 使用方式
-
-每个 prompt 都按照 Goal、Context、Deliverables、Boundaries、Verification 组织。先在仓库根目录启动 Codex，再明确附上对应文件路径。多模块并行时，可分别使用 worktree，但只能在接口和测试契约已经合并后并行开发。
-
-每个阶段结束都应要求 Codex 报告：
-
-- 修改了哪些文件；
-- 运行了哪些命令；
-- 测试结果和随机种子；
-- 尚未解决的风险；
-- 是否更新了 `CLAIM_TRACEABILITY.md` 和 `DECISIONS.md`。
-
-## 7. 建议的第一条 Codex 消息
+## Proof-to-code route
 
 ```text
-/plan
-Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md, docs/ALGORITHM_SPEC.md,
-docs/CORRECTNESS_TEST_PLAN.md, and the four files under papers/.
-Then execute prompts/00_theory_audit_and_repo_bootstrap.md.
-Do not implement the production solver until the semantic audit is accepted.
+M0 contracts and skeleton
+ -> M1 direct exhaustive truth + independent principal chain
+ -> M2 graph/cliques + exact footprint closure oracle
+ -> M3 left-first fixed-k solver + correctness freeze
+ -> M4 optional safe query-local core/profiled optimization
+ -> M5 validated baselines + fair experiments + reproducible release
 ```
+
+M3 requires one materialized clique backend, aggregated footprints, and one generic
+Dinic algorithm with checked-128 and arbitrary-precision execution. Streaming,
+extra flow algorithms, tie-inclusive output and parallelism are deferred.
+
+Core reduction only shrinks an oracle search bound; it never replaces a recursive
+chain endpoint or the original lambda. Standalone global oracle queries may return
+empty; the strict-progress invariant belongs to recursive separator queries.
+Preserve all declared vertices and zero-density solutions.
+
+## Baselines and evidence
+
+DCLDS and IPPV are primary general-h comparison targets. h=2/h=3 specializations
+are included for claims in their actual scope. DCLDS independence is already
+recorded; commit/license/build/output/timing validation remains work. Preserve the
+supplied snapshot before detailed comparison and do not import its techniques.
+
+Small-graph direct-definition truth, structural output checks and agreement between
+implementations are distinct evidence levels. No test campaign alone is a proof,
+and no fixed-h polynomial bound establishes practical scalability or speedup.
+
+## Repository layout
+
+M0 now has a buildable C++17 library/CLI skeleton and independent Python package:
+`include/vflhcds/`, `src/`, `reference/`, `tests/` and `scripts/`. Read
+[build instructions](docs/BUILD.md), [frozen interface contracts](docs/INTERFACE_CONTRACT.md)
+and [executed M0 evidence](evidence/m0/REPORT.md). Only help/build-info and explicit
+unavailable-command failures run; M1+ mathematical/algorithm code remains future work.
+
+Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
+snapshot is in `review/`. Future work may add `tools/`, `configs/`, external
+`baselines/` and immutable `results/`.
+Keep large raw datasets, binaries and logs out of source control.
+
+Use `prompts/README.md` to select the next task. Each completion report names task
+and obligation IDs, changed code, executed commands, seeds, actual evidence and
+remaining limits. Do not claim a build/test succeeded because a command was listed.
+
+## Review-only mathematical check
+
+```text
+python review/math_sanity.py --output review/math_sanity_results.json
+```
+
+This script independently checks tiny mathematical examples using exhaustive F;
+it is not the production reference, flow implementation, fallback implementation,
+sanitizer campaign or benchmark suite. Its results do not close M1-M3 tasks.

@@ -1,73 +1,43 @@
-# Prompt 03 — Exact Integer-Capacity Closure Oracle for F_h(lambda)
+# Prompt 03 - Exact Restricted Closure and Global Oracle
 
-## Goal
+M2 / P03.1-P03.5; requires M1 fixtures and P02. Obligations O05,O06,O11; T05-T09.
 
-Implement the theorem-specified exact oracle returning the unique inclusion-wise largest maximizer `F_h(lambda)` within a certified interval `X subsetneq F_h(lambda) subseteq Y`.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ALGORITHM_SPEC.md`, especially the closure-oracle section
-- `docs/ARCHITECTURE.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- `docs/THEORY_TO_CODE_AUDIT.md`
-- Theorem 1.19 and Corollary 1.20 in `papers/veri_free_lhcds_v3_1_submit.md`
-- the exhaustive `F_h` implementation under `reference/`
+## Deliver
 
-## Deliverables
+Implement `largest_restricted(lambda,X,Y_oracle)` and a distinct certified
+`global_F` wrapper. Use full-graph, chain-separator or proved core-origin bounds
+as certificates; arbitrary nested CLI bounds are restricted queries. Global F may
+be empty or equal X. Strict X<F progress is not a general API prerequisite.
 
-1. Exact reduced rational type `a/b` with checked comparison and construction.
-2. Residual-footprint builder:
-   - iterate every h-clique `C` contained in `Y` with `C not subseteq X`;
-   - compute nonempty `R=C\X`;
-   - aggregate identical footprints into exact integer `w(R)`;
-   - deterministic key/order;
-   - verify the residual-footprint identity in debug/test mode.
-3. A deterministic max-flow/min-cut interface and a first exact Dinic backend.
-4. Checked capacity construction exactly matching the manuscript:
-   - `N=|Y\X|`, `L=N+1`;
-   - `s -> p_R`: `L*b*w(R)`;
-   - `p_R -> v`: `M_inf` for every `v in R`;
-   - `v -> t`: `L*a-1`;
-   - `M_inf = 1 + sum_R L*b*w(R) + N*(L*a-1)`.
-5. Return `X union S_star`, where `S_star` is the interval-vertex set reachable from `s` in the residual graph after max-flow.
-6. Handle `a=0` exactly as specified; no cut should be built.
-7. Telemetry for footprint count, aggregated weight, node/arc count, maximum capacity, build time, and flow time.
-8. Unit and differential tests against exhaustive `F_h(lambda)`.
+Aggregate every nonempty residual `C\X` for cliques inside Y_oracle, including
+boundary-crossing cliques. Test Eq. 15 independently. For positive a,N use exactly
+`L=N+1`, source capacities `L*b*w`, sink capacities `L*a-1`, and
+`M_inf=1+sum(L*b*w)+N*(L*a-1)`. Return X plus residual-source-reachable vertices.
+Handle N=0 and a=0 without a flow as specified; global zero requires Y_oracle=V.
 
-## Numeric policy
+Implement one generic exact Dinic algorithm with checked unsigned-128 and real
+arbitrary-precision instantiations. Exact preflight decides safe dispatch. Exercise
+fallback with huge rational inputs on tiny graphs; an interface or test-only
+big-integer constructor is insufficient. Never use floats or saturating infinity.
 
-- No `double` or epsilon.
-- Use checked `unsigned __int128` for the first fast backend, with decimal formatting and explicit overflow failure before network construction.
-- Keep the interface generic enough for a slower multiprecision test backend. Add at least construction-level tests beyond 64-bit range.
-- Never use a guessed finite infinity. `M_inf` must be the exact formula above.
+## Verification and boundary
 
-## Required differential cases
+Test cuts against independently enumerated tiny cuts, then compare exact largest
+sets against global or restricted exhaustive truth under the correct request
+contract. Include every T08/T09 tie/empty/equality/zero case and numeric boundaries.
+Run the oracle campaign in the centralized test plan; log graph and query counts
+separately. Add minimal reproducer CLI and logical-query/actual-cut telemetry.
+Do not implement recursion, core reduction or alternative flow algorithms yet.
 
-Test all or a broad deterministic sample of:
+## Completion evidence
 
-- tiny graphs, multiple `h`;
-- `X=empty`, `Y=V`;
-- nonempty `X`;
-- footprints of every size from 1 through `h`;
-- many cliques sharing one footprint;
-- largest-maximizer ties;
-- zero-clique and `lambda=0` cases;
-- rational lambdas with nontrivial gcd;
-- capacities near numeric limits.
-
-For each case, verify not only the returned set but also that it maximizes exact `Q_lambda` and contains every other maximizer.
-
-## Boundaries
-
-- Do not implement divide-and-conquer yet.
-- Do not add clique-core reduction.
-- Do not replace residual footprints by a boundary heuristic.
-- Do not alter the `+1` lexicographic tie mechanism.
-- Do not accept a mismatch as numerical tolerance.
-
-## Verification
-
-Run unit tests plus at least 10,000 fixed-seed oracle differential queries. Save minimized reproducers for any mismatch. Report maximum observed capacities and whether any query hit the checked limit.
-
-Update traceability, tasks, decisions, and reproducibility documents.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

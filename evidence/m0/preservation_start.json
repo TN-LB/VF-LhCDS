@@ -1,0 +1,60 @@
+{
+  "captured_utc": "2026-09-09T09:16:45.871505+00:00",
+  "base_commit": "60321429ef832d7032d1e6ad96965dd2a95b08aa",
+  "recorded_snapshot_path": "review/source_snapshot_sha256.json",
+  "recorded_snapshot_present": false,
+  "files": [
+    {
+      "path": "papers/2023-icde-lds.md",
+      "start_sha256": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+      "head_sha256": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+      "matches_head": true
+    },
+    {
+      "path": "papers/2408.14022v1.md",
+      "start_sha256": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+      "head_sha256": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+      "matches_head": true
+    },
+    {
+      "path": "papers/2504.10937v1.md",
+      "start_sha256": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+      "head_sha256": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+      "matches_head": true
+    },
+    {
+      "path": "papers/veri_free_lhcds_v3_1_submit.md",
+      "start_sha256": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700",
+      "head_sha256": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700",
+      "matches_head": true
+    },
+    {
+      "path": "AGENTS.md",
+      "start_sha256": "5ca51774fe129cc9d3e82986830f6852d8903fd9b7a5733027dae422256dd25c"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "start_sha256": "cc1173b2b533f865b1e97a3d0c4dbd2d95746b17e63b98aabce4d55a7a87cd98"
+    },
+    {
+      "path": "docs/ALGORITHM_SPEC.md",
+      "start_sha256": "8dcc2a03c0355b43d326a9d7389741e6947ee2bacef2d2b105f1ed7cb99d75de"
+    },
+    {
+      "path": "docs/THEORY_TO_CODE_AUDIT.md",
+      "start_sha256": "97628dac26018889f33b88bb7553f93a789aab2459d5a4e261baffec1557c08e"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "start_sha256": "7f94ed4422fc640f888b19434c9c208fe99ac16c23464272cb9ebeee9a3a3209"
+    },
+    {
+      "path": "docs/CORRECTNESS_TEST_PLAN.md",
+      "start_sha256": "be1e0111103b4aebcd8d786bc875bba878430a3e55c57f92dc6b6a6a205dccc5"
+    },
+    {
+      "path": "prompts/00_theory_audit_and_repo_bootstrap.md",
+      "start_sha256": "9b3ffa4853fac6ead7d8b8c161b4d74d772a12a25eb99b10c297ec6903825c3a"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Python runtime/reference uses only the standard library. Test dependency only.
+pytest>=7,<9

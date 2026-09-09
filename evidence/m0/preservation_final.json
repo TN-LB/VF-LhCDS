@@ -1,0 +1,57 @@
+[
+  {
+    "path": "papers/2023-icde-lds.md",
+    "sha256": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "papers/2408.14022v1.md",
+    "sha256": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "papers/2504.10937v1.md",
+    "sha256": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "papers/veri_free_lhcds_v3_1_submit.md",
+    "sha256": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "5ca51774fe129cc9d3e82986830f6852d8903fd9b7a5733027dae422256dd25c",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "docs/DECISIONS.md",
+    "sha256": "cc1173b2b533f865b1e97a3d0c4dbd2d95746b17e63b98aabce4d55a7a87cd98",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "docs/ALGORITHM_SPEC.md",
+    "sha256": "8dcc2a03c0355b43d326a9d7389741e6947ee2bacef2d2b105f1ed7cb99d75de",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "docs/THEORY_TO_CODE_AUDIT.md",
+    "sha256": "97628dac26018889f33b88bb7553f93a789aab2459d5a4e261baffec1557c08e",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "sha256": "7f94ed4422fc640f888b19434c9c208fe99ac16c23464272cb9ebeee9a3a3209",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "docs/CORRECTNESS_TEST_PLAN.md",
+    "sha256": "be1e0111103b4aebcd8d786bc875bba878430a3e55c57f92dc6b6a6a205dccc5",
+    "unchanged_since_start": true
+  },
+  {
+    "path": "prompts/00_theory_audit_and_repo_bootstrap.md",
+    "sha256": "9b3ffa4853fac6ead7d8b8c161b4d74d772a12a25eb99b10c297ec6903825c3a",
+    "unchanged_since_start": true
+  }
+]

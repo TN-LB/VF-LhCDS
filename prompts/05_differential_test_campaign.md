@@ -1,63 +1,36 @@
-# Prompt 05 — Differential, Metamorphic, and Failure-Minimization Campaign
+# Prompt 05 - Differential Campaign and Failure Reduction
 
-## Goal
+M3 / P05.1-P05.3; requires a working M3 solver. Tests T01-T16 as applicable.
 
-Turn the correctness checks into a durable regression system and search aggressively for semantic bugs before optimization.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- `docs/ALGORITHM_SPEC.md`
-- `reference/`
-- current C++ tests and solver
+## Deliver and verify
 
-## Deliverables
+Run the explicit smoke, exhaustive-small, higher-h and seeded tiers in
+`CORRECTNESS_TEST_PLAN.md`. Report distinct graphs/h pairs and oracle requests
+separately; preserve all seeds, graphs and expected/actual outputs. Do not replace
+missing exhaustive coverage with a larger random-query count.
 
-1. A deterministic test driver that can generate:
-   - Erdos-Renyi graphs over a probability grid;
-   - disjoint unions;
-   - planted cliques/near-cliques;
-   - paths connecting dense blocks;
-   - graphs with isolated vertices;
-   - graphs designed to create equal-density layers.
-2. For each generated graph and supported `h`, compare:
-   - normalized graph;
-   - clique list/counts;
-   - selected `F_h(lambda)` queries;
-   - full principal-chain diagnostics when feasible;
-   - all LhCDSes and every top-k prefix;
-   - exact ordering and hashes.
-3. Metamorphic tests:
-   - vertex relabeling;
-   - edge-input permutation and duplicate insertion before normalization;
-   - disjoint union;
-   - adding isolated vertices;
-   - repeating the same run;
-   - `h=2` specialization.
-4. Failure artifact format containing input, `h`, `k`, seed, expected JSON, actual JSON, oracle trace, compiler/build metadata.
-5. An automatic reducer that attempts to remove vertices and edges while preserving a mismatch.
-6. A committed small regression corpus for every discovered bug.
-7. Sanitizer configurations for ASan, UBSan, and debug assertions.
+Implement failure reduction that preserves the failure and oracle request contract.
+Save the original first, then deterministic edge/vertex deletions; simplify h,
+bounds/lambda only while the same preconditions hold. Keep fixed regressions.
 
-## Campaign requirements
+Test relabeling by transforming full truth and re-ranking (not blindly mapping a
+fixed-k tie prefix), disjoint unions, isolate additions and input order. Canonical
+semantic hashes exclude timestamps, timing and backend-specific trace fields.
 
-Run at least:
+Run ASan/UBSan and exact arithmetic/fallback boundaries. No central xfail or silent
+overflow passes. Leave unrun coverage visible and the gate open. Optional backends
+and modes are not missing requirements for M3. Prepare, but do not fabricate, the
+correctness tag evidence for review prompt 13.
 
-- all unlabeled graphs up to the largest practical `n` available through a generator, or clearly document the achieved bound;
-- 100,000 fixed-seed random graph/h combinations for the full solver where the Python oracle is tractable;
-- 100,000 additional C++ invariant-only cases at larger sizes;
-- targeted numeric/capacity tests.
+## Completion evidence
 
-If this volume is impractical in one invocation, create deterministic sharded commands and run enough shards to validate the harness now. Do not claim all shards ran when they did not.
-
-## Boundaries
-
-- Do not modify algorithm semantics to make tests pass without explaining the root cause.
-- Do not discard failing seeds.
-- Do not compare floating-point renderings.
-- Do not optimize the solver in this phase except to make the test harness usable without changing behavior.
-
-## Verification
-
-Report commands, shard IDs, number of cases, seeds/ranges, wall time, failures, minimized reproducers, and sanitizer results. Update `docs/CORRECTNESS_TEST_PLAN.md` with the exact recurring CI tiers.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

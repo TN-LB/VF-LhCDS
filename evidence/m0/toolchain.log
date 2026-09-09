@@ -1,0 +1,20 @@
+$ .venv/bin/cmake --version
+cmake version 4.4.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+exit_code=0
+$ .venv/bin/python -m pytest --version
+pytest 8.4.2
+exit_code=0
+$ /usr/bin/c++ --version
+Apple clang version 17.0.0 (clang-1700.6.3.2)
+Target: arm64-apple-darwin24.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+exit_code=0
+$ uname -a
+Darwin MACs-MacBook-Air-3.local 24.6.0 Darwin Kernel Version 24.6.0: Tue Apr 21 20:18:14 PDT 2026; root:xnu-11417.140.69.710.16~1/RELEASE_ARM64_T8103 arm64
+exit_code=0
+$ sysctl -n machdep.cpu.brand_string hw.logicalcpu hw.memsize
+sysctl: sysctl fmt -1 1024 1: Operation not permitted
+exit_code=1

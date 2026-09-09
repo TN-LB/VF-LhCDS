@@ -1,5 +1,8 @@
 # Reproducibility Specification
 
+Revision: 2026-09-09. Commands are targets until their actual execution logs exist.
+The plan-review evidence under `review/` is not a production release.
+
 ## 1. Reproduction levels
 
 ### Level 1 — correctness smoke
@@ -127,6 +130,16 @@ peak_rss_kb
 output_count
 ordered_output_hash
 validation_status
+validation_evidence_level
+external_validation_seconds
+external_validation_peak_rss_kb
+timing_scope
+postload_seconds_or_unavailable
+postindex_seconds_or_unavailable
+logical_interval_queries
+mincut_calls
+capacity_backend
+capacity_bit_length
 ```
 
 For VF-LhCDS, also include all internal metrics named in `EXPERIMENT_PLAN.md`.
@@ -140,7 +153,7 @@ The solver should be deterministic for fixed graph, `h`, `k`, and configuration.
 - equal min-cut outcomes must be resolved by the mathematical perturbation, not traversal accident;
 - output components are sorted by the fixed subset order.
 
-Run a determinism test that repeats the same case several times and compares full output and oracle traces where feasible.
+Run a determinism test that repeats the same case several times and compares canonical semantic output. Compare traces only after removing timing and backend-specific fields, and only for the same trace contract.
 
 ## 8. Release checklist
 
@@ -156,3 +169,15 @@ Run a determinism test that repeats the same case several times and compares ful
 - raw manifests for reported results or an archival location;
 - aggregation and plotting scripts;
 - final tables generated without manual edits.
+
+## 9. Proof/design snapshot and scope
+
+Before detailed DCLDS comparison, retain the supplied proof/design snapshot and
+SHA-256 manifest under a recorded version. The revision preserves all `papers/`
+files byte-for-byte and records their hashes; this is a content snapshot, not
+independent evidence of historical priority. The archive contains no claim that
+baseline commits/licenses/builds, production code, or final experiments were run.
+
+A release's complete evidence needs reference and production commands, sanitizer
+logs, exact-backend fallback tests, pinned baseline records, dataset checksums and
+immutable run manifests. Review-only mathematical evidence is labelled separately.

@@ -1,58 +1,34 @@
-# Prompt 08 — Profile-Guided Production Optimization
+# Prompt 08 - One Profile-Justified Optimization
 
-## Goal
+M4 / P08.1; requires M3 and the relevant baseline measurements.
 
-Improve runtime and memory after correctness is frozen, while maintaining byte-identical semantic output and exact arithmetic.
+## Context
 
-## Context to read
-
-- `AGENTS.md`
-- `docs/ARCHITECTURE.md`
-- `docs/EXPERIMENT_PLAN.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- current profiling data and regression corpus
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
 ## Process
 
-1. Establish a baseline benchmark manifest and profile before editing.
-2. Rank costs by measured contribution:
-   - clique enumeration/materialization;
-   - interval membership and clique filtering;
-   - residual-footprint aggregation;
-   - network construction;
-   - max-flow;
-   - connected components/adjacency checks;
-   - allocation and serialization.
-3. Select one optimization at a time.
-4. For every optimization, document:
-   - expected complexity/memory effect;
-   - why semantics are unchanged;
-   - files changed;
-   - tests run;
-   - before/after profile;
-   - any new numeric limit.
+Profile a frozen workload before edits. Choose ONE measured bottleneck. State the
+semantic invariant and a written preservation argument, implement behind a switch,
+run the same correctness corpus, then compare runtime/memory including its overhead.
+Do not require a speedup if the evidence is mixed; retain an off mode or revert.
 
-## Candidate optimizations, only when profiles justify them
+Optional candidates: footprint allocation reuse; singleton folding with derived
+new signed vertex weights; streaming for demonstrated clique-memory pressure;
+another exact flow algorithm; caches with measured hits and memory; component
+scheduling with exact global ordering. Endpoint-count reuse and aggregated
+footprints already belong to B0, not a new optimization.
 
-- compact interval bitsets or generation-mark arrays;
-- small fixed-size footprint keys;
-- preallocated arenas and network buffers;
-- clique incidence reuse across nested intervals;
-- deterministic caching keyed by exact interval fingerprint;
-- avoiding materialization when an iterator is sufficient;
-- choosing between global clique materialization and on-demand enumeration;
-- improved exact max-flow backend behind the same interface;
-- safe component-wise processing when proved equivalent;
-- single-threaded optimizations first, parallelism only after deterministic semantics are protected.
+Do not introduce all optional backends, parallelism, warm-flow reuse or heuristic
+seeding together. Each additional semantic mechanism needs its own argument/tests.
+Do not import DCLDS techniques under D012 without separate approval. Canonical
+outputs, not timing or backend trace IDs, must remain equal.
 
-## Required guardrails
+## Completion evidence
 
-- Keep the no-optimization or debug path runnable.
-- Run the entire differential corpus after each semantic-risk optimization.
-- No float-based filtering, approximate clique counting, randomized cut, or heuristic stopping in the exact solver.
-- No unproved omission of cross-boundary cliques.
-- No baseline code copied into the proposed solver.
-
-## Verification
-
-Provide a before/after table for representative small, medium, clique-heavy, and sparse graphs. Include end-to-end time, oracle time, flow time, clique time, peak RSS, network size, and output hash. A speedup without full correctness regression is not accepted.
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.

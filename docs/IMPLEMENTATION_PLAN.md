@@ -1,245 +1,151 @@
-# VF-LhCDS Implementation and Evaluation Plan
+# VF-LhCDS: Proof-Aligned Implementation and Evaluation Plan
 
-## 1. Target result
+Revision: 2026-09-09. This is a plan revision, not an implementation or benchmark result.
+The four files under `papers/` are preserved unchanged.
 
-Produce a research-grade implementation of the exact, verification-free, top-k LhCDS algorithm whose correctness follows the principal-chain and closure-oracle theory in `veri_free_lhcds_v3_1_submit.md`.
+## 1. Deliverable and proof spine
 
-A successful project must establish all three claims separately:
+Implement exact fixed-cardinality top-k LhCDS discovery for the finite, nonempty,
+simple undirected input graph in Definitions 1.1-1.3. Keep three claims separate:
+mathematical correctness, implementation evidence, and measured performance.
+Tests support an implementation claim; they do not replace a proof. Faster or
+lower-memory execution than a baseline is a hypothesis, not an acceptance gate.
 
-1. **Semantic correctness:** outputs match the formal LhCDS definition on exhaustive small instances.
-2. **Algorithmic correctness:** the closure oracle and divide-and-conquer implementation match their theorem-level specifications.
-3. **Empirical performance:** under a preregistered, fair protocol, the implementation is faster and/or more memory efficient than applicable exact baselines.
-
-The third claim is not assumed in advance.
-
-## 2. Key implementation hypothesis
-
-The proposed solver has the following path:
+The correctness dependency is:
 
 ```text
-G, h, k
-  -> graph normalization
-  -> h-clique enumeration/index
-  -> exact interval query F_h(lambda) by max-weight closure/min-cut
-  -> left-first principal-chain divide and conquer
-  -> terminal layer component extraction
-  -> deterministic top-k output
+Definitions 1.1-1.3
+  -> hierarchy and leaves (1.8-1.10)
+  -> largest parametric maximizer and principal chain (1.11-1.14)
+  -> separator + structural leaf extraction + ordering (1.15-1.17)
+  -> exact footprint closure oracle (Eq. 15, 1.19)
+  -> complete exact solver (1.18, 1.20, 1.23)
+  -> optional query-local core restriction (1.21-1.22)
 ```
 
-Unlike IPPV and convex-programming candidates, the main algorithm does not propose a candidate and then verify it. Its expensive primitive is the exact parametric maximizer oracle. Therefore, the engineering question is whether fewer or better-structured oracle calls offset clique enumeration and closure-network costs.
+Use `ALGORITHM_SPEC.md` for behavior, `THEORY_TO_CODE_AUDIT.md` for proof
+obligations, and `CLAIM_TRACEABILITY.md` for implementation evidence. Do not
+maintain a second competing set of semantic decisions in prompts.
 
-## 3. Phase plan and acceptance gates
-
-### Phase 0 — Semantic freeze and repository bootstrap
-
-**Deliverables**
-
-- repository layout, build skeleton, formatting and test entry points;
-- `docs/DECISIONS.md` with all known ambiguities;
-- theorem-to-module map in `docs/CLAIM_TRACEABILITY.md`;
-- baseline provenance table with repository identifiers and intended commit pins.
-
-**Gate**
-
-No production algorithm code is merged until definitions, tie behavior, output order, graph preprocessing, and exact arithmetic policy are explicit.
-
-**Prompt**
-
-`prompts/00_theory_audit_and_repo_bootstrap.md`
-
-### Phase 1 — Independent exhaustive reference implementation
-
-**Deliverables**
-
-- Python graph normalizer and combination-based h-clique enumerator;
-- exhaustive `mu_h(S)`, deletion loss, compactness, maximality, and LhCDS checker;
-- exhaustive `F_h(lambda)` with largest-maximizer tie behavior;
-- deterministic random graph generator and serialized truth fixtures.
-
-**Gate**
-
-Hand-checked examples and randomly generated tiny graphs produce stable truth files. The reference path must not call production code.
-
-**Prompt**
-
-`prompts/01_exhaustive_reference_oracle.md`
-
-### Phase 2 — Production graph and clique foundation
-
-**Deliverables**
-
-- C++ normalized graph representation;
-- degeneracy-oriented fixed-h clique enumeration;
-- materialized clique index backend and a streaming/query-local backend interface;
-- exact fraction utilities and checked integer helpers;
-- unit tests against the Python fixtures.
-
-**Gate**
-
-For every test graph and selected subset, C++ and Python agree on graph normalization, clique tuples, clique degrees, and `mu_h`.
-
-**Prompt**
-
-`prompts/02_graph_and_clique_infrastructure.md`
-
-### Phase 3 — Exact closure oracle for `F_h(lambda)`
-
-**Deliverables**
-
-- residual-footprint aggregator for an interval `X subseteq F_h(lambda) subseteq Y`;
-- exact closure-network constructor;
-- max-flow/min-cut backend;
-- source-side extraction and oracle telemetry;
-- exhaustive differential tests against all subsets on tiny graphs.
-
-**Gate**
-
-Across the fixed corpus and a large randomized campaign, the oracle returns exactly the inclusion-wise largest exhaustive maximizer for every tested rational lambda and interval. Tie-heavy fixtures are mandatory.
-
-**Prompt**
-
-`prompts/03_exact_closure_oracle.md`
-
-### Phase 4 — Principal-chain divide-and-conquer top-k solver
-
-**Deliverables**
-
-- exact outer density `d_h(Y,X)`;
-- left-first recursive or equivalent stack traversal;
-- terminal layer extraction using connected components of `G[Y\X]` and anti-adjacency to `X`;
-- deterministic output order and early stop at `k`;
-- optional tie-inclusive output mode kept separate from default fixed-cardinality mode.
-
-**Gate**
-
-Full C++ results match the exhaustive LhCDS checker for all generated tiny instances and all tested `k` values, including `k=1`, `k=q`, and `k>q`.
-
-**Prompt**
-
-`prompts/04_divide_and_conquer_solver.md`
-
-### Phase 5 — Correctness campaign and release candidate 0
-
-**Deliverables**
-
-- thousands of seeded random differential cases;
-- property and metamorphic tests;
-- automatic failure reduction and reproducer storage;
-- sanitizer builds and overflow tests;
-- first frozen correctness corpus.
-
-**Gate**
-
-No mismatch, sanitizer failure, undefined behavior, or silent overflow remains. The release candidate is tagged before performance optimization.
-
-**Prompt**
-
-`prompts/05_differential_test_campaign.md`
-
-### Phase 6 — Instrumentation and safe optimization
-
-Implement optimizations one at a time, each behind a switch and each validated against the frozen corpus.
-
-Recommended order:
-
-1. query and `mu_h` cache;
-2. global materialized clique/incidence index;
-3. safe high-density h-clique-core restriction;
-4. residual-footprint aggregation improvements;
-5. singleton-footprint folding and other proven network reductions;
-6. flow object allocation reuse or alternative exact flow backend;
-7. component-wise interval processing;
-8. parallel clique enumeration, only if determinism is preserved;
-9. any LDS-Opt-inspired seeding only after a separate safety proof or explicit non-core heuristic mode.
-
-**Gate**
-
-Each optimization has an ablation switch, regression evidence, and telemetry showing where it helps or hurts.
-
-**Prompts**
-
-- `prompts/06_cli_telemetry_and_output_contract.md`
-- `prompts/07_safe_clique_core_reduction.md`
-- `prompts/08_profile_guided_optimization.md`
-
-### Phase 7 — Baseline integration
-
-**Deliverables**
-
-- unmodified or minimally patched builds of applicable baselines;
-- adapters that normalize input and parse output into one canonical schema;
-- commit, license, compiler, flags, and patch records;
-- exact-output cross-check on shared feasible instances.
-
-**Required baseline strata**
-
-| h | Exact baselines to target | Notes |
-|---|---|---|
-| 2 | IPPV, LDS-Opt, LDScvx, LDSflow | LDS-specific methods are valid here |
-| 3 | IPPV, LTDScvx, LTDSflow | Triangle density equals 3-clique density |
-| 4,5 | IPPV and any verified arbitrary-h exact implementation | Do not include h=2/3-only methods as general baselines |
-
-The public `s01bvral/DCLDS` repository requires immediate provenance and overlap review.
-
-**Prompts**
-
-- `prompts/09_ippv_baseline_adapter.md`
-- `prompts/10_h2_h3_baseline_adapters.md`
-
-### Phase 8 — Experiments, analysis, and reproducibility release
-
-**Deliverables**
-
-- smoke, correctness, main performance, scalability, and ablation suites;
-- raw immutable run manifests and logs;
-- aggregation scripts with timeout and OOM handling;
-- result tables/plots generated from raw data;
-- release artifact with build and reproduction instructions.
-
-**Gate**
-
-Every reported number is traceable to a run manifest, command, log, code commit, dataset checksum, and aggregation script version.
-
-**Prompts**
-
-- `prompts/11_experiment_harness.md`
-- `prompts/12_ablation_and_scalability.md`
-- `prompts/13_correctness_review.md`
-- `prompts/14_performance_review.md`
-- `prompts/15_reproducibility_release.md`
-
-## 4. Branch and worktree strategy
-
-Do Phase 0 in the main checkout. After interfaces are frozen, parallel worktrees can be used for:
-
-- `ref-truth`: Python exhaustive reference and generators;
-- `closure-oracle`: exact flow and oracle;
-- `baseline-adapters`: external builds and parsers;
-- `experiment-harness`: run manifests and aggregation.
-
-Do not develop two independent versions of the same mathematical primitive in parallel and merge by intuition. One implementation must be designated authoritative and differential tests must mediate integration.
-
-## 5. Principal risks and mitigations
-
-| Risk | Why it matters | Mitigation |
-|---|---|---|
-| Clique explosion | `|Psi_h|` can dominate memory and time | Two clique backends, telemetry, h-clique core, streaming fallback |
-| Closure network size | One node per unique footprint may still approach clique count | Aggregate identical footprints, fold safe special cases, measure `P` |
-| Tie errors | Wrong min-cut tie handling changes `F_h(lambda)` and the whole chain | Exact `+1` cardinality perturbation, dedicated tie fixtures |
-| Integer overflow | Capacity scaling multiplies counts, numerator, denominator, and `N+1` | checked `__int128`, overflow tests, fail closed |
-| Small-k latency | Worst-case oracle-call bound is not output-sensitive | measure time-to-result, investigate safe high-density reductions |
-| Baseline mismatch | Different preprocessing or top-k tie semantics invalidates comparison | canonical input/output adapter and tie-aware validator |
-| Directly overlapping work | Public DCLDS repository may affect novelty and baseline choice | provenance audit before implementation claims |
-| Shared-bug testing | Reference and production code could accidentally share logic | independent combination enumeration and exhaustive definitions |
-
-## 6. Definition of done
-
-The implementation is ready for paper-level experiments only when:
-
-- all semantic decisions are documented;
-- exhaustive and production outputs agree on the frozen corpus;
-- the closure oracle independently passes exhaustive tests;
-- all optimizations can be disabled and do not alter outputs;
-- baseline commits and licenses are pinned;
-- the experiment harness captures full provenance;
-- a clean machine can reproduce at least one correctness case and one benchmark case from the release instructions.
+## 2. Minimal correct version
+
+The first correctness release has exactly one complete clique backend
+(materialized), one generic exact Dinic algorithm instantiated for checked
+128-bit and arbitrary-precision capacities, one restricted-closure primitive,
+one global-oracle wrapper, and one left-first solver. It includes aggregated
+footprints and endpoint clique-count reuse from the start.
+
+It preserves all declared vertices, including isolates; supports zero-density
+outputs; rejects `k=0`; and uses the existing lexicographic original-ID set order.
+It does not require streaming, tie-inclusive output, additional flow algorithms,
+component-wise scheduling, parallelism, heuristic seeding, or baseline builds.
+These are not prerequisites for validating the proof-to-code path.
+
+## 3. Milestones and acceptance gates
+
+| Milestone | Required deliverable | Gate / recorded evidence | Prompts |
+|---|---|---|---|
+| M0: contract and skeleton | Confirm the revised contracts; record proof snapshot hashes; create CMake/Python skeleton and a single evidence map | Every central obligation has a source, precondition, test ID, and unambiguous failure behavior; no fabricated build/test success | 00 |
+| M1: independent truth | Direct compactness/maximality checker, exhaustive `F_h`, independent line-envelope chain, named counterexamples | Hand fixtures agree; no production imports; exact all-superset maximality; breakpoint and zero-density coverage | 01 |
+| M2: exact primitives | Graph/clique infrastructure, exact arithmetic, aggregated footprints, generic Dinic, restricted/global oracle APIs | Independent clique comparisons; exact objective and largest-set equality; genuine multiprecision fallback tested | 02, 03 |
+| M3: exact solver and freeze | Left-first traversal, structural extraction, fixed-k output, minimal CLI/telemetry, regression corpus | Direct-definition output agreement, all tested prefixes, `2r-1` logical calls on full tiny runs, no candidate-verification dependency, sanitizers clean | 04, 05, 06, 13 |
+| M4: safe optional optimization | First query-local clique-core restriction; then only measured bottleneck fixes | Written equivalence argument + named preconditions + off/on regression + cost measurements, one change at a time | 07, 08 |
+| M5: comparison and release | Validated required baselines, frozen experiment configuration, immutable run records, release instructions | Comparable outputs/scopes; reproducible completed and failed runs; conclusions restricted to measured cases | 09, 09b, 10 as applicable, 11, 12, 14, 15 |
+
+M3 is independently releasable. M4 can be skipped if it does not improve the
+measured workload. M5 never retroactively changes mathematical semantics.
+
+## 4. The critical implementation obligations
+
+### A. Independent truth, not a second copy of the proposed solver
+
+The direct reference checks every deletion subset and every proper superset.
+The exhaustive parametric reference maximizes over all subsets and unions all
+maximizers. Its principal chain is constructed from intersections of cardinality
+objective lines, not from the production separator recursion. See test `T03`.
+Scanning only induced-subgraph densities can miss outer-density breakpoints.
+
+### B. Restricted optimum versus global `F_h`
+
+The closure primitive returns the largest maximizer over `[X,Y_oracle]`.
+It equals global `F_h(lambda)` only with certified containment. The public global
+query with bounds `[empty,V]` may return empty, even though a solver separator
+query guarantees `X proper-subset F_h(lambda)`. Do not impose the solver's strict
+progress invariant on all standalone oracle queries.
+
+### C. Preserve recursive endpoints during core restriction
+
+For chain endpoints `(X,Y)`, compute lambda from their original counts and sizes.
+Core reduction may replace only the oracle search upper bound by `Y_oracle`.
+Never recompute lambda from `Y_oracle`, test terminality against it, extract leaves
+from it, or store it as a child chain endpoint. It need not be a chain set.
+
+### D. Exact arithmetic is a complete path
+
+Retain accepted decision D005: use the fast checked backend only when safe;
+automatically dispatch to arbitrary-precision exact arithmetic otherwise.
+A generic interface or a test-only multiprecision backend is not sufficient.
+Overflow checks cover counting, fraction operations, capacities, residual updates,
+and total flow. Resource exhaustion is explicit; it is never an approximate answer.
+
+### E. A theorem is not an empirical gate
+
+Record a written argument for each semantic optimization. Test output equality,
+but do not call it a proof. Distinguish structural output checking from exhaustive
+LhCDS validation, and keep external validators out of the solver's decision path.
+
+## 5. Testing scope and completion evidence
+
+Use the fixed tiers in `CORRECTNESS_TEST_PLAN.md`, rather than the phrases
+"many random graphs" or "all feasible graphs". A task is complete only with:
+
+```text
+task_id / prerequisite / source obligation
+changed code symbols / test IDs
+command / environment / seed or fixture manifest / result
+remaining limitation / evidence location
+```
+
+A passing review-only mathematical script does not complete M1-M3. Production
+compilation, max-flow testing, fallback testing, and sanitizer execution remain
+separate work. All implementation checkboxes stay open until those commands run.
+
+## 6. Optional optimization order
+
+1. Query-local clique-core restriction from Lemma 1.22, with original endpoints
+   intact and `lambda_0=lambda` as the simplest certified threshold.
+2. Allocation reuse and footprint construction improvements, if profiling warrants.
+3. Singleton folding only with its algebraic weight/sign derivation.
+4. Streaming or alternative exact flow algorithms only after memory/time evidence.
+5. Component-wise scheduling, parallel enumeration, and tie-inclusive output only
+   as separately specified extensions.
+
+Do not require oracle-result caching by default: a basic recursion visits distinct
+intervals, so repeated identical query hits are not guaranteed. Endpoint count
+reuse is already part of the minimum version.
+
+## 7. Baseline and experiment scope
+
+D012 already records DCLDS as an independent parallel study with substantial
+overlap. Preserve that decision and the uploaded snapshot before detailed
+comparison; do not reopen ownership as an unresolved question. DCLDS and IPPV
+are the primary general-h comparison targets, subject to commit/license/build/
+semantic validation. Specialized h=2/h=3 methods are required only for claims
+about those respective strata. Unavailable methods receive an explicit exclusion
+record; do not block M3 on their source availability or reimplement all of them.
+
+First run a frozen smoke configuration. Expand to the paper suite only after
+resource limits, timing boundaries, validation levels, datasets, and parameters
+are recorded. A negative performance result still completes a valid experiment.
+
+## 8. Parallelism and risks
+
+M1 and the M2 flow implementation may progress independently after M0; oracle
+integration depends on M1 fixtures and the graph/clique foundation. Baseline
+metadata/build work and the experiment harness may run in parallel after their
+contracts are fixed. M3 needs M1+M2. M4 needs the M3 correctness tag.
+
+Main risks: clique/materialized-network size, incorrect tie semantics, incorrect
+core endpoint substitution, numeric overflow, shared reference bugs, incomparable
+baseline outputs, and overclaiming practical scalability from a fixed-h polynomial
+bound. Each has an explicit contract and test in the linked specifications.

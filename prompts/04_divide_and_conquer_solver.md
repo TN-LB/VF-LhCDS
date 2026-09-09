@@ -1,61 +1,41 @@
-# Prompt 04 — Exact Left-First Divide-and-Conquer Top-k Solver
+# Prompt 04 - Exact Left-First Fixed-k Solver
 
-## Goal
+M3 / P04.1-P04.4; requires M1+M2. Obligations O04,O07-O09; tests T10-T13.
 
-Build the complete verification-free top-k LhCDS solver around the already validated exact `F_h(lambda)` oracle.
+## Context
 
-## Context to read
+Read `AGENTS.md`, `docs/DECISIONS.md`, the named task in `docs/TASKS.md`,
+`docs/ALGORITHM_SPEC.md`, `docs/THEORY_TO_CODE_AUDIT.md`, and the relevant test IDs
+in `docs/CORRECTNESS_TEST_PLAN.md`. Reuse accepted decisions; flag only new conflicts.
 
-- `AGENTS.md`
-- `docs/ALGORITHM_SPEC.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CORRECTNESS_TEST_PLAN.md`
-- `docs/THEORY_TO_CODE_AUDIT.md`
-- Lemma 1.15, Theorems 1.16–1.17, and Corollary 1.18 in `papers/veri_free_lhcds_v3_1_submit.md`
-- validated reference and closure-oracle tests
+## Deliver
 
-## Deliverables
+Implement immutable ChainInterval endpoints and cached original mu values.
+Compute lambda from `(mu(Y)-mu(X))/(|Y|-|X|)`; call the certified exact oracle;
+assert the necessary progress condition X<Z<=Y. Terminality is Z==original Y.
 
-1. Solver API accepting normalized graph, fixed `h`, `k`, and deterministic subset-order policy.
-2. Exact interval density:
-   `lambda = (mu_h(Y)-mu_h(X)) / (|Y|-|X|)`.
-3. Recursive or explicit-stack traversal with invariant `X subsetneq F_h(lambda) subseteq Y`.
-4. Exact control flow:
-   - query `Z=F_h(lambda)`;
-   - if `Z != Y`, process `(X,Z)` first, then `(Z,Y)`;
-   - if `Z == Y`, enumerate connected components of `G[Y\X]` and emit only those with no ordinary edge to `X`.
-5. Early stopping after `min(k,q)` outputs, while preserving deterministic order within a layer.
-6. Correct handling of:
-   - `k=0` if the public CLI permits it;
-   - `k>q`;
-   - equal-density outputs in one layer;
-   - disconnected input;
-   - isolated vertices and zero-clique layers according to approved decisions;
-   - `lambda=0`;
-   - recursion-depth safety, preferably through an explicit stack.
-7. Canonical output records with exact density numerator/denominator, clique count, size, sorted original IDs, layer/trace metadata, and stable output hash.
-8. Optional debug trace of interval calls, lambdas, returned `Z`, and terminal emissions.
+At a nonterminal node visit (X,Z) first, then (Z,Y) only if output is still needed.
+At a terminal node extract ordinary components of original G[Y\X] and retain only
+those anti-adjacent to all of X. Sort retained components by accepted original-ID
+set order. Only retained components are guaranteed to have layer density lambda.
+Empty terminal output is valid. A stack implementation pushes right before left.
 
-## Correctness tests
-
-- Full solver vs exhaustive direct LhCDS enumeration on all graphs up to a feasible `n`, then randomized graphs beyond that.
-- Every prefix `k` compared against the exhaustive top-k prefix.
-- `h=2` specialization against the edge formulation.
-- Verify output density/order, not only vertex-set multiset.
-- Verify no duplicate output and pairwise disjointness.
-- Verify complete runs use at most `2r-1` oracle calls where `r` is obtained from the exhaustive chain on tiny cases.
-- Verify terminal output is produced without candidate verification calls.
-
-## Boundaries
-
-- No performance shortcuts beyond already validated components.
-- No approximate density or heuristic recursion order.
-- No post-hoc verification used to hide a solver bug.
-- No safe-core reduction yet.
-- Do not weaken output comparison to rounded density.
+Support k>=1, k>q, --all, disconnected graphs, isolates and zero layers. Reject k=0.
+Emit fixed-k outputs one at a time and stop at k or exhaustion; q is not presumed
+known in advance. Tie-inclusive output and all core reductions are deferred.
 
 ## Verification
 
-Run all unit tests and a deterministic solver differential campaign. Produce a small human-readable trace for at least three nontrivial graphs, including one with a nonterminal split and one terminal layer with multiple equal-density LhCDSes.
+Compare every tested prefix against direct truth, including exact counts/densities
+and order. Use the independently constructed chain to test all pair separators.
+Verify full basic runs have exactly 2r-1 logical interval queries; cuts may be fewer.
+Add human-readable traces for a split, a tie layer, and a non-emitting terminal.
+Do not invoke a candidate verifier, run an approximation, or repair wrong output
+post hoc. Review-only exhaustive-F scripts do not validate production flow.
 
-Update traceability, tasks, decisions, and reproducibility documents.
+## Completion evidence
+
+Report task/obligation IDs, changed files and code symbols, actual commands and
+environment, fixture/seed manifest, results/log paths, and unrun work. Update
+`docs/TASKS.md` and `docs/CLAIM_TRACEABILITY.md` only for executed evidence. Tests
+support the implementation; do not describe finite agreement as a proof.
