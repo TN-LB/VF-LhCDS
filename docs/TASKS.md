@@ -2,12 +2,9 @@
 
 ## Phase 0 — semantics and repository
 
-- [ ] Copy all four source Markdown files into `papers/`.
-- [ ] Review and resolve `DECISIONS.md` questions.
 - [ ] Initialize Git and CMake/Python layouts.
 - [ ] Add formatting, lint, test, and sanitizer targets.
 - [ ] Populate baseline audit with commit and license status.
-- [ ] Resolve the relationship to `s01bvral/DCLDS`.
 - [ ] Create initial claim traceability map.
 
 ## Phase 1 — exhaustive reference

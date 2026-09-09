@@ -1,5 +1,12 @@
 # AGENTS.md — VF-LhCDS Repository Instructions
 
+## Owner-confirmation rule:
+Any ambiguity, assumption, implementation choice, preprocessing choice, parameter choice, baseline configuration, measurement convention, timeout policy, hardware/threading choice, or optimization that could affect algorithm correctness, reported runtime/memory, output contents/order, experimental fairness, or conclusions must not be resolved autonomously.
+You must explicitly ask the project owner for a decision before proceeding with the affected implementation or experiment.
+It must present the alternatives, their expected consequences, and its recommended default, but must not choose on the owner's behalf.
+The confirmed choice must then be recorded in docs/DECISIONS.md with status accepted.
+Independent work that cannot be affected by the unresolved decision may continue.
+
 ## Mission
 
 Implement and experimentally evaluate the exact verification-free top-k locally h-clique densest subgraph algorithm specified in `papers/veri_free_lhcds_v3_1_submit.md`.
