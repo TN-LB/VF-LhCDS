@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-17T02:59:07.388997+00:00",
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python_executable": "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+  "ctest": "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+  "PYTHONPATH": "/Users/nost/Documents/VF-LhCDS/reference",
+  "base_commit": "a779112bcfe6ff6360876ecb44ec46c49777ff85",
+  "git_status": " M reference/README.md\n M reference/tests/test_skeleton.py\n M reference/vflhcds_reference/__init__.py\n M reference/vflhcds_reference/direct.py\n M reference/vflhcds_reference/parametric.py\n M validation/README.md\n?? evidence/m1/\n?? reference/fixtures/\n?? reference/tests/test_cli.py\n?? reference/tests/test_direct.py\n?? reference/tests/test_io.py\n?? reference/tests/test_named_fixtures.py\n?? reference/tests/test_parametric.py\n?? reference/tests/test_properties.py\n?? reference/vflhcds_reference/__main__.py\n?? reference/vflhcds_reference/cli.py\n?? reference/vflhcds_reference/generators.py\n?? reference/vflhcds_reference/graph.py\n?? reference/vflhcds_reference/io.py\n?? scripts/find_reference_outer_witness.py\n?? scripts/run_m1_checks.py\n?? validation/reference_campaign.py\n",
+  "package_sha256": {
+    "reference/vflhcds_reference/__init__.py": "530e3a7b35dd7fc81a3bd3dcef9afc8a5fb87cdc7ec20f0d905d6901262a4c6a",
+    "reference/vflhcds_reference/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "reference/vflhcds_reference/cli.py": "fd8ae3a383df4232065a168c641aadce324ff91276ba258689d4711683a44104",
+    "reference/vflhcds_reference/direct.py": "de28d4ab8f86b3608f00b4b21a237d971a10ad10eadcb3b86ffd7c8122fdf30e",
+    "reference/vflhcds_reference/generators.py": "d3232ee44db09bd1063c073bc17bfb538648444a3d9bb300bca2efebdcb445fa",
+    "reference/vflhcds_reference/graph.py": "fd51e78b29b8e458062333048cd950c23ac3134ec58df93c24a42d121df45cae",
+    "reference/vflhcds_reference/io.py": "0cb15b80f2fad95b95a9b39c42f450aef122e1ce0bccb8cb654e841310df89ac",
+    "reference/vflhcds_reference/parametric.py": "810e6d4b4fa7660719a1b210cec02d74bfaadc5984df1df5086f71d7c69266ec"
+  }
+}

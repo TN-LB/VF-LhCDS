@@ -1,0 +1,76 @@
+{
+  "named_hand_truth_cases": 11,
+  "named_case_ids": [
+    "singleton",
+    "no_clique_path_with_isolates",
+    "triangle_and_isolate",
+    "bridged_triangles",
+    "tied_edges",
+    "K4_pendant",
+    "K4",
+    "overlapping_K4",
+    "K5",
+    "overlapping_K5",
+    "h_greater_than_n"
+  ],
+  "fixture_files_sha256": {
+    "reference/fixtures/bridged_triangles.graph": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+    "reference/fixtures/empty.set": "1bfce1f22ce619b6a59debd63bb61af6db4b417c3ec1b181ed17a3a5de517400",
+    "reference/fixtures/named_truth.json": "8ae837fa05d7d315e2f6b850254583f6ba13e59e7a0e0c4e16cbae745aac5ba4",
+    "reference/fixtures/outer_breakpoint.graph": "c0ce59e80e77d1181de1f3e1bbffeddaa1dc86ff0815cdea582f09a92640c338",
+    "reference/fixtures/outer_breakpoint.json": "4dd19fbc6bff043043009d7e0c49f70b2b4eba94ff8f6bcb0a93b01ad0f07797",
+    "reference/fixtures/triangle.set": "c4aa04924d1fb3f0901fe611ebeb32479eb79836c463eee783ef479c730aaf93",
+    "reference/fixtures/triangle_and_isolate.graph": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c"
+  },
+  "seeded_base_seed": 20260917,
+  "default_max_vertices": 12,
+  "campaigns": {
+    "exhaustive-small": {
+      "summary": "evidence/m1/exhaustive-small/summary.json",
+      "cases": "evidence/m1/exhaustive-small/cases.jsonl",
+      "summary_sha256": "4ec11f5f78b75e3ebdedd1daca3d5c9bdd11149bd7ecbf1acd9bdcbdd830f0c7",
+      "cases_sha256": "efab2a95701c60f7fae84e609aab82684558517d7e53fe6fa349048f1b559e40",
+      "n_histogram": {
+        "1": 2,
+        "2": 4,
+        "3": 16,
+        "4": 128,
+        "5": 2048
+      },
+      "h_histogram": {
+        "2": 1099,
+        "3": 1099
+      },
+      "family_histogram": {
+        "all_labelled": 2198
+      }
+    },
+    "seeded": {
+      "summary": "evidence/m1/seeded/summary.json",
+      "cases": "evidence/m1/seeded/cases.jsonl",
+      "summary_sha256": "6667fa82d79d4e39c2d9d8d3f6be579662705133cdb4fb733b684a2002a59137",
+      "cases_sha256": "57824df791552c215baf97fc47019e75ffef7f3dcd43ef1b61112cdf2762c8b8",
+      "n_histogram": {
+        "6": 35,
+        "7": 31,
+        "8": 34
+      },
+      "h_histogram": {
+        "2": 15,
+        "3": 21,
+        "4": 20,
+        "5": 26,
+        "7": 4,
+        "8": 7,
+        "9": 7
+      },
+      "family_histogram": {
+        "random": 20,
+        "planted": 20,
+        "bridge": 20,
+        "tied": 20,
+        "disconnected": 20
+      }
+    }
+  }
+}

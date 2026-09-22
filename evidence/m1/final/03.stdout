@@ -1,0 +1,1 @@
+{"schema_version":1,"kind":"reference_truth","graph_sha256":"4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c","h":3,"seed":null,"vertices":[-2,1,4,9],"edges":[[1,4],[1,9],[4,9]],"selection":{"mode":"fixed_k","k":1},"results":[{"rank":1,"h":3,"vertex_count":3,"clique_count":"1","density_num":"1","density_den":"3","vertices":[1,4,9]}]}

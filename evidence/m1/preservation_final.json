@@ -1,0 +1,102 @@
+{
+  "papers/2023-icde-lds.md": {
+    "sha256": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+    "unchanged": true
+  },
+  "papers/2408.14022v1.md": {
+    "sha256": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+    "unchanged": true
+  },
+  "papers/2504.10937v1.md": {
+    "sha256": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+    "unchanged": true
+  },
+  "papers/veri_free_lhcds_v3_1_submit.md": {
+    "sha256": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700",
+    "unchanged": true
+  },
+  "docs/INTERFACE_CONTRACT.md": {
+    "sha256": "9399e58f7167244699cb7ac85b9416cd2890ed23607d2ded5a0f456a121d39a1",
+    "unchanged": true
+  },
+  "docs/THEORY_TO_CODE_AUDIT.md": {
+    "sha256": "97628dac26018889f33b88bb7553f93a789aab2459d5a4e261baffec1557c08e",
+    "unchanged": true
+  },
+  "docs/ARCHITECTURE.md": {
+    "sha256": "7f94ed4422fc640f888b19434c9c208fe99ac16c23464272cb9ebeee9a3a3209",
+    "unchanged": true
+  },
+  "docs/ALGORITHM_SPEC.md": {
+    "sha256": "8dcc2a03c0355b43d326a9d7389741e6947ee2bacef2d2b105f1ed7cb99d75de",
+    "unchanged": true
+  },
+  "docs/CODEX_WORKFLOW.md": {
+    "sha256": "5f9a9bd65133b26819406b78abf86026c475c3c088341f6773ba9218db840a0a",
+    "unchanged": true
+  },
+  "docs/EXPERIMENT_PLAN.md": {
+    "sha256": "2aafe7ab7e9a78a88a6ebc1d58462ae896db82df1c66bd397f90c978a3269b07",
+    "unchanged": true
+  },
+  "docs/PLAN_REVIEW.md": {
+    "sha256": "dada73e43f18368c296db9c2d679e7fcc33c378b5ec1e105f5e6b3da86f941dc",
+    "unchanged": true
+  },
+  "docs/BUILD.md": {
+    "sha256": "3d31f0155a358649ce62ea35a7e5428820b3ec8bdc28d676944ef3db4f1f44e2",
+    "unchanged": true
+  },
+  "docs/REPRODUCIBILITY.md": {
+    "sha256": "b84f8f33550eb1736a918a7ef6122cc33a37c26ae4bbeb03546e6c7e31efeb8c",
+    "unchanged": true
+  },
+  "docs/IMPLEMENTATION_PLAN.md": {
+    "sha256": "4691949dfac1cac392b52123f88a3aa3ad326650cd3b37b52b00b29e06645c2d",
+    "unchanged": true
+  },
+  "docs/BASELINE_AUDIT.md": {
+    "sha256": "cbd235c5ea20d20c41647d3964506ef732c5a5e2294c2d7100f4a3658997a31c",
+    "unchanged": true
+  },
+  "docs/DECISIONS.md": {
+    "sha256": "cc1173b2b533f865b1e97a3d0c4dbd2d95746b17e63b98aabce4d55a7a87cd98",
+    "unchanged": true
+  },
+  "docs/CORRECTNESS_TEST_PLAN.md": {
+    "sha256": "be1e0111103b4aebcd8d786bc875bba878430a3e55c57f92dc6b6a6a205dccc5",
+    "unchanged": true
+  },
+  "AGENTS.md": {
+    "sha256": "5ca51774fe129cc9d3e82986830f6852d8903fd9b7a5733027dae422256dd25c",
+    "unchanged": true
+  },
+  "src/io/status.cpp": {
+    "sha256": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+    "unchanged": true
+  },
+  "src/cli/dispatch.cpp": {
+    "sha256": "dbc71fa7ec056e402d5b511d84a3676d0ead7e23a4eeb251dfdf5a3d79f6e1a3",
+    "unchanged": true
+  },
+  "src/cli/main.cpp": {
+    "sha256": "4daeaf68be3da162dc5e1726cb90ed1079ecf47e4c5f0edf2eed4c1c37883dfe",
+    "unchanged": true
+  },
+  "include/vflhcds/core/build_info.hpp": {
+    "sha256": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+    "unchanged": true
+  },
+  "include/vflhcds/io/status.hpp": {
+    "sha256": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+    "unchanged": true
+  },
+  "include/vflhcds/cli/dispatch.hpp": {
+    "sha256": "b2eec38538f131f3c04395f1573c5129f75ee4e8ad30f092702fa8ae91fa7092",
+    "unchanged": true
+  },
+  "CMakeLists.txt": {
+    "sha256": "3cbecefbe921ff84ea1ca9b98ebd08fc4ff5ff25e9365d82c31cbaf255d02d50",
+    "unchanged": true
+  }
+}

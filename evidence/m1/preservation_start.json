@@ -1,0 +1,33 @@
+{
+  "utc": "2026-09-17T02:39:45.979031+00:00",
+  "base_commit": "a779112bcfe6ff6360876ecb44ec46c49777ff85",
+  "sha256": {
+    "papers/2023-icde-lds.md": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+    "papers/2408.14022v1.md": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+    "papers/2504.10937v1.md": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+    "papers/veri_free_lhcds_v3_1_submit.md": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700",
+    "docs/INTERFACE_CONTRACT.md": "9399e58f7167244699cb7ac85b9416cd2890ed23607d2ded5a0f456a121d39a1",
+    "docs/THEORY_TO_CODE_AUDIT.md": "97628dac26018889f33b88bb7553f93a789aab2459d5a4e261baffec1557c08e",
+    "docs/ARCHITECTURE.md": "7f94ed4422fc640f888b19434c9c208fe99ac16c23464272cb9ebeee9a3a3209",
+    "docs/ALGORITHM_SPEC.md": "8dcc2a03c0355b43d326a9d7389741e6947ee2bacef2d2b105f1ed7cb99d75de",
+    "docs/CODEX_WORKFLOW.md": "5f9a9bd65133b26819406b78abf86026c475c3c088341f6773ba9218db840a0a",
+    "docs/CLAIM_TRACEABILITY.md": "a76f56e5ee959e0a8a7853e74372a76b1ecc6832bb4b85649dac662a7c81b330",
+    "docs/TASKS.md": "085f1d91a67016b1c0efc96366928b795287bdd92261f8058d28d14d5827ac3a",
+    "docs/EXPERIMENT_PLAN.md": "2aafe7ab7e9a78a88a6ebc1d58462ae896db82df1c66bd397f90c978a3269b07",
+    "docs/PLAN_REVIEW.md": "dada73e43f18368c296db9c2d679e7fcc33c378b5ec1e105f5e6b3da86f941dc",
+    "docs/BUILD.md": "3d31f0155a358649ce62ea35a7e5428820b3ec8bdc28d676944ef3db4f1f44e2",
+    "docs/REPRODUCIBILITY.md": "b84f8f33550eb1736a918a7ef6122cc33a37c26ae4bbeb03546e6c7e31efeb8c",
+    "docs/IMPLEMENTATION_PLAN.md": "4691949dfac1cac392b52123f88a3aa3ad326650cd3b37b52b00b29e06645c2d",
+    "docs/BASELINE_AUDIT.md": "cbd235c5ea20d20c41647d3964506ef732c5a5e2294c2d7100f4a3658997a31c",
+    "docs/DECISIONS.md": "cc1173b2b533f865b1e97a3d0c4dbd2d95746b17e63b98aabce4d55a7a87cd98",
+    "docs/CORRECTNESS_TEST_PLAN.md": "be1e0111103b4aebcd8d786bc875bba878430a3e55c57f92dc6b6a6a205dccc5",
+    "AGENTS.md": "5ca51774fe129cc9d3e82986830f6852d8903fd9b7a5733027dae422256dd25c",
+    "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+    "src/cli/dispatch.cpp": "dbc71fa7ec056e402d5b511d84a3676d0ead7e23a4eeb251dfdf5a3d79f6e1a3",
+    "src/cli/main.cpp": "4daeaf68be3da162dc5e1726cb90ed1079ecf47e4c5f0edf2eed4c1c37883dfe",
+    "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+    "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+    "include/vflhcds/cli/dispatch.hpp": "b2eec38538f131f3c04395f1573c5129f75ee4e8ad30f092702fa8ae91fa7092",
+    "CMakeLists.txt": "3cbecefbe921ff84ea1ca9b98ebd08fc4ff5ff25e9365d82c31cbaf255d02d50"
+  }
+}

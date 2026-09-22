@@ -1,0 +1,10 @@
+vflhcds-graph 1
+n 4
+v -2
+v 1
+v 4
+v 9
+m 3
+e 1 4
+e 1 9
+e 4 9

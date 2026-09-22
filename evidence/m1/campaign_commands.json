@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "validation/reference_campaign.py",
+      "--tier",
+      "exhaustive-small",
+      "--output-dir",
+      "evidence/m1/exhaustive-small"
+    ],
+    "environment": {
+      "PYTHONPATH": "reference"
+    },
+    "exit_code": 0,
+    "started_utc": "2026-09-17T02:53:19.435944+00:00",
+    "finished_utc": "2026-09-17T02:53:27.871528+00:00",
+    "log": "evidence/m1/exhaustive-small.log",
+    "log_sha256": "62d57289f973c081a9648d9aa2d9cc7a1fce36d34c1eb5035abc91a1fccbba50"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "validation/reference_campaign.py",
+      "--tier",
+      "seeded",
+      "--output-dir",
+      "evidence/m1/seeded"
+    ],
+    "environment": {
+      "PYTHONPATH": "reference"
+    },
+    "exit_code": 0,
+    "started_utc": "2026-09-17T02:53:33.986948+00:00",
+    "finished_utc": "2026-09-17T02:53:36.780646+00:00",
+    "log": "evidence/m1/seeded.log",
+    "log_sha256": "143582cef1bc95b1d039d5dea797971e9369b31e3f91e269a903bc896df4b6ad"
+  }
+]

@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "provenance": "Hand-specified graph families and expected sets/counts, serialized without calling direct_lhcds or an oracle",
+  "cases": [
+    {
+      "name": "singleton",
+      "test": "T01",
+      "seed": null,
+      "h": 2,
+      "vertices": [
+        42
+      ],
+      "edges": [],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 2,
+          "vertex_count": 1,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "name": "no_clique_path_with_isolates",
+      "test": "T01",
+      "seed": null,
+      "h": 3,
+      "vertices": [
+        -20,
+        1,
+        2,
+        3,
+        100
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 3,
+          "vertex_count": 1,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            -20
+          ]
+        },
+        {
+          "rank": 2,
+          "h": 3,
+          "vertex_count": 3,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "rank": 3,
+          "h": 3,
+          "vertex_count": 1,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "name": "triangle_and_isolate",
+      "test": "T01",
+      "seed": null,
+      "h": 3,
+      "vertices": [
+        -2,
+        1,
+        4,
+        9
+      ],
+      "edges": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 3,
+          "vertex_count": 3,
+          "clique_count": "1",
+          "density_num": "1",
+          "density_den": "3",
+          "vertices": [
+            1,
+            4,
+            9
+          ]
+        },
+        {
+          "rank": 2,
+          "h": 3,
+          "vertex_count": 1,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            -2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bridged_triangles",
+      "test": "T02",
+      "seed": null,
+      "h": 3,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "2",
+          "density_num": "1",
+          "density_den": "3",
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tied_edges",
+      "test": "reference tie/relabeling",
+      "seed": null,
+      "h": 2,
+      "vertices": [
+        -10,
+        2,
+        3,
+        50
+      ],
+      "edges": [
+        [
+          -10,
+          50
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 2,
+          "vertex_count": 2,
+          "clique_count": "1",
+          "density_num": "1",
+          "density_den": "2",
+          "vertices": [
+            -10,
+            50
+          ]
+        },
+        {
+          "rank": 2,
+          "h": 2,
+          "vertex_count": 2,
+          "clique_count": "1",
+          "density_num": "1",
+          "density_den": "2",
+          "vertices": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "K4_pendant",
+      "test": "direct-definition boundary",
+      "seed": null,
+      "h": 2,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 2,
+          "vertex_count": 4,
+          "clique_count": "6",
+          "density_num": "3",
+          "density_den": "2",
+          "vertices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "K4",
+      "test": "higher-h",
+      "seed": null,
+      "h": 4,
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 4,
+          "vertex_count": 4,
+          "clique_count": "1",
+          "density_num": "1",
+          "density_den": "4",
+          "vertices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "overlapping_K4",
+      "test": "higher-h",
+      "seed": null,
+      "h": 4,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 4,
+          "vertex_count": 5,
+          "clique_count": "2",
+          "density_num": "2",
+          "density_den": "5",
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "K5",
+      "test": "higher-h",
+      "seed": null,
+      "h": 5,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 5,
+          "vertex_count": 5,
+          "clique_count": "1",
+          "density_num": "1",
+          "density_den": "5",
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "overlapping_K5",
+      "test": "higher-h",
+      "seed": null,
+      "h": 5,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 5,
+          "vertex_count": 6,
+          "clique_count": "2",
+          "density_num": "1",
+          "density_den": "3",
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "h_greater_than_n",
+      "test": "T01/higher-h",
+      "seed": null,
+      "h": 5,
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "expected_results": [
+        {
+          "rank": 1,
+          "h": 5,
+          "vertex_count": 3,
+          "clique_count": "0",
+          "density_num": "0",
+          "density_den": "1",
+          "vertices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}

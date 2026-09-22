@@ -1,0 +1,106 @@
+{
+  "name": "outer_breakpoint_not_induced_density",
+  "h": 2,
+  "vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "seed": 20260917,
+  "sample_index_zero_based": 92,
+  "provenance": "New M1 reconstruction; unavailable historical review fixture not reproduced",
+  "expected_chain": [
+    [],
+    [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  ],
+  "expected_breakpoints": [
+    "13/6",
+    "2"
+  ],
+  "absent_from_all_induced_densities": [
+    "2"
+  ],
+  "tested_graph_h_cases_before_including_witness": 185
+}

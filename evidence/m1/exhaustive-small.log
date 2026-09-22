@@ -1,0 +1,37 @@
+exhaustive-small: 100 cases passed
+exhaustive-small: 200 cases passed
+exhaustive-small: 300 cases passed
+exhaustive-small: 400 cases passed
+exhaustive-small: 500 cases passed
+exhaustive-small: 600 cases passed
+exhaustive-small: 700 cases passed
+exhaustive-small: 800 cases passed
+exhaustive-small: 900 cases passed
+exhaustive-small: 1000 cases passed
+exhaustive-small: 1100 cases passed
+exhaustive-small: 1200 cases passed
+exhaustive-small: 1300 cases passed
+exhaustive-small: 1400 cases passed
+exhaustive-small: 1500 cases passed
+exhaustive-small: 1600 cases passed
+exhaustive-small: 1700 cases passed
+exhaustive-small: 1800 cases passed
+exhaustive-small: 1900 cases passed
+exhaustive-small: 2000 cases passed
+exhaustive-small: 2100 cases passed
+{
+  "tier": "exhaustive-small",
+  "scope": "M1 reference only",
+  "status": "completed",
+  "started_utc": "2026-09-17T02:53:19.435944+00:00",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "graph_h_cases": 2198,
+  "global_oracle_queries": 36968,
+  "restricted_oracle_queries": 4140,
+  "chain_pairs_checked": 4140,
+  "prefixes_checked": 14844,
+  "unique_graphs": 1099,
+  "unique_graph_h_cases": 2198,
+  "finished_utc": "2026-09-17T02:53:27.871528+00:00"
+}

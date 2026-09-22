@@ -8,7 +8,7 @@ production solver. The four supplied files under `papers/` are unchanged.
 1. `docs/IMPLEMENTATION_PLAN.md`: six milestones M0-M5 and minimal correct scope.
 2. `docs/ALGORITHM_SPEC.md`: executable mathematical contracts.
 3. `docs/THEORY_TO_CODE_AUDIT.md`: exact theorem numbers, proof obligations and clarifications.
-4. `docs/TASKS.md`: dependency-aware tasks; implementation checkboxes remain open.
+4. `docs/TASKS.md`: dependency-aware tasks and executed milestone gates.
 5. `docs/CORRECTNESS_TEST_PLAN.md`: independent truth and concrete test IDs.
 6. `docs/PLAN_REVIEW.md`: review findings, changes and the scope of work actually checked.
 
@@ -50,11 +50,15 @@ and no fixed-h polynomial bound establishes practical scalability or speedup.
 
 ## Repository layout
 
-M0 now has a buildable C++17 library/CLI skeleton and independent Python package:
-`include/vflhcds/`, `src/`, `reference/`, `tests/` and `scripts/`. Read
+M0 has a buildable C++17 library/CLI skeleton; M1 adds an independent exact Python
+reference for tiny graphs. The implementation lives in `include/vflhcds/`, `src/`,
+`reference/`, `tests/` and `scripts/`. Read
 [build instructions](docs/BUILD.md), [frozen interface contracts](docs/INTERFACE_CONTRACT.md)
-and [executed M0 evidence](evidence/m0/REPORT.md). Only help/build-info and explicit
-unavailable-command failures run; M1+ mathematical/algorithm code remains future work.
+and [executed M0 evidence](evidence/m0/REPORT.md). The C++ CLI still supports only
+help/build-info and explicit unavailable-command failures. For direct-definition
+truth, exhaustive global/restricted queries and independent principal chains, see
+[reference usage](reference/README.md) and [executed M1 evidence](evidence/m1/REPORT.md).
+Production graph/clique/flow/solver code remains M2+ work.
 
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external

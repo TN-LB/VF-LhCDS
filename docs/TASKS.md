@@ -12,17 +12,20 @@ Each task must link its command/log/seed evidence before being checked off.
 - [x] P00.4 Freeze canonical input/output contracts, error statuses, fixed-k order, and minimal timing/counter definitions. [Frozen contract](INTERFACE_CONTRACT.md), [scope/evidence](../evidence/m0/REPORT.md); future algorithm behavior is documented, not implemented.
 
 Gate: contracts are explicit and the skeleton commands actually run. No solver code yet.
-M0 gate met on 2026-09-09. All M1+ tasks below remain open.
+M0 gate met on 2026-09-09. Later milestone statuses are recorded below.
 
 ## M1 - Independent exhaustive truth (prompt 01; needs M0)
 
-- [ ] P01.1 Combination clique enumeration, ordinary connectivity, `mu_h`, deletion loss, exact compactness.
-- [ ] P01.2 Direct LhCDS maximality over ALL proper supersets; test multi-vertex-extension witness T02.
-- [ ] P01.3 Exhaustive largest `F_h(lambda)` including empty maximizers and zero lambda.
-- [ ] P01.4 Independent cardinality-line chain; exact intersections/midpoints; outer-density witness T03.
-- [ ] P01.5 Canonical fixtures/generators and hard size guard; no imports from production.
+- [x] P01.1 Combination clique enumeration, ordinary connectivity, `mu_h`, deletion loss, exact compactness. [M1 tests/evidence](../evidence/m1/REPORT.md): T01 and independent induced-combination counts across the declared reference tier.
+- [x] P01.2 Direct LhCDS maximality over ALL proper supersets; test multi-vertex-extension witness T02. [Evidence](../evidence/m1/REPORT.md): bridged triangles plus definition/parametric component and hierarchy-leaf comparisons.
+- [x] P01.3 Exhaustive largest `F_h(lambda)` including empty maximizers and zero lambda. [Evidence](../evidence/m1/REPORT.md): union-of-all-ties, signed exact objective, empty/equality/zero and explicitly restricted results.
+- [x] P01.4 Independent cardinality-line chain; exact intersections/midpoints; outer-density witness T03. [Saved witness](../reference/fixtures/outer_breakpoint.json), [evidence](../evidence/m1/REPORT.md); prior review fixture was absent, so this is a documented new reconstruction.
+- [x] P01.5 Canonical fixtures/generators and hard size guard; no imports from production. [Reference usage](../reference/README.md), [fixtures/seeds](../evidence/m1/fixture_manifest.json), [CLI/pytest logs](../evidence/m1/final/commands.json); default n<=12, explicit local override.
 
 Gate: T01-T03 fixtures and the declared truth tier pass; no claim of production correctness.
+M1 gate met on 2026-09-17: 74 pytest tests; 2,198 exhaustive-small graph/h cases
+(1,099 distinct graphs), plus 100 seeded graph/h cases (96 distinct graphs).
+This is reference-only evidence. All M2+ tasks remain open.
 
 ## M2 - Exact primitives (prompts 02, 03; needs M0 and M1 for integration)
 
