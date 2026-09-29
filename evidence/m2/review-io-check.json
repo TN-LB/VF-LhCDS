@@ -1,0 +1,13 @@
+[
+  {
+    "command": [
+      "build/vflhcds",
+      "inspect-graph",
+      "--graph",
+      "reference/fixtures"
+    ],
+    "exit_code": 3,
+    "stdout": "",
+    "stderr": "{\"schema_version\":1,\"status\":\"invalid_graph\",\"complete\":false,\"output_count\":0,\"semantic_sha256\":null}\n"
+  }
+]

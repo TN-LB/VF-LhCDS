@@ -1,4 +1,6 @@
-# Reserved oracle module
+# Oracle module
 
-M2/P03.1-P03.5: aggregated footprints, largest_restricted, and internally certified global_F; see ARCHITECTURE.md.
-M0 reserves this public interface directory only; no algorithm or measurements are implemented.
+Aggregated residual footprints, largest_restricted and the privately constructed full-graph global_F certificate.
+
+See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
+executed tests and remaining limitations. No solver/core/baseline work is included.

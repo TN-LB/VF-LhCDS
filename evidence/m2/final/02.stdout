@@ -1,0 +1,7 @@
+[ 57%] Built target vflhcds_lib
+[ 78%] Built target vflhcds_skeleton_test
+[ 78%] Built target vflhcds
+[ 89%] Building CXX object CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o
+[ 94%] Built target vflhcds_m2_probe
+[100%] Linking CXX executable vflhcds_primitives_test
+[100%] Built target vflhcds_primitives_test

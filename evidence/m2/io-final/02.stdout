@@ -1,0 +1,11 @@
+[  5%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o
+[ 10%] Linking CXX static library libvflhcds_lib.a
+[ 57%] Built target vflhcds_lib
+[ 68%] Linking CXX executable vflhcds_skeleton_test
+[ 68%] Linking CXX executable vflhcds
+[ 78%] Built target vflhcds
+[ 78%] Built target vflhcds_skeleton_test
+[ 89%] Linking CXX executable vflhcds_m2_probe
+[ 89%] Linking CXX executable vflhcds_primitives_test
+[100%] Built target vflhcds_m2_probe
+[100%] Built target vflhcds_primitives_test

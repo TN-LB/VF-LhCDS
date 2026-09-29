@@ -1,0 +1,414 @@
+{
+  "build": [
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build/generated/build_info.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/build/generated/build_info.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "output": "CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "output": "CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "output": "CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o"
+    }
+  ],
+  "build-sanitize": [
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-sanitize/generated/build_info.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/build-sanitize/generated/build_info.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "output": "CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "output": "CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-sanitize",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "output": "CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o"
+    }
+  ],
+  "build-release": [
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-release/generated/build_info.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/build-release/generated/build_info.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "output": "CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "output": "CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-release",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "output": "CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o"
+    }
+  ],
+  "build-relwithdebinfo": [
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-relwithdebinfo/generated/build_info.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo/generated/build_info.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/skeleton_test.cpp",
+      "output": "CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+      "output": "CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-relwithdebinfo",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O2 -g -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_probe.cpp",
+      "output": "CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o"
+    }
+  ],
+  "build-production": [
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-production/generated/build_info.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/build-production/generated/build_info.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+      "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+    },
+    {
+      "directory": "/Users/nost/Documents/VF-LhCDS/build-production",
+      "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+      "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+    }
+  ]
+}

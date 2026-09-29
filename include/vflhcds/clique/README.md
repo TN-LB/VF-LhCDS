@@ -1,4 +1,6 @@
-# Reserved clique module
+# Clique module
 
-M2/P02.2: deterministic materialized h-clique tuples and incidence only.
-M0 reserves this public interface directory only; no algorithm or measurements are implemented.
+One deterministic materialized fixed-h clique/incidence index.
+
+See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
+executed tests and remaining limitations. No solver/core/baseline work is included.

@@ -1,4 +1,6 @@
-# Reserved telemetry module
+# Telemetry module
 
-M2/P03.5 and M3/P06.1: counters and timing with the exact scopes in docs/INTERFACE_CONTRACT.md.
-M0 reserves this implementation directory only; no algorithm or measurements are implemented.
+QueryStats records actual standalone oracle work; solver phase timing and interval-entry counters remain M3.
+
+See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
+executed tests and remaining limitations. No solver/core/baseline work is included.

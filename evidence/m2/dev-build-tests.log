@@ -1,0 +1,13 @@
+[  5%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[ 10%] Linking CXX static library libvflhcds_lib.a
+[ 57%] Built target vflhcds_lib
+[ 68%] Linking CXX executable vflhcds_skeleton_test
+[ 68%] Linking CXX executable vflhcds
+[ 78%] Built target vflhcds
+[ 78%] Built target vflhcds_skeleton_test
+[ 89%] Building CXX object CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o
+[ 89%] Building CXX object CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o
+[ 94%] Linking CXX executable vflhcds_m2_probe
+[ 94%] Built target vflhcds_m2_probe
+[100%] Linking CXX executable vflhcds_primitives_test
+[100%] Built target vflhcds_primitives_test

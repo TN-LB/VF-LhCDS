@@ -1,0 +1,23 @@
+{
+  "kind": "CLI I/O status regression",
+  "command": [
+    "build/vflhcds",
+    "inspect-graph",
+    "--graph",
+    "reference/fixtures"
+  ],
+  "expected_exit": 4,
+  "expected_status": "io_error",
+  "observed_exit_before_fix": 3,
+  "observed_status_before_fix": "invalid_graph",
+  "original_log": "evidence/m2/review-io-check.json",
+  "first_regression_log": "evidence/m2/io-regression/03.stdout",
+  "minimal_reproducer": [
+    "build/vflhcds",
+    "inspect-graph",
+    "--graph",
+    "."
+  ],
+  "cause": "On the tested macOS standard library, opening/reading a directory can look like empty EOF rather than stream badbit.",
+  "fix": "Check directory/file status before reading; retain buffered read error checks. Regression lives in tests/cli_smoke.py."
+}

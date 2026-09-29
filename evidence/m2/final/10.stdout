@@ -1,0 +1,54 @@
+UpdateCTestConfiguration  from :/Users/nost/Documents/VF-LhCDS/build-sanitize/DartConfiguration.tcl
+Parse Config file:/Users/nost/Documents/VF-LhCDS/build-sanitize/DartConfiguration.tcl
+Test project /Users/nost/Documents/VF-LhCDS/build-sanitize
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: m0_cpp_skeleton
+
+1: Test command: /Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds_skeleton_test
+1: Working Directory: /Users/nost/Documents/VF-LhCDS/build-sanitize
+1: Test timeout computed to be: 1500
+1/5 Test #1: m0_cpp_skeleton ..................   Passed    1.08 sec
+test 2
+    Start 2: m2_primitives
+
+2: Test command: /Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds_primitives_test
+2: Working Directory: /Users/nost/Documents/VF-LhCDS/build-sanitize
+2: Test timeout computed to be: 1500
+2: T01/T04-T09 primitives: 1458 checks passed; 135 tiny cut/backend runs; 20000-node path
+2/5 Test #2: m2_primitives ....................   Passed    0.56 sec
+test 3
+    Start 3: m2_oracle_smoke
+
+3: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py" "--probe" "/Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds_m2_probe" "--tier" "smoke"
+3: Working Directory: /Users/nost/Documents/VF-LhCDS/build-sanitize
+3: Test timeout computed to be: 1500
+3: {"automatic_big_flows": 28, "backend_executions": 1583, "chain_pairs": 36, "distinct_graphs": 24, "evidence_sha256": {"cases.jsonl": "3460fcf1f6bd5ed90a05a7f3bc017ce2e4d71ce73f7f1797ec48079bb110e132", "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "results.jsonl.gz": "346d3ac4a250debb527b42c662543fabdeef2907bd4101a361f68180c24a601c"}, "family_bridge": 2, "family_complete": 2, "family_complete-boundary": 2, "family_disconnected": 2, "family_h>n": 2, "family_named": 12, "family_planted": 2, "family_random": 2, "family_tied": 2, "flow_arbitrary_precision": 453, "flow_uint128": 794, "footprint_bound_pairs": 141, "footprint_subset_identities": 3702, "global_requests": 390, "graph_h_cases": 28, "h_2_cases": 5, "h_3_cases": 5, "h_4_cases": 10, "h_5_cases": 6, "h_7_cases": 2, "oracle_requests": 537, "probe": "/Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds_m2_probe", "probe_sha256": "8b487538ea607e1520af95a3fd5d0ef8394f9c65f714e3d2bd8d8c311ed94d26", "restricted_requests": 147, "scope": "M2 exact primitives only; finite implementation evidence, not a theorem proof", "seed": 20260922, "status": "passed", "subset_count_comparisons": 2274, "tier": "smoke", "wall_seconds": 0.9265228752046824}
+3/5 Test #3: m2_oracle_smoke ..................   Passed    1.02 sec
+test 4
+    Start 4: m2_cli_contract
+
+4: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/tests/cli_smoke.py" "/Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds"
+4: Working Directory: /Users/nost/Documents/VF-LhCDS/build-sanitize
+4: Test timeout computed to be: 1500
+4: M2 CLI: 55 invocations passed; canonical JSON/IDs/statuses, real fallback, aliases and atomic output
+4/5 Test #4: m2_cli_contract ..................   Passed    6.67 sec
+test 5
+    Start 5: m0_reference_skeleton
+
+5: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "-m" "pytest" "reference/tests" "-q"
+5: Working Directory: /Users/nost/Documents/VF-LhCDS
+5: Test timeout computed to be: 1500
+5: ........................................................................ [ 97%]
+5: ..                                                                       [100%]
+5: 74 passed in 1.88s
+5/5 Test #5: m0_reference_skeleton ............   Passed    2.19 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =  11.53 sec

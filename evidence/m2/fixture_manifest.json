@@ -1,0 +1,137 @@
+{
+  "existing_reference_fixture_sha256": {
+    "reference/fixtures/bridged_triangles.graph": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+    "reference/fixtures/empty.set": "1bfce1f22ce619b6a59debd63bb61af6db4b417c3ec1b181ed17a3a5de517400",
+    "reference/fixtures/named_truth.json": "8ae837fa05d7d315e2f6b850254583f6ba13e59e7a0e0c4e16cbae745aac5ba4",
+    "reference/fixtures/outer_breakpoint.graph": "c0ce59e80e77d1181de1f3e1bbffeddaa1dc86ff0815cdea582f09a92640c338",
+    "reference/fixtures/outer_breakpoint.json": "4dd19fbc6bff043043009d7e0c49f70b2b4eba94ff8f6bcb0a93b01ad0f07797",
+    "reference/fixtures/triangle.set": "c4aa04924d1fb3f0901fe611ebeb32479eb79836c463eee783ef479c730aaf93",
+    "reference/fixtures/triangle_and_isolate.graph": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c"
+  },
+  "seed": 20260922,
+  "seeded_families": {
+    "random": 200,
+    "planted": 200,
+    "bridge": 200,
+    "tied": 200,
+    "disconnected": 200
+  },
+  "seeded_n": [
+    6,
+    7,
+    8
+  ],
+  "exhaustive_n": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "exhaustive_h": [
+    2,
+    3
+  ],
+  "additional_named": "K4, K5, K5 at h4, K6 at h5, K3 at h4 and K4 at h5; generated in validation/oracle_campaign.py",
+  "tiny_flow_cases": "64 labelled directed arc-presence networks on three vertices, both types; parallel/antiparallel/self-loop/zero arcs at >64 bits, reverse-cancellation network, BigInt >128 bits, maximum UInt128 cut; 135 total cut/backend runs plus 20000-node path",
+  "campaigns": [
+    {
+      "profile": "build",
+      "tier": "smoke",
+      "summary": "evidence/m2/final/build-smoke/summary.json",
+      "cases": "evidence/m2/final/build-smoke/cases.jsonl",
+      "results": "evidence/m2/final/build-smoke/results.jsonl.gz",
+      "decompressed_results_sha256": "bc9ae322474a59a1a7224b600a3d0d636da6827f30cda90e20fd5004cb97277b",
+      "graph_h_cases": 28,
+      "distinct_graphs": 24,
+      "oracle_requests": 537,
+      "automatic_big_flows": 28
+    },
+    {
+      "profile": "build",
+      "tier": "exhaustive-small",
+      "summary": "evidence/m2/final/build-exhaustive-small/summary.json",
+      "cases": "evidence/m2/final/build-exhaustive-small/cases.jsonl",
+      "results": "evidence/m2/final/build-exhaustive-small/results.jsonl.gz",
+      "decompressed_results_sha256": "1ece73e6a5eff892857db5d91d3c090ff95683b49600cfa19c8f5fe6420ed52e",
+      "graph_h_cases": 2198,
+      "distinct_graphs": 1099,
+      "oracle_requests": 40591,
+      "automatic_big_flows": 2198
+    },
+    {
+      "profile": "build",
+      "tier": "seeded",
+      "summary": "evidence/m2/final/build-seeded/summary.json",
+      "cases": "evidence/m2/final/build-seeded/cases.jsonl",
+      "results": "evidence/m2/final/build-seeded/results.jsonl.gz",
+      "decompressed_results_sha256": "43bd5e89dceb1c40f996b11a1156d31074c3a48aef784b47976969125c02cd14",
+      "graph_h_cases": 1000,
+      "distinct_graphs": 870,
+      "oracle_requests": 12000,
+      "automatic_big_flows": 1000
+    },
+    {
+      "profile": "build",
+      "tier": "higher-h",
+      "summary": "evidence/m2/final/build-higher-h/summary.json",
+      "cases": "evidence/m2/final/build-higher-h/cases.jsonl",
+      "results": "evidence/m2/final/build-higher-h/results.jsonl.gz",
+      "decompressed_results_sha256": "2548fbd57ac440d4d8b0a6ea1d1d503be4254758fb4f079d474361ab54e3f232",
+      "graph_h_cases": 72,
+      "distinct_graphs": 67,
+      "oracle_requests": 1053,
+      "automatic_big_flows": 72
+    },
+    {
+      "profile": "build-sanitize",
+      "tier": "smoke",
+      "summary": "evidence/m2/final/build-sanitize-smoke/summary.json",
+      "cases": "evidence/m2/final/build-sanitize-smoke/cases.jsonl",
+      "results": "evidence/m2/final/build-sanitize-smoke/results.jsonl.gz",
+      "decompressed_results_sha256": "bc9ae322474a59a1a7224b600a3d0d636da6827f30cda90e20fd5004cb97277b",
+      "graph_h_cases": 28,
+      "distinct_graphs": 24,
+      "oracle_requests": 537,
+      "automatic_big_flows": 28
+    },
+    {
+      "profile": "build-sanitize",
+      "tier": "exhaustive-small",
+      "summary": "evidence/m2/final/build-sanitize-exhaustive-small/summary.json",
+      "cases": "evidence/m2/final/build-sanitize-exhaustive-small/cases.jsonl",
+      "results": "evidence/m2/final/build-sanitize-exhaustive-small/results.jsonl.gz",
+      "decompressed_results_sha256": "1ece73e6a5eff892857db5d91d3c090ff95683b49600cfa19c8f5fe6420ed52e",
+      "graph_h_cases": 2198,
+      "distinct_graphs": 1099,
+      "oracle_requests": 40591,
+      "automatic_big_flows": 2198
+    },
+    {
+      "profile": "build-sanitize",
+      "tier": "seeded",
+      "summary": "evidence/m2/final/build-sanitize-seeded/summary.json",
+      "cases": "evidence/m2/final/build-sanitize-seeded/cases.jsonl",
+      "results": "evidence/m2/final/build-sanitize-seeded/results.jsonl.gz",
+      "decompressed_results_sha256": "43bd5e89dceb1c40f996b11a1156d31074c3a48aef784b47976969125c02cd14",
+      "graph_h_cases": 1000,
+      "distinct_graphs": 870,
+      "oracle_requests": 12000,
+      "automatic_big_flows": 1000
+    },
+    {
+      "profile": "build-sanitize",
+      "tier": "higher-h",
+      "summary": "evidence/m2/final/build-sanitize-higher-h/summary.json",
+      "cases": "evidence/m2/final/build-sanitize-higher-h/cases.jsonl",
+      "results": "evidence/m2/final/build-sanitize-higher-h/results.jsonl.gz",
+      "decompressed_results_sha256": "2548fbd57ac440d4d8b0a6ea1d1d503be4254758fb4f079d474361ab54e3f232",
+      "graph_h_cases": 72,
+      "distinct_graphs": 67,
+      "oracle_requests": 1053,
+      "automatic_big_flows": 72
+    }
+  ],
+  "tier_overlap": "Do not add tier distinct-graph counts. Auto/forced mode repetitions are backend executions, not extra queries.",
+  "cross_profile_result_equality": "Decompressed full record streams are byte-identical in Debug and ASan+UBSan for each tier."
+}

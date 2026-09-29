@@ -1,4 +1,6 @@
-# Reserved flow module
+# Flow module
 
-M2/P03.2: one exact generic Dinic algorithm with checked 128-bit and actual arbitrary-precision execution (D005).
-M0 reserves this public interface directory only; no algorithm or measurements are implemented.
+One generic exact Dinic implementation, with explicit blocking-path stacks and UInt128/BigInt instantiations.
+
+See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
+executed tests and remaining limitations. No solver/core/baseline work is included.

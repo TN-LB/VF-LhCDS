@@ -1,0 +1,13 @@
+Test project /Users/nost/Documents/VF-LhCDS/build
+    Start 1: m0_cpp_skeleton
+1/4 Test #1: m0_cpp_skeleton ..................   Passed    0.48 sec
+    Start 2: m2_primitives
+2/4 Test #2: m2_primitives ....................   Passed    0.36 sec
+    Start 3: m2_cli_contract
+3/4 Test #3: m2_cli_contract ..................   Passed    0.83 sec
+    Start 4: m0_reference_skeleton
+4/4 Test #4: m0_reference_skeleton ............   Passed    2.15 sec
+
+100% tests passed out of 4
+
+Total Test time (real) =   3.83 sec

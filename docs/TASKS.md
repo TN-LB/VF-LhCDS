@@ -25,20 +25,26 @@ M0 gate met on 2026-09-09. Later milestone statuses are recorded below.
 Gate: T01-T03 fixtures and the declared truth tier pass; no claim of production correctness.
 M1 gate met on 2026-09-17: 74 pytest tests; 2,198 exhaustive-small graph/h cases
 (1,099 distinct graphs), plus 100 seeded graph/h cases (96 distinct graphs).
-This is reference-only evidence. All M2+ tasks remain open.
+This is reference-only evidence. M2 execution is recorded below; M3+ remains open.
 
 ## M2 - Exact primitives (prompts 02, 03; needs M0 and M1 for integration)
 
-- [ ] P02.1 Preserve declared vertices; canonical graph and reversible original-ID mapping.
-- [ ] P02.2 One deterministic materialized h-clique/incidence backend; differential enumeration T04.
-- [ ] P02.3 Exact fractions/counts and checked 128-bit operations; arbitrary-precision path end to end, T05.
-- [ ] P03.1 Aggregate residual footprints; all-subset identity T06.
-- [ ] P03.2 Generic exact Dinic with 128-bit and arbitrary-precision instantiations; residual-cut tests T07.
-- [ ] P03.3 Restricted-closure API plus certified-global wrapper; empty/equality/zero cases T08.
-- [ ] P03.4 Preserve `L=N+1` cardinality tie term; exact largest-set differential campaign T09.
-- [ ] P03.5 Minimal standalone oracle reproducer and logical-query/mincut counters.
+- [x] P02.1 Preserve declared vertices; canonical graph and reversible original-ID mapping. [M2 evidence](../evidence/m2/REPORT.md): T01 strict reader/normalizer, exact IDs, ordinary components and canonical checksum.
+- [x] P02.2 One deterministic materialized h-clique/incidence backend; differential enumeration T04. [M2 evidence](../evidence/m2/REPORT.md): T04 tuples/incidence/all-subset counts agree in exhaustive-small, seeded and higher-h tiers.
+- [x] P02.3 Exact fractions/counts and checked 128-bit operations; arbitrary-precision path end to end, T05. [M2 evidence](../evidence/m2/REPORT.md): T05 checked boundaries, signed objectives and actual automatic cpp_int flow execution.
+- [x] P03.1 Aggregate residual footprints; all-subset identity T06. [M2 evidence](../evidence/m2/REPORT.md): T06 includes all nested bounds for n<=4 and every subset for each tested bound pair; boundary/singleton/repeated footprints.
+- [x] P03.2 Generic exact Dinic with 128-bit and arbitrary-precision instantiations; residual-cut tests T07. [M2 evidence](../evidence/m2/REPORT.md): T07 135 tiny cut/backend runs, residual/cancellation tests and a 20,000-node explicit-stack path.
+- [x] P03.3 Restricted-closure API plus certified-global wrapper; empty/equality/zero cases T08. [M2 evidence](../evidence/m2/REPORT.md): T08 private full-graph certificate factory; arbitrary bounds remain restricted; empty/equality/zero cases pass.
+- [x] P03.4 Preserve `L=N+1` cardinality tie term; exact largest-set differential campaign T09. [M2 evidence](../evidence/m2/REPORT.md): T09 exact largest sets agree for 40,591 exhaustive-small and 12,000 seeded requests, plus named/higher-h tests.
+- [x] P03.5 Minimal standalone oracle reproducer and logical-query/mincut counters. [M2 evidence](../evidence/m2/REPORT.md): 56 CLI invocations per final profile pass; counters distinguish shortcuts, actual cuts and executed numeric backends.
 
 Gate: true global comparisons only use certified bounds; fallback runs rather than merely reporting overflow.
+M2 gate met on 2026-09-22 at P02.1–P03.5 scope. Debug, ASan+UBSan, Release and
+RelWithDebInfo each pass 5/5 CTest; independent pytest remains 74 passed. Both Debug
+and sanitizer oracle campaigns pass. Full-graph certificates are implemented;
+chain/core certificate construction belongs to M3/M4. No M3+ task is completed.
+Sources are uncommitted on top of `1a4829a`; see source hashes and command manifests
+in the M2 evidence directory. Formal ledger labels still require the new commit.
 
 ## M3 - Solver and correctness freeze (prompts 04-06, 13; needs M1+M2)
 

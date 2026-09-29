@@ -6,6 +6,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+include(CheckCXXSourceCompiles)
+check_cxx_source_compiles("int main() { __extension__ typedef unsigned __int128 U; U x = 0; return static_cast<int>(x); }" VFLHCDS_HAS_UINT128)
+if(NOT VFLHCDS_HAS_UINT128 OR NOT UNIX)
+  message(FATAL_ERROR "M2 requires native unsigned __int128 and POSIX atomic file output (GCC/Clang on Unix)")
+endif()
+set(VFLHCDS_BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/.deps/boost_1_86_0" CACHE PATH "Boost headers root; see docs/BUILD.md")
+if(NOT EXISTS "${VFLHCDS_BOOST_ROOT}/boost/multiprecision/cpp_int.hpp")
+  message(FATAL_ERROR "Boost headers missing: run python scripts/fetch_boost.py or set VFLHCDS_BOOST_ROOT")
+endif()
+file(STRINGS "${VFLHCDS_BOOST_ROOT}/boost/version.hpp" VFLHCDS_BOOST_VERSION
+  REGEX "^#define BOOST_VERSION [0-9]+$")
+if(NOT VFLHCDS_BOOST_VERSION STREQUAL "#define BOOST_VERSION 108600")
+  message(FATAL_ERROR "M2 pins Boost 1.86.0; use the documented verified headers")
+endif()
+
 option(VFLHCDS_ENABLE_SANITIZERS "Build with AddressSanitizer and UndefinedBehaviorSanitizer" OFF)
 add_library(vflhcds_build_options INTERFACE)
 if(CMAKE_CXX_COMPILER_ID MATCHES "^(AppleClang|Clang|GNU)$")
@@ -30,9 +45,17 @@ configure_file(cmake/build_info.cpp.in generated/build_info.cpp @ONLY)
 add_library(vflhcds_lib STATIC
   "${CMAKE_CURRENT_BINARY_DIR}/generated/build_info.cpp"
   src/cli/dispatch.cpp
-  src/io/status.cpp)
+  src/io/status.cpp
+  src/core/exact.cpp
+  src/core/graph.cpp
+  src/clique/materialized.cpp
+  src/oracle/closure.cpp
+  src/telemetry/query.cpp
+  src/io/graph.cpp
+  src/io/sha256.cpp)
 add_library(vflhcds::lib ALIAS vflhcds_lib)
 target_include_directories(vflhcds_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(vflhcds_lib SYSTEM PUBLIC "${VFLHCDS_BOOST_ROOT}")
 target_link_libraries(vflhcds_lib PRIVATE vflhcds_build_options)
 add_executable(vflhcds src/cli/main.cpp)
 target_link_libraries(vflhcds PRIVATE vflhcds::lib vflhcds_build_options)
@@ -48,7 +71,15 @@ if(BUILD_TESTING)
   add_executable(vflhcds_skeleton_test tests/skeleton_test.cpp)
   target_link_libraries(vflhcds_skeleton_test PRIVATE vflhcds::lib vflhcds_build_options)
   add_test(NAME m0_cpp_skeleton COMMAND vflhcds_skeleton_test)
-  add_test(NAME m0_cli_contract
+  add_executable(vflhcds_primitives_test tests/m2_primitives.cpp)
+  target_link_libraries(vflhcds_primitives_test PRIVATE vflhcds::lib vflhcds_build_options)
+  add_executable(vflhcds_m2_probe tests/m2_probe.cpp)
+  target_link_libraries(vflhcds_m2_probe PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m2_primitives COMMAND vflhcds_primitives_test)
+  add_test(NAME m2_oracle_smoke
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/validation/oracle_campaign.py"
+      --probe "$<TARGET_FILE:vflhcds_m2_probe>" --tier smoke)
+  add_test(NAME m2_cli_contract
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/cli_smoke.py"
       "$<TARGET_FILE:vflhcds>")
   add_test(NAME m0_reference_skeleton

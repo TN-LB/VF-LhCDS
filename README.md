@@ -50,15 +50,16 @@ and no fixed-h polynomial bound establishes practical scalability or speedup.
 
 ## Repository layout
 
-M0 has a buildable C++17 library/CLI skeleton; M1 adds an independent exact Python
-reference for tiny graphs. The implementation lives in `include/vflhcds/`, `src/`,
-`reference/`, `tests/` and `scripts/`. Read
-[build instructions](docs/BUILD.md), [frozen interface contracts](docs/INTERFACE_CONTRACT.md)
-and [executed M0 evidence](evidence/m0/REPORT.md). The C++ CLI still supports only
-help/build-info and explicit unavailable-command failures. For direct-definition
-truth, exhaustive global/restricted queries and independent principal chains, see
-[reference usage](reference/README.md) and [executed M1 evidence](evidence/m1/REPORT.md).
-Production graph/clique/flow/solver code remains M2+ work.
+M0 provides the C++17/CMake skeleton and M1 provides independent exact Python
+truth for tiny graphs. M2 adds exact graph/clique/flow primitives and the standalone
+closure oracle. Read [build instructions](docs/BUILD.md),
+[frozen wire contracts](docs/INTERFACE_CONTRACT.md), [M2 APIs](docs/M2_IMPLEMENTATION.md),
+and [executed M2 evidence](evidence/m2/REPORT.md). The C++ CLI supports help,
+build-info, `inspect-graph` and `oracle`; `solve` remains M3 work.
+
+For direct-definition truth, exhaustive global/restricted queries and independent
+principal chains, see [reference usage](reference/README.md) and
+[executed M1 evidence](evidence/m1/REPORT.md). The M1 package is unchanged in M2.
 
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external

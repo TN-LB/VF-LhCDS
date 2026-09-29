@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build",
+      "-DCMAKE_BUILD_TYPE=Debug"
+    ],
+    "started_utc": "2026-09-22T03:33:31.622114+00:00",
+    "finished_utc": "2026-09-22T03:33:32.588975+00:00",
+    "exit_code": 0,
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "stdout_sha256": "7af4bd7a4480f27cb961a0cf326b29d57b9f2ae6e624e1dd91d3d19d327d8d22",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build",
+      "-j2"
+    ],
+    "started_utc": "2026-09-22T03:33:32.589668+00:00",
+    "finished_utc": "2026-09-22T03:33:36.909267+00:00",
+    "exit_code": 0,
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "stdout_sha256": "839ec007beb9020007535ac2f5a1ee94b7706353d5532fa0c5ffdbba9f3d3a22",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-09-22T03:33:36.910417+00:00",
+    "finished_utc": "2026-09-22T03:33:42.939597+00:00",
+    "exit_code": 8,
+    "stdout": "03.stdout",
+    "stderr": "03.stderr",
+    "stdout_sha256": "14e7a2d9383b40180fb624c343767a3873af00ddf8c5337fcb18dc2eadc3e730",
+    "stderr_sha256": "18e00877dc1071c85cd4f479d451bebeef8309022e46cf8c63b0bed5151984a4"
+  }
+]

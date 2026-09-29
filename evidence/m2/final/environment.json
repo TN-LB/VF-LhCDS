@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-22T03:29:24.173406+00:00",
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "python_executable": "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+  "cmake": "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+  "ctest": "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+  "base_commit": "1a4829a9348dae299ae074717928909598b11af6",
+  "git_status": " M .gitignore\n M CMakeLists.txt\n M src/cli/dispatch.cpp\n M tests/cli_smoke.py\n?? evidence/m2/\n?? include/vflhcds/clique/materialized.hpp\n?? include/vflhcds/core/exact.hpp\n?? include/vflhcds/core/graph.hpp\n?? include/vflhcds/flow/dinic.hpp\n?? include/vflhcds/io/graph.hpp\n?? include/vflhcds/oracle/closure.hpp\n?? include/vflhcds/telemetry/query.hpp\n?? scripts/fetch_boost.py\n?? scripts/run_m2_checks.py\n?? src/clique/materialized.cpp\n?? src/core/exact.cpp\n?? src/core/graph.cpp\n?? src/io/graph.cpp\n?? src/io/sha256.cpp\n?? src/oracle/closure.cpp\n?? src/telemetry/query.cpp\n?? tests/m2_primitives.cpp\n?? tests/m2_probe.cpp\n?? validation/oracle_campaign.py\n",
+  "ASAN_OPTIONS": null,
+  "UBSAN_OPTIONS": null
+}
