@@ -1,0 +1,29 @@
+{
+  "standalone_global_requests": 29545,
+  "automatic_big_flows": 2198,
+  "certified_separator_requests": 8280,
+  "chain_pairs": 4140,
+  "solver_runs": 38480,
+  "solver_logical_queries": 69848,
+  "solver_mincuts": 50172,
+  "all_runs": 4396,
+  "fixed_k_prefixes": 14844,
+  "checked_variants": 4396,
+  "base_graph_h_cases": 2198,
+  "family_all-labelled": 2198,
+  "distinct_base_graphs": 1099,
+  "tier": "exhaustive-small",
+  "status": "passed",
+  "wall_seconds": 37.82189854234457,
+  "seed": null,
+  "probe": "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m3_probe",
+  "probe_sha256": "b06230d59da6dceac3b8f70d9943ea1666a46dfcacfc9eee8a5f583f21a6439c",
+  "evidence_level": "definition-checked finite implementation evidence; not theorem proof",
+  "oracle_requests": 37825,
+  "sha256": {
+    "named_traces.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cases.jsonl": "c2cce6ce3d46f49f12c42ee16c4d7e9ff45ae742a757542a4b78bc37fcac1961",
+    "results.jsonl.gz": "ce177b0bdcc6957490a7b24f08a64b363085e95c1544674ba645d1b5c19d2081",
+    "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,6 +1,6 @@
 # Oracle module
 
-Aggregated residual footprints, largest_restricted and the privately constructed full-graph global_F certificate.
+Exact restricted/global closure with immutable full-graph and sealed chain-separator certificates.
+Core-origin certificates remain M4 work.
 
-See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
-executed tests and remaining limitations. No solver/core/baseline work is included.
+See `docs/M3_IMPLEMENTATION.md` and `evidence/m3/REPORT.md`.

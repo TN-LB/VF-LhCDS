@@ -63,6 +63,33 @@ CertifiedGlobalRequest ClosureOracle::full_graph_request(Fraction lambda) const 
     if (lambda.numerator() < 0) throw std::invalid_argument("negative lambda");
     return CertifiedGlobalRequest(this, {{}, index_.graph().all_vertices(), std::move(lambda)});
 }
+ChainInterval ClosureOracle::root_interval() const {
+    return ChainInterval(ChainPoint(this, {}, 0),
+                         ChainPoint(this, index_.graph().all_vertices(), BigInt(index_.cliques().size())));
+}
+ChainInterval ClosureOracle::chain_interval(const ChainPoint& x, const ChainPoint& y) const {
+    if (x.owner_ != this || y.owner_ != this || x.vertices_ == y.vertices_
+        || !subset(x.vertices_, y.vertices_)) throw std::invalid_argument("invalid certified chain endpoints");
+    return ChainInterval(x, y);
+}
+ChainPoint ClosureOracle::global_chain_point(Fraction lambda, const CapacityPolicy policy, QueryStats* progress) const {
+    auto result = global_F(full_graph_request(std::move(lambda)), policy, progress);
+    const auto count = index_.count(result.vertices);
+    return ChainPoint(this, std::move(result.vertices), count);
+}
+CertifiedGlobalRequest ClosureOracle::separator_request(const ChainInterval& interval) const {
+    if (interval.x_.owner_ != this || interval.y_.owner_ != this)
+        throw std::invalid_argument("chain interval belongs to another oracle");
+    return CertifiedGlobalRequest(this, {interval.x_.vertices_, interval.y_.vertices_, interval.lambda()});
+}
+ChainPoint ClosureOracle::separate(const ChainInterval& interval, const CapacityPolicy policy, QueryStats* progress) const {
+    auto result = global_F(separator_request(interval), policy, progress);
+    if (result.vertices == interval.x_.vertices_ || !subset(interval.x_.vertices_, result.vertices)
+        || !subset(result.vertices, interval.y_.vertices_)) throw std::logic_error("separator progress invariant");
+    if (result.vertices == interval.y_.vertices_) return interval.y_;
+    const auto count = index_.count(result.vertices);
+    return ChainPoint(this, std::move(result.vertices), count);
+}
 OracleResult ClosureOracle::global_F(const CertifiedGlobalRequest& request, const CapacityPolicy policy,
                                    QueryStats* progress) const {
     if (request.owner_ != this) throw std::invalid_argument("certificate belongs to another oracle");

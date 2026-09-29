@@ -1,4 +1,5 @@
-# Reserved solver module
+# Solver module
 
-M3/P04.1-P04.4: immutable ChainInterval endpoints, left-first traversal and structural terminal extraction.
-M0 reserves this public interface directory only; no algorithm or measurements are implemented.
+M3 immutable certified chain intervals, explicit left-first stack, ordinary-edge
+terminal extraction and exact fixed-k/all output. No core reduction or candidate
+verifier. See `docs/M3_IMPLEMENTATION.md` and `evidence/m3/REPORT.md`.

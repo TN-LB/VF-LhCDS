@@ -1,0 +1,601 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build",
+      "-DCMAKE_BUILD_TYPE=Debug"
+    ],
+    "started_utc": "2026-09-29T08:01:01.754310+00:00",
+    "finished_utc": "2026-09-29T08:01:06.868581+00:00",
+    "exit_code": 0,
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "stdout_sha256": "b324280712d6599238601d297712f68b45de20235a7a701f75b83ce8437313de",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build",
+      "-j2"
+    ],
+    "started_utc": "2026-09-29T08:01:06.870442+00:00",
+    "finished_utc": "2026-09-29T08:01:27.042370+00:00",
+    "exit_code": 0,
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "stdout_sha256": "7bc24e9de0db4a900c52751abcf345a572f95903acbb40c3e64b325f91407b07",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-09-29T08:01:27.046112+00:00",
+    "finished_utc": "2026-09-29T08:01:37.690873+00:00",
+    "exit_code": 0,
+    "stdout": "03.stdout",
+    "stderr": "03.stderr",
+    "stdout_sha256": "598d9a211f3457e20b67f354947d949eec5acbc77d83d6e22d632e0e1eec371b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build/vflhcds_m3_probe",
+      "--tier",
+      "smoke",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-smoke"
+    ],
+    "started_utc": "2026-09-29T08:01:37.691648+00:00",
+    "finished_utc": "2026-09-29T08:01:40.541365+00:00",
+    "exit_code": 0,
+    "stdout": "04.stdout",
+    "stderr": "04.stderr",
+    "stdout_sha256": "a2107a6bcee798a647d750043e64e7fadab67ebfd3b6ee898e03c5582b183d6e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build/vflhcds_m3_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-exhaustive-small"
+    ],
+    "started_utc": "2026-09-29T08:01:40.544667+00:00",
+    "finished_utc": "2026-09-29T08:02:18.653308+00:00",
+    "exit_code": 0,
+    "stdout": "05.stdout",
+    "stderr": "05.stderr",
+    "stdout_sha256": "e8b12cab66263996ea094d0f5cea9e051cedb6abfc76b07b7fecfeebef05a624",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build/vflhcds_m3_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-seeded"
+    ],
+    "started_utc": "2026-09-29T08:02:18.654194+00:00",
+    "finished_utc": "2026-09-29T08:02:47.679859+00:00",
+    "exit_code": 0,
+    "stdout": "06.stdout",
+    "stderr": "06.stderr",
+    "stdout_sha256": "3c8e63c3ec568d0ff7a29b068a32198c7f5ebbe1739cddb9f70626cee1b32f29",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build/vflhcds_m3_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-higher-h"
+    ],
+    "started_utc": "2026-09-29T08:02:47.680932+00:00",
+    "finished_utc": "2026-09-29T08:02:49.177834+00:00",
+    "exit_code": 0,
+    "stdout": "07.stdout",
+    "stderr": "07.stderr",
+    "stdout_sha256": "99ddf9fabab6bbb87090b17f89f70ce80bc2568cdfb84d46fe6da262c319f438",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build/vflhcds_m2_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-exhaustive-small"
+    ],
+    "started_utc": "2026-09-29T08:02:49.179101+00:00",
+    "finished_utc": "2026-09-29T08:03:10.836534+00:00",
+    "exit_code": 0,
+    "stdout": "08.stdout",
+    "stderr": "08.stderr",
+    "stdout_sha256": "30f0de9bba559e6a50dfe672df90a419162c034b031eb0aa6282f5188d3bf716",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build/vflhcds_m2_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-seeded"
+    ],
+    "started_utc": "2026-09-29T08:03:10.837422+00:00",
+    "finished_utc": "2026-09-29T08:03:17.660974+00:00",
+    "exit_code": 0,
+    "stdout": "09.stdout",
+    "stderr": "09.stderr",
+    "stdout_sha256": "52f32487d435d99d7e31ccaa73686defadf4d1524c60e70f4f86afaa265bffda",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build/vflhcds_m2_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-higher-h"
+    ],
+    "started_utc": "2026-09-29T08:03:17.662181+00:00",
+    "finished_utc": "2026-09-29T08:03:18.238306+00:00",
+    "exit_code": 0,
+    "stdout": "10.stdout",
+    "stderr": "10.stderr",
+    "stdout_sha256": "ca7ff9bd98d952a62502e86cde8b84fba6363a6e3d6e7fe2666abcbfc2e0dc19",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-sanitize",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DVFLHCDS_ENABLE_SANITIZERS=ON"
+    ],
+    "started_utc": "2026-09-29T08:03:18.239224+00:00",
+    "finished_utc": "2026-09-29T08:03:20.131282+00:00",
+    "exit_code": 0,
+    "stdout": "11.stdout",
+    "stderr": "11.stderr",
+    "stdout_sha256": "f51dba8f5b743ba6ea88f6c35b001eabda50087df3ff4b9e53fab80dcacbda19",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-sanitize",
+      "-j2"
+    ],
+    "started_utc": "2026-09-29T08:03:20.132464+00:00",
+    "finished_utc": "2026-09-29T08:03:46.043311+00:00",
+    "exit_code": 0,
+    "stdout": "12.stdout",
+    "stderr": "12.stderr",
+    "stdout_sha256": "faa9ec3471fb8c3a3a54b693e770f25c07f656584b1e3a80187f303ac5b242da",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-sanitize",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-09-29T08:03:46.044851+00:00",
+    "finished_utc": "2026-09-29T08:04:07.153068+00:00",
+    "exit_code": 0,
+    "stdout": "13.stdout",
+    "stderr": "13.stderr",
+    "stdout_sha256": "00980da5d3c7f8d1dd2c9de36c36072bc4cdf0f4c00e2161e3b88d09b81ab630",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "smoke",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-smoke"
+    ],
+    "started_utc": "2026-09-29T08:04:07.154432+00:00",
+    "finished_utc": "2026-09-29T08:04:11.133124+00:00",
+    "exit_code": 0,
+    "stdout": "14.stdout",
+    "stderr": "14.stderr",
+    "stdout_sha256": "31414b12f060d0ada4d82c6cdc617870ace0b94dae706bfab0537c6ff34364ac",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-exhaustive-small"
+    ],
+    "started_utc": "2026-09-29T08:04:11.134287+00:00",
+    "finished_utc": "2026-09-29T08:05:30.511151+00:00",
+    "exit_code": 0,
+    "stdout": "15.stdout",
+    "stderr": "15.stderr",
+    "stdout_sha256": "72d9d12e36f21d2910887be3b81901ce502a189742aa082cdb2f1b1bd8882752",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-seeded"
+    ],
+    "started_utc": "2026-09-29T08:05:30.513429+00:00",
+    "finished_utc": "2026-09-29T08:06:25.191859+00:00",
+    "exit_code": 0,
+    "stdout": "16.stdout",
+    "stderr": "16.stderr",
+    "stdout_sha256": "259bcc7780140d8564b61d7d623f3cbbd936cffe61dd61ba5d8f512d943a33af",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/solver_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-higher-h"
+    ],
+    "started_utc": "2026-09-29T08:06:25.193755+00:00",
+    "finished_utc": "2026-09-29T08:06:29.622784+00:00",
+    "exit_code": 0,
+    "stdout": "17.stdout",
+    "stderr": "17.stderr",
+    "stdout_sha256": "71fda3b5156b7ae9462767d586f7af024b765fbce0ab32e0d00ac0f3c4529bd4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m2_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-exhaustive-small"
+    ],
+    "started_utc": "2026-09-29T08:06:29.632235+00:00",
+    "finished_utc": "2026-09-29T08:07:31.374181+00:00",
+    "exit_code": 0,
+    "stdout": "18.stdout",
+    "stderr": "18.stderr",
+    "stdout_sha256": "f1b346ac954255ea9529b9984472b52ae43809f546795e971ddbb1ec238c0562",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m2_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-seeded"
+    ],
+    "started_utc": "2026-09-29T08:07:31.375692+00:00",
+    "finished_utc": "2026-09-29T08:07:41.791668+00:00",
+    "exit_code": 0,
+    "stdout": "19.stdout",
+    "stderr": "19.stderr",
+    "stdout_sha256": "603fcd13d3c08035f6ed5cc1e84af6f23202963fac07c399d2484f0df1e2c1b1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/oracle_campaign.py",
+      "--probe",
+      "build-sanitize/vflhcds_m2_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-higher-h"
+    ],
+    "started_utc": "2026-09-29T08:07:41.792672+00:00",
+    "finished_utc": "2026-09-29T08:07:42.765647+00:00",
+    "exit_code": 0,
+    "stdout": "20.stdout",
+    "stderr": "20.stderr",
+    "stdout_sha256": "f67c3516d563cb800ce9f183d9e32e099659a6afe5740516c27d92e52c008ca8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-release",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "started_utc": "2026-09-29T08:07:42.766542+00:00",
+    "finished_utc": "2026-09-29T08:07:43.829388+00:00",
+    "exit_code": 0,
+    "stdout": "21.stdout",
+    "stderr": "21.stderr",
+    "stdout_sha256": "7daa949d8236e3b7b875140e94c4cba17699ba021c6a158a1296561fd3c3a932",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-release",
+      "-j2"
+    ],
+    "started_utc": "2026-09-29T08:07:43.830358+00:00",
+    "finished_utc": "2026-09-29T08:07:56.737399+00:00",
+    "exit_code": 0,
+    "stdout": "22.stdout",
+    "stderr": "22.stderr",
+    "stdout_sha256": "358a80888979bf930e671fe9fff9fef96329bed2ca74494892f724e391e27f1b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-release",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-09-29T08:07:56.738303+00:00",
+    "finished_utc": "2026-09-29T08:08:02.537194+00:00",
+    "exit_code": 0,
+    "stdout": "23.stdout",
+    "stderr": "23.stderr",
+    "stdout_sha256": "d1a61cf92fe8238ef2aea129e52fd788179645d216c2e76f813d20c33d0cb0b4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-relwithdebinfo",
+      "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    ],
+    "started_utc": "2026-09-29T08:08:02.538083+00:00",
+    "finished_utc": "2026-09-29T08:08:03.396242+00:00",
+    "exit_code": 0,
+    "stdout": "24.stdout",
+    "stderr": "24.stderr",
+    "stdout_sha256": "93a34d976095484dccd5c5cf5ab275184064841243615e2b2234e83c543600fc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-relwithdebinfo",
+      "-j2"
+    ],
+    "started_utc": "2026-09-29T08:08:03.397109+00:00",
+    "finished_utc": "2026-09-29T08:08:17.418523+00:00",
+    "exit_code": 0,
+    "stdout": "25.stdout",
+    "stderr": "25.stderr",
+    "stdout_sha256": "2f6227848310424fff36e29235accde821293d45c32869ad46633ea4cb584878",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-relwithdebinfo",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-09-29T08:08:17.419460+00:00",
+    "finished_utc": "2026-09-29T08:08:23.140576+00:00",
+    "exit_code": 0,
+    "stdout": "26.stdout",
+    "stderr": "26.stderr",
+    "stdout_sha256": "2fa5660df165282eafa1992479b1c27f2b9bf5c18638760c8eb3181912d47fab",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-production",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_TESTING=OFF"
+    ],
+    "started_utc": "2026-09-29T08:08:23.141488+00:00",
+    "finished_utc": "2026-09-29T08:08:23.389260+00:00",
+    "exit_code": 0,
+    "stdout": "27.stdout",
+    "stderr": "27.stderr",
+    "stdout_sha256": "e6f0cdc7bd9675ea25c02d0746c00c46e7aa11d0eeceb9c0b6d3d0eea1de48e9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build-production",
+      "-j2"
+    ],
+    "started_utc": "2026-09-29T08:08:23.390137+00:00",
+    "finished_utc": "2026-09-29T08:08:30.516207+00:00",
+    "exit_code": 0,
+    "stdout": "28.stdout",
+    "stderr": "28.stderr",
+    "stdout_sha256": "940cd7fc13ad09359d888b75c049c36a3c984de6be3d373776d8eeb98933dd05",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "reference/tests",
+      "-q"
+    ],
+    "started_utc": "2026-09-29T08:08:30.517325+00:00",
+    "finished_utc": "2026-09-29T08:08:33.358968+00:00",
+    "exit_code": 0,
+    "stdout": "29.stdout",
+    "stderr": "29.stderr",
+    "stdout_sha256": "125f8eef38a83fe42151dc54eb2993c4fb4e820a7c6cc39cbdafe62a3f70bf65",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "validation/run_solver.py",
+      "--executable",
+      "build-production/vflhcds",
+      "--evidence",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/cli-definition-run",
+      "--check-reference",
+      "--",
+      "solve",
+      "--graph",
+      "reference/fixtures/bridged_triangles.graph",
+      "--h",
+      "3",
+      "--all"
+    ],
+    "started_utc": "2026-09-29T08:08:33.360044+00:00",
+    "finished_utc": "2026-09-29T08:08:33.661742+00:00",
+    "exit_code": 0,
+    "stdout": "30.stdout",
+    "stderr": "30.stderr",
+    "stdout_sha256": "401c965a7e628d8ecf0f74c7e76bf3513b59d845f479384acc0ceac26be12d98",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/verify_papers.py"
+    ],
+    "started_utc": "2026-09-29T08:08:33.662748+00:00",
+    "finished_utc": "2026-09-29T08:08:33.707908+00:00",
+    "exit_code": 0,
+    "stdout": "31.stdout",
+    "stderr": "31.stderr",
+    "stdout_sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started_utc": "2026-09-29T08:08:33.708677+00:00",
+    "finished_utc": "2026-09-29T08:08:33.734020+00:00",
+    "exit_code": 0,
+    "stdout": "32.stdout",
+    "stderr": "32.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "build/vflhcds",
+      "print-build-info"
+    ],
+    "started_utc": "2026-09-29T08:08:33.734879+00:00",
+    "finished_utc": "2026-09-29T08:08:33.743212+00:00",
+    "exit_code": 0,
+    "stdout": "33.stdout",
+    "stderr": "33.stderr",
+    "stdout_sha256": "421b83654c6aa09d42b7fba4eb4b502e288d0c34defbb3eb720137d072ff4e94",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "cmake",
+      "--version"
+    ],
+    "started_utc": "2026-09-29T08:08:33.743938+00:00",
+    "finished_utc": "2026-09-29T08:08:33.904339+00:00",
+    "exit_code": 0,
+    "stdout": "34.stdout",
+    "stderr": "34.stderr",
+    "stdout_sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "c++",
+      "--version"
+    ],
+    "started_utc": "2026-09-29T08:08:33.905187+00:00",
+    "finished_utc": "2026-09-29T08:08:33.926529+00:00",
+    "exit_code": 0,
+    "stdout": "35.stdout",
+    "stderr": "35.stderr",
+    "stdout_sha256": "6ea00c29cd488d365b3461e5dd1d92bc6792fed347a3370edc2b349a8f7660a5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

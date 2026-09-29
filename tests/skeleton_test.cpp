@@ -15,10 +15,10 @@ int main() {
     std::ostringstream out;
     std::ostringstream err;
     const int result = vflhcds::run_cli({"solve"}, out, err);
-    if (result != vflhcds::exit_code(vflhcds::RunStatus::not_implemented)
+    if (result != vflhcds::exit_code(vflhcds::RunStatus::invalid_argument)
         || !out.str().empty()
         || err.str().find("\"complete\":false") == std::string::npos) {
-        std::cerr << "Unimplemented algorithm must not appear complete\n";
+        std::cerr << "Incomplete solve arguments must not appear complete\n";
         return 1;
     }
     return 0;

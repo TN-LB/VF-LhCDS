@@ -1,7 +1,7 @@
 # VF-LhCDS: Proof-Aligned Implementation Kit
 
-Revised 2026-09-09. This kit is an implementation/evaluation plan, not an existing
-production solver. The four supplied files under `papers/` are unchanged.
+Revised 2026-09-09. This repository contains the exact basic solver, independent
+reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
 ## Start here
 
@@ -50,16 +50,20 @@ and no fixed-h polynomial bound establishes practical scalability or speedup.
 
 ## Repository layout
 
-M0 provides the C++17/CMake skeleton and M1 provides independent exact Python
-truth for tiny graphs. M2 adds exact graph/clique/flow primitives and the standalone
-closure oracle. Read [build instructions](docs/BUILD.md),
-[frozen wire contracts](docs/INTERFACE_CONTRACT.md), [M2 APIs](docs/M2_IMPLEMENTATION.md),
-and [executed M2 evidence](evidence/m2/REPORT.md). The C++ CLI supports help,
-build-info, `inspect-graph` and `oracle`; `solve` remains M3 work.
+M0 provides the C++17/CMake skeleton, M1 the independent exact Python reference,
+M2 the exact graph/clique/flow oracle, and M3 the basic fixed-k solver. Read
+[build instructions](docs/BUILD.md), [wire contracts](docs/INTERFACE_CONTRACT.md),
+[M3 APIs and timing](docs/M3_IMPLEMENTATION.md), and
+[executed M3 evidence](evidence/m3/REPORT.md). The C++ CLI supports `solve --k K`,
+`solve --all`, `oracle`, `inspect-graph`, help and build-info. Core reduction is off.
 
-For direct-definition truth, exhaustive global/restricted queries and independent
-principal chains, see [reference usage](reference/README.md) and
-[executed M1 evidence](evidence/m1/REPORT.md). The M1 package is unchanged in M2.
+```sh
+build/vflhcds solve --graph reference/fixtures/bridged_triangles.graph --h 3 --all
+```
+
+For direct-definition truth and independent principal chains, see
+[reference usage](reference/README.md). The M1 reference remains independent and
+unchanged. Optional optimization and baseline/benchmark work remain M4/M5.
 
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external

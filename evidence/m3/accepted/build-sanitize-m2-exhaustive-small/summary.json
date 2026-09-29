@@ -1,0 +1,31 @@
+{
+  "subset_count_comparisons": 67732,
+  "footprint_subset_identities": 152506,
+  "footprint_bound_pairs": 20648,
+  "exhaustive_nested_pairs": 10842,
+  "chain_pairs": 4140,
+  "backend_executions": 119575,
+  "oracle_requests": 40591,
+  "global_requests": 29834,
+  "flow_arbitrary_precision": 34312,
+  "automatic_big_flows": 2198,
+  "flow_uint128": 59832,
+  "restricted_requests": 10757,
+  "graph_h_cases": 2198,
+  "h_2_cases": 1099,
+  "family_all-labelled": 2198,
+  "h_3_cases": 1099,
+  "distinct_graphs": 1099,
+  "tier": "exhaustive-small",
+  "seed": null,
+  "status": "passed",
+  "wall_seconds": 61.29788579232991,
+  "probe": "/Users/nost/Documents/VF-LhCDS/build-sanitize/vflhcds_m2_probe",
+  "probe_sha256": "e438f9613c887188acf695afaf1019e24b43fc068fd76d0de038791b6c8bd144",
+  "scope": "M2 exact primitives only; finite implementation evidence, not a theorem proof",
+  "evidence_sha256": {
+    "cases.jsonl": "c6f7201cf7d276504027238fd77b552cdf5ecf1cf3f0fe567b5c02471492ccd2",
+    "results.jsonl.gz": "d5f6a35dcd1314faaf28a10c40f14f915a9f60aece4974e3c083deece7b98868",
+    "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

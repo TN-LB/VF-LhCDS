@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "c++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Wshadow",
+      "-Werror",
+      "-Iinclude",
+      "-isystem",
+      ".deps/boost_1_86_0",
+      "evidence/m3/token_move_reproducer.cpp",
+      "build/libvflhcds_lib.a",
+      "-o",
+      "/tmp/vflhcds-m3-token-move"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/tmp/vflhcds-m3-token-move"
+    ],
+    "exit_code": 0,
+    "stdout": "transferred size=2, original size=2\n",
+    "stderr": ""
+  }
+]

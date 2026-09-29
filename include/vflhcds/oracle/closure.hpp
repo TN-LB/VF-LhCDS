@@ -1,6 +1,7 @@
 #pragma once
 #include "vflhcds/clique/materialized.hpp"
 #include "vflhcds/telemetry/query.hpp"
+#include "vflhcds/solver/interval.hpp"
 
 namespace vflhcds {
 struct RestrictedRequest { VertexSet x, y_oracle; Fraction lambda; };
@@ -11,8 +12,8 @@ enum class CapacityPolicy { Auto, ForceUInt128, ForceBig };
 struct OracleResult { VertexSet vertices; bool global = false; QueryStats stats; };
 class ClosureOracle;
 
-// Only a full-graph factory exists in M2. Copying a valid certificate is fine;
-// arbitrary bounds cannot acquire this type by choosing a public enum value.
+// Copying a valid certificate is fine; arbitrary bounds cannot acquire this type
+// by choosing a public enum value. Chain separators require sealed chain tokens.
 class CertifiedGlobalRequest {
     friend class ClosureOracle;
 public:
@@ -20,8 +21,8 @@ public:
 private:
     CertifiedGlobalRequest(const ClosureOracle* owner, RestrictedRequest request)
         : owner_(owner), request_(std::move(request)) {}
-    const ClosureOracle* owner_;
-    RestrictedRequest request_;
+    const ClosureOracle* const owner_;
+    const RestrictedRequest request_;
 };
 class ClosureOracle {
 public:
@@ -29,6 +30,13 @@ public:
     ClosureOracle(const ClosureOracle&) = delete;
     ClosureOracle& operator=(const ClosureOracle&) = delete;
     CertifiedGlobalRequest full_graph_request(Fraction lambda) const;
+    ChainInterval root_interval() const;
+    ChainInterval chain_interval(const ChainPoint& x, const ChainPoint& y) const;
+    ChainPoint global_chain_point(Fraction lambda, CapacityPolicy policy = CapacityPolicy::Auto,
+                                  QueryStats* progress = nullptr) const;
+    CertifiedGlobalRequest separator_request(const ChainInterval& interval) const;
+    ChainPoint separate(const ChainInterval& interval, CapacityPolicy policy = CapacityPolicy::Auto,
+                        QueryStats* progress = nullptr) const;
     OracleResult global_F(const CertifiedGlobalRequest& request, CapacityPolicy policy = CapacityPolicy::Auto,
                           QueryStats* progress = nullptr) const;
     OracleResult largest_restricted(const RestrictedRequest& request, CapacityPolicy policy = CapacityPolicy::Auto,

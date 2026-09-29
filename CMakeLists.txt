@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(vflhcds VERSION 0.0.0 LANGUAGES CXX)
+project(vflhcds VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -52,6 +52,8 @@ add_library(vflhcds_lib STATIC
   src/oracle/closure.cpp
   src/telemetry/query.cpp
   src/io/graph.cpp
+  src/io/solution.cpp
+  src/solver/solver.cpp
   src/io/sha256.cpp)
 add_library(vflhcds::lib ALIAS vflhcds_lib)
 target_include_directories(vflhcds_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
@@ -76,6 +78,15 @@ if(BUILD_TESTING)
   add_executable(vflhcds_m2_probe tests/m2_probe.cpp)
   target_link_libraries(vflhcds_m2_probe PRIVATE vflhcds::lib vflhcds_build_options)
   add_test(NAME m2_primitives COMMAND vflhcds_primitives_test)
+  add_executable(vflhcds_solver_test tests/m3_solver.cpp)
+  target_link_libraries(vflhcds_solver_test PRIVATE vflhcds::lib vflhcds_build_options)
+  add_executable(vflhcds_m3_probe tests/m3_probe.cpp)
+  target_link_libraries(vflhcds_m3_probe PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m3_solver COMMAND vflhcds_solver_test)
+  add_test(NAME m3_solver_smoke COMMAND "${Python3_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/validation/solver_campaign.py" --probe "$<TARGET_FILE:vflhcds_m3_probe>" --tier smoke)
+  add_test(NAME m3_cli_contract COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m3_cli.py" "$<TARGET_FILE:vflhcds>")
+  add_test(NAME m3_failure_reducer COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m3_harness.py")
   add_test(NAME m2_oracle_smoke
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/validation/oracle_campaign.py"
       --probe "$<TARGET_FILE:vflhcds_m2_probe>" --tier smoke)

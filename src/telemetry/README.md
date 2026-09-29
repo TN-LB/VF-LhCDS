@@ -1,6 +1,6 @@
 # Telemetry module
 
-QueryStats records actual standalone oracle work; solver phase timing and interval-entry counters remain M3.
+M2 per-query records and M3 exact event totals, initial clique count and query history.
+Native postload/postindex timing and external end-to-end timing follow the frozen contract.
 
-See `docs/M2_IMPLEMENTATION.md` and `evidence/m2/REPORT.md` for contracts,
-executed tests and remaining limitations. No solver/core/baseline work is included.
+See `docs/M3_IMPLEMENTATION.md` and `evidence/m3/REPORT.md`.

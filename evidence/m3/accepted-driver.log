@@ -1,0 +1,70 @@
+RUN cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+exit=0
+RUN cmake --build build -j2
+exit=0
+RUN ctest --test-dir build --output-on-failure -V
+exit=0
+RUN python validation/solver_campaign.py --probe build/vflhcds_m3_probe --tier smoke --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-smoke
+exit=0
+RUN python validation/solver_campaign.py --probe build/vflhcds_m3_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-exhaustive-small
+exit=0
+RUN python validation/solver_campaign.py --probe build/vflhcds_m3_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-seeded
+exit=0
+RUN python validation/solver_campaign.py --probe build/vflhcds_m3_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-higher-h
+exit=0
+RUN python validation/oracle_campaign.py --probe build/vflhcds_m2_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-exhaustive-small
+exit=0
+RUN python validation/oracle_campaign.py --probe build/vflhcds_m2_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-seeded
+exit=0
+RUN python validation/oracle_campaign.py --probe build/vflhcds_m2_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-m2-higher-h
+exit=0
+RUN cmake -S . -B build-sanitize -DCMAKE_BUILD_TYPE=Debug -DVFLHCDS_ENABLE_SANITIZERS=ON
+exit=0
+RUN cmake --build build-sanitize -j2
+exit=0
+RUN ctest --test-dir build-sanitize --output-on-failure -V
+exit=0
+RUN python validation/solver_campaign.py --probe build-sanitize/vflhcds_m3_probe --tier smoke --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-smoke
+exit=0
+RUN python validation/solver_campaign.py --probe build-sanitize/vflhcds_m3_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-exhaustive-small
+exit=0
+RUN python validation/solver_campaign.py --probe build-sanitize/vflhcds_m3_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-seeded
+exit=0
+RUN python validation/solver_campaign.py --probe build-sanitize/vflhcds_m3_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-higher-h
+exit=0
+RUN python validation/oracle_campaign.py --probe build-sanitize/vflhcds_m2_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-exhaustive-small
+exit=0
+RUN python validation/oracle_campaign.py --probe build-sanitize/vflhcds_m2_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-seeded
+exit=0
+RUN python validation/oracle_campaign.py --probe build-sanitize/vflhcds_m2_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/build-sanitize-m2-higher-h
+exit=0
+RUN cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release
+exit=0
+RUN cmake --build build-release -j2
+exit=0
+RUN ctest --test-dir build-release --output-on-failure -V
+exit=0
+RUN cmake -S . -B build-relwithdebinfo -DCMAKE_BUILD_TYPE=RelWithDebInfo
+exit=0
+RUN cmake --build build-relwithdebinfo -j2
+exit=0
+RUN ctest --test-dir build-relwithdebinfo --output-on-failure -V
+exit=0
+RUN cmake -S . -B build-production -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
+exit=0
+RUN cmake --build build-production -j2
+exit=0
+RUN python -m pytest reference/tests -q
+exit=0
+RUN python validation/run_solver.py --executable build-production/vflhcds --evidence /Users/nost/Documents/VF-LhCDS/evidence/m3/accepted/cli-definition-run --check-reference -- solve --graph reference/fixtures/bridged_triangles.graph --h 3 --all
+exit=0
+RUN python scripts/verify_papers.py
+exit=0
+RUN git diff --check
+exit=0
+RUN build/vflhcds print-build-info
+exit=0
+RUN cmake --version
+exit=0
+RUN c++ --version
+exit=0

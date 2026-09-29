@@ -1,24 +1,24 @@
 # Claim-to-Code-to-Test Evidence
 
-Revision 2026-09-09. Proof obligations and their arguments live in
+Revision 2026-09-29. Proof obligations and their arguments live in
 `THEORY_TO_CODE_AUDIT.md`; this file is the single implementation evidence ledger.
 A code symbol, test command, evidence path and commit are needed before marking
 `implementation-tested`. Passing tests do not prove a theorem.
 
 | Obligation | Exact source | Planned owner / symbol | Tests | Evidence / commit | Status |
 |---|---|---|---|---|---|
-| O01 Definition-level truth | Defs. 1.1-1.3 | reference: direct_compact, direct_maximal_compact, direct_lhcds | T01,T02 | [M1 reference execution](../evidence/m1/REPORT.md); `1a4829a9348dae299ae074717928909598b11af6` | implementation-tested (independent reference scope) |
-| O02 Hierarchy/leaves | 1.8-1.10 | validation/reference_campaign.py: check_case | T02; reference hierarchy diagnostics; production T11,T14 pending | [M1 finite reference diagnostics](../evidence/m1/REPORT.md); reference commit `1a4829a`; production pending | planned (formal acceptance pending) |
-| O03 Largest F / independent chain | 1.11-1.14 | reference: exhaustive_F, cardinality_line_chain | T03; M2 T09 executed; solver T10 pending | [M1](../evidence/m1/REPORT.md), reference commit `1a4829a`; [M2 oracle evidence](../evidence/m2/REPORT.md), new commit pending | planned (remaining production scope / commit gate) |
-| O04 Exact separator | 1.15; Eq. 11-12 | solver: visit_interval | T06,T10 | not run | planned |
-| O05 Restricted/global boundary | 1.19 proof + audit A | ClosureOracle::largest_restricted, full_graph_request, global_F | T08,T09 | [M2 executed](../evidence/m2/REPORT.md); source hashes, new commit pending | planned (formal commit gate; M2 tests passed) |
-| O06 Exact network / largest ties | Eq. 15; 1.19 | aggregate_footprints; oracle execute; Dinic<Capacity> | T06,T07,T09 | [M2 executed](../evidence/m2/REPORT.md); source hashes, new commit pending | planned (formal commit gate; M2 tests passed) |
-| O07 Terminal extraction | 1.16 | solver: extract_terminal | T11,T17 | not run | planned |
-| O08 Fixed-k order / verification-free | 1.17; top-k convention | solver: emit_fixed_k | T12,T15,T16 | not run | planned |
-| O09 Query / network bounds | 1.18; 1.20 | QueryStats; ClosureOracle::largest_restricted | standalone/network counters executed; full-recursion T13 pending | [M2 measured network/counter checks](../evidence/m2/REPORT.md) | planned (solver query bound pending) |
-| O10 Safe core search bounds | 1.21-1.22 | clique: peel_core; oracle: certified_core_bounds | T17 | not run | planned |
-| O11 Exact numeric refinement | 1.19-1.20; D005 | Fraction; checked_add/sub/mul; ClosureOracle::largest_restricted; Dinic | T05,T07 | [M2 executed real auto fallback](../evidence/m2/REPORT.md); source hashes, new commit pending | planned (formal commit gate; M2 tests passed) |
-| O12 Evidence scope / validation | Def. 1.3 + audit F | external validation / experiment harness | T02,T14; shared smoke | not run | planned |
+| O01 Definition-level truth | Defs. 1.1-1.3 | reference: direct_compact, direct_maximal_compact, direct_lhcds | T01,T02; unchanged 74 pytest | [M1](../evidence/m1/REPORT.md); `1a4829a9348dae299ae074717928909598b11af6`; [M3 regression](../evidence/m3/accepted/commands.json) | implementation-tested (independent reference scope) |
+| O02 Hierarchy/leaves | 1.8-1.10 | reference check_case; solve component extraction | T02,T11,T14 | [M3](../evidence/m3/REPORT.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O03 Largest F / independent chain | 1.11-1.14 | exhaustive_F, cardinality_line_chain; global_chain_point, chain_interval | T03,T09,T10 | [M1](../evidence/m1/REPORT.md); [M3](../evidence/m3/REPORT.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O04 Exact separator | 1.15; Eq. 11-12 | ChainInterval::lambda; ClosureOracle::separator_request, separate | T06,T10 | [M3 all-pair/trace evidence](../evidence/m3/fixture_manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O05 Restricted/global boundary | 1.19 proof + audit A | largest_restricted, full_graph_request, global_F; immutable CertifiedGlobalRequest and chain points | T08,T09,T10; R01 | [M2](../evidence/m2/REPORT.md), `0a4aef8`; [M3 move/certificate review](../evidence/m3/REVIEW.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O06 Exact network / largest ties | Eq. 15; 1.19 | aggregate_footprints; oracle execute; Dinic<Capacity> | T06,T07,T09 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite exact-network scope) |
+| O07 Terminal extraction | 1.16 | solve; Graph::induced_components; Membership | T11; core T17 remains pending | [M3 named traces](../evidence/m3/accepted/build-smoke/named_traces.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O08 Fixed-k order / verification-free | 1.17; top-k convention | solve; solution_json; reviewed production call path | T12,T15,T16 | [M3](../evidence/m3/REPORT.md), [review](../evidence/m3/REVIEW.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O09 Query / network bounds | 1.18; 1.20 | SolveStats::record; solve; QueryStats; largest_restricted | T13; per-query network counts | [M3 independent 2r-1 checks](../evidence/m3/fixture_manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O10 Safe core search bounds | 1.21-1.22 | planned peel_core, certified_core_bounds | T17 | not implemented/run; M4 | planned |
+| O11 Exact numeric refinement | 1.19-1.20; D005 | Fraction; checked_add/sub/mul; largest_restricted; Dinic | T05,T07,T16 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 real auto fallback regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite numeric scope) |
+| O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main | T02,T14,T15; M5 shared smoke pending | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
 
 ## Evidence record
 
@@ -108,11 +108,11 @@ implementation validation; they do not prove O01-O03 or the mathematical theorem
 
 The owner committed M1 as `1a4829a9348dae299ae074717928909598b11af6` before M2.
 The dated M1 delivery paragraph above describes its former uncommitted state;
-O01's reference implementation now has the required commit. M2 remains a new
-uncommitted working tree on that base, identified by [source hashes](../evidence/m2/source_hashes.json)
-and [changed files](../evidence/m2/files_changed.json). Consequently the formal
-`implementation-tested` table label for new M2 implementation is withheld pending
-its commit; this does not mean its tests were unrun. No theorem claim follows.
+O01's reference implementation now has the required commit. M2 was delivered
+uncommitted and then committed by the owner as
+`0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6` before M3. Its [source hashes](../evidence/m2/source_hashes.json)
+and [changed files](../evidence/m2/files_changed.json) retain delivery provenance;
+the formal M2 commit gate is now met. No theorem claim follows.
 
 | Task / obligations | Delivered symbols | Executed evidence |
 |---|---|---|
@@ -153,9 +153,56 @@ then built/tested on all profiles, including oracle smoke. Original failed I/O
 checks and the passing regression are retained, not overwritten. See the
 [M2 report](../evidence/m2/REPORT.md) for precise sequencing and limits.
 
-P02.1–P03.5 are complete at M2 scope. All M3+ tasks, chain/core certificates,
+P02.1–P03.5 were complete at M2 delivery. At that time all M3+ tasks, chain/core certificates,
 solver timing/hash/fixed-k output, end-to-end solver verification, baselines,
-benchmarks, extended campaigns and TSan remain unrun/unimplemented. The oracle
+benchmarks, extended campaigns and TSan were unrun/unimplemented at M2 delivery. The oracle
 failure minimizer's mismatch path was not triggered by this successful campaign.
 Papers, accepted decisions, theory contracts and all M1 reference bytes remain
 unchanged. No external baseline technique was used (D012).
+
+
+## Executed M3 solver/correctness evidence (2026-09-29)
+
+M3 is based on the owner's M2 commit `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`.
+P04.1–P04.4, P05.1–P05.3 and P06.1 have executed evidence; P13.1's review is
+complete with one resolved engineering finding (R01, moved certificate payload).
+M3_FREEZE_PENDING
+Implementation commit: M3_COMMIT_PENDING.
+
+[Report](../evidence/m3/REPORT.md) maps every task to actual symbols, commands,
+environment, graph/seed records and limits. [Acceptance command manifest](../evidence/m3/accepted/commands.json)
+contains 35 successful commands after the R01 fix; each log is hashed.
+Four profiles build and pass 9/9 CTest each; standalone pytest reports 74 passed.
+The production-only Release target builds without test/probe/Python dependencies
+and executes a separately definition-checked CLI solve.
+
+Both Debug and ASan/UBSan execute the same complete M3 release tiers:
+- Exhaustive-small: 2,198 graph/h cases / 1,099 labelled graphs n=1..5;
+  4,140 independent chain pairs, 37,825 explicit oracle requests, 38,480 solver
+  runs (including auto/forced-BigInt repeats), 14,844 distinct fixed-k prefix checks.
+- Seeded: seed 20260929, 1,000 distinct graph/h cases / 860 graphs n=6..8;
+  200 per family, 16,610 explicit oracle requests, 19,992 solver runs,
+  7,956 fixed-k prefix checks, 20 isolate and 20 disjoint-union cases.
+- Higher-h: 64 graph/h cases / 60 graphs; 985 explicit oracle requests,
+  1,168 solver runs and 456 prefix checks; includes h=4,5 and h>n.
+- Smoke: 30 named/generated graph/h cases, every prefix, 30 isolate and 30
+  disjoint-union cases; retained split/tie/non-emitting terminal traces.
+
+Every base graph is also relabeled with order-reversing arbitrary-size original
+IDs; complete truth is transformed and re-sorted before testing its prefixes.
+Each full run checks 2r-1 against an independently constructed chain and verifies
+logical/mincut counters separately. Both builds also rerun the complete M2 oracle
+release tiers, preserving actual automatic arbitrary-precision execution.
+[Fixture manifest](../evidence/m3/fixture_manifest.json) retains per-tier counts,
+seeds, inputs, output/trace streams and their hashes. Seven Debug/sanitizer pairs
+have byte-identical case files and decompressed result streams.
+
+[Review](../evidence/m3/REVIEW.md) records exact code refinement and the production
+call path without a candidate verifier. [Preservation](../evidence/m3/preservation_final.json)
+confirms unchanged papers, accepted decisions/theory contracts and M1 reference.
+No new proof/spec conflict or unresolved implementation finding remains in the
+executed scope. The review was a separate pass by the implementing assistant,
+not independent human sign-off. Finite test agreement does not prove the theorem.
+O10/T17 and every M4/M5 task stay open. O12 evidence covers M3 definition checking
+and manifest/timing separation, not baseline agreement or benchmark conclusions.
+Extended n<=12 campaigns, GCC/Linux, OS OOM pressure and TSan remain unrun.

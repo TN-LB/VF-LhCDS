@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "accepted_commands": 35,
+  "commands_sha256": "172086f74ffdf49dda96027b55e86ad80ad8a9ce11dfcf4e22b890fc6a6c7aed",
+  "environment_sha256": "2f394f36722902757b1ff086b79209c39694d5316b912f9c23a43aafbf84d045",
+  "accepted_source_files": 45,
+  "campaign_directories": 14,
+  "identical_debug_sanitizer_pairs": [
+    [
+      "build-exhaustive-small",
+      "build-sanitize-exhaustive-small"
+    ],
+    [
+      "build-higher-h",
+      "build-sanitize-higher-h"
+    ],
+    [
+      "build-m2-exhaustive-small",
+      "build-sanitize-m2-exhaustive-small"
+    ],
+    [
+      "build-m2-higher-h",
+      "build-sanitize-m2-higher-h"
+    ],
+    [
+      "build-m2-seeded",
+      "build-sanitize-m2-seeded"
+    ],
+    [
+      "build-seeded",
+      "build-sanitize-seeded"
+    ],
+    [
+      "build-smoke",
+      "build-sanitize-smoke"
+    ]
+  ],
+  "ctest": {
+    "build": {
+      "ctest": "9/9 passed",
+      "log": "03.stdout"
+    },
+    "build-sanitize": {
+      "ctest": "9/9 passed",
+      "log": "13.stdout"
+    },
+    "build-release": {
+      "ctest": "9/9 passed",
+      "log": "23.stdout"
+    },
+    "build-relwithdebinfo": {
+      "ctest": "9/9 passed",
+      "log": "26.stdout"
+    }
+  },
+  "pytest": "74 passed",
+  "protected_files_checked": 44,
+  "resolved_review_finding": "R01 before exit 1 / after exit 0",
+  "evidence_scope": "finite implementation validation; no theorem or performance proof"
+}

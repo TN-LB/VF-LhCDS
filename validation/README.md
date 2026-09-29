@@ -10,3 +10,10 @@ closure network, recursive extraction or external baseline. M2 adds `oracle_camp
 uses the unchanged reference for expected counts, footprints and largest sets.
 It retains exhaustive-small, seeded and higher-h results independently of timings.
 Production solver output validation and end-to-end P05.1 remain M3 work.
+
+
+M3 `solver_campaign.py` compares complete and fixed-k production output with
+independent direct definitions and chain points, saving cases/results/traces and
+original/minimized failures. `run_solver.py` measures child-process end-to-end time
+and keeps optional direct-definition validation outside that measurement. These
+are correctness/evidence tools; benchmark fairness and baseline adapters remain M5.

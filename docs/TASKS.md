@@ -1,6 +1,6 @@
 # Task Tracker
 
-Revision: 2026-09-09. `[ ]` means implementation evidence is still outstanding.
+Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
@@ -25,7 +25,7 @@ M0 gate met on 2026-09-09. Later milestone statuses are recorded below.
 Gate: T01-T03 fixtures and the declared truth tier pass; no claim of production correctness.
 M1 gate met on 2026-09-17: 74 pytest tests; 2,198 exhaustive-small graph/h cases
 (1,099 distinct graphs), plus 100 seeded graph/h cases (96 distinct graphs).
-This is reference-only evidence. M2 execution is recorded below; M3+ remains open.
+This is reference-only evidence. Later milestone execution is recorded below.
 
 ## M2 - Exact primitives (prompts 02, 03; needs M0 and M1 for integration)
 
@@ -42,23 +42,28 @@ Gate: true global comparisons only use certified bounds; fallback runs rather th
 M2 gate met on 2026-09-22 at P02.1–P03.5 scope. Debug, ASan+UBSan, Release and
 RelWithDebInfo each pass 5/5 CTest; independent pytest remains 74 passed. Both Debug
 and sanitizer oracle campaigns pass. Full-graph certificates are implemented;
-chain/core certificate construction belongs to M3/M4. No M3+ task is completed.
-Sources are uncommitted on top of `1a4829a`; see source hashes and command manifests
-in the M2 evidence directory. Formal ledger labels still require the new commit.
+Chain/core certificate construction belongs to M3/M4. The owner subsequently
+committed M2 as `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; its source/command
+manifests remain in the M2 evidence directory. M3 execution follows below.
 
 ## M3 - Solver and correctness freeze (prompts 04-06, 13; needs M1+M2)
 
-- [ ] P04.1 Immutable principal-chain endpoints and exact outer lambda; separator invariant T10.
-- [ ] P04.2 Left-first traversal, original-endpoint terminal test, ordinary-edge leaf extraction T11.
-- [ ] P04.3 Fixed-k lexicographic ordering and stop; reject k=0; support k>q and full mode, T12.
-- [ ] P04.4 Full run counts: exactly `2r-1` logical interval queries; mincut count reported separately T13.
-- [ ] P05.1 Exhaustive/seeded differential tiers, saved failures and deterministic minimizer T14.
-- [ ] P05.2 Tie-aware relabeling, isolates, disjoint-union and input-order properties T15.
-- [ ] P05.3 ASan/UBSan and numeric boundary suite; no candidate verifier in solver call path T16.
-- [ ] P06.1 Minimal canonical CLI/JSON output, timing boundaries, manifests, stable semantic hash.
-- [ ] P13.1 Record code symbols + test evidence in traceability and tag the unoptimized correctness release.
+- [x] P04.1 Immutable principal-chain endpoints and exact outer lambda; separator invariant T10. [Evidence](../evidence/m3/REPORT.md): sealed same-owner points, all 4,140 exhaustive-small chain pairs, move-validity regression.
+- [x] P04.2 Left-first traversal, original-endpoint terminal test, ordinary-edge leaf extraction T11. [Named traces](../evidence/m3/accepted/build-smoke/named_traces.json): K4/pendant non-emitting layer, bridged triangles and outer breakpoint.
+- [x] P04.3 Fixed-k lexicographic ordering and stop; reject k=0; support k>q and full mode, T12. [Evidence](../evidence/m3/REPORT.md): every k=1..q+2 versus direct truth, huge IDs/k and no eager right query.
+- [x] P04.4 Full run counts: exactly `2r-1` logical interval queries; mincut count reported separately T13. [Campaign manifests](../evidence/m3/fixture_manifest.json): independent chain and every complete trace/counter checked.
+- [x] P05.1 Exhaustive/seeded differential tiers, saved failures and deterministic minimizer T14. [Evidence](../evidence/m3/REPORT.md): both Debug and ASan/UBSan complete release tiers; reducer tested with a labeled synthetic faulty candidate; no solver mismatch occurred to reduce.
+- [x] P05.2 Tie-aware relabeling, isolates, disjoint-union and input-order properties T15. [Evidence](../evidence/m3/REPORT.md): complete truth relabeled/re-sorted, all prefixes; named and first 20 seeded isolate/disjoint cases; CLI input reorder.
+- [x] P05.3 ASan/UBSan and numeric boundary suite; no candidate verifier in solver call path T16. [Review](../evidence/m3/REVIEW.md), [actual commands](../evidence/m3/accepted/commands.json): 9/9 CTest in four profiles, real arbitrary-precision regression, production-only build.
+- [x] P06.1 Minimal canonical CLI/JSON output, timing boundaries, manifests, stable semantic hash. [Contract implementation](M3_IMPLEMENTATION.md), [production CLI run](../evidence/m3/accepted/cli-definition-run/manifest.json): 31 direct + 2 runner CLI checks per profile; external validation separately timed.
+- [ ] P13.1 Record code symbols + test evidence in traceability and tag the unoptimized correctness release. [Review](../evidence/m3/REVIEW.md) completed with R01 resolved; local freeze pending.
 
-Gate: no known semantic mismatch or silent overflow; no streaming/tie-inclusive/baseline requirement.
+Gate: no known semantic mismatch or silent overflow in the executed scope; no streaming/tie-inclusive/baseline requirement.
+Implementation/test gate passed 2026-09-29: all 35 acceptance commands exit 0,
+2,198 exhaustive-small + 1,000 seeded + 64 higher-h base graph/h cases per build
+(tiers overlap), 74 unchanged reference tests. M3_FREEZE_PENDING
+Implementation commit: M3_COMMIT_PENDING. [Report](../evidence/m3/REPORT.md).
+M4/M5 remain open; finite agreement is implementation evidence, not a theorem proof.
 
 ## M4 - Optional optimization (prompts 07, 08; needs M3)
 

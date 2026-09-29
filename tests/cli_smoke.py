@@ -24,7 +24,7 @@ def main():
     for command in ["--help", "help", "print-build-info"]:
         calls += 1
         result = subprocess.run([executable, command], capture_output=True, text=True)
-        assert result.returncode == 0 and "M2" in result.stdout and not result.stderr
+        assert result.returncode == 0 and "M3" in result.stdout and not result.stderr
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
         graph, x, y, output = (root / name for name in ["graph", "x", "y", "output"])
@@ -63,7 +63,7 @@ def main():
             run(args, 2, "invalid_argument")
         for value in ["1/0", "-1/2", "1.0", "1", "01/2", "+1/2", "1/02", "1/2/3"]:
             run(base[:-1] + [value], 2, "invalid_argument")
-        run(["solve", "--graph", "missing", "--output", output], 8, "not_implemented")
+        run(["solve", "--graph", "missing", "--output", output], 2, "invalid_argument")
         for suffix in [["--output", graph], ["--x", x, "--y", y, "--output", y]]:
             run(base + suffix, 2, "invalid_argument")
         symlink, hardlink = root / "symlink", root / "hardlink"
@@ -98,7 +98,7 @@ def main():
         graph.write_text(f"vflhcds-graph 1 n 2 v {2**200} v {-2**200} m 1 e {2**200} {-2**200}")
         exact, _ = run(base)
         assert json.loads(exact.stdout)["vertices"] == [-2**200, 2**200]
-    print(f"M2 CLI: {calls} invocations passed; canonical JSON/IDs/statuses, real fallback, aliases and atomic output")
+    print(f"M2 oracle/IO regressions on M3 CLI: {calls} invocations passed; canonical JSON/IDs/statuses, real fallback, aliases and atomic output")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "utc": "2026-09-29T08:08:33.432099+00:00",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-production/vflhcds",
+    "solve",
+    "--graph",
+    "reference/fixtures/bridged_triangles.graph",
+    "--h",
+    "3",
+    "--all"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "executable_sha256": "e9d00a792e5decbd34f7800a0eabedd78f0b4e99d9ac18f75f85112941db573e",
+  "validation": {
+    "level": "definition_checked",
+    "passed": true,
+    "expected": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 6,
+        "clique_count": "2",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "actual": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 6,
+        "clique_count": "2",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "evidence_type": "single process run; no performance comparison",
+  "input_file_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+  "graph_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+  "native_exit_code": 0,
+  "T_e2e": 0.20176112465560436,
+  "native_status": {
+    "schema_version": 1,
+    "status": "completed",
+    "complete": true,
+    "output_count": 1,
+    "semantic_sha256": "feedfaf525b40551fd02ca870fe7de038332999c61b5c74e7d66df7187d7766c",
+    "termination": "exhausted",
+    "counters": {
+      "logical_interval_queries": 1,
+      "mincut_calls": 1,
+      "cliques_scanned": 2,
+      "cliques_enumerated": 2,
+      "queries": [
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 6,
+          "oracle_interval_size": 6,
+          "cliques_scanned": 2,
+          "unique_footprints": 2,
+          "forward_nodes": 10,
+          "forward_arcs": 14,
+          "residual_arcs": 28,
+          "capacity_bit_length": 7,
+          "capacity_backend": "uint128"
+        }
+      ]
+    },
+    "timing": {
+      "T_e2e": null,
+      "T_postload": 0.000128208,
+      "T_core": 0.000125333
+    }
+  },
+  "status": "completed",
+  "complete": true,
+  "T_external_validation": 0.0009932918474078178,
+  "sha256": {
+    "stdout.jsonl": "c1f60a9ff84304207745a783071b21056f3b86860878a621defdd2f5d1854809",
+    "stderr.jsonl": "89f2cccedc8100356242bc68e8f73b8acaa64e18ee9c3c1db1dbd71e87744095"
+  }
+}
