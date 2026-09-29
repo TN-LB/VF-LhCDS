@@ -8,17 +8,17 @@ A code symbol, test command, evidence path and commit are needed before marking
 | Obligation | Exact source | Planned owner / symbol | Tests | Evidence / commit | Status |
 |---|---|---|---|---|---|
 | O01 Definition-level truth | Defs. 1.1-1.3 | reference: direct_compact, direct_maximal_compact, direct_lhcds | T01,T02; unchanged 74 pytest | [M1](../evidence/m1/REPORT.md); `1a4829a9348dae299ae074717928909598b11af6`; [M3 regression](../evidence/m3/accepted/commands.json) | implementation-tested (independent reference scope) |
-| O02 Hierarchy/leaves | 1.8-1.10 | reference check_case; solve component extraction | T02,T11,T14 | [M3](../evidence/m3/REPORT.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
-| O03 Largest F / independent chain | 1.11-1.14 | exhaustive_F, cardinality_line_chain; global_chain_point, chain_interval | T03,T09,T10 | [M1](../evidence/m1/REPORT.md); [M3](../evidence/m3/REPORT.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
-| O04 Exact separator | 1.15; Eq. 11-12 | ChainInterval::lambda; ClosureOracle::separator_request, separate | T06,T10 | [M3 all-pair/trace evidence](../evidence/m3/fixture_manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
-| O05 Restricted/global boundary | 1.19 proof + audit A | largest_restricted, full_graph_request, global_F; immutable CertifiedGlobalRequest and chain points | T08,T09,T10; R01 | [M2](../evidence/m2/REPORT.md), `0a4aef8`; [M3 move/certificate review](../evidence/m3/REVIEW.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O02 Hierarchy/leaves | 1.8-1.10 | reference check_case; solve component extraction | T02,T11,T14 | [M3](../evidence/m3/REPORT.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O03 Largest F / independent chain | 1.11-1.14 | exhaustive_F, cardinality_line_chain; global_chain_point, chain_interval | T03,T09,T10 | [M1](../evidence/m1/REPORT.md); [M3](../evidence/m3/REPORT.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O04 Exact separator | 1.15; Eq. 11-12 | ChainInterval::lambda; ClosureOracle::separator_request, separate | T06,T10 | [M3 all-pair/trace evidence](../evidence/m3/fixture_manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O05 Restricted/global boundary | 1.19 proof + audit A | largest_restricted, full_graph_request, global_F; immutable CertifiedGlobalRequest and chain points | T08,T09,T10; R01 | [M2](../evidence/m2/REPORT.md), `0a4aef8`; [M3 move/certificate review](../evidence/m3/REVIEW.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O06 Exact network / largest ties | Eq. 15; 1.19 | aggregate_footprints; oracle execute; Dinic<Capacity> | T06,T07,T09 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite exact-network scope) |
-| O07 Terminal extraction | 1.16 | solve; Graph::induced_components; Membership | T11; core T17 remains pending | [M3 named traces](../evidence/m3/accepted/build-smoke/named_traces.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
-| O08 Fixed-k order / verification-free | 1.17; top-k convention | solve; solution_json; reviewed production call path | T12,T15,T16 | [M3](../evidence/m3/REPORT.md), [review](../evidence/m3/REVIEW.md); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
-| O09 Query / network bounds | 1.18; 1.20 | SolveStats::record; solve; QueryStats; largest_restricted | T13; per-query network counts | [M3 independent 2r-1 checks](../evidence/m3/fixture_manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O07 Terminal extraction | 1.16 | solve; Graph::induced_components; Membership | T11; core T17 remains pending | [M3 named traces](../evidence/m3/accepted/build-smoke/named_traces.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O08 Fixed-k order / verification-free | 1.17; top-k convention | solve; solution_json; reviewed production call path | T12,T15,T16 | [M3](../evidence/m3/REPORT.md), [review](../evidence/m3/REVIEW.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O09 Query / network bounds | 1.18; 1.20 | SolveStats::record; solve; QueryStats; largest_restricted | T13; per-query network counts | [M3 independent 2r-1 checks](../evidence/m3/fixture_manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O10 Safe core search bounds | 1.21-1.22 | planned peel_core, certified_core_bounds | T17 | not implemented/run; M4 | planned |
 | O11 Exact numeric refinement | 1.19-1.20; D005 | Fraction; checked_add/sub/mul; largest_restricted; Dinic | T05,T07,T16 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 real auto fallback regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite numeric scope) |
-| O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main | T02,T14,T15; M5 shared smoke pending | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); M3_COMMIT_PENDING | planned (M3 tests passed; commit gate pending) |
+| O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main | T02,T14,T15; M5 shared smoke pending | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 
 ## Evidence record
 
@@ -164,10 +164,10 @@ unchanged. No external baseline technique was used (D012).
 ## Executed M3 solver/correctness evidence (2026-09-29)
 
 M3 is based on the owner's M2 commit `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`.
-P04.1–P04.4, P05.1–P05.3 and P06.1 have executed evidence; P13.1's review is
+P04.1–P04.4, P05.1–P05.3 and P06.1 have executed evidence; P13.1's review and local freeze are
 complete with one resolved engineering finding (R01, moved certificate payload).
-M3_FREEZE_PENDING
-Implementation commit: M3_COMMIT_PENDING.
+M3/P13.1 complete: local annotated tag `v0.1.0-m3-correctness` freezes the tested implementation.
+Implementation commit: `23a5b3415cf3ae053e55a01b219ca074ffe6fd67`.
 
 [Report](../evidence/m3/REPORT.md) maps every task to actual symbols, commands,
 environment, graph/seed records and limits. [Acceptance command manifest](../evidence/m3/accepted/commands.json)

@@ -1,8 +1,8 @@
 # M3 exact solver and correctness freeze — 2026-09-29
 
 P04.1–P04.4, P05.1–P05.3 and P06.1 pass their executed implementation gates.
-P13.1 code/evidence review is complete; R01 is resolved. M3_FREEZE_PENDING
-Implementation commit: M3_COMMIT_PENDING.
+P13.1 code/evidence review is complete; R01 is resolved. M3/P13.1 complete: local annotated tag `v0.1.0-m3-correctness` freezes the tested implementation.
+Implementation commit: `23a5b3415cf3ae053e55a01b219ca074ffe6fd67`.
 Base: owner's M2 commit `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`.
 
 No new proof/specification conflict was found. Four papers, accepted decisions

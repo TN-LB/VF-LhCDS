@@ -67,13 +67,13 @@
   },
   "docs/CLAIM_TRACEABILITY.md": {
     "before_sha256": "40436b5506d3c880b543ab934749d7a702c671c3dbb0e9a02bd22179ca0df3cd",
-    "after_sha256": "0e584ce94616b52a1afac9228afb5124226c5488aebfa53efac1ad2f2abeacff",
+    "after_sha256": "f2e24a36192ee16b787211254f7680f1f02cd5ae5136a6667643df3cb90163b3",
     "unchanged": false,
     "allowed_evidence_document": true
   },
   "docs/TASKS.md": {
     "before_sha256": "206f70376f59de51ade1b3de01607cb6ad9eb381947f49be615744a65fdc1c51",
-    "after_sha256": "4788eca485ada19f267fc547a4c94a3df7e73878fe7e9b7e2b44f0e81d6bd505",
+    "after_sha256": "1bad358eec46cb7c55e14dc19d904815fdbf5437900b9251c0e3a1ccbd7641fe",
     "unchanged": false,
     "allowed_evidence_document": true
   },

@@ -56,13 +56,13 @@ manifests remain in the M2 evidence directory. M3 execution follows below.
 - [x] P05.2 Tie-aware relabeling, isolates, disjoint-union and input-order properties T15. [Evidence](../evidence/m3/REPORT.md): complete truth relabeled/re-sorted, all prefixes; named and first 20 seeded isolate/disjoint cases; CLI input reorder.
 - [x] P05.3 ASan/UBSan and numeric boundary suite; no candidate verifier in solver call path T16. [Review](../evidence/m3/REVIEW.md), [actual commands](../evidence/m3/accepted/commands.json): 9/9 CTest in four profiles, real arbitrary-precision regression, production-only build.
 - [x] P06.1 Minimal canonical CLI/JSON output, timing boundaries, manifests, stable semantic hash. [Contract implementation](M3_IMPLEMENTATION.md), [production CLI run](../evidence/m3/accepted/cli-definition-run/manifest.json): 31 direct + 2 runner CLI checks per profile; external validation separately timed.
-- [ ] P13.1 Record code symbols + test evidence in traceability and tag the unoptimized correctness release. [Review](../evidence/m3/REVIEW.md) completed with R01 resolved; local freeze pending.
+- [x] P13.1 Record code symbols + test evidence in traceability and tag the unoptimized correctness release. [Review](../evidence/m3/REVIEW.md) completed with R01 resolved; local annotated freeze recorded below.
 
 Gate: no known semantic mismatch or silent overflow in the executed scope; no streaming/tie-inclusive/baseline requirement.
 Implementation/test gate passed 2026-09-29: all 35 acceptance commands exit 0,
 2,198 exhaustive-small + 1,000 seeded + 64 higher-h base graph/h cases per build
-(tiers overlap), 74 unchanged reference tests. M3_FREEZE_PENDING
-Implementation commit: M3_COMMIT_PENDING. [Report](../evidence/m3/REPORT.md).
+(tiers overlap), 74 unchanged reference tests. M3/P13.1 complete: local annotated tag `v0.1.0-m3-correctness` freezes the tested implementation.
+Implementation commit: `23a5b3415cf3ae053e55a01b219ca074ffe6fd67`. [Report](../evidence/m3/REPORT.md).
 M4/M5 remain open; finite agreement is implementation evidence, not a theorem proof.
 
 ## M4 - Optional optimization (prompts 07, 08; needs M3)
