@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iterator>
 #include <map>
+#include <chrono>
 
 namespace vflhcds {
 namespace {
@@ -44,16 +45,26 @@ template<class Capacity> VertexSet execute(const Graph& graph, const RestrictedR
     return result;
 }
 }  // namespace
-Footprints aggregate_footprints(const MaterializedCliques& index, const RestrictedRequest& request) {
+Footprints aggregate_footprints(const MaterializedCliques& index, const RestrictedRequest& request, const FootprintMode mode) {
     validate(index.graph(), request);
     Footprints result;
     std::map<VertexSet, BigInt> weights;
+    std::optional<Membership> lower, upper;
+    if (mode == FootprintMode::Membership) {
+        lower.emplace(index.graph().size()); upper.emplace(index.graph().size());
+        lower->assign(request.x); upper->assign(request.y_oracle);
+    }
     for (const auto& clique : index.cliques()) {
         ++result.scanned;
-        if (!subset(clique, request.y_oracle)) continue;
         VertexSet residual;
-        std::set_difference(clique.begin(), clique.end(), request.x.begin(), request.x.end(),
-                            std::back_inserter(residual));
+        if (mode == FootprintMode::Membership) {
+            if (!std::all_of(clique.begin(), clique.end(), [&](const VertexId v) { return upper->contains(v); })) continue;
+            for (const auto v : clique) if (!lower->contains(v)) residual.push_back(v);
+        } else {
+            if (!subset(clique, request.y_oracle)) continue;
+            std::set_difference(clique.begin(), clique.end(), request.x.begin(), request.x.end(),
+                                std::back_inserter(residual));
+        }
         if (!residual.empty()) { ++weights[std::move(residual)]; ++result.total_weight; }
     }
     for (auto& item : weights) result.records.push_back({item.first, std::move(item.second)});
@@ -72,8 +83,9 @@ ChainInterval ClosureOracle::chain_interval(const ChainPoint& x, const ChainPoin
         || !subset(x.vertices_, y.vertices_)) throw std::invalid_argument("invalid certified chain endpoints");
     return ChainInterval(x, y);
 }
-ChainPoint ClosureOracle::global_chain_point(Fraction lambda, const CapacityPolicy policy, QueryStats* progress) const {
-    auto result = global_F(full_graph_request(std::move(lambda)), policy, progress);
+ChainPoint ClosureOracle::global_chain_point(Fraction lambda, const CapacityPolicy policy, QueryStats* progress,
+                                           const OracleOptions options) const {
+    auto result = global_F(full_graph_request(std::move(lambda)), policy, progress, options);
     const auto count = index_.count(result.vertices);
     return ChainPoint(this, std::move(result.vertices), count);
 }
@@ -82,8 +94,9 @@ CertifiedGlobalRequest ClosureOracle::separator_request(const ChainInterval& int
         throw std::invalid_argument("chain interval belongs to another oracle");
     return CertifiedGlobalRequest(this, {interval.x_.vertices_, interval.y_.vertices_, interval.lambda()});
 }
-ChainPoint ClosureOracle::separate(const ChainInterval& interval, const CapacityPolicy policy, QueryStats* progress) const {
-    auto result = global_F(separator_request(interval), policy, progress);
+ChainPoint ClosureOracle::separate(const ChainInterval& interval, const CapacityPolicy policy, QueryStats* progress,
+                                 const OracleOptions options) const {
+    auto result = global_F(separator_request(interval), policy, progress, options);
     if (result.vertices == interval.x_.vertices_ || !subset(interval.x_.vertices_, result.vertices)
         || !subset(result.vertices, interval.y_.vertices_)) throw std::logic_error("separator progress invariant");
     if (result.vertices == interval.y_.vertices_) return interval.y_;
@@ -91,24 +104,56 @@ ChainPoint ClosureOracle::separate(const ChainInterval& interval, const Capacity
     return ChainPoint(this, std::move(result.vertices), count);
 }
 OracleResult ClosureOracle::global_F(const CertifiedGlobalRequest& request, const CapacityPolicy policy,
-                                   QueryStats* progress) const {
+                                   QueryStats* progress, const OracleOptions options) const {
+    QueryStats local_stats;
+    QueryStats& stats = progress ? *progress : local_stats;
+    stats = QueryStats{};
     if (request.owner_ != this) throw std::invalid_argument("certificate belongs to another oracle");
-    auto result = largest_restricted(request.request_, policy, progress);
+    const auto& original = request.request_;
+    stats.original_interval_size = original.y_oracle.size() - original.x.size();
+    RestrictedRequest reduced = original;
+    if (options.core == CoreMode::Safe && original.lambda.numerator() > 0) {
+        using Clock = std::chrono::steady_clock;
+        const auto start = Clock::now();
+        stats.core_threshold = (original.lambda.numerator() + original.lambda.denominator() - 1)
+                               / original.lambda.denominator();
+        stats.core.emplace();
+        try {
+            const auto core = peel_core(index_, *stats.core_threshold, &*stats.core);
+            reduced.y_oracle.clear();
+            std::set_intersection(original.y_oracle.begin(), original.y_oracle.end(), core.begin(), core.end(),
+                                  std::back_inserter(reduced.y_oracle));
+            // Containment follows the sealed parent query and Lemma 1.22;
+            // this assertion checks the implementation, it does not certify arbitrary bounds.
+            if (!subset(original.x, reduced.y_oracle)) throw std::logic_error("core containment invariant");
+        } catch (...) {
+            stats.core_reduction_seconds = std::chrono::duration<double>(Clock::now() - start).count();
+            throw;
+        }
+        stats.core_reduction_seconds = std::chrono::duration<double>(Clock::now() - start).count();
+    }
+    auto result = restricted_impl(reduced, policy, stats, options.footprints);
     result.global = true; return result;
 }
 OracleResult ClosureOracle::largest_restricted(const RestrictedRequest& request, const CapacityPolicy policy,
-                                              QueryStats* progress) const {
+                                              QueryStats* progress, const FootprintMode mode) const {
     QueryStats local_stats;
     QueryStats& stats = progress ? *progress : local_stats;
     stats = QueryStats{};
     validate(index_.graph(), request);
+    stats.original_interval_size = request.y_oracle.size() - request.x.size();
+    return restricted_impl(request, policy, stats, mode);
+}
+OracleResult ClosureOracle::restricted_impl(const RestrictedRequest& request, const CapacityPolicy policy,
+                                          QueryStats& stats, const FootprintMode mode) const {
+    validate(index_.graph(), request);
     VertexSet interval;
     std::set_difference(request.y_oracle.begin(), request.y_oracle.end(), request.x.begin(), request.x.end(),
                         std::back_inserter(interval));
-    stats.original_interval_size = interval.size(); stats.oracle_interval_size = interval.size();
+    stats.oracle_interval_size = interval.size();
     if (interval.empty()) return {request.x, false, stats};
     if (request.lambda.numerator() == 0) return {request.y_oracle, false, stats};
-    const auto footprints = aggregate_footprints(index_, request);
+    const auto footprints = aggregate_footprints(index_, request, mode);
     stats.cliques_scanned = footprints.scanned; stats.unique_footprints = footprints.records.size();
     const BigInt n = interval.size(), L = n + 1;
     const BigInt source_factor = L * request.lambda.denominator();

@@ -1,0 +1,1296 @@
+{
+  "source": "accepted/build-smoke",
+  "case": {
+    "kind": "case",
+    "vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "h": 2,
+    "metadata": {
+      "family": "named",
+      "name": "core-non-chain-pendant"
+    },
+    "variant": "original",
+    "case_id": 120,
+    "graph_sha256": "eb90867e9510783a9b0b830ff17ea3c3733c2f817a43fa2f96c359ac7735a89d",
+    "truth": [
+      {
+        "rank": 1,
+        "h": 2,
+        "vertex_count": 4,
+        "clique_count": "6",
+        "density_num": "3",
+        "density_den": "2",
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "rank": 2,
+        "h": 2,
+        "vertex_count": 4,
+        "clique_count": "4",
+        "density_num": "1",
+        "density_den": "1",
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "chain": [
+      [],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ]
+  },
+  "records": [
+    {
+      "case_id": 120,
+      "command": "core 2",
+      "core": "peeling",
+      "footprints": "none",
+      "actual": {
+        "vertices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "vertices_removed": 1,
+        "cliques_invalidated": 1,
+        "incidence_visits": 1,
+        "degree_decrements": 1
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto all",
+      "core": "off",
+      "footprints": "sorted",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "rank": 2,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "4",
+            "density_num": "1",
+            "density_den": "1",
+            "vertices": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "termination": "exhausted",
+        "semantic_sha256": "de708a6f4e44bd60730224e7d86343b4b84571b40148d59507fa3b59e242c924",
+        "stats": {
+          "logical_interval_queries": 3,
+          "mincut_calls": 3,
+          "cliques_scanned": 30,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 8,
+              "cliques_scanned": 10,
+              "unique_footprints": 10,
+              "forward_nodes": 20,
+              "forward_arcs": 38,
+              "residual_arcs": 76,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 4,
+              "forward_nodes": 10,
+              "forward_arcs": 16,
+              "residual_arcs": 32,
+              "capacity_bit_length": 6,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          },
+          {
+            "x": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "mu_x": "6",
+            "mu_y": "10",
+            "lambda": "1/1"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto all",
+      "core": "off",
+      "footprints": "membership",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "rank": 2,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "4",
+            "density_num": "1",
+            "density_den": "1",
+            "vertices": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "termination": "exhausted",
+        "semantic_sha256": "de708a6f4e44bd60730224e7d86343b4b84571b40148d59507fa3b59e242c924",
+        "stats": {
+          "logical_interval_queries": 3,
+          "mincut_calls": 3,
+          "cliques_scanned": 30,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 8,
+              "cliques_scanned": 10,
+              "unique_footprints": 10,
+              "forward_nodes": 20,
+              "forward_arcs": 38,
+              "residual_arcs": 76,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 4,
+              "forward_nodes": 10,
+              "forward_arcs": 16,
+              "residual_arcs": 32,
+              "capacity_bit_length": 6,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          },
+          {
+            "x": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "mu_x": "6",
+            "mu_y": "10",
+            "lambda": "1/1"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto all",
+      "core": "safe",
+      "footprints": "sorted",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "rank": 2,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "4",
+            "density_num": "1",
+            "density_den": "1",
+            "vertices": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "termination": "exhausted",
+        "semantic_sha256": "de708a6f4e44bd60730224e7d86343b4b84571b40148d59507fa3b59e242c924",
+        "stats": {
+          "logical_interval_queries": 3,
+          "mincut_calls": 3,
+          "cliques_scanned": 30,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 7,
+              "cliques_scanned": 10,
+              "unique_footprints": 9,
+              "forward_nodes": 18,
+              "forward_arcs": 34,
+              "residual_arcs": 68,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 4.291e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 3.584e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 4,
+              "forward_nodes": 10,
+              "forward_arcs": 16,
+              "residual_arcs": 32,
+              "capacity_bit_length": 6,
+              "capacity_backend": "uint128",
+              "core_threshold": 1,
+              "core": {
+                "vertices_removed": 0,
+                "cliques_invalidated": 0,
+                "incidence_visits": 0,
+                "degree_decrements": 0
+              },
+              "core_reduction_seconds": 3.583e-06
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          },
+          {
+            "x": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "mu_x": "6",
+            "mu_y": "10",
+            "lambda": "1/1"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto all",
+      "core": "safe",
+      "footprints": "membership",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "rank": 2,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "4",
+            "density_num": "1",
+            "density_den": "1",
+            "vertices": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "termination": "exhausted",
+        "semantic_sha256": "de708a6f4e44bd60730224e7d86343b4b84571b40148d59507fa3b59e242c924",
+        "stats": {
+          "logical_interval_queries": 3,
+          "mincut_calls": 3,
+          "cliques_scanned": 30,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 7,
+              "cliques_scanned": 10,
+              "unique_footprints": 9,
+              "forward_nodes": 18,
+              "forward_arcs": 34,
+              "residual_arcs": 68,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 4.166e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 3.375e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 4,
+              "forward_nodes": 10,
+              "forward_arcs": 16,
+              "residual_arcs": 32,
+              "capacity_bit_length": 6,
+              "capacity_backend": "uint128",
+              "core_threshold": 1,
+              "core": {
+                "vertices_removed": 0,
+                "cliques_invalidated": 0,
+                "incidence_visits": 0,
+                "degree_decrements": 0
+              },
+              "core_reduction_seconds": 3.541e-06
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          },
+          {
+            "x": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "mu_x": "6",
+            "mu_y": "10",
+            "lambda": "1/1"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto 1",
+      "core": "off",
+      "footprints": "sorted",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "termination": "k_reached",
+        "semantic_sha256": "c64817f54880d84a8e2157871feda76bf122aa0126b8c4ef97483516ec0e4997",
+        "stats": {
+          "logical_interval_queries": 2,
+          "mincut_calls": 2,
+          "cliques_scanned": 20,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 8,
+              "cliques_scanned": 10,
+              "unique_footprints": 10,
+              "forward_nodes": 20,
+              "forward_arcs": 38,
+              "residual_arcs": 76,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto 1",
+      "core": "off",
+      "footprints": "membership",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "termination": "k_reached",
+        "semantic_sha256": "c64817f54880d84a8e2157871feda76bf122aa0126b8c4ef97483516ec0e4997",
+        "stats": {
+          "logical_interval_queries": 2,
+          "mincut_calls": 2,
+          "cliques_scanned": 20,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 8,
+              "cliques_scanned": 10,
+              "unique_footprints": 10,
+              "forward_nodes": 20,
+              "forward_arcs": 38,
+              "residual_arcs": 76,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": null,
+              "core": null,
+              "core_reduction_seconds": null
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto 1",
+      "core": "safe",
+      "footprints": "sorted",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "termination": "k_reached",
+        "semantic_sha256": "c64817f54880d84a8e2157871feda76bf122aa0126b8c4ef97483516ec0e4997",
+        "stats": {
+          "logical_interval_queries": 2,
+          "mincut_calls": 2,
+          "cliques_scanned": 20,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 7,
+              "cliques_scanned": 10,
+              "unique_footprints": 9,
+              "forward_nodes": 18,
+              "forward_arcs": 34,
+              "residual_arcs": 68,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 4.375e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 3.458e-06
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": 120,
+      "command": "solve auto 1",
+      "core": "safe",
+      "footprints": "membership",
+      "actual": {
+        "records": [
+          {
+            "rank": 1,
+            "h": 2,
+            "vertex_count": 4,
+            "clique_count": "6",
+            "density_num": "3",
+            "density_den": "2",
+            "vertices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "termination": "k_reached",
+        "semantic_sha256": "c64817f54880d84a8e2157871feda76bf122aa0126b8c4ef97483516ec0e4997",
+        "stats": {
+          "logical_interval_queries": 2,
+          "mincut_calls": 2,
+          "cliques_scanned": 20,
+          "cliques_enumerated": 10,
+          "queries": [
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 8,
+              "oracle_interval_size": 7,
+              "cliques_scanned": 10,
+              "unique_footprints": 9,
+              "forward_nodes": 18,
+              "forward_arcs": 34,
+              "residual_arcs": 68,
+              "capacity_bit_length": 10,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 4.208e-06
+            },
+            {
+              "logical_interval_queries": 1,
+              "mincut_calls": 1,
+              "original_interval_size": 4,
+              "oracle_interval_size": 4,
+              "cliques_scanned": 10,
+              "unique_footprints": 6,
+              "forward_nodes": 12,
+              "forward_arcs": 22,
+              "residual_arcs": 44,
+              "capacity_bit_length": 7,
+              "capacity_backend": "uint128",
+              "core_threshold": 2,
+              "core": {
+                "vertices_removed": 1,
+                "cliques_invalidated": 1,
+                "incidence_visits": 1,
+                "degree_decrements": 1
+              },
+              "core_reduction_seconds": 3.458e-06
+            }
+          ]
+        },
+        "trace": [
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "10",
+            "lambda": "5/4"
+          },
+          {
+            "x": [],
+            "y": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "z": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mu_x": "0",
+            "mu_y": "6",
+            "lambda": "3/2"
+          }
+        ]
+      }
+    }
+  ]
+}

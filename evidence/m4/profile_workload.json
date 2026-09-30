@@ -1,0 +1,47 @@
+{
+  "scope": "Local M4 implementation profiling only; not M5 benchmarks or final experimental settings",
+  "frozen_before_production_edits": true,
+  "fixtures": [
+    {
+      "name": "layered-h3",
+      "path": "evidence/m4/profile-inputs/layered-h3.graph",
+      "h": 3,
+      "n": 96,
+      "m": 352,
+      "sha256": "79f21cb1d2000e2b27e5b75444a1424af1160d24b68ab905853e1796e80dcb97"
+    },
+    {
+      "name": "dense-pendants-h3",
+      "path": "evidence/m4/profile-inputs/dense-pendants-h3.graph",
+      "h": 3,
+      "n": 80,
+      "m": 820,
+      "sha256": "e6e7b840149c4276a74ff3ff4fb3a380248a02513956f7dacdae6606ef095893"
+    },
+    {
+      "name": "layered-h4",
+      "path": "evidence/m4/profile-inputs/layered-h4.graph",
+      "h": 4,
+      "n": 48,
+      "m": 226,
+      "sha256": "edc22f5e7c2535f5a13f93ee1f5a60268c04517b8b433cada203e51fb0f64dff"
+    }
+  ],
+  "solver_repetitions_per_process": 10,
+  "process_repetitions": 3,
+  "workers": 1,
+  "build": "Release",
+  "capacity": "auto",
+  "k": "all",
+  "filesystem_cache": "uncontrolled; process launch excluded from phase times",
+  "memory": "whole-process peak RSS, includes index and diagnostic repeat work",
+  "core_modes": [
+    "off",
+    "safe"
+  ],
+  "footprint_modes": [
+    "baseline",
+    "one profile-justified mode if supported"
+  ],
+  "comparison": "paired outputs; raw repeats retained; no speedup requirement"
+}

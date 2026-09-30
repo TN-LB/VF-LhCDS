@@ -1,0 +1,11 @@
+[ 46%] Built target vflhcds_lib
+[ 60%] Built target vflhcds
+[ 60%] Built target vflhcds_skeleton_test
+[ 73%] Built target vflhcds_m2_probe
+[ 73%] Built target vflhcds_primitives_test
+[ 86%] Built target vflhcds_m3_probe
+[ 86%] Built target vflhcds_solver_test
+[ 90%] Building CXX object CMakeFiles/vflhcds_m4_profile.dir/tests/m4_profile.cpp.o
+[ 96%] Built target vflhcds_core_test
+[100%] Linking CXX executable vflhcds_m4_profile
+[100%] Built target vflhcds_m4_profile

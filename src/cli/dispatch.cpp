@@ -22,7 +22,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
     for (std::size_t i = 1; i < args.size();) {
         const std::string key(args[i++]);
         const bool flag = solving && key == "--all";
-        const bool known = key == "--graph" || ((oracle || solving) && (key == "--h" || key == "--output"))
+        const bool known = key == "--graph" || ((oracle || solving) && (key == "--h" || key == "--output" || key == "--footprint-scan"))
             || (oracle && (key == "--lambda" || key == "--x" || key == "--y"))
             || (solving && (key == "--k" || key == "--core-reduction" || flag));
         if (!known || (!flag && i == args.size())) throw std::invalid_argument("unknown or missing option");
@@ -36,18 +36,27 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
     BigInt h = 2;
     Fraction lambda;
     std::optional<BigInt> k;
+    OracleOptions execution;
     if (oracle || solving) {
         h = parse_integer(options.at("--h"));
         if (h < 2) throw std::invalid_argument("h < 2");
     }
     if (oracle) lambda = Fraction::parse(options.at("--lambda"));
+    if (options.count("--footprint-scan") != 0) {
+        const auto& value = options.at("--footprint-scan");
+        if (value == "membership") execution.footprints = FootprintMode::Membership;
+        else if (value != "sorted") throw std::invalid_argument("unknown footprint scan");
+    }
     if (solving) {
         if (options.count("--k") != 0) {
             k = parse_integer(options.at("--k"));
             if (*k < 1) throw std::invalid_argument("k < 1");
         }
-        if (options.count("--core-reduction") != 0 && options.at("--core-reduction") != "off")
-            throw std::invalid_argument("only core off is implemented");
+        if (options.count("--core-reduction") != 0) {
+            const auto& value = options.at("--core-reduction");
+            if (value == "safe") execution.core = CoreMode::Safe;
+            else if (value != "off") throw std::invalid_argument("unknown core mode");
+        }
     }
     const auto cancelled = [&] { if (stop && stop()) throw Incomplete("controlled cancellation"); };
     cancelled();
@@ -74,7 +83,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
         cancelled();
         if (solving) {
             run_stats.emplace();
-            const auto answer = solve(index, k, CapacityPolicy::Auto, &*run_stats, {}, stop);
+            const auto answer = solve(index, k, CapacityPolicy::Auto, &*run_stats, {}, stop, execution);
             k_reached = answer.k_reached;
             BigInt rank = 0;
             for (const auto& solution : answer.solutions) {
@@ -87,8 +96,8 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
             const ClosureOracle closure(index);
             stats.emplace();
             const auto answer = restricted
-                ? closure.largest_restricted(request, CapacityPolicy::Auto, &*stats)
-                : closure.global_F(closure.full_graph_request(lambda), CapacityPolicy::Auto, &*stats);
+                ? closure.largest_restricted(request, CapacityPolicy::Auto, &*stats, execution.footprints)
+                : closure.global_F(closure.full_graph_request(lambda), CapacityPolicy::Auto, &*stats, execution);
             result = oracle_json(index, lambda, answer);
             output_count = 1;
         }
@@ -114,16 +123,16 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
 int run_cli(const std::vector<std::string_view>& args, std::ostream& out, std::ostream& err,
             const std::function<bool()>& stop) {
     if (args.size() == 1 && (args[0] == "--help" || args[0] == "help")) {
-        out << "VF-LhCDS M3 exact fixed-k solver\n"
+        out << "VF-LhCDS M4 exact fixed-k solver\n"
                "Usage: vflhcds --help | print-build-info | inspect-graph --graph G\n"
-               "       vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off] [--output P]\n"
-               "       vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--output P]\n"
+               "       vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off|safe] [--footprint-scan sorted|membership] [--output P]\n"
+               "       vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--footprint-scan sorted|membership] [--output P]\n"
                "Contracts: docs/INTERFACE_CONTRACT.md\n";
         return exit_code(RunStatus::completed);
     }
     if (args.size() == 1 && args[0] == "print-build-info") {
         const auto info = build_info();
-        out << "version=" << info.version << "\nstage=M3\ncxx_standard=17\n"
+        out << "version=" << info.version << "\nstage=M4\ncxx_standard=17\n"
             << "compiler=" << info.compiler << "\ncompiler_version=" << info.compiler_version
             << "\nbuild_type=" << info.build_type << "\nsanitizers=" << info.sanitizers << '\n';
         return exit_code(RunStatus::completed);

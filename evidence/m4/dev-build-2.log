@@ -1,0 +1,15 @@
+-- Configuring done (0.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/nost/Documents/VF-LhCDS/build
+[ 50%] Built target vflhcds_lib
+[ 64%] Built target vflhcds
+[ 64%] Built target vflhcds_skeleton_test
+[ 78%] Built target vflhcds_m2_probe
+[ 78%] Built target vflhcds_primitives_test
+[ 85%] Building CXX object CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o
+[ 89%] Built target vflhcds_solver_test
+[ 92%] Building CXX object CMakeFiles/vflhcds_core_test.dir/tests/m4_core.cpp.o
+[ 96%] Linking CXX executable vflhcds_core_test
+[100%] Linking CXX executable vflhcds_m3_probe
+[100%] Built target vflhcds_core_test
+[100%] Built target vflhcds_m3_probe

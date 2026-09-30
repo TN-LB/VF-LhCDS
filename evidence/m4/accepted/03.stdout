@@ -1,0 +1,110 @@
+UpdateCTestConfiguration  from :/Users/nost/Documents/VF-LhCDS/build/DartConfiguration.tcl
+Parse Config file:/Users/nost/Documents/VF-LhCDS/build/DartConfiguration.tcl
+Test project /Users/nost/Documents/VF-LhCDS/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+      Start  1: m0_cpp_skeleton
+
+1: Test command: /Users/nost/Documents/VF-LhCDS/build/vflhcds_skeleton_test
+1: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+1: Test timeout computed to be: 1500
+ 1/12 Test  #1: m0_cpp_skeleton ..................   Passed    0.00 sec
+test 2
+      Start  2: m2_primitives
+
+2: Test command: /Users/nost/Documents/VF-LhCDS/build/vflhcds_primitives_test
+2: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+2: Test timeout computed to be: 1500
+2: T01/T04-T09 primitives: 1458 checks passed; 135 tiny cut/backend runs; 20000-node path
+ 2/12 Test  #2: m2_primitives ....................   Passed    0.05 sec
+test 3
+      Start  3: m3_solver
+
+3: Test command: /Users/nost/Documents/VF-LhCDS/build/vflhcds_solver_test
+3: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+3: Test timeout computed to be: 1500
+3: M3 T10-T16: 37 runtime checks passed; certificate types cannot be fabricated
+ 3/12 Test  #3: m3_solver ........................   Passed    0.01 sec
+test 4
+      Start  4: m3_solver_smoke
+
+4: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/validation/solver_campaign.py" "--probe" "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m3_probe" "--tier" "smoke"
+4: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+4: Test timeout computed to be: 1500
+4: {"all_runs": 120, "automatic_big_flows": 30, "base_graph_h_cases": 30, "certified_separator_requests": 94, "chain_pairs": 47, "checked_variants": 120, "disjoint_union_cases": 30, "distinct_base_graphs": 26, "evidence_level": "definition-checked finite implementation evidence; not theorem proof", "family_bridge": 2, "family_complete": 2, "family_complete-boundary": 2, "family_disconnected": 2, "family_h>n": 2, "family_named": 14, "family_planted": 2, "family_random": 2, "family_tied": 2, "fixed_k_prefixes": 480, "isolate_cases": 30, "oracle_requests": 492, "probe": "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m3_probe", "probe_sha256": "97c5e45414caa22aee0f906ee7ca2c50460831eb3de0d7bd94cb718e9bdb9688", "seed": 20260929, "sha256": {"cases.jsonl": "0ac25a2947e9efc6a40642bac4028e47632524cc04f6ad11cb84953127735149", "named_traces.json": "ce2e64342de6c85de5ad60dfb2b08576bc844b11a6f4bfad43805a4fa64dd3cb", "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "results.jsonl.gz": "89256ed8ee5f44443da30ceaad1a40605f7b1cb8fee9676f115b5ebef72cfc54"}, "solver_logical_queries": 2352, "solver_mincuts": 1580, "solver_runs": 1200, "standalone_global_requests": 398, "status": "passed", "tier": "smoke", "wall_seconds": 0.7232291670516133}
+ 4/12 Test  #4: m3_solver_smoke ..................   Passed    0.78 sec
+test 5
+      Start  5: m3_cli_contract
+
+5: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/tests/m3_cli.py" "/Users/nost/Documents/VF-LhCDS/build/vflhcds"
+5: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+5: Test timeout computed to be: 1500
+5: M3 CLI: 31 direct invocations and 2 external-runner invocations passed
+ 5/12 Test  #5: m3_cli_contract ..................   Passed    0.34 sec
+test 6
+      Start  6: m3_failure_reducer
+
+6: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/tests/m3_harness.py"
+6: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+6: Test timeout computed to be: 1500
+6: T14 synthetic missing-zero reducer: deterministic, original retained, fixed-k/all scope preserved; no production failure claimed
+ 6/12 Test  #6: m3_failure_reducer ...............   Passed    0.05 sec
+test 7
+      Start  7: m4_core
+
+7: Test command: /Users/nost/Documents/VF-LhCDS/build/vflhcds_core_test
+7: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+7: Test timeout computed to be: 1500
+7: M4 T17/P08: 30 checks passed
+ 7/12 Test  #7: m4_core ..........................   Passed    0.01 sec
+test 8
+      Start  8: m4_modes_smoke
+
+8: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py" "--probe" "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m3_probe" "--tier" "smoke"
+8: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+8: Test timeout computed to be: 1500
+8: {"all_runs": 124, "automatic_big_flows": 31, "base_graph_h_cases": 31, "certified_separator_requests": 100, "chain_pairs": 50, "checked_variants": 124, "disjoint_union_cases": 31, "distinct_base_graphs": 27, "evidence_scope": "Independent finite definition checks plus mode equality; not theorem or performance proof", "family_bridge": 2, "family_complete": 2, "family_complete-boundary": 2, "family_disconnected": 2, "family_h>n": 2, "family_named": 15, "family_planted": 2, "family_random": 2, "family_tied": 2, "fixed_k_prefixes": 498, "isolate_cases": 31, "mode_checks": {"big_flows": 3712, "core_definition_requests": 589, "core_executions": 4370, "footprint_bound_pairs": 1642, "footprint_executions": 3284, "oracle_vertices_removed": 3904, "point_executions": 1648, "separator_executions": 400, "solve_executions": 4976}, "modes": [["off", "sorted"], ["off", "membership"], ["safe", "sorted"], ["safe", "membership"]], "probe_sha256": "97c5e45414caa22aee0f906ee7ca2c50460831eb3de0d7bd94cb718e9bdb9688", "seed": 20260929, "sha256": {"cases.jsonl": "fc65103ce2167cc5ad590c92ae6aa6f574c7814242f38b6678ba3b78e4a2a034", "mode_results.jsonl.gz": "191da4c72b9c681126b4761b7025eb56b62afa0d081385a045cf94ec10c44368", "named_traces.json": "ce2e64342de6c85de5ad60dfb2b08576bc844b11a6f4bfad43805a4fa64dd3cb", "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "results.jsonl.gz": "61b7868fcff5b1cee98ae3e821fa2dc2825db7f924b678f2e7ebd667f13f0b2e"}, "solver_logical_queries": 2512, "solver_mincuts": 1732, "solver_runs": 1244, "standalone_global_requests": 412, "status": "passed", "tier": "smoke", "wall_seconds": 2.1483485838398337}
+ 8/12 Test  #8: m4_modes_smoke ...................   Passed    2.20 sec
+test 9
+      Start  9: m4_cli_contract
+
+9: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/tests/m4_cli.py" "/Users/nost/Documents/VF-LhCDS/build/vflhcds"
+9: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+9: Test timeout computed to be: 1500
+9: M4 CLI: 40 invocations passed
+ 9/12 Test  #9: m4_cli_contract ..................   Passed    0.21 sec
+test 10
+      Start 10: m2_oracle_smoke
+
+10: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py" "--probe" "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m2_probe" "--tier" "smoke"
+10: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+10: Test timeout computed to be: 1500
+10: {"automatic_big_flows": 28, "backend_executions": 1583, "chain_pairs": 36, "distinct_graphs": 24, "evidence_sha256": {"cases.jsonl": "3460fcf1f6bd5ed90a05a7f3bc017ce2e4d71ce73f7f1797ec48079bb110e132", "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "results.jsonl.gz": "5fc5303f9698619940782f2faf26abee41107de642a79c4e7603ec64cd101a98"}, "family_bridge": 2, "family_complete": 2, "family_complete-boundary": 2, "family_disconnected": 2, "family_h>n": 2, "family_named": 12, "family_planted": 2, "family_random": 2, "family_tied": 2, "flow_arbitrary_precision": 453, "flow_uint128": 794, "footprint_bound_pairs": 141, "footprint_subset_identities": 3702, "global_requests": 390, "graph_h_cases": 28, "h_2_cases": 5, "h_3_cases": 5, "h_4_cases": 10, "h_5_cases": 6, "h_7_cases": 2, "oracle_requests": 537, "probe": "/Users/nost/Documents/VF-LhCDS/build/vflhcds_m2_probe", "probe_sha256": "9d710bc3553c8ddefd9059ab7e0ac7ee1f3c037302a4b93fda1ed2d4785f05e4", "restricted_requests": 147, "scope": "M2 exact primitives only; finite implementation evidence, not a theorem proof", "seed": 20260922, "status": "passed", "subset_count_comparisons": 2274, "tier": "smoke", "wall_seconds": 0.19681129232048988}
+10/12 Test #10: m2_oracle_smoke ..................   Passed    0.25 sec
+test 11
+      Start 11: m2_cli_contract
+
+11: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "/Users/nost/Documents/VF-LhCDS/tests/cli_smoke.py" "/Users/nost/Documents/VF-LhCDS/build/vflhcds"
+11: Working Directory: /Users/nost/Documents/VF-LhCDS/build
+11: Test timeout computed to be: 1500
+11: M2 oracle/IO regressions on M4 CLI: 56 invocations passed; canonical JSON/IDs/statuses, real fallback, aliases and atomic output
+11/12 Test #11: m2_cli_contract ..................   Passed    0.28 sec
+test 12
+      Start 12: m0_reference_skeleton
+
+12: Test command: /Users/nost/Documents/VF-LhCDS/.venv/bin/python3.12 "-m" "pytest" "reference/tests" "-q"
+12: Working Directory: /Users/nost/Documents/VF-LhCDS
+12: Test timeout computed to be: 1500
+12: ........................................................................ [ 97%]
+12: ..                                                                       [100%]
+12: 74 passed in 1.14s
+12/12 Test #12: m0_reference_skeleton ............   Passed    1.31 sec
+
+100% tests passed out of 12
+
+Total Test time (real) =   5.51 sec

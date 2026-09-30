@@ -27,18 +27,45 @@ int main() {
             for(std::size_t i=0;i<m;++i){const auto u=integer(),v=integer();edges.emplace_back(u,v);}
             const Graph graph(std::move(vertices),edges); const MaterializedCliques index(graph,h);
             const ClosureOracle oracle(index); std::vector<ChainPoint> points;
+            OracleOptions options;
             while((command=token())!="end") {
+                if(command=="config") {
+                    const auto core=token(), scan=token();
+                    if(core!="off"&&core!="safe")throw std::invalid_argument("core");
+                    if(scan!="sorted"&&scan!="membership")throw std::invalid_argument("footprint scan");
+                    options={core=="safe"?CoreMode::Safe:CoreMode::Off,
+                             scan=="membership"?FootprintMode::Membership:FootprintMode::Sorted};
+                    std::cout<<"{}\n";std::cout.flush();continue;
+                }
+                if(command=="core") {
+                    const auto threshold=integer(); CoreStats stats;
+                    const auto core_vertices=peel_core(index,threshold,&stats);
+                    std::cout<<"{\"vertices\":"<<vertices_json(graph,core_vertices)
+                        <<",\"vertices_removed\":"<<stats.vertices_removed<<",\"cliques_invalidated\":"<<stats.cliques_invalidated
+                        <<",\"incidence_visits\":"<<stats.incidence_visits<<",\"degree_decrements\":"<<stats.degree_decrements<<"}\n";
+                    std::cout.flush();continue;
+                }
+                if(command=="footprints") {
+                    const auto xmask=to_size(integer()),ymask=to_size(integer()); VertexSet x,y;
+                    if(xmask>=(std::size_t{1}<<n)||ymask>=(std::size_t{1}<<n))throw std::invalid_argument("mask");
+                    for(VertexId v=0;v<n;++v){if((xmask&(std::size_t{1}<<v))!=0)x.push_back(v);if((ymask&(std::size_t{1}<<v))!=0)y.push_back(v);}
+                    const auto footprints=aggregate_footprints(index,{x,y,Fraction(1)},options.footprints);
+                    std::cout<<"{\"scanned\":"<<footprints.scanned<<",\"total_weight\":"<<footprints.total_weight<<",\"footprints\":[";
+                    bool first=true;for(const auto& footprint:footprints.records){if(!first)std::cout<<',';first=false;
+                        std::cout<<"{\"vertices\":"<<vertices_json(graph,footprint.vertices)<<",\"weight\":"<<footprint.weight<<'}';}
+                    std::cout<<"]}\n";std::cout.flush();continue;
+                }
                 const auto capacity=policy();
                 if(command=="point") {
                     QueryStats stats;
-                    points.push_back(oracle.global_chain_point(Fraction::parse(token()),capacity,&stats));
+                    points.push_back(oracle.global_chain_point(Fraction::parse(token()),capacity,&stats,options));
                     const auto& point=points.back();
                     std::cout<<"{\"token\":"<<points.size()-1<<",\"vertices\":"<<vertices_json(graph,point.vertices())
                              <<",\"clique_count\":\""<<point.cliques()<<"\",\"stats\":"<<query_stats_json(stats)<<"}\n";
                 } else if(command=="separator") {
                     const auto x=to_size(integer()),y=to_size(integer());
                     const auto interval=oracle.chain_interval(points.at(x),points.at(y)); QueryStats stats;
-                    const auto z=oracle.separate(interval,capacity,&stats); const auto lambda=interval.lambda();
+                    const auto z=oracle.separate(interval,capacity,&stats,options); const auto lambda=interval.lambda();
                     std::cout<<"{\"vertices\":"<<vertices_json(graph,z.vertices())<<",\"clique_count\":\""<<z.cliques()
                              <<"\",\"lambda\":\""<<lambda.numerator()<<'/'<<lambda.denominator()<<"\",\"stats\":"<<query_stats_json(stats)<<"}\n";
                 } else if(command=="solve") {
@@ -49,7 +76,7 @@ int main() {
                         traces.push_back("{\"x\":"+vertices_json(graph,interval.x().vertices())+",\"y\":"+vertices_json(graph,interval.y().vertices())
                             +",\"z\":"+vertices_json(graph,z.vertices())+",\"mu_x\":\""+decimal(interval.x().cliques())+"\",\"mu_y\":\""+decimal(interval.y().cliques())
                             +"\",\"lambda\":\""+decimal(lambda.numerator())+"/"+decimal(lambda.denominator())+"\"}");
-                    });
+                    },{},options);
                     std::string canonical; std::cout<<"{\"records\":["; bool first=true; BigInt rank=0;
                     for(const auto& s:result.solutions) {
                         if(!first)std::cout<<','; first=false; const auto line=solution_json(index,s,++rank);

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(vflhcds VERSION 0.1.0 LANGUAGES CXX)
+project(vflhcds VERSION 0.2.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -49,6 +49,7 @@ add_library(vflhcds_lib STATIC
   src/core/exact.cpp
   src/core/graph.cpp
   src/clique/materialized.cpp
+  src/clique/core.cpp
   src/oracle/closure.cpp
   src/telemetry/query.cpp
   src/io/graph.cpp
@@ -87,6 +88,14 @@ if(BUILD_TESTING)
     "${CMAKE_CURRENT_SOURCE_DIR}/validation/solver_campaign.py" --probe "$<TARGET_FILE:vflhcds_m3_probe>" --tier smoke)
   add_test(NAME m3_cli_contract COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m3_cli.py" "$<TARGET_FILE:vflhcds>")
   add_test(NAME m3_failure_reducer COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m3_harness.py")
+  add_executable(vflhcds_core_test tests/m4_core.cpp)
+  target_link_libraries(vflhcds_core_test PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m4_core COMMAND vflhcds_core_test)
+  add_executable(vflhcds_m4_profile tests/m4_profile.cpp)
+  target_link_libraries(vflhcds_m4_profile PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m4_modes_smoke COMMAND "${Python3_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/validation/m4_campaign.py" --probe "$<TARGET_FILE:vflhcds_m3_probe>" --tier smoke)
+  add_test(NAME m4_cli_contract COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m4_cli.py" "$<TARGET_FILE:vflhcds>")
   add_test(NAME m2_oracle_smoke
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/validation/oracle_campaign.py"
       --probe "$<TARGET_FILE:vflhcds_m2_probe>" --tier smoke)

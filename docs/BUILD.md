@@ -1,4 +1,4 @@
-# Build and test instructions (through M3)
+# Build and test instructions (through M4)
 
 Requires CMake >=3.16, GCC/Clang C++17 with native unsigned __int128 on a POSIX
 system, and Python >=3.10 with pytest >=7,<9 for testing. M2 uses header-only
@@ -44,9 +44,9 @@ Only the native 128-bit typedef uses a localized extension. MSVC/no-128/non-POSI
 configurations fail explicitly; GCC/Linux support is intended but not yet tested.
 No parallel code exists, so TSan is deferred. No performance claim uses these runs.
 
-CTest contains nine tests: retained library argument checks; M2 primitives, oracle
+CTest contains twelve tests: retained library argument checks; M2 primitives, oracle
 smoke and CLI regressions; M3 solver, solver smoke, solve CLI and synthetic failure
-reduction; and the 74 independent M1 pytest checks. The M0 reference
+reduction; M4 core invariants, four-mode smoke and CLI equivalence; and the 74 independent M1 pytest checks. The M0 reference
 test name is historical. `-DBUILD_TESTING=OFF` omits Python discovery, test executables
 and the exhaustive test-only probe; the production library still needs Boost.
 
@@ -89,4 +89,26 @@ python validation/run_solver.py --executable build/vflhcds --evidence evidence/m
 ```
 
 See [M3 API/measurement details](M3_IMPLEMENTATION.md) and
-[executed M3 report](../evidence/m3/REPORT.md). The CLI version is 0.1.0 / stage M3.
+[executed M3 report](../evidence/m3/REPORT.md). The frozen M3 CLI version was 0.1.0 / stage M3.
+
+
+M4 keeps defaults `--core-reduction off --footprint-scan sorted`. Opt in explicitly:
+
+```sh
+build/vflhcds solve --graph reference/fixtures/triangle_and_isolate.graph --h 3 --all --core-reduction safe --footprint-scan membership
+python validation/m4_campaign.py --probe build/vflhcds_m3_probe --tier exhaustive-small --output evidence/m4/new-exhaustive
+python scripts/run_m4_checks.py evidence/m4/new-full-checks
+```
+
+The historical m3_probe name now also exposes test-only core and mode commands.
+The M4 harness runs the unchanged M3 truth corpus through off/safe core crossed
+with sorted/membership footprint scanning, and adds independent all-subset core
+truth and direct footprint records. Full runs save inputs, all mode responses and
+failures. The M4 driver runs four CTest profiles, Debug/sanitizer release tiers,
+retained M2 campaigns, a production-only build, standalone pytest, a CLI definition
+check and fixed local profiling. CLI version is 0.2.0 / stage M4.
+
+The diagnostic executable vflhcds_m4_profile exists only with BUILD_TESTING=ON.
+Its saved workload and repetitions are local implementation diagnostics, not the
+final M5 benchmark configuration. See [M4 arguments](M4_IMPLEMENTATION.md) and
+[executed results](../evidence/m4/REPORT.md). Full acceptance directories must be new.

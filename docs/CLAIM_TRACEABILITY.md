@@ -13,10 +13,10 @@ A code symbol, test command, evidence path and commit are needed before marking
 | O04 Exact separator | 1.15; Eq. 11-12 | ChainInterval::lambda; ClosureOracle::separator_request, separate | T06,T10 | [M3 all-pair/trace evidence](../evidence/m3/fixture_manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O05 Restricted/global boundary | 1.19 proof + audit A | largest_restricted, full_graph_request, global_F; immutable CertifiedGlobalRequest and chain points | T08,T09,T10; R01 | [M2](../evidence/m2/REPORT.md), `0a4aef8`; [M3 move/certificate review](../evidence/m3/REVIEW.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O06 Exact network / largest ties | Eq. 15; 1.19 | aggregate_footprints; oracle execute; Dinic<Capacity> | T06,T07,T09 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite exact-network scope) |
-| O07 Terminal extraction | 1.16 | solve; Graph::induced_components; Membership | T11; core T17 remains pending | [M3 named traces](../evidence/m3/accepted/build-smoke/named_traces.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O07 Terminal extraction | 1.16 | solve; Graph::induced_components; Membership | T11; M4 T17 evidence below, new commit pending | [M3 named traces](../evidence/m3/accepted/build-smoke/named_traces.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O08 Fixed-k order / verification-free | 1.17; top-k convention | solve; solution_json; reviewed production call path | T12,T15,T16 | [M3](../evidence/m3/REPORT.md), [review](../evidence/m3/REVIEW.md); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O09 Query / network bounds | 1.18; 1.20 | SolveStats::record; solve; QueryStats; largest_restricted | T13; per-query network counts | [M3 independent 2r-1 checks](../evidence/m3/fixture_manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
-| O10 Safe core search bounds | 1.21-1.22 | planned peel_core, certified_core_bounds | T17 | not implemented/run; M4 | planned |
+| O10 Safe core search bounds | 1.21-1.22 | peel_core; ClosureOracle::global_F/restricted_impl; OracleOptions; unchanged solve endpoints | T17; independent core truth and all-mode prefixes | [M4 executed evidence](../evidence/m4/REPORT.md), [argument](M4_IMPLEMENTATION.md); working tree on `5802d5a`, new commit pending | planned (M4 tests passed; formal commit gate pending) |
 | O11 Exact numeric refinement | 1.19-1.20; D005 | Fraction; checked_add/sub/mul; largest_restricted; Dinic | T05,T07,T16 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 real auto fallback regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite numeric scope) |
 | O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main | T02,T14,T15; M5 shared smoke pending | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 
@@ -203,6 +203,57 @@ confirms unchanged papers, accepted decisions/theory contracts and M1 reference.
 No new proof/spec conflict or unresolved implementation finding remains in the
 executed scope. The review was a separate pass by the implementing assistant,
 not independent human sign-off. Finite test agreement does not prove the theorem.
-O10/T17 and every M4/M5 task stay open. O12 evidence covers M3 definition checking
+At M3 delivery O10/T17 and every M4/M5 task were open. O12 evidence covers M3 definition checking
 and manifest/timing separation, not baseline agreement or benchmark conclusions.
 Extended n<=12 campaigns, GCC/Linux, OS OOM pressure and TSan remain unrun.
+
+
+## Executed M4 core and single footprint optimization (2026-09-29)
+
+P07.1-P07.3 and P08.1 are complete at implementation/test scope. This is an
+uncommitted working tree on `5802d5a2a04cae35eaf708aba65f638abf642c8f`;
+[source snapshot](../evidence/m4/accepted/environment.json) and
+[changed-file hashes](../evidence/m4/files_changed.json) identify actual tested code.
+The table's formal implementation-tested state for new O10/M4 code is withheld
+until an implementation commit exists. Existing M1/M2/M3 commits and tests are
+not retroactively relabelled. M4 requests no additional tag; M3's tag is preserved.
+
+| Task / obligations | Actual symbols | Evidence |
+|---|---|---|
+| P07.1 / O10 | peel_core; CoreStats | Independent all-subset union definition, exact updates, zero/huge thresholds, h-clique versus ordinary degree; T17 |
+| P07.2 / O04,O05,O07,O10 | global_F, restricted_impl, OracleOptions; solve passes options without changing its traversal | Original/reduced sizes, exact ceil(lambda), audit-C non-chain core and restored pendant; all certified sets/traces/prefixes |
+| P07.3 / O09,O10,O12 | core query counters and reduction timing; m4_campaign.ModesProbe, check_query; m4_profile | [Preservation argument](M4_IMPLEMENTATION.md), four-mode equality, 36 saved local timing/RSS processes |
+| P08.1 / O06,O11 | aggregate_footprints(FootprintMode::Membership), CLI --footprint-scan | Pre-edit M3 measurement/selection; independent exact footprint records and full core/scan mode corpus; auto/BigInt and boundary/fallback checks |
+
+[Acceptance](../evidence/m4/accepted/commands.json): all 36 commands exit 0;
+four profiles build and pass 12/12 CTest each, including 30 new C++ checks and
+40 M4 CLI invocations; standalone pytest 74 passed. Production-only Release also
+builds and executes safe+membership with external definition validation.
+
+Each of Debug and ASan/UBSan runs:
+- Exhaustive-small: 2,198 base graph/h cases / 1,099 graphs, 22,054 definition-core
+  requests, 42,164 footprint-bound pairs, 153,920 solver executions across modes
+  and capacity repetitions; 14,844 distinct fixed-k prefix requests.
+- Seeded: seed 20260929, 1,000 distinct graph/h cases / 860 graphs, 8,492 core
+  requests, 10,200 footprint-bound pairs, 79,968 solver executions and 7,956
+  fixed-k prefix requests, with all original/relabelled and declared extra variants.
+- Higher-h: 64 base cases / 60 graphs, 430 core requests, 1,184 footprint pairs,
+  4,672 solver executions and 456 prefix requests.
+- Smoke: 31 base cases / 27 graphs including audit C, 589 core requests,
+  1,642 footprint pairs and 4,976 solver executions.
+
+Counts are per build and include stated repetitions, not extra distinct graphs;
+tiers overlap. Full M2 oracle regression tiers also pass in both builds.
+[Fixture manifest](../evidence/m4/fixture_manifest.json) retains actual counts,
+seeds and every graph/mode response. [Integrity/comparisons](../evidence/m4/verification.json)
+checks source/log hashes, seven Debug/sanitizer response pairs (excluding measured
+core time), and reproduction of the three saved M3 baseline corpora with modes off.
+
+The local profile workload was frozen before production edits. Its three synthetic
+fixtures justify testing one footprint-scanning change; they do not establish
+universal speed/memory improvement or select M5 benchmark parameters. Core and
+membership modes remain explicit, default off/sorted. No additional backend,
+parallel code or external technique was introduced. [Report](../evidence/m4/REPORT.md)
+retains all measurements, two corrected development-only errors and remaining limits.
+No new proof/spec conflict or solver/reference mismatch remains in the executed
+scope. Independent finite agreement supports implementation validation, not a theorem.

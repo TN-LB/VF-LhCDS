@@ -1,0 +1,95 @@
+{
+  "smoke": {
+    "debug_vs_sanitizer": {
+      "sha256": "a83994521a72ec31730146513ab561f728ed51f9ac90e72a854463ec8ab1cb8b",
+      "records": 10897
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ]
+  },
+  "exhaustive-small": {
+    "debug_vs_sanitizer": {
+      "sha256": "c59780cfa61d70c7d7c46416592f7b728f7285a972e1cf8dc436b6ab8132a0a2",
+      "records": 411602
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ],
+    "frozen_m3_vs_m4_off": {
+      "sha256": "a6535a8e3b93837136ad49d353650377e57d5c809d504fe3b58890b3a8229ab0",
+      "records": 76305
+    },
+    "m3_comparison_exclusions": [
+      "core",
+      "core_reduction_seconds",
+      "core_threshold",
+      "token"
+    ]
+  },
+  "seeded": {
+    "debug_vs_sanitizer": {
+      "sha256": "d7e995f1e986af0a383efcca48c17726792fc05077f7f42f5aff730ea8266f1c",
+      "records": 175300
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ],
+    "frozen_m3_vs_m4_off": {
+      "sha256": "eaff95b6761410f7d27bb482ba533b8bd72f20f2843d6dbf0964a174282044de",
+      "records": 36602
+    },
+    "m3_comparison_exclusions": [
+      "core",
+      "core_reduction_seconds",
+      "core_threshold",
+      "token"
+    ]
+  },
+  "higher-h": {
+    "debug_vs_sanitizer": {
+      "sha256": "a69abba98d842168f724a02a898d86184376ac6bae5e04a35291ed4645fcae4f",
+      "records": 11410
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ],
+    "frozen_m3_vs_m4_off": {
+      "sha256": "58b24a6bacb32b1c626e5806289829d5176599fdf3d16459126121425c0232b2",
+      "records": 2153
+    },
+    "m3_comparison_exclusions": [
+      "core",
+      "core_reduction_seconds",
+      "core_threshold",
+      "token"
+    ]
+  },
+  "m2-exhaustive-small": {
+    "debug_vs_sanitizer": {
+      "sha256": "37ed0ac4f0fd7865ae15be558d22ef4c5aa1f4b82b1aa2c826b04314b0b6401d",
+      "records": 63437
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ]
+  },
+  "m2-seeded": {
+    "debug_vs_sanitizer": {
+      "sha256": "8727618f5eb2e6ce310c56453eb5c24b7678a5d261ff3da6560f90d776a2f4e1",
+      "records": 21981
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ]
+  },
+  "m2-higher-h": {
+    "debug_vs_sanitizer": {
+      "sha256": "3982271154b20c13cc7477c58483dd94da1c89564bc54884b33509c848f75cfc",
+      "records": 1621
+    },
+    "excluded_fields": [
+      "core_reduction_seconds"
+    ]
+  }
+}

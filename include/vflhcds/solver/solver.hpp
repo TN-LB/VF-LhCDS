@@ -17,6 +17,6 @@ using TraceSink = std::function<void(const ChainInterval&, const ChainPoint&, co
 // No definition-level validator or post-hoc output repair is accepted by this API.
 SolveResult solve(const MaterializedCliques& index, const std::optional<BigInt>& k = std::nullopt,
                   CapacityPolicy policy = CapacityPolicy::Auto, SolveStats* progress = nullptr,
-                  const TraceSink& trace = {}, const StopRequested& stop = {});
+                  const TraceSink& trace = {}, const StopRequested& stop = {}, OracleOptions options = {});
 std::string solve_stats_json(const SolveStats& stats);
 }  // namespace vflhcds

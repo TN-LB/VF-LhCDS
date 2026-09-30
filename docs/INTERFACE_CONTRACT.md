@@ -83,8 +83,8 @@ equality. Resource exhaustion must not truncate an ID, count, set or graph.
 The implemented CLI will accept:
 
 ```text
-vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off] [--output P]
-vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--output P]
+vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off|safe] [--footprint-scan sorted|membership] [--output P]
+vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--footprint-scan sorted|membership] [--output P]
 vflhcds inspect-graph --graph G
 ```
 
@@ -92,8 +92,11 @@ Exactly one of `--k` and `--all` is required for solve; there is no implicit k.
 H and K are exact positive decimal integers with H>=2, K>=1. `--k 0`, negative,
 fractional, floating, missing/duplicate/unknown options and both modes together
 are `invalid_argument`. No undocumented MAX_H or numeric truncation is allowed.
-Unsupported capacity diagnostics/core-on/tie-inclusive/parallel options are
-rejected, not silently enabled. Core defaults to off; capacity dispatch in M2
+Unsupported capacity diagnostics/tie-inclusive/parallel options are rejected.
+M4 solve accepts core `off` or `safe` (the value `on` is invalid). Oracle accepts
+no core CLI option: arbitrary X/Y remain explicitly restricted. Both solve and
+oracle accept footprint-scan `sorted` or `membership`; both compute identical
+ordered footprint records. Defaults remain core off and footprint scan sorted; capacity dispatch in M2
 defaults to true auto (checked 128-bit plus actual arbitrary precision, D005).
 
 Solve emits exactly the first min(k,q) LhCDSes, or all q with `--all`. Compare
@@ -232,3 +235,34 @@ nor an O(k) bound. M0 measures none of these algorithm counters.
 Validation labels distinguish definition-checked, structural-checked and
 cross-implementation agreement. Completion is not a maximality certificate, and
 finite tests are not a theorem proof. No production obligation is closed by M0.
+
+
+## M4 optional implementation modes (P07/P08)
+
+The output schema and semantic hash are unchanged. `--core-reduction safe` derives
+a query-local bound from an existing sealed global certificate and Lemma 1.22;
+it preserves original chain endpoints/lambda/terminal extraction. The default
+`off` path remains available. `--footprint-scan membership` uses exact set markers
+instead of sorted includes/difference scans; the default `sorted` path remains.
+These are algorithm switches, not new benchmark parameters or output policies.
+
+Per-query status adds `core_threshold`, `core`, `core_reduction_seconds`:
+- Off or lambda=0: all three are null (no core work).
+- A positive safe query: exact integer threshold ceil(lambda); core counters
+  describe peeling of the FULL original graph for this query, even if Y is small.
+- `core.vertices_removed`: original vertices removed by this peel.
+- `core.cliques_invalidated`: unique original stored cliques first invalidated.
+- `core.incidence_visits`: incidence entries inspected when removing vertices,
+  including entries of an already-invalidated clique.
+- `core.degree_decrements`: updates to still-active vertices at first invalidation;
+  each invalidated h-clique produces exactly h-1 such updates.
+- `core_reduction_seconds`: monotonic elapsed time for exact threshold, full peel,
+  intersection with Y and lower-bound assertion. It is nested inside T_core and
+  T_postload and must not be added to them. No semantic decision reads it.
+
+The query-specific vertex saving is original_interval_size minus
+oracle_interval_size; it differs from the full-graph core removal count.
+Zero/equal-reduced-bound shortcuts keep network/backend fields null. Core work can
+still be measured on a positive query whose reduced domain is empty. All counters
+remain exact; failures retain whatever stage information was actually recorded.
+See [preservation arguments](M4_IMPLEMENTATION.md) and [M4 evidence](../evidence/m4/REPORT.md).

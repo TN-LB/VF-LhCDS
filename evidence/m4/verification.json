@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "accepted_commands": 36,
+  "command_manifest_sha256": "ebe006236c01a3f619e58359adf95c45a3319e1ec8e26ae758adfe7890fd5fa8",
+  "source_files_unchanged_since_acceptance": 53,
+  "protected_snapshot_files": 45,
+  "m3_tag_unchanged": "23a5b3415cf3ae053e55a01b219ca074ffe6fd67",
+  "ctest_profiles": [
+    "build",
+    "build-sanitize",
+    "build-release",
+    "build-relwithdebinfo"
+  ],
+  "ctest_each": "12/12",
+  "pytest": "74 passed",
+  "campaign_directories": 14,
+  "mode_pairs_cross_build": 7,
+  "m3_frozen_corpus_comparisons": 3,
+  "local_profile_processes": 36,
+  "limitations": "Finite implementation/mode equivalence and local diagnostics only; no theorem, scalability or M5 benchmark proof"
+}

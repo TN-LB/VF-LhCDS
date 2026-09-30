@@ -1,0 +1,26 @@
+{
+  "workload_sha256": "48bf8466ecbf97ca38f07884f8f5bb710b045a942b7ef076527208f9fb245ca3",
+  "library_sha256": "c877d5a3c27a68e2f3b7ebca66b7b75e049ef6452c7e6921824259daa1e45290",
+  "driver_sha256": "77fdbb841bf5b0cda8558fb4b270fd14784f4f2224f208667afb24d9bc105bf2",
+  "executable_sha256": "b21e77528dae21f8a7e22301a691e0187943ccc1bdf58d1f338cd5cef7dd1172",
+  "baseline_source_commit": "5802d5a2a04cae35eaf708aba65f638abf642c8f",
+  "phase_results": {
+    "evidence/m4/profile-inputs/layered-h3.graph": {
+      "median_solve_seconds": 0.0050579292,
+      "median_footprint_seconds": 0.0021293708,
+      "ratio_of_separately_measured_medians": 0.4209965612013707
+    },
+    "evidence/m4/profile-inputs/dense-pendants-h3.graph": {
+      "median_solve_seconds": 0.0217323375,
+      "median_footprint_seconds": 0.009066258300000001,
+      "ratio_of_separately_measured_medians": 0.4171782395704098
+    },
+    "evidence/m4/profile-inputs/layered-h4.graph": {
+      "median_solve_seconds": 0.0075776125,
+      "median_footprint_seconds": 0.0029232791,
+      "ratio_of_separately_measured_medians": 0.3857783833628336
+    }
+  },
+  "selected": "Exact membership-marker footprint scan; existing sorted scan remains default/off baseline",
+  "reason": "Footprint construction is 39-44 percent of solve time by separately measured medians on these three fixed diagnostic fixtures. Test a single membership-scan change; map aggregation, weights and network stay identical. These independent microphase times are diagnostic estimates, not an exact additive time breakdown."
+}

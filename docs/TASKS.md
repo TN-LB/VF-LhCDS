@@ -63,14 +63,24 @@ Implementation/test gate passed 2026-09-29: all 35 acceptance commands exit 0,
 2,198 exhaustive-small + 1,000 seeded + 64 higher-h base graph/h cases per build
 (tiers overlap), 74 unchanged reference tests. M3/P13.1 complete: local annotated tag `v0.1.0-m3-correctness` freezes the tested implementation.
 Implementation commit: `23a5b3415cf3ae053e55a01b219ca074ffe6fd67`. [Report](../evidence/m3/REPORT.md).
-M4/M5 remain open; finite agreement is implementation evidence, not a theorem proof.
+At M3 delivery M4/M5 remained open; finite agreement is implementation evidence,
+not a theorem proof. Executed M4 work follows below.
 
 ## M4 - Optional optimization (prompts 07, 08; needs M3)
 
-- [ ] P07.1 Exact clique-core peeling; one update per invalidated clique.
-- [ ] P07.2 Query-local `Y_oracle` only; original lambda, endpoints and extraction graph unchanged, T17.
-- [ ] P07.3 Written containment argument + off/on equality + separate reduction-cost measurements.
-- [ ] P08.1 Profile first; select ONE justified optimization and provide equivalence argument, switch and regression.
+- [x] P07.1 Exact clique-core peeling; one update per invalidated clique. [M4 evidence](../evidence/m4/REPORT.md): independent all-subset core truth, cascades and exact incidence/update counters in Debug and ASan/UBSan.
+- [x] P07.2 Query-local `Y_oracle` only; original lambda, endpoints and extraction graph unchanged, T17. [Actual audit-C trace](../evidence/m4/core_witness.json): root non-chain core, lower-threshold pendant recovery and original-Y terminal extraction.
+- [x] P07.3 Written containment argument + off/on equality + separate reduction-cost measurements. [Argument](M4_IMPLEMENTATION.md), [four-mode campaigns and local time/RSS](../evidence/m4/REPORT.md): core defaults off; exact threshold/work/time measured separately.
+- [x] P08.1 Profile first; select ONE justified optimization and provide equivalence argument, switch and regression. [Pre-edit measurement/selection](../evidence/m4/profile-selection.json): membership footprint scan, explicit switch, all-corpus equality and 36 local post-change profile runs; sorted remains default.
+
+M4 implementation/test gate met on 2026-09-29: 36/36 acceptance commands exit 0;
+Debug, ASan/UBSan, Release and RelWithDebInfo pass 12/12 CTest each; pytest 74 passed.
+Both Debug and sanitizer run 2,198 exhaustive-small, 1,000 seeded, 64 higher-h and
+31 smoke base graph/h cases through all four core/footprint mode combinations.
+M3 frozen sources/evidence/tag and M1 reference remain preserved. Changes are
+uncommitted on `5802d5a`; source hashes identify the tested working tree, and the
+formal new-code traceability commit gate remains pending. No new tag is required
+by M4. Local synthetic diagnostics do not complete any M5 benchmark task.
 
 Backlog, not the initial release gate: streaming, singleton folding, alternative flow algorithms,
 oracle-result caches, component scheduling, parallel enumeration, tie-inclusive output.

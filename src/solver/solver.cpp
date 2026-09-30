@@ -11,7 +11,7 @@ void SolveStats::record(const QueryStats& query) {
 }
 SolveResult solve(const MaterializedCliques& index, const std::optional<BigInt>& k,
                   const CapacityPolicy policy, SolveStats* progress,
-                  const TraceSink& trace, const StopRequested& stop) {
+                  const TraceSink& trace, const StopRequested& stop, const OracleOptions options) {
     if (k && *k < 1) throw std::invalid_argument("k must be positive");
     SolveStats local;
     SolveStats& stats = progress ? *progress : local;
@@ -31,7 +31,7 @@ SolveResult solve(const MaterializedCliques& index, const std::optional<BigInt>&
         // The oracle resets its own standalone logical counter. Interval entries
         // belong to this orchestration, including zero-lambda queries and failures.
         const auto z = [&] {
-            try { return oracle.separate(interval, policy, &query); }
+            try { return oracle.separate(interval, policy, &query, options); }
             catch (...) { query.logical_interval_queries = 1; stats.record(query); throw; }
         }();
         query.logical_interval_queries = 1; stats.record(query);

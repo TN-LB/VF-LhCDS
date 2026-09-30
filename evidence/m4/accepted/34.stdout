@@ -1,0 +1,7 @@
+version=0.2.0
+stage=M4
+cxx_standard=17
+compiler=AppleClang
+compiler_version=17.0.0.17000603
+build_type=Debug
+sanitizers=OFF

@@ -17,3 +17,8 @@ independent direct definitions and chain points, saving cases/results/traces and
 original/minimized failures. `run_solver.py` measures child-process end-to-end time
 and keeps optional direct-definition validation outside that measurement. These
 are correctness/evidence tools; benchmark fairness and baseline adapters remain M5.
+
+M4 `m4_campaign.py` reuses the M3 independent truth corpus with four implementation
+modes, all-subset definition cores and exact footprint records. It retains every
+mode response and stops after saving the original failure. `m4_profile.py` retains
+all fixed local timing/RSS repetitions; it is not an M5 benchmark campaign.

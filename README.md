@@ -1,6 +1,6 @@
 # VF-LhCDS: Proof-Aligned Implementation Kit
 
-Revised 2026-09-09. This repository contains the exact basic solver, independent
+Revised 2026-09-29. This repository contains the exact basic solver, independent
 reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
 ## Start here
@@ -55,7 +55,10 @@ M2 the exact graph/clique/flow oracle, and M3 the basic fixed-k solver. Read
 [build instructions](docs/BUILD.md), [wire contracts](docs/INTERFACE_CONTRACT.md),
 [M3 APIs and timing](docs/M3_IMPLEMENTATION.md), and
 [executed M3 evidence](evidence/m3/REPORT.md). The C++ CLI supports `solve --k K`,
-`solve --all`, `oracle`, `inspect-graph`, help and build-info. Core reduction is off.
+`solve --all`, `oracle`, `inspect-graph`, help and build-info. M4 adds optional
+`--core-reduction safe` and `--footprint-scan membership`; defaults remain off/sorted.
+See [M4 preservation arguments](docs/M4_IMPLEMENTATION.md) and
+[executed M4 evidence](evidence/m4/REPORT.md).
 
 ```sh
 build/vflhcds solve --graph reference/fixtures/bridged_triangles.graph --h 3 --all
@@ -63,7 +66,7 @@ build/vflhcds solve --graph reference/fixtures/bridged_triangles.graph --h 3 --a
 
 For direct-definition truth and independent principal chains, see
 [reference usage](reference/README.md). The M1 reference remains independent and
-unchanged. Optional optimization and baseline/benchmark work remain M4/M5.
+unchanged. M4 mode acceptance is tracked in TASKS; baseline/benchmark work remains M5.
 
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external

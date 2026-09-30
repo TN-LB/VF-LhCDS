@@ -1,0 +1,36 @@
+[  3%] Building CXX object CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o
+[  7%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o
+[ 10%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o
+[ 17%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o
+[ 17%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[ 21%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o
+[ 25%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o
+[ 28%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 32%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o
+[ 35%] Linking CXX static library libvflhcds_lib.a
+[ 50%] Built target vflhcds_lib
+[ 57%] Linking CXX executable vflhcds
+[ 57%] Linking CXX executable vflhcds_skeleton_test
+[ 64%] Built target vflhcds
+[ 64%] Built target vflhcds_skeleton_test
+[ 71%] Building CXX object CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o
+[ 71%] Building CXX object CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o
+[ 75%] Linking CXX executable vflhcds_m2_probe
+[ 75%] Built target vflhcds_m2_probe
+[ 78%] Building CXX object CMakeFiles/vflhcds_solver_test.dir/tests/m3_solver.cpp.o
+[ 82%] Linking CXX executable vflhcds_primitives_test
+[ 82%] Built target vflhcds_primitives_test
+[ 85%] Building CXX object CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o
+/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp:42:32: error: declaration shadows a local variable [-Werror,-Wshadow]
+   42 |                     const auto vertices=peel_core(index,threshold,&stats);
+      |                                ^
+/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp:25:33: note: previous declaration is here
+   25 |             std::vector<BigInt> vertices; std::vector<OriginalEdge> edges;
+      |                                 ^
+[ 89%] Linking CXX executable vflhcds_solver_test
+1 error generated.
+make[2]: *** [CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o] Error 1
+make[1]: *** [CMakeFiles/vflhcds_m3_probe.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 89%] Built target vflhcds_solver_test
+make: *** [all] Error 2

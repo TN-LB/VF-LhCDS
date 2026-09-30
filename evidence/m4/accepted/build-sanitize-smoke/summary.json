@@ -1,0 +1,67 @@
+{
+  "standalone_global_requests": 412,
+  "automatic_big_flows": 31,
+  "certified_separator_requests": 100,
+  "chain_pairs": 50,
+  "solver_runs": 1244,
+  "solver_logical_queries": 2512,
+  "solver_mincuts": 1732,
+  "all_runs": 124,
+  "fixed_k_prefixes": 498,
+  "checked_variants": 124,
+  "isolate_cases": 31,
+  "disjoint_union_cases": 31,
+  "base_graph_h_cases": 31,
+  "family_named": 15,
+  "family_complete-boundary": 2,
+  "family_complete": 2,
+  "family_h>n": 2,
+  "family_random": 2,
+  "family_planted": 2,
+  "family_bridge": 2,
+  "family_tied": 2,
+  "family_disconnected": 2,
+  "distinct_base_graphs": 27,
+  "mode_checks": {
+    "core_definition_requests": 589,
+    "footprint_executions": 3284,
+    "footprint_bound_pairs": 1642,
+    "point_executions": 1648,
+    "core_executions": 4370,
+    "oracle_vertices_removed": 3904,
+    "big_flows": 3712,
+    "separator_executions": 400,
+    "solve_executions": 4976
+  },
+  "tier": "smoke",
+  "status": "passed",
+  "seed": 20260929,
+  "modes": [
+    [
+      "off",
+      "sorted"
+    ],
+    [
+      "off",
+      "membership"
+    ],
+    [
+      "safe",
+      "sorted"
+    ],
+    [
+      "safe",
+      "membership"
+    ]
+  ],
+  "wall_seconds": 4.757532709278166,
+  "probe_sha256": "88dd81de9c1ceaed60b7f22300ff6a91f8dbc4ca41022bacfcd1fca7189ea7cb",
+  "evidence_scope": "Independent finite definition checks plus mode equality; not theorem or performance proof",
+  "sha256": {
+    "named_traces.json": "ce2e64342de6c85de5ad60dfb2b08576bc844b11a6f4bfad43805a4fa64dd3cb",
+    "cases.jsonl": "fc65103ce2167cc5ad590c92ae6aa6f574c7814242f38b6678ba3b78e4a2a034",
+    "results.jsonl.gz": "5284ddaede3a383bf5abbaefbec4572118e8c1f9f8869c6f9d010eefe9d780c9",
+    "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode_results.jsonl.gz": "9884bc0f28d661bc05dd1030c678290da21d74021664e49eecc54179ad255437"
+  }
+}

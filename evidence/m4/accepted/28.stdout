@@ -1,0 +1,13 @@
+[  6%] Building CXX object CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o
+[ 12%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o
+[ 18%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o
+[ 25%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[ 31%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o
+[ 37%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o
+[ 43%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o
+[ 50%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 56%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o
+[ 62%] Linking CXX static library libvflhcds_lib.a
+[ 87%] Built target vflhcds_lib
+[ 93%] Linking CXX executable vflhcds
+[100%] Built target vflhcds

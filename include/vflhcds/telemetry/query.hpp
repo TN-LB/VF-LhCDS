@@ -1,5 +1,6 @@
 #pragma once
 #include "vflhcds/core/exact.hpp"
+#include "vflhcds/clique/core.hpp"
 #include <optional>
 
 namespace vflhcds {
@@ -9,6 +10,9 @@ struct QueryStats {
     std::optional<BigInt> cliques_scanned, unique_footprints, forward_nodes,
         forward_arcs, residual_arcs, capacity_bit_length;
     std::optional<std::string> capacity_backend;
+    std::optional<BigInt> core_threshold;
+    std::optional<CoreStats> core;
+    std::optional<double> core_reduction_seconds;
 };
 std::string query_stats_json(const QueryStats& stats);
 }  // namespace vflhcds

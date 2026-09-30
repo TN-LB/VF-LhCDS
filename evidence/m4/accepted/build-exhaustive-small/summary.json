@@ -1,0 +1,57 @@
+{
+  "standalone_global_requests": 29545,
+  "automatic_big_flows": 2198,
+  "certified_separator_requests": 8280,
+  "chain_pairs": 4140,
+  "solver_runs": 38480,
+  "solver_logical_queries": 69848,
+  "solver_mincuts": 50172,
+  "all_runs": 4396,
+  "fixed_k_prefixes": 14844,
+  "checked_variants": 4396,
+  "base_graph_h_cases": 2198,
+  "family_all-labelled": 2198,
+  "distinct_base_graphs": 1099,
+  "mode_checks": {
+    "core_definition_requests": 22054,
+    "footprint_executions": 84328,
+    "footprint_bound_pairs": 42164,
+    "point_executions": 118180,
+    "core_executions": 166658,
+    "oracle_vertices_removed": 159722,
+    "big_flows": 119868,
+    "separator_executions": 33120,
+    "solve_executions": 153920
+  },
+  "tier": "exhaustive-small",
+  "status": "passed",
+  "seed": null,
+  "modes": [
+    [
+      "off",
+      "sorted"
+    ],
+    [
+      "off",
+      "membership"
+    ],
+    [
+      "safe",
+      "sorted"
+    ],
+    [
+      "safe",
+      "membership"
+    ]
+  ],
+  "wall_seconds": 62.02213058248162,
+  "probe_sha256": "97c5e45414caa22aee0f906ee7ca2c50460831eb3de0d7bd94cb718e9bdb9688",
+  "evidence_scope": "Independent finite definition checks plus mode equality; not theorem or performance proof",
+  "sha256": {
+    "named_traces.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cases.jsonl": "c2cce6ce3d46f49f12c42ee16c4d7e9ff45ae742a757542a4b78bc37fcac1961",
+    "results.jsonl.gz": "6e6e1a6108441d11faad643ff2cbb0a12fc16e87d3025e83ae0cc527c65776d9",
+    "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode_results.jsonl.gz": "5ece42732a283d342da79b5505f71a6f72460fb14d91d62f026c2a587d17ef0a"
+  }
+}
