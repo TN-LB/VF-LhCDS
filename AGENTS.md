@@ -74,12 +74,26 @@ numeric limits and real fallback. TSan is required before parallel code is enabl
 `review/math_sanity.py` is plan-review evidence only, not a completed production
 reference, flow backend, sanitizer campaign or benchmark.
 
+## Local commits
+
+Owner direction (2026-10-06): after meaningful progress and the relevant checks,
+create a focused local Git commit without asking for confirmation again. Include
+task-related code, documentation and evidence; leave unrelated edits untouched.
+Report the commit ID and any remaining limitations. Do not push unless the owner
+explicitly requests it. A commit is a progress checkpoint, not a declaration that
+a milestone is complete; preserve failed/censored experimental evidence.
+
 ## External methods and experiments
 
 Pin baseline commits and record licenses, patches, supported h, output semantics
 and timing. DCLDS and IPPV are primary general-h targets; specialized baselines are
 stratified. Do not copy DCLDS techniques into the proposed algorithm without the
 separate approval required by D012, even if a license permits copying.
+
+Current owner direction (2026-10-02, D029): defer further DCLDS reading, acquisition,
+code/theory comparison and integration. Continue the independently planned
+VF-LhCDS/IPPV work; DCLDS is not a prerequisite for this current execution stage.
+Preserve its existing snapshots and historical records; do not mark P09b.1 complete.
 
 Use common normalized graphs. Distinguish definition-checked, structural-checked
 and cross-implementation-agreement evidence. Density/connectivity checks do not
