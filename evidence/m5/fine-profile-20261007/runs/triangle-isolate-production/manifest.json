@@ -1,0 +1,27 @@
+{
+  "case": {
+    "name": "triangle-isolate",
+    "graph": "reference/fixtures/triangle_and_isolate.graph",
+    "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+    "h": 3,
+    "k": 5
+  },
+  "mode": "production",
+  "config_sha256": "d54caf2e94a2c51a94c24a7b28487339fe9331cd97f3b183f6e4dfd5c751764c",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+    "--h",
+    "3",
+    "--k",
+    "5",
+    "--clique-enumeration",
+    "adjacency",
+    "--footprint-scan",
+    "membership",
+    "--core-reduction",
+    "off"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "date": "2026-10-07",
+  "decision": "D037",
+  "scope": "bounded fine phase diagnostic, not a formal comparison campaign",
+  "production_binary": "build-m5-adjacency-release/vflhcds",
+  "tiny": [
+    {
+      "name": "bridged-triangles",
+      "graph": "reference/fixtures/bridged_triangles.graph",
+      "graph_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "h": 3,
+      "k": 5
+    },
+    {
+      "name": "triangle-isolate",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 3,
+      "k": 5
+    }
+  ],
+  "real": [
+    {
+      "name": "ca-grqc",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 5
+    },
+    {
+      "name": "ca-condmat",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 5
+    }
+  ],
+  "order": "tiny: production, Release, ASan/UBSan per fixture; real: production then Release per graph, listed order",
+  "repeat_count": 1,
+  "seed": null,
+  "seed_note": "deterministic listed order; no random sampling",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "workers": 1,
+  "serial": true,
+  "cache_policy": "uncontrolled",
+  "warmups": 0,
+  "retries": 0,
+  "mode": {
+    "clique_enumeration": "adjacency",
+    "footprint_scan": "membership",
+    "core": "off"
+  },
+  "failure_policy": "stop on failed tiny gate, validation, output/counter disagreement or other error; preserve and continue real native timeouts; report unrun calls",
+  "validation": "separate process after each complete child; strict plus independent definition on tiny graphs, structural on real graphs",
+  "build_timeout_seconds": 600,
+  "sanitizers": "Debug ASan+UBSan on tiny fixtures only"
+}

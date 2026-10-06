@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "attempted": [
+    {
+      "case": "bridged-triangles",
+      "mode": "production",
+      "completed": true
+    },
+    {
+      "case": "bridged-triangles",
+      "mode": "release",
+      "completed": true
+    },
+    {
+      "case": "bridged-triangles",
+      "mode": "sanitized",
+      "completed": true
+    },
+    {
+      "case": "triangle-isolate",
+      "mode": "production",
+      "completed": true
+    },
+    {
+      "case": "triangle-isolate",
+      "mode": "release",
+      "completed": true
+    },
+    {
+      "case": "triangle-isolate",
+      "mode": "sanitized",
+      "completed": true
+    }
+  ]
+}

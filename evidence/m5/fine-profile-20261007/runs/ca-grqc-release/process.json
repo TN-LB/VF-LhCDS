@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "3",
+    "5"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-release",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-06T16:52:00.947794+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "bb7f1053488a362ba50cb8b6db65dc09d142f0a15fa9908e4a0d8bc8be74ed81",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.5222054580226541,
+  "user_seconds": 0.496424,
+  "system_seconds": 0.017443999999999998,
+  "peak_rss_bytes": 48054272,
+  "finished_utc": "2026-10-06T16:52:01.471100+00:00",
+  "sha256": {
+    "stdout.txt": "7464c11bb500582860684f8fdf7cfc8f8a5ad06899850e92bdf63bb57c4d761a",
+    "stderr.txt": "0cbc0bdeec36c99edfeff5a83e666701c3cc0c61c06f8c80c6d65c5b37260ae1"
+  }
+}

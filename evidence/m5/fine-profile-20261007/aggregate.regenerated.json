@@ -1,0 +1,150 @@
+{
+  "rows": [
+    {
+      "case": "ca-grqc",
+      "production": {
+        "status": "completed",
+        "wall_seconds": 0.5013564163818955,
+        "user_seconds": 0.486514,
+        "system_seconds": 0.012777,
+        "peak_rss_bytes": 45514752,
+        "timing": {
+          "T_e2e": null,
+          "T_postload": 0.490172583,
+          "T_core": 0.481335541
+        }
+      },
+      "release": {
+        "status": "completed",
+        "wall_seconds": 0.5222054580226541,
+        "user_seconds": 0.496424,
+        "system_seconds": 0.017443999999999998,
+        "peak_rss_bytes": 48054272,
+        "completed_queries": 13,
+        "last_query_elapsed_seconds": 0.507257542,
+        "profile_scope": "complete_solve",
+        "exclusive": {
+          "solver_other": {
+            "nanoseconds": 512790,
+            "calls": 1
+          },
+          "count": {
+            "nanoseconds": 158008754,
+            "calls": 13
+          },
+          "footprints": {
+            "nanoseconds": 115128833,
+            "calls": 13
+          },
+          "oracle_other": {
+            "nanoseconds": 9934331,
+            "calls": 13
+          },
+          "network_build": {
+            "nanoseconds": 110462541,
+            "calls": 13
+          },
+          "max_flow": {
+            "nanoseconds": 82163919,
+            "calls": 13
+          },
+          "cut_extract": {
+            "nanoseconds": 2000333,
+            "calls": 13
+          },
+          "network_cleanup": {
+            "nanoseconds": 11207417,
+            "calls": 13
+          },
+          "trace": {
+            "nanoseconds": 3860624,
+            "calls": 13
+          }
+        },
+        "counters": {
+          "logical_interval_queries": 13,
+          "mincut_calls": 13,
+          "cliques_scanned": 627380,
+          "cliques_enumerated": 48260
+        },
+        "accounted_solve_seconds": 0.493279542,
+        "percent_of_accounted_solve": {
+          "solver_other": 0.10395525383454884,
+          "count": 32.032294175297466,
+          "footprints": 23.339470461963735,
+          "oracle_other": 2.013935335676256,
+          "network_build": 22.39349731637563,
+          "max_flow": 16.6566646301338,
+          "cut_extract": 0.40551712156755126,
+          "network_cleanup": 2.2720214494522866,
+          "trace": 0.7826442556987291
+        },
+        "boundary_solve_seconds": 0.493349041,
+        "comparison": {
+          "strict_output_equal": true,
+          "all_counters_equal": true
+        }
+      },
+      "diagnostic_to_control_wall_ratio": 1.041585269400197
+    },
+    {
+      "case": "ca-condmat",
+      "production": {
+        "status": "timeout",
+        "wall_seconds": 60.0069173341617,
+        "user_seconds": 57.517474,
+        "system_seconds": 0.433795,
+        "peak_rss_bytes": 155353088
+      },
+      "release": {
+        "status": "timeout",
+        "wall_seconds": 60.00329004228115,
+        "user_seconds": 58.835385,
+        "system_seconds": 0.41432399999999997,
+        "peak_rss_bytes": 167755776,
+        "completed_queries": 289,
+        "last_query_elapsed_seconds": 59.811796917,
+        "profile_scope": "completed_query_prefix_only",
+        "exclusive": {
+          "solver_other": {
+            "nanoseconds": 13734283,
+            "calls": 1
+          },
+          "count": {
+            "nanoseconds": 57092155583,
+            "calls": 151
+          },
+          "footprints": {
+            "nanoseconds": 869580546,
+            "calls": 289
+          },
+          "oracle_other": {
+            "nanoseconds": 48340003,
+            "calls": 289
+          },
+          "network_build": {
+            "nanoseconds": 504516116,
+            "calls": 289
+          },
+          "max_flow": {
+            "nanoseconds": 947873623,
+            "calls": 289
+          },
+          "cut_extract": {
+            "nanoseconds": 18888635,
+            "calls": 289
+          },
+          "network_cleanup": {
+            "nanoseconds": 59378869,
+            "calls": 289
+          },
+          "trace": {
+            "nanoseconds": 95946634,
+            "calls": 289
+          }
+        }
+      }
+    }
+  ],
+  "timing_scope": "diagnostic exclusive buckets, not a baseline performance comparison"
+}

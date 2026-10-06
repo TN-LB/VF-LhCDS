@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+    "--test-dir",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized",
+    "--output-on-failure"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/sanitized-ctest",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-06T16:51:08.672261+00:00",
+  "timeout_seconds": 600,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "407f7c74008eede0def33177e09a3646d45ab67d6fc1ce70b71e8b89a62a737a",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.1188343754038215,
+  "user_seconds": 0.13178499999999999,
+  "system_seconds": 0.40123899999999996,
+  "peak_rss_bytes": 16121856,
+  "finished_utc": "2026-10-06T16:51:09.792032+00:00",
+  "sha256": {
+    "stdout.txt": "ab3426c46cdcfba9ff5d8b06326016af142f9f8941c7af0c8cbefad79bb8abee",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

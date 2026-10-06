@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "attempted": [
+    {
+      "case": "ca-grqc",
+      "mode": "production",
+      "completed": true
+    },
+    {
+      "case": "ca-grqc",
+      "mode": "release",
+      "completed": true
+    },
+    {
+      "case": "ca-condmat",
+      "mode": "production",
+      "completed": false
+    },
+    {
+      "case": "ca-condmat",
+      "mode": "release",
+      "completed": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/run.py",
+    "profile"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/profile-driver",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-06T16:52:00.197263+00:00",
+  "timeout_seconds": 600,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 121.46659783273935,
+  "user_seconds": 117.898199,
+  "system_seconds": 1.046522,
+  "peak_rss_bytes": 167755776,
+  "finished_utc": "2026-10-06T16:54:01.661252+00:00",
+  "sha256": {
+    "stdout.txt": "d29a4642216b46d08d308418ebe5c892c60404c74cda8c98e37cff5a094be834",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

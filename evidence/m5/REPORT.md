@@ -1,44 +1,48 @@
-# M5 status — 2026-10-06
+# M5 status — 2026-10-07
 
-M5 remains **in progress**. The latest [core off/on ablation](core-ablation-20261006/REPORT.md)
-executes 48 VF calls: two graphs, h=3, k={5,10,15,20}, three repetitions,
-seed 20261003, the same adjacency/membership Release binary and 60-second guards.
+M5 remains **in progress**. The latest [fine phase diagnostic](fine-profile-20261007/REPORT.md)
+locates a counting bottleneck on CA-CondMat: its recorded 289-query prefix spends
+**57.09 s of 59.65 s** in `MaterializedCliques::count`, versus **0.95 s** in max-flow.
+These are partial-run measurements; both fresh production and diagnostic calls
+reach the unchanged 60-second limit. Complete CondMat output/profile comparison
+is unavailable, and no production optimization has been made yet.
 
-| Scope | Result |
-|---|---|
-| CA-GrQc, all four k values | Both modes complete; 12/12 strict paired matches |
-| CA-CondMat, k=5 | Both modes complete; 3/3 strict paired matches |
-| CA-CondMat, k=10/15/20 | Both modes time out in all 18 calls |
+The fresh CA-GrQc pair completes with identical output and counters. Counting,
+footprint aggregation, network construction and flow take 32.03%, 23.34%, 22.39%
+and 16.66% of its complete diagnostic solve time. One instrumented/control pair
+does not establish stable overhead or performance differences.
 
-All 30 completed outputs pass separate structural checks and are stable across
-repetitions. Core does not resolve the large-k timeout boundary. Across the five
-completed settings, safe-core median time changes range from **-0.93% to +3.23%**;
-peak-RSS medians decrease **4.18%-11.91%**. These are three-repeat local observations,
-not a general speedup or memory guarantee. [Full time/RSS table](core-ablation-20261006/aggregate/TABLE.md).
+The counting path still tests each clique against a sorted vertex set; membership
+footprint scanning optimizes a separate path. Applying exact membership checks
+to counting is the next candidate, subject to a preservation argument, switch,
+strict output-equivalence tests and a fresh bounded performance comparison.
 
-Core shrinks oracle/network sizes but retains the same query counts and footprint
-scan visits. Its measured overhead is included in solve/native time. The five
-complete settings have identical canonical outputs with the switch off/on.
-Finer counting, footprint, network-build and flow times remain unmeasured.
+This diagnostic executes all ten fixed native calls: eight complete, two timeout,
+none unrun. Six tiny definition checks, two real structural checks and five
+complete diagnostic/control output/counter comparisons pass. CondMat's 289-query
+prefix matches all three earlier matching core-off runs; historical times are
+not reused. Strict-warning Release and ASan/UBSan builds pass one diagnostic
+CTest each; **141 pytest tests pass**. The aggregate regenerates identically;
+18 raw process records and 5,243 historical evidence files verify. Production,
+reference, the four papers and historical measurements remain unchanged.
 
-137 Python tests pass. Evidence checks verify 365 raw inventory entries; seven
-aggregate artifacts regenerate identically. The campaign driver exits 1 for
-retained timeouts; aggregation, verification and regeneration exit 0. This turn
-changes only the external comparison policy, tests, documentation and evidence.
-Production code/binary, papers, reference and historical records are unchanged.
+Earlier evidence remains separate:
 
-The earlier [VF/IPPV pilot](pilot-membership-20261006/REPORT.md) remains separate:
-IPPV was faster in its four completed CA-GrQc settings, and VF timed out in all
-12 CA-CondMat runs. IPPV is not rerun in this ablation. The new off-mode CA-CondMat
-k=5 completion cannot be attributed to core; cross-campaign timing variation is
-unresolved and measurements are not pooled. IPPV's known zero-density omission
-still limits full-domain comparison. DCLDS remains deferred.
+- [Core ablation](core-ablation-20261006/REPORT.md): 48 calls, 30 complete and 18
+  timeout; all 15 complete pairs strictly agree. Safe-core time changes are mixed
+  (-0.93% to +3.23% medians), with smaller observed peak-RSS medians. It does not
+  resolve larger-k timeouts.
+- [VF/IPPV pilot](pilot-membership-20261006/REPORT.md): IPPV is faster in the four
+  completed GrQc settings; VF times out in all 12 CondMat calls. No new IPPV run
+  or pooled timing comparison is added. Runtime variation across campaigns is
+  unresolved; IPPV's zero-density omission still limits full-domain comparison.
 
-P11.3's smoke gate is complete. Broader h/grid experiments, finer phase profiling,
-remaining baseline/final-comparison scope, clean-machine smoke and a reproducibility
-release remain unfinished. C++ builds/CTest/sanitizers are not rerun this turn.
-Structural checks and output agreement do not prove maximality or the theorem.
+Broader h/grid experiments, complete CondMat profiling, remaining baseline/final-
+comparison scope, full production correctness reruns for future optimizations,
+clean-machine smoke and the reproducibility release remain open. DCLDS stays
+deferred. Structural checks and finite agreement do not prove maximality or the
+mathematical theorem.
 
-[Latest results, commands and environment](core-ablation-20261006/REPORT.md) ·
-[Changed-file manifest](core-ablation-20261006/files_changed.json) ·
-[Core preservation argument](../../docs/M4_IMPLEMENTATION.md)
+[Latest commands, environment and limitations](fine-profile-20261007/REPORT.md) ·
+[Changed files](fine-profile-20261007/files_changed.json) ·
+[Timer boundaries and preservation argument](../../experiments/fine_profile/README.md)

@@ -1,0 +1,6 @@
+bridged-triangles production completed 0.014536499977111816
+bridged-triangles release completed 0.26712912507355213
+bridged-triangles sanitized completed 0.404081916436553
+triangle-isolate production completed 0.007980208843946457
+triangle-isolate release completed 0.007757625542581081
+triangle-isolate sanitized completed 0.06651183404028416

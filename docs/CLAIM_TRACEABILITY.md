@@ -619,3 +619,35 @@ pooling occurs. P15.1 gains byte-identical regeneration of seven aggregates from
 365 checked raw inventory entries. Driver exit 1 retains timeouts; aggregation,
 verification and regeneration exit 0. Wider experiments, clean-machine release,
 C++ rebuild/CTest/sanitizers and DCLDS work remain unrun. M5 stays incomplete.
+
+## M5 fine phase diagnostic — 2026-10-07
+
+P12.1/O12 gain [D037 phase evidence](../evidence/m5/fine-profile-20261007/REPORT.md)
+from hash-checked generated source copies. `vf_profile::Scope` records exclusive
+monotonic wall times; the added lines do not alter production expressions,
+ordering or counters. Deterministic timer tests cover nesting, phase changes,
+snapshots and exception unwinding. Production, reference and all four papers
+remain unchanged; this is instrumentation validation, not a new theorem claim.
+
+Release and ASan/UBSan builds succeed; each diagnostic CTest passes 1/1. The
+reference/harness/adapter/instrumentation pytest run passes 141 tests. Six tiny
+native runs pass independent definition validation; four diagnostic/control
+comparisons preserve exact output and full counters. The real-graph schedule
+executes all four calls: the GrQc pair completes with strict output/counter
+agreement and separate structural checks; both CondMat calls time out at 60 s.
+
+The 289-query CondMat prefix records 57.092156 s of clique counting within
+59.650414 s accounted solve time; max-flow is 0.947874 s. Every prefix counter
+matches all three earlier matching 304-query core-off runs. This establishes a
+measured partial-run counting bottleneck, not complete CondMat output agreement,
+a future optimization's speedup, or a new VF/IPPV comparison. GrQc's complete
+profile has 32.03% counting, 23.34% footprints, 22.39% network construction and
+16.66% max-flow. Its single diagnostic/control time ratio 1.0416 does not isolate
+or generalize instrumentation overhead.
+
+P14.1 gains this scoped interpretation of complete versus censored timing.
+P15.1 gains byte-identical aggregate regeneration and verification of 18 raw
+native/validator process records and 5,243 unchanged historical evidence files.
+Eight native calls complete, two time out, none remain unrun. No production
+optimization, full C++ correctness/numeric-fallback campaign, clean-machine run,
+new baseline comparison or DCLDS work is added; M5 remains incomplete.

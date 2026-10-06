@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "unchanged_groups": {
+    "paper_sha256": 4,
+    "reference_sha256": 23,
+    "production_source_sha256": 40,
+    "binary_sha256": 2,
+    "provenance_sha256": 2,
+    "library_sha256": 1,
+    "old_probe_sha256": 1,
+    "pinned_harness_sha256": 13,
+    "historical_evidence_sha256": 5243,
+    "diagnostic_source_sha256": 7
+  },
+  "regeneration_byte_identical": true,
+  "raw_process_records_verified": 18
+}

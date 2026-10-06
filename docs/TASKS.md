@@ -271,6 +271,18 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   ablation comparison is now an explicit runner policy; 137 pytest checks pass.
   Production, papers and historical evidence remain unchanged. Broader h/grid,
   phase profiling and remaining M5 gates stay open.
+  D037 [fine phase diagnostic](../evidence/m5/fine-profile-20261007/REPORT.md)
+  executes two tiny fixtures in production/Release/ASan+UBSan, then one fresh
+  production/diagnostic pair on each graph at h=3,k=5. Eight calls complete and
+  two CondMat calls time out; none remain unrun. All six tiny definition checks,
+  both GrQc structural checks and five complete diagnostic/control output/counter
+  comparisons pass. The CondMat 289-query prefix spends 57.092156 s of 59.650414 s
+  in clique counting; its counters match all three earlier 304-query core-off
+  runs. Complete CondMat output/profile equivalence remains unavailable. Separate
+  strict-warning Release and ASan+UBSan builds pass one diagnostic CTest each;
+  141 pytest checks pass. Source copies contain observation-only timer insertions;
+  production and papers remain unchanged. This profiles a counting bottleneck,
+  without implementing its optimization or completing P12.1/M5.
 - [ ] P14.1 Review conclusions against available direct baselines and validation/timing scope.
   2026-10-06: [local pilot review](../evidence/m5/pilot-membership-20261006/REPORT.md)
   checks pins, serial execution and separate validation boundaries. IPPV has
@@ -282,6 +294,9 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   differences. The off control also completes CA-CondMat k=5 in this new campaign;
   cross-campaign timing variation is not attributable to core. IPPV is not rerun,
   and no new relative-performance conclusion combines the two campaigns.
+  D037 distinguishes complete GrQc times from the censored CondMat query prefix;
+  neither one-pair overhead nor historical query-counter agreement establishes
+  a general speedup or complete CondMat correctness/performance result.
 - [ ] P15.1 Regenerate results from immutable manifests; clean-machine smoke; reproducibility package.
   2026-10-06: [local regeneration](../evidence/m5/pilot-membership-20261006/regeneration.json)
   reproduces all seven aggregate artifacts byte-for-byte from 461 verified raw
@@ -290,5 +305,8 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   D036 also verifies 365 raw inventory entries and regenerates all seven core-
   ablation aggregate artifacts identically, without solver reruns. The clean-
   machine and full-release gates remain open.
+  D037 regenerates its diagnostic aggregate identically, checks 18 raw native/
+  validator process records and preserves 5,243 historical evidence files. No
+  clean-machine run or full reproducibility release is added.
 
 Gate: traceable evidence, not a predetermined speedup or SOTA outcome.

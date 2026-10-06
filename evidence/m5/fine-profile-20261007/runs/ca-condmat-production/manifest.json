@@ -1,0 +1,27 @@
+{
+  "case": {
+    "name": "ca-condmat",
+    "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+    "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "h": 3,
+    "k": 5
+  },
+  "mode": "production",
+  "config_sha256": "d54caf2e94a2c51a94c24a7b28487339fe9331cd97f3b183f6e4dfd5c751764c",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+    "--h",
+    "3",
+    "--k",
+    "5",
+    "--clique-enumeration",
+    "adjacency",
+    "--footprint-scan",
+    "membership",
+    "--core-reduction",
+    "off"
+  ]
+}

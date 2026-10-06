@@ -1,0 +1,7 @@
+Test project /Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized
+    Start 1: exclusive_profile_timer
+1/1 Test #1: exclusive_profile_timer ..........   Passed    0.89 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.89 sec

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+    "3",
+    "5"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-release",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-06T16:51:36.170449+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "bb7f1053488a362ba50cb8b6db65dc09d142f0a15fa9908e4a0d8bc8be74ed81",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.26712912507355213,
+  "user_seconds": 0.0038529999999999997,
+  "system_seconds": 0.005037,
+  "peak_rss_bytes": 1425408,
+  "finished_utc": "2026-10-06T16:51:36.438729+00:00",
+  "sha256": {
+    "stdout.txt": "c1f60a9ff84304207745a783071b21056f3b86860878a621defdd2f5d1854809",
+    "stderr.txt": "8df4d8d8b97cf3b2bdaf473bf9d52432beb0cb18cbfead67f1591a699643f029"
+  }
+}

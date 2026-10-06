@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "native_completed": 8,
+  "native_timeouts": 2,
+  "native_unrun": 0,
+  "validators_passed": 8,
+  "definition_checks": 6,
+  "pytest_passed": 141,
+  "diagnostic_ctest_release": "1/1",
+  "diagnostic_ctest_sanitized": "1/1",
+  "sanitized_tiny_runs_completed": 2,
+  "aggregate_regeneration_equal": true,
+  "historical_evidence_files_unchanged": 5243,
+  "tracked_and_new_inventory_entries": 143,
+  "files_changed_sha256": "d2565616b98d35034c3cbfac9178f58037a286b0271c23b340d6df65befeeeb7",
+  "remaining_limitations": [
+    "CondMat complete profile/output comparison unavailable at 60 seconds",
+    "no production optimization or new baseline comparison",
+    "no general-h/full-production-regression/clean-machine/release campaign"
+  ]
+}

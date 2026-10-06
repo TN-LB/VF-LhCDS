@@ -1,0 +1,520 @@
+{
+  "process_commands": [
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/aggregate/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/run.py",
+        "aggregate"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/aggregate",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "8b9022fd7a3602b5730d2e0b730c0a16ab162c1180aba7b1ced00e515a041d4a"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/history/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/check_history.py"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/history",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "3c9d79b9f3520e2a1236a7f81501b14491d4b4350cfdad95eb08c22c8c5dcfff"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/profile-driver/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/run.py",
+        "profile"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/profile-driver",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "785aad1d67d8e41eabd844e356d0ffdc089a11dbfddfd1e33ecea2075ecfaf86"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/pytest/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "-m",
+        "pytest",
+        "/Users/nost/Documents/VF-LhCDS/reference/tests",
+        "/Users/nost/Documents/VF-LhCDS/experiments/test_harness.py",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/test_adapter.py",
+        "/Users/nost/Documents/VF-LhCDS/experiments/fine_profile/test_instrument.py",
+        "-q"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/pytest",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "44811b55966bf9472106a03a5a71a15921b4248fc6d10726103d1728450f272a"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/release-build/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "--build",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release",
+        "--target",
+        "vflhcds_fine_profile",
+        "profile_timer_test",
+        "-j2"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/release-build",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "7d3c731619a69091d3bc10c50b6b151c6df6e9c4e5c35cca49eb707829393b95"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/release-configure/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "-S",
+        "/Users/nost/Documents/VF-LhCDS/experiments/fine_profile",
+        "-B",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/release-configure",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "38d3b68b9705e8693b9e0665ef9918459178f343a83988e576e1bc28cd17b202"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/release-ctest/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+        "--test-dir",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release",
+        "--output-on-failure"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/release-ctest",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "442c3d982ee13af52e86cc50e680d62398599d12d11bcb414d993264fc7bb6bb"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/sanitized-build/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "--build",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized",
+        "--target",
+        "vflhcds_fine_profile",
+        "profile_timer_test",
+        "-j2"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/sanitized-build",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "1c9d640b47160c5c5aeba6d28e8d50c87c5ef285c38ed7309e2e8f25f52e81a2"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/sanitized-configure/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "-S",
+        "/Users/nost/Documents/VF-LhCDS/experiments/fine_profile",
+        "-B",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "-DVFLHCDS_ENABLE_SANITIZERS=ON"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/sanitized-configure",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "b32fabbb16f8bffb2c56467604ff245157083a9b1373b94f07c07702b2c522e2"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/sanitized-ctest/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+        "--test-dir",
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized",
+        "--output-on-failure"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/sanitized-ctest",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "dc36d1a1dda49ed9dd44724754b266f83f0088124ad663ddb78c03a42d46d6aa"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/tiny-driver/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/run.py",
+        "tiny"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/tiny-driver",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "9136b1b1e796389f0afdb39232e21f89d03ff52fc0b7feeca303ee227c0431d1"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/commands/verify/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/run.py",
+        "verify"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/commands/verify",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "b44033ace22fa55e805f773b2777069e74f47883489b83b686eb173b7a1c9a67"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-production/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+        "solve",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--clique-enumeration",
+        "adjacency",
+        "--footprint-scan",
+        "membership",
+        "--core-reduction",
+        "off"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-production",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "2746cc318c008ef32b367849405d1542865fd8702a8afc86d721532d5cdbe999"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-production/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-production/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition",
+        "--status",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-production/stderr.txt"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-production/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "b9c9e405f79433d4042b1dd67061fb3e293711eea91f81db6c4333f6359dd6e5"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-release/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-release",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "a800c0168c8756b7c01be4b830506861cf75a591f32b441a87a587a596429b5a"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-release/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-release/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-release/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "d7a1386435e251b163979f3dfa3dc6e724a1d5f913ea155d80a20b6fea720920"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-sanitized/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-sanitized",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "000ce58da17d8bb9729d667049d398ad086e59da553398bb51179745f39fb10a"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/bridged-triangles-sanitized/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-sanitized/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/bridged-triangles-sanitized/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "cb87637adcd375ab56c82b1b9336b7cb5bf392565e2b87df12b163814371b64b"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-condmat-production/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+        "solve",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--clique-enumeration",
+        "adjacency",
+        "--footprint-scan",
+        "membership",
+        "--core-reduction",
+        "off"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-condmat-production",
+      "status": "timeout",
+      "exit_code": -9,
+      "record_sha256": "7312fdb835db769096ba25114689eb3f475e7d2f09b28ab0a648c6db79af381c"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-condmat-release/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-condmat-release",
+      "status": "timeout",
+      "exit_code": -9,
+      "record_sha256": "f93739b6594b7b60c0a1b10c2e064b46abf920f76505e0b38b74b813097f060f"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-grqc-production/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+        "solve",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--clique-enumeration",
+        "adjacency",
+        "--footprint-scan",
+        "membership",
+        "--core-reduction",
+        "off"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-production",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "2fc8a0e88ba303b701d6cdc5967c296f24eb1b93eda1c902d4330c602908dfe2"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-grqc-production/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-production/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--status",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-production/stderr.txt"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-production/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "9ac8e595e1a4057498d3ff5d043a2a064038a6f52a94981fee2560d8aa3d33fc"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-grqc-release/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-release",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "ded8fa3c21dde98cca4910848bfbbed01cf2d6a6fdb25cfe599f9c3fd7ab72dd"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/ca-grqc-release/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-release/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/ca-grqc-release/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "30715beffc95807f178836ecdda80bb281362791c9b260a79c1376f678a571a4"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-production/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+        "solve",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--clique-enumeration",
+        "adjacency",
+        "--footprint-scan",
+        "membership",
+        "--core-reduction",
+        "off"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-production",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "1b71dee05a1994af2c7e5edebda6852c81cc978489889b1b42e37e1c09081915"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-production/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-production/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition",
+        "--status",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-production/stderr.txt"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-production/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "5d6619681c3a64fe6ca77a2ab9ef4e9b35aeefbb4b6bd93991b85256d6f79488"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-release/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-release",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "83c97b6648c41a16ade47d682ee516ec7961365379e5a9b18a485057fc19fb14"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-release/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-release/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-release/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "4056d5fc077cf4a29a3ea078307a8e6a5714f416bb53594009bcc1f33f44bdce"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-sanitized/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-sanitized/vflhcds_fine_profile",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "3",
+        "5"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-sanitized",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "8a4dfda8e32639dea7b4d4199f0e4c7bb860796c9e9fea68aa8f655d2d9ba3a5"
+    },
+    {
+      "record": "evidence/m5/fine-profile-20261007/runs/triangle-isolate-sanitized/validation/process.json",
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+        "--records",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-sanitized/stdout.txt",
+        "--h",
+        "3",
+        "--k",
+        "5",
+        "--strict",
+        "--definition"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/fine-profile-20261007/runs/triangle-isolate-sanitized/validation",
+      "status": "completed",
+      "exit_code": 0,
+      "record_sha256": "27f2b963f40bdb617824e27cf643965ab2d7776b3ae26f9bd68120c78db6ce13"
+    }
+  ],
+  "initial_driver_stages": [
+    ".venv/bin/python evidence/m5/fine-profile-20261007/run.py freeze",
+    ".venv/bin/python evidence/m5/fine-profile-20261007/run.py build"
+  ],
+  "initial_driver_exit_code": 0,
+  "hardware_commands": "See environment.json for the four executed sysctl commands",
+  "finalization_command": ".venv/bin/python evidence/m5/fine-profile-20261007/finalize.py"
+}

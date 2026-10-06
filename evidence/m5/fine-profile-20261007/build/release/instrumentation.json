@@ -1,0 +1,10 @@
+{
+  "original_sha256": {
+    "src/clique/materialized.cpp": "8b34a667a2b4440731802486a5da13980aedf4310e2829774cc2638b8d458e50",
+    "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0"
+  },
+  "generated_sha256": {
+    "materialized.cpp": "4a354f3e4c5f10ea36d568515b500c0e01e48ba692be83288ee771527beac406",
+    "closure.cpp": "685f038e9ab737173a823950b68a9628cbfa9acd8809693e0d9a609899e4c025"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "case": {
+    "name": "bridged-triangles",
+    "graph": "reference/fixtures/bridged_triangles.graph",
+    "graph_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+    "h": 3,
+    "k": 5
+  },
+  "mode": "production",
+  "config_sha256": "d54caf2e94a2c51a94c24a7b28487339fe9331cd97f3b183f6e4dfd5c751764c",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+    "--h",
+    "3",
+    "--k",
+    "5",
+    "--clique-enumeration",
+    "adjacency",
+    "--footprint-scan",
+    "membership",
+    "--core-reduction",
+    "off"
+  ]
+}

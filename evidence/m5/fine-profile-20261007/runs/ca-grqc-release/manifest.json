@@ -1,0 +1,17 @@
+{
+  "case": {
+    "name": "ca-grqc",
+    "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+    "h": 3,
+    "k": 5
+  },
+  "mode": "release",
+  "config_sha256": "d54caf2e94a2c51a94c24a7b28487339fe9331cd97f3b183f6e4dfd5c751764c",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-fine-profile-release/vflhcds_fine_profile",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "3",
+    "5"
+  ]
+}

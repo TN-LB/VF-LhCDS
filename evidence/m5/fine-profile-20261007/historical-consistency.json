@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "ca-grqc",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0000-0",
+      "historical_total_queries": 13,
+      "compared_query_prefix": 13,
+      "prefix_equal": true,
+      "complete_output_equal": true
+    },
+    {
+      "case": "ca-grqc",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0001-0",
+      "historical_total_queries": 13,
+      "compared_query_prefix": 13,
+      "prefix_equal": true,
+      "complete_output_equal": true
+    },
+    {
+      "case": "ca-grqc",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0002-0",
+      "historical_total_queries": 13,
+      "compared_query_prefix": 13,
+      "prefix_equal": true,
+      "complete_output_equal": true
+    },
+    {
+      "case": "ca-condmat",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0012-0",
+      "historical_total_queries": 304,
+      "compared_query_prefix": 289,
+      "prefix_equal": true,
+      "complete_output_equal": null
+    },
+    {
+      "case": "ca-condmat",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0013-0",
+      "historical_total_queries": 304,
+      "compared_query_prefix": 289,
+      "prefix_equal": true,
+      "complete_output_equal": null
+    },
+    {
+      "case": "ca-condmat",
+      "historical_run": "evidence/m5/core-ablation-20261006/campaign/runs/0014-0",
+      "historical_total_queries": 304,
+      "compared_query_prefix": 289,
+      "prefix_equal": true,
+      "complete_output_equal": null
+    }
+  ],
+  "scope": "query-prefix/output consistency only; no historical timing comparison or complete CondMat output claim"
+}
