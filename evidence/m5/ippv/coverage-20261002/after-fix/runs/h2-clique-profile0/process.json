@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-original/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "2",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/coverage-20261002/after-fix/runs/h2-clique-profile0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-01T18:01:10.784870+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "9e1583dbbd7ffe8d9c058d366ceda4c6effed18de008be1dd79fbd0d4d82804a",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.48408270813524723,
+  "user_seconds": 0.0021219999999999998,
+  "system_seconds": 0.002745,
+  "peak_rss_bytes": 1277952,
+  "finished_utc": "2026-10-01T18:01:11.269923+00:00",
+  "sha256": {
+    "stdout.txt": "362dc74ce501b7d547692643a39920fbfedcc503980aaa48ffdbe98787c37aeb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

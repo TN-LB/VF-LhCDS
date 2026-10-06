@@ -1,0 +1,197 @@
+{
+  "case": {
+    "name": "ca-grqc-h3-k20",
+    "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+    "h": 3,
+    "k": 20,
+    "definition": false
+  },
+  "repeat": 0,
+  "seed": 20261003,
+  "algorithm_sources": {
+    "ippv-five-patches": {
+      "run_directory": "evidence/m5/pilot-20261005/campaign/runs/0009-1",
+      "manifest_sha256": "d13bed31c7cfd18c771049c071a44037cf220b4f567cda1412978490fa79ad1a",
+      "native_command": [
+        "/Users/nost/Documents/VF-LhCDS/build-ippv-original/IPPV",
+        "-g",
+        "./dataset/input.txt",
+        "-h",
+        "3",
+        "-t",
+        "10",
+        "-k",
+        "20",
+        "-p",
+        "0"
+      ],
+      "semantic_sha256": "d6eea487b4455a07b062271bacafceed6c6878e63171c80802f77316c89afe0d"
+    },
+    "vf-adjacency-basic": {
+      "run_directory": "evidence/m5/pilot-20261005/campaign/runs/0009-0",
+      "manifest_sha256": "72dbff7e5e7eed40e2ecc1fab5a37316b5867ace185e23aa3408726d194c9815",
+      "native_command": [
+        "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+        "solve",
+        "--graph",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-20261005/campaign/runs/0009-0/graph.txt",
+        "--h",
+        "3",
+        "--k",
+        "20",
+        "--core-reduction",
+        "off",
+        "--footprint-scan",
+        "sorted",
+        "--clique-enumeration",
+        "adjacency"
+      ],
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c"
+    }
+  },
+  "original_graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+  "minimization": "not run; owner-directed stop at disagreement",
+  "root_cause": "unresolved; no algorithm assigned fault",
+  "details": {
+    "ippv-five-patches": {
+      "cutoff": "10/3",
+      "sets_absent_from_other_output": [
+        {
+          "rank": 18,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "20",
+          "density_num": "10",
+          "density_den": "3",
+          "vertices": [
+            5221,
+            5222,
+            5223,
+            5224,
+            5225,
+            5226
+          ]
+        },
+        {
+          "rank": 19,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "20",
+          "density_num": "10",
+          "density_den": "3",
+          "vertices": [
+            5112,
+            5113,
+            5114,
+            5115,
+            5116,
+            5117
+          ]
+        },
+        {
+          "rank": 20,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "20",
+          "density_num": "10",
+          "density_den": "3",
+          "vertices": [
+            4578,
+            4579,
+            4580,
+            4582,
+            4583,
+            4584
+          ]
+        }
+      ],
+      "above_cutoff_sets_absent_from_other_output": []
+    },
+    "vf-adjacency-basic": {
+      "cutoff": "10/3",
+      "sets_absent_from_other_output": [
+        {
+          "rank": 18,
+          "h": 3,
+          "vertex_count": 13,
+          "clique_count": "56",
+          "density_num": "56",
+          "density_den": "13",
+          "vertices": [
+            729,
+            733,
+            774,
+            776,
+            1597,
+            2298,
+            2299,
+            2300,
+            2301,
+            2302,
+            2303,
+            2311,
+            2314
+          ]
+        },
+        {
+          "rank": 19,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "20",
+          "density_num": "10",
+          "density_den": "3",
+          "vertices": [
+            1545,
+            3478,
+            3534,
+            3537,
+            3539,
+            3540
+          ]
+        },
+        {
+          "rank": 20,
+          "h": 3,
+          "vertex_count": 6,
+          "clique_count": "20",
+          "density_num": "10",
+          "density_den": "3",
+          "vertices": [
+            2802,
+            2803,
+            2806,
+            2808,
+            2811,
+            2812
+          ]
+        }
+      ],
+      "above_cutoff_sets_absent_from_other_output": [
+        {
+          "rank": 18,
+          "h": 3,
+          "vertex_count": 13,
+          "clique_count": "56",
+          "density_num": "56",
+          "density_den": "13",
+          "vertices": [
+            729,
+            733,
+            774,
+            776,
+            1597,
+            2298,
+            2299,
+            2300,
+            2301,
+            2302,
+            2303,
+            2311,
+            2314
+          ]
+        }
+      ]
+    }
+  }
+}

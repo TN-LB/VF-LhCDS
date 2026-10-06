@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/pilot-20261005/config.json",
+    "--evidence",
+    "evidence/m5/pilot-20261005/campaign",
+    "--stop-on-failure"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-04T17:45:36.021964+00:00",
+  "approval_sha256": "06bf2508d14348a1cb534e05035a2119afc0d5caef8f4c1c4fb39d05a5b53612",
+  "config_sha256": "03d199622719fd51c3da84fc2b0287750ae43098ad45076a22f910d26a82119e",
+  "environment_sha256": "02b8e88a7e4422e6229cb571932b75972463f7493741f20729eb7bdd12cf0099",
+  "decision_log_sha256": "b4eb82f8d39e882375de416563cbfd914a984d1f4dd3bae45b48cac31c08006e"
+}

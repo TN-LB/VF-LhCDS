@@ -1,0 +1,22 @@
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -441,6 +441,9 @@
+ }
+ 
+ void Graph::pava() {
++    // check_sg may shrink nag to the previous block count. Restore workspace
++    // before this pass writes one provisional block per selected vertex.
++    nag.resize(slt_nodes.size());
+    
+     sort(slt_nodes.begin(), slt_nodes.end(), [this](int a, int b)->bool {
+         return r[a] > r[b];
+@@ -527,6 +530,9 @@
+ }
+ 
+ void Graph::pava_h_clique() {
++    // check_sg may shrink nag to the previous block count. Restore workspace
++    // before this pass writes one provisional block per selected vertex.
++    nag.resize(slt_nodes.size());
+ 
+     sort(slt_nodes.begin(), slt_nodes.end(), [this](int a, int b)->bool {
+         return r[a] > r[b];

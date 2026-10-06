@@ -1,0 +1,57 @@
+{
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "kernel": "24.6.0",
+  "machine_id_sha256": "65319de5c83317931baea23a4c29368a63d97a3100c69c8f2e4fb2cefadba04b",
+  "hardware": {
+    "machdep.cpu.brand_string": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "hw.memsize": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "hw.physicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.physicalcpu"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    },
+    "hw.logicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+    }
+  },
+  "environment": {
+    "CXXFLAGS": null,
+    "CC": null,
+    "CXX": null,
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "ASAN_OPTIONS": null,
+    "UBSAN_OPTIONS": null
+  }
+}

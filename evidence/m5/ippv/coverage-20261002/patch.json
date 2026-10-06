@@ -1,0 +1,13 @@
+{
+  "id": "IPPV-B05",
+  "authorization": "D028",
+  "patch": "baselines/ippv/patches/0004-h2-enumeration-base-case.patch",
+  "patch_sha256": "5133cfce7824c1979779e23118b90b7cdc666f6168fc3a358ea2ca5067278ac2",
+  "reason": "h=2 reaches size[0] after malloc(0); one-edge graph enumerates zero cliques in Release and triggers heap-buffer-overflow under ASan",
+  "minimum_reproducer": "fixtures/h2-clique.graph",
+  "before_release": "runs/h2-clique-profile0/manifest.json",
+  "before_sanitizer": "h2-sanitizer-before/manifest.json",
+  "argument": "Every retained edge is exactly one 2-clique. Existing relabelled edge order and mapping are used to fill clique_out and both incidence lists. All kmax>=3 statements are unchanged; h=2 is part of the supplied IPPV paper scope (section 6.3.1). No top-k/tie/pruning policy is changed.",
+  "source_before_sha256": "6d294dd556f8deee5610042f535380b2c1f8af3ba87ef932bc6fdd0c9f3e9634",
+  "source_after_sha256": "8994671abed431be3ec6b1b6e8c5d51a1a71ad3f9331c6277e67c689312bc132"
+}

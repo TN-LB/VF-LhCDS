@@ -1,0 +1,40 @@
+{
+  "paper_sha256": 4,
+  "reference_sha256": 23,
+  "production_source_sha256": 40,
+  "binary_sha256": 2,
+  "provenance_sha256": 2,
+  "pinned_harness_sha256": 13,
+  "library_sha256": 1,
+  "old_probe_sha256": 1,
+  "historical_evidence_files": {
+    "evidence/m5/pilot-20261005": 261,
+    "evidence/m5/pilot-fixed-20261005": 313,
+    "evidence/m5/condmat-phase-20261005": 65,
+    "evidence/m5/condmat-membership-20261006": 42,
+    "evidence/m5/condmat-pair-20261006": 49,
+    "evidence/m5/pilot-membership-20261006": 512
+  },
+  "raw_inventory_entries": 365,
+  "native_statuses": {
+    "completed": 30,
+    "timeout": 18
+  },
+  "external_validator_successes": 30,
+  "paired_blocks": 24,
+  "tie_aware_matches": 15,
+  "strict_matches": 15,
+  "strict_disagreements": 0,
+  "pairs_not_compared": 9,
+  "stable_completed_cells": 10,
+  "planned_native_runs": 48,
+  "unrun": 0,
+  "historical_grqc_exact_output_matches": 24,
+  "historical_condmat_k5_exact_output_matches": 6,
+  "all_16_aggregate_cells_verified": true,
+  "native_and_validator_times_separate": true,
+  "completed_core_pair_counter_checks": 15,
+  "core_cost_included_in_solve": true,
+  "completeness_certified": false,
+  "builds_ctest_sanitizers_rerun": false
+}

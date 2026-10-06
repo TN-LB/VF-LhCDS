@@ -1,0 +1,20 @@
+{
+  "date_local": "2026-10-05",
+  "recorded_utc": "2026-10-04T17:44:38.439008+00:00",
+  "decision_id": "D030",
+  "status": "accepted",
+  "owner_reply": "\u53ef\u4ee5",
+  "approval_context": "Direct reply approving the 48-call two-input h=3,k={5,10,15,20},three-repeat proposal in this conversation.",
+  "proposal": "evidence/m5/campaign-proposal-20261005/PROPOSAL.md",
+  "proposal_sha256": "ef2324b55250863753c9312910f4a45f68c28183befc86ceb249fc38d99118d6",
+  "draft_config_sha256": "92d0073e72ad3de3f51d01e135e068bc9493d0831106afd514ed06b9bb7598d3",
+  "approved_config_sha256": "03d199622719fd51c3da84fc2b0287750ae43098ad45076a22f910d26a82119e",
+  "changed_fields_from_draft": [
+    "name",
+    "scope"
+  ],
+  "schedule_sha256": "74fe7f42450bd3e21cb6cfe511f092ed0683b1b465811051d65b8acd0f0827f9",
+  "execution_policy_sha256": "381282753b565e6b9df4a4ee3c16c73a8bbdb592ecd3cdbd00348c6e392decf9",
+  "approved_command_sha256": "09c19e5d555482b1c991525e4ba033e7fc56b50b45be4b4e62bcb7fc87ca3632",
+  "limits": "This pilot only; no grid/resource expansion, additional repeats, retry, missing-output synthesis, or DCLDS work authorized."
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_TESTING=OFF",
+      "-DVFLHCDS_ENABLE_SANITIZERS=OFF",
+      "-DCMAKE_CXX_FLAGS="
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "started_utc": "2026-10-03T08:03:20.398836+00:00",
+    "stdout": "0.stdout",
+    "stderr": "0.stderr",
+    "exit_code": 0,
+    "stdout_sha256": "e805ab022b86c8906738e1ec500cb955759f738d4aa7ba7351d8a78cff4b1f6f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "started_utc": "2026-10-03T08:03:20.959634+00:00",
+    "stdout": "1.stdout",
+    "stderr": "1.stderr",
+    "exit_code": 0,
+    "stdout_sha256": "3fdcb23b32f56e2ee1fcf0b939dc477e6cadeecf7ee2fc9d31f2bd00390631e5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

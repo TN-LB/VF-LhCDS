@@ -1,6 +1,7 @@
 // Test-only persistent adapter. Exhaustive subset inspection is guarded here,
 // outside the production library and CLI; Python owns expected truth.
 #include "vflhcds/io/graph.hpp"
+#include "enumeration_equivalence.hpp"
 #include <algorithm>
 #include <iostream>
 
@@ -48,7 +49,7 @@ int main() {
             for (std::size_t i = 0; i < n; ++i) vertices.push_back(integer());
             std::vector<OriginalEdge> edges;
             for (std::size_t i = 0; i < m; ++i) { BigInt u = integer(); BigInt v = integer(); edges.emplace_back(u, v); }
-            const Graph graph(std::move(vertices), edges); const MaterializedCliques index(graph, h); const ClosureOracle oracle(index);
+            const Graph graph(std::move(vertices), edges); const auto index = checked_adjacency_index(graph, h); const ClosureOracle oracle(index);
             while ((command = token()) != "end") {
                 if (command == "inspect") inspect(graph, index);
                 else if (command == "footprints") {

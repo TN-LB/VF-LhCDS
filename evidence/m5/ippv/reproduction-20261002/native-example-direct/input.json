@@ -1,0 +1,9 @@
+{
+  "source": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-CondMat.txt",
+  "sha256": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+  "h": 3,
+  "k": 20,
+  "iterations": 10,
+  "pattern": 0,
+  "scope": "author example reproduction only"
+}

@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-release/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "5",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h5-singleton-profile0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T04:10:06.416878+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.008296625688672066,
+  "user_seconds": 0.001438,
+  "system_seconds": 0.0014529999999999999,
+  "peak_rss_bytes": 1245184,
+  "finished_utc": "2026-10-05T04:10:06.425855+00:00",
+  "sha256": {
+    "stdout.txt": "67275ed7e21018c7f0c490f7b930d7f5a79514e96d568a1e8fa87aa279c3cec8",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

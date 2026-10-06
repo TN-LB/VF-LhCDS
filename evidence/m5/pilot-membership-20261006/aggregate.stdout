@@ -1,0 +1,21 @@
+{
+  "planned_native_runs": 48,
+  "recorded_native_runs": 48,
+  "native_statuses": {
+    "completed": 36,
+    "timeout": 12
+  },
+  "external_validators_completed": 36,
+  "structural_passes": 36,
+  "unrun_native_runs": 0,
+  "paired_comparisons": 24,
+  "strict_matches": 6,
+  "tie_aware_matches": 12,
+  "tie_aware_disagreements": 0,
+  "pairs_not_compared": 12,
+  "stop_reason": null,
+  "completeness_certified": false,
+  "raw_inventory_entries_verified": 461,
+  "campaign_exit_code": 1,
+  "campaign_wall_seconds": 862.1242705406621
+}

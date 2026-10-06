@@ -1,0 +1,17 @@
+{
+  "stop_on_failure": true,
+  "planned_runs": [
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0000-1"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "directory": "runs/0000-0"
+    }
+  ]
+}

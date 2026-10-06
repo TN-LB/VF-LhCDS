@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "identical_artifact_sha256": {
+    "TABLE.md": "483289bc646ed338018f7668136feeff57129c5d64a228bfd132eca618c26e23",
+    "cells.json": "bbbdbb4e7a8f7443080f2a8e91aa6c395b5c400d768ae701f9651b748110294d",
+    "provenance.json": "0b112f97f0196874fe602ab87caee614bcf3626b65731dbfd30f0e650ad91680",
+    "runs.json": "7a955800a7adb960d2e5e1132602db9a1932843cd019cb98034c2e4bf14e96ec",
+    "telemetry.json": "90e392979968876f273413b7b1976e1a5daa5ea1fb685713dffe7892be7a9ea7",
+    "totals.json": "e448f9c38c1554413660641f90716459250b999c8cd90267e43736460ddbbbb2",
+    "unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "native_solver_calls": 0,
+  "clean_machine_tested": false
+}

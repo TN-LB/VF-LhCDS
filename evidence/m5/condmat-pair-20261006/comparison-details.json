@@ -1,0 +1,61 @@
+{
+  "strict_match": false,
+  "tie_aware_match": true,
+  "identical_ranks": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "cutoff_density": "22",
+  "different_cutoff_records": {
+    "vf": {
+      "rank": 5,
+      "h": 3,
+      "vertex_count": 13,
+      "clique_count": "286",
+      "density_num": "22",
+      "density_den": "1",
+      "vertices": [
+        3099,
+        13549,
+        13550,
+        13551,
+        13552,
+        13553,
+        13554,
+        13555,
+        13556,
+        13557,
+        13558,
+        13559,
+        13560
+      ]
+    },
+    "ippv": {
+      "rank": 5,
+      "h": 3,
+      "vertex_count": 13,
+      "clique_count": "286",
+      "density_num": "22",
+      "density_den": "1",
+      "vertices": [
+        8146,
+        12288,
+        13784,
+        13785,
+        13786,
+        13787,
+        13788,
+        13789,
+        13790,
+        13791,
+        13792,
+        13793,
+        13794
+      ]
+    }
+  },
+  "vf_matches_previous_membership_output": true,
+  "completeness_certified": false
+}

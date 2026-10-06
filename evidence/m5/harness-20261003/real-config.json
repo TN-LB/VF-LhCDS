@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "name": "shared-real-input-diagnostic",
+  "scope": "diagnostic",
+  "seed": 20261003,
+  "repeats": 1,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-basic",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "off",
+        "footprints": "sorted"
+      }
+    },
+    {
+      "name": "ippv-five-patches",
+      "kind": "ippv",
+      "executable": "build-ippv-original/IPPV",
+      "sha256": "18d6d06799bdf17102dc0a14628236c7f0be8fc63eb1687a144b77afa9d2faf6",
+      "options": {
+        "iterations": 10
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "ca-grqc-h3-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    }
+  ]
+}

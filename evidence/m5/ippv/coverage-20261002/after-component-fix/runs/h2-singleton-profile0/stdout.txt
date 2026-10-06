@@ -1,0 +1,14 @@
+./dataset/input.txt
+output/input-1.txt
+Reading edgelist from file ./dataset/input.txt
+Graph construction
+kclist time is:2e-05
+#slt node 0 #slt edge 0 #h_cliques 0
+max_d 0
+#slt node 0 #slt edge 0 #slt_h_cliques 0
+#active nodes 1
+compute core and prune time: 0.0000
+Average Clustering Coefficient: nan
+fw 0.0000 sec, sg 0.0000 sec, pr 0.0000 sec, mf 0.0000 sec
+num of LhCDS 0
+io time: 0.0001, total time: 0.0003

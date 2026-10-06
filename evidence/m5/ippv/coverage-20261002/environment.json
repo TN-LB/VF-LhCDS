@@ -1,0 +1,32 @@
+{
+  "date_local": "2026-10-02",
+  "timezone": "Australia/Sydney",
+  "utc": "2026-10-01T18:08:11.970028+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "python_executable": "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+  "head": "56229397903813d3509ecb45b178bbde823e357b",
+  "source_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "boost": "1.86.0 existing headers",
+  "profiles": "author C++14 Release/O3; ASan/UBSan + libc++ hardening in second profile",
+  "versions": {
+    "compiler": {
+      "command": [
+        "clang++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple clang version 17.0.0 (clang-1700.6.3.2)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+      "stderr": ""
+    },
+    "cmake": {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "stderr": ""
+    }
+  }
+}

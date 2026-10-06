@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-30T17:40:55.473215+00:00",
+  "task": "P09.1",
+  "decision": "D027",
+  "owner_response": "可以，用吧",
+  "scope": "Proceed with IPPV as a separate external baseline",
+  "upstream_license_verified": false,
+  "author_redistribution_permission_claimed": false,
+  "base_commit": "56229397903813d3509ecb45b178bbde823e357b",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "source_destination": ".deps/baselines/ippv",
+  "source_is_ignored": true,
+  "benchmark_configuration": "not frozen; no benchmark authorization inferred"
+}

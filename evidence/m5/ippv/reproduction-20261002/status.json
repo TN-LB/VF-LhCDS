@@ -1,0 +1,11 @@
+{
+  "task": "P09.1",
+  "status": "partial-with-recorded-semantic-mismatch",
+  "source_reproduction_fixes": "implemented and tested under D028",
+  "finding": "IPPV-B04: required zero-density results omitted",
+  "no_output_policy_change_applied": true,
+  "unaffected_m5_audit_may_continue": true,
+  "m5_complete": false,
+  "report": "REPORT.md",
+  "verification": "verification.json"
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "algorithm": "IPPV-author-with-disclosed-patches",
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-original/IPPV",
+      "-g",
+      "./dataset/input.txt",
+      "-h",
+      "3",
+      "-t",
+      "10",
+      "-k",
+      "2",
+      "-p",
+      "0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-01T16:00:11.787626+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "20caf48a74d864f90c23a45a31d31c1a3e8b71b2173ea297cee7328cc84bb265",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.007446707226336002,
+    "user_seconds": 0.000988,
+    "system_seconds": 0.001148,
+    "peak_rss_bytes": 1277952,
+    "finished_utc": "2026-10-01T16:00:11.795527+00:00",
+    "sha256": {
+      "stdout.txt": "5576735bb7cdf1773c8a8fb6c192710e521bb1d14a4a2feaa9d287684231990b",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "normalized_input_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "converted_input_sha256": "78eb43b3b86f6a5f3fddd6d26a216daaf499f980663ffd0fb03c1c29fb8ab842",
+  "vertex_map_sha256": "f4069d23b7397a3a5acb4df70823090730695a91ef1e4747e786e397ed7982e1",
+  "h": 3,
+  "k": 2,
+  "iterations": 10,
+  "pattern": 0,
+  "status": "semantic_mismatch",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "cutoff_respected": true,
+      "density_nonincreasing": true,
+      "every_set_definition_valid": true,
+      "higher_density_complete": true,
+      "required_count": false,
+      "rounded_density_consistent": true,
+      "stdout_count_matches_file": true
+    },
+    "completeness_certified": false,
+    "expected": [
+      [
+        1,
+        4,
+        9
+      ],
+      [
+        -2
+      ]
+    ],
+    "level": "definition_checked",
+    "native_rounded_densities": [
+      "0.3333"
+    ],
+    "output_count": 1,
+    "passed": false,
+    "strict_match": false,
+    "strict_order_compatible": false,
+    "truth_count": 2
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "phase_note": "Author prints clock() CPU times; not comparable wall phases",
+  "evidence_scope": "single reproduction/validation run; no benchmark claim",
+  "native_output_sha256": "eda48b61432daed78b74cb24b0f257789943e19fb0b0dcc45d20f192f6671d8b",
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+      "validate",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/graph.txt",
+      "--native-output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/output/input-2.txt",
+      "--h",
+      "3",
+      "--k",
+      "2",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/canonical_output.jsonl",
+      "--declared-count",
+      "1",
+      "--definition"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-01T16:00:11.796351+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.05783112533390522,
+    "user_seconds": 0.044333,
+    "system_seconds": 0.010407999999999999,
+    "peak_rss_bytes": 21037056,
+    "finished_utc": "2026-10-01T16:00:11.854686+00:00",
+    "sha256": {
+      "stdout.txt": "76c3f0fe63e03d545ed94fc8de6cb6597ce79f8b6959e87caaa68b28f4ec4124",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "3a1b1b2564809cf03374fea544d2445ef24e6661e889837b6a0ac5b94f521825",
+    "dataset/input.txt": "78eb43b3b86f6a5f3fddd6d26a216daaf499f980663ffd0fb03c1c29fb8ab842",
+    "graph.txt": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+    "output/input-2.txt": "eda48b61432daed78b74cb24b0f257789943e19fb0b0dcc45d20f192f6671d8b",
+    "process.json": "2296b559f7d2044d89ee1455a278c5abd39abc06fc06d3c8b7e569260a8744a4",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "5576735bb7cdf1773c8a8fb6c192710e521bb1d14a4a2feaa9d287684231990b",
+    "validation/process.json": "edb8ac3349217e40c218b5ee9752db09c877eba72f2f04696940b7ddbbb66025",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "76c3f0fe63e03d545ed94fc8de6cb6597ce79f8b6959e87caaa68b28f4ec4124",
+    "vertex_map.json": "f4069d23b7397a3a5acb4df70823090730695a91ef1e4747e786e397ed7982e1"
+  }
+}

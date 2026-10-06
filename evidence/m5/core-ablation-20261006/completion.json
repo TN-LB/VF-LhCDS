@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/core-ablation-20261006/config.json",
+    "--evidence",
+    "evidence/m5/core-ablation-20261006/campaign",
+    "--stop-on-failure",
+    "--continue-on-timeout",
+    "--require-strict-agreement"
+  ],
+  "exit_code": 1,
+  "wall_seconds": 1363.1292023751885,
+  "finished_utc": "2026-10-06T12:45:23.182480+00:00",
+  "timing_scope": "Entire driver, including separate validation and evidence I/O."
+}

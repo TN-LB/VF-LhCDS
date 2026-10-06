@@ -1,0 +1,101 @@
+{
+  "sha": "60093e582bc584815ab824c3e8b94efdef138200",
+  "node_id": "C_kwDOP_hSvtoAKDYwMDkzZTU4MmJjNTg0ODE1YWI4MjRjM2U4Yjk0ZWZkZWYxMzgyMDA",
+  "commit": {
+    "author": {
+      "name": "Th. Huang",
+      "email": "119156533+s01bvral@users.noreply.github.com",
+      "date": "2026-02-23T19:48:46Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-02-23T19:48:46Z"
+    },
+    "message": "Update lds.cpp",
+    "tree": {
+      "sha": "8f23ab65e000bf6696c9230627156e47ac287b96",
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/trees/8f23ab65e000bf6696c9230627156e47ac287b96"
+    },
+    "url": "https://api.github.com/repos/s01bvral/DCLDS/git/commits/60093e582bc584815ab824c3e8b94efdef138200",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpnK8eCRC1aQ7uu5UhlAAAiTsQAFo3rUIqFmRWA6V3dS9lHlx8\nPCdHLJSTmh5DIBMIG6qx5y8wM9CnZ/ipznzIDj78jzIujYrNZU8h3PYfeuFy5vFV\nPrf8CN4SpDuR/OAu8gl72OxJqn0fHbMacoi85vteTVSBVMEfp4m0NqYRldYGKkCQ\n1Jb1I4V63gPZVBVRZs2WAg5EdfcUPq0fGMa9N78f5T21j9HHezLUy7EREAMjALGr\nuY2+vdbIp4/sQqQtZKNUn4gtYHswNxl3VvmiRhc8shr15fNSeyxBF3nFYTlgsL+7\nhgYfwmVIzdGpHAYCLWDvotlw1AMBllrzFqy5YjC1dq2hIn84o4Zt+O9/tfJy57bx\n9nT/pPClCiBA0Dv3lE8/N+tTi7glS6WnGSpfFErEFVrZ4seJIv4/EyOix6PNOTzB\ny7vzWweOWKR0GeGEKZRpuC5nU++1JUc/FmL0Pd5AYZLmmC8+SS4m6Viz0qNlMkqi\nMdWXB1jROj2mb9B4P4kkD8CD1Ianmam//h/t8VpzwbCkSnjo3tobdGGceSFdJcyK\nUt3XD7Cvg+rhsQ7RQLxm+wSWlR37CYvAsoly/WUWAh0I5TXE4Rts9d8GIYsJqyCg\nBbnEaKuXdOTPhqX8WNpCN56jbm0geAjeNcKYD4HS1tCUJZ0Vfr925Jsk62xSF36K\n180sjwhZ4jMzbwJyXeKT\n=2i+P\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 8f23ab65e000bf6696c9230627156e47ac287b96\nparent 3245242caf578fc07524aaafff053f4c4d511593\nauthor Th. Huang <119156533+s01bvral@users.noreply.github.com> 1771876126 -0500\ncommitter GitHub <noreply@github.com> 1771876126 -0500\n\nUpdate lds.cpp",
+      "verified_at": "2026-02-23T19:48:47Z"
+    }
+  },
+  "url": "https://api.github.com/repos/s01bvral/DCLDS/commits/60093e582bc584815ab824c3e8b94efdef138200",
+  "html_url": "https://github.com/s01bvral/DCLDS/commit/60093e582bc584815ab824c3e8b94efdef138200",
+  "comments_url": "https://api.github.com/repos/s01bvral/DCLDS/commits/60093e582bc584815ab824c3e8b94efdef138200/comments",
+  "author": {
+    "login": "s01bvral",
+    "id": 119156533,
+    "node_id": "U_kgDOBxovNQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/119156533?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/s01bvral",
+    "html_url": "https://github.com/s01bvral",
+    "followers_url": "https://api.github.com/users/s01bvral/followers",
+    "following_url": "https://api.github.com/users/s01bvral/following{/other_user}",
+    "gists_url": "https://api.github.com/users/s01bvral/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/s01bvral/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/s01bvral/subscriptions",
+    "organizations_url": "https://api.github.com/users/s01bvral/orgs",
+    "repos_url": "https://api.github.com/users/s01bvral/repos",
+    "events_url": "https://api.github.com/users/s01bvral/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/s01bvral/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "3245242caf578fc07524aaafff053f4c4d511593",
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/commits/3245242caf578fc07524aaafff053f4c4d511593",
+      "html_url": "https://github.com/s01bvral/DCLDS/commit/3245242caf578fc07524aaafff053f4c4d511593"
+    }
+  ],
+  "stats": {
+    "total": 237,
+    "additions": 3,
+    "deletions": 234
+  },
+  "files": [
+    {
+      "sha": "163bb61ffb0499cc8462c156b8a86a85d1e67859",
+      "filename": "lds.cpp",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 234,
+      "changes": 237,
+      "blob_url": "https://github.com/s01bvral/DCLDS/blob/60093e582bc584815ab824c3e8b94efdef138200/lds.cpp",
+      "raw_url": "https://github.com/s01bvral/DCLDS/raw/60093e582bc584815ab824c3e8b94efdef138200/lds.cpp",
+      "contents_url": "https://api.github.com/repos/s01bvral/DCLDS/contents/lds.cpp?ref=60093e582bc584815ab824c3e8b94efdef138200",
+      "patch": "@@ -31,30 +31,25 @@ void Graph::findlds(Set *R) {\n         char filename[20];\n         sprintf(filename, \"%u.txt\", vs_n);\n \n-        // 打开文件用于写入\n         FILE *f_debug = fopen(filename, \"w\");\n         if (f_debug != NULL) {\n             printf(\"DEBUG: vs_n is %u, dumping array to %s\\n\", vs_n, filename);\n             for (type i = 0; i < vs_n; ++i) {\n                 fprintf(f_debug, \"%u %u\\n\", vs[i], ldd_id[vs[i]]);\n             }\n-            // 关闭文件\n             fclose(f_debug);\n         } else {\n-            // 如果文件打开失败，在控制台打印错误信息\n             fprintf(stderr, \"Error: Could not open file %s for writing!\\n\", filename);\n         }\n     }\n     */\n \n-    // 执行分治算法\n     type new_vs_n = reorganize_vs_from_R(vs, vs_n);\n     shrink_R(vs, new_vs_n, vis);\n     //printf(\"int param %0.f \\n\", int_param);\n     divide_and_conquer(vs, new_vs_n);\n-    // 输出结果统计\n     printf(\"Found %u LDDs and %u LDSs\\n\", ldd_cnt, lds_cnt);\n-    write_ldses(\"/home/yingli/work/Densitydecomposition/SROF/ldses.txt\");\n+    write_ldses(\"./ldses.txt\");\n }\n \n type Graph::reorganize_vs_from_R(type *vs, type vs_n){\n@@ -72,18 +67,13 @@ void Graph::divide_and_conquer(type *vs, type vs_n) {\n     //std::pair<type,type> tmp = EnumerateCliquesInVs(vs, vs_n);\n     //inside_edges = tmp.first;\n     //int total_edges_right = tmp.second;\n-    if(this->detail_log) printf(\"here x %u %u\\n\", vs_n, total_edge_count);\n+    printf(\"here x %u %u\\n\", vs_n, total_edge_count);\n     if(total_edge_count == 0) return;\n \n     type new_vs_n = maximal_compact_with_library(vs, vs_n, total_edge_count, vs_n);\n     //type new_vs_n = maximal_compact(vs, vs_n, total_edge_count, vs_n);\n \n     if(new_vs_n == 0) {\n-        for(type i = 0; i < vs_n; i++){\n-            if(vs[i] == 1115){\n-                type a = 0;\n-            }\n-        }\n         type *que = new type[n + 2]();\n         ++ldd_cnt;\n         for(type i = 0; i < vs_n; i++) {\n@@ -147,13 +137,11 @@ void Graph::divide_and_conquer(type *vs, type vs_n) {\n     for(type i = 0; i < new_vs_n; i++) vis[vs[i]] = 0;\n     for(type i = new_vs_n; i < vs_n; i++) vis[vs[i]] = 1;\n     \n-    // 处理第一个子图\n     shrink_R(vs + new_vs_n, vs_n - new_vs_n, vis);\n     divide_and_conquer(vs + new_vs_n, vs_n - new_vs_n);\n     \n     if(top_k > 0 && lds_cnt >= top_k) return;\n     \n-    // 处理第二个子图\n     shrink_R(vs, new_vs_n, vis);\n     divide_and_conquer(vs, new_vs_n);\n }\n@@ -194,217 +182,7 @@ void Graph::shrink_R(const type *vs, type vs_n, char *vis){\n         adj_length_c[u] = new_adj_count;\n     }\n }\n-/*\n-type Graph::maximal_compact_with_library(type *vs, type vs_n, type lambda_numerator, type lambda_denominator) {\n-    typedef Network<double, double, double> MaxFlowGraph;\n-\n-    MaxFlowGraph g(vs_n + cnt_clique + 2, cnt_clique*k+2*vs_n);\n-    \n-    g.add_node(vs_n);\n-    std::map<type, MaxFlowGraph::node_id> vertex_to_node_id;\n-    for (type i = 0; i < vs_n; ++i) {\n-        vertex_to_node_id[vs[i]] = i;\n-    }\n-\n-    std::map<type, MaxFlowGraph::node_id> clique_to_intermediate_node;\n-    std::map<type, std::vector<type>> clique_participants;\n-    std::map<type, int> clique_size_in_subgraph;\n-    for (type i = 0; i < vs_n; ++i) {\n-        type u = vs[i];\n-        for (type j = 0; j < adj_length_c[u]; ++j) {\n-            type clique_idx = adj_c[u][j];\n-            cliques[clique_idx].valid = false;\n-            if (clique_idx >= cnt_clique) continue;\n-            clique_participants[clique_idx].push_back(u);\n-            clique_size_in_subgraph[clique_idx]++;\n-        }\n-    }\n-\n-    for (auto const& [clique_idx, participants] : clique_participants) {\n-        MaxFlowGraph::node_id c_node_id = g.add_node();\n-        clique_to_intermediate_node[clique_idx] = c_node_id;\n-    }\n-\n-    //u <-> c & c <-> v \n-    for (auto const& [clique_idx, participants] : clique_participants) {\n-        MaxFlowGraph::node_id c_node_id = clique_to_intermediate_node[clique_idx];\n-        int nc_size = clique_size_in_subgraph[clique_idx];\n-        if (nc_size == 0) continue;\n-        double cap_u_to_c = (double)(k * lambda_denominator / nc_size);\n-        double cap_c_to_u = (double)((k-1) * k * lambda_denominator / nc_size);\n-        for (type u : participants) {\n-            MaxFlowGraph::node_id u_node_id = vertex_to_node_id[u];\n-            g.add_edge(u_node_id, c_node_id, cap_u_to_c, cap_c_to_u);\n-        }\n-    }\n-    \n-    std::map<type, double> u_denser_neighbor_size_tmp;\n-    for(type i = 0; i < vs_n; i++) denser_neighbor_size_tmp[vs[i]] = 0;\n-\n-    for (auto const& [clique_idx, participants] : clique_participants) {\n-        int nc_size = clique_size_in_subgraph[clique_idx];\n-        if (nc_size == 0) continue;\n-        Clique& nc = cliques[clique_idx];\n-        if(nc.X){\n-            for(type u : participants) {\n-                denser_neighbor_size_tmp[u] += ((double)k / nc_size) - 1;\n-            }\n-        }\n-    }\n-\n-    std::map<type, int> degree_in_subgraph;\n-    for (type i = 0; i < vs_n; ++i) {\n-        degree_in_subgraph[vs[i]] = adj_length_c[vs[i]];\n-    }\n-\n-    for (type i = 0; i < vs_n; ++i) {\n-        type u = vs[i];\n-        MaxFlowGraph::node_id u_node_id = vertex_to_node_id[u];\n-        double cap_source = (double)((degree_in_subgraph[u] + denser_neighbor_size[u] + denser_neighbor_size_tmp[u]) \n-                                * lambda_denominator);\n-        double cap_sink = (double)(k * lambda_numerator);\n-        g.add_tweights(u_node_id, cap_source, cap_sink);\n-    }\n-\n-    g.maxflow();\n-\n-    type i = 0, j = vs_n - 1;\n-    while (true) {\n-        while (i <= j && g.what_segment(vertex_to_node_id[vs[i]]) == MaxFlowGraph::SINK) {\n-            ++i;\n-        }\n-        while (i <= j && g.what_segment(vertex_to_node_id[vs[j]]) == MaxFlowGraph::SOURCE) {\n-            --j;\n-        }\n-        if (i > j) break;\n-        std::swap(vs[i], vs[j]);\n-    }\n-\n-    if(i == vs_n){\n-        i = 0;\n-    }\n-\n-    return i;\n-}\n-*/\n-/*\n-// --- [Dinic Algorithm Implementation] ---\n-// 一个轻量级、针对稠密图优化的 Dinic 算法类\n-class DinicSolver {\n-public:\n-    struct Edge {\n-        int to;\n-        long long capacity;\n-        long long flow;\n-        int rev; // 反向边索引\n-    };\n-\n-    std::vector<std::vector<Edge>> adj;\n-    std::vector<int> level;\n-    std::vector<int> ptr;\n-    std::vector<bool> can_reach_sink;\n-    int N, S, T;\n-\n-    DinicSolver(int n, int s, int t) : N(n), S(s), T(t) {\n-        adj.resize(N);\n-        level.resize(N);\n-        ptr.resize(N);\n-        can_reach_sink.assign(N, false);\n-    }\n \n-    void add_edge(int from, int to, long long cap) {\n-        Edge a = {to, cap, 0, (int)adj[to].size()};\n-        Edge b = {from, 0, 0, (int)adj[from].size()}; // 有向边，反向容量为0\n-        adj[from].push_back(a);\n-        adj[to].push_back(b);\n-    }\n-\n-    // 对于 Source/Sink 连接，我们通常需要双向边容量不同吗？\n-    // 在本题逻辑中：S->u 是有向的，u->T 是有向的。\n-    // 所以用上面的 add_edge 即可。\n-\n-    bool bfs() {\n-        std::fill(level.begin(), level.end(), -1);\n-        level[S] = 0;\n-        std::queue<int> q;\n-        q.push(S);\n-        while (!q.empty()) {\n-            int v = q.front();\n-            q.pop();\n-            for (const auto& edge : adj[v]) {\n-                if (edge.capacity - edge.flow > 0 && level[edge.to] == -1) {\n-                    level[edge.to] = level[v] + 1;\n-                    q.push(edge.to);\n-                }\n-            }\n-        }\n-        return level[T] != -1;\n-    }\n-\n-    long long dfs(int v, long long pushed) {\n-        if (pushed == 0) return 0;\n-        if (v == T) return pushed;\n-        for (int& cid = ptr[v]; cid < adj[v].size(); ++cid) {\n-            auto& edge = adj[v][cid];\n-            int tr = edge.to;\n-            if (level[v] + 1 != level[tr] || edge.capacity - edge.flow == 0) continue;\n-            long long tr_pushed = dfs(tr, std::min(pushed, edge.capacity - edge.flow));\n-            if (tr_pushed == 0) continue;\n-            edge.flow += tr_pushed;\n-            adj[tr][edge.rev].flow -= tr_pushed;\n-            return tr_pushed;\n-        }\n-        return 0;\n-    }\n-\n-    long long max_flow() {\n-        long long flow = 0;\n-        while (bfs()) {\n-            std::fill(ptr.begin(), ptr.end(), 0);\n-            while (long long pushed = dfs(S, 9223372036854775807LL)) { // INF\n-                flow += pushed;\n-            }\n-        }\n-        return flow;\n-    }\n-\n-    // 判断节点是否在 Source 集合 (Min-Cut Partition)\n-    // BFS 后，level != -1 的节点即为从 Source 可达的节点\n-    bool is_in_source_set(int u) {\n-        return level[u] != -1;\n-    }\n-\n-    void compute_sink_reachability() {\n-        can_reach_sink.assign(N, false);\n-        std::queue<int> q;\n-        q.push(T);\n-        can_reach_sink[T] = true;\n-        while (!q.empty()) {\n-            int v = q.front();\n-            q.pop();\n-            // 在残余网络中，如果存在边 u -> v 且 capacity - flow > 0，\n-            // 那么 u 可以到达 Sink。\n-            // 在我们的数据结构中，v 的邻接表里存的是反向边 (v -> u)，\n-            // 该反向边的 rev 指向的就是 u 邻接表里的正向边 (u -> v)。\n-            for (const auto& rev_edge : adj[v]) {\n-                int u = rev_edge.to;\n-                // 找到 u 邻接表里对应的正向边\n-                const auto& forward_edge = adj[u][rev_edge.rev];\n-                if (forward_edge.capacity - forward_edge.flow > 0 && !can_reach_sink[u]) {\n-                    can_reach_sink[u] = true;\n-                    q.push(u);\n-                }\n-            }\n-        }\n-    }\n-\n-    bool is_in_sink_set(int u) {\n-        return can_reach_sink[u];\n-    }\n-};\n-*/\n-\n-// --- [Dinic Algorithm Implementation (Double Version)] ---\n class DinicSolver {\n public:\n     struct Edge {\n@@ -509,15 +287,9 @@ class DinicSolver {\n     }\n };\n \n-// --- [Dinic Method] ---\n-\n type Graph::maximal_compact_with_library(type *vs, type vs_n, type lambda_numerator, type lambda_denominator) {\n     std::chrono::time_point<std::chrono::high_resolution_clock> t_start, t_prep_end, t_build_end, t_flow_end, t_end;\n     \n-    if(vs_n == 27770){\n-        type a = 0;\n-    }\n-\n     if (this->detail_log) {\n         t_start = std::chrono::high_resolution_clock::now();\n     }\n@@ -612,7 +384,7 @@ type Graph::maximal_compact_with_library(type *vs, type vs_n, type lambda_numera\n             g.add_edge(vertex_to_node_id[u], c_node_id, cap_u_to_c); // u -> c\n             g.add_edge(c_node_id, vertex_to_node_id[u], cap_c_to_u); // c -> u\n             \n-            if(nc.X) denser_neighbor_size_tmp[u] += ((double)k / nc_size) - 1; // 【关键修复 1】：更新全局数组\n+            if(nc.X) denser_neighbor_size_tmp[u] += ((double)k / nc_size) - 1;\n         }\n     }\n     \n@@ -683,9 +455,6 @@ type Graph::maximal_compact_with_library(type *vs, type vs_n, type lambda_numera\n \n \n type Graph::maximal_compact(type *vs, type vs_n, type lambda_numerator, type lambda_denominator) {\n-    if(vs_n == 27770){\n-        type a = 0;\n-    }\n \tconstruct_lambda_graph(vs, vs_n, que, lambda_numerator, lambda_denominator);\n \tlint total_flow = 0;\n \twhile(bfs(vs, vs_n)){"
+    }
+  ]
+}

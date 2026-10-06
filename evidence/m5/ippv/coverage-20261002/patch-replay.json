@@ -1,0 +1,62 @@
+{
+  "source_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0001-remove-unused-openmp-header.patch"
+      ],
+      "cwd": "fresh temporary copy of pinned files",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0002-initialize-clique-count.patch"
+      ],
+      "cwd": "fresh temporary copy of pinned files",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0003-preserve-selection-storage.patch"
+      ],
+      "cwd": "fresh temporary copy of pinned files",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0004-h2-enumeration-base-case.patch"
+      ],
+      "cwd": "fresh temporary copy of pinned files",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0005-include-final-single-edge-component.patch"
+      ],
+      "cwd": "fresh temporary copy of pinned files",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "verified_files": 17,
+  "matched_locked_sources": true
+}

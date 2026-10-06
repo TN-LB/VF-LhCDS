@@ -1,0 +1,910 @@
+[
+  {
+    "edit": "starting synthetic witness",
+    "vertices": 13,
+    "edges": 17,
+    "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+    "accepted": true,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old omits a positive solution; scaling repair restores full direct truth"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        0,
+        1
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "b4e079595f6c1889dde5d3acbe6af4e7f28472bf954da477e8767bc3be048c48",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        0,
+        2
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "3cbb46b035e98cd0b49fe81a12702491aa763870d525aa027657202cbc029e0b",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        0,
+        3
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "e29419aceaeeca60c9b8c1f92d445f8365953d7ffaa4c3a2c419b5b20d89d4ee",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        0,
+        8
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "7a114a53b3180afda626849799d6d8007797e59554e7adafcd26cb4ac97d17aa",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        1,
+        2
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "b2cdd433a4d966bd59ed722b45c0661a45e23c088f0a705d2d43c29dd4f0f907",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        1,
+        3
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "7253ac3bf983136c16e517e3b792148ea6da8adb379e3051f439f89fc9aa17de",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        4,
+        5
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "d0f715cb760387916f145e3f27ae6876a6f940a939d02f556e8ba472bf9ec302",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        4,
+        6
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "613d1871e259e9795b2c734815b72d4b2f572fd7e0c75e59216f9e86ccf6ab7e",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        4,
+        7
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "1302576b31a6a3d1838602a22c4b6861229a404dac304e9eb9a86297c01f058d",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        4,
+        12
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "d6943bdd75aaeda984b1f4f82074687d9bf5517abc01a115796d73f552f262ae",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        5,
+        6
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "850ff3e61b8fe32a31212fb0fdb06ee5a2d0f8327319ce5ba20bf14cf134c831",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        5,
+        7
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "498464a2cda04d9865832e3371c4706be3c6aca03c7801ffeef936b53c8c545d",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        6,
+        7
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "f414ee2aa128e7eac4ca5b742eeecc7b73e9ecd805cd6858245ca082a35a3f06",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        8,
+        9
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "8b74d33372aae26c7584443175084932e8e655805120c65a55b64017a9978ae8",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        9,
+        10
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "266af3af3dee525e4aca41321a33e5f54f31b9f39b8205f2af9287fe429aa64e",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        10,
+        11
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "65800f2df3fe144a7ed9df7e220ffe8c6259ef2190a75c174001225ba8111b72",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_edge",
+      [
+        11,
+        12
+      ]
+    ],
+    "vertices": 13,
+    "edges": 16,
+    "graph_sha256": "0c759982d47727fdea639f13c00fc007afbd6790540575e5128e3820452fd26c",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      0
+    ],
+    "vertices": 12,
+    "edges": 13,
+    "graph_sha256": "69762b82863b0b28528bbd7799a4d2e472bec52dd7f021ad15d52118d4c165d3",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          1,
+          2,
+          3
+        ],
+        "density": "2/3"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      1
+    ],
+    "vertices": 12,
+    "edges": 14,
+    "graph_sha256": "14b399b855243066dbb80581f7f228c383f2739be6b1d6a25d0d12f2ce4b77e3",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      2
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "fae1b0d0b753a94f6d80adcb4eb60ed8ee75e4a7afdac6294a1c9b8e42030b28",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      3
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "197a915872a6ce9b0e9fd4204ef46f7b7c8ba6a989e772c0c9868e57505b4f66",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      4
+    ],
+    "vertices": 12,
+    "edges": 13,
+    "graph_sha256": "0f85704ab4a3248687da7deac23dad227596d87310326fe875a9db0bd1dbe462",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      },
+      {
+        "vertices": [
+          5,
+          6,
+          7
+        ],
+        "density": "1"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      5
+    ],
+    "vertices": 12,
+    "edges": 14,
+    "graph_sha256": "0a4425ae0582652e61de2fc97238e05ae227c510640fc49ff517021672d75ac3",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      6
+    ],
+    "vertices": 12,
+    "edges": 14,
+    "graph_sha256": "8e768b91f19b58ec641f2ab17bd11099ba1225acd520e746d8d918da8fef3ba8",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      7
+    ],
+    "vertices": 12,
+    "edges": 14,
+    "graph_sha256": "7e1ad31e6797856123c81eabff3b7db86c7e3121221d97f4782f3982033375d7",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "does not retain two positive-density solutions"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      8
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "af830de22f6f054a61fef0ddbb4f846df213aa0321625ad1cda07189e0a99511",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      9
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "1886221c274c56b4529e0668b3a6ebfdb8d5c8a849dcf99bca3fbbfe46df0625",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      10
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "a0fda6eda432fc26f719a3578e147bccd1eb14f513cd3154f054da5bcbf51b88",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      11
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "203fb2b3a0a3bb18c7ec65cac552300f66389a9938c433e8593b85a9012293ce",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  },
+  {
+    "edit": [
+      "remove_vertex",
+      12
+    ],
+    "vertices": 12,
+    "edges": 15,
+    "graph_sha256": "67e8f07bb3eac401c138ef14760d182f85c039a418148a5c2e576444374072b1",
+    "accepted": false,
+    "truth": [
+      {
+        "vertices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "density": "3/2"
+      },
+      {
+        "vertices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "density": "5/4"
+      }
+    ],
+    "reason": "old binary does not retain the missing-positive-solution failure"
+  }
+]

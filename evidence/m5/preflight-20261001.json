@@ -1,0 +1,56 @@
+{
+  "milestone": "M5",
+  "date": "2026-10-01",
+  "scope": "Read-only prerequisite and IPPV source metadata checks; stopped at license clarification",
+  "base_commit": "56229397903813d3509ecb45b178bbde823e357b",
+  "initial_worktree": "clean",
+  "prerequisites": {
+    "m4_source_manifest": "evidence/m4/accepted/environment.json",
+    "m4_source_files_checked": 53,
+    "m4_source_hash_mismatches": [],
+    "paper_verification_command": ".venv/bin/python scripts/verify_papers.py",
+    "paper_verification_exit_code": 0,
+    "paper_hashes": {
+      "papers/2023-icde-lds.md": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+      "papers/2408.14022v1.md": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+      "papers/2504.10937v1.md": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+      "papers/veri_free_lhcds_v3_1_submit.md": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700"
+    },
+    "m3_tag": "v0.1.0-m3-correctness",
+    "m3_tag_commit": "23a5b3415cf3ae053e55a01b219ca074ffe6fd67"
+  },
+  "ippv": {
+    "task": "P09.1",
+    "repository": "https://github.com/Elssky/IPPV",
+    "metadata_endpoint": "https://api.github.com/repos/Elssky/IPPV",
+    "selected_response_fields": {
+      "full_name": "Elssky/IPPV",
+      "default_branch": "main",
+      "license": null
+    },
+    "evidence_scope": "Selected fields transcribed from the successful live API response; full response retained in this chat's tool output, not a downloaded source snapshot",
+    "web_metadata_attempt": "Repository page read successfully; API endpoints inaccessible through web tool",
+    "command": "curl --location --silent --show-error --max-time 20 https://api.github.com/repos/Elssky/IPPV",
+    "sandbox_attempt": {
+      "exit_code": 6,
+      "stderr": "curl: (6) Could not resolve host: api.github.com"
+    },
+    "approved_readonly_network_attempt": {
+      "exit_code": 0,
+      "result": "Repository metadata returned; license field is null"
+    },
+    "status": "blocked-license-clarification",
+    "limitation": "Null means GitHub did not identify a repository license; this is not proof that no separate author permission or file-level notice exists. Commit, complete source/license inventory and usage scope remain unverified.",
+    "recommended_next_step": "Obtain or identify the applicable author license/permission before baseline adaptation/build/run",
+    "alternative": "With an explicit owner decision, retain IPPV as blocked and continue other M5 tasks; missing primary-baseline evidence limits comparison conclusions",
+    "owner_decision": "pending"
+  },
+  "unrun": [
+    "IPPV commit pin, source inventory, build, adapter and validation",
+    "DCLDS detailed comparison/build/adapter",
+    "Specialized baseline audit",
+    "Experiment configuration freeze and shared smoke",
+    "Benchmark campaign, performance conclusions and release reproduction"
+  ],
+  "status_updates": "No M5 task marked complete; no experiment settings accepted; no production/reference/paper changes"
+}

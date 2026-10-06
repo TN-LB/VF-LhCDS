@@ -1,0 +1,30 @@
+{
+  "edit": [
+    "remove_vertex",
+    0
+  ],
+  "vertices": 12,
+  "edges": 13,
+  "graph_sha256": "69762b82863b0b28528bbd7799a4d2e472bec52dd7f021ad15d52118d4c165d3",
+  "accepted": false,
+  "truth": [
+    {
+      "vertices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "density": "3/2"
+    },
+    {
+      "vertices": [
+        1,
+        2,
+        3
+      ],
+      "density": "2/3"
+    }
+  ],
+  "reason": "old binary does not retain the missing-positive-solution failure"
+}

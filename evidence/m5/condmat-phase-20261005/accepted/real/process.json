@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe/vflhcds_phase_probe",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/condmat-phase-20261005/accepted/real/graph.txt",
+    "3",
+    "5",
+    "adjacency"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/condmat-phase-20261005/accepted/real",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T09:17:51.592635+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "195814649870cf88dfd7959a957221954c54d5abfe7c82b070b9b5aef47d1ae9",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": -9,
+  "status": "timeout",
+  "wall_seconds": 60.00914091710001,
+  "user_seconds": 59.347137,
+  "system_seconds": 0.329432,
+  "peak_rss_bytes": 150077440,
+  "signal": 9,
+  "finished_utc": "2026-10-05T09:18:51.600382+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "c8fa5cefda61166bfd4f2eefe03061c6813a50e0e4de00ed2983d12d516fd461"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "planned_native_runs": 48,
+  "recorded_native_runs": 20,
+  "external_validators_completed": 20,
+  "unrun_native_runs": 28,
+  "native_statuses": {
+    "completed": 20
+  },
+  "paired_comparisons": 10,
+  "strict_matches": 6,
+  "tie_aware_matches": 9,
+  "tie_aware_disagreements": 1,
+  "campaign_exit_code": 1,
+  "campaign_wall_seconds": 48.2070587920025,
+  "stop_reason": {
+    "kind": "output_disagreement",
+    "case": "ca-grqc-h3-k20",
+    "repeat": 0,
+    "algorithms": [
+      "ippv-five-patches",
+      "vf-adjacency-basic"
+    ]
+  },
+  "completeness_certified": false,
+  "raw_inventory_entries_verified": 216
+}

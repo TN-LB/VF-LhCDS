@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/campaign/runs/0007-0/graph.txt",
+    "--h",
+    "3",
+    "--k",
+    "15",
+    "--core-reduction",
+    "off",
+    "--footprint-scan",
+    "membership",
+    "--clique-enumeration",
+    "adjacency"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/campaign/runs/0007-0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-06T12:22:54.459568+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.6834101248532534,
+  "user_seconds": 1.65818,
+  "system_seconds": 0.014454,
+  "peak_rss_bytes": 46809088,
+  "finished_utc": "2026-10-06T12:22:56.143562+00:00",
+  "sha256": {
+    "stdout.txt": "1d2d4349e3be97523ccf536f7f9bdad93c98f913ff17aa786afd12837e6693b3",
+    "stderr.txt": "522cbbeabbf45ffb69fb26b7620bf8acb01c4ea64171249eaf205884acca7898"
+  }
+}

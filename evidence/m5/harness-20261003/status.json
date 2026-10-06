@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    "P11.1",
+    "P11.2",
+    "P11.3"
+  ],
+  "status": "partial; shared real smoke incomplete",
+  "blocked_path": "expansion to performance experiments after VF basic timeout",
+  "next_step": "NEXT_STEP.md",
+  "draft_configuration": "proposed-diagnostic.json",
+  "owner_decision_pending": true,
+  "dclds": "deferred D029",
+  "m5_complete": false
+}

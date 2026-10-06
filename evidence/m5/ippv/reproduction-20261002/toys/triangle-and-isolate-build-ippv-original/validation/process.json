@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+    "validate",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/graph.txt",
+    "--native-output",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/output/input-2.txt",
+    "--h",
+    "3",
+    "--k",
+    "2",
+    "--records",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/canonical_output.jsonl",
+    "--declared-count",
+    "1",
+    "--definition"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/validation",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-01T16:00:11.796351+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.05783112533390522,
+  "user_seconds": 0.044333,
+  "system_seconds": 0.010407999999999999,
+  "peak_rss_bytes": 21037056,
+  "finished_utc": "2026-10-01T16:00:11.854686+00:00",
+  "sha256": {
+    "stdout.txt": "76c3f0fe63e03d545ed94fc8de6cb6597ce79f8b6959e87caaa68b28f4ec4124",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/pilot-fixed-20261005/config.json",
+    "--evidence",
+    "evidence/m5/pilot-fixed-20261005/campaign",
+    "--stop-on-failure"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-05T08:27:48.158621+00:00",
+  "sha256": {
+    "evidence/m5/pilot-fixed-20261005/config.json": "ca2ba7a44bc05666ca109d8dc53ecbd693be899ae14404470e8a113efe7dc891",
+    "evidence/m5/pilot-fixed-20261005/approval.json": "78e367594ad21e8bf4240095ae461d5d98c10cc4bef7c998188b149ec6735de4",
+    "evidence/m5/pilot-fixed-20261005/schedule.json": "74fe7f42450bd3e21cb6cfe511f092ed0683b1b465811051d65b8acd0f0827f9",
+    "evidence/m5/pilot-fixed-20261005/preflight.json": "35bc97444535aace77c41960c0766f56caa3412613c7b9bdace604457e608885",
+    "evidence/m5/pilot-fixed-20261005/environment.json": "c75104ebd8470bd421d5451e834001e3363aa8bf71a9298751cab8860b692944",
+    "docs/DECISIONS.md": "da6463625be36adc4851922df738cd39b66f6b4aa559efdf6298b20b14e60585",
+    "evidence/m5/pilot-fixed-20261005/launch.py": "1b8f22f3008e2ee8246d12db5936d90121fb9b78899d374a268cda23070c765e"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-03T04:12:02.675358+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "head": "56229397903813d3509ecb45b178bbde823e357b",
+  "dirty_tree": " M AGENTS.md\n M docs/BASELINE_AUDIT.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/TASKS.md\n?? baselines/\n?? evidence/m5/\n?? experiments/\n",
+  "source_sha256": {
+    "evidence/m5/phase-diagnostic-20261003/run_diagnostic.py": "44ca81ec4a7732376378f904de645b960f69b90a1acd330a152338224fcbcf20",
+    "experiments/phase_probe/CMakeLists.txt": "b1ad9021b8bc9c58e3bc84bdea144fb99cf77f3819e22edcaa8f47e7a259d4e7",
+    "experiments/phase_probe/main.cpp": "b7dd4109f9c1e88f34d532146c768ad39021b3f8359043b828d72883ddb84d86",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/validate.py": "efbd6b4194bb5b8c50cfd74043b0d0e215e0201dfd11678b40a291823cedea34",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14"
+  },
+  "configuration_sha256": "3a9a22c44c7a8b19a015730d19ac52b1094f52c63cd50ae1aabfb66e4728f011"
+}

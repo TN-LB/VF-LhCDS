@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_CXX_FLAGS=-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    },
+    "started_utc": "2026-10-01T18:00:49.956812+00:00",
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-01T18:00:50.217770+00:00",
+    "stdout_sha256": "1f4bce9dc08eb72e7f18042313abaa53d99a4fcaf825c36d50f6225f9c23ea65",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    },
+    "started_utc": "2026-10-01T18:00:50.218365+00:00",
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-01T18:00:53.777612+00:00",
+    "stdout_sha256": "7982504b0eec425fde9cb3852abd0d7550163dc6ec40a315ee2474e37405d61d",
+    "stderr_sha256": "2ad8a4c76f54d79bc10dce11e9d1e9a8bb6c1cc771badaa4eedc103f275cef49"
+  }
+]

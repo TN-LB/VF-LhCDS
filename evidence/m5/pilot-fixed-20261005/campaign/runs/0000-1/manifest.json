@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "algorithm": "IPPV-author-with-disclosed-patches",
+  "build_provenance": {
+    "repository": "https://github.com/Elssky/IPPV",
+    "commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+    "license": "not identified; project use authorized by D027",
+    "patch_authorization": "D028",
+    "patches": [
+      {
+        "path": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+        "sha256": "b0501215f6debf9bfe59d95de692fc9fb8f76d1a7a3c57b9e4c2b7d06c4452f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0002-initialize-clique-count.patch",
+        "sha256": "d3512cdfb458e2be753050bf0244e62bbf19036a02eafc59d493c75b8241d8f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0003-preserve-selection-storage.patch",
+        "sha256": "74cc301e689c74afb067d3ee0d109b7975b7566c4b4f3f28c89f2888980e3d4a"
+      },
+      {
+        "path": "baselines/ippv/patches/0004-h2-enumeration-base-case.patch",
+        "sha256": "5133cfce7824c1979779e23118b90b7cdc666f6168fc3a358ea2ca5067278ac2"
+      },
+      {
+        "path": "baselines/ippv/patches/0005-include-final-single-edge-component.patch",
+        "sha256": "198959f649c1ea4a2053908dc0b0a21f9450f4c05367ebc7141457514915d3a9"
+      },
+      {
+        "path": "baselines/ippv/patches/0006-exact-verification-capacities.patch",
+        "sha256": "b78e41d99841f1ec4d34af0fd2b4c94311bcb3f3a158c37e93bab42a347a1b12"
+      },
+      {
+        "path": "baselines/ippv/patches/0007-restore-pava-workspace.patch",
+        "sha256": "dc70c616e4d27171c78557c90a04f7cff2a3afd2f230f4ab983963cd54f5107d"
+      }
+    ],
+    "patched_source_sha256": {
+      "Args.cpp": "3ef455ca8be5633bd0d2bd6af784e36d4c6726f9474130b441f40c200a3d2e37",
+      "Args.h": "8889c0ee0e73aae79f83289bf4cec52d3f4be584487f16a85677ab3f985deb04",
+      "CMakeLists.txt": "81133e3d0fda97c835bb89cd3d88f04217f3d83c6cf9edbd62226b3a7e7a78d5",
+      "EdgeFN.cpp": "4eddbb43830b4d825695bc0d4324d34b79bade6cc00a9f6bd2079e230e326edc",
+      "EdgeFN.h": "5cc460366ed6cdeba4ba283ea5d33fa62e0745bbdcccb87cf01168e7eb00adc6",
+      "FlowNetwork.cpp": "cd7e7246f2af2ce2509ee87dd34dd24d023a3cf53977626e388e593e6831a333",
+      "FlowNetwork.h": "add8c81ad3cfa1f72dd84620f99d3db503929916d834e53c5259f152902080c5",
+      "Graph.cpp": "3dfab9e08dbdbcdbf5b79b777abc7a262cfa7f6b4453f0476415c5c9805f9eac",
+      "Graph.h": "714a6d6d5f130148d3b86433862e487e6f1b70882ee5084f116c951094e3d8c5",
+      "KClistCore.cpp": "8994671abed431be3ec6b1b6e8c5d51a1a71ad3f9331c6277e67c689312bc132",
+      "KClistCore.h": "83693572e75329968c00ed94422da6bc9b59f771fdf663084645f7af32b94157",
+      "MaxFlow.cpp": "0b03bd6d1b77a061bd9aa52dd368b47ef04392349478621c4f87b76e86181823",
+      "MaxFlow.h": "208fbe4da94fb2bec3be031779ddfe6ed39cb1cb718b835a11cb97364435c88a",
+      "README.md": "1ede08be3ccfdca39368c165d8a568b3847f2de207fba4568d86c068c15f4709",
+      "dataset/CA-CondMat.txt": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+      "dataset/CA-GrQc.txt": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+      "main.cpp": "e1df82b7fdf3392b7e0404e2679e17e0d8ddb10eec7360082fc82062fe819bc6",
+      "ExactVerification.h": "9918d4c01e08a4583b4c7d8ffefde7c57ef156be68c088fb33998d195baf2b8f"
+    },
+    "executable_sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+    "sanitizers": false,
+    "environment": "macOS-15.7.7-arm64-arm-64bit",
+    "commands_manifest": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/build-final-release/commands.json",
+    "commands_manifest_sha256": "dd89a5f7bc43743e92f5496cb924c0abfdbc1af69033cf2770e107c63eaa7dce",
+    "compile_commands_sha256": "4e016fdef41c12c51805db436b6db08a924fc8b4c06ae7a325b39fd5e171eb51",
+    "build_script_sha256": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6"
+  },
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-release/IPPV",
+      "-g",
+      "./dataset/input.txt",
+      "-h",
+      "3",
+      "-t",
+      "10",
+      "-k",
+      "5",
+      "-p",
+      "0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-fixed-20261005/campaign/runs/0000-1",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-05T08:27:50.716897+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.17755845841020346,
+    "user_seconds": 0.159461,
+    "system_seconds": 0.010943999999999999,
+    "peak_rss_bytes": 29933568,
+    "finished_utc": "2026-10-05T08:27:50.895174+00:00",
+    "sha256": {
+      "stdout.txt": "d1281744d597812bfc6d423544ae20fbf18c14cfcd388f21361a19c9d4689022",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+  "normalized_input_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+  "converted_input_sha256": "a6e0d81370104d1e30e044263f3d30e94600f241015678c841588fe4c15193f0",
+  "vertex_map_sha256": "e7ac3b7e7819193ce95427cdab2cd9b7bd59f7c2cc1e851f5c28ec6627011f2a",
+  "h": 3,
+  "k": 5,
+  "iterations": 10,
+  "pattern": 0,
+  "status": "completed",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "density_nonincreasing": true,
+      "rounded_density_consistent": true,
+      "stdout_count_matches_file": true
+    },
+    "completeness_certified": false,
+    "level": "structural_checked",
+    "native_rounded_densities": [
+      "325.3478",
+      "214.4186",
+      "187.0000",
+      "84.3333",
+      "77.6667"
+    ],
+    "output_count": 5,
+    "passed": true,
+    "strict_order_compatible": false
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "phase_note": "Author prints clock() CPU times; not comparable wall phases",
+  "evidence_scope": "single reproduction/validation run; no benchmark claim",
+  "native_output_sha256": "d0b98a14ae0883727889edeec832c5dc8594388b8dfed12862400c6f46d3f148",
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+      "validate",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-fixed-20261005/campaign/runs/0000-1/graph.txt",
+      "--native-output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-fixed-20261005/campaign/runs/0000-1/output/input-5.txt",
+      "--h",
+      "3",
+      "--k",
+      "5",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-fixed-20261005/campaign/runs/0000-1/canonical_output.jsonl",
+      "--declared-count",
+      "5"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-fixed-20261005/campaign/runs/0000-1/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-05T08:27:50.903575+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.14784308336675167,
+    "user_seconds": 0.126006,
+    "system_seconds": 0.015449999999999998,
+    "peak_rss_bytes": 30441472,
+    "finished_utc": "2026-10-05T08:27:51.052113+00:00",
+    "sha256": {
+      "stdout.txt": "1c4560e900e50b03911463c8e1fb8c8e24ea89ff036f3d71dd271d87af6444e2",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "7464c11bb500582860684f8fdf7cfc8f8a5ad06899850e92bdf63bb57c4d761a",
+    "dataset/input.txt": "a6e0d81370104d1e30e044263f3d30e94600f241015678c841588fe4c15193f0",
+    "graph.txt": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+    "output/input-5.txt": "d0b98a14ae0883727889edeec832c5dc8594388b8dfed12862400c6f46d3f148",
+    "process.json": "650eda19fc21058cf29fe790a6d2de7b0cacdbb01f12201e0d00980a72aeecdc",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "d1281744d597812bfc6d423544ae20fbf18c14cfcd388f21361a19c9d4689022",
+    "validation/process.json": "22f62b74941cc235dfd572a06fdfc0a1152c586851250a5589846f7b303a8e0f",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "1c4560e900e50b03911463c8e1fb8c8e24ea89ff036f3d71dd271d87af6444e2",
+    "vertex_map.json": "e7ac3b7e7819193ce95427cdab2cd9b7bd59f7c2cc1e851f5c28ec6627011f2a"
+  }
+}

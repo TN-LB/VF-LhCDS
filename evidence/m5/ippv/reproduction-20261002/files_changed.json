@@ -1,0 +1,1246 @@
+{
+  "base_commit": "56229397903813d3509ecb45b178bbde823e357b",
+  "scope": "entire uncommitted M5 working tree across the IPPV and DCLDS preflight turns; self excluded",
+  "files": [
+    {
+      "path": "baselines/ippv/README.md",
+      "sha256": "05fcd73e1671d457c8e32d49ab92a9992ca6ea1fb44972c185194ce50ae1dec4",
+      "bytes": 6065
+    },
+    {
+      "path": "baselines/ippv/adapter.py",
+      "sha256": "f027a62cb824334a661a9d4fd81917e0322816355ab92175dd385a7dfd0405d1",
+      "bytes": 10886
+    },
+    {
+      "path": "baselines/ippv/build.py",
+      "sha256": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6",
+      "bytes": 4310
+    },
+    {
+      "path": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+      "sha256": "b0501215f6debf9bfe59d95de692fc9fb8f76d1a7a3c57b9e4c2b7d06c4452f5",
+      "bytes": 226
+    },
+    {
+      "path": "baselines/ippv/patches/0002-initialize-clique-count.patch",
+      "sha256": "d3512cdfb458e2be753050bf0244e62bbf19036a02eafc59d493c75b8241d8f5",
+      "bytes": 533
+    },
+    {
+      "path": "baselines/ippv/patches/0003-preserve-selection-storage.patch",
+      "sha256": "74cc301e689c74afb067d3ee0d109b7975b7566c4b4f3f28c89f2888980e3d4a",
+      "bytes": 317
+    },
+    {
+      "path": "baselines/ippv/process.py",
+      "sha256": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14",
+      "bytes": 3011
+    },
+    {
+      "path": "baselines/ippv/source-lock.json",
+      "sha256": "84eb63c64723366ccaa52e9653f02a5358f1b1095ecdcfc5440103287e99a2ff",
+      "bytes": 2263
+    },
+    {
+      "path": "baselines/ippv/test_adapter.py",
+      "sha256": "87b0a7de86b271fbef2007e34c1209e528a6a5ea6bd7a20b3e8ae9fa76554294",
+      "bytes": 2699
+    },
+    {
+      "path": "docs/BASELINE_AUDIT.md",
+      "sha256": "87cd5afc6b1640528727996af06945a96eadc7591c0b6588ba4aaeed6ef87483",
+      "bytes": 17057
+    },
+    {
+      "path": "docs/CLAIM_TRACEABILITY.md",
+      "sha256": "c5e71ee290ef1592c9851bf7f1000da1523d187b8fb15ece637e1a3264ed9b3d",
+      "bytes": 24496
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "acd99fb2374a5b3ccec3c5509248dd8014de750bc292764feb13b5f9c95e60bd",
+      "bytes": 7703
+    },
+    {
+      "path": "docs/TASKS.md",
+      "sha256": "6a963c85947e19823dabea46a9c95bb506bf17256ca04e2d947a4cdf6663af52",
+      "bytes": 14274
+    },
+    {
+      "path": "evidence/m5/REPORT.md",
+      "sha256": "f496fb35de8248df3a6ed445a7f8aabe36a0e52d8f10e581456052004c917692",
+      "bytes": 3195
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/commands.json",
+      "sha256": "eb8a7f28f1bbd4c33980afac732bd46b96ead89379ed485a1dcce04c9ab33abc",
+      "bytes": 2094
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/commit-live.json",
+      "sha256": "ddf265ed6a79ef3e8bad2d673898c76f3f3dcb7e71d5414ed659c2699270a4be",
+      "bytes": 17095
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/commit-live.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/commit.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/commit.stderr",
+      "sha256": "c194ef04dcfb48abf022cdf0ddadd7e9f0550addf63b8936442efd90d7c3b9e2",
+      "bytes": 49
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/freeze.json",
+      "sha256": "c564c8fec1b986885f6429646df73c1b026d03123f9e5c301b439bda1e274949",
+      "bytes": 10722
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/metadata-live.json",
+      "sha256": "6211219b3d7410081d4db696f56e34f72c9fcf6ac30e8a8edd9869fba00f8c39",
+      "bytes": 5347
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/metadata-live.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/metadata.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/metadata.stderr",
+      "sha256": "c194ef04dcfb48abf022cdf0ddadd7e9f0550addf63b8936442efd90d7c3b9e2",
+      "bytes": 49
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/snapshot/docs/BASELINE_AUDIT.md",
+      "sha256": "4b271f5d12f571993fbe9dde9278087635ebd4776e17ec6a2f4c312bf2f4b20b",
+      "bytes": 15220
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/snapshot/docs/CLAIM_TRACEABILITY.md",
+      "sha256": "1f2a17c0898c7418e976136d5daa1bb50283e81bd6c43202038884e9b03f2c82",
+      "bytes": 24036
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/snapshot/docs/DECISIONS.md",
+      "sha256": "acd99fb2374a5b3ccec3c5509248dd8014de750bc292764feb13b5f9c95e60bd",
+      "bytes": 7703
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/snapshot/docs/TASKS.md",
+      "sha256": "4583c4ddf3e1070313b42e486f282bb5d3176abde91f45b4a1370f955230c7d7",
+      "bytes": 13662
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/stop.json",
+      "sha256": "25580409dea2c207d20a1a664b10496ffb40d6823eae90cecea0783bde56087c",
+      "bytes": 1312
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/tree-live.json",
+      "sha256": "59ff47f49671ecbf8567d38159acbe37054710a8b43acf552782d24711583be0",
+      "bytes": 4630
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/tree-live.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/dclds/preflight-20261002/verification.json",
+      "sha256": "5b434387e5944bbe8020f37858c6b8c709d33bb728c5fae43fbc4cdcef4dd0c7",
+      "bytes": 1837
+    },
+    {
+      "path": "evidence/m5/final-diff-check.json",
+      "sha256": "732718fd8360d8418e7083a069a45aeb7594bed7e9c0ca73c39f26862960ba0e",
+      "bytes": 237
+    },
+    {
+      "path": "evidence/m5/final-diff-check.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/final-diff-check.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/01-clone.stderr",
+      "sha256": "e72dbe412e2f3a82fe89e1a21fbf01883937960e6b4766344da1c5af907ac52b",
+      "bytes": 39
+    },
+    {
+      "path": "evidence/m5/ippv/01-clone.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/02-configure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/02-configure.stdout",
+      "sha256": "b0257ade742021e3e231c3d986b14273d3d38f04b70fea89fe4215a5711c89af",
+      "bytes": 678
+    },
+    {
+      "path": "evidence/m5/ippv/03-build.stderr",
+      "sha256": "1af7c44c21fe225d040b6bb6f80e9e22d751d6fe14e63a68cc3db1acd8d604a7",
+      "bytes": 1114
+    },
+    {
+      "path": "evidence/m5/ippv/03-build.stdout",
+      "sha256": "4da57bc2eaa159be4d5cca49ea10410a845dc75404298506ad91a92393eb08c8",
+      "bytes": 242
+    },
+    {
+      "path": "evidence/m5/ippv/commands.json",
+      "sha256": "634d25be44e85513790b545bd40613cd56d02fe76a520f1e172f86eeab2325a7",
+      "bytes": 2123
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/01-build.stderr",
+      "sha256": "1d8df41f798592b3160d172a1cd54088fb8bfcaf98003572f86b84d237c65768",
+      "bytes": 7545
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/01-build.stdout",
+      "sha256": "8f022d71bec90f5ec5340c800b5afc5ebbf5425c644808a368444b97ea57a2d2",
+      "bytes": 302
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/02-source-check.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/02-source-check.stdout",
+      "sha256": "3f99ffa274ce02114b6ba26d16e77212cfeec67fca7276ffbbdce3ccafb42f58",
+      "bytes": 627
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/commands.json",
+      "sha256": "3a6b25889155c7caa65c88e170dce16592afa802d22c43e117cdf8bda62e2257",
+      "bytes": 1355
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/patch.json",
+      "sha256": "2d98bff4f61350e0bbcf3050e5d60012508ea6997cf3eb3585db7df31b4066cd",
+      "bytes": 773
+    },
+    {
+      "path": "evidence/m5/ippv/compat-20261002/stop.json",
+      "sha256": "ba349e74462cd0130b9c30c20db510bc41b83e492c0f8febe8976263dbbb9bf7",
+      "bytes": 1895
+    },
+    {
+      "path": "evidence/m5/ippv/compile_commands.json",
+      "sha256": "edc2fc1ae9cac29e08f5798db8781c1995535e65e60d775ff327acad6638732d",
+      "bytes": 2885
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/01-build.stderr",
+      "sha256": "4e1a2413089f9c76371f1527d2f597bb300e9db3985bf78432bec3dc04a1819f",
+      "bytes": 2847
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/01-build.stdout",
+      "sha256": "c67266e35619bc21ed9bb024cf28397cc4bd63f0dc7b7f391c40b94b23fe4e6b",
+      "bytes": 177
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/02-sanitizer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/02-sanitizer.stdout",
+      "sha256": "2480d01ec9b53f7fc97da8ec798f8dd9c9a38b7a4b3f8cf5fb00473f68b1dcb9",
+      "bytes": 678
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/03-sanitizer.stderr",
+      "sha256": "3dabfab0ebf33a305a313880e571c2d971b269d7d740eaa64165d7f289129898",
+      "bytes": 8315
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/03-sanitizer.stdout",
+      "sha256": "8cf9689402e509af205b35ce1aa7523f6b00c65060a76249af3fe7f0e4e3d3c3",
+      "bytes": 485
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/04-build.stderr",
+      "sha256": "1f03dbbae49c1e3a53fef46eb76f218fb5432750750e614ac51223918772ed9b",
+      "bytes": 2658
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/04-build.stdout",
+      "sha256": "9e74a6df4e742d6f521242285e9dace62ade121cce66369d01f508fe956100b1",
+      "bytes": 119
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/05-build.stderr",
+      "sha256": "1f03dbbae49c1e3a53fef46eb76f218fb5432750750e614ac51223918772ed9b",
+      "bytes": 2658
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/05-build.stdout",
+      "sha256": "9e74a6df4e742d6f521242285e9dace62ade121cce66369d01f508fe956100b1",
+      "bytes": 119
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/REPORT.md",
+      "sha256": "dc44d2633e89d14ff29511cd321e83efc05447c706cfbc031cce5f8f84f3b0d6",
+      "bytes": 14394
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/adapter-tests.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/adapter-tests.stdout",
+      "sha256": "7de84fcf8cac8a8e31b8be2e99e0df320443f5a038f3ae64467686ce6ba13fc5",
+      "bytes": 99
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/commands.json",
+      "sha256": "01fe860c8c99d0d0fe9f5799b25940d62d5609bdd61b325cb972211b6b8dd0f5",
+      "bytes": 3595
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/01.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/01.stdout",
+      "sha256": "1f4bce9dc08eb72e7f18042313abaa53d99a4fcaf825c36d50f6225f9c23ea65",
+      "bytes": 141
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/02.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/02.stdout",
+      "sha256": "dfc4c7f4c41fa66c83fecc8a381bfc1ba01f8ac3b61d4c76dd0f6af7de63d3e6",
+      "bytes": 25
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/build.py",
+      "sha256": "0eaf878e965b176ed3ccd0e23c6e9a155b31c0db7a66012bd6d9c535228af970",
+      "bytes": 4109
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/commands.json",
+      "sha256": "ff459c0cd22fd21c6d156f758600fafcbf195d1ea2608d9dfedb691f215af62a",
+      "bytes": 1764
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/compile_commands.json",
+      "sha256": "8a21526db4f107f6bbf60daa3508a4aa2abc914971a76d15ef456beb25528c5f",
+      "bytes": 3837
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build-sanitize/provenance.json",
+      "sha256": "9453fb898379e8aa5dfcbbf142246c62197a210e944a2808cc56e5cba86d8a3c",
+      "bytes": 2844
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/01.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/01.stdout",
+      "sha256": "f62410a0a4d6c71f89b8c63972ba6b33c32d5cba0df5460a16371b0c2d86c3bc",
+      "bytes": 141
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/02.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/02.stdout",
+      "sha256": "dfc4c7f4c41fa66c83fecc8a381bfc1ba01f8ac3b61d4c76dd0f6af7de63d3e6",
+      "bytes": 25
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/build.py",
+      "sha256": "0eaf878e965b176ed3ccd0e23c6e9a155b31c0db7a66012bd6d9c535228af970",
+      "bytes": 4109
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/commands.json",
+      "sha256": "ab0322613ebb979ef81a096377cb28898d620aea0f79d0ca0bb9a336960f8615",
+      "bytes": 1492
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/compile_commands.json",
+      "sha256": "edc2fc1ae9cac29e08f5798db8781c1995535e65e60d775ff327acad6638732d",
+      "bytes": 2885
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-build/provenance.json",
+      "sha256": "59ff3e30374fa3058dc3e8acffbbc25e4010a85f3997bdef9dbd80c0acad02a5",
+      "bytes": 2836
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-tests.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/final-tests.stdout",
+      "sha256": "7760d6756b183b462e5ebf14405196f8a539c41b55a27275242f6fbf48eb4793",
+      "bytes": 179
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/canonical_output.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/dataset/input.txt",
+      "sha256": "f4a8ae8e74ddfb896a256de4e3099911dcaa6a9302591713898069b0bcd6e3d7",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/graph.txt",
+      "sha256": "9a741a4ca071e9747e27abffbcb194d094710cd9e9eb92e01ce9d85d70cd81ab",
+      "bytes": 29
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/manifest.json",
+      "sha256": "33d4fe7fabe85886ec091baf754dce557b5353a2ec2b6be2b2d9be9880af9a70",
+      "bytes": 8514
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/output/input-1.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/process.json",
+      "sha256": "687ec09f000129ad50dd03f0a92759a172564cacc1183276c52972620f1239b2",
+      "bytes": 1183
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/stdout.txt",
+      "sha256": "2e910a88efa98f751314cf7ebb6a414073207838e1cd7d717991d7a2c2b2dec1",
+      "bytes": 413
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/validation/process.json",
+      "sha256": "692497ed0b73b43e381b03a5244670ed9531053ac1192c09f712532bf4df2040",
+      "bytes": 1644
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/validation/stdout.txt",
+      "sha256": "180ead480e7bbfcf1e1a6b4d7b00306ad7a32aeb9f213752644374ef7a00a7e4",
+      "bytes": 500
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero-sanitizer/vertex_map.json",
+      "sha256": "81821fc88ea73e6c9622119a545632e68066b8bff9b311daa501a00df855397d",
+      "bytes": 5
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/canonical_output.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/dataset/input.txt",
+      "sha256": "f4a8ae8e74ddfb896a256de4e3099911dcaa6a9302591713898069b0bcd6e3d7",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/graph.txt",
+      "sha256": "9a741a4ca071e9747e27abffbcb194d094710cd9e9eb92e01ce9d85d70cd81ab",
+      "bytes": 29
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/manifest.json",
+      "sha256": "e89d492ff0bbf3a293e18a1fe2ffcfac672b3e7aba35600a9418c3406130124c",
+      "bytes": 8458
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/output/input-1.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/process.json",
+      "sha256": "1b08b3b82f2ef71b022656738284390699b124baa95f0d6f878a5e362ac1f4e8",
+      "bytes": 1177
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/stdout.txt",
+      "sha256": "aec73816268459b3653d088ef282eda56a09b68e850504d56ccd93bbcece30fc",
+      "bytes": 412
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/validation/process.json",
+      "sha256": "17f8c8bf20315787324f30740c40af82e63561cacce34e97a5f624481b754ec6",
+      "bytes": 1602
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/validation/stdout.txt",
+      "sha256": "180ead480e7bbfcf1e1a6b4d7b00306ad7a32aeb9f213752644374ef7a00a7e4",
+      "bytes": 500
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/minimal-zero/vertex_map.json",
+      "sha256": "81821fc88ea73e6c9622119a545632e68066b8bff9b311daa501a00df855397d",
+      "bytes": 5
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/dataset/CA-CondMat.txt",
+      "type": "symlink",
+      "target": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-CondMat.txt"
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/input.json",
+      "sha256": "48d6c6b59ed7f9b6fe00ec540da3362a1281280cb7e9d622ce9647f9d56970b4",
+      "bytes": 277
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/output/CA-CondMat-20.txt",
+      "sha256": "2fa05d568f846e0efa77e683d0f24cd31c7f6c692727729d57edeba923c71e51",
+      "bytes": 1607
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/process.json",
+      "sha256": "f34241bef16ebcfc0a8bc67a21da846e2fdcf01630941c5c2cbaedca9ed3c15c",
+      "bytes": 1178
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example-direct/stdout.txt",
+      "sha256": "8fc570cbe50a13de2798444727a2fb2eef6aa5bbb22234669aec5d9bf9cbce95",
+      "bytes": 14583
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example/dataset/CA-CondMat.txt",
+      "type": "symlink",
+      "target": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-CondMat.txt"
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example/manifest.json",
+      "sha256": "507b1aa9ddcc8304660caeb5ce8cecbdbd5c6dd2381c16817cb79778afefa51c",
+      "bytes": 1087
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example/output/CA-CondMat-20.txt",
+      "sha256": "2fa05d568f846e0efa77e683d0f24cd31c7f6c692727729d57edeba923c71e51",
+      "bytes": 1607
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example/stderr.txt",
+      "sha256": "093d972c68ca8efb578969bafaaed939338f2ac1043dd8ace0b3e70c456dc785",
+      "bytes": 106
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/native-example/stdout.txt",
+      "sha256": "8069f39ad08153d21e3abe90af126d58be3f1c2a6fce18fc696fa63954878089",
+      "bytes": 14583
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/paper-check.stdout",
+      "sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0",
+      "bytes": 380
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/patch-replay.json",
+      "sha256": "adc7b86c270f0cd331957c2320054a80c8ea54639239b2fea7e2d721d901d529",
+      "bytes": 1084
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/plan.json",
+      "sha256": "14f1f0b06baa07b10327b7bdd930b13acbba5877cfcd1c7171a513b802d34cf3",
+      "bytes": 935
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/canonical_output.jsonl",
+      "sha256": "70e378ed3a96b0c5cdc3b6a9d6674260aa7f41e14689ca6461078a40edbdb704",
+      "bytes": 3496
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/dataset/input.txt",
+      "sha256": "18563747b6588f47609cdcac7d4f3c84393802e933e141225da6e97df93980c7",
+      "bytes": 983221
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "bytes": 1344073
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/manifest.json",
+      "sha256": "e2011f379d86f18d93b7a624a82f25ed3d42a2216ff7ae10fc28fcaa9427bde6",
+      "bytes": 8525
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/output/input-20.txt",
+      "sha256": "2fa05d568f846e0efa77e683d0f24cd31c7f6c692727729d57edeba923c71e51",
+      "bytes": 1607
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/process.json",
+      "sha256": "f073bc76398b51a2ec5c87f126e567b528aeb2d93ad71e2ac3d93e014f0f030c",
+      "bytes": 1167
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/stdout.txt",
+      "sha256": "8028e14c0f82878bc3260046c197ce1343902b7ac42be3b8bb5f6e2c62acf818",
+      "bytes": 14753
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/validation/process.json",
+      "sha256": "402642091096e94638a5bf76ba034995e6dde09d54876078aecf00daead88b4a",
+      "bytes": 1599
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/validation/stdout.txt",
+      "sha256": "9382c26905d7aad3967d8c8ed916e7a9d7e5a9a98c18c7b5c0224756360dd3bb",
+      "bytes": 526
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/real-structural/vertex_map.json",
+      "sha256": "642938e3de27b286de340231346780aeefdfc7b9d49d39fa8eb983e0e0ed4441",
+      "bytes": 150822
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-after/dataset/triangle.txt",
+      "sha256": "7c0343f77a3c54a7b291511fde0fd472255dbdfd45e57dc93771a4b4e021c6ad",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-after/output/triangle-1.txt",
+      "sha256": "f21fd87f64ccd46eaacb12185e73e6c195f896fb1e32a13b87a9c88b8168eb46",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-after/process.json",
+      "sha256": "3ddf9cc64fb76cd8015c8853507f44ea38678c84ecd227abfd022742c8c8c979",
+      "bytes": 1181
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-after/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-after/stdout.txt",
+      "sha256": "b2008d41766342591d1804296663151b0b0c8d2ee9a407d4329ae1c59c2f22f5",
+      "bytes": 627
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-before/dataset/triangle.txt",
+      "sha256": "7c0343f77a3c54a7b291511fde0fd472255dbdfd45e57dc93771a4b4e021c6ad",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-before/process.json",
+      "sha256": "a5d97ffbed942d8cbfd43bb037d432889146854184e1f47415ae7e9d90aae5bc",
+      "bytes": 1182
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-before/stderr.txt",
+      "sha256": "8f56711089a77d276ae9e99d6cb5bcf21ec415de5fcf06db599a254bf8d5d544",
+      "bytes": 175
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/sanitizer-before/stdout.txt",
+      "sha256": "654fa2adf4a8a57ea2a2f548a554146c9ff7b6221ae42656a2b192e2756611cf",
+      "bytes": 183
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/selection-fix.json",
+      "sha256": "e42ec59bc69ae632aeacc6a59563c54bad402bfe95d64743b6fc4152da492c86",
+      "bytes": 661
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/status.json",
+      "sha256": "2f61a2b80947717786c4dff00b3d06206ded9b4a1b101328764644d999e5462e",
+      "bytes": 384
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/canonical_output.jsonl",
+      "sha256": "c1f60a9ff84304207745a783071b21056f3b86860878a621defdd2f5d1854809",
+      "bytes": 114
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/dataset/input.txt",
+      "sha256": "d71a9f1b3bed8757090e4aec74707b8c7a215fa5ad78953f39b172d41dc391b6",
+      "bytes": 32
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/graph.txt",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "bytes": 90
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/manifest.json",
+      "sha256": "3839b763cc2da9c09579e9a5c9e28d14ff7ab3f13957cfca4ce38ef52dac809d",
+      "bytes": 5723
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/output/input-1.txt",
+      "sha256": "d25078f2c4829241dc8a5603a847c4b66d9947e240cf2f821c7675d941f1a63b",
+      "bytes": 22
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/process.json",
+      "sha256": "33e6d58f736ed6e6568b256eece764883f4a8700f3fd722ba9b0c67439b4886a",
+      "bytes": 1207
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/stdout.txt",
+      "sha256": "271c9651b3513781f8625e38bb512a3c1bc4937ca30bccb627cab76115fd55cc",
+      "bytes": 636
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/validation/process.json",
+      "sha256": "f2b27d755d88b91f8f04087374363868365e0aaaae17ef2572ad647d2d5f6c58",
+      "bytes": 1724
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/validation/stdout.txt",
+      "sha256": "f6887e85f5130f7d87420b29cbac710672fa45b8f0998575aa0920d4de31a1fc",
+      "bytes": 518
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original/vertex_map.json",
+      "sha256": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7",
+      "bytes": 19
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/canonical_output.jsonl",
+      "sha256": "c1f60a9ff84304207745a783071b21056f3b86860878a621defdd2f5d1854809",
+      "bytes": 114
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/dataset/input.txt",
+      "sha256": "d71a9f1b3bed8757090e4aec74707b8c7a215fa5ad78953f39b172d41dc391b6",
+      "bytes": 32
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/graph.txt",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "bytes": 90
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/manifest.json",
+      "sha256": "18ba9af570f4ef39fdb86a5d91d9e9388a7dcba032ad6371afd90345387c3fec",
+      "bytes": 5707
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/output/input-1.txt",
+      "sha256": "d25078f2c4829241dc8a5603a847c4b66d9947e240cf2f821c7675d941f1a63b",
+      "bytes": 22
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/process.json",
+      "sha256": "29af0ca5efd96a41f4b4ed0a96d79a1c2bafb4fe62230dfa9ea43c7a8d0eda88",
+      "bytes": 1193
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/stdout.txt",
+      "sha256": "33a25bc9719fb67794bfd80fc5da5b453b04bc47314a651bd0167805d7e56501",
+      "bytes": 637
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/validation/process.json",
+      "sha256": "209aacf81b6092ff3208dbd333714480507a113fc83ea9d9da639f85f255e57a",
+      "bytes": 1722
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/validation/stdout.txt",
+      "sha256": "f6887e85f5130f7d87420b29cbac710672fa45b8f0998575aa0920d4de31a1fc",
+      "bytes": 518
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-sanitize/vertex_map.json",
+      "sha256": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7",
+      "bytes": 19
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/plan.json",
+      "sha256": "2f265de388eac10542d993581b9db73598ec83eb7dcd80e54146b7c781d8b1ca",
+      "bytes": 1046
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/summary.json",
+      "sha256": "9bd85b2afaf7e57f7eb15b46691bd4141274466c3d93af00b9b7d8ef37a47586",
+      "bytes": 6247
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/canonical_output.jsonl",
+      "sha256": "70547b87be4f8fc3e1e99d4600ecbdbb33ddff9febe463bb6aeb25827adb81f4",
+      "bytes": 108
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/dataset/input.txt",
+      "sha256": "f27027977feb7dad897eea7f94f41ceb18809ba2cd3807932f4049a129049fd5",
+      "bytes": 28
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/graph.txt",
+      "sha256": "6f69c6121439006a1f3c39c45367da3c658a130d793625d93b822579681b8010",
+      "bytes": 84
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/manifest.json",
+      "sha256": "8fbc276a12b98a5a1a4c1b6e4aabfa3139429fefc7569cdcfeb9cc7ed505c4b4",
+      "bytes": 5674
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/output/input-1.txt",
+      "sha256": "27590ccde4c777d77b92eb45291e7a7d2600b4afbc77bab59ba012488f02e4ac",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/process.json",
+      "sha256": "bc770eb573e46e31b5446f696819054c9b329757d3f37d7a2a064c7e08986213",
+      "bytes": 1191
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/stdout.txt",
+      "sha256": "737cbaee259d1eb3ef354675576e583db52fdc5a05db3824ec362fcfb8748499",
+      "bytes": 617
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/validation/process.json",
+      "sha256": "6a2c1e22bbfadf4173c65ef34ab09d1e8dea8b409eb9803f59ee150dd316fedf",
+      "bytes": 1723
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/validation/stdout.txt",
+      "sha256": "28a75741f3ad1dca6c390bfaa2d1fc90960444a5d983610c66cd491872bcfe21",
+      "bytes": 510
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-original/vertex_map.json",
+      "sha256": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7",
+      "bytes": 19
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/canonical_output.jsonl",
+      "sha256": "70547b87be4f8fc3e1e99d4600ecbdbb33ddff9febe463bb6aeb25827adb81f4",
+      "bytes": 108
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/dataset/input.txt",
+      "sha256": "f27027977feb7dad897eea7f94f41ceb18809ba2cd3807932f4049a129049fd5",
+      "bytes": 28
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/graph.txt",
+      "sha256": "6f69c6121439006a1f3c39c45367da3c658a130d793625d93b822579681b8010",
+      "bytes": 84
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/manifest.json",
+      "sha256": "bfaa739fcfa2720639d46408771aef9dccb43fc67bf63dfab2a3848a4e302179",
+      "bytes": 5699
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/output/input-1.txt",
+      "sha256": "27590ccde4c777d77b92eb45291e7a7d2600b4afbc77bab59ba012488f02e4ac",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/process.json",
+      "sha256": "e427b1d30648d2e4d2f5b67652e374603c204b8cba6e3377519f9dcda67a8f99",
+      "bytes": 1216
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/stdout.txt",
+      "sha256": "0705b21a621c925649a01f1171086800bc46775bf7ffb7aeb7a735fd0a17c510",
+      "bytes": 618
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/validation/process.json",
+      "sha256": "5546fd956c2a017e39cae184bed839231dde7cac87faa9a540429f8995881063",
+      "bytes": 1723
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/validation/stdout.txt",
+      "sha256": "28a75741f3ad1dca6c390bfaa2d1fc90960444a5d983610c66cd491872bcfe21",
+      "bytes": 510
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/vertex_map.json",
+      "sha256": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7",
+      "bytes": 19
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/canonical_output.jsonl",
+      "sha256": "3a1b1b2564809cf03374fea544d2445ef24e6661e889837b6a0ac5b94f521825",
+      "bytes": 108
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/dataset/input.txt",
+      "sha256": "78eb43b3b86f6a5f3fddd6d26a216daaf499f980663ffd0fb03c1c29fb8ab842",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/graph.txt",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "bytes": 59
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/manifest.json",
+      "sha256": "5a49af5261c0a519605ca22df94fff060068e635d1086056f96a6234f9e28f13",
+      "bytes": 5743
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/output/input-2.txt",
+      "sha256": "eda48b61432daed78b74cb24b0f257789943e19fb0b0dcc45d20f192f6671d8b",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/process.json",
+      "sha256": "2296b559f7d2044d89ee1455a278c5abd39abc06fc06d3c8b7e569260a8744a4",
+      "bytes": 1197
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/stdout.txt",
+      "sha256": "5576735bb7cdf1773c8a8fb6c192710e521bb1d14a4a2feaa9d287684231990b",
+      "bytes": 642
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/validation/process.json",
+      "sha256": "edb8ac3349217e40c218b5ee9752db09c877eba72f2f04696940b7ddbbb66025",
+      "bytes": 1747
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/validation/stdout.txt",
+      "sha256": "76c3f0fe63e03d545ed94fc8de6cb6597ce79f8b6959e87caaa68b28f4ec4124",
+      "bytes": 519
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-and-isolate-build-ippv-original/vertex_map.json",
+      "sha256": "f4069d23b7397a3a5acb4df70823090730695a91ef1e4747e786e397ed7982e1",
+      "bytes": 14
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/canonical_output.jsonl",
+      "sha256": "ce203d1b553e9d99e05f55a093a9b58af794d441be7751abf92038bc69d92770",
+      "bytes": 108
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/dataset/input.txt",
+      "sha256": "7c0343f77a3c54a7b291511fde0fd472255dbdfd45e57dc93771a4b4e021c6ad",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/graph.txt",
+      "sha256": "e71fc891051966fbefcbea743671155690d7cbe5ffc8a2cab8fd53e765e63e99",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/manifest.json",
+      "sha256": "51a32e3152d8e2b0ad7faf6e983451c65c388d0a9203efb104020aacfc021a84",
+      "bytes": 5628
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/output/input-1.txt",
+      "sha256": "f21fd87f64ccd46eaacb12185e73e6c195f896fb1e32a13b87a9c88b8168eb46",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/process.json",
+      "sha256": "06191b48a3fc0f0184e1adffd96dbee7810ed3c8f04497139f0ce06a3789c9f8",
+      "bytes": 1183
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/stdout.txt",
+      "sha256": "36065c3b4e290ead729429043b7aedec03d4ed5749e713d6396cb88675986af3",
+      "bytes": 618
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/validation/process.json",
+      "sha256": "2e39b58c9e08b167f6d248b7f77321e514f06fdbcc9785c795059e1899a06c92",
+      "bytes": 1686
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/validation/stdout.txt",
+      "sha256": "09b5a32281231367ddf4a4b8f7100ca75d21f6101db2cbcb95fbcccec0335cba",
+      "bytes": 509
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-original/vertex_map.json",
+      "sha256": "6473ec9f8048904982cc16b88f50f6eb0577bad0e88a30c2917b3589238596e3",
+      "bytes": 10
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/canonical_output.jsonl",
+      "sha256": "ce203d1b553e9d99e05f55a093a9b58af794d441be7751abf92038bc69d92770",
+      "bytes": 108
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/dataset/input.txt",
+      "sha256": "7c0343f77a3c54a7b291511fde0fd472255dbdfd45e57dc93771a4b4e021c6ad",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/graph.txt",
+      "sha256": "e71fc891051966fbefcbea743671155690d7cbe5ffc8a2cab8fd53e765e63e99",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/manifest.json",
+      "sha256": "c351da88209d6e3d64252148c97dcb0da77e93239774e2ccb7d8dfced7766aa9",
+      "bytes": 5631
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/output/input-1.txt",
+      "sha256": "f21fd87f64ccd46eaacb12185e73e6c195f896fb1e32a13b87a9c88b8168eb46",
+      "bytes": 16
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/process.json",
+      "sha256": "5c27399dba28c964f0bba6c842d1f98e5940445a215ce8d7787beb89cfa24612",
+      "bytes": 1185
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/stdout.txt",
+      "sha256": "3f8443f1e1f99d7c82edbaa2d9838bd1f165484731ea58fdcc357ad94b7f11ac",
+      "bytes": 618
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/validation/process.json",
+      "sha256": "c86709b9f92c5fd66502e4e74544f94caf86696d911434143dab95a918b31183",
+      "bytes": 1687
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/validation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/validation/stdout.txt",
+      "sha256": "09b5a32281231367ddf4a4b8f7100ca75d21f6101db2cbcb95fbcccec0335cba",
+      "bytes": 509
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/toys/triangle-build-ippv-sanitize/vertex_map.json",
+      "sha256": "6473ec9f8048904982cc16b88f50f6eb0577bad0e88a30c2917b3589238596e3",
+      "bytes": 10
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verification.json",
+      "sha256": "476eee7c3bac7f2eb22ee98d1f0b6511e4ae69fa7954565077f066e5c089a372",
+      "bytes": 681
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/01.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/01.stdout",
+      "sha256": "6f5575e363dcc1d2de6380e1f680c1fd096fdd7f6c4903c8b5da7fa1a160cb47",
+      "bytes": 141
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/02.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/02.stdout",
+      "sha256": "dfc4c7f4c41fa66c83fecc8a381bfc1ba01f8ac3b61d4c76dd0f6af7de63d3e6",
+      "bytes": 25
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/commands.json",
+      "sha256": "3cda4004ee3c2ee698a1e1027ed7e1a6c54594fb9cb6c09d64dfb130fbe63d42",
+      "bytes": 1979
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/compile_commands.json",
+      "sha256": "8a21526db4f107f6bbf60daa3508a4aa2abc914971a76d15ef456beb25528c5f",
+      "bytes": 3837
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build-sanitize/provenance.json",
+      "sha256": "9720deda2e16f3917845266c8c64cfcbee5372e2ebb230c0b5cb454568db9cd0",
+      "bytes": 2847
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/01.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/01.stdout",
+      "sha256": "f62410a0a4d6c71f89b8c63972ba6b33c32d5cba0df5460a16371b0c2d86c3bc",
+      "bytes": 141
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/02.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/02.stdout",
+      "sha256": "dfc4c7f4c41fa66c83fecc8a381bfc1ba01f8ac3b61d4c76dd0f6af7de63d3e6",
+      "bytes": 25
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/commands.json",
+      "sha256": "32bf20981428d43859479a2e7f976409d2ee60e524d9efa3fdecdf4440fe7947",
+      "bytes": 1571
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/compile_commands.json",
+      "sha256": "edc2fc1ae9cac29e08f5798db8781c1995535e65e60d775ff327acad6638732d",
+      "bytes": 2885
+    },
+    {
+      "path": "evidence/m5/ippv/reproduction-20261002/verified-build/provenance.json",
+      "sha256": "2236d6457d79aa65f5ea7b95fc8fab55fba0845e31336d3cf9605a8a054ee3af",
+      "bytes": 2839
+    },
+    {
+      "path": "evidence/m5/ippv/source.json",
+      "sha256": "f51249ffcdd0e7317d9a20e1ec621bfb5bc0845f07fd15a617e298739f4198ef",
+      "bytes": 2113
+    },
+    {
+      "path": "evidence/m5/ippv/start.json",
+      "sha256": "24faa678a974eeb324341fc097830b83d9e31228719c5b934456a94008d80d62",
+      "bytes": 658
+    },
+    {
+      "path": "evidence/m5/ippv/stop.json",
+      "sha256": "c20688d9ab4f7a24906c8ae6ec5284d1fb0e4e648761b6df7a5d9a9f2ebf7751",
+      "bytes": 1572
+    },
+    {
+      "path": "evidence/m5/preflight-20261001.json",
+      "sha256": "e01fa6f68461dc03a396157000091efb4fef37bd536c621fc8fead9aa9df6a95",
+      "bytes": 3061
+    }
+  ]
+}

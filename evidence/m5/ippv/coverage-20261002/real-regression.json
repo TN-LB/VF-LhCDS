@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "native_exit_code": 0,
+  "validation": "structural_checked",
+  "output_count": 20,
+  "checks_passed": true,
+  "canonical_output_identical_to_three_patch_run": true,
+  "old_sha256": "70e378ed3a96b0c5cdc3b6a9d6674260aa7f41e14689ca6461078a40edbdb704",
+  "new_sha256": "70e378ed3a96b0c5cdc3b6a9d6674260aa7f41e14689ca6461078a40edbdb704",
+  "native_wall_seconds": 9.415062500163913,
+  "native_peak_rss_bytes": 173408256
+}

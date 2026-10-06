@@ -1,0 +1,33 @@
+{
+  "scope": "Ratios of three-repeat medians from fully completed strict paired cells only.",
+  "cases": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "safe_over_off_wall_median": 0.9907211718055926,
+      "safe_over_off_rss_median": 0.9582099374794341
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "safe_over_off_wall_median": 1.0041003114788298,
+      "safe_over_off_rss_median": 0.881511746680286
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "safe_over_off_wall_median": 1.002981899303331,
+      "safe_over_off_rss_median": 0.9480910917615539
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "safe_over_off_wall_median": 1.0016508439037155,
+      "safe_over_off_rss_median": 0.8899707887049659
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "safe_over_off_wall_median": 1.0322722449491457,
+      "safe_over_off_rss_median": 0.8808668076109937
+    }
+  ],
+  "excluded_censored_cases_retained_in_aggregate": true,
+  "historical_timings_combined": false,
+  "statistical_significance_claimed": false
+}

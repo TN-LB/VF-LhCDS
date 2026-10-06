@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "name": "draft-ca-condmat-membership-ippv-pair-20261006",
+  "scope": "draft",
+  "seed": 20261003,
+  "repeats": 1,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-adjacency-membership",
+      "kind": "vf",
+      "executable": "build-m5-adjacency-release/vflhcds",
+      "sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+      "options": {
+        "core": "off",
+        "footprints": "membership",
+        "enumeration": "adjacency"
+      }
+    },
+    {
+      "name": "ippv-seven-patches",
+      "kind": "ippv",
+      "executable": "build-ippv-fixed-release/IPPV",
+      "sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+      "options": {
+        "iterations": 10
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "ca-condmat-h3-k5",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    }
+  ]
+}

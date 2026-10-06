@@ -1,0 +1,45 @@
+MATCH debug-m4-smoke 10897
+MATCH debug-m4-exhaustive-small 411602
+MATCH debug-m4-seeded 175300
+MATCH debug-m4-higher-h 11410
+MATCH debug-m2-exhaustive-small 63437
+MATCH debug-m2-seeded 21981
+MATCH debug-m2-higher-h 1621
+MATCH sanitize-m4-smoke 10897
+MATCH sanitize-m4-exhaustive-small 411602
+MATCH sanitize-m4-seeded 175300
+MATCH sanitize-m4-higher-h 11410
+MATCH sanitize-m2-exhaustive-small 63437
+MATCH sanitize-m2-seeded 21981
+MATCH sanitize-m2-higher-h 1621
+{
+  "status": "passed",
+  "scope": "finite implementation equivalence and integrity, not theorem proof",
+  "dev_commands_passed": 4,
+  "acceptance_commands_passed": 23,
+  "ctest": {
+    "Debug": "14/14",
+    "ASan_UBSan": "14/14",
+    "Release": "14/14"
+  },
+  "pytest_cases_passed": 115,
+  "differential_campaigns_passed": 14,
+  "old_vs_new_response_comparisons": 14,
+  "old_vs_new_records_matched": 1392496,
+  "comparison_exclusion": "core_reduction_seconds only",
+  "old_m4_files_changed": [
+    "CMakeLists.txt",
+    "include/vflhcds/clique/materialized.hpp",
+    "src/cli/dispatch.cpp",
+    "src/clique/materialized.cpp",
+    "tests/m2_probe.cpp",
+    "tests/m3_probe.cpp"
+  ],
+  "old_m4_files_unchanged": 47,
+  "protected_files_unchanged": 32,
+  "papers_unchanged": 4,
+  "reference_unchanged": true,
+  "original_m5_binary_and_library_unchanged": true,
+  "git_diff_check": 0,
+  "real_diagnostic": "separate subsequent evidence"
+}

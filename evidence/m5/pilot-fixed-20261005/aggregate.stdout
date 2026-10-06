@@ -1,0 +1,24 @@
+{
+  "planned_native_runs": 48,
+  "recorded_native_runs": 25,
+  "native_statuses": {
+    "completed": 24,
+    "timeout": 1
+  },
+  "external_validators_completed": 24,
+  "structural_passes": 24,
+  "unrun_native_runs": 23,
+  "paired_comparisons": 12,
+  "strict_matches": 6,
+  "tie_aware_matches": 12,
+  "tie_aware_disagreements": 0,
+  "stop_reason": {
+    "kind": "unsuccessful_run",
+    "directory": "runs/0012-0",
+    "status": "timeout"
+  },
+  "completeness_certified": false,
+  "raw_inventory_entries_verified": 263,
+  "campaign_exit_code": 1,
+  "campaign_wall_seconds": 177.55232983455062
+}

@@ -1,0 +1,12 @@
+{
+  "git_diff_check_exit": 0,
+  "report_links_exist": true,
+  "log_stderr_empty": 5,
+  "modified_existing_files": 5,
+  "added_evidence_files_excluding_inventory_and_final_checks": 311,
+  "new_root": "evidence/m5/pilot-fixed-20261005",
+  "files_changed_sha256": "fa16760b384e3c708480a5d10cc351d34a8cb4989b2febc8c12a287a56a56834",
+  "report_sha256": "963941193199a6de4f7f235863c17bd1a8a23e430bdf4a530bccaa2bd6f1410a",
+  "post_stop_native_calls": 0,
+  "new_builds_or_test_suite_runs": 0
+}

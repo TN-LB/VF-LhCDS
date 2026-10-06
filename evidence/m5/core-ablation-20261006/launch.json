@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/core-ablation-20261006/config.json",
+    "--evidence",
+    "evidence/m5/core-ablation-20261006/campaign",
+    "--stop-on-failure",
+    "--continue-on-timeout",
+    "--require-strict-agreement"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-06T12:22:40.117888+00:00",
+  "configuration_sha256": "00bda569634ba7ac3540a79f6e358612c8ad8b7d48963e944e23db56a21f90e9",
+  "preflight_sha256": "7506bfce5779b5999cb51f6bc961accac0d4af276a8ef5a78860a0025cc101f1",
+  "environment_sha256": "e53cbb62b3fb0cbd6957ee133c994326c3b2995ce260b2c9857cbf0c0f9f9c5d"
+}

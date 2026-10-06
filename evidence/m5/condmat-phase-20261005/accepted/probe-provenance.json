@@ -1,0 +1,17 @@
+{
+  "executable": "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe/vflhcds_phase_probe",
+  "executable_sha256": "195814649870cf88dfd7959a957221954c54d5abfe7c82b070b9b5aef47d1ae9",
+  "library": "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/libvflhcds_lib.a",
+  "library_sha256": "9e37a3547efb11271ca826cbe35a10e327352f42fb15f6798b1a2f069098dbeb",
+  "production_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+  "compile_commands_sha256": "cf9e22872bdc4c18c5f15dfaea94747541774909a7f8ae8e0fe5e3bd9ae38379",
+  "link_command_sha256": "af0dcb7a11d51d1286bb4dfa0fcdc458fb138ed9b1d95afad32c53bf38fbc4da",
+  "source_sha256": {
+    "evidence/m5/condmat-phase-20261005/run_diagnostic.py": "e9c2914284f589b10be44f7b8696e317a330c6e7f03b3e44888beb8844919a55",
+    "experiments/phase_probe/main.cpp": "83a856fbc313b50d52c438fe7bc9e57d506a348b142c30bfed03572b2c5004a8",
+    "experiments/phase_probe/CMakeLists.txt": "b1ad9021b8bc9c58e3bc84bdea144fb99cf77f3819e22edcaa8f47e7a259d4e7",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/validate.py": "efbd6b4194bb5b8c50cfd74043b0d0e215e0201dfd11678b40a291823cedea34",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14"
+  }
+}

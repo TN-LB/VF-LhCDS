@@ -1,0 +1,75 @@
+{
+  "scope": "This continuation only; pre-existing repository edits excluded.",
+  "modified_files": [
+    {
+      "path": "docs/TASKS.md",
+      "before_sha256": "e4e12d40b6b5b0d3a3dd3421f5bff32c4ba8022bca98f90906715ad472a7d38b",
+      "after_sha256": "8fdca48349055216c8487bf168bc92382e07f901e92d5fca99223f40c5bd7775"
+    },
+    {
+      "path": "docs/CLAIM_TRACEABILITY.md",
+      "before_sha256": "a7f9e3a55ddb24adea418c811feb293c629c3c1165d8b2ad282b57a9bff6711d",
+      "after_sha256": "05982af6659014fe6c6c69bedbbffd19a4d86e36f844617380e549a6df96473e"
+    },
+    {
+      "path": "experiments/README.md",
+      "before_sha256": "a4683a0d3a5909c839d60bee61530bb9bd49fa849011afaab4c33b807784f8b8",
+      "after_sha256": "b5c3b98ae40bedb22651868d9d10bb0d7a2effc30177e1f60cd5762a5f48aa23"
+    },
+    {
+      "path": "evidence/m5/REPORT.md",
+      "before_sha256": "af31664966fafc0b58b0a2a17350af1c33ab23a8c232523f6c0a3dff5e65d4a7",
+      "after_sha256": "90b942e27bfe2ac2dd205c47defa2162fcd6dcddc4631e7f49a5979faa909f68"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before_sha256": "014822cde138f0fdb1a717022a7efc811c226b2a7f0eab62228fd7bf9b7d8506",
+      "before_hash_source": "D032 environment snapshot",
+      "after_sha256": "b18f9d1c52e551ce059a9e7bc30cb0e62e9a92e80a53efed2aaf065ab2c9b4e6"
+    }
+  ],
+  "added_evidence_sha256": {
+    "evidence/m5/condmat-membership-20261006/REPORT.md": "de602186675bba10cb717cce79a0d198b31da39c4672915ced575025ce9b89f2",
+    "evidence/m5/condmat-membership-20261006/campaign/checksums.json": "66ff8b0b280136e0d4a397e263feed19c72fd67306851b9e9d2ec6e9ea9f6852",
+    "evidence/m5/condmat-membership-20261006/campaign/config.json": "9171c0342a9b985f8c09d86eb3466003b0b0a8b7237190ed7366b55fa76e54be",
+    "evidence/m5/condmat-membership-20261006/campaign/environment.json": "f22f1debfbb7df1e09de4f9a39c56031bf1423e483efe4e25f3e22f1b81e36e8",
+    "evidence/m5/condmat-membership-20261006/campaign/execution-policy.json": "71a07597c739f0fd758b64a48875dd4c0ec49efb61a02fd6bad7db8758ed64f8",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/canonical_output.jsonl": "4de208685921933c6876ee68e200ce69ad9df6b266e587a89533b4662e2f56a0",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/graph.txt": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/manifest.json": "2eb058e29df77e1804b5cdaca1fc0456488caaad10b84d5ef256b49d49572450",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/process.json": "bab09ace0519364d7320766e8437be59e065cac4e1ef240cc017338df8e44af8",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/stderr.txt": "3f0b4507fabbe92c4ddaa12666057aab041a26d07f3ef797ef46dacf9bc5382b",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/stdout.txt": "4de208685921933c6876ee68e200ce69ad9df6b266e587a89533b4662e2f56a0",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/validation/process.json": "796468a4f8ba8f0fb257a7afdada5f397925ae0885e39a4aa1a1a5030fc09a52",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/m5/condmat-membership-20261006/campaign/runs/0000-0/validation/stdout.txt": "f78f8d1dec1f44ddaff41b63c09ed3a9cf40f037a3a319b43d017e07ac445f10",
+    "evidence/m5/condmat-membership-20261006/campaign/schedule.json": "d9974e8fb62a408c7168747825e1e0a2a631323f3bfd7be6e77c182166bc3de5",
+    "evidence/m5/condmat-membership-20261006/campaign/summary.json": "025b256e82acbf369031e509f3e2289bfe2e38a6c171af733f9c66cc3f765e3b",
+    "evidence/m5/condmat-membership-20261006/check_environment.py": "f2f4a2c9e66bf81d48c9c4d6465ec8b66591a1feaff5596ad287c8ec4c4d1c8d",
+    "evidence/m5/condmat-membership-20261006/commands.json": "51a43f413b71ac21bf0dcdcc47c843fecb696fdd77c9b4c1ccf7f0fe23bbcdae",
+    "evidence/m5/condmat-membership-20261006/completion.json": "369ead360bc1500b8d36b44edae0c5bcc2b8af77b6f66536d510f0fbdb7f2405",
+    "evidence/m5/condmat-membership-20261006/config.json": "9171c0342a9b985f8c09d86eb3466003b0b0a8b7237190ed7366b55fa76e54be",
+    "evidence/m5/condmat-membership-20261006/current-environment.json": "d5a8d752d3b5d42ef3cd4eaea8945e4f356923ae30a1161f461b48ac8e38b69d",
+    "evidence/m5/condmat-membership-20261006/driver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/m5/condmat-membership-20261006/driver.stdout": "d117a99ed32d574f1f0f59951244288819e299dc6ce7500cfd638c4baa6b5850",
+    "evidence/m5/condmat-membership-20261006/environment.json": "43e767d00366ee2029a78536d94a5bb0aa956f88332b8cf9c60c5d7e285c3582",
+    "evidence/m5/condmat-membership-20261006/launch.json": "8270627fdcfce49d38f7c740f7acc2890aeb529c0fd9473796711cc3905c63ed",
+    "evidence/m5/condmat-membership-20261006/next-pair-draft.json": "a345bda4b643919556f2869a1e13e5a4da18ae1797ef6dced4db8666dd84558f",
+    "evidence/m5/condmat-membership-20261006/preflight-attempt-1/config.json": "9171c0342a9b985f8c09d86eb3466003b0b0a8b7237190ed7366b55fa76e54be",
+    "evidence/m5/condmat-membership-20261006/preflight-attempt-1/failure.json": "7b478042912a82781e12ee04f85313a888131b027c7502d352bbca4dbdff141d",
+    "evidence/m5/condmat-membership-20261006/preflight-attempt-1/preflight.json": "c11a326add98ada448e907bc282dce8d005d273c56a706c5eb1cc0640c9ca3de",
+    "evidence/m5/condmat-membership-20261006/preflight-attempt-1/run_diagnostic.py": "b311b648461fec82b083cf85460d14e2feb93135519d31bab764d8b375791df4",
+    "evidence/m5/condmat-membership-20261006/preflight-attempt-1/schedule.json": "d9974e8fb62a408c7168747825e1e0a2a631323f3bfd7be6e77c182166bc3de5",
+    "evidence/m5/condmat-membership-20261006/preflight.json": "97841c78b30e27cddd0f628fc023886bf27b6a0fcee4424a7cadceb4ff0552aa",
+    "evidence/m5/condmat-membership-20261006/result.json": "bc475ef1d41eda5d34c88f5cb4cf20c8706ffa480c70ad0b840a7774ebd145a5",
+    "evidence/m5/condmat-membership-20261006/run_diagnostic.py": "c3ec764016778cbe3f489fb8e7f808602f1b4f1ae07872ad0bca254c3faa35a6",
+    "evidence/m5/condmat-membership-20261006/schedule.json": "d9974e8fb62a408c7168747825e1e0a2a631323f3bfd7be6e77c182166bc3de5",
+    "evidence/m5/condmat-membership-20261006/verification-command.json": "461417873540aa8df1153155c1acc45a57b1206c04d2d329d82f3f5611c04fd2",
+    "evidence/m5/condmat-membership-20261006/verification.json": "e56e4b5190f91a22c48d3083e7010a86db36dea7f9719d32bcb7d1097817caf4",
+    "evidence/m5/condmat-membership-20261006/verification.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/m5/condmat-membership-20261006/verification.stdout": "bc475ef1d41eda5d34c88f5cb4cf20c8706ffa480c70ad0b840a7774ebd145a5",
+    "evidence/m5/condmat-membership-20261006/verify.py": "d95fa518d0c5f765fe2241cc44ef246a529da38e0942a707642697da2dfccf93"
+  },
+  "inventory_self_and_final_checks_excluded": true,
+  "production_symbols_changed": []
+}

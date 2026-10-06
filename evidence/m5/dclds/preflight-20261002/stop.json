@@ -1,0 +1,24 @@
+{
+  "task": "P09b.1",
+  "status": "blocked-license-decision",
+  "repository": "https://github.com/s01bvral/DCLDS",
+  "commit": "60093e582bc584815ab824c3e8b94efdef138200",
+  "commit_date": "2026-02-23T19:48:46Z",
+  "tree": "8f23ab65e000bf6696c9230627156e47ac287b96",
+  "github_license": null,
+  "tree_truncated": false,
+  "tracked_file_count": 16,
+  "license_named_paths": [],
+  "scope": "metadata and filename inventory; source-file notices and any separate author grant remain unverified",
+  "freeze": "freeze.json",
+  "proposed_decision": "Proceed with local DCLDS acquisition/build/validation as an external baseline, explicitly retaining the unidentified-license status; no technique import or upstream redistribution grant implied. Not accepted yet.",
+  "alternative": "Leave DCLDS blocked pending a license/author permission, record its absence and limit comparison claims.",
+  "reason_for_owner_decision": "AGENTS.md requires a decision before a new licensing/use choice. D027 and D028 authorize IPPV specifically, not DCLDS.",
+  "unrun": [
+    "DCLDS source clone/build/patch",
+    "detailed code/theory comparison and publication-to-pinned-code validation",
+    "DCLDS adapter/definition toys/real smoke",
+    "shared benchmark configuration and final experiment campaign"
+  ],
+  "m5_complete": false
+}

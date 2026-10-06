@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-03",
+  "authorized_enumeration_repair": "complete",
+  "correctness_gates": "passed",
+  "real_diagnostic": "completed; structural validation and strict historical IPPV agreement",
+  "new_blocking_conflict": null,
+  "M5_complete": false,
+  "P11.3": "additional completed real diagnostic; fresh paired campaign pending",
+  "final_experimental_policy": "not frozen/approved",
+  "dclds": "deferred",
+  "production_default": "combinations",
+  "new_mode_requires": "--clique-enumeration adjacency"
+}

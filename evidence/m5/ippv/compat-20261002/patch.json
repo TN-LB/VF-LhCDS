@@ -1,0 +1,13 @@
+{
+  "task": "P09.1",
+  "date": "2026-10-02",
+  "owner_approval": "好的 (reply to the proposed minimal compatibility patch)",
+  "upstream_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "patch": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+  "patch_sha256": "b0501215f6debf9bfe59d95de692fc9fb8f76d1a7a3c57b9e4c2b7d06c4452f5",
+  "changes": "Remove only unused #include <omp.h>; algorithm, parameters and output unchanged",
+  "Graph.cpp_before_sha256": "3938cb3c694592cd3054fda01dd06c21268f2b6255739207d56f20baa60772f9",
+  "Graph.cpp_after_sha256": "9da4df4365b48c6ed8520cc1d8c1f62f8536e475f8511fd0501d4d88079e7fe5",
+  "dependencies_added": [],
+  "build_directory": "build-ippv-original (reused; original failed-build logs retained separately)"
+}

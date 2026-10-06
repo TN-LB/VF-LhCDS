@@ -1,0 +1,58 @@
+[
+  {
+    "command": [
+      "git",
+      "clone",
+      "--depth",
+      "1",
+      "https://github.com/Elssky/IPPV.git",
+      ".deps/baselines/ippv"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "exit_code": 0,
+    "stdout": "01-clone.stdout",
+    "stderr": "01-clone.stderr",
+    "scope": "Public source acquisition under D027",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e72dbe412e2f3a82fe89e1a21fbf01883937960e6b4766344da1c5af907ac52b"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-original",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0"
+    },
+    "scope": "Author CMake configuration; existing Boost header path only; not an experiment run",
+    "started_utc": "2026-10-01T06:20:25.498510+00:00",
+    "stdout": "02-configure.stdout",
+    "stderr": "02-configure.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-01T06:20:26.936453+00:00",
+    "stdout_sha256": "b0257ade742021e3e231c3d986b14273d3d38f04b70fea89fe4215a5711c89af",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-original",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "scope": "Unmodified author code; existing Boost include path from configuration",
+    "started_utc": "2026-10-01T06:20:50.695313+00:00",
+    "stdout": "03-build.stdout",
+    "stderr": "03-build.stderr",
+    "exit_code": 2,
+    "finished_utc": "2026-10-01T06:20:51.980755+00:00",
+    "stdout_sha256": "4da57bc2eaa159be4d5cca49ea10410a845dc75404298506ad91a92393eb08c8",
+    "stderr_sha256": "1af7c44c21fe225d040b6bb6f80e9e22d751d6fe14e63a68cc3db1acd8d604a7"
+  }
+]

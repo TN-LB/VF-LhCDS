@@ -1,0 +1,16 @@
+{
+  "task": "P09.1",
+  "status": "partial-with-recorded-zero-density-mismatch",
+  "new_repairs": [
+    "IPPV-B05",
+    "IPPV-B06"
+  ],
+  "dclds_status": "deferred-by-owner-D029",
+  "current_owner_decision_required": false,
+  "final_corpus_executed": 48,
+  "definition_passes": 32,
+  "preserved_zero_mismatches": 16,
+  "real_structural_outputs": 20,
+  "m5_complete": false,
+  "report": "REPORT.md"
+}

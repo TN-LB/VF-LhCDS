@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "evidence/m5/ippv/disagreement-20261005/verify_evidence.py"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 0,
+  "wall_seconds": 0.5031022923067212
+}

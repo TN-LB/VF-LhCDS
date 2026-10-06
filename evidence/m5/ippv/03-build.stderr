@@ -1,0 +1,17 @@
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/main.cpp:6:15: warning: unused variable 'el' [-Wunused-variable]
+    6 |     EdgeList* el;
+      |               ^~
+1 warning generated.
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:6:10: fatal error: 'omp.h' file not found
+    6 | #include <omp.h>
+      |          ^~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/IPPV.dir/Graph.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/EdgeFN.cpp:3:105: warning: field 'flow' will be initialized after field 'index' [-Wreorder-ctor]
+    3 | EdgeFN::EdgeFN(int from, int to, double cap, double flow, double index) : from(from), to(to), cap(cap), flow(flow), index(index) {
+      |                                                                                               ~~~~~~~~  ^~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                                                               index(index) cap(cap) flow(flow)
+1 warning generated.
+make[1]: *** [CMakeFiles/IPPV.dir/all] Error 2
+make: *** [all] Error 2

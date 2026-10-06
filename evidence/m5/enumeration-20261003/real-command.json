@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/experiments/run.py",
+    "--config",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/enumeration-20261003/real-config.json",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/enumeration-20261003/real"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-03T12:57:23.146508+00:00",
+  "config_sha256": "276eea90baddf7491e6452665d082d309c3996af68e04edfa856945941a4ee11",
+  "exit_code": 0,
+  "finished_utc": "2026-10-03T12:57:24.297196+00:00"
+}

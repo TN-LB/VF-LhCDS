@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe/vflhcds_phase_probe",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+    "3",
+    "5",
+    "adjacency"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/condmat-phase-20261005/accepted/smoke/bridged_triangles/probe",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T09:17:51.430852+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "195814649870cf88dfd7959a957221954c54d5abfe7c82b070b9b5aef47d1ae9",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.007867582142353058,
+  "user_seconds": 0.001687,
+  "system_seconds": 0.0015719999999999998,
+  "peak_rss_bytes": 1409024,
+  "finished_utc": "2026-10-05T09:17:51.439426+00:00",
+  "sha256": {
+    "stdout.txt": "c1f60a9ff84304207745a783071b21056f3b86860878a621defdd2f5d1854809",
+    "stderr.txt": "79de29cf45489cc082027a717227be82e7ff5368f66a35d338ffd19de21bab8f"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/condmat-pair-20261006/config.json",
+    "--evidence",
+    "evidence/m5/condmat-pair-20261006/campaign",
+    "--stop-on-failure"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 43.072532165795565,
+  "finished_utc": "2026-10-05T14:28:55.941005+00:00",
+  "timing_scope": "Entire driver, including separate validation and evidence I/O."
+}

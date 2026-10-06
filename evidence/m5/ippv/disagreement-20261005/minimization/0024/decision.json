@@ -1,0 +1,22 @@
+{
+  "edit": [
+    "remove_vertex",
+    6
+  ],
+  "vertices": 12,
+  "edges": 14,
+  "graph_sha256": "8e768b91f19b58ec641f2ab17bd11099ba1225acd520e746d8d918da8fef3ba8",
+  "accepted": false,
+  "truth": [
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "density": "5/4"
+    }
+  ],
+  "reason": "does not retain two positive-density solutions"
+}

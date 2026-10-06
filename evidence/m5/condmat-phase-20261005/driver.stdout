@@ -1,0 +1,4 @@
+{"test": "T-PHASE-ADJ/triangle_and_isolate", "status": "passed"}
+{"test": "T-PHASE-ADJ/bridged_triangles", "status": "passed"}
+Starting the single CA-CondMat diagnostic (60-second guard).
+{"native_status": "timeout", "incomplete_phase": "solve", "completed_queries": 137, "last_boundary": {"diagnostic_schema": 1, "phase": "solve", "event": "begin", "elapsed_seconds": 0.158885875}}

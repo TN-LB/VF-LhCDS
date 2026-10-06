@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "h": 3,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "ippv-five-patches",
+      "status": "completed",
+      "directory": "runs/0000-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "h": 3,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "status": "completed",
+      "directory": "runs/0000-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f",
+      "rank_latency_seconds": null
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "ippv-five-patches",
+        "vf-adjacency-basic"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    }
+  ]
+}

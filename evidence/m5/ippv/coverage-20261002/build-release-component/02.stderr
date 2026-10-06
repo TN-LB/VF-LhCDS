@@ -1,0 +1,39 @@
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:30:16: warning: variable 'possibleEdges' set but not used [-Wunused-but-set-variable]
+   30 |         double possibleEdges = 0.0, existingEdges = 0.0;
+      |                ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:193:39: warning: format specifies type 'long long' but the argument has type 'size_type' (aka 'unsigned long') [-Wformat]
+  193 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                   ~~~~                ^~~~~~~~~~~~~~~~
+      |                   %zu
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:193:57: warning: format specifies type 'long long' but the argument has type 'size_type' (aka 'unsigned long') [-Wformat]
+  193 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                              ~~~~                       ^~~~~~~~~~~~~~~~
+      |                              %zu
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:727:17: warning: unused variable 'cur_t' [-Wunused-variable]
+  727 |         clock_t cur_t = clock(); 
+      |                 ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:630:13: warning: unused variable 'start' [-Wunused-variable]
+  630 |     clock_t start = clock();
+      |             ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:897:17: warning: unused variable 'cur_t' [-Wunused-variable]
+  897 |         clock_t cur_t = clock();
+      |                 ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:824:13: warning: unused variable 'start' [-Wunused-variable]
+  824 |     clock_t start = clock(); 
+      |             ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1209:9: warning: unused variable 'i' [-Wunused-variable]
+ 1209 |     int i = 0;
+      |         ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1210:13: warning: unused variable 'start' [-Wunused-variable]
+ 1210 |     clock_t start = clock();
+      |             ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1478:1: warning: non-void function does not return a value [-Wreturn-type]
+ 1478 | }
+      | ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1493:24: warning: unused variable 'm' [-Wunused-variable]
+ 1493 |     unsigned long long m = 0;
+      |                        ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1687:24: warning: unused variable 'm' [-Wunused-variable]
+ 1687 |     unsigned long long m = 0;
+      |                        ^
+12 warnings generated.

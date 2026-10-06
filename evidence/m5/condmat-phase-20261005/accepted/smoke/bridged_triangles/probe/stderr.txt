@@ -1,0 +1,9 @@
+{"diagnostic_schema":1,"phase":"parse","event":"begin","elapsed_seconds":5.6708e-05}
+{"diagnostic_schema":1,"phase":"parse","event":"end","elapsed_seconds":0.00014308300000000001}
+{"diagnostic_schema":1,"phase":"index","event":"begin","elapsed_seconds":0.00017245800000000001}
+{"diagnostic_schema":1,"phase":"index","event":"end","elapsed_seconds":0.00020404200000000001}
+{"diagnostic_schema":1,"phase":"solve","event":"begin","elapsed_seconds":0.000231583}
+{"diagnostic_schema":1,"phase":"query","event":"end","elapsed_seconds":0.0002745,"query_index":1,"stats":{"logical_interval_queries":1,"mincut_calls":1,"original_interval_size":6,"oracle_interval_size":6,"cliques_scanned":2,"unique_footprints":2,"forward_nodes":10,"forward_arcs":14,"residual_arcs":28,"capacity_bit_length":7,"capacity_backend":"uint128","core_threshold":null,"core":null,"core_reduction_seconds":null}}
+{"diagnostic_schema":1,"phase":"solve","event":"end","elapsed_seconds":0.00032966700000000001}
+{"diagnostic_schema":1,"phase":"serialize","event":"begin","elapsed_seconds":0.00035670800000000001}
+{"diagnostic_schema":1,"phase":"serialize","event":"end","elapsed_seconds":0.00040908300000000003}

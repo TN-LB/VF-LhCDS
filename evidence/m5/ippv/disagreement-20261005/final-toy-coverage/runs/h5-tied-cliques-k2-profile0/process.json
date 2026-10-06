@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-release/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "5",
+    "-t",
+    "10",
+    "-k",
+    "2",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h5-tied-cliques-k2-profile0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T04:10:05.416429+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.008291958831250668,
+  "user_seconds": 0.001583,
+  "system_seconds": 0.001828,
+  "peak_rss_bytes": 1327104,
+  "finished_utc": "2026-10-05T04:10:05.425428+00:00",
+  "sha256": {
+    "stdout.txt": "d0f7e8923071890a272e6c5ecea238f62624d4c4b4a3c15339863e1ffa8ef667",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

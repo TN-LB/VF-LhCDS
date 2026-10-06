@@ -1,0 +1,16 @@
+[
+  {
+    "case": "small",
+    "output_count": 1,
+    "status": "completed",
+    "native_exit_code": 0,
+    "numeric_defect_retained": true
+  },
+  {
+    "case": "original",
+    "output_count": 20,
+    "status": "completed",
+    "native_exit_code": 0,
+    "numeric_defect_retained": true
+  }
+]

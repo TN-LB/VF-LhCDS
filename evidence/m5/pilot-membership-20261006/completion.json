@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/pilot-membership-20261006/config.json",
+    "--evidence",
+    "evidence/m5/pilot-membership-20261006/campaign",
+    "--stop-on-failure",
+    "--continue-on-timeout"
+  ],
+  "exit_code": 1,
+  "wall_seconds": 862.1242705406621,
+  "finished_utc": "2026-10-05T17:13:10.828119+00:00",
+  "timing_scope": "Entire driver, including separate validation and evidence I/O."
+}

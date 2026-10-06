@@ -1,0 +1,7 @@
+./dataset/triangle.txt
+output/triangle-1.txt
+Reading edgelist from file ./dataset/triangle.txt
+Graph construction
+kclist time is:0.000139
+#slt node 3 #slt edge 3 #h_cliques 1
+max_d 1

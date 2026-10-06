@@ -1,0 +1,30 @@
+{
+  "owner_approval": null,
+  "config_sha256": "92d0073e72ad3de3f51d01e135e068bc9493d0831106afd514ed06b9bb7598d3",
+  "schedule_sha256": "74fe7f42450bd3e21cb6cfe511f092ed0683b1b465811051d65b8acd0f0827f9",
+  "binary_pins": {
+    "build-m5-adjacency-release/vflhcds": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+    "build-ippv-original/IPPV": "18d6d06799bdf17102dc0a14628236c7f0be8fc63eb1687a144b77afa9d2faf6"
+  },
+  "provenance_sha256": {
+    "build-m5-adjacency-release/vflhcds.provenance.json": "4c58af64c653a8349c62d9b091f677dbd96b24cbd47d8aaed5361541e17d4fb9",
+    "build-ippv-original/IPPV.provenance.json": "ef735e022304208c3d377e92652463e618fc20cc4760dcdcc5ff38eea8def5ed"
+  },
+  "harness_sha256": {
+    "experiments/__init__.py": "f4b5ce0232d6d690302c7a91c59066637f93e8b2b426ae356137f5ab83464548",
+    "experiments/build_vf.py": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "experiments/prepare_input.py": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "experiments/run.py": "03ccfd055de1b09eeac2845d1d8424e0bb183f775fa459bbdd0bcf3ee035429e",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/test_harness.py": "20cc1e6c1c1f5b329c9a806d70304461da8de4f32f94be2d4b02087b25a80fe4",
+    "experiments/validate.py": "efbd6b4194bb5b8c50cfd74043b0d0e215e0201dfd11678b40a291823cedea34",
+    "baselines/ippv/adapter.py": "f027a62cb824334a661a9d4fd81917e0322816355ab92175dd385a7dfd0405d1",
+    "baselines/ippv/build.py": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6",
+    "baselines/ippv/check_toys.py": "17c11111d57db251d58d0824b03817f83f3332ac148b2955832010d294bab9af",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14",
+    "baselines/ippv/test_adapter.py": "87b0a7de86b271fbef2007e34c1209e528a6a5ea6bd7a20b3e8ae9fa76554294"
+  },
+  "machine_profile": "evidence/m5/paired-smoke-20261005/environment.json",
+  "hardware_profile": "evidence/m5/paired-smoke-20261005/hardware-retry.json",
+  "benchmark_runs_executed": 0
+}

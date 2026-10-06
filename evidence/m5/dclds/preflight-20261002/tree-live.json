@@ -1,0 +1,135 @@
+{
+  "sha": "8f23ab65e000bf6696c9230627156e47ac287b96",
+  "url": "https://api.github.com/repos/s01bvral/DCLDS/git/trees/8f23ab65e000bf6696c9230627156e47ac287b96",
+  "tree": [
+    {
+      "path": "PatternEnum.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1b5311a33b4472e9bcd750be01e1e1e52b0da94",
+      "size": 14236,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/f1b5311a33b4472e9bcd750be01e1e1e52b0da94"
+    },
+    {
+      "path": "Utility.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61817bbbe1e794b2d413a1c34275da1bf0c0a617",
+      "size": 464,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/61817bbbe1e794b2d413a1c34275da1bf0c0a617"
+    },
+    {
+      "path": "cliqueEnum.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b5d41e2f76f1991d15397f0ba2bf8837f6731ac",
+      "size": 13675,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/8b5d41e2f76f1991d15397f0ba2bf8837f6731ac"
+    },
+    {
+      "path": "dataset.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac8d036d26e9bb2edf03e41a51f4e84ba5d22e55",
+      "size": 8,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/ac8d036d26e9bb2edf03e41a51f4e84ba5d22e55"
+    },
+    {
+      "path": "datasetlistall.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a20ff79da36cc284e61daebccaa887a621795e39",
+      "size": 212,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/a20ff79da36cc284e61daebccaa887a621795e39"
+    },
+    {
+      "path": "dblp.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e671a8275d013bdea1e2058b6e85b5122966e7ec",
+      "size": 13931342,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/e671a8275d013bdea1e2058b6e85b5122966e7ec"
+    },
+    {
+      "path": "distribution.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f2a3a128159c13748d1805118dda4bc611a9674",
+      "size": 198,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/3f2a3a128159c13748d1805118dda4bc611a9674"
+    },
+    {
+      "path": "distribution_dblp.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db2cec174e46894d9f539b89f5abc07f12dd3701",
+      "size": 4442,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/db2cec174e46894d9f539b89f5abc07f12dd3701"
+    },
+    {
+      "path": "instances.inc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03fc487ec469661dddbb303c7cee004e8653e636",
+      "size": 412,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/03fc487ec469661dddbb303c7cee004e8653e636"
+    },
+    {
+      "path": "layers_dblp_h3.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55cbb4ca646d6df4eb6778497c37d819b5fb4e8f",
+      "size": 2111687,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/55cbb4ca646d6df4eb6778497c37d819b5fb4e8f"
+    },
+    {
+      "path": "lds.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "163bb61ffb0499cc8462c156b8a86a85d1e67859",
+      "size": 22904,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/163bb61ffb0499cc8462c156b8a86a85d1e67859"
+    },
+    {
+      "path": "ldses_dblp_h3.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d85f43103bc0829be9cbacee3b491af98ad6530f",
+      "size": 56907,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/d85f43103bc0829be9cbacee3b491af98ad6530f"
+    },
+    {
+      "path": "main.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40411c1e72ae9a6c61657b5e0541144485c7a71d",
+      "size": 19108,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/40411c1e72ae9a6c61657b5e0541144485c7a71d"
+    },
+    {
+      "path": "main.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8b7d4fcca4e2ed4fed1503e3549a43d8d634095",
+      "size": 5551,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/e8b7d4fcca4e2ed4fed1503e3549a43d8d634095"
+    },
+    {
+      "path": "readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5872a8bb2688bf69c47bd889cdc80e4091c14e6b",
+      "size": 5398,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/5872a8bb2688bf69c47bd889cdc80e4091c14e6b"
+    },
+    {
+      "path": "shrink.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea200813efcc4887e0fd663d40afd868915223e6",
+      "size": 3636,
+      "url": "https://api.github.com/repos/s01bvral/DCLDS/git/blobs/ea200813efcc4887e0fd663d40afd868915223e6"
+    }
+  ],
+  "truncated": false
+}

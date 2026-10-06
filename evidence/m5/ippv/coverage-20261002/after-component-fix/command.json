@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "baselines/ippv/check_toys.py",
+    "--binary",
+    "build-ippv-original/IPPV",
+    "--binary",
+    "build-ippv-sanitize/IPPV",
+    "--h",
+    "2",
+    "3",
+    "4",
+    "5",
+    "--iterations",
+    "10",
+    "--timeout",
+    "60",
+    "--evidence",
+    "evidence/m5/ippv/coverage-20261002/after-component-fix"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 1,
+  "stdout": "../after-component-fix.stdout",
+  "stderr": "../after-component-fix.stderr",
+  "counts": {
+    "definition_pass": 32,
+    "known_zero_density_mismatch": 16
+  },
+  "explanation": "Nonzero exit preserves semantic failures; known zero omissions are not passes."
+}

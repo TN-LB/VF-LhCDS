@@ -1,0 +1,11 @@
+{
+  "test": "T-PHASE-CM/flushed-boundaries",
+  "h": 3,
+  "k": 5,
+  "enumeration": "adjacency",
+  "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+  "probe_sha256": "195814649870cf88dfd7959a957221954c54d5abfe7c82b070b9b5aef47d1ae9",
+  "timeout_seconds": 60,
+  "config_sha256": "1d776123d19d498cdf66602fb55b570e10b967f76e41d921fa2b658a00b9578f",
+  "recorded_utc": "2026-10-05T09:17:51.592161+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "owner_reply": "\u7ee7\u7eed",
+  "scope": "Execute the proposed bounded phase diagnostic; prepare a repair plan if indexing remains unfinished.",
+  "proposal": "evidence/m5/m4-mode-diagnostic-20261003/NEXT_STEP.md",
+  "proposal_sha256": "fd73e06570f9549ebd37bda42179ff99c8624e7a83226d2801cf6081dd8be4ac",
+  "production_change_authorized": false,
+  "final_benchmark_approved": false
+}

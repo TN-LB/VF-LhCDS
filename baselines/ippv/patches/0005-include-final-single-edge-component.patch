@@ -1,0 +1,11 @@
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -1916,7 +1916,7 @@
+ 
+     cmpt.clear();
+     int x = 1, y = 1, z = 1;
+-    while (x < slt_nodes.size() && y < slt_edges.size()) {
++    while (x < slt_nodes.size() && y <= slt_edges.size()) {
+         while (x < slt_nodes.size() && fa[slt_nodes[x]] == fa[slt_nodes[x - 1]]) x++;
+         while (y < slt_edges.size() && fa[edges[slt_edges[y]].first] == fa[edges[slt_edges[y - 1]].first]) y++;
+         while (z < slt_h_cliques.size() && fa[h_cliques[slt_h_cliques[z]][0]] == fa[h_cliques[slt_h_cliques[z - 1]][0]]) z++;

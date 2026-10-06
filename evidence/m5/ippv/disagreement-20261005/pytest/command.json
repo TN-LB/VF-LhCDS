@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "-m",
+    "pytest",
+    "experiments/test_harness.py",
+    "baselines/ippv/test_adapter.py",
+    "reference/tests",
+    "-q"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 7.489998124539852
+}

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-phase-probe/vflhcds_phase_probe",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+    "3",
+    "5"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/phase-diagnostic-20261003/accepted/smoke/triangle_and_isolate/probe",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-03T04:12:05.028511+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "cf2de3eb7e643305faeb26784b5d6833dbb3ce33ac54f74a3e64f08d158b8e80",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.4093417078256607,
+  "user_seconds": 0.0025169999999999997,
+  "system_seconds": 0.00392,
+  "peak_rss_bytes": 1441792,
+  "finished_utc": "2026-10-03T04:12:05.439147+00:00",
+  "sha256": {
+    "stdout.txt": "c96712188c16c24cc25f59ca8aa47fbe4c194bd3e732e596218767012c8e861c",
+    "stderr.txt": "fb5222768d3342686e20eae8209815e6c4bad019a78f4efdf86cab6d6c00dcd4"
+  }
+}

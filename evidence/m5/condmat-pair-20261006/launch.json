@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/condmat-pair-20261006/config.json",
+    "--evidence",
+    "evidence/m5/condmat-pair-20261006/campaign",
+    "--stop-on-failure"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-05T14:28:12.869648+00:00",
+  "configuration_sha256": "a189091c5b6eed12db3bc397ef84bfac5e9122e4be85a260ccf85b3959ae8a23",
+  "preflight_sha256": "6aba67357c3b4a57310fff7ca094869c3d37a3ed44046cae7f0f8a66ada05899",
+  "environment_sha256": "86829e55351960a8da0882a4fe4dbf6f67a0c7406477df248eed36ae6a684eb3"
+}

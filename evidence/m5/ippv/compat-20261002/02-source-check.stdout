@@ -1,0 +1,6 @@
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:85:    alpha_c.resize(hc_num);
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:230:        alpha_c.resize(h_cliques.size());
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:275:        alpha_c.resize(h_cliques.size());
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:329:        alpha_c.resize(h_cliques.size());
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:399:        alpha_c.resize(h_cliques.size());
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.h:50:    int hc_num; // number of h-cliques

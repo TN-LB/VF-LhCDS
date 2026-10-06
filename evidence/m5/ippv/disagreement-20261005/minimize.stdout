@@ -1,0 +1,11 @@
+{
+  "attempts": 31,
+  "vertices": 13,
+  "edges": 17,
+  "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+  "h": 2,
+  "k": 2,
+  "iterations": 10,
+  "minimality": "one-edge/one-vertex irreducible under the recorded failure predicate; not global minimum",
+  "origin": "synthetic same-code-defect witness, not an induced reduction of CA-GrQc"
+}

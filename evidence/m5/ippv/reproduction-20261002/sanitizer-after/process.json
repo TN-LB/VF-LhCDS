@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV",
+    "-g",
+    "./dataset/triangle.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/sanitizer-after",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-01T15:56:16.679222+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "62e81b65dadf2673d900733cff46e3c369c5a6f9996779547e2900b5f0b9b270",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.4933798750862479,
+  "user_seconds": 0.010910999999999999,
+  "system_seconds": 0.063954,
+  "peak_rss_bytes": 19660800,
+  "finished_utc": "2026-10-01T15:56:17.174482+00:00",
+  "sha256": {
+    "stdout.txt": "b2008d41766342591d1804296663151b0b0c8d2ee9a407d4329ae1c59c2f22f5",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

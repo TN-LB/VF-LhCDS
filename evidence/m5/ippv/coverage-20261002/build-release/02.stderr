@@ -1,0 +1,58 @@
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:508:14: warning: unused variable 'u' [-Wunused-variable]
+  508 |         unsigned i, u;
+      |                     ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:551:14: warning: unused variable 'i' [-Wunused-variable]
+  551 |         unsigned e, i;
+      |                     ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:601:7: warning: unused variable 'degi' [-Wunused-variable]
+  601 |                 int degi = g->d[i];
+      |                     ^~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1115:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1115 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1116:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1116 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1117:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1117 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1145:22: warning: variable 'nck' set but not used [-Wunused-but-set-variable]
+ 1145 |         unsigned long long* nck;
+      |                             ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1146:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1146 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1147:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1147 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1175:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1175 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1176:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1176 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1194:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1194 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1195:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1195 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1221:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1221 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1222:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1222 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1223:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1223 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1251:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1251 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1252:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1252 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1253:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1253 |         densest* ds;
+      |                  ^~
+19 warnings generated.

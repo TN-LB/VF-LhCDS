@@ -1,0 +1,56 @@
+[
+  {
+    "command": [
+      "clang++",
+      "-std=c++14",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I.deps/baselines/ippv",
+      "-I.deps/boost_1_86_0",
+      "baselines/ippv/test_exact_verification.cpp",
+      "-o",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/numeric-final-tests/release"
+    ],
+    "action": "release-compile",
+    "exit_code": 0,
+    "wall_seconds": 1.0033819153904915
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/numeric-final-tests/release"
+    ],
+    "action": "release-run",
+    "exit_code": 0,
+    "wall_seconds": 0.2924541253596544
+  },
+  {
+    "command": [
+      "clang++",
+      "-std=c++14",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I.deps/baselines/ippv",
+      "-I.deps/boost_1_86_0",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all",
+      "-fno-omit-frame-pointer",
+      "-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG",
+      "baselines/ippv/test_exact_verification.cpp",
+      "-o",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/numeric-final-tests/sanitize"
+    ],
+    "action": "sanitize-compile",
+    "exit_code": 0,
+    "wall_seconds": 1.4129374166950583
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/numeric-final-tests/sanitize"
+    ],
+    "action": "sanitize-run",
+    "exit_code": 0,
+    "wall_seconds": 0.3174948748201132
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "campaign_files_matched": 25,
+  "papers_matched": 4,
+  "reference_files_matched": 23,
+  "production_source_files_matched": 40,
+  "ippv_source_files_matched": 17,
+  "pre_edit_runner_snapshot_files_matched": 7,
+  "changed_source_paths_since_preflight": [
+    "experiments/run.py",
+    "experiments/test_harness.py"
+  ],
+  "paired_runs": [
+    {
+      "algorithm": "ippv-five-patches",
+      "wall_seconds": 0.17649641539901495,
+      "peak_rss_bytes": 31948800,
+      "external_validation_wall_seconds": 0.15163874998688698
+    },
+    {
+      "algorithm": "vf-adjacency-basic",
+      "wall_seconds": 1.2028633328154683,
+      "peak_rss_bytes": 46071808,
+      "external_validation_wall_seconds": 0.1581342499703169
+    }
+  ],
+  "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f",
+  "tested_python_source_files_matched": 27,
+  "pytest_passed": 123,
+  "binary_pins_matched": 2,
+  "provenance_sha256_matched": 2,
+  "harness_sha256_matched": 12,
+  "draft_schema_and_pins_valid_without_execution": true,
+  "draft_rejected_for_execution": true,
+  "draft_planned_native_calls": 48,
+  "draft_actual_native_calls": 0
+}

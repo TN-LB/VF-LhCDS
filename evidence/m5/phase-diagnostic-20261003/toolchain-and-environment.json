@@ -1,0 +1,31 @@
+{
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/cmake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/c++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple clang version 17.0.0 (clang-1700.6.3.2)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+      "stderr": ""
+    }
+  ],
+  "environment": {
+    "CC": null,
+    "CXX": null,
+    "CXXFLAGS": null,
+    "LDFLAGS": null,
+    "OMP_NUM_THREADS": null,
+    "ASAN_OPTIONS": null,
+    "UBSAN_OPTIONS": null
+  }
+}

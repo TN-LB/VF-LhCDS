@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/phase-diagnostic-20261003/run_diagnostic.py"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-03T04:12:02.587952+00:00",
+  "exit_code": 1,
+  "wall_seconds": 63.10174912493676,
+  "finished_utc": "2026-10-03T04:13:05.689315+00:00"
+}

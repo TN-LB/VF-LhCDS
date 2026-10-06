@@ -1,0 +1,12 @@
+{
+  "id": "IPPV-B06",
+  "authorization": "D028",
+  "patch": "baselines/ippv/patches/0005-include-final-single-edge-component.patch",
+  "patch_sha256": "198959f649c1ea4a2053908dc0b0a21f9450f4c05367ebc7141457514915d3a9",
+  "reason": "Component boundary indices start at 1. y<edge_count skips a component when its only remaining edge is at the end, including a one-edge graph.",
+  "before_release": "after-fix/runs/h2-clique-profile0/manifest.json",
+  "before_sanitizer": "h2-sanitizer-after-enumeration/manifest.json",
+  "argument": "Use y<=edge_count so the already admitted one-edge connected component is extracted. The inner scan remains guarded by y<edge_count before indexing. No pruning, candidate verifier, output tie selection or zero-density completion is added.",
+  "source_before_sha256": "9c79f94715884f7049115a1231981af42f187f4a939d30b1a722661c6f90b6d1",
+  "source_after_sha256": "0a60cb646fce4cccf751818bc4a493f45611c8b0ccb516ceb551e467a45f272e"
+}

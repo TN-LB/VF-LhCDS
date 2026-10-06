@@ -1,0 +1,64 @@
+{
+  "recorded_utc": "2026-10-05T14:04:19.368489+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "host_id_sha256": "65319de5c83317931baea23a4c29368a63d97a3100c69c8f2e4fb2cefadba04b",
+  "hardware": {
+    "machdep.cpu.brand_string": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple M1",
+      "stderr": ""
+    },
+    "hw.memsize": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 0,
+      "stdout": "17179869184",
+      "stderr": ""
+    },
+    "hw.physicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.physicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    },
+    "hw.logicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    }
+  },
+  "hardware_provenance": "Fresh sysctl reading in current-environment.json.",
+  "prior_host_label_sha256": "32940b6d5e270a3c43588a3cfa536e174da8ece7f571fb95f50412e1cb7359e1",
+  "host_label_changed": true,
+  "identity_note": "platform.node hashes a host label, not a stable hardware identifier. Hardware/profile equality does not independently prove machine identity.",
+  "environment": {
+    "CC": null,
+    "CXX": null,
+    "CXXFLAGS": null,
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "ASAN_OPTIONS": null,
+    "UBSAN_OPTIONS": null
+  },
+  "head": "56229397903813d3509ecb45b178bbde823e357b",
+  "dirty_tree": " M AGENTS.md\n M CMakeLists.txt\n M docs/ARCHITECTURE.md\n M docs/BASELINE_AUDIT.md\n M docs/BUILD.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/INTERFACE_CONTRACT.md\n M docs/TASKS.md\n M include/vflhcds/clique/materialized.hpp\n M src/cli/dispatch.cpp\n M src/clique/materialized.cpp\n M tests/m2_probe.cpp\n M tests/m3_probe.cpp\n?? baselines/\n?? docs/ENUMERATION_IMPLEMENTATION.md\n?? evidence/m5/\n?? experiments/\n?? tests/clique_enumeration.cpp\n?? tests/enumeration_cli.py\n?? tests/enumeration_equivalence.hpp\n"
+}

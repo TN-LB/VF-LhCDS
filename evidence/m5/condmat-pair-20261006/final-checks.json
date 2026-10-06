@@ -1,0 +1,17 @@
+{
+  "git_diff_check_exit": 0,
+  "verifier_exit": 0,
+  "report_links_valid": true,
+  "report_has_no_approval_narrative": true,
+  "next_pilot_draft_rejected": "draft configurations cannot run; approval must be recorded first",
+  "historical_evidence_unchanged": true,
+  "modified_files": 5,
+  "added_evidence_files_excluding_inventory_and_final_checks": 47,
+  "native_calls": 2,
+  "validator_calls": 2,
+  "paired_comparisons": 1,
+  "strict_match": false,
+  "tie_aware_match": true,
+  "report_sha256": "e49cc624f90a74ab88f9dcc6f28ca18c0da15e9d513ced0012d494fd3e582fd6",
+  "file_inventory_sha256": "1597f2dbf34609be390824b36ee8a54eb98e5801b5bb73377db9bf917304c6fe"
+}

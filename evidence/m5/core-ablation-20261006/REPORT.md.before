@@ -1,0 +1,43 @@
+# M5 status — 2026-10-06
+
+M5 remains **in progress**. The latest [membership / IPPV pilot](pilot-membership-20261006/REPORT.md)
+executes the full 48-call schedule on CA-GrQc and CA-CondMat: h=3,
+k={5,10,15,20}, three repetitions, seed 20261003 and a 60-second limit.
+
+| Graph | VF | Seven-patch IPPV | Paired output evidence |
+|---|---|---|---|
+| CA-GrQc | 12/12 complete | 12/12 complete | 12/12 tie-aware matches; 6 strict |
+| CA-CondMat | 12/12 timeout | 12/12 complete | No complete pairs in this campaign |
+
+All 36 completed outputs pass separate structural checks and are stable across
+repetitions. All 24 CA-GrQc outputs equal the earlier repaired-baseline campaign.
+IPPV has lower median native time in all four completed CA-GrQc cells. The
+previous single CA-CondMat VF completion in about 39 seconds is not repeated
+within this campaign's 60-second limit; the source of timing variation is unknown.
+Historical timings are kept separate. [Full time/RSS table](pilot-membership-20261006/aggregate/TABLE.md).
+
+The experiment runner now retains native timeouts and continues the fixed
+schedule, while still stopping for other failures or substantive disagreements.
+133 Python tests pass. Saved-evidence verification checks 461 raw inventory
+entries, and seven aggregate artifacts regenerate identically without solver
+reruns. The campaign driver exits 1 because of its timeout outcomes; aggregation,
+verification and regeneration exit 0. No C++ build/CTest/sanitizer rerun occurs.
+Algorithm sources, four papers, the independent reference and historical records
+are unchanged in this continuation.
+
+Current baseline: IPPV commit `f61881d4752170c03585e4281f0c49d7ef14aa1e`, seven
+recorded patches. [Reproduction repairs and correctness evidence](ippv/disagreement-20261005/REPORT.md)
+remain distinct from performance results. IPPV's known zero-density omission
+still limits full-domain comparison. DCLDS remains deferred; no techniques are imported.
+
+P11.3's shared smoke gate is complete. P09.1, P11.1/P11.2, P12.1, P14.1 and
+P15.1 have partial evidence; broader h/grid experiments, controlled ablations,
+final comparison scope, clean-machine smoke and a reproducibility release remain
+unfinished. Structural checks and cross-implementation agreement do not prove
+maximality or the mathematical theorem. No general speedup or SOTA claim follows.
+
+[Latest commands, environment and results](pilot-membership-20261006/REPORT.md) ·
+[Latest changed-file manifest](pilot-membership-20261006/files_changed.json) ·
+[Earlier repaired-baseline pilot](pilot-fixed-20261005/REPORT.md) ·
+[Earlier CA-CondMat pair](condmat-pair-20261006/REPORT.md) ·
+[Enumeration implementation evidence](enumeration-20261003/REPORT.md)

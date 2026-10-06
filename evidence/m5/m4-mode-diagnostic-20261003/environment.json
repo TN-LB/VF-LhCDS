@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-03T02:56:50.614910+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "head": "56229397903813d3509ecb45b178bbde823e357b",
+  "environment": {
+    "CXXFLAGS": null,
+    "CC": null,
+    "CXX": null,
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "ASAN_OPTIONS": null,
+    "UBSAN_OPTIONS": null
+  },
+  "hardware_source": "hardware-retry.json (prior same-host read on 2026-10-03; not remeasured)",
+  "script_sha256": {
+    "baselines/ippv/adapter.py": "f027a62cb824334a661a9d4fd81917e0322816355ab92175dd385a7dfd0405d1",
+    "baselines/ippv/build.py": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6",
+    "baselines/ippv/check_toys.py": "17c11111d57db251d58d0824b03817f83f3332ac148b2955832010d294bab9af",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14",
+    "baselines/ippv/test_adapter.py": "87b0a7de86b271fbef2007e34c1209e528a6a5ea6bd7a20b3e8ae9fa76554294",
+    "experiments/__init__.py": "f4b5ce0232d6d690302c7a91c59066637f93e8b2b426ae356137f5ab83464548",
+    "experiments/build_vf.py": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "experiments/prepare_input.py": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "experiments/run.py": "00291ea2d3ab8b28e4b7d1d19b1e27086512121585130f3dd561fbf0a5dfc7c7",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/test_harness.py": "e50c62285db21a011dc9d5003c9b8d2499ff38185cfc0d3bd1dc72f97e48a514",
+    "experiments/validate.py": "efbd6b4194bb5b8c50cfd74043b0d0e215e0201dfd11678b40a291823cedea34"
+  }
+}

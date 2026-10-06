@@ -1,0 +1,122 @@
+{
+  "algorithm": {
+    "name": "vf-adjacency-membership",
+    "kind": "vf",
+    "executable": "build-m5-adjacency-release/vflhcds",
+    "sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+    "options": {
+      "core": "off",
+      "footprints": "membership",
+      "enumeration": "adjacency"
+    }
+  },
+  "build_provenance": {
+    "head": "56229397903813d3509ecb45b178bbde823e357b",
+    "dirty_tree": " M AGENTS.md\n M CMakeLists.txt\n M docs/ARCHITECTURE.md\n M docs/BASELINE_AUDIT.md\n M docs/BUILD.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/INTERFACE_CONTRACT.md\n M docs/TASKS.md\n M include/vflhcds/clique/materialized.hpp\n M src/cli/dispatch.cpp\n M src/clique/materialized.cpp\n M tests/m2_probe.cpp\n M tests/m3_probe.cpp\n?? baselines/\n?? docs/ENUMERATION_IMPLEMENTATION.md\n?? evidence/m5/\n?? experiments/\n?? tests/clique_enumeration.cpp\n?? tests/enumeration_cli.py\n?? tests/enumeration_equivalence.hpp\n",
+    "source_sha256": {
+      "CMakeLists.txt": "a476358b66a1982a0141bfd36f35a61d34e769d3051284a9ee43b702151755b2",
+      "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
+      "include/vflhcds/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+      "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
+      "include/vflhcds/clique/materialized.hpp": "278b523cbf00481700f31bc5a02ffd76de558e0baabc34b1cfc84780c2b39f47",
+      "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+      "include/vflhcds/core/exact.hpp": "232bb07cbc20da7438e54eeceb13e9c792e4f9fdbb9f4ade24461e198eac6111",
+      "include/vflhcds/core/graph.hpp": "77c8201442f52cb52365956f0c8306e5185c04a7cc1cb4511905aecb7a071964",
+      "include/vflhcds/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+      "include/vflhcds/flow/dinic.hpp": "f903d13f57fcc99adc4ff4ab09f634cac3e997f1b5a3613e1287eb12dd1adf0f",
+      "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
+      "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
+      "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+      "include/vflhcds/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+      "include/vflhcds/oracle/closure.hpp": "6a042d0423bcacc3ca531f1ca027809ef3b0251b7d07fc7c1ba02f34c221172e",
+      "include/vflhcds/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+      "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
+      "include/vflhcds/solver/solver.hpp": "3959a9ff3dccdde742b5e4a6cb04e9b4c2327cadad9fdc5e3632ee7f5da55528",
+      "include/vflhcds/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+      "include/vflhcds/telemetry/query.hpp": "528312311c071d51b54f9b4159a228dc3fe76dc7c793ea0cea0f0240dcc487de",
+      "src/cli/dispatch.cpp": "1cbd9125ad93452a0aabe640904300f2e26e9c0593074c0bde19f5ccb068c6c3",
+      "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
+      "src/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+      "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
+      "src/clique/materialized.cpp": "8b34a667a2b4440731802486a5da13980aedf4310e2829774cc2638b8d458e50",
+      "src/core/README.md": "64ce14c00614f02282a647ba332dbe659a34619f71f767af59b250cea39e1793",
+      "src/core/exact.cpp": "77a91da3f2dd666ce1aca55a062359f1317cb29894a5e48e79a955f478e455bc",
+      "src/core/graph.cpp": "e691e4cb42a8a0c30e099bd04cd097e90e310567e179db2c69fbf1094b242144",
+      "src/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+      "src/io/graph.cpp": "d280a1376514e2e7d85f87aa3885c00ffdc3b9d8e208210dfe7cc5f78910b46d",
+      "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
+      "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
+      "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+      "src/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+      "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
+      "src/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+      "src/solver/solver.cpp": "d07f0831f8edb63c085db0d7111295cb5c4de10cf0787c6cd73e715bb4e19464",
+      "src/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+      "src/telemetry/query.cpp": "cdec53acad34b0b3b9a5989f044081bc28c44ff8b3e7cc30eb19760c7e874837",
+      "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2"
+    },
+    "executable_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+    "build_info_text": "version=0.2.0\nstage=M4\ncxx_standard=17\ncompiler=AppleClang\ncompiler_version=17.0.0.17000603\nbuild_type=Release\nsanitizers=OFF\n",
+    "build_script_sha256": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "commands_manifest": "/Users/nost/Documents/VF-LhCDS/evidence/m5/enumeration-20261003/accepted/production-build/commands.json",
+    "commands_manifest_sha256": "efa8b6eecdbc8c9edc90235995ae2850a48fc577b34ac71ae917b692fdd0b5bb",
+    "compile_commands_sha256": "d323f12fdf9c5670206387a6755306c8f90609b56a8399a55a23bf414f9482ba"
+  },
+  "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+  "h": 3,
+  "k": 20,
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+      "solve",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-membership-20261006/campaign/runs/0023-0/graph.txt",
+      "--h",
+      "3",
+      "--k",
+      "20",
+      "--core-reduction",
+      "off",
+      "--footprint-scan",
+      "membership",
+      "--clique-enumeration",
+      "adjacency"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-membership-20261006/campaign/runs/0023-0",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-05T17:12:10.557432+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": -9,
+    "status": "timeout",
+    "wall_seconds": 60.00933045800775,
+    "user_seconds": 59.793397,
+    "system_seconds": 0.18195999999999998,
+    "peak_rss_bytes": 132841472,
+    "signal": 9,
+    "finished_utc": "2026-10-05T17:13:10.564576+00:00",
+    "sha256": {
+      "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "status": "timeout",
+  "validation": {
+    "level": "not_run"
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "native_status": {},
+  "sha256": {
+    "graph.txt": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "process.json": "4e9207c83537790ba7a56cf4d39b72c4960d79a4b0b280320a1c6ab3cb94ce5c",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

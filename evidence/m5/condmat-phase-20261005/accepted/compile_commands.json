@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_phase_probe.dir/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/experiments/phase_probe/main.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/experiments/phase_probe/main.cpp",
+  "output": "CMakeFiles/vflhcds_phase_probe.dir/main.cpp.o"
+}
+]

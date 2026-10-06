@@ -1,0 +1,7 @@
+{
+  "reference_run": "evidence/m5/harness-20261003/shared-real/runs/0000-1",
+  "reference_manifest_sha256": "5880e9b5941d868ce1b8ea8246ad1e03368f6727d9e57138b57155129bb47ad0",
+  "reference_output_sha256": "7464c11bb500582860684f8fdf7cfc8f8a5ad06899850e92bdf63bb57c4d761a",
+  "scope": "Compare only completed structurally checked outputs; historical IPPV timing is not a paired performance measurement.",
+  "failure_policy": "Retain timeout/error/mismatch; stop affected path without increasing the guard or changing another mechanism."
+}

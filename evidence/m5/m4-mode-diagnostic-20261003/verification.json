@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "scope": "record integrity and outcome accounting only",
+  "native_runs": 4,
+  "results": [
+    {
+      "algorithm": "vf-core-only",
+      "status": "timeout",
+      "wall_seconds": 60.00523416697979,
+      "user_seconds": 59.616947,
+      "system_seconds": 0.161902,
+      "peak_rss_bytes": 7340032,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "external_validation": "not_run"
+    },
+    {
+      "algorithm": "vf-both",
+      "status": "timeout",
+      "wall_seconds": 60.00661866553128,
+      "user_seconds": 59.422668,
+      "system_seconds": 0.15182299999999999,
+      "peak_rss_bytes": 5996544,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "external_validation": "not_run"
+    },
+    {
+      "algorithm": "vf-membership-only",
+      "status": "timeout",
+      "wall_seconds": 60.00242775026709,
+      "user_seconds": 58.806338,
+      "system_seconds": 0.203291,
+      "peak_rss_bytes": 6602752,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "external_validation": "not_run"
+    },
+    {
+      "algorithm": "vf-basic",
+      "status": "timeout",
+      "wall_seconds": 60.00623374991119,
+      "user_seconds": 56.751201,
+      "system_seconds": 0.343334,
+      "peak_rss_bytes": 5259264,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "external_validation": "not_run"
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-core-only",
+        "vf-both"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-core-only",
+        "vf-membership-only"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-core-only",
+        "vf-basic"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-both",
+        "vf-membership-only"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-both",
+        "vf-basic"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-membership-only",
+        "vf-basic"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    }
+  ],
+  "m4_source_files_unchanged": 53,
+  "papers_unchanged": 4,
+  "runner_and_adapter_source_unchanged": true,
+  "git_diff_check": 0,
+  "build_or_test_suite_rerun": false
+}

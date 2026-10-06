@@ -1,0 +1,37 @@
+{
+  "scope": "mandatory tiny definition/tie/vertex-universe audit, not final experiments",
+  "seed": null,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "cases": [
+    {
+      "name": "triangle",
+      "graph": "vflhcds-graph 1\nn 3\nv 0\nv 1\nv 2\nm 3\ne 0 1\ne 0 2\ne 1 2\n",
+      "h": 3,
+      "k": 1
+    },
+    {
+      "name": "bridged-triangles",
+      "graph": "vflhcds-graph 1\nn 6\nv 0\nv 1\nv 2\nv 3\nv 4\nv 5\nm 7\ne 0 1\ne 0 2\ne 1 2\ne 2 3\ne 3 4\ne 3 5\ne 4 5\n",
+      "h": 3,
+      "k": 1
+    },
+    {
+      "name": "tied-triangles",
+      "graph": "vflhcds-graph 1\nn 6\nv 0\nv 1\nv 2\nv 3\nv 4\nv 5\nm 6\ne 0 1\ne 0 2\ne 1 2\ne 3 4\ne 3 5\ne 4 5\n",
+      "h": 3,
+      "k": 1
+    },
+    {
+      "name": "triangle-and-isolate",
+      "graph": "vflhcds-graph 1\nn 4\nv -2\nv 1\nv 4\nv 9\nm 3\ne 1 4\ne 1 9\ne 4 9\n",
+      "h": 3,
+      "k": 2
+    }
+  ],
+  "builds": [
+    "build-ippv-original",
+    "build-ippv-sanitize"
+  ],
+  "stop": "On first unexpected native error or semantic mismatch; preserve all preceding evidence"
+}

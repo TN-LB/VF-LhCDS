@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "modified_files": 7,
+  "added_evidence_files_excluding_self_inventory_and_final_checks": 510,
+  "diff_check_exit_code": 0,
+  "changed_text_whitespace_check": true,
+  "source_and_historical_pins_preserved": true,
+  "all_48_planned_calls_attempted": true,
+  "native_completed": 36,
+  "native_timeout": 12,
+  "unrun": 0,
+  "pytest_passed": 133,
+  "aggregate_verify_regenerate_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "byte_identical_regenerated_artifacts": 7,
+  "files_changed_sha256": "32e719deaf2879b7398e6096ec079a4dc5e21c27d9976fd7a2bc5f016ffb190e",
+  "unresolved_new_semantic_conflict": null,
+  "limitations": [
+    "CA-CondMat VF timed out in all 12 scheduled calls; no paired output evidence for that graph in this campaign.",
+    "Timing variation versus earlier single diagnostics is not isolated.",
+    "M5 broader experiment/release gates remain incomplete."
+  ]
+}

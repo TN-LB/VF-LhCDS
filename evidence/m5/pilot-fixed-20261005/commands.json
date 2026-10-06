@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/pilot-fixed-20261005/prepare.py"
+    ],
+    "exit_code": 0,
+    "stdout": "evidence/m5/pilot-fixed-20261005/prepare.stdout",
+    "stderr": "evidence/m5/pilot-fixed-20261005/prepare.stderr",
+    "scope": "Freeze/version/input preflight; no native algorithm"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/pilot-fixed-20261005/environment.py"
+    ],
+    "exit_code": 0,
+    "stdout": "evidence/m5/pilot-fixed-20261005/environment.stdout",
+    "stderr": "evidence/m5/pilot-fixed-20261005/environment.stderr",
+    "scope": "Read-only sysctl hardware/profile check; all four sysctl commands in environment.json"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/pilot-fixed-20261005/launch.py"
+    ],
+    "exit_code": 1,
+    "child_command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/pilot-fixed-20261005/config.json",
+      "--evidence",
+      "evidence/m5/pilot-fixed-20261005/campaign",
+      "--stop-on-failure"
+    ],
+    "scope": "Frozen campaign, exits 1 on first timeout; 25 native and 24 validator commands in campaign/runs/*/process.json and validation/process.json"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/pilot-fixed-20261005/summarize.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.15764345787465572,
+    "finished_utc": "2026-10-05T08:32:05.631740+00:00",
+    "scope": "Aggregate saved results only"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/pilot-fixed-20261005/verify.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 5.122544042766094,
+    "finished_utc": "2026-10-05T08:33:17.415181+00:00",
+    "scope": "Verify saved evidence only"
+  }
+]

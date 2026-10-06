@@ -1,0 +1,222 @@
+{
+  "runs": [
+    {
+      "case": "tied-cliques-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "ippv-five-patches",
+      "status": "completed",
+      "directory": "runs/0000-1",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e",
+      "semantic_sha256": "f107e124b510f7a60c9e77e26f8286e1850dec45ca3d29ac120a42bf24238b36",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "tied-cliques-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0000-0",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e",
+      "semantic_sha256": "fedb275f93fc43b149eb835252ff6a1db577ba6087dac354a3ec9c74f22d0bc6",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "tied-cliques-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 1,
+      "algorithm": "ippv-five-patches",
+      "status": "completed",
+      "directory": "runs/0001-1",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e",
+      "semantic_sha256": "f107e124b510f7a60c9e77e26f8286e1850dec45ca3d29ac120a42bf24238b36",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "tied-cliques-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 1,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0001-0",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e",
+      "semantic_sha256": "fedb275f93fc43b149eb835252ff6a1db577ba6087dac354a3ec9c74f22d0bc6",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged-cliques",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0002-0",
+      "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+      "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged-cliques",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "ippv-five-patches",
+      "status": "completed",
+      "directory": "runs/0002-1",
+      "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+      "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged-cliques",
+      "h": 3,
+      "k": 1,
+      "repeat": 1,
+      "algorithm": "ippv-five-patches",
+      "status": "completed",
+      "directory": "runs/0003-1",
+      "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+      "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged-cliques",
+      "h": 3,
+      "k": 1,
+      "repeat": 1,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0003-0",
+      "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+      "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "clique-isolate",
+      "h": 3,
+      "k": 2,
+      "repeat": 0,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0004-0",
+      "graph_sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e",
+      "semantic_sha256": "04fef2a2384ab3a7f48ca387a9e4adcc5bb077b63c31e1aa6ce2480542bcf5b9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "clique-isolate",
+      "h": 3,
+      "k": 2,
+      "repeat": 0,
+      "algorithm": "ippv-five-patches",
+      "status": "semantic_mismatch",
+      "directory": "runs/0004-1",
+      "graph_sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e",
+      "semantic_sha256": null,
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "clique-isolate",
+      "h": 3,
+      "k": 2,
+      "repeat": 1,
+      "algorithm": "vf-basic",
+      "status": "completed",
+      "directory": "runs/0005-0",
+      "graph_sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e",
+      "semantic_sha256": "04fef2a2384ab3a7f48ca387a9e4adcc5bb077b63c31e1aa6ce2480542bcf5b9",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "clique-isolate",
+      "h": 3,
+      "k": 2,
+      "repeat": 1,
+      "algorithm": "ippv-five-patches",
+      "status": "semantic_mismatch",
+      "directory": "runs/0005-1",
+      "graph_sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e",
+      "semantic_sha256": null,
+      "rank_latency_seconds": null
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "tied-cliques-k1",
+      "repeat": 0,
+      "algorithms": [
+        "ippv-five-patches",
+        "vf-basic"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": false,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "tied-cliques-k1",
+      "repeat": 1,
+      "algorithms": [
+        "ippv-five-patches",
+        "vf-basic"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": false,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "bridged-cliques",
+      "repeat": 0,
+      "algorithms": [
+        "vf-basic",
+        "ippv-five-patches"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "bridged-cliques",
+      "repeat": 1,
+      "algorithms": [
+        "ippv-five-patches",
+        "vf-basic"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "clique-isolate",
+      "repeat": 0,
+      "algorithms": [
+        "vf-basic",
+        "ippv-five-patches"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    },
+    {
+      "case": "clique-isolate",
+      "repeat": 1,
+      "algorithms": [
+        "vf-basic",
+        "ippv-five-patches"
+      ],
+      "level": "not_compared",
+      "reason": "one or both runs failed or lacked validation"
+    }
+  ]
+}

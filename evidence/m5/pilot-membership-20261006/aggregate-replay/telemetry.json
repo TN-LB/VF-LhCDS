@@ -1,0 +1,242 @@
+[
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 0,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0000-0",
+    "phase_wall_seconds": {
+      "postload": 0.500645917,
+      "postindex": 0.49185325
+    },
+    "logical_interval_queries": 13,
+    "mincut_calls": 13,
+    "cliques_scanned": 627380,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 13
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 194252
+  },
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 1,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0001-0",
+    "phase_wall_seconds": {
+      "postload": 0.548309916,
+      "postindex": 0.539528708
+    },
+    "logical_interval_queries": 13,
+    "mincut_calls": 13,
+    "cliques_scanned": 627380,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 13
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 194252
+  },
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 2,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0002-0",
+    "phase_wall_seconds": {
+      "postload": 0.499351417,
+      "postindex": 0.490529625
+    },
+    "logical_interval_queries": 13,
+    "mincut_calls": 13,
+    "cliques_scanned": 627380,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 13
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 194252
+  },
+  {
+    "case": "ca-grqc-h3-k10",
+    "repeat": 0,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0003-0",
+    "phase_wall_seconds": {
+      "postload": 1.42588025,
+      "postindex": 1.417021958
+    },
+    "logical_interval_queries": 72,
+    "mincut_calls": 72,
+    "cliques_scanned": 3474720,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 72
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 219884
+  },
+  {
+    "case": "ca-grqc-h3-k10",
+    "repeat": 1,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0004-0",
+    "phase_wall_seconds": {
+      "postload": 1.43408375,
+      "postindex": 1.425197292
+    },
+    "logical_interval_queries": 72,
+    "mincut_calls": 72,
+    "cliques_scanned": 3474720,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 72
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 219884
+  },
+  {
+    "case": "ca-grqc-h3-k10",
+    "repeat": 2,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0005-0",
+    "phase_wall_seconds": {
+      "postload": 1.42893175,
+      "postindex": 1.420019375
+    },
+    "logical_interval_queries": 72,
+    "mincut_calls": 72,
+    "cliques_scanned": 3474720,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 72
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 219884
+  },
+  {
+    "case": "ca-grqc-h3-k15",
+    "repeat": 0,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0006-0",
+    "phase_wall_seconds": {
+      "postload": 2.733062875,
+      "postindex": 2.724247417
+    },
+    "logical_interval_queries": 112,
+    "mincut_calls": 112,
+    "cliques_scanned": 5405120,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 112
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 238764
+  },
+  {
+    "case": "ca-grqc-h3-k15",
+    "repeat": 1,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0007-0",
+    "phase_wall_seconds": {
+      "postload": 2.791828875,
+      "postindex": 2.782959875
+    },
+    "logical_interval_queries": 112,
+    "mincut_calls": 112,
+    "cliques_scanned": 5405120,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 112
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 238764
+  },
+  {
+    "case": "ca-grqc-h3-k15",
+    "repeat": 2,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0008-0",
+    "phase_wall_seconds": {
+      "postload": 2.811718333,
+      "postindex": 2.801738042
+    },
+    "logical_interval_queries": 112,
+    "mincut_calls": 112,
+    "cliques_scanned": 5405120,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 112
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 238764
+  },
+  {
+    "case": "ca-grqc-h3-k20",
+    "repeat": 0,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0009-0",
+    "phase_wall_seconds": {
+      "postload": 4.431972792,
+      "postindex": 4.423045583
+    },
+    "logical_interval_queries": 154,
+    "mincut_calls": 154,
+    "cliques_scanned": 7432040,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 154
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 244955
+  },
+  {
+    "case": "ca-grqc-h3-k20",
+    "repeat": 1,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0010-0",
+    "phase_wall_seconds": {
+      "postload": 4.382484959,
+      "postindex": 4.373561209
+    },
+    "logical_interval_queries": 154,
+    "mincut_calls": 154,
+    "cliques_scanned": 7432040,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 154
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 244955
+  },
+  {
+    "case": "ca-grqc-h3-k20",
+    "repeat": 2,
+    "algorithm": "vf-adjacency-membership",
+    "directory": "runs/0011-0",
+    "phase_wall_seconds": {
+      "postload": 4.361809584,
+      "postindex": 4.352921834
+    },
+    "logical_interval_queries": 154,
+    "mincut_calls": 154,
+    "cliques_scanned": 7432040,
+    "cliques_enumerated": 48260,
+    "capacity_backends": {
+      "uint128": 154
+    },
+    "max_forward_nodes": 53504,
+    "max_forward_arcs": 198282,
+    "sum_unique_footprints": 244955
+  }
+]

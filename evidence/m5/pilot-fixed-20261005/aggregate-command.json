@@ -1,0 +1,9 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/pilot-fixed-20261005/summarize.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.15764345787465572,
+  "finished_utc": "2026-10-05T08:32:05.631740+00:00"
+}

@@ -1,0 +1,4 @@
+{"test": "T-PHASE-01/triangle_and_isolate", "status": "passed"}
+{"test": "T-PHASE-01/bridged_triangles", "status": "passed"}
+Starting the single CA-GrQc phase diagnostic (60-second guard).
+{"native_status": "timeout", "incomplete_phase": "index", "last_marker": {"diagnostic_schema": 1, "phase": "index", "event": "begin", "elapsed_seconds": 0.003960667}}

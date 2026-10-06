@@ -1,0 +1,9 @@
+#include "vflhcds/core/build_info.hpp"
+
+namespace vflhcds {
+BuildInfo build_info() noexcept {
+    return {"@PROJECT_VERSION@", "@CMAKE_CXX_COMPILER_ID@",
+            "@CMAKE_CXX_COMPILER_VERSION@", "@CMAKE_BUILD_TYPE@",
+            "@VFLHCDS_ENABLE_SANITIZERS@"};
+}
+}  // namespace vflhcds

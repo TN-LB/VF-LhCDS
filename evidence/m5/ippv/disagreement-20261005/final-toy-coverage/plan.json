@@ -1,0 +1,222 @@
+{
+  "scope": "deterministic tiny definition validation, not a benchmark or final experiment configuration",
+  "task": "P09.1",
+  "decision": "D029; continue independent VF-LhCDS/IPPV work",
+  "created_utc": "2026-10-05T04:09:59.812157+00:00",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "baselines/ippv/check_toys.py",
+    "--binary",
+    "build-ippv-fixed-release/IPPV",
+    "--binary",
+    "build-ippv-fixed-sanitize/IPPV",
+    "--h",
+    "2",
+    "3",
+    "4",
+    "5",
+    "--iterations",
+    "10",
+    "--timeout",
+    "60",
+    "--evidence",
+    "evidence/m5/ippv/disagreement-20261005/final-toy-coverage"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "iterations": 10,
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "algorithm_workers": 1,
+  "cache": "uncontrolled",
+  "seed": null,
+  "stop": "stop on any new failure; retain and count already recorded zero-density omissions",
+  "script_sha256": "17c11111d57db251d58d0824b03817f83f3332ac148b2955832010d294bab9af",
+  "source_sha256": {
+    "baselines/ippv/adapter.py": "f027a62cb824334a661a9d4fd81917e0322816355ab92175dd385a7dfd0405d1",
+    "baselines/ippv/build.py": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6",
+    "baselines/ippv/check_fractional.py": "9485beb3c29f0daab59953e1d3074a537ca7635bc1759275816036d8a9705141",
+    "baselines/ippv/check_toys.py": "17c11111d57db251d58d0824b03817f83f3332ac148b2955832010d294bab9af",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14",
+    "baselines/ippv/test_adapter.py": "87b0a7de86b271fbef2007e34c1209e528a6a5ea6bd7a20b3e8ae9fa76554294"
+  },
+  "binaries": [
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-release/IPPV",
+      "sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879"
+    },
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-sanitize/IPPV",
+      "sha256": "1e54bcf18051fe744f24c6176ac7d95f50cec64d0f6cc38dbf00c3c82a746f9e"
+    }
+  ],
+  "cases": [
+    {
+      "name": "clique",
+      "h": 2,
+      "k": 1,
+      "fixture": "fixtures/h2-clique.graph",
+      "graph_sha256": "218a363ee15c8d7aec37e56dc2925372195b42b3a4d6d46cc754068560444f5b"
+    },
+    {
+      "name": "tied-cliques-k1",
+      "h": 2,
+      "k": 1,
+      "fixture": "fixtures/h2-tied-cliques-k1.graph",
+      "graph_sha256": "a7da86ad8d19f8ec74c1e5120d878eee0b5b9b64fdc5363bf3257d2a5a5f9c53"
+    },
+    {
+      "name": "tied-cliques-k2",
+      "h": 2,
+      "k": 2,
+      "fixture": "fixtures/h2-tied-cliques-k2.graph",
+      "graph_sha256": "a7da86ad8d19f8ec74c1e5120d878eee0b5b9b64fdc5363bf3257d2a5a5f9c53"
+    },
+    {
+      "name": "bridged-cliques",
+      "h": 2,
+      "k": 1,
+      "fixture": "fixtures/h2-bridged-cliques.graph",
+      "graph_sha256": "4f785657fa1a535395aa6ff5d08a753a918bacb21b65f6ebe28e4fde009b367c"
+    },
+    {
+      "name": "clique-isolate",
+      "h": 2,
+      "k": 2,
+      "fixture": "fixtures/h2-clique-isolate.graph",
+      "graph_sha256": "898fba8c18811fa193a0a784d5334a218f2eee2cfc6c738a3c922540b72cd297"
+    },
+    {
+      "name": "singleton",
+      "h": 2,
+      "k": 1,
+      "fixture": "fixtures/h2-singleton.graph",
+      "graph_sha256": "b7bb6816a91632dc5aa6e59567619ed2df9c7620d2651899b9cfe9541b0becf7"
+    },
+    {
+      "name": "clique",
+      "h": 3,
+      "k": 1,
+      "fixture": "fixtures/h3-clique.graph",
+      "graph_sha256": "9aae5965d31649f628c42cda3a40073a4d1449b074f94f423c8fb5b803ea6392"
+    },
+    {
+      "name": "tied-cliques-k1",
+      "h": 3,
+      "k": 1,
+      "fixture": "fixtures/h3-tied-cliques-k1.graph",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e"
+    },
+    {
+      "name": "tied-cliques-k2",
+      "h": 3,
+      "k": 2,
+      "fixture": "fixtures/h3-tied-cliques-k2.graph",
+      "graph_sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e"
+    },
+    {
+      "name": "bridged-cliques",
+      "h": 3,
+      "k": 1,
+      "fixture": "fixtures/h3-bridged-cliques.graph",
+      "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8"
+    },
+    {
+      "name": "clique-isolate",
+      "h": 3,
+      "k": 2,
+      "fixture": "fixtures/h3-clique-isolate.graph",
+      "graph_sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e"
+    },
+    {
+      "name": "singleton",
+      "h": 3,
+      "k": 1,
+      "fixture": "fixtures/h3-singleton.graph",
+      "graph_sha256": "b7bb6816a91632dc5aa6e59567619ed2df9c7620d2651899b9cfe9541b0becf7"
+    },
+    {
+      "name": "clique",
+      "h": 4,
+      "k": 1,
+      "fixture": "fixtures/h4-clique.graph",
+      "graph_sha256": "29d0768b25c2324a6b8f8a73a06954ffb1731fb97e0d715ac9d8c86213b3ec42"
+    },
+    {
+      "name": "tied-cliques-k1",
+      "h": 4,
+      "k": 1,
+      "fixture": "fixtures/h4-tied-cliques-k1.graph",
+      "graph_sha256": "3b5db3833b025b9efea474fa85cee877d1cd6bb21f41f916d150e4f8b080d6f3"
+    },
+    {
+      "name": "tied-cliques-k2",
+      "h": 4,
+      "k": 2,
+      "fixture": "fixtures/h4-tied-cliques-k2.graph",
+      "graph_sha256": "3b5db3833b025b9efea474fa85cee877d1cd6bb21f41f916d150e4f8b080d6f3"
+    },
+    {
+      "name": "bridged-cliques",
+      "h": 4,
+      "k": 1,
+      "fixture": "fixtures/h4-bridged-cliques.graph",
+      "graph_sha256": "ee4f47741b5b4d2ce0561533ab15ccdc56bcdffc2ad2454f9201445fd7c08908"
+    },
+    {
+      "name": "clique-isolate",
+      "h": 4,
+      "k": 2,
+      "fixture": "fixtures/h4-clique-isolate.graph",
+      "graph_sha256": "e4e714ca9da0cea32741a7269b3941bea4efd2e09fa6ff5cf557462d66033c71"
+    },
+    {
+      "name": "singleton",
+      "h": 4,
+      "k": 1,
+      "fixture": "fixtures/h4-singleton.graph",
+      "graph_sha256": "b7bb6816a91632dc5aa6e59567619ed2df9c7620d2651899b9cfe9541b0becf7"
+    },
+    {
+      "name": "clique",
+      "h": 5,
+      "k": 1,
+      "fixture": "fixtures/h5-clique.graph",
+      "graph_sha256": "9d219c14cfa6ca442ea83a0d40b1c111df3af49dec6f9bf1cc360a1ad36d1117"
+    },
+    {
+      "name": "tied-cliques-k1",
+      "h": 5,
+      "k": 1,
+      "fixture": "fixtures/h5-tied-cliques-k1.graph",
+      "graph_sha256": "db0b876772fa3badfb61d12c93818ecfe5e7a1887838f681c134df09f4d946f8"
+    },
+    {
+      "name": "tied-cliques-k2",
+      "h": 5,
+      "k": 2,
+      "fixture": "fixtures/h5-tied-cliques-k2.graph",
+      "graph_sha256": "db0b876772fa3badfb61d12c93818ecfe5e7a1887838f681c134df09f4d946f8"
+    },
+    {
+      "name": "bridged-cliques",
+      "h": 5,
+      "k": 1,
+      "fixture": "fixtures/h5-bridged-cliques.graph",
+      "graph_sha256": "3a4b9a1827277f6498b8d4720dc27e583ebd4954cbadf1850ee4c08364dcf206"
+    },
+    {
+      "name": "clique-isolate",
+      "h": 5,
+      "k": 2,
+      "fixture": "fixtures/h5-clique-isolate.graph",
+      "graph_sha256": "09b4409e4bbd4a0eedf6daae2acfdb3a3855f6129830f5d3b8c94bb3237ec6da"
+    },
+    {
+      "name": "singleton",
+      "h": 5,
+      "k": 1,
+      "fixture": "fixtures/h5-singleton.graph",
+      "graph_sha256": "b7bb6816a91632dc5aa6e59567619ed2df9c7620d2651899b9cfe9541b0becf7"
+    }
+  ]
+}

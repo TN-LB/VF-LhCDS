@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/build_vf.py",
+    "--build",
+    "build-m5-release",
+    "--evidence",
+    "evidence/m5/harness-20261003/build-vf",
+    "--cmake",
+    ".venv/bin/cmake"
+  ],
+  "driver_exit_code": 1,
+  "phase": "provenance serialization after successful configure/build",
+  "error": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "cause": "driver assumed print-build-info was JSON; actual CLI emits key=value text",
+  "build_output_preserved": true
+}

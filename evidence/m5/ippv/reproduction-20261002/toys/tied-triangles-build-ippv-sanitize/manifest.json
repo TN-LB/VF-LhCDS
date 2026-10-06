@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "algorithm": "IPPV-author-with-disclosed-patches",
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV",
+      "-g",
+      "./dataset/input.txt",
+      "-h",
+      "3",
+      "-t",
+      "10",
+      "-k",
+      "1",
+      "-p",
+      "0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-01T16:00:11.678783+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "62e81b65dadf2673d900733cff46e3c369c5a6f9996779547e2900b5f0b9b270",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.045578292571008205,
+    "user_seconds": 0.007078999999999999,
+    "system_seconds": 0.029640999999999997,
+    "peak_rss_bytes": 19922944,
+    "finished_utc": "2026-10-01T16:00:11.725611+00:00",
+    "sha256": {
+      "stdout.txt": "0705b21a621c925649a01f1171086800bc46775bf7ffb7aeb7a735fd0a17c510",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "graph_sha256": "6f69c6121439006a1f3c39c45367da3c658a130d793625d93b822579681b8010",
+  "normalized_input_sha256": "6f69c6121439006a1f3c39c45367da3c658a130d793625d93b822579681b8010",
+  "converted_input_sha256": "f27027977feb7dad897eea7f94f41ceb18809ba2cd3807932f4049a129049fd5",
+  "vertex_map_sha256": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7",
+  "h": 3,
+  "k": 1,
+  "iterations": 10,
+  "pattern": 0,
+  "status": "completed",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "cutoff_respected": true,
+      "density_nonincreasing": true,
+      "every_set_definition_valid": true,
+      "higher_density_complete": true,
+      "required_count": true,
+      "rounded_density_consistent": true,
+      "stdout_count_matches_file": true
+    },
+    "completeness_certified": true,
+    "expected": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "level": "definition_checked",
+    "native_rounded_densities": [
+      "0.3333"
+    ],
+    "output_count": 1,
+    "passed": true,
+    "strict_match": false,
+    "strict_order_compatible": false,
+    "truth_count": 2
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "phase_note": "Author prints clock() CPU times; not comparable wall phases",
+  "evidence_scope": "single reproduction/validation run; no benchmark claim",
+  "native_output_sha256": "27590ccde4c777d77b92eb45291e7a7d2600b4afbc77bab59ba012488f02e4ac",
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+      "validate",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/graph.txt",
+      "--native-output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/output/input-1.txt",
+      "--h",
+      "3",
+      "--k",
+      "1",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/canonical_output.jsonl",
+      "--declared-count",
+      "1",
+      "--definition"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/tied-triangles-build-ippv-sanitize/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-01T16:00:11.726656+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.05774495843797922,
+    "user_seconds": 0.041227,
+    "system_seconds": 0.010008999999999999,
+    "peak_rss_bytes": 20594688,
+    "finished_utc": "2026-10-01T16:00:11.784804+00:00",
+    "sha256": {
+      "stdout.txt": "28a75741f3ad1dca6c390bfaa2d1fc90960444a5d983610c66cd491872bcfe21",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "70547b87be4f8fc3e1e99d4600ecbdbb33ddff9febe463bb6aeb25827adb81f4",
+    "dataset/input.txt": "f27027977feb7dad897eea7f94f41ceb18809ba2cd3807932f4049a129049fd5",
+    "graph.txt": "6f69c6121439006a1f3c39c45367da3c658a130d793625d93b822579681b8010",
+    "output/input-1.txt": "27590ccde4c777d77b92eb45291e7a7d2600b4afbc77bab59ba012488f02e4ac",
+    "process.json": "e427b1d30648d2e4d2f5b67652e374603c204b8cba6e3377519f9dcda67a8f99",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "0705b21a621c925649a01f1171086800bc46775bf7ffb7aeb7a735fd0a17c510",
+    "validation/process.json": "5546fd956c2a017e39cae184bed839231dde7cac87faa9a540429f8995881063",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "28a75741f3ad1dca6c390bfaa2d1fc90960444a5d983610c66cd491872bcfe21",
+    "vertex_map.json": "f1bd980acec123d78839931904fad90b742d31a458c91e29c724175b05cedeb7"
+  }
+}

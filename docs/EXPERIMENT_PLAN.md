@@ -4,6 +4,12 @@ Revision: 2026-09-09. Required scope is M5 in `IMPLEMENTATION_PLAN.md`.
 Dataset lists below are candidate pools, not a requirement to run every combination.
 Freeze the actual machine/configuration before measurement; no results are assumed.
 
+Execution update, D029 (2026-10-02): the owner deferred further DCLDS reading and
+integration. For the current stage, proceed with independent VF-LhCDS/IPPV
+preparation and validation. References to DCLDS below remain future comparison
+work, not a current prerequisite. Do not claim a completed DCLDS or comprehensive
+SOTA comparison. Final datasets/resources/grid settings remain to be frozen.
+
 ## 1. Research questions
 
 ### RQ1 — Exactness

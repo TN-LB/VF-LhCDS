@@ -1,0 +1,116 @@
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/main.cpp:6:15: warning: unused variable 'el' [-Wunused-variable]
+    6 |     EdgeList* el;
+      |               ^~
+1 warning generated.
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/EdgeFN.cpp:3:105: warning: field 'flow' will be initialized after field 'index' [-Wreorder-ctor]
+    3 | EdgeFN::EdgeFN(int from, int to, double cap, double flow, double index) : from(from), to(to), cap(cap), flow(flow), index(index) {
+      |                                                                                               ~~~~~~~~  ^~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                                                               index(index) cap(cap) flow(flow)
+1 warning generated.
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:31:16: warning: variable 'possibleEdges' set but not used [-Wunused-but-set-variable]
+   31 |         double possibleEdges = 0.0, existingEdges = 0.0;
+      |                ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:194:39: warning: format specifies type 'long long' but the argument has type 'size_type' (aka 'unsigned long') [-Wformat]
+  194 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                   ~~~~                ^~~~~~~~~~~~~~~~
+      |                   %zu
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:194:57: warning: format specifies type 'long long' but the argument has type 'size_type' (aka 'unsigned long') [-Wformat]
+  194 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                              ~~~~                       ^~~~~~~~~~~~~~~~
+      |                              %zu
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Args.cpp:57:5: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+   57 |     sprintf(ds_address, "output/%s-%d.txt", data_name.c_str(), topk);
+      |     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:734:17: warning: unused variable 'cur_t' [-Wunused-variable]
+  734 |         clock_t cur_t = clock(); 
+      |                 ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:637:13: warning: unused variable 'start' [-Wunused-variable]
+  637 |     clock_t start = clock();
+      |             ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:904:17: warning: unused variable 'cur_t' [-Wunused-variable]
+  904 |         clock_t cur_t = clock();
+      |                 ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:831:13: warning: unused variable 'start' [-Wunused-variable]
+  831 |     clock_t start = clock(); 
+      |             ^~~~~
+1 warning generated.
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1216:9: warning: unused variable 'i' [-Wunused-variable]
+ 1216 |     int i = 0;
+      |         ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1217:13: warning: unused variable 'start' [-Wunused-variable]
+ 1217 |     clock_t start = clock();
+      |             ^~~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1485:1: warning: non-void function does not return a value [-Wreturn-type]
+ 1485 | }
+      | ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1500:24: warning: unused variable 'm' [-Wunused-variable]
+ 1500 |     unsigned long long m = 0;
+      |                        ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp:1694:24: warning: unused variable 'm' [-Wunused-variable]
+ 1694 |     unsigned long long m = 0;
+      |                        ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:508:14: warning: unused variable 'u' [-Wunused-variable]
+  508 |         unsigned i, u;
+      |                     ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:551:14: warning: unused variable 'i' [-Wunused-variable]
+  551 |         unsigned e, i;
+      |                     ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:601:7: warning: unused variable 'degi' [-Wunused-variable]
+  601 |                 int degi = g->d[i];
+      |                     ^~~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1115:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1115 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1116:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1116 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1117:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1117 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1145:22: warning: variable 'nck' set but not used [-Wunused-but-set-variable]
+ 1145 |         unsigned long long* nck;
+      |                             ^
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1146:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1146 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1147:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1147 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1175:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1175 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1176:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1176 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1194:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1194 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1195:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1195 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1221:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1221 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1222:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1222 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1223:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1223 |         densest* ds;
+      |                  ^~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1251:22: warning: unused variable 'nck' [-Wunused-variable]
+ 1251 |         unsigned long long* nck;
+      |                             ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1252:21: warning: unused variable 'tot' [-Wunused-variable]
+ 1252 |         unsigned long long tot;
+      |                            ^~~
+/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp:1253:11: warning: unused variable 'ds' [-Wunused-variable]
+ 1253 |         densest* ds;
+      |                  ^~
+19 warnings generated.
+12 warnings generated.

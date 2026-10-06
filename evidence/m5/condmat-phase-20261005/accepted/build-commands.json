@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS/experiments/phase_probe",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_CXX_FLAGS=",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+      "-DVF_LIBRARY=/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/libvflhcds_lib.a"
+    ],
+    "started_utc": "2026-10-05T09:17:47.799927+00:00",
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "exit_code": 0,
+    "stdout": "build-0.stdout",
+    "stderr": "build-0.stderr"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-condmat-phase-probe",
+      "-j2"
+    ],
+    "started_utc": "2026-10-05T09:17:49.065549+00:00",
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "exit_code": 0,
+    "stdout": "build-1.stdout",
+    "stderr": "build-1.stderr"
+  }
+]

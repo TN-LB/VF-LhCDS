@@ -1,0 +1,12 @@
+diff --git a/Graph.cpp b/Graph.cpp
+index 713e346..e3d9d14 100644
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -3,7 +3,6 @@
+ #include <iostream>
+ #include <unordered_map>
+ #include "MaxFlow.h"
+-#include <omp.h>
+ 
+ using namespace std;
+ 

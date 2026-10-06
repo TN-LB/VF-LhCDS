@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0003-0/graph.txt",
+    "--h",
+    "3",
+    "--k",
+    "1",
+    "--core-reduction",
+    "off",
+    "--footprint-scan",
+    "sorted"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0003-0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-02T16:35:09.437860+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.0066877081990242004,
+  "user_seconds": 0.001176,
+  "system_seconds": 0.001006,
+  "peak_rss_bytes": 1441792,
+  "finished_utc": "2026-10-02T16:35:09.444996+00:00",
+  "sha256": {
+    "stdout.txt": "d567ffe1beee23beebdb15325030946520b9da7d6f3de13fe98cacb31f6aea07",
+    "stderr.txt": "23f46ad98593e350383ef166f7d1894b8c680460ad7b8b6b68958ac1b45e6ad2"
+  }
+}

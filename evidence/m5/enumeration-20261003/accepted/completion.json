@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "commands_completed": 23,
+  "source_unchanged_during_checks": true,
+  "debug_and_pytest_evidence": "../dev/commands.json"
+}

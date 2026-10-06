@@ -1,0 +1,20 @@
+{
+  "date_local": "2026-10-05",
+  "recorded_utc": "2026-10-05T08:26:53.821685+00:00",
+  "decision_id": "D031",
+  "owner_reply": "\u597d\u7684\u3002\u73b0\u5728\u7ee7\u7eed\u8dd1\u5b9e\u9a8c",
+  "status": "accepted",
+  "scope": "Fresh full 48-call rerun with the repaired seven-patch IPPV; reuse unchanged D030 graphs/grid/resources/seed/repetitions/stop policy. No old/new timings mixed.",
+  "previous_config": "evidence/m5/pilot-20261005/config.json",
+  "previous_config_sha256": "03d199622719fd51c3da84fc2b0287750ae43098ad45076a22f910d26a82119e",
+  "config_sha256": "ca2ba7a44bc05666ca109d8dc53ecbd693be899ae14404470e8a113efe7dc891",
+  "schedule_sha256": "74fe7f42450bd3e21cb6cfe511f092ed0683b1b465811051d65b8acd0f0827f9",
+  "changed_fields": [
+    "name",
+    "algorithms[1].name",
+    "algorithms[1].executable",
+    "algorithms[1].sha256"
+  ],
+  "stop_on_failure": true,
+  "planned_native_calls": 48
+}

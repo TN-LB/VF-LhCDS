@@ -1,0 +1,11 @@
+{
+  "vf_status": "completed",
+  "reference": "evidence/m5/harness-20261003/shared-real/runs/0000-1",
+  "maximality_or_completeness_proven": false,
+  "performance_comparison": "not_performed",
+  "level": "cross_implementation_agreement",
+  "strict_match": true,
+  "tie_aware_match": true,
+  "completeness_certified": false,
+  "note": "agreement only; input runs retain their own structural/definition evidence"
+}

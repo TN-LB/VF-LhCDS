@@ -1,0 +1,73 @@
+{
+  "launch": [
+    ".venv/bin/python",
+    "evidence/m5/condmat-pair-20261006/run_pair.py"
+  ],
+  "driver": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/condmat-pair-20261006/config.json",
+      "--evidence",
+      "evidence/m5/condmat-pair-20261006/campaign",
+      "--stop-on-failure"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 43.072532165795565,
+    "finished_utc": "2026-10-05T14:28:55.941005+00:00",
+    "timing_scope": "Entire driver, including separate validation and evidence I/O."
+  },
+  "verification": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/condmat-pair-20261006/verify.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 1.2345532085746527,
+    "finished_utc": "2026-10-05T14:31:25.469945+00:00"
+  },
+  "hardware_commands": {
+    "machdep.cpu.brand_string": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple M1",
+      "stderr": ""
+    },
+    "hw.memsize": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 0,
+      "stdout": "17179869184",
+      "stderr": ""
+    },
+    "hw.physicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.physicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    },
+    "hw.logicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    }
+  },
+  "native_and_validator_commands": "campaign/runs/*/process.json and campaign/runs/*/validation/process.json"
+}

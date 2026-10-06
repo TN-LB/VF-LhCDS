@@ -1,0 +1,10 @@
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -1212,7 +1212,6 @@
+     printf("#slt node %lu #slt edge %lu #h_cliques %lu\n", slt_nodes.size(), slt_edges.size(), h_cliques.size());
+     CT = 0;
+     clock_t t_cc1 = clock();
+-    selected.clear();
+     compute_h_clique_core();
+     prune_by_core();
+     clock_t t_cc2 = clock();

@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-05T08:27:50.558308+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "head": "56229397903813d3509ecb45b178bbde823e357b",
+  "dirty_tree": " M AGENTS.md\n M CMakeLists.txt\n M docs/ARCHITECTURE.md\n M docs/BASELINE_AUDIT.md\n M docs/BUILD.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/INTERFACE_CONTRACT.md\n M docs/TASKS.md\n M include/vflhcds/clique/materialized.hpp\n M src/cli/dispatch.cpp\n M src/clique/materialized.cpp\n M tests/m2_probe.cpp\n M tests/m3_probe.cpp\n?? baselines/\n?? docs/ENUMERATION_IMPLEMENTATION.md\n?? evidence/m5/\n?? experiments/\n?? tests/clique_enumeration.cpp\n?? tests/enumeration_cli.py\n?? tests/enumeration_equivalence.hpp\n",
+  "script_sha256": {
+    "experiments/__init__.py": "f4b5ce0232d6d690302c7a91c59066637f93e8b2b426ae356137f5ab83464548",
+    "experiments/build_vf.py": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "experiments/prepare_input.py": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "experiments/run.py": "03ccfd055de1b09eeac2845d1d8424e0bb183f775fa459bbdd0bcf3ee035429e",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/test_harness.py": "20cc1e6c1c1f5b329c9a806d70304461da8de4f32f94be2d4b02087b25a80fe4",
+    "experiments/validate.py": "efbd6b4194bb5b8c50cfd74043b0d0e215e0201dfd11678b40a291823cedea34"
+  },
+  "configuration_sha256": "ca2ba7a44bc05666ca109d8dc53ecbd693be899ae14404470e8a113efe7dc891",
+  "schedule_sha256": "74fe7f42450bd3e21cb6cfe511f092ed0683b1b465811051d65b8acd0f0827f9",
+  "execution_policy_sha256": "052f2f016600d70650a0ee39e31b561bd2a162ca31acde31bc03ee1d81b29868"
+}

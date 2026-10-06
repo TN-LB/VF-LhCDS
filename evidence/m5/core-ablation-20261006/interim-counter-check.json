@@ -1,0 +1,130 @@
+{
+  "completed_pairs_checked": 15,
+  "results": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 627380,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 1,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 627380,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 2,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 627380,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 0,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 3474720,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 1,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 3474720,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 2,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 3474720,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 0,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 5405120,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 1,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 5405120,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 2,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 5405120,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 7432040,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 7432040,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 7432040,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 0,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 52701744,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 1,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 52701744,
+      "network_nonincreasing_every_query": true
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 2,
+      "strict_match": true,
+      "same_logical_queries": true,
+      "same_footprint_scan_visits": 52701744,
+      "network_nonincreasing_every_query": true
+    }
+  ],
+  "scope": "Completed pairs only; campaign still running.",
+  "source_sha256": {
+    "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
+    "src/clique/materialized.cpp": "8b34a667a2b4440731802486a5da13980aedf4310e2829774cc2638b8d458e50"
+  }
+}

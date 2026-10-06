@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-02T16:46:29.118749+00:00",
+  "scope": "integrity and recorded-outcome assertions, not theorem/completeness proof",
+  "status": "passed",
+  "pytest_cases_passed": 112,
+  "harness_tests": 21,
+  "tiny_native_runs": 12,
+  "tiny_definition_completed": 10,
+  "tiny_preserved_zero_mismatches": 2,
+  "tiny_tie_aware_agreements": 4,
+  "tiny_strict_agreements": 2,
+  "repeat_semantic_hashes_stable": true,
+  "real_native_runs": 2,
+  "real_ippv_structural_outputs": 5,
+  "real_vf_status": "timeout",
+  "real_output_agreement": "unavailable",
+  "configure_build_commands_exit_zero": 4,
+  "papers_unchanged": 4,
+  "m4_source_files_unchanged": 53,
+  "source_snapshots_and_raw_hashes_verified": true,
+  "git_diff_check": 0
+}

@@ -1,0 +1,11 @@
+{"diagnostic_schema":1,"phase":"parse","event":"begin","elapsed_seconds":0.000117417}
+{"diagnostic_schema":1,"phase":"parse","event":"end","elapsed_seconds":0.00026741699999999999}
+{"diagnostic_schema":1,"phase":"index","event":"begin","elapsed_seconds":0.000295292}
+{"diagnostic_schema":1,"phase":"index","event":"end","elapsed_seconds":0.000324667}
+{"diagnostic_schema":1,"phase":"solve","event":"begin","elapsed_seconds":0.00035145899999999998}
+{"diagnostic_schema":1,"phase":"query","event":"end","elapsed_seconds":0.00042962499999999999,"query_index":1,"stats":{"logical_interval_queries":1,"mincut_calls":1,"original_interval_size":4,"oracle_interval_size":4,"cliques_scanned":1,"unique_footprints":1,"forward_nodes":7,"forward_arcs":8,"residual_arcs":16,"capacity_bit_length":6,"capacity_backend":"uint128","core_threshold":null,"core":null,"core_reduction_seconds":null}}
+{"diagnostic_schema":1,"phase":"query","event":"end","elapsed_seconds":0.00050287499999999996,"query_index":2,"stats":{"logical_interval_queries":1,"mincut_calls":1,"original_interval_size":3,"oracle_interval_size":3,"cliques_scanned":1,"unique_footprints":1,"forward_nodes":6,"forward_arcs":7,"residual_arcs":14,"capacity_bit_length":5,"capacity_backend":"uint128","core_threshold":null,"core":null,"core_reduction_seconds":null}}
+{"diagnostic_schema":1,"phase":"query","event":"end","elapsed_seconds":0.00056212500000000002,"query_index":3,"stats":{"logical_interval_queries":1,"mincut_calls":0,"original_interval_size":1,"oracle_interval_size":1,"cliques_scanned":null,"unique_footprints":null,"forward_nodes":null,"forward_arcs":null,"residual_arcs":null,"capacity_bit_length":null,"capacity_backend":null,"core_threshold":null,"core":null,"core_reduction_seconds":null}}
+{"diagnostic_schema":1,"phase":"solve","event":"end","elapsed_seconds":0.00063254200000000004}
+{"diagnostic_schema":1,"phase":"serialize","event":"begin","elapsed_seconds":0.00067254200000000004}
+{"diagnostic_schema":1,"phase":"serialize","event":"end","elapsed_seconds":0.00076791700000000001}

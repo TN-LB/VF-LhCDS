@@ -1,0 +1,15 @@
+{
+  "status": "pending_owner_approval",
+  "stop_on_failure": true,
+  "planned_native_runs": 48,
+  "planned_validation_runs_at_most": 48,
+  "additional_warmup_runs": 0,
+  "automatic_retry": false,
+  "automatic_resume": false,
+  "adaptive_parameter_changes": false,
+  "native_timeout_seconds_each": 60,
+  "validator_timeout_seconds_each": 60,
+  "native_guard_sum_seconds": 2880,
+  "validation_guard_sum_seconds_at_most": 2880,
+  "note": "Guard sums exclude setup, normalization and wrapper work; not a strict campaign deadline or predicted runtime."
+}

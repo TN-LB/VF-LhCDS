@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+    "--h",
+    "3",
+    "--k",
+    "5",
+    "--core-reduction",
+    "off",
+    "--footprint-scan",
+    "sorted",
+    "--clique-enumeration",
+    "adjacency"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/condmat-phase-20261005/accepted/smoke/triangle_and_isolate/production",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T09:17:51.335299+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.007954208180308342,
+  "user_seconds": 0.001645,
+  "system_seconds": 0.001519,
+  "peak_rss_bytes": 1441792,
+  "finished_utc": "2026-10-05T09:17:51.344008+00:00",
+  "sha256": {
+    "stdout.txt": "c96712188c16c24cc25f59ca8aa47fbe4c194bd3e732e596218767012c8e861c",
+    "stderr.txt": "2d002f4ca9a70d1141ad66cdf3e19d835a1bcd7cbccfb27243c413a279c4ef00"
+  }
+}

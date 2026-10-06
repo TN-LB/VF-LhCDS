@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/phase-diagnostic-20261003/verify_evidence.py"
+  ],
+  "exit_code": 0,
+  "result": "verification.json",
+  "result_sha256": "88790994ed72d5ceffef55ea2c4f0e043bd1a0e374985464a942495b8c6d97df",
+  "record_basis": "observed completed exec_command result; no command duration invented"
+}

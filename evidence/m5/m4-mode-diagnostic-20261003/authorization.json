@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-03T02:56:50.604929+00:00",
+  "owner_reply": "\u597d\u7684",
+  "approved_action": "Run each existing M4 mode once on the same CA-GrQc h=3,k=5 graph with a 60-second guard; no algorithm changes or final benchmark approval.",
+  "proposal": "evidence/m5/harness-20261003/proposed-diagnostic.json",
+  "proposal_sha256": "eafa1a96df9e83df82fcbf561536fabd3bd048842434d9cf7f18b64fcd9c9152",
+  "proposal_note_sha256": "5a940f538414f60d6671641baaf14634d2c18524a12f3e0c10a912463a4409db",
+  "config_sha256": "3905ea500a80c833ae1cf363774f954581dd6ec37a6ce35a3e4d073055dff618",
+  "changed_config_fields": [
+    "name",
+    "scope"
+  ],
+  "final_benchmark_settings_approved": false,
+  "dclds": "deferred under D029"
+}

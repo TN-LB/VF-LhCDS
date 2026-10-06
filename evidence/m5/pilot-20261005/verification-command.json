@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "evidence/m5/pilot-20261005/verify.py"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 0,
+  "wall_seconds": 0.11437425017356873
+}

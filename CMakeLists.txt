@@ -79,6 +79,9 @@ if(BUILD_TESTING)
   add_executable(vflhcds_m2_probe tests/m2_probe.cpp)
   target_link_libraries(vflhcds_m2_probe PRIVATE vflhcds::lib vflhcds_build_options)
   add_test(NAME m2_primitives COMMAND vflhcds_primitives_test)
+  add_executable(vflhcds_enumeration_test tests/clique_enumeration.cpp)
+  target_link_libraries(vflhcds_enumeration_test PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m5_clique_enumeration COMMAND vflhcds_enumeration_test)
   add_executable(vflhcds_solver_test tests/m3_solver.cpp)
   target_link_libraries(vflhcds_solver_test PRIVATE vflhcds::lib vflhcds_build_options)
   add_executable(vflhcds_m3_probe tests/m3_probe.cpp)
@@ -96,6 +99,7 @@ if(BUILD_TESTING)
   add_test(NAME m4_modes_smoke COMMAND "${Python3_EXECUTABLE}"
     "${CMAKE_CURRENT_SOURCE_DIR}/validation/m4_campaign.py" --probe "$<TARGET_FILE:vflhcds_m3_probe>" --tier smoke)
   add_test(NAME m4_cli_contract COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m4_cli.py" "$<TARGET_FILE:vflhcds>")
+  add_test(NAME m5_enumeration_cli COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/enumeration_cli.py" "$<TARGET_FILE:vflhcds>")
   add_test(NAME m2_oracle_smoke
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/validation/oracle_campaign.py"
       --probe "$<TARGET_FILE:vflhcds_m2_probe>" --tier smoke)

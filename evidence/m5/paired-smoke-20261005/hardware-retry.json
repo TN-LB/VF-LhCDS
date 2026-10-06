@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-04T16:44:15.302131+00:00",
+  "hardware": {
+    "machdep.cpu.brand_string": {
+      "command": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple M1",
+      "stderr": ""
+    },
+    "hw.memsize": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 0,
+      "stdout": "17179869184",
+      "stderr": ""
+    },
+    "hw.physicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.physicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    },
+    "hw.logicalcpu": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": ""
+    },
+    "hw.packages": {
+      "command": [
+        "sysctl",
+        "-n",
+        "hw.packages"
+      ],
+      "exit_code": 0,
+      "stdout": "1",
+      "stderr": ""
+    }
+  }
+}

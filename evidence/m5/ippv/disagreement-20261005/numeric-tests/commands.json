@@ -1,0 +1,19 @@
+[
+  {
+    "command": [
+      "clang++",
+      "-std=c++14",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I.deps/baselines/ippv",
+      "-I.deps/boost_1_86_0",
+      "baselines/ippv/test_exact_verification.cpp",
+      "-o",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/numeric-tests/release"
+    ],
+    "action": "release-compile",
+    "exit_code": 1,
+    "wall_seconds": 1.058712082915008
+  }
+]

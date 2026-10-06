@@ -1,0 +1,15 @@
+{
+  "git_diff_check_exit": 0,
+  "evidence_verifier_exit": 0,
+  "report_and_proposal_links_exist": true,
+  "draft_config_rejected": true,
+  "old_fixed_pilot_files_unchanged": 313,
+  "modified_existing_files": 7,
+  "added_evidence_files_excluding_inventory_and_final_checks": 63,
+  "new_ignored_build_files": 30,
+  "report_sha256": "0d0cd4579140474b2e8c02040ce157f9811ce5c2eba5745b60aa95da1c80224d",
+  "files_changed_sha256": "b29ac0ef7b11d9934eb8a234367248eea868327c30da5a4f00bdadd183723848",
+  "post_timeout_native_calls": 0,
+  "production_code_changes": 0,
+  "full_test_suite_rerun": false
+}

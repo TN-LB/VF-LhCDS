@@ -1,0 +1,26 @@
+{
+  "paper_sha256": 4,
+  "reference_sha256": 23,
+  "production_source_sha256": 40,
+  "binary_sha256": 2,
+  "provenance_sha256": 2,
+  "draft_artifacts_sha256": 11,
+  "historical_pilot_files": 216,
+  "current_patched_source_files": 18,
+  "patches_0006_0007_replay_exactly": true,
+  "independent_stored_certificate_verified": true,
+  "deletion_subsets_rechecked": 8192,
+  "candidate_is_global_maximal_compact": true,
+  "minimization_attempts": 31,
+  "pava_only_control_still_omits_positive_solution": true,
+  "final_tiny_definition_passes": 2,
+  "final_original_pair_matches": 2,
+  "toy_results": {
+    "definition_pass": 32,
+    "known_zero_density_mismatch": 16
+  },
+  "pytest_passed": 123,
+  "numeric_compile_and_run_commands_passed": 4,
+  "final_configure_and_build_commands_passed": 4,
+  "benchmark_resumed": false
+}

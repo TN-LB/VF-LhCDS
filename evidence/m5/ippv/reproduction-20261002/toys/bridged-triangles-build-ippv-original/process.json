@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-original/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/toys/bridged-triangles-build-ippv-original",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-01T16:00:11.396024+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "20caf48a74d864f90c23a45a31d31c1a3e8b71b2173ea297cee7328cc84bb265",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.007416708394885063,
+  "user_seconds": 0.000987,
+  "system_seconds": 0.0012209999999999999,
+  "peak_rss_bytes": 1277952,
+  "finished_utc": "2026-10-01T16:00:11.403891+00:00",
+  "sha256": {
+    "stdout.txt": "271c9651b3513781f8625e38bb512a3c1bc4937ca30bccb627cab76115fd55cc",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

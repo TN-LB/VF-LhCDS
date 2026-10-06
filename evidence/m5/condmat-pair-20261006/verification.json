@@ -1,0 +1,25 @@
+{
+  "paper_sha256": 4,
+  "reference_sha256": 23,
+  "production_source_sha256": 40,
+  "binary_sha256": 2,
+  "provenance_sha256": 2,
+  "pinned_harness_sha256": 13,
+  "library_sha256": 1,
+  "old_probe_sha256": 1,
+  "historical_evidence_files": {
+    "evidence/m5/pilot-20261005": 261,
+    "evidence/m5/pilot-fixed-20261005": 313,
+    "evidence/m5/condmat-phase-20261005": 65,
+    "evidence/m5/condmat-membership-20261006": 42
+  },
+  "raw_inventory_entries": 26,
+  "native_successes": 2,
+  "external_structural_validator_successes": 2,
+  "paired_comparisons": 1,
+  "strict_match": false,
+  "tie_aware_match": true,
+  "cutoff_only_difference": true,
+  "vf_previous_output_match": true,
+  "builds_or_test_suites_rerun": false
+}

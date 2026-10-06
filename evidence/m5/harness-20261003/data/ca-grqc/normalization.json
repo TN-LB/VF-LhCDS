@@ -1,0 +1,22 @@
+{
+  "source_path": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-GrQc.txt",
+  "source_sha256": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+  "source_format": "explicit n,m; declared vertices 0..n-1; undirected edges",
+  "declared_vertices": 5242,
+  "raw_edges": 14484,
+  "vertices": 5242,
+  "edges": 14484,
+  "removed_self_loops": 0,
+  "removed_duplicate_edges": 0,
+  "isolate_policy": "preserve every declared vertex",
+  "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+  "script_sha256": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/prepare_input.py",
+    "--source",
+    ".deps/baselines/ippv/dataset/CA-GrQc.txt",
+    "--evidence",
+    "evidence/m5/harness-20261003/data/ca-grqc"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/condmat-phase-20261005/verify_evidence.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.21330387517809868,
+  "finished_utc": "2026-10-05T09:21:43.992942+00:00"
+}

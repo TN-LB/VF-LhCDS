@@ -1,0 +1,38 @@
+{
+  "campaign": {
+    "command": [
+      ".venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/m4-mode-diagnostic-20261003/config.json",
+      "--evidence",
+      "evidence/m5/m4-mode-diagnostic-20261003/campaign"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "started_utc": "2026-10-03T02:57:17.586137+00:00",
+    "exit_code": 1,
+    "wall_seconds": 240.30401662457734,
+    "finished_utc": "2026-10-03T03:01:17.880444+00:00"
+  },
+  "integrity": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/m4-mode-diagnostic-20261003/verify_evidence.py"
+    ],
+    "exit_code": 0,
+    "result": "verification.json",
+    "result_sha256": "d144077377b8abdbd0f4f7793495de875fbe5c44a382c1c7cc90b292d30fa66d",
+    "record_basis": "completed exec_command result; no wall time invented"
+  },
+  "final_whitespace_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "builds_and_test_suites_executed": []
+}

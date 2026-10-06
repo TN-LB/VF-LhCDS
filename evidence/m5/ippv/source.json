@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/Elssky/IPPV",
+  "commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "retrieved_utc": "2026-10-01T06:20:25.493157+00:00",
+  "source_path": ".deps/baselines/ippv",
+  "license_file_names": [],
+  "license_notice_scan": "No license/copyright/permission/redistribution notice found in tracked source, headers, README or CMake files",
+  "owner_use_decision": "D027; upstream license remains unidentified",
+  "sha256": {
+    "Args.cpp": "3ef455ca8be5633bd0d2bd6af784e36d4c6726f9474130b441f40c200a3d2e37",
+    "Args.h": "8889c0ee0e73aae79f83289bf4cec52d3f4be584487f16a85677ab3f985deb04",
+    "CMakeLists.txt": "81133e3d0fda97c835bb89cd3d88f04217f3d83c6cf9edbd62226b3a7e7a78d5",
+    "EdgeFN.cpp": "4eddbb43830b4d825695bc0d4324d34b79bade6cc00a9f6bd2079e230e326edc",
+    "EdgeFN.h": "5cc460366ed6cdeba4ba283ea5d33fa62e0745bbdcccb87cf01168e7eb00adc6",
+    "FlowNetwork.cpp": "cd7e7246f2af2ce2509ee87dd34dd24d023a3cf53977626e388e593e6831a333",
+    "FlowNetwork.h": "add8c81ad3cfa1f72dd84620f99d3db503929916d834e53c5259f152902080c5",
+    "Graph.cpp": "3938cb3c694592cd3054fda01dd06c21268f2b6255739207d56f20baa60772f9",
+    "Graph.h": "047b3806dca1e7f5d1f2629a47f31489640e691433f936736ef71edc62b03847",
+    "KClistCore.cpp": "6d294dd556f8deee5610042f535380b2c1f8af3ba87ef932bc6fdd0c9f3e9634",
+    "KClistCore.h": "83693572e75329968c00ed94422da6bc9b59f771fdf663084645f7af32b94157",
+    "MaxFlow.cpp": "0b03bd6d1b77a061bd9aa52dd368b47ef04392349478621c4f87b76e86181823",
+    "MaxFlow.h": "208fbe4da94fb2bec3be031779ddfe6ed39cb1cb718b835a11cb97364435c88a",
+    "README.md": "1ede08be3ccfdca39368c165d8a568b3847f2de207fba4568d86c068c15f4709",
+    "dataset/CA-CondMat.txt": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+    "dataset/CA-GrQc.txt": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+    "main.cpp": "e1df82b7fdf3392b7e0404e2679e17e0d8ddb10eec7360082fc82062fe819bc6"
+  },
+  "tracked_source_modified": false,
+  "publication_mapping": "README links arXiv:2408.14022 and names the supplied IPPV paper; no publication/code equivalence claim"
+}

@@ -1,0 +1,10 @@
+{
+  "decision_id": "D032",
+  "owner_reply": "\u597d",
+  "scope": "One bounded CA-CondMat phase diagnosis following the last report recommendation; two tiny instrumentation checks first.",
+  "recorded_utc": "2026-10-05T09:17:47.740798+00:00",
+  "config_sha256": "1d776123d19d498cdf66602fb55b570e10b967f76e41d921fa2b658a00b9578f",
+  "production_change_authorized": false,
+  "formal_benchmark": false,
+  "stop_after_one_real_call": true
+}

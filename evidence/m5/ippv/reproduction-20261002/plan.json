@@ -1,0 +1,15 @@
+{
+  "decision": "D028",
+  "patch": "baselines/ippv/patches/0002-initialize-clique-count.patch",
+  "patch_sha256": "d3512cdfb458e2be753050bf0244e62bbf19036a02eafc59d493c75b8241d8f5",
+  "finding": "IPPV-B02 uninitialized hc_num used as allocation length",
+  "fix": "Initialize hc_num=0; later alpha_c sizing still uses actual h_cliques.size()",
+  "upstream_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "prior_patch": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+  "scope": "Local reproduction/debug diagnostics; no benchmark campaign or final settings",
+  "diagnostic_timeout_seconds": 60,
+  "memory_budget": null,
+  "algorithmic_workers": 1,
+  "configuration_origin": "Author README example: CA-CondMat, h=3, t=10, k=20, p=0; corrected executable name and omitted unsupported --args token",
+  "runtime_note": "60s is a local debugging guard, not a final benchmark timeout; filesystem cache uncontrolled"
+}

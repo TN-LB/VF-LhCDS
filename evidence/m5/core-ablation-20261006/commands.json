@@ -1,0 +1,120 @@
+{
+  "pytest": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "experiments/test_harness.py",
+      "baselines/ippv/test_adapter.py",
+      "reference/tests",
+      "-q"
+    ],
+    "started_utc": "2026-10-06T12:22:03.814843+00:00",
+    "exit_code": 0,
+    "wall_seconds": 5.073395375162363
+  },
+  "native_campaign_driver": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/core-ablation-20261006/config.json",
+      "--evidence",
+      "evidence/m5/core-ablation-20261006/campaign",
+      "--stop-on-failure",
+      "--continue-on-timeout",
+      "--require-strict-agreement"
+    ],
+    "exit_code": 1,
+    "wall_seconds": 1363.1292023751885,
+    "finished_utc": "2026-10-06T12:45:23.182480+00:00",
+    "timing_scope": "Entire driver, including separate validation and evidence I/O."
+  },
+  "outer_campaign_command": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/core-ablation-20261006/run_campaign.py"
+    ],
+    "exit_code": 1
+  },
+  "postprocess": [
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/summarize.py"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS",
+      "started_utc": "2026-10-06T12:45:31.044394+00:00",
+      "finished_utc": "2026-10-06T12:45:31.157061+00:00",
+      "exit_code": 0,
+      "wall_seconds": 0.11245208233594894,
+      "stdout": "evidence/m5/core-ablation-20261006/aggregate.stdout",
+      "stderr": "evidence/m5/core-ablation-20261006/aggregate.stderr",
+      "script_sha256": "9df32d00ec5bdf746c04faeaf5a1a0ec139d3f5452a192f785ac98198133dd33"
+    },
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/verify.py"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS",
+      "started_utc": "2026-10-06T12:45:31.157702+00:00",
+      "finished_utc": "2026-10-06T12:45:41.323842+00:00",
+      "exit_code": 0,
+      "wall_seconds": 10.166660708375275,
+      "stdout": "evidence/m5/core-ablation-20261006/verify.stdout",
+      "stderr": "evidence/m5/core-ablation-20261006/verify.stderr",
+      "script_sha256": "3a9c47b76ca5f1ab7a0d434cad2ed5e5a06643d6d99ce81c3a013945da3b56a3"
+    },
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/summarize.py",
+        "--output",
+        "/Users/nost/Documents/VF-LhCDS/evidence/m5/core-ablation-20261006/aggregate-replay"
+      ],
+      "cwd": "/Users/nost/Documents/VF-LhCDS",
+      "started_utc": "2026-10-06T12:45:41.324551+00:00",
+      "finished_utc": "2026-10-06T12:45:41.449141+00:00",
+      "exit_code": 0,
+      "wall_seconds": 0.12463091686367989,
+      "stdout": "evidence/m5/core-ablation-20261006/regenerate.stdout",
+      "stderr": "evidence/m5/core-ablation-20261006/regenerate.stderr",
+      "script_sha256": "9df32d00ec5bdf746c04faeaf5a1a0ec139d3f5452a192f785ac98198133dd33"
+    }
+  ],
+  "outer_postprocess_command": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/core-ablation-20261006/postprocess.py"
+    ],
+    "exit_code": 0
+  },
+  "report_generation": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/core-ablation-20261006/write_report.py"
+    ],
+    "exit_code": 0
+  },
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "exit_code": 0
+  },
+  "native_and_validator_commands": "campaign/runs/*/process.json and campaign/runs/*/validation/process.json",
+  "not_run": [
+    "C++ configure/build",
+    "CTest",
+    "ASan/UBSan campaign",
+    "fresh IPPV native comparison",
+    "new phase instrumentation/optimization",
+    "clean-machine smoke",
+    "DCLDS work",
+    "additional native retries"
+  ]
+}

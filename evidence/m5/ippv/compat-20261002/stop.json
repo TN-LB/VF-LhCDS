@@ -1,0 +1,39 @@
+{
+  "task": "P09.1",
+  "status": "blocked-source-defect",
+  "previous_build_blocker": "resolved by approved patch 0001",
+  "build_exit_code": 0,
+  "source_check_exit_code": 0,
+  "executable": "build-ippv-original/IPPV",
+  "executable_sha256": "22a7e7b3463f484cad572382bb33419f476aba4327045d011eb53de3795aabd6",
+  "upstream_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "patch_manifest": "patch.json",
+  "commands_manifest": "commands.json",
+  "finding": {
+    "id": "IPPV-B02",
+    "evidence_level": "source-inspected; no runtime failure reproduced",
+    "declaration": "Graph.h:50: int hc_num has no in-class initializer",
+    "read": "Graph.cpp:85 in patched tree: Graph::Graph calls alpha_c.resize(hc_num) without first assigning hc_num",
+    "call_site": "main.cpp constructs a local Graph using the user-provided constructor",
+    "consequence": "Read of an indeterminate integer used as a vector size; allocation/runtime behavior is not reliable",
+    "later_initialization": "frank_wolfe_h_clique and related methods already resize alpha_c using h_cliques.size() at CT==0",
+    "proposed_fix": "Initialize the member as int hc_num = 0; in Graph.h; retain later actual clique-size initialization",
+    "alternative": "Retain the author source defect as a baseline blocker and continue other M5 work only after owner approval",
+    "applied": false
+  },
+  "patched_source_files_verified": 17,
+  "unchanged_m4_source_files_verified": 53,
+  "dependencies_added": [],
+  "native_runs": 0,
+  "experiments_run": 0,
+  "unrun": [
+    "IPPV documented example",
+    "runtime/sanitizer validation of IPPV",
+    "baseline output and tie audit completion",
+    "canonical input/output adapter",
+    "shared definition-level and real smoke",
+    "DCLDS tasks",
+    "M5 campaign/release"
+  ],
+  "owner_decision": "pending for the newly identified blocker; all subsequent M5 execution stopped"
+}

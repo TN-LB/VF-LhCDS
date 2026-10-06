@@ -1,0 +1,136 @@
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -3,6 +3,7 @@
+ #include <iostream>
+ #include <unordered_map>
+ #include "MaxFlow.h"
++#include "ExactVerification.h"
+ 
+ using namespace std;
+ 
+@@ -1687,7 +1688,9 @@
+     unsigned long long m = 0;
+     vector<Network::Vertex> R;
+ 
+-    double g_temp = g - 1.0 / tmp_nodes.size() / tmp_nodes.size();
++    vector<std::size_t> footprint_sizes;
++    for (const auto& entry : tmp_cliques) footprint_sizes.push_back(entry.second.size());
++    ExactVerification exact(tmp_hcliques.size(), nodes.size(), tmp_nodes.size(), h, footprint_sizes);
+ 
+     //Add a source node s and a sink node 
+     Network::Vertex s = network.AddVertex(), t = network.AddVertex();
+@@ -1696,18 +1699,18 @@
+         id_in_network[tmp_nodes[i]] = i;
+         R.push_back(network.AddVertex());
+     }
+-    std::unordered_map<int, double> deg_new;
++    std::unordered_map<int, ExactVerification::Integer> deg_new;
+ 
+     for (auto _hc : in_cliques) {
+         Network::Vertex v = network.AddVertex();
+         for (auto hc_node : h_cliques[_hc.first]) {
+             if (deg_new.find(hc_node) == deg_new.end())
+             {
+-                deg_new.insert({ hc_node,1.0 });
+-            }
+-            else deg_new[hc_node] += 1.0;
+-            network.AddEdge(R[id_in_network[hc_node]], v, 1);
+-            network.AddEdge(v, R[id_in_network[hc_node]], h - 1);
++                deg_new.insert({ hc_node,exact.unit() });
++            }
++            else deg_new[hc_node] += exact.unit();
++            network.AddEdge(R[id_in_network[hc_node]], v, ExactVerification::checked(exact.unit()));
++            network.AddEdge(v, R[id_in_network[hc_node]], ExactVerification::checked(exact.reverse()));
+         }
+     }
+     std::unordered_map<int, vector<int>>::iterator iter;
+@@ -1717,16 +1720,19 @@
+         for (auto hc_node : in_nodes) {
+             if (deg_new.find(hc_node) == deg_new.end())
+             {
+-                deg_new.insert({ hc_node,1.0 + (h - in_nodes.size()) * 1.0 / in_nodes.size() });
+-            }
+-            else deg_new[hc_node] += 1.0 + (h - in_nodes.size()) * 1.0 / in_nodes.size();
+-            network.AddEdge(R[id_in_network[hc_node]], v, 1.0 + (h - in_nodes.size()) * 1.0 / in_nodes.size());
+-            network.AddEdge(v, R[id_in_network[hc_node]], h - 1);
+-        }
+-    }
++                deg_new.insert({ hc_node,exact.share(in_nodes.size()) });
++            }
++            else deg_new[hc_node] += exact.share(in_nodes.size());
++            network.AddEdge(R[id_in_network[hc_node]], v, ExactVerification::checked(exact.share(in_nodes.size())));
++            network.AddEdge(v, R[id_in_network[hc_node]], ExactVerification::checked(exact.reverse()));
++        }
++    }
++    ExactVerification::Integer source_total = 0;
++    for (auto node : tmp_nodes) source_total += deg_new[node];
++    ExactVerification::checked(source_total); // Bound the flow/excess totals too.
+     for (unsigned i = 0; i < tmp_nodes.size(); ++i) {
+-        network.AddEdge(s, R[i], deg_new[tmp_nodes[i]]);  //
+-        network.AddEdge(R[i], t, g_temp * h);
++        network.AddEdge(s, R[i], ExactVerification::checked(deg_new[tmp_nodes[i]]));
++        network.AddEdge(R[i], t, exact.sink());
+     }
+ 
+     network.MaxFlow(s, t);
+--- /dev/null
++++ b/ExactVerification.h
+@@ -0,0 +1,58 @@
++#ifndef IPPV_EXACT_VERIFICATION_H
++#define IPPV_EXACT_VERIFICATION_H
++
++#include <boost/multiprecision/cpp_int.hpp>
++#include <cstddef>
++#include <limits>
++#include <stdexcept>
++#include <vector>
++
++// Preserve the existing verifier's rational network and epsilon exactly. The
++// Boost flow network accepts long capacities; reject unrepresentable networks.
++class ExactVerification {
++public:
++    using Integer = boost::multiprecision::cpp_int;
++
++    ExactVerification(std::size_t clique_count, std::size_t candidate_size,
++                      std::size_t network_size, int h,
++                      const std::vector<std::size_t>& footprints)
++        : h_(h) {
++        if (!candidate_size || !network_size || h < 2)
++            throw std::invalid_argument("invalid exact verification dimensions");
++        const Integer square = Integer(network_size) * network_size;
++        const Integer denominator = Integer(candidate_size) * square;
++        scale_ = denominator;
++        for (auto size : footprints) {
++            if (!size || size > static_cast<std::size_t>(h))
++                throw std::invalid_argument("invalid verification footprint");
++            std::size_t a = size, b = (scale_ % size).convert_to<std::size_t>();
++            while (b) { const auto remainder = a % b; a = b; b = remainder; }
++            scale_ *= size / a;
++        }
++        // h * (clique_count / candidate_size - 1 / network_size^2).
++        sink_ = Integer(h) * (Integer(clique_count) * square - candidate_size)
++                * (scale_ / denominator);
++        checked(sink_);
++        checked(scale_ * (h - 1));
++    }
++
++    Integer unit() const { return scale_; }
++    Integer reverse() const { return scale_ * (h_ - 1); }
++    Integer share(std::size_t size) const {
++        if (!size || scale_ % size != 0)
++            throw std::invalid_argument("unscaled verification footprint");
++        return (scale_ / size) * h_;
++    }
++    long sink() const { return checked(sink_); }
++    static long checked(const Integer& value) {
++        if (value < 0 || value > (std::numeric_limits<long>::max)())
++            throw std::overflow_error("IPPV exact verification capacity exceeds long range");
++        return value.convert_to<long>();
++    }
++
++private:
++    int h_;
++    Integer scale_, sink_;
++};
++
++#endif

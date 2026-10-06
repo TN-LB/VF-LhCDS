@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "evidence/m5/pilot-20261005/summarize.py",
+    "--output",
+    "evidence/m5/pilot-20261005/aggregate"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 0,
+  "wall_seconds": 0.12769741658121347
+}

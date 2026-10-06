@@ -1,0 +1,23 @@
+./dataset/input.txt
+output/input-2.txt
+Reading edgelist from file ./dataset/input.txt
+Graph construction
+kclist time is:0.000301
+#slt node 13 #slt edge 17 #h_cliques 17
+max_d 4
+#slt node 13 #slt edge 17 #slt_h_cliques 17
+#active nodes 13
+compute core and prune time: 0.0001
+#node 13 #edge 17
+fw time: 0.0000
+nsg 2
+pava time: 0.0001
+updated nsg 2
+check sg time: 0.0001
+1
+sg 1 1 8 9
+pruning time: 0.0002
+lhcdses candidate: #nodes 4 #edges 6 #h-cliques 6
+verifyLhCDS time: 0.0004
+#node 8 #edge 9
+fw time: 0.0000

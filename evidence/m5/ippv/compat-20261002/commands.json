@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-original",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "scope": "Author code with approved unused-header removal only",
+    "started_utc": "2026-10-01T15:31:48.068204+00:00",
+    "stdout": "01-build.stdout",
+    "stderr": "01-build.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-01T15:31:52.211927+00:00",
+    "stdout_sha256": "8f022d71bec90f5ec5340c800b5afc5ebbf5425c644808a368444b97ea57a2d2",
+    "stderr_sha256": "1d8df41f798592b3160d172a1cd54088fb8bfcaf98003572f86b84d237c65768"
+  },
+  {
+    "command": [
+      "rg",
+      "-n",
+      "hc_num|alpha_c.resize",
+      "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp",
+      "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.h"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "exit_code": 0,
+    "scope": "Static diagnosis after successful build; no native algorithm run",
+    "recorded_utc": "2026-10-01T15:34:27.603691+00:00",
+    "stdout": "02-source-check.stdout",
+    "stderr": "02-source-check.stderr",
+    "stdout_sha256": "3f99ffa274ce02114b6ba26d16e77212cfeec67fca7276ffbbdce3ccafb42f58",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

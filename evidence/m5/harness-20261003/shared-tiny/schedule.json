@@ -1,0 +1,50 @@
+[
+  {
+    "case": "tied-cliques-k1",
+    "repeat": 0,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "tied-cliques-k1",
+    "repeat": 1,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "bridged-cliques",
+    "repeat": 0,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "case": "bridged-cliques",
+    "repeat": 1,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "clique-isolate",
+    "repeat": 0,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "case": "clique-isolate",
+    "repeat": 1,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  }
+]

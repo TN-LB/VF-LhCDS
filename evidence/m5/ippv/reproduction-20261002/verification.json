@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "integrity and recorded-result assertions, not full-domain baseline correctness",
+  "utc": "2026-10-01T17:28:59.127793+00:00",
+  "source_files_verified": 17,
+  "patches_verified": 3,
+  "unchanged_m4_source_files": 53,
+  "unchanged_papers": 4,
+  "build_configure_commands_exit_zero": 13,
+  "process_log_manifests_verified": 23,
+  "run_manifests_verified": 11,
+  "both_profile_binary_and_compiler_commands_unchanged_after_build_script_refinement": true,
+  "compiler_flags_verified": true,
+  "pytest_passed": 91,
+  "definition_native_passes": 6,
+  "preserved_zero_mismatches": 3,
+  "real_structural_output_count": 20,
+  "git_diff_check": "passed"
+}

@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-adjacency-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-20261005/campaign/runs/0002-0/graph.txt",
+    "--h",
+    "3",
+    "--k",
+    "5",
+    "--core-reduction",
+    "off",
+    "--footprint-scan",
+    "sorted",
+    "--clique-enumeration",
+    "adjacency"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/pilot-20261005/campaign/runs/0002-0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-04T17:45:40.207837+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.7411181246861815,
+  "user_seconds": 0.722434,
+  "system_seconds": 0.013116,
+  "peak_rss_bytes": 49381376,
+  "finished_utc": "2026-10-04T17:45:40.949533+00:00",
+  "sha256": {
+    "stdout.txt": "7464c11bb500582860684f8fdf7cfc8f8a5ad06899850e92bdf63bb57c4d761a",
+    "stderr.txt": "e05de65ce2a13718b8e27881774e7269c69197df29e73418dc62d00e406b9a0d"
+  }
+}

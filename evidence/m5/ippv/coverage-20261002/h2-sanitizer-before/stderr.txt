@@ -1,0 +1,63 @@
+=================================================================
+==9642==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000650 at pc 0x0001021bbc94 bp 0x00016dcf4f90 sp 0x00016dcf4f88
+WRITE of size 4 at 0x602000000650 thread T0
+==9642==WARNING: external symbolizer didn't start up correctly!
+==9642==WARNING: Can't write to symbolizer at fd 5
+==9642==WARNING: external symbolizer didn't start up correctly!
+==9642==WARNING: Can't write to symbolizer at fd 6
+==9642==WARNING: external symbolizer didn't start up correctly!
+==9642==WARNING: Can't write to symbolizer at fd 7
+==9642==WARNING: external symbolizer didn't start up correctly!
+==9642==WARNING: Can't write to symbolizer at fd 8
+==9642==WARNING: external symbolizer didn't start up correctly!
+==9642==WARNING: Failed to use and restart external symbolizer!
+    #0 0x0001021bbc90 in onepass(sparse*, unsigned int, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&)+0x620 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000b3c90)
+    #1 0x0001021c8b28 in get_kcliques(std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&, unsigned int, std::__1::vector<bool, std::__1::allocator<bool>>)+0x230 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000c0b28)
+    #2 0x0001021112ac in Graph::enumerateKCliques(int)+0x768 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000092ac)
+    #3 0x000102130a74 in Graph::findLhCDS()+0x518 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x100028a74)
+    #4 0x000102109760 in main+0x228 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x100001760)
+    #5 0x000182716b94  (<unknown module>)
+
+0x602000000651 is located 0 bytes after 1-byte region [0x602000000650,0x602000000651)
+allocated by thread T0 here:
+    #0 0x000102b1d330 in malloc+0x78 (/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3d330)
+    #1 0x0001021bb6f4 in onepass(sparse*, unsigned int, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&)+0x84 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000b36f4)
+    #2 0x0001021c8b28 in get_kcliques(std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&, unsigned int, std::__1::vector<bool, std::__1::allocator<bool>>)+0x230 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000c0b28)
+    #3 0x0001021112ac in Graph::enumerateKCliques(int)+0x768 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000092ac)
+    #4 0x000102130a74 in Graph::findLhCDS()+0x518 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x100028a74)
+    #5 0x000102109760 in main+0x228 (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x100001760)
+    #6 0x000182716b94  (<unknown module>)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/Users/nost/Documents/VF-LhCDS/build-ippv-sanitize/IPPV:arm64+0x1000b3c90) in onepass(sparse*, unsigned int, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>&)+0x620
+Shadow bytes around the buggy address:
+  0x602000000380: fa fa 00 fa fa fa 04 fa fa fa 04 fa fa fa 00 fa
+  0x602000000400: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fd
+  0x602000000480: fa fa fd fa fa fa 00 fa fa fa 00 04 fa fa 00 fa
+  0x602000000500: fa fa fd fa fa fa fd fd fa fa 00 fa fa fa 00 fa
+  0x602000000580: fa fa 00 fa fa fa 00 fa fa fa 00 04 fa fa 04 fa
+=>0x602000000600: fa fa 00 00 fa fa 01 fa fa fa[01]fa fa fa 00 fa
+  0x602000000680: fa fa 00 00 fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000700: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==9642==ABORTING

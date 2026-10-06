@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "name": "shared-tiny-harness-diagnostic",
+  "scope": "diagnostic",
+  "seed": 20261003,
+  "repeats": 2,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-basic",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "off",
+        "footprints": "sorted"
+      }
+    },
+    {
+      "name": "ippv-five-patches",
+      "kind": "ippv",
+      "executable": "build-ippv-original/IPPV",
+      "sha256": "18d6d06799bdf17102dc0a14628236c7f0be8fc63eb1687a144b77afa9d2faf6",
+      "options": {
+        "iterations": 10
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "tied-cliques-k1",
+      "graph": "evidence/m5/harness-20261003/fixtures/tied-cliques-k1.graph",
+      "sha256": "18673c3ab73d8988aba6d509146c8aca19c1abd17411b69ee45e19d43f872e4e",
+      "h": 3,
+      "k": 1,
+      "definition": true
+    },
+    {
+      "name": "bridged-cliques",
+      "graph": "evidence/m5/harness-20261003/fixtures/bridged-cliques.graph",
+      "sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+      "h": 3,
+      "k": 1,
+      "definition": true
+    },
+    {
+      "name": "clique-isolate",
+      "graph": "evidence/m5/harness-20261003/fixtures/clique-isolate.graph",
+      "sha256": "3ceafcebd6bf33f2e292b570f479eb7fb51cbb690e4e040103b88ba17d715b7e",
+      "h": 3,
+      "k": 2,
+      "definition": true
+    }
+  ]
+}

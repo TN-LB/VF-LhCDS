@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "algorithm": "IPPV-author-with-disclosed-patches",
+  "build_provenance": {
+    "repository": "https://github.com/Elssky/IPPV",
+    "commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+    "license": "not identified; project use authorized by D027",
+    "patch_authorization": "D028",
+    "patches": [
+      {
+        "path": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+        "sha256": "b0501215f6debf9bfe59d95de692fc9fb8f76d1a7a3c57b9e4c2b7d06c4452f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0002-initialize-clique-count.patch",
+        "sha256": "d3512cdfb458e2be753050bf0244e62bbf19036a02eafc59d493c75b8241d8f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0003-preserve-selection-storage.patch",
+        "sha256": "74cc301e689c74afb067d3ee0d109b7975b7566c4b4f3f28c89f2888980e3d4a"
+      },
+      {
+        "path": "baselines/ippv/patches/0004-h2-enumeration-base-case.patch",
+        "sha256": "5133cfce7824c1979779e23118b90b7cdc666f6168fc3a358ea2ca5067278ac2"
+      },
+      {
+        "path": "baselines/ippv/patches/0005-include-final-single-edge-component.patch",
+        "sha256": "198959f649c1ea4a2053908dc0b0a21f9450f4c05367ebc7141457514915d3a9"
+      },
+      {
+        "path": "baselines/ippv/patches/0006-exact-verification-capacities.patch",
+        "sha256": "b78e41d99841f1ec4d34af0fd2b4c94311bcb3f3a158c37e93bab42a347a1b12"
+      },
+      {
+        "path": "baselines/ippv/patches/0007-restore-pava-workspace.patch",
+        "sha256": "dc70c616e4d27171c78557c90a04f7cff2a3afd2f230f4ab983963cd54f5107d"
+      }
+    ],
+    "patched_source_sha256": {
+      "Args.cpp": "3ef455ca8be5633bd0d2bd6af784e36d4c6726f9474130b441f40c200a3d2e37",
+      "Args.h": "8889c0ee0e73aae79f83289bf4cec52d3f4be584487f16a85677ab3f985deb04",
+      "CMakeLists.txt": "81133e3d0fda97c835bb89cd3d88f04217f3d83c6cf9edbd62226b3a7e7a78d5",
+      "EdgeFN.cpp": "4eddbb43830b4d825695bc0d4324d34b79bade6cc00a9f6bd2079e230e326edc",
+      "EdgeFN.h": "5cc460366ed6cdeba4ba283ea5d33fa62e0745bbdcccb87cf01168e7eb00adc6",
+      "FlowNetwork.cpp": "cd7e7246f2af2ce2509ee87dd34dd24d023a3cf53977626e388e593e6831a333",
+      "FlowNetwork.h": "add8c81ad3cfa1f72dd84620f99d3db503929916d834e53c5259f152902080c5",
+      "Graph.cpp": "3dfab9e08dbdbcdbf5b79b777abc7a262cfa7f6b4453f0476415c5c9805f9eac",
+      "Graph.h": "714a6d6d5f130148d3b86433862e487e6f1b70882ee5084f116c951094e3d8c5",
+      "KClistCore.cpp": "8994671abed431be3ec6b1b6e8c5d51a1a71ad3f9331c6277e67c689312bc132",
+      "KClistCore.h": "83693572e75329968c00ed94422da6bc9b59f771fdf663084645f7af32b94157",
+      "MaxFlow.cpp": "0b03bd6d1b77a061bd9aa52dd368b47ef04392349478621c4f87b76e86181823",
+      "MaxFlow.h": "208fbe4da94fb2bec3be031779ddfe6ed39cb1cb718b835a11cb97364435c88a",
+      "README.md": "1ede08be3ccfdca39368c165d8a568b3847f2de207fba4568d86c068c15f4709",
+      "dataset/CA-CondMat.txt": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+      "dataset/CA-GrQc.txt": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+      "main.cpp": "e1df82b7fdf3392b7e0404e2679e17e0d8ddb10eec7360082fc82062fe819bc6",
+      "ExactVerification.h": "9918d4c01e08a4583b4c7d8ffefde7c57ef156be68c088fb33998d195baf2b8f"
+    },
+    "executable_sha256": "1e54bcf18051fe744f24c6176ac7d95f50cec64d0f6cc38dbf00c3c82a746f9e",
+    "sanitizers": true,
+    "environment": "macOS-15.7.7-arm64-arm-64bit",
+    "commands_manifest": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/build-final-sanitize/commands.json",
+    "commands_manifest_sha256": "3ea8e4b5e0f861f6446c306d3d487c5b59d41efebcb4a969ee4bf0b0aac5765a",
+    "compile_commands_sha256": "1476a29147dd35b7cc75504a6a695dcfddf611954b38b2eef7decd548fd0ec19",
+    "build_script_sha256": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6"
+  },
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-sanitize/IPPV",
+      "-g",
+      "./dataset/input.txt",
+      "-h",
+      "2",
+      "-t",
+      "10",
+      "-k",
+      "1",
+      "-p",
+      "0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h2-clique-profile1",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-05T04:09:59.939606+00:00",
+    "timeout_seconds": 60.0,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "1e54bcf18051fe744f24c6176ac7d95f50cec64d0f6cc38dbf00c3c82a746f9e",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.16403912473469973,
+    "user_seconds": 0.011094,
+    "system_seconds": 0.12133,
+    "peak_rss_bytes": 19988480,
+    "finished_utc": "2026-10-05T04:10:00.105658+00:00",
+    "sha256": {
+      "stdout.txt": "7c982673f1a71d187746df0485fc57713ddf9e8d668b9f4c8422742d706c5be3",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "graph_sha256": "218a363ee15c8d7aec37e56dc2925372195b42b3a4d6d46cc754068560444f5b",
+  "normalized_input_sha256": "218a363ee15c8d7aec37e56dc2925372195b42b3a4d6d46cc754068560444f5b",
+  "converted_input_sha256": "4a6ae7226283a4b6277ce3e77a91585c0cad93929046f3c7bd9105d7ed101834",
+  "vertex_map_sha256": "06c0eeaeb7e493f6b9f9c68e30737ad203652973fecff4ef9966f73de4dccfb9",
+  "h": 2,
+  "k": 1,
+  "iterations": 10,
+  "pattern": 0,
+  "status": "completed",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "cutoff_respected": true,
+      "density_nonincreasing": true,
+      "every_set_definition_valid": true,
+      "higher_density_complete": true,
+      "required_count": true,
+      "rounded_density_consistent": true,
+      "stdout_count_matches_file": true
+    },
+    "completeness_certified": true,
+    "expected": [
+      [
+        -7,
+        6
+      ]
+    ],
+    "level": "definition_checked",
+    "native_rounded_densities": [
+      "0.5000"
+    ],
+    "output_count": 1,
+    "passed": true,
+    "strict_match": true,
+    "strict_order_compatible": false,
+    "truth_count": 1
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "phase_note": "Author prints clock() CPU times; not comparable wall phases",
+  "evidence_scope": "single reproduction/validation run; no benchmark claim",
+  "native_output_sha256": "d00ad923cc179e413bdac1fcc7898ec40c79ca8c27e0261b2c8e0bb1acea1324",
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+      "validate",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h2-clique-profile1/graph.txt",
+      "--native-output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h2-clique-profile1/output/input-1.txt",
+      "--h",
+      "2",
+      "--k",
+      "1",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h2-clique-profile1/canonical_output.jsonl",
+      "--declared-count",
+      "1",
+      "--definition"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/final-toy-coverage/runs/h2-clique-profile1/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-05T04:10:00.106941+00:00",
+    "timeout_seconds": 60.0,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.08821504283696413,
+    "user_seconds": 0.06489199999999999,
+    "system_seconds": 0.013803,
+    "peak_rss_bytes": 21053440,
+    "finished_utc": "2026-10-05T04:10:00.195885+00:00",
+    "sha256": {
+      "stdout.txt": "cc1c6b0eb306fcbd9094c2f203da8cc1120f63ca02071c212ee8cf59b1201b57",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "061f315d152b8035da62c9990c248f50ae2cccb0ffa8b456ae9b3f1e5574b253",
+    "dataset/input.txt": "4a6ae7226283a4b6277ce3e77a91585c0cad93929046f3c7bd9105d7ed101834",
+    "graph.txt": "218a363ee15c8d7aec37e56dc2925372195b42b3a4d6d46cc754068560444f5b",
+    "output/input-1.txt": "d00ad923cc179e413bdac1fcc7898ec40c79ca8c27e0261b2c8e0bb1acea1324",
+    "process.json": "e4ef64fe2cda2f9c03be428f2b325320c00783a83e44ad1f0744e869a8f68676",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "7c982673f1a71d187746df0485fc57713ddf9e8d668b9f4c8422742d706c5be3",
+    "validation/process.json": "b9cf9fc99f376d43d6341d8ad2071f753905db3ee0be1bcc9d80fadf05a9153e",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "cc1c6b0eb306fcbd9094c2f203da8cc1120f63ca02071c212ee8cf59b1201b57",
+    "vertex_map.json": "06c0eeaeb7e493f6b9f9c68e30737ad203652973fecff4ef9966f73de4dccfb9"
+  }
+}

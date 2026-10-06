@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "exit_code": 0,
+  "stdout": "final-diff-check.stdout",
+  "stderr": "final-diff-check.stderr",
+  "scope": "tracked working-tree diff; new-file content separately inventoried"
+}

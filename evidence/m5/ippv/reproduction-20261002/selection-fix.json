@@ -1,0 +1,11 @@
+{
+  "finding": "IPPV-B03",
+  "reproducer": "sanitizer-before",
+  "runtime_result": "SIGABRT: vector<bool>::operator[] index out of bounds",
+  "fix": "Remove selected.clear(), preserving the n-entry mask including initial degree-filter decisions",
+  "argument": "prune_by_core reads/writes selected[0..n-1]; retaining valid storage retains its pre-clear flag values, rather than inventing new membership",
+  "patch": "baselines/ippv/patches/0003-preserve-selection-storage.patch",
+  "sha256": "74cc301e689c74afb067d3ee0d109b7975b7566c4b4f3f28c89f2888980e3d4a",
+  "authorization": "D028",
+  "scope": "Storage-lifetime defect fix; no pruning predicates changed"
+}

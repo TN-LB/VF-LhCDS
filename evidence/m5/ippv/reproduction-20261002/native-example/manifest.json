@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-original/IPPV",
+    "-g",
+    "./dataset/CA-CondMat.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "20",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/reproduction-20261002/native-example",
+  "input_sha256": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+  "executable_sha256": "2428672e78a3f4afd3b6bc812e4b8f8c0a0f8b8f97678d835d3129dea65e7d4c",
+  "diagnostic_only": true,
+  "timeout_seconds": 60,
+  "started_utc": "2026-10-01T15:52:16.861984+00:00",
+  "stdout": "stdout.txt",
+  "stderr": "stderr.txt",
+  "exit_code": 1,
+  "status": "error",
+  "wall_seconds": 6.528259667567909,
+  "finished_utc": "2026-10-01T15:52:23.390194+00:00",
+  "sha256": {
+    "output/CA-CondMat-20.txt": "2fa05d568f846e0efa77e683d0f24cd31c7f6c692727729d57edeba923c71e51",
+    "stderr.txt": "093d972c68ca8efb578969bafaaed939338f2ac1043dd8ace0b3e70c456dc785",
+    "stdout.txt": "8069f39ad08153d21e3abe90af126d58be3f1c2a6fce18fc696fa63954878089"
+  }
+}

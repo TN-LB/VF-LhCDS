@@ -1,0 +1,293 @@
+{
+  "stop_on_failure": true,
+  "planned_runs": [
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0000-1"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0000-0"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0001-1"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0001-0"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0002-0"
+    },
+    {
+      "case": "ca-grqc-h3-k5",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0002-1"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0003-1"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0003-0"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0004-0"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0004-1"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0005-0"
+    },
+    {
+      "case": "ca-grqc-h3-k10",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0005-1"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0006-1"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0006-0"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0007-0"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0007-1"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0008-0"
+    },
+    {
+      "case": "ca-grqc-h3-k15",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0008-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0009-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0009-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0010-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0010-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0011-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0011-1"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0012-0"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0012-1"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0013-1"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0013-0"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0014-1"
+    },
+    {
+      "case": "ca-condmat-h3-k5",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0014-0"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0015-1"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0015-0"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0016-1"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0016-0"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0017-0"
+    },
+    {
+      "case": "ca-condmat-h3-k10",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0017-1"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0018-1"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0018-0"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0019-1"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0019-0"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0020-0"
+    },
+    {
+      "case": "ca-condmat-h3-k15",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0020-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0021-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0021-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0022-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0022-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "directory": "runs/0023-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-basic",
+      "directory": "runs/0023-0"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "-C",
+        "/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/ippv-patch-replay-ovchsxi7",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0001-remove-unused-openmp-header.patch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/ippv-patch-replay-ovchsxi7",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0002-initialize-clique-count.patch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/ippv-patch-replay-ovchsxi7",
+        "apply",
+        "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0003-preserve-selection-storage.patch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "source_files_matched": 17
+}

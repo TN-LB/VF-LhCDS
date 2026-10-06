@@ -1,0 +1,4 @@
+[ 12%] Building CXX object CMakeFiles/IPPV.dir/main.cpp.o
+[ 25%] Building CXX object CMakeFiles/IPPV.dir/Graph.cpp.o
+[ 37%] Linking CXX executable IPPV
+[100%] Built target IPPV

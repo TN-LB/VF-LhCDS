@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-03T13:01:21.521620+00:00",
+  "git_diff_check": 0,
+  "documentation_links_checked": 168,
+  "prior_raw_inventories_unchanged": [
+    "harness-20261003/shared-tiny",
+    "harness-20261003/shared-real",
+    "m4-mode-diagnostic-20261003/campaign",
+    "phase-diagnostic-20261003/accepted"
+  ],
+  "current_source_matches_tested_snapshot": true,
+  "real_native_exit_code": 0,
+  "real_validation_exit_code": 0,
+  "real_strict_IPPV_agreement": true,
+  "verification_command": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/enumeration-20261003/verify_acceptance.py"
+    ],
+    "exit_code": 0
+  },
+  "status": "passed"
+}

@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "case": "ca-condmat-h3-k5",
+      "h": 3,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "status": "completed",
+      "directory": "runs/0000-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "7a801f121e83253eb39f128b343a0fefcd0a392d543ec4e382393896c8b52afe",
+      "rank_latency_seconds": null
+    }
+  ],
+  "comparisons": []
+}

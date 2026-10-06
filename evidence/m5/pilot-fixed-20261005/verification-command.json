@@ -1,0 +1,9 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/pilot-fixed-20261005/verify.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 5.122544042766094,
+  "finished_utc": "2026-10-05T08:33:17.415181+00:00"
+}

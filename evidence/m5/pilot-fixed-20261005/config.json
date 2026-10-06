@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "name": "approved-two-local-graphs-seven-patch-ippv-pilot-20261005",
+  "scope": "approved_campaign",
+  "seed": 20261003,
+  "repeats": 3,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-adjacency-basic",
+      "kind": "vf",
+      "executable": "build-m5-adjacency-release/vflhcds",
+      "sha256": "8a8252e31156a75899aa758ba1e357953d1dfee9914287d9970c5f67b921b4f8",
+      "options": {
+        "core": "off",
+        "footprints": "sorted",
+        "enumeration": "adjacency"
+      }
+    },
+    {
+      "name": "ippv-seven-patches",
+      "kind": "ippv",
+      "executable": "build-ippv-fixed-release/IPPV",
+      "sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+      "options": {
+        "iterations": 10
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "ca-grqc-h3-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-grqc-h3-k10",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 10,
+      "definition": false
+    },
+    {
+      "name": "ca-grqc-h3-k15",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 15,
+      "definition": false
+    },
+    {
+      "name": "ca-grqc-h3-k20",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 20,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h3-k5",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h3-k10",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 10,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h3-k15",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 15,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h3-k20",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 20,
+      "definition": false
+    }
+  ]
+}

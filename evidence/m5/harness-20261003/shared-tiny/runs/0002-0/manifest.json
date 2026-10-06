@@ -1,0 +1,226 @@
+{
+  "algorithm": {
+    "name": "vf-basic",
+    "kind": "vf",
+    "executable": "build-m5-release/vflhcds",
+    "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+    "options": {
+      "core": "off",
+      "footprints": "sorted"
+    }
+  },
+  "build_provenance": {
+    "head": "56229397903813d3509ecb45b178bbde823e357b",
+    "dirty_tree": " M AGENTS.md\n M docs/BASELINE_AUDIT.md\n M docs/CLAIM_TRACEABILITY.md\n M docs/DECISIONS.md\n M docs/EXPERIMENT_PLAN.md\n M docs/TASKS.md\n?? baselines/\n?? evidence/m5/\n?? experiments/\n",
+    "source_sha256": {
+      "CMakeLists.txt": "2fc5410b2f247d95cbcefb042cb5e724e4e7ee7de1fa550e6e6f24b054949c13",
+      "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
+      "include/vflhcds/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+      "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
+      "include/vflhcds/clique/materialized.hpp": "5bb006d2e0102bd97660a43ebb7bca097bfb3fa663bd404f2eeb8389bb19193a",
+      "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+      "include/vflhcds/core/exact.hpp": "232bb07cbc20da7438e54eeceb13e9c792e4f9fdbb9f4ade24461e198eac6111",
+      "include/vflhcds/core/graph.hpp": "77c8201442f52cb52365956f0c8306e5185c04a7cc1cb4511905aecb7a071964",
+      "include/vflhcds/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+      "include/vflhcds/flow/dinic.hpp": "f903d13f57fcc99adc4ff4ab09f634cac3e997f1b5a3613e1287eb12dd1adf0f",
+      "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
+      "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
+      "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+      "include/vflhcds/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+      "include/vflhcds/oracle/closure.hpp": "6a042d0423bcacc3ca531f1ca027809ef3b0251b7d07fc7c1ba02f34c221172e",
+      "include/vflhcds/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+      "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
+      "include/vflhcds/solver/solver.hpp": "3959a9ff3dccdde742b5e4a6cb04e9b4c2327cadad9fdc5e3632ee7f5da55528",
+      "include/vflhcds/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+      "include/vflhcds/telemetry/query.hpp": "528312311c071d51b54f9b4159a228dc3fe76dc7c793ea0cea0f0240dcc487de",
+      "src/cli/dispatch.cpp": "1c132a0aec36a58f0d495cea4eef40ae6933a3d6d9cc6201cf3ed3e925a01430",
+      "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
+      "src/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+      "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
+      "src/clique/materialized.cpp": "bb75a813c8e1fbf8deaee42d2e14424f94eeea92601010dfd06b2d370f8119b7",
+      "src/core/README.md": "64ce14c00614f02282a647ba332dbe659a34619f71f767af59b250cea39e1793",
+      "src/core/exact.cpp": "77a91da3f2dd666ce1aca55a062359f1317cb29894a5e48e79a955f478e455bc",
+      "src/core/graph.cpp": "e691e4cb42a8a0c30e099bd04cd097e90e310567e179db2c69fbf1094b242144",
+      "src/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+      "src/io/graph.cpp": "d280a1376514e2e7d85f87aa3885c00ffdc3b9d8e208210dfe7cc5f78910b46d",
+      "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
+      "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
+      "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+      "src/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+      "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
+      "src/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+      "src/solver/solver.cpp": "d07f0831f8edb63c085db0d7111295cb5c4de10cf0787c6cd73e715bb4e19464",
+      "src/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+      "src/telemetry/query.cpp": "cdec53acad34b0b3b9a5989f044081bc28c44ff8b3e7cc30eb19760c7e874837",
+      "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2"
+    },
+    "executable_sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+    "build_info_text": "version=0.2.0\nstage=M4\ncxx_standard=17\ncompiler=AppleClang\ncompiler_version=17.0.0.17000603\nbuild_type=Release\nsanitizers=OFF\n",
+    "build_script_sha256": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "commands_manifest": "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/build-vf-verified/commands.json",
+    "commands_manifest_sha256": "bddd54ab28c4020138be2fc5996c6190b0f4374fe6767cf6357d0545433004b5",
+    "compile_commands_sha256": "25a47793726cc1bff4c23e623d033dc6bce54e8b5ca50dd6b98c94971e197934"
+  },
+  "graph_sha256": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+  "h": 3,
+  "k": 1,
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-m5-release/vflhcds",
+      "solve",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0/graph.txt",
+      "--h",
+      "3",
+      "--k",
+      "1",
+      "--core-reduction",
+      "off",
+      "--footprint-scan",
+      "sorted"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-02T16:35:09.235481+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.007492000237107277,
+    "user_seconds": 0.001238,
+    "system_seconds": 0.001022,
+    "peak_rss_bytes": 1441792,
+    "finished_utc": "2026-10-02T16:35:09.243430+00:00",
+    "sha256": {
+      "stdout.txt": "d567ffe1beee23beebdb15325030946520b9da7d6f3de13fe98cacb31f6aea07",
+      "stderr.txt": "22305945fda85cb018757d2bbe4fca9d36401ea04ec1b3fec20c73654d738097"
+    }
+  },
+  "status": "completed",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "cutoff_respected": true,
+      "definition_valid": true,
+      "density_order": true,
+      "exact_counts": true,
+      "exact_densities": true,
+      "higher_density_complete": true,
+      "lexicographic_ties": true,
+      "native_completion": true,
+      "native_count": true,
+      "native_hash": true,
+      "required_count": true,
+      "strict_reference_match": true
+    },
+    "completeness_certified": true,
+    "expected_vertices": [
+      [
+        -7,
+        6,
+        19,
+        32,
+        45,
+        58
+      ]
+    ],
+    "level": "definition_checked",
+    "output_count": 1,
+    "passed": true,
+    "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9"
+  },
+  "phase_wall_seconds": {
+    "postload": 5.8583e-05,
+    "postindex": 5.625e-05
+  },
+  "native_status": {
+    "schema_version": 1,
+    "status": "completed",
+    "complete": true,
+    "output_count": 1,
+    "semantic_sha256": "230168b0582d2f7c4f050ba17fe54d0956fac096e4f6c879aca4682b2d3a3aa9",
+    "termination": "k_reached",
+    "counters": {
+      "logical_interval_queries": 1,
+      "mincut_calls": 1,
+      "cliques_scanned": 2,
+      "cliques_enumerated": 2,
+      "queries": [
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 6,
+          "oracle_interval_size": 6,
+          "cliques_scanned": 2,
+          "unique_footprints": 2,
+          "forward_nodes": 10,
+          "forward_arcs": 14,
+          "residual_arcs": 28,
+          "capacity_bit_length": 7,
+          "capacity_backend": "uint128",
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        }
+      ]
+    },
+    "timing": {
+      "T_e2e": null,
+      "T_postload": 5.8583e-05,
+      "T_core": 5.625e-05
+    }
+  },
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0/graph.txt",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0/stdout.txt",
+      "--status",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0/stderr.txt",
+      "--h",
+      "3",
+      "--k",
+      "1",
+      "--strict",
+      "--definition"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/harness-20261003/shared-tiny/runs/0002-0/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-02T16:35:09.244191+00:00",
+    "timeout_seconds": 60,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.05123199988156557,
+    "user_seconds": 0.04015,
+    "system_seconds": 0.00868,
+    "peak_rss_bytes": 20463616,
+    "finished_utc": "2026-10-02T16:35:09.295847+00:00",
+    "sha256": {
+      "stdout.txt": "a000ee73173755f37deab4e4d039140fe08897170ee73f9c82da538c3545477b",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "d567ffe1beee23beebdb15325030946520b9da7d6f3de13fe98cacb31f6aea07",
+    "graph.txt": "fdb15fc38d62eeac204dbe68378fe6dc4bce6bcab1e40e200e6f7c52cd0ffce8",
+    "process.json": "2140d6f4e83e848b4290bc4b64feb47d7a7401915b4bb6c30798d2daef93e3f8",
+    "stderr.txt": "22305945fda85cb018757d2bbe4fca9d36401ea04ec1b3fec20c73654d738097",
+    "stdout.txt": "d567ffe1beee23beebdb15325030946520b9da7d6f3de13fe98cacb31f6aea07",
+    "validation/process.json": "331d1aa415a7b3730038f407428973e2f74ec57bbfba4c9b560b077447325c8c",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "a000ee73173755f37deab4e4d039140fe08897170ee73f9c82da538c3545477b"
+  }
+}

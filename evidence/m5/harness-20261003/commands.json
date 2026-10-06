@@ -1,0 +1,92 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "experiments/test_harness.py",
+      "baselines/ippv/test_adapter.py",
+      "reference/tests",
+      "-q"
+    ],
+    "attempt": "initial",
+    "exit_code": 1,
+    "stdout": "pytest.stdout",
+    "stderr": "pytest.stderr",
+    "stdout_sha256": "bad35494b109cfdb803b8cc9ee82da384ec2bc11ffa7d4476ce48df0fd2a1c31",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "experiments/test_harness.py",
+      "baselines/ippv/test_adapter.py",
+      "reference/tests",
+      "-q"
+    ],
+    "attempt": "timeout-fixture-fixed",
+    "exit_code": 0,
+    "stdout": "pytest-fixed.stdout",
+    "stderr": "pytest-fixed.stderr",
+    "stdout_sha256": "116df8eceb8a5de6890fd05e469f52d171c43ad71b958ad6895d6a864f0b608e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "experiments/test_harness.py",
+      "baselines/ippv/test_adapter.py",
+      "reference/tests",
+      "-q"
+    ],
+    "attempt": "final",
+    "exit_code": 0,
+    "stdout": "pytest-final.stdout",
+    "stderr": "pytest-final.stderr",
+    "stdout_sha256": "e50ac085a951efd5fa5354fa24bf7c5ea4138e913594c052f11dc522154c7eff",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/harness-20261003/tiny-config.json",
+      "--evidence",
+      "evidence/m5/harness-20261003/shared-tiny"
+    ],
+    "exit_code": 1,
+    "stdout": "shared-tiny.stdout",
+    "stderr": "shared-tiny.stderr",
+    "stdout_sha256": "0d242808ba3ee14c121e066c5b28f4510098cf66c588994f62a991e7863e1148",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "experiments/run.py",
+      "--config",
+      "evidence/m5/harness-20261003/real-config.json",
+      "--evidence",
+      "evidence/m5/harness-20261003/shared-real"
+    ],
+    "exit_code": 1,
+    "stdout": "shared-real.stdout",
+    "stderr": "shared-real.stderr",
+    "stdout_sha256": "3f43d7a2fcbca794c78e3e82754e79e93e9de9d5faf968022cdbf23ee846118f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "scripts/verify_papers.py"
+    ],
+    "exit_code": 0,
+    "stdout": "paper-check.stdout",
+    "stdout_sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0"
+  }
+]

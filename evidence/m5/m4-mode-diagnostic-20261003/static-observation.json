@@ -1,0 +1,14 @@
+{
+  "scope": "static source observation, not a measured runtime profile",
+  "n": 5242,
+  "h": 3,
+  "candidate_subsets_for_full_index": 23993367880,
+  "constructor": "MaterializedCliques::MaterializedCliques",
+  "observation": "The materialized backend visits every size-h vertex subset and checks its edges, even after an earlier subset is rejected. Both M4 switches are applied after this constructor.",
+  "source_sha256": {
+    "src/clique/materialized.cpp": "bb75a813c8e1fbf8deaee42d2e14424f94eeea92601010dfd06b2d370f8119b7",
+    "src/cli/dispatch.cpp": "1c132a0aec36a58f0d495cea4eef40ae6933a3d6d9cc6201cf3ed3e925a01430"
+  },
+  "bottleneck_confirmed": false,
+  "hypothesis": "Exhaustive clique-index construction is a priority target for the next bounded phase diagnostic."
+}

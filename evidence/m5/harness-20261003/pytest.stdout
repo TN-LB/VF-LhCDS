@@ -1,0 +1,100 @@
+...............FFFF..................................................... [ 64%]
+........................................                                 [100%]
+=================================== FAILURES ===================================
+_ test_native_failure_never_accepts_partial_output[print("partial")\n-output_incomplete-0] _
+
+tmp_path = PosixPath('/private/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/pytest-of-nost/pytest-34/test_native_failure_never_acce0')
+body = 'print("partial")\n', status = 'output_incomplete', exit_code = 0
+
+    @pytest.mark.parametrize('body,status,exit_code', [
+        ('print("partial")\n', 'output_incomplete', 0),
+        ('import sys\nprint("partial")\nsys.exit(7)\n', 'error', 7),
+        ('import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n', 'oom', 6),
+        ('import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n', 'error', -9),
+        ('import time\ntime.sleep(10)\n', 'timeout', -9),
+    ])
+    def test_native_failure_never_accepts_partial_output(tmp_path, body, status, exit_code):
+        algorithm = fake_binary(tmp_path, body)
+        result = run_vf(algorithm, Graph((0, 1), ((0, 1),)), {'h': 2, 'k': 1, 'definition': True}, tmp_path / 'run', .2)
+>       assert result['status'] == status and result['native']['native_exit_code'] == exit_code
+E       AssertionError: assert ('timeout' == 'output_incomplete'
+E         
+E         - output_incomplete
+E         + timeout)
+
+experiments/test_harness.py:115: AssertionError
+_ test_native_failure_never_accepts_partial_output[import sys\nprint("partial")\nsys.exit(7)\n-error-7] _
+
+tmp_path = PosixPath('/private/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/pytest-of-nost/pytest-34/test_native_failure_never_acce1')
+body = 'import sys\nprint("partial")\nsys.exit(7)\n', status = 'error'
+exit_code = 7
+
+    @pytest.mark.parametrize('body,status,exit_code', [
+        ('print("partial")\n', 'output_incomplete', 0),
+        ('import sys\nprint("partial")\nsys.exit(7)\n', 'error', 7),
+        ('import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n', 'oom', 6),
+        ('import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n', 'error', -9),
+        ('import time\ntime.sleep(10)\n', 'timeout', -9),
+    ])
+    def test_native_failure_never_accepts_partial_output(tmp_path, body, status, exit_code):
+        algorithm = fake_binary(tmp_path, body)
+        result = run_vf(algorithm, Graph((0, 1), ((0, 1),)), {'h': 2, 'k': 1, 'definition': True}, tmp_path / 'run', .2)
+>       assert result['status'] == status and result['native']['native_exit_code'] == exit_code
+E       AssertionError: assert ('timeout' == 'error'
+E         
+E         - error
+E         + timeout)
+
+experiments/test_harness.py:115: AssertionError
+_ test_native_failure_never_accepts_partial_output[import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n-oom-6] _
+
+tmp_path = PosixPath('/private/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/pytest-of-nost/pytest-34/test_native_failure_never_acce2')
+body = 'import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n'
+status = 'oom', exit_code = 6
+
+    @pytest.mark.parametrize('body,status,exit_code', [
+        ('print("partial")\n', 'output_incomplete', 0),
+        ('import sys\nprint("partial")\nsys.exit(7)\n', 'error', 7),
+        ('import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n', 'oom', 6),
+        ('import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n', 'error', -9),
+        ('import time\ntime.sleep(10)\n', 'timeout', -9),
+    ])
+    def test_native_failure_never_accepts_partial_output(tmp_path, body, status, exit_code):
+        algorithm = fake_binary(tmp_path, body)
+        result = run_vf(algorithm, Graph((0, 1), ((0, 1),)), {'h': 2, 'k': 1, 'definition': True}, tmp_path / 'run', .2)
+>       assert result['status'] == status and result['native']['native_exit_code'] == exit_code
+E       AssertionError: assert ('timeout' == 'oom'
+E         
+E         - oom
+E         + timeout)
+
+experiments/test_harness.py:115: AssertionError
+_ test_native_failure_never_accepts_partial_output[import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n-error--9] _
+
+tmp_path = PosixPath('/private/var/folders/sw/hftkmh4s5ns0dypb6hfr9vx40000gp/T/pytest-of-nost/pytest-34/test_native_failure_never_acce3')
+body = 'import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n'
+status = 'error', exit_code = -9
+
+    @pytest.mark.parametrize('body,status,exit_code', [
+        ('print("partial")\n', 'output_incomplete', 0),
+        ('import sys\nprint("partial")\nsys.exit(7)\n', 'error', 7),
+        ('import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n', 'oom', 6),
+        ('import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n', 'error', -9),
+        ('import time\ntime.sleep(10)\n', 'timeout', -9),
+    ])
+    def test_native_failure_never_accepts_partial_output(tmp_path, body, status, exit_code):
+        algorithm = fake_binary(tmp_path, body)
+        result = run_vf(algorithm, Graph((0, 1), ((0, 1),)), {'h': 2, 'k': 1, 'definition': True}, tmp_path / 'run', .2)
+>       assert result['status'] == status and result['native']['native_exit_code'] == exit_code
+E       AssertionError: assert ('timeout' == 'error'
+E         
+E         - error
+E         + timeout)
+
+experiments/test_harness.py:115: AssertionError
+=========================== short test summary info ============================
+FAILED experiments/test_harness.py::test_native_failure_never_accepts_partial_output[print("partial")\n-output_incomplete-0]
+FAILED experiments/test_harness.py::test_native_failure_never_accepts_partial_output[import sys\nprint("partial")\nsys.exit(7)\n-error-7]
+FAILED experiments/test_harness.py::test_native_failure_never_accepts_partial_output[import sys,json\nprint(json.dumps({"status":"oom","complete":False}),file=sys.stderr)\nsys.exit(6)\n-oom-6]
+FAILED experiments/test_harness.py::test_native_failure_never_accepts_partial_output[import os,signal\nos.kill(os.getpid(),signal.SIGKILL)\n-error--9]
+4 failed, 108 passed in 3.12s

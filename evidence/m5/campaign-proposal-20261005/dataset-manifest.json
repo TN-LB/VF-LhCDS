@@ -1,0 +1,52 @@
+[
+  {
+    "dataset": "ca-grqc",
+    "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "normalization": "evidence/m5/harness-20261003/data/ca-grqc/normalization.json",
+    "source_path": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-GrQc.txt",
+    "source_sha256": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+    "source_format": "explicit n,m; declared vertices 0..n-1; undirected edges",
+    "declared_vertices": 5242,
+    "raw_edges": 14484,
+    "vertices": 5242,
+    "edges": 14484,
+    "removed_self_loops": 0,
+    "removed_duplicate_edges": 0,
+    "isolate_policy": "preserve every declared vertex",
+    "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+    "script_sha256": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/prepare_input.py",
+      "--source",
+      ".deps/baselines/ippv/dataset/CA-GrQc.txt",
+      "--evidence",
+      "evidence/m5/harness-20261003/data/ca-grqc"
+    ]
+  },
+  {
+    "dataset": "ca-condmat",
+    "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+    "normalization": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/normalization.json",
+    "source_path": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/dataset/CA-CondMat.txt",
+    "source_sha256": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+    "source_format": "explicit n,m; declared vertices 0..n-1; undirected edges",
+    "declared_vertices": 23133,
+    "raw_edges": 93439,
+    "vertices": 23133,
+    "edges": 93439,
+    "removed_self_loops": 0,
+    "removed_duplicate_edges": 0,
+    "isolate_policy": "preserve every declared vertex",
+    "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "script_sha256": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/prepare_input.py",
+      "--source",
+      ".deps/baselines/ippv/dataset/CA-CondMat.txt",
+      "--evidence",
+      "evidence/m5/campaign-proposal-20261005/data/ca-condmat"
+    ]
+  }
+]

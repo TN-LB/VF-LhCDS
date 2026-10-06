@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "baselines/ippv/adapter.py",
+    "run",
+    "--executable",
+    "build-ippv-original/IPPV",
+    "--graph",
+    "evidence/m5/ippv/reproduction-20261002/real-structural/graph.txt",
+    "--h",
+    "3",
+    "--k",
+    "20",
+    "--iterations",
+    "10",
+    "--timeout",
+    "60",
+    "--evidence",
+    "evidence/m5/ippv/coverage-20261002/real-smoke"
+  ],
+  "exit_code": 0,
+  "stdout": "real-smoke.stdout",
+  "stderr": "real-smoke.stderr"
+}

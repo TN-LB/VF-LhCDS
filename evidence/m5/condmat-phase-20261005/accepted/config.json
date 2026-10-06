@@ -1,0 +1,42 @@
+{
+  "scope": "phase_diagnostic",
+  "real_case": {
+    "name": "ca-condmat-h3-k5",
+    "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+    "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "h": 3,
+    "k": 5,
+    "definition": false
+  },
+  "real_repeats": 1,
+  "timeout_seconds": 60,
+  "threads": 1,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "seed": null,
+  "seed_reason": "One deterministic real case; no random schedule.",
+  "mode": {
+    "core": "off",
+    "footprints": "sorted",
+    "enumeration": "adjacency",
+    "capacity": "auto"
+  },
+  "smoke_tests": [
+    {
+      "id": "T-PHASE-ADJ/triangle_and_isolate",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 3,
+      "k": 5
+    },
+    {
+      "id": "T-PHASE-ADJ/bridged_triangles",
+      "graph": "reference/fixtures/bridged_triangles.graph",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "h": 3,
+      "k": 5
+    }
+  ],
+  "real_test": "T-PHASE-CM/flushed-boundaries",
+  "timing_scope": "Separate instrumented diagnostic; not a benchmark or retry measurement."
+}

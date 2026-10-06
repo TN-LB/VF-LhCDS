@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/paired-smoke-20261005/verify.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 2.5036492496728897
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "check": "local report/proposal/readme links resolve",
+    "passed": true
+  }
+]

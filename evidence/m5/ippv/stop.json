@@ -1,0 +1,33 @@
+{
+  "task": "P09.1",
+  "status": "build-failed",
+  "stopped_per_owner_instruction": true,
+  "source_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "configuration_exit_code": 0,
+  "build_exit_code": 2,
+  "compiler": "AppleClang 17.0.0.17000603",
+  "cmake": "4.4.3",
+  "boost_headers": "existing .deps/boost_1_86_0; CXXFLAGS include path only",
+  "error": "Graph.cpp:6:10: fatal error: 'omp.h' file not found",
+  "source_modified": false,
+  "patches": [],
+  "dependencies_installed": [],
+  "build_log": "03-build.stderr",
+  "commands_manifest": "commands.json",
+  "m4_source_hashes_checked": 53,
+  "m4_source_hash_mismatches": [],
+  "source_files_verified": 17,
+  "license_project_decision": "D027 accepted; previous project-use decision blocker resolved, upstream license remains unidentified",
+  "recommended_next_step": "Review and apply a separately hashed compatibility-only removal/guard of the unused omp.h include; current omp API/pragmas found by source search are commented out. Rebuild and retain any subsequent failure.",
+  "alternative": "Provide/install a compatible OpenMP development environment and rebuild unmodified author code; record all dependency/toolchain changes",
+  "unrun": [
+    "successful IPPV build",
+    "documented IPPV run",
+    "output/timing/semantic audit completion",
+    "canonical adapter",
+    "definition-level and real shared smoke",
+    "DCLDS tasks",
+    "experiment configuration and benchmark campaign"
+  ],
+  "evidence_scope": "Source provenance and failed original build only; no correctness or performance result"
+}

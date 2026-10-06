@@ -44,10 +44,12 @@ Only the native 128-bit typedef uses a localized extension. MSVC/no-128/non-POSI
 configurations fail explicitly; GCC/Linux support is intended but not yet tested.
 No parallel code exists, so TSan is deferred. No performance claim uses these runs.
 
-CTest contains twelve tests: retained library argument checks; M2 primitives, oracle
+CTest contains fourteen tests: retained library argument checks; M2 primitives, oracle
 smoke and CLI regressions; M3 solver, solver smoke, solve CLI and synthetic failure
 reduction; M4 core invariants, four-mode smoke and CLI equivalence; and the 74 independent M1 pytest checks. The M0 reference
-test name is historical. `-DBUILD_TESTING=OFF` omits Python discovery, test executables
+test name is historical. The enumeration extension adds T04-ADJ/T04-EDGE and
+T04-CLI checks; the existing M2/M3 probes compare both builders and use adjacency
+for query execution. `-DBUILD_TESTING=OFF` omits Python discovery, test executables
 and the exhaustive test-only probe; the production library still needs Boost.
 
 Full M2 differential campaigns (each output directory must be new):
@@ -112,3 +114,15 @@ The diagnostic executable vflhcds_m4_profile exists only with BUILD_TESTING=ON.
 Its saved workload and repetitions are local implementation diagnostics, not the
 final M5 benchmark configuration. See [M4 arguments](M4_IMPLEMENTATION.md) and
 [executed results](../evidence/m4/REPORT.md). Full acceptance directories must be new.
+
+The optional materialized enumeration choice is independent of M4 modes:
+
+```sh
+build/vflhcds solve --graph reference/fixtures/triangle_and_isolate.graph --h 3 --all --clique-enumeration adjacency
+```
+
+Omit the option or pass `combinations` for the original path. No extra dependency
+is needed; see [the enumeration contract](ENUMERATION_IMPLEMENTATION.md). New
+enumeration evidence uses separate `build-enumeration-debug`,
+`build-enumeration-sanitize`, `build-enumeration-release` and
+`build-m5-adjacency-release` directories so old diagnostic binaries remain intact.

@@ -1,0 +1,5 @@
+{
+  "status": "rejected_before_native_launch",
+  "error": "draft configurations cannot run; approval must be recorded first",
+  "native_calls": 0
+}

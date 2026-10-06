@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/condmat-membership-20261006/run_diagnostic.py"
+    ],
+    "exit_code": 1,
+    "stage": "environment preflight, before launch",
+    "failure": "AssertionError: current SHA-256 of platform.node() differs from prior host_id_sha256.",
+    "native_calls": 0,
+    "validator_calls": 0,
+    "raw_tool_output_retained_in_conversation": true,
+    "script_sha256": "b311b648461fec82b083cf85460d14e2feb93135519d31bab764d8b375791df4"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/condmat-membership-20261006/check_environment.py"
+    ],
+    "exit_code": 0,
+    "scope": "Read-only hardware/profile check; four actual sysctl records in current-environment.json"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/condmat-membership-20261006/run_diagnostic.py"
+    ],
+    "exit_code": 0,
+    "child": {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+        "experiments/run.py",
+        "--config",
+        "evidence/m5/condmat-membership-20261006/config.json",
+        "--evidence",
+        "evidence/m5/condmat-membership-20261006/campaign",
+        "--stop-on-failure"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 40.31735616736114,
+      "finished_utc": "2026-10-05T14:04:59.799075+00:00",
+      "scope": "Entire driver, including external validation and evidence I/O; not native algorithm time."
+    }
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/m5/condmat-membership-20261006/verify.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.9708657925948501,
+    "finished_utc": "2026-10-05T14:07:55.532757+00:00"
+  }
+]

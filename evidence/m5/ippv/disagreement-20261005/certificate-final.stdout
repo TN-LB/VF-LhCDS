@@ -1,0 +1,31 @@
+{
+  "candidate": [
+    729,
+    733,
+    774,
+    776,
+    1597,
+    2298,
+    2299,
+    2300,
+    2301,
+    2302,
+    2303,
+    2311,
+    2314
+  ],
+  "h": 3,
+  "vertices": 5242,
+  "triangles": 48260,
+  "candidate_triangles": 56,
+  "deletion_subsets_checked": 8192,
+  "compact": true,
+  "global_maximality_certified": true,
+  "lambda": "56/13",
+  "theta": "293607/68159",
+  "global_optimum_size": 692,
+  "feasible_flow_equals_cut": true,
+  "flow_value": 537086985,
+  "scope": "This candidate on this finite graph; not full top-20 truth or a theorem proof.",
+  "wall_seconds": 2.654726958833635
+}

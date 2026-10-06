@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "name": "owner-approved-existing-m4-mode-diagnostic",
+  "scope": "diagnostic",
+  "seed": 20261003,
+  "repeats": 1,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-basic",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "off",
+        "footprints": "sorted"
+      }
+    },
+    {
+      "name": "vf-core-only",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "safe",
+        "footprints": "sorted"
+      }
+    },
+    {
+      "name": "vf-membership-only",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "off",
+        "footprints": "membership"
+      }
+    },
+    {
+      "name": "vf-both",
+      "kind": "vf",
+      "executable": "build-m5-release/vflhcds",
+      "sha256": "4858481c0f86dcdb942149e0fb137c20a5d3fa12a01ffa4d2e4d2c62be8227e0",
+      "options": {
+        "core": "safe",
+        "footprints": "membership"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "ca-grqc-h3-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    }
+  ]
+}

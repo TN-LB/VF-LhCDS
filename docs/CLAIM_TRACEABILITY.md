@@ -18,7 +18,7 @@ A code symbol, test command, evidence path and commit are needed before marking
 | O09 Query / network bounds | 1.18; 1.20 | SolveStats::record; solve; QueryStats; largest_restricted | T13; per-query network counts | [M3 independent 2r-1 checks](../evidence/m3/fixture_manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
 | O10 Safe core search bounds | 1.21-1.22 | peel_core; ClosureOracle::global_F/restricted_impl; OracleOptions; unchanged solve endpoints | T17; independent core truth and all-mode prefixes | [M4 executed evidence](../evidence/m4/REPORT.md), [argument](M4_IMPLEMENTATION.md); working tree on `5802d5a`, new commit pending | planned (M4 tests passed; formal commit gate pending) |
 | O11 Exact numeric refinement | 1.19-1.20; D005 | Fraction; checked_add/sub/mul; largest_restricted; Dinic | T05,T07,T16 | [M2](../evidence/m2/REPORT.md); `0a4aef801fa91b38f7643b0b8c8f5683a58dbcd6`; [M3 real auto fallback regression](../evidence/m3/fixture_manifest.json) | implementation-tested (finite numeric scope) |
-| O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main | T02,T14,T15; M5 shared smoke pending | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67` | implementation-tested (finite M3 scope) |
+| O12 Evidence scope / validation | Def. 1.3 + audit F | Campaign.variant/inspect_trace; run_solver.main; experiments.run.execute | T02,T14,T15; scoped M5 shared smoke | [M3 manifests](../evidence/m3/fixture_manifest.json), [separate validation](../evidence/m3/accepted/cli-definition-run/manifest.json); `23a5b3415cf3ae053e55a01b219ca074ffe6fd67`; [M5 paired smoke](../evidence/m5/paired-smoke-20261005/REPORT.md) | implementation-tested (finite M3 scope); structural/agreement evidence on one M5 real case |
 
 ## Evidence record
 
@@ -257,3 +257,365 @@ parallel code or external technique was introduced. [Report](../evidence/m4/REPO
 retains all measurements, two corrected development-only errors and remaining limits.
 No new proof/spec conflict or solver/reference mismatch remains in the executed
 scope. Independent finite agreement supports implementation validation, not a theorem.
+
+## M5 partial baseline evidence (2026-10-02)
+
+P09.1 remains incomplete. IPPV author commit
+`f61881d4752170c03585e4281f0c49d7ef14aa1e` was acquired under owner decision D027.
+The original build failed on missing `omp.h`; the separately owner-approved
+[single-header-removal patch](../baselines/ippv/patches/0001-remove-unused-openmp-header.patch)
+then [built successfully, exit 0](../evidence/m5/ippv/compat-20261002/commands.json).
+Source/binary/patch/log hashes and the subsequent source-inspected uninitialized
+member blocker are in [IPPV-B02](../evidence/m5/ippv/compat-20261002/stop.json).
+
+This is provenance and build evidence only. There are no baseline runtime,
+definition-checked output, cross-implementation agreement or performance results.
+O12's experimental smoke remains unrun; no obligation status or M5 completion
+checkbox is promoted by this build. The proposed implementation/reference is
+unchanged and all 53 M4 accepted source hashes still match.
+
+### Subsequent IPPV execution under D028 (2026-10-02)
+
+The [current report](../evidence/m5/ippv/reproduction-20261002/REPORT.md) supersedes
+the preceding build-only status while preserving those historical failures.
+P09.1 now has three pinned source patches, reproducible Release and sanitizer
+builds, a native-process adapter and separate external validation. The 17 adapter
+tests plus 74 unchanged reference tests pass. Six tiny native runs pass exhaustive
+definition checks; one real-data native run returns 20 structurally checked sets.
+The latter does not establish maximality, completeness or comparative performance.
+
+Three additional native runs fail zero-density completeness, including Release
+and sanitizer executions of the one-vertex minimum reproducer. These are recorded
+as mismatches, not hidden or converted into passes by the adapter. Source defects
+IPPV-B02/B03 are repaired; output-domain finding IPPV-B04 remains unresolved for
+full-domain comparison. This provides scoped baseline evidence relevant to O12,
+not completion of O12's shared experimental smoke, P09.1, or M5. No theorem claim,
+obligation status or M5 checkbox is promoted. The proposed implementation and
+independent reference remain unchanged.
+
+### DCLDS preflight boundary (2026-10-02)
+
+P09b.1 has a [D012 content/version snapshot](../evidence/m5/dclds/preflight-20261002/freeze.json)
+and public repository commit/tree metadata only. The unidentified-license decision
+is [pending](../evidence/m5/dclds/preflight-20261002/stop.json). No source build,
+runtime/semantic result, detailed comparison, historical-priority proof or technique
+import is claimed. O12 and M5 completion statuses remain unchanged.
+
+### D029 scope and additional IPPV diagnostics (2026-10-02)
+
+D029 defers further DCLDS reading/integration while independent work continues;
+P09b.1 stays incomplete. No new DCLDS evidence or historical-priority claim is made.
+
+P09.1/O12 have additional [executed diagnostics](../evidence/m5/ippv/coverage-20261002/REPORT.md):
+IPPV `onepass` h=2 and `Graph::connected_components` boundary defects are repaired
+under D028. `check_toys.fixtures,classify,main` retains fixed input hashes and all
+outcomes. The final 48 native runs across h=2,3,4,5 and two profiles yield 32
+definition passes and 16 preserved zero-density mismatches. The real h=3 smoke
+returns 20 structurally checked sets with the same canonical bytes as before.
+All five patches replay to the 17 locked source hashes; eight configure/build
+commands exit 0. No finite test, obligation completion, shared benchmark smoke or
+M5 performance conclusion is implied. Core solver/reference code remains unchanged.
+
+### Shared experiment harness diagnostics (2026-10-03)
+
+P11.1-P11.3/O12 have new [scoped evidence](../evidence/m5/harness-20261003/REPORT.md).
+`experiments.validate.parse_records,validate,compare` distinguish canonical exact
+records, structural checks, independent all-superset definition truth, and
+cross-implementation agreement. `run.load_config,schedule,run_vf,execute` retain
+input/binary pins, predeclared shuffled blocks, native versus validation process
+resources, failure statuses and checksums. `prepare_input.prepare` preserves the
+declared vertex universe; `build_vf.main` records the unchanged Release build.
+
+112 pytest cases pass (21 harness, 17 IPPV adapter, 74 reference). Twelve tiny
+native runs yield ten definition-checked completions and two preserved known
+IPPV omissions. Four eligible paired comparisons agree under tie-aware rules;
+two of those differ under strict cutoff-tie selection. Repeated semantic hashes
+are stable. The shared real smoke yields five structurally checked IPPV sets and
+a VF basic timeout at 60 seconds, so no output agreement or speedup is claimed
+on that real case. No mathematical obligation, final experimental gate, or M5
+checkbox is promoted. All four papers and 53 accepted M4 source hashes remain
+unchanged; DCLDS stays deferred under D029.
+
+### Approved existing-mode diagnostic (2026-10-03)
+
+P11.2/P11.3/O12 gain [four additional recorded native outcomes](../evidence/m5/m4-mode-diagnostic-20261003/REPORT.md).
+The owner-approved draft was executed with the same CA-GrQc h=3,k=5 input,
+Release binary, 60-second guard, one worker and frozen seed 20261003. Core-only,
+both, membership-only and basic all time out with empty stdout/stderr; no
+external validator runs and all six output comparisons remain unavailable.
+Integrity checks pass for the raw outcomes/checksums, 53 accepted M4 source
+hashes and four paper hashes. Builds and test suites were not rerun.
+
+Static source inspection records exhaustive index construction over
+C(5242,3)=23,993,367,880 candidate triples before M4 query options take effect.
+This is a code observation and next-diagnosis hypothesis, not measured phase
+attribution, a semantic counterexample or a performance conclusion. The
+phase-diagnosis proposal remains unrun. No obligation or M5 checkbox is promoted;
+DCLDS remains deferred and no proposed-algorithm implementation is changed.
+
+### Bounded phase diagnostic (2026-10-03)
+
+P11.2/P11.3/O12 have [measured phase-boundary evidence](../evidence/m5/phase-diagnostic-20261003/REPORT.md).
+The separate `vflhcds_phase_probe` target links the unchanged Release library;
+`mark/main` flush parse/index/solve/serialize boundaries without changing the
+production CLI or algorithm. Configure/build succeed. Both T-PHASE-01 fixtures
+produce eight ordered markers, byte-identical production output and passing
+independent definition checks (four native calls and two later validators).
+
+The single CA-GrQc h=3,k=5 diagnostic parses in 0.0038615 s, enters index
+construction, then hits the declared 60-second guard without reaching solve.
+This establishes the immediate incomplete phase for this instrumented call,
+not a completed runtime, output-equivalence result on the real graph, theorem
+claim or retrospective trace for prior failures. Integrity checks preserve all
+53 accepted M4 source hashes, four papers and the original executable/library.
+The adjacency-extension plan includes an enumeration-order/incidence preservation
+argument and regression gates, but no production optimization is implemented or
+accepted. Full suites are unrun this turn; no task/obligation status is promoted.
+
+### Authorized adjacency enumeration (2026-10-03)
+
+P02.2/T04 preservation, O06/O11 and P11.2/P11.3/O12 gain
+[executed evidence](../evidence/m5/enumeration-20261003/REPORT.md).
+`MaterializedCliques::enumerate_adjacency` uses sorted common-neighbor extension
+and an explicit stack; shared `append` preserves tuple/incidence order. The old
+combination enumeration remains the default/control. CLI and external harness
+record the optional selector without changing canonical records/hashes or query
+counter meanings. No flow, oracle or solver-recursion implementation is changed.
+
+Debug, Release and ASan/UBSan each pass 14/14 CTest. Combined pytest passes 115
+checks. Fourteen Debug/sanitizer campaigns retain the original fixture/seed
+corpora and compare both representations before querying the new index against
+independent reference truth. All 1,392,496 saved new responses match pre-change
+M4 responses, excluding only `core_reduction_seconds`. Numeric limits and actual
+arbitrary-precision fallback execute; the paper/reference hashes remain unchanged.
+
+The single predeclared CA-GrQc h=3,k=5 diagnostic completes in 0.767723375 s,
+enumerates 48,260 cliques, and returns five externally structurally checked sets.
+These strictly match the saved IPPV outputs on the same graph. This is structural
+and cross-implementation evidence, not exhaustive maximality/completeness truth
+on that graph or a theorem proof. Historical timeouts remain censored failures;
+no formal speedup or paired performance comparison is inferred. The bounded
+enumeration repair is complete; M5 and final experiment gates remain open.
+
+### Fresh paired smoke and campaign preparation (2026-10-05)
+
+P11.3/O12 gain [fresh paired evidence](../evidence/m5/paired-smoke-20261005/REPORT.md)
+at the existing CA-GrQc h=3,k=5 settings: one repetition, seed 20261003, one worker,
+60-second guard, no imposed memory cap, uncontrolled cache. Both native processes
+and their later external validators exit zero. Each returns five structurally
+checked sets; ordered outputs and semantic hashes match strictly. IPPV native
+wall time is 0.17649641539901495 s and VF adjacency/basic is 1.2028633328154683 s.
+One paired repetition does not establish performance stability or a speedup.
+It does complete the scoped shared smoke gate P11.3. Exact maximality/completeness
+on this real input remains uncertified; no mathematical obligation is promoted
+to a theorem proof.
+
+`experiments.run.execute` gains optional `stop_on_failure`; its CLI flag records
+the execution policy and retains the failure plus all pending schedule entries.
+Injected failure/comparison tests cover timeout, error, OOM, semantic mismatch,
+driver exception, genuine pair disagreement, valid cutoff ties and the retained
+run-all policy. Combined harness/adapter/reference pytest passes 123 checks.
+Production sources/binaries, four papers, reference and patched IPPV sources
+remain unchanged. No build or sanitizer campaign is rerun for this external-only
+change. The exact pre-edit runner used for the smoke is separately snapshotted.
+
+CA-CondMat is normalized with every declared vertex retained. Its inclusion in
+the [two-input, 48-call proposal](../evidence/m5/campaign-proposal-20261005/PROPOSAL.md)
+is pending owner approval; the draft has no benchmark results. P11.1/P11.2/P12.1,
+broader baseline/release work and M5 remain open. DCLDS stays deferred under D029.
+
+### Approved pilot stopped at output disagreement (2026-10-05)
+
+D030 records explicit owner approval before the limited paired campaign. P11.2,
+P12.1 and O12 gain [executed pilot evidence](../evidence/m5/pilot-20261005/REPORT.md):
+20 native runs and 20 later external validators exit zero and pass structural
+checks. Of ten pairs, six are strict matches, three more allow cutoff ties at
+k=15, and one fails tie-aware agreement at CA-GrQc h=3,k=20, repeat 0. The overall
+driver exits 1 as required by its frozen stop policy; 28 scheduled calls remain
+unrun. No timeout, OOM or native crash occurs in the executed subset.
+
+The observed discrepancy is substantive under the recorded comparator: VF's
+rank-18 set has 13 vertices and 56 triangles, density 56/13, and is absent from
+IPPV's output above their common 10/3 cutoff. Both sides' structural validity
+does not establish full compactness/maximality or establish which implementation
+is responsible. A copied original graph, exact outputs, commands, hashes and
+seed are retained; root-cause analysis, minimization and a new native run are
+not performed after this stop. This is an unresolved cross-implementation
+disagreement, not an established counterexample to the theorem.
+
+`evidence/m5/pilot-20261005/summarize.py` derives raw-run and all-planned-cell
+tables from immutable manifests. Completed triples at k=5,10,15 have native
+time/RSS median/min/max; mismatching k=20 keeps its single raw pair and no
+three-repeat comparison summary. Every pending case remains visible. The script
+does not launch either algorithm. All pinned algorithm/harness sources, binaries,
+reference files and papers remain unchanged. No build, test-suite or sanitizer
+campaign is rerun. No full M5 task or mathematical claim is promoted; the approved
+pilot is incomplete and performance conclusions remain limited by this stop.
+
+### Disputed-set certificate and external baseline repairs (2026-10-05)
+
+P09.1/O01/O12 gain [executed diagnosis and regression evidence](../evidence/m5/ippv/disagreement-20261005/REPORT.md).
+The 13-vertex candidate from VF has density/compactness 56/13 by every-deletion
+enumeration. Independently generated integer flow allocations match a cut of
+537086985 at theta=293607/68159 on the original 5,242-vertex graph. The certified
+global optimum has 692 vertices and the candidate is exactly one ordinary
+connected component. Supermodularity plus strict theta<56/13 forces every
+56/13-compact set into that optimum, excluding any connected proper compact
+superset of the candidate. This certifies the disputed finite-instance set and
+establishes the old IPPV omission; it is neither a general theorem proof nor a
+definition-checked label for the entire original top-20 output.
+
+External baseline patches 0006/0007 repair truncated rational verifier capacities
+and a shrunken PAVA workspace. A PAVA-only sanitizer control still reproduces
+the omission, isolating the numeric cause. A saved synthetic 13-vertex regression
+checks every proper superset and is one-edit irreducible under the recorded
+predicate after 31 deterministic attempts. Exact scaling/range tests and
+native regression pass in Release and ASan/UBSan/bounds-check profiles. Both
+fixed original replays pass tie-aware comparison; legitimate cutoff ties remain.
+The 48-case baseline corpus retains 32 definition passes and 16 known zero-density
+omissions, and 123 pytest checks pass. Production VF sources/binary, reference,
+papers and existing decisions remain unchanged; no verifier enters the VF path.
+The new certificate code is external diagnostic evidence only. No full M5 gate
+or benchmark result is inferred and the stopped campaign is not resumed.
+
+### Repaired-baseline pilot: CA-GrQc complete, CA-CondMat timeout (2026-10-05)
+
+D031 authorizes a fresh campaign using seven-patch IPPV and the unchanged D030
+graph/grid/resource/seed/repetition settings. P11.2/P12.1/O12 gain
+[new executed evidence](../evidence/m5/pilot-fixed-20261005/REPORT.md): 25 native
+calls, comprising 24 completed CA-GrQc runs and one CA-CondMat VF timeout.
+All 24 separate validators exit zero and pass structural checks. All 12 pairs
+match under the accepted cutoff-tie rule; six match strictly (k=5,10), and six
+have only allowed cutoff differences (k=15,20). Each algorithm/case has the same
+semantic hash across its three completed repetitions. This supports repeated
+cross-implementation agreement, not maximality/completeness of the real graphs
+or a mathematical theorem proof.
+
+Eight completed algorithm/case cells have three-repeat native time/RSS
+median/min/max, excluding external validation. IPPV is faster in these observed
+CA-GrQc settings; this is not a general-h, all-mode, all-dataset or SOTA conclusion.
+VF at CA-CondMat h=3,k=5, repeat 0 reaches the 60-second timeout (observed process
+wall 60.009898708 s, peak RSS 144261120 bytes, timeout termination signal 9).
+Empty stdout/stderr provide no phase diagnosis or valid completed output.
+The driver exits 1; 23 scheduled native calls remain unrun, including every IPPV
+CA-CondMat call. The timeout is retained and excluded from successful-run medians;
+all 16 planned cells remain visible.
+
+The evidence-only aggregation and verification scripts pass, rechecking all
+263 raw inventory entries, 261 historical-pilot files, source/binary/data pins,
+all saved comparisons and aggregate medians. No algorithm/harness source, paper,
+reference or historical pilot is changed. There is no post-stop native call,
+retry, build, test-suite rerun, sanitizer campaign or new DCLDS work. P12.1 and
+M5 remain incomplete; the next affected path is the unresolved VF timeout.
+
+### CA-CondMat solving-stage diagnosis (2026-10-05)
+
+D032/P11.2/P12.1/O12 gain [instrumented boundary evidence](../evidence/m5/condmat-phase-20261005/REPORT.md).
+The separate probe links the preserved adjacency Release library, explicitly
+selects adjacency/basic semantics and uses the existing completed-query callback.
+Both configure/build commands exit zero. T-PHASE-ADJ passes on two fixtures:
+canonical output and all query counters equal production, and independent
+all-superset definition validation passes (four tiny native children, two
+subsequent external validators). Production, reference and proof sources are
+unchanged; the instrumentation does not enter the solver or semantic hash.
+
+The single real call at CA-CondMat h=3,k=5 times out after 60.009140917 s. Parsing
+takes 0.042061041 s and adjacency indexing 0.1166765 s; solve begins at elapsed
+0.158885875 s. Before termination 137 sequential query-end markers report 137
+actual mincuts, all using uint128, and 23,750,457 footprint clique visits. The
+last completed query ends at elapsed 59.242462667 s. There is no solve-end or
+serialization marker and stdout is empty. This establishes incomplete solving,
+not an index-construction blocker or a completed result.
+
+Inter-query gaps combine traversal/counting, footprint work, network construction,
+flow and instrumentation; they are not isolated operation timers. Static source
+inspection identifies repeated full-clique scans and sorted includes checks in
+aggregate_footprints and MaterializedCliques::count as plausible avoidable work,
+without claiming a measured percentage or excluding flow cost. An existing M4
+membership-mode diagnostic is prepared, not executed. The evidence verifier
+passes for 43 raw inventory entries, all source/library/binary pins and all
+313 historical fixed-pilot files. No production change, new mathematical
+conflict, post-timeout native call, full regression or M5 completion is claimed.
+
+### CA-CondMat membership mode completes (2026-10-06)
+
+P11.2/P12.1/O12 gain a [single completed diagnostic](../evidence/m5/condmat-membership-20261006/REPORT.md):
+CA-CondMat h=3,k=5, core off, adjacency enumeration and existing membership
+footprint scanning complete in 38.997086249 s, peak RSS 158580736 bytes. Five
+outputs pass the separate exact structural validator; native/validator exits are
+zero. All 304 queries use uint128; their first 137 counter records match the
+prior sorted-mode trace. This is counter-prefix agreement, with no complete
+real-case off/on output comparison or IPPV pair. A host-label preflight mismatch
+is retained; a fresh matching hardware/profile check precedes the sole native
+call. No production change, repeated speedup estimate, definition-level real-graph
+truth, theorem proof or full M5 completion follows. Source/paper/historical
+evidence pins and the saved run pass verification; no build/test suite is rerun.
+
+### CA-CondMat paired output agreement (2026-10-06)
+
+P11.1/P11.2/P12.1/O12 gain [one fresh paired diagnostic](../evidence/m5/condmat-pair-20261006/REPORT.md).
+VF membership and seven-patch IPPV return five structurally checked sets each;
+both native calls and separate validators exit zero. Ranks 1–4 are identical;
+the differing rank-5 sets have exact density 22. Tie-aware comparison passes,
+strict comparison is false, and VF's output equals its prior saved diagnostic.
+Native wall times are 38.525397500 s and 2.723666167 s respectively. This is
+single-case agreement and timing evidence, without a repeated speedup estimate,
+real-graph definition truth or theorem proof. No production/harness change or
+test-suite rerun occurs; all historical records remain intact. Wider repeated
+experiments and M5 remain open.
+
+### Complete membership pilot schedule (2026-10-06)
+
+P11.1/P11.2/P12.1/O12 gain a [48-call repeated campaign](../evidence/m5/pilot-membership-20261006/REPORT.md)
+with unchanged graph/binary pins, h=3, k={5,10,15,20}, three repeats and seed
+20261003. The frozen runner policy continues native timeouts without retry while
+retaining stops for other failures and substantive disagreements. Ten added
+control-path cases plus prior harness/adapter/reference checks pass (133 total).
+No algorithm, theorem, independent reference or historical evidence changes.
+
+All 48 calls are attempted: 36 complete with passing separate structural
+validators, and 12 VF CA-CondMat runs time out. All 12 complete CA-GrQc pairs
+match with cutoff ties allowed, six strictly; all 24 CA-GrQc outputs also equal
+the earlier repaired-baseline campaign. The 12 CA-CondMat blocks are not compared.
+Completed outputs have stable hashes in all 12 completed cells. Earlier one-shot
+CA-CondMat completion is not repeated under the same 60-second limit; no cause
+of timing variation is established. No theorem proof or real-graph maximality
+claim follows from these checks.
+
+P14.1 gains a scoped review of timing/validation separation and negative/mixed
+outcomes; P15.1 gains byte-identical local regeneration of seven aggregates from
+461 checked raw inventory entries. Three-repeat medians require all scheduled
+runs of that algorithm/case to complete, and comparison availability is separate.
+Timeouts are retained, not substituted into completion-time medians. Source,
+binary, paper and historical evidence pins pass the saved-evidence verifier.
+The driver exits 1 because timeouts remain unsuccessful outcomes; aggregation,
+verification and regeneration exit 0. Wider experiments, clean-machine release,
+C++ rebuild/CTest/sanitizer reruns and DCLDS work are unrun; M5 remains incomplete.
+
+### Core off/on repeated ablation (2026-10-06)
+
+P12.1/O10/O12 gain [48 frozen core-ablation calls](../evidence/m5/core-ablation-20261006/REPORT.md)
+using the same pinned adjacency/membership Release binary, two graphs, h=3,
+k={5,10,15,20}, three repetitions, seed 20261003 and 60-second guards. Only the
+core selector changes. The external runner gains explicit strict agreement for
+equivalent modes; four added policy checks plus prior tests pass (137 total).
+Production/theory/reference code and historical evidence remain unchanged.
+
+All 30 completed outputs pass external structural validation; all 15 complete
+pairs match exact canonical records. All 18 CA-CondMat k=10/15/20 runs time out,
+with no remaining unrun calls. Completed outputs are stable across repetitions;
+24 CA-GrQc outputs match the previous membership pilot and six CA-CondMat k=5
+outputs match the saved paired diagnostic. Paired counters retain the same query
+count, original interval sizes and footprint scan visits; oracle sizes and
+network node/arc counts do not increase. These observations support the existing
+O10 argument on this workload, not a new proof or real-graph maximality claim.
+
+Across the five complete settings, safe-core median native time changes range
+from -0.93% to +3.23%, and peak-RSS medians decrease 4.18%-11.91%. Core's measured
+cost is already included in solve/native time. Finer counting/footprint/network/
+flow timing remains unavailable, and three-repeat differences are not generalized.
+P14.1 gains this scoped review; no fresh IPPV comparison or historical timing
+pooling occurs. P15.1 gains byte-identical regeneration of seven aggregates from
+365 checked raw inventory entries. Driver exit 1 retains timeouts; aggregation,
+verification and regeneration exit 0. Wider experiments, clean-machine release,
+C++ rebuild/CTest/sanitizers and DCLDS work remain unrun. M5 stays incomplete.

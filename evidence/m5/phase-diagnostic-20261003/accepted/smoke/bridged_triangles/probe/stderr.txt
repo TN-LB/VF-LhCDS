@@ -1,0 +1,8 @@
+{"diagnostic_schema":1,"phase":"parse","event":"begin","elapsed_seconds":0.00017295799999999999}
+{"diagnostic_schema":1,"phase":"parse","event":"end","elapsed_seconds":0.00026800000000000001}
+{"diagnostic_schema":1,"phase":"index","event":"begin","elapsed_seconds":0.00029129200000000002}
+{"diagnostic_schema":1,"phase":"index","event":"end","elapsed_seconds":0.000312875}
+{"diagnostic_schema":1,"phase":"solve","event":"begin","elapsed_seconds":0.00033254200000000002}
+{"diagnostic_schema":1,"phase":"solve","event":"end","elapsed_seconds":0.00037670800000000001}
+{"diagnostic_schema":1,"phase":"serialize","event":"begin","elapsed_seconds":0.00039691699999999999}
+{"diagnostic_schema":1,"phase":"serialize","event":"end","elapsed_seconds":0.00045320799999999997}

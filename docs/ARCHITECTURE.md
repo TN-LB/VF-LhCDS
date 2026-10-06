@@ -70,6 +70,10 @@ reversible original-ID map, checksummed canonical edges. Sets: sorted vectors an
 reusable membership markers. Equality always checks full sets, not hashes alone.
 
 Materialized cliques and incidence are the only required initial storage backend.
+Its combination builder remains the default; optional adjacency extension builds
+the same ordered tuples/incidence IDs using common-neighbor intersections and an
+explicit stack. This is one storage backend with two enumeration choices, not a
+streaming or parallel backend. See [preservation argument](ENUMERATION_IMPLEMENTATION.md).
 Footprint keys have sorted unique IDs and support the declared h range; do not
 silently cap arbitrary h through an undocumented MAX_H array. A vector/small-vector
 key is adequate initially. Count each original clique once.

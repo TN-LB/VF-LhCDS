@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-01T17:32:53.394415+00:00",
+  "freeze_files_verified": 98,
+  "saved_audit_document_versions": 4,
+  "public_metadata_successes": 3,
+  "preserved_dns_failures": 2,
+  "source_acquisition_or_execution": false,
+  "sha256": {
+    "commands.json": "eb8a7f28f1bbd4c33980afac732bd46b96ead89379ed485a1dcce04c9ab33abc",
+    "commit-live.json": "ddf265ed6a79ef3e8bad2d673898c76f3f3dcb7e71d5414ed659c2699270a4be",
+    "commit-live.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "commit.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "commit.stderr": "c194ef04dcfb48abf022cdf0ddadd7e9f0550addf63b8936442efd90d7c3b9e2",
+    "freeze.json": "c564c8fec1b986885f6429646df73c1b026d03123f9e5c301b439bda1e274949",
+    "metadata-live.json": "6211219b3d7410081d4db696f56e34f72c9fcf6ac30e8a8edd9869fba00f8c39",
+    "metadata-live.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metadata.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metadata.stderr": "c194ef04dcfb48abf022cdf0ddadd7e9f0550addf63b8936442efd90d7c3b9e2",
+    "snapshot/docs/BASELINE_AUDIT.md": "4b271f5d12f571993fbe9dde9278087635ebd4776e17ec6a2f4c312bf2f4b20b",
+    "snapshot/docs/CLAIM_TRACEABILITY.md": "1f2a17c0898c7418e976136d5daa1bb50283e81bd6c43202038884e9b03f2c82",
+    "snapshot/docs/DECISIONS.md": "acd99fb2374a5b3ccec3c5509248dd8014de750bc292764feb13b5f9c95e60bd",
+    "snapshot/docs/TASKS.md": "4583c4ddf3e1070313b42e486f282bb5d3176abde91f45b4a1370f955230c7d7",
+    "stop.json": "25580409dea2c207d20a1a664b10496ffb40d6823eae90cecea0783bde56087c",
+    "tree-live.json": "59ff47f49671ecbf8567d38159acbe37054710a8b43acf552782d24711583be0",
+    "tree-live.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

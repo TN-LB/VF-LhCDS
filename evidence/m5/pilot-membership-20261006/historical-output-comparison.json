@@ -1,0 +1,198 @@
+{
+  "previous_campaign": "evidence/m5/pilot-fixed-20261005/campaign",
+  "exact_matches": [
+    {
+      "new_directory": "runs/0000-1",
+      "old_directory": "runs/0000-1",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0000-0",
+      "old_directory": "runs/0000-0",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0001-1",
+      "old_directory": "runs/0001-1",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0001-0",
+      "old_directory": "runs/0001-0",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0002-0",
+      "old_directory": "runs/0002-0",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0002-1",
+      "old_directory": "runs/0002-1",
+      "case": "ca-grqc-h3-k5",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "c33ccb405e263ae7fcf10f60585c8441dbc821bbc1f7958ba4dd828ac0cf797f"
+    },
+    {
+      "new_directory": "runs/0003-1",
+      "old_directory": "runs/0003-1",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0003-0",
+      "old_directory": "runs/0003-0",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0004-0",
+      "old_directory": "runs/0004-0",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0004-1",
+      "old_directory": "runs/0004-1",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0005-0",
+      "old_directory": "runs/0005-0",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0005-1",
+      "old_directory": "runs/0005-1",
+      "case": "ca-grqc-h3-k10",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "2cdc8bcee4f86e530b0e1fa73abb7b0ee92628d4e5d35166452edd017a786f7d"
+    },
+    {
+      "new_directory": "runs/0006-1",
+      "old_directory": "runs/0006-1",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "24783c6432b21e24e69eee09382318c131b9f4585d1d7117208066e772cebcae"
+    },
+    {
+      "new_directory": "runs/0006-0",
+      "old_directory": "runs/0006-0",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "132e9b645c1a385d524768fe32753aa91014ed6312e5b18dbdc5e3b62bd437c7"
+    },
+    {
+      "new_directory": "runs/0007-0",
+      "old_directory": "runs/0007-0",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "132e9b645c1a385d524768fe32753aa91014ed6312e5b18dbdc5e3b62bd437c7"
+    },
+    {
+      "new_directory": "runs/0007-1",
+      "old_directory": "runs/0007-1",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "24783c6432b21e24e69eee09382318c131b9f4585d1d7117208066e772cebcae"
+    },
+    {
+      "new_directory": "runs/0008-0",
+      "old_directory": "runs/0008-0",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "132e9b645c1a385d524768fe32753aa91014ed6312e5b18dbdc5e3b62bd437c7"
+    },
+    {
+      "new_directory": "runs/0008-1",
+      "old_directory": "runs/0008-1",
+      "case": "ca-grqc-h3-k15",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "24783c6432b21e24e69eee09382318c131b9f4585d1d7117208066e772cebcae"
+    },
+    {
+      "new_directory": "runs/0009-1",
+      "old_directory": "runs/0009-1",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "388de3a7a5571c69451ade937ff3e5e7f161d46be5b04e8b8967cb4fb136d9be"
+    },
+    {
+      "new_directory": "runs/0009-0",
+      "old_directory": "runs/0009-0",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c"
+    },
+    {
+      "new_directory": "runs/0010-1",
+      "old_directory": "runs/0010-1",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "388de3a7a5571c69451ade937ff3e5e7f161d46be5b04e8b8967cb4fb136d9be"
+    },
+    {
+      "new_directory": "runs/0010-0",
+      "old_directory": "runs/0010-0",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c"
+    },
+    {
+      "new_directory": "runs/0011-0",
+      "old_directory": "runs/0011-0",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-adjacency-membership",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c"
+    },
+    {
+      "new_directory": "runs/0011-1",
+      "old_directory": "runs/0011-1",
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "ippv-seven-patches",
+      "semantic_sha256": "388de3a7a5571c69451ade937ff3e5e7f161d46be5b04e8b8967cb4fb136d9be"
+    }
+  ],
+  "historical_timings_combined": false
+}

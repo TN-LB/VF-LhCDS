@@ -1,0 +1,28 @@
+{
+  "edit": "starting synthetic witness",
+  "vertices": 13,
+  "edges": 17,
+  "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+  "accepted": true,
+  "truth": [
+    {
+      "vertices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "density": "3/2"
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "density": "5/4"
+    }
+  ],
+  "reason": "old omits a positive solution; scaling repair restores full direct truth"
+}

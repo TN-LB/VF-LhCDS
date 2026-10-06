@@ -1,0 +1,40 @@
+{
+  "scope": "phase_diagnostic",
+  "real_case": {
+    "name": "ca-grqc-h3-k5",
+    "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+    "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+    "h": 3,
+    "k": 5,
+    "definition": false
+  },
+  "real_repeats": 1,
+  "timeout_seconds": 60,
+  "threads": 1,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "seed": null,
+  "seed_reason": "One deterministic case/mode; no randomized scheduling.",
+  "mode": {
+    "core": "off",
+    "footprints": "sorted"
+  },
+  "smoke_tests": [
+    {
+      "id": "T-PHASE-01/triangle_and_isolate",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 3,
+      "k": 5
+    },
+    {
+      "id": "T-PHASE-01/bridged_triangles",
+      "graph": "reference/fixtures/bridged_triangles.graph",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "h": 3,
+      "k": 5
+    }
+  ],
+  "real_test": "T-PHASE-02/flushed-boundary-on-timeout",
+  "separation": "Instrumented process resources are diagnostic only; external validation runs later."
+}

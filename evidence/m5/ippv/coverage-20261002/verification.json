@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "artifact integrity and recorded-outcome assertions, not complete IPPV correctness",
+  "paper_hashes_matched": 4,
+  "m4_source_hashes_matched": 53,
+  "patches_replayed": 5,
+  "locked_source_files_matched": 17,
+  "configure_build_commands_exit_zero": 8,
+  "native_invocations": 53,
+  "native_exit_counts": {
+    "0": 52,
+    "-6": 1
+  },
+  "adapter_status_counts": {
+    "completed": 33,
+    "semantic_mismatch": 19,
+    "error": 1
+  },
+  "process_manifests_verified": 105,
+  "final_corpus": {
+    "planned_native_runs": 48,
+    "executed_native_runs": 48,
+    "unrun": 0,
+    "counts": {
+      "definition_pass": 32,
+      "known_zero_density_mismatch": 16
+    }
+  },
+  "final_sanitizer_empty_stderr": 24,
+  "real_canonical_output_unchanged": true,
+  "git_diff_check_exit_code": 0
+}

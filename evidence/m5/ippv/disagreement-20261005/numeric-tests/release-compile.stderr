@@ -1,0 +1,8 @@
+baselines/ippv/test_exact_verification.cpp:29:24: error: loop variable 'value' creates a copy from type 'const Integer' (aka 'const number<cpp_int_backend<>>') [-Werror,-Wrange-loop-construct]
+   29 |     for (const Integer value : {Integer(-1), Integer((std::numeric_limits<long>::max)()) + 1}) {
+      |                        ^
+baselines/ippv/test_exact_verification.cpp:29:10: note: use reference type 'const Integer &' (aka 'const number<cpp_int_backend<>> &') to prevent copying
+   29 |     for (const Integer value : {Integer(-1), Integer((std::numeric_limits<long>::max)()) + 1}) {
+      |          ^~~~~~~~~~~~~~~~~~~~~
+      |                        &
+1 error generated.

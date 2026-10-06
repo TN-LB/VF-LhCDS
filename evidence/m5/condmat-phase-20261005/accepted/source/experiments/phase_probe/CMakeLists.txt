@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.16)
+project(vflhcds_phase_probe LANGUAGES CXX)
+
+# Diagnostic target only: link an existing library, never rebuild production.
+get_filename_component(VF_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../.." ABSOLUTE)
+set(VF_LIBRARY "" CACHE FILEPATH "Previously built Release vflhcds static library")
+if(NOT EXISTS "${VF_LIBRARY}")
+  message(FATAL_ERROR "VF_LIBRARY must name the recorded existing Release library")
+endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+if(NOT CMAKE_CXX_COMPILER_ID MATCHES "^(AppleClang|Clang|GNU)$")
+  message(FATAL_ERROR "The diagnostic requires the existing GCC/Clang toolchain")
+endif()
+add_executable(vflhcds_phase_probe main.cpp)
+target_include_directories(vflhcds_phase_probe PRIVATE "${VF_ROOT}/include")
+target_include_directories(vflhcds_phase_probe SYSTEM PRIVATE "${VF_ROOT}/.deps/boost_1_86_0")
+target_compile_options(vflhcds_phase_probe PRIVATE
+  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror)
+target_link_libraries(vflhcds_phase_probe PRIVATE "${VF_LIBRARY}")

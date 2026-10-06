@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evidence/m5/condmat-membership-20261006/run_diagnostic.py"
+  ],
+  "exit_code": 1,
+  "stage": "environment preflight, before launch",
+  "failure": "AssertionError: current SHA-256 of platform.node() differs from prior host_id_sha256.",
+  "native_calls": 0,
+  "validator_calls": 0,
+  "raw_tool_output_retained_in_conversation": true,
+  "script_sha256": "b311b648461fec82b083cf85460d14e2feb93135519d31bab764d8b375791df4"
+}

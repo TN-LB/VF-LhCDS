@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/pilot-fixed-20261005/config.json",
+    "--evidence",
+    "evidence/m5/pilot-fixed-20261005/campaign",
+    "--stop-on-failure"
+  ],
+  "exit_code": 1,
+  "wall_seconds": 177.55232983455062,
+  "finished_utc": "2026-10-05T08:30:45.705729+00:00",
+  "timing_scope": "Entire campaign driver, including validation and evidence I/O; not algorithm timing."
+}

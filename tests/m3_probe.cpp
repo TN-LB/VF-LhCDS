@@ -1,5 +1,6 @@
 // Persistent test-only adapter; no expected mathematical truth is computed here.
 #include "vflhcds/io/solution.hpp"
+#include "enumeration_equivalence.hpp"
 #include <iostream>
 
 using namespace vflhcds;
@@ -25,7 +26,7 @@ int main() {
             std::vector<BigInt> vertices; std::vector<OriginalEdge> edges;
             for(std::size_t i=0;i<n;++i)vertices.push_back(integer());
             for(std::size_t i=0;i<m;++i){const auto u=integer(),v=integer();edges.emplace_back(u,v);}
-            const Graph graph(std::move(vertices),edges); const MaterializedCliques index(graph,h);
+            const Graph graph(std::move(vertices),edges); const auto index=checked_adjacency_index(graph,h);
             const ClosureOracle oracle(index); std::vector<ChainPoint> points;
             OracleOptions options;
             while((command=token())!="end") {

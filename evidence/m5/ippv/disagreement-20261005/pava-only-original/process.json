@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-pava-only-sanitize/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "20",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/disagreement-20261005/pava-only-original",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-05T04:13:05.872923+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "3e74064ffd2b7a10afe6d460c204dea327ff8ecd610aa65927693fd042424f73",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.105812250636518,
+  "user_seconds": 1.008984,
+  "system_seconds": 0.08588799999999999,
+  "peak_rss_bytes": 237682688,
+  "finished_utc": "2026-10-05T04:13:06.980690+00:00",
+  "sha256": {
+    "stdout.txt": "79cce0d7b50431a5fa908dea4b651a6134b4464e7ddc759968a88e5753727913",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

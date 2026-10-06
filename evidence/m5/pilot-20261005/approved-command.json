@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/pilot-20261005/config.json",
+    "--evidence",
+    "evidence/m5/pilot-20261005/campaign",
+    "--stop-on-failure"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "planned_native_calls": 48,
+  "planned_validation_calls_at_most": 48,
+  "stop_on_failure": true
+}

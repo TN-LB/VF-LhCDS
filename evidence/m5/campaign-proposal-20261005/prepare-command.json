@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "experiments/prepare_input.py",
+    "--source",
+    ".deps/baselines/ippv/dataset/CA-CondMat.txt",
+    "--evidence",
+    "evidence/m5/campaign-proposal-20261005/data/ca-condmat"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 0,
+  "wall_seconds": 0.5780733749270439
+}

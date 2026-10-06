@@ -83,8 +83,8 @@ equality. Resource exhaustion must not truncate an ID, count, set or graph.
 The implemented CLI will accept:
 
 ```text
-vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off|safe] [--footprint-scan sorted|membership] [--output P]
-vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--footprint-scan sorted|membership] [--output P]
+vflhcds solve --graph G --h H (--k K | --all) [--clique-enumeration combinations|adjacency] [--core-reduction off|safe] [--footprint-scan sorted|membership] [--output P]
+vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--clique-enumeration combinations|adjacency] [--footprint-scan sorted|membership] [--output P]
 vflhcds inspect-graph --graph G
 ```
 
@@ -98,6 +98,12 @@ no core CLI option: arbitrary X/Y remain explicitly restricted. Both solve and
 oracle accept footprint-scan `sorted` or `membership`; both compute identical
 ordered footprint records. Defaults remain core off and footprint scan sorted; capacity dispatch in M2
 defaults to true auto (checked 128-bit plus actual arbitrary precision, D005).
+Both solve and oracle additionally accept `--clique-enumeration combinations|adjacency`.
+Combinations remains the default. Both construct the same ordered materialized
+clique/incidence representation; adjacency uses common-neighbor prefix extension.
+This selector changes no output, ID, counter, timing-boundary or semantic-hash
+contract. Unsupported/duplicate/missing values are invalid arguments.
+See [enumeration preservation](ENUMERATION_IMPLEMENTATION.md).
 
 Solve emits exactly the first min(k,q) LhCDSes, or all q with `--all`. Compare
 density fractions exactly, decreasing; equal densities compare sorted original-ID

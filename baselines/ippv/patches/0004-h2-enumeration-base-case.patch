@@ -1,0 +1,33 @@
+diff --git a/KClistCore.cpp b/KClistCore.cpp
+index d75372a..a8c35a0 100644
+--- a/KClistCore.cpp
++++ b/KClistCore.cpp
+@@ -557,6 +557,23 @@ unsigned long long* onepass(sparse* g, unsigned kmax, std::vector<std::vector<in
+ 	ck = (unsigned*)malloc(kmax * sizeof(unsigned));
+ 	nck = (unsigned long long*)calloc(g->n2, sizeof(unsigned long long));
+ 
++	// A 2-clique is an edge. The intersection recursion starts at size 3
++	// and cannot index the zero-length merge/size buffers for kmax == 2.
++	if (kmax == 2) {
++		for (e = 0; e < g->e2; e++) {
++			int u = static_cast<int>(g->map[g->edges[e].s]);
++			int v = static_cast<int>(g->map[g->edges[e].t]);
++			int id = static_cast<int>(clique_out.size());
++			clique_out.push_back({u, v});
++			v2cliques[u].push_back(id);
++			v2cliques[v].push_back(id);
++		}
++		free(merge);
++		free(size);
++		free(ck);
++		return nck;
++	}
++
+ 	for (e = 0; e < g->e2; e++) {
+ 		ck[0] = g->edges[e].s;
+ 		ck[1] = g->edges[e].t;
+@@ -1256,4 +1273,3 @@ std::vector<std::vector<int>>get_tritriangle(std::vector<std::vector<int>> adj,
+ 	free(g);
+ 	return clique_out;
+ }
+-

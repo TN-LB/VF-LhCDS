@@ -1,0 +1,37 @@
+[
+  {
+    "name": "metadata",
+    "url": "https://api.github.com/repos/s01bvral/DCLDS",
+    "command": "curl --fail --silent --show-error --location --max-time 30 https://api.github.com/repos/s01bvral/DCLDS > evidence/m5/dclds/preflight-20261002/metadata.json 2> evidence/m5/dclds/preflight-20261002/metadata.stderr",
+    "exit_code": 6,
+    "wall_time_seconds": 0.000010209
+  },
+  {
+    "name": "commit",
+    "url": "https://api.github.com/repos/s01bvral/DCLDS/commits/main",
+    "command": "curl --fail --silent --show-error --location --max-time 30 https://api.github.com/repos/s01bvral/DCLDS/commits/main > evidence/m5/dclds/preflight-20261002/commit.json 2> evidence/m5/dclds/preflight-20261002/commit.stderr",
+    "exit_code": 6,
+    "wall_time_seconds": 0.000011709
+  },
+  {
+    "name": "metadata-live",
+    "url": "https://api.github.com/repos/s01bvral/DCLDS",
+    "command": "curl --fail --silent --show-error --location --max-time 30 https://api.github.com/repos/s01bvral/DCLDS > evidence/m5/dclds/preflight-20261002/metadata-live.json 2> evidence/m5/dclds/preflight-20261002/metadata-live.stderr",
+    "exit_code": 0,
+    "wall_time_seconds": 0.355099709
+  },
+  {
+    "name": "commit-live",
+    "url": "https://api.github.com/repos/s01bvral/DCLDS/commits/main",
+    "command": "curl --fail --silent --show-error --location --max-time 30 https://api.github.com/repos/s01bvral/DCLDS/commits/main > evidence/m5/dclds/preflight-20261002/commit-live.json 2> evidence/m5/dclds/preflight-20261002/commit-live.stderr",
+    "exit_code": 0,
+    "wall_time_seconds": 0.530808208
+  },
+  {
+    "name": "tree-live",
+    "url": "https://api.github.com/repos/s01bvral/DCLDS/git/trees/8f23ab65e000bf6696c9230627156e47ac287b96?recursive=1",
+    "command": "curl --fail --silent --show-error --location --max-time 30 'https://api.github.com/repos/s01bvral/DCLDS/git/trees/8f23ab65e000bf6696c9230627156e47ac287b96?recursive=1' > evidence/m5/dclds/preflight-20261002/tree-live.json 2> evidence/m5/dclds/preflight-20261002/tree-live.stderr",
+    "exit_code": 0,
+    "wall_time_seconds": 0.323833833
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "experiments/run.py",
+    "--config",
+    "evidence/m5/paired-smoke-20261005/config.json",
+    "--evidence",
+    "evidence/m5/paired-smoke-20261005/campaign"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-04T16:44:34.416827+00:00",
+  "exit_code": 0,
+  "wall_seconds": 2.118570332415402,
+  "finished_utc": "2026-10-04T16:44:36.535690+00:00"
+}

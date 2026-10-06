@@ -1,0 +1,16 @@
+{
+  "parse_seconds": 0.042061041,
+  "index_seconds": 0.1166765,
+  "solve_started_elapsed_seconds": 0.158885875,
+  "completed_queries": 137,
+  "completed_mincuts": 137,
+  "cliques_scanned_in_completed_queries": 23750457,
+  "native_timeout_wall_seconds": 60.00914091710001,
+  "peak_rss_bytes": 150077440,
+  "last_completed_query_elapsed_seconds": 59.242462667,
+  "output_complete": false,
+  "inner_operation_profile": "Not measured; no attribution of gaps to a single operation.",
+  "remaining_phase": "solve",
+  "new_real_calls": 1,
+  "campaign_continued": false
+}

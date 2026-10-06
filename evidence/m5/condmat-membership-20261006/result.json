@@ -1,0 +1,27 @@
+{
+  "case": "ca-condmat-h3-k5",
+  "status": "completed",
+  "native_exit_code": 0,
+  "native_wall_seconds": 38.9970862492919,
+  "native_peak_rss_bytes": 158580736,
+  "phase_wall_seconds": {
+    "postload": 38.947295667,
+    "postindex": 38.875202292
+  },
+  "output_count": 5,
+  "termination": "k_reached",
+  "logical_queries": 304,
+  "mincuts": 304,
+  "cliques_enumerated": 173361,
+  "cliques_scanned": 52701744,
+  "external_validator_exit_code": 0,
+  "external_validator_wall_seconds": 0.40639333240687847,
+  "validation_level": "structural_checked",
+  "completeness_certified": false,
+  "semantic_sha256": "7a801f121e83253eb39f128b343a0fefcd0a392d543ec4e382393896c8b52afe",
+  "prior_sorted_query_counter_prefix_match": 137,
+  "prefix_scope": "Recorded counters only; not result-set equality or isolated timing.",
+  "native_calls": 1,
+  "unrun_in_this_diagnostic": 0,
+  "paired_comparisons": 0
+}

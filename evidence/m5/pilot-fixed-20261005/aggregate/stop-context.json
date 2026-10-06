@@ -1,0 +1,50 @@
+{
+  "reason": {
+    "kind": "unsuccessful_run",
+    "directory": "runs/0012-0",
+    "status": "timeout"
+  },
+  "case_config": {
+    "name": "ca-condmat-h3-k5",
+    "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+    "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "h": 3,
+    "k": 5,
+    "definition": false
+  },
+  "seed": 20261003,
+  "last_record": {
+    "case": "ca-condmat-h3-k5",
+    "h": 3,
+    "k": 5,
+    "repeat": 0,
+    "algorithm": "vf-adjacency-basic",
+    "status": "timeout",
+    "directory": "runs/0012-0",
+    "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+    "semantic_sha256": null,
+    "rank_latency_seconds": null,
+    "native_exit_code": -9,
+    "native_wall_seconds": 60.009898708201945,
+    "native_peak_rss_bytes": 144261120,
+    "native_user_seconds": 59.1211,
+    "native_system_seconds": 0.435166,
+    "validation_exit_code": null,
+    "validation_wall_seconds": null,
+    "validation_peak_rss_bytes": null,
+    "validation_level": "not_run",
+    "validation_passed": null,
+    "completeness_certified": false,
+    "output_count": null,
+    "phase_wall_seconds": {
+      "postload": null,
+      "postindex": null
+    },
+    "manifest_sha256": "a33912c2eca7c594855959ef743dab75e2f168a1dcb5ea8d888dd1c0ad47465a",
+    "censored": true
+  },
+  "native_process_manifest": "evidence/m5/pilot-fixed-20261005/campaign/runs/0012-0/process.json",
+  "original_graph": "evidence/m5/pilot-fixed-20261005/campaign/runs/0012-0/graph.txt",
+  "diagnosis": "Not performed; timeout alone does not locate the slow phase.",
+  "retry": "Not run."
+}

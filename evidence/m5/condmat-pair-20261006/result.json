@@ -1,0 +1,50 @@
+{
+  "case": "ca-condmat-h3-k5",
+  "native_runs": 2,
+  "external_validators": 2,
+  "metrics": [
+    {
+      "algorithm": "ippv-seven-patches",
+      "native_wall_seconds": 2.7236661668866873,
+      "peak_rss_bytes": 168968192,
+      "native_exit_code": 0,
+      "external_validator_exit_code": 0,
+      "external_validator_wall_seconds": 0.35667279083281755,
+      "phase_wall_seconds": {
+        "postload": null,
+        "postindex": null
+      },
+      "output_count": 5,
+      "semantic_sha256": "8715aabb183f30cb908b3bb6bd66d5c365085d19f4eeff6f65ee25d921c5ea50"
+    },
+    {
+      "algorithm": "vf-adjacency-membership",
+      "native_wall_seconds": 38.525397500023246,
+      "peak_rss_bytes": 143589376,
+      "native_exit_code": 0,
+      "external_validator_exit_code": 0,
+      "external_validator_wall_seconds": 0.399680208414793,
+      "phase_wall_seconds": {
+        "postload": 38.481722625,
+        "postindex": 38.40867775
+      },
+      "output_count": 5,
+      "semantic_sha256": "7a801f121e83253eb39f128b343a0fefcd0a392d543ec4e382393896c8b52afe"
+    }
+  ],
+  "comparison": {
+    "case": "ca-condmat-h3-k5",
+    "repeat": 0,
+    "algorithms": [
+      "ippv-seven-patches",
+      "vf-adjacency-membership"
+    ],
+    "level": "cross_implementation_agreement",
+    "strict_match": false,
+    "tie_aware_match": true,
+    "completeness_certified": false,
+    "note": "agreement only; input runs retain their own structural/definition evidence"
+  },
+  "unrun_in_this_diagnostic": 0,
+  "vf_matches_previous_membership_output": true
+}
