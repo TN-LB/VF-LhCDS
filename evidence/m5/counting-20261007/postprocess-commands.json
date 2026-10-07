@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/summarize.py"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "started_utc": "2026-10-07T11:14:15.611866+00:00",
+    "stdout": "aggregate.stdout",
+    "stderr": "aggregate.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-07T11:14:15.879708+00:00",
+    "stdout_sha256": "2294e1e7b7901ea8dfd45f73c603fa260720b58dd67f38fff8eb67063b06ef9c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/summarize.py",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/aggregate-replay"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "started_utc": "2026-10-07T11:14:15.880178+00:00",
+    "stdout": "regenerate.stdout",
+    "stderr": "regenerate.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-07T11:14:16.086770+00:00",
+    "stdout_sha256": "2294e1e7b7901ea8dfd45f73c603fa260720b58dd67f38fff8eb67063b06ef9c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "all_completed_outputs_and_counters_equal_within_case": true,
+  "historical_checks": [
+    {
+      "run": "runs/0000-1",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0000-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0001-1",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0001-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0002-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0002-1",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0003-1",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0003-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0004-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0004-1",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0005-0",
+      "matching_historical_outputs_and_counters": 3
+    },
+    {
+      "run": "runs/0005-1",
+      "matching_historical_outputs_and_counters": 3
+    }
+  ],
+  "scope": "exact output/counters only; no historical timing pooling"
+}

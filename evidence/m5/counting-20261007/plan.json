@@ -1,0 +1,63 @@
+{
+  "task": "P12.1 / one profile-justified count optimization",
+  "profile_evidence": "evidence/m5/fine-profile-20261007/aggregate.json",
+  "profile_sha256": "c45515d9c0607e0c0e65884c83c3776d0578b3a94c90651e2b002d646912c0b0",
+  "preservation": "docs/COUNTING_IMPLEMENTATION.md",
+  "named_tests": [
+    "T04-COUNT",
+    "T04-COUNT-CLI",
+    "existing M2 and four-mode M4 corpora with membership counting"
+  ],
+  "correctness": {
+    "profiles": [
+      "Debug",
+      "ASan+UBSan",
+      "Release"
+    ],
+    "m2_tiers": [
+      "exhaustive-small",
+      "seeded",
+      "higher-h"
+    ],
+    "m4_tiers": [
+      "smoke",
+      "exhaustive-small",
+      "seeded",
+      "higher-h"
+    ],
+    "campaign_profiles": [
+      "Debug",
+      "ASan+UBSan"
+    ],
+    "reuse": "same cases/seeds/reference and compare saved outputs with enumeration-20261003, excluding core_reduction_seconds only"
+  },
+  "performance": {
+    "graphs": [
+      "ca-grqc",
+      "ca-condmat"
+    ],
+    "h": 3,
+    "k": 5,
+    "repeats": 3,
+    "seed": 20261003,
+    "native_calls": 12,
+    "modes": [
+      "sorted",
+      "membership"
+    ],
+    "other_modes": {
+      "core": "off",
+      "footprints": "membership",
+      "enumeration": "adjacency"
+    },
+    "timeout_seconds": 60,
+    "threads": 1,
+    "memory_limit_bytes": null,
+    "cache_policy": "uncontrolled",
+    "warmups": 0,
+    "retries": 0,
+    "policy": "strict equality, preserve and continue native timeouts; stop on any other failure",
+    "final_benchmark": false
+  },
+  "scope_limit": "one count implementation change, no IPPV run, no new profiler, no further optimization loop"
+}

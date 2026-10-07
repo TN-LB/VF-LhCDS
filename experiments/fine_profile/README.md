@@ -1,5 +1,9 @@
 # Exclusive phase diagnostic
 
+This diagnostic is pinned to the source before the counting optimization. Its
+tests use the retained enumeration source snapshot; rebuilding it requires those
+pinned source bytes. It intentionally rejects later production source changes.
+
 This is P12.1/O12 profiling, not a new solver mode or an optimization. Production
 files and the existing Release binary/library remain untouched. `instrument.py`
 checks two source hashes and unique insertion anchors, then generates copies in

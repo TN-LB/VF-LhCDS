@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "reference/tests",
+    "experiments/test_harness.py",
+    "baselines/ippv/test_adapter.py",
+    "experiments/fine_profile/test_instrument.py",
+    "-q"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "exit_code": 0,
+  "reported_result": "144 passed in 6.66s",
+  "capture": "Observed completed exec session 70259; no rerun"
+}

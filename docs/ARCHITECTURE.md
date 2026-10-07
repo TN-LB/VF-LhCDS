@@ -70,6 +70,10 @@ reversible original-ID map, checksummed canonical edges. Sets: sorted vectors an
 reusable membership markers. Equality always checks full sets, not hashes alone.
 
 Materialized cliques and incidence are the only required initial storage backend.
+Its exact `count(S)` supports sorted inclusion (default) and a per-call membership
+array, selected by the index's `CliqueCounting` constructor argument. Both read
+the same immutable tuples and accumulate into `BigInt`; the selected mode applies
+to chain-point and output-component counts. See `COUNTING_IMPLEMENTATION.md`.
 Its combination builder remains the default; optional adjacency extension builds
 the same ordered tuples/incidence IDs using common-neighbor intersections and an
 explicit stack. This is one storage backend with two enumeration choices, not a

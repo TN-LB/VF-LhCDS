@@ -3,11 +3,13 @@
 
 namespace vflhcds {
 enum class CliqueEnumeration { Combinations, Adjacency };
+enum class CliqueCounting { Sorted, Membership };
 // The immutable graph must outlive this index. Copying preserves that reference.
 class MaterializedCliques {
 public:
     MaterializedCliques(const Graph& graph, BigInt h,
-                        CliqueEnumeration enumeration = CliqueEnumeration::Combinations);
+                        CliqueEnumeration enumeration = CliqueEnumeration::Combinations,
+                        CliqueCounting counting = CliqueCounting::Sorted);
     const Graph& graph() const noexcept { return graph_; }
     const BigInt& h() const noexcept { return h_; }
     const std::vector<VertexSet>& cliques() const noexcept { return cliques_; }
@@ -20,6 +22,7 @@ private:
     void enumerate_adjacency(std::size_t k);
     const Graph& graph_;
     BigInt h_;
+    CliqueCounting counting_;
     std::vector<VertexSet> cliques_;
     std::vector<std::vector<std::size_t>> incidence_;
 };

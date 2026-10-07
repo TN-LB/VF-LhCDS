@@ -59,6 +59,10 @@ VF `options` also accepts optional `enumeration`: `combinations` or `adjacency`.
 Omission keeps the historic combinations behavior and emits no new CLI option,
 so old pinned binaries remain usable. Explicit modes are saved in the frozen
 configuration and actual native command; neither changes semantic hashes.
+Optional `counting` accepts `sorted` or `membership` and emits `--clique-count`
+only when explicitly present. Omission retains the old sorted-count behavior
+and compatibility with earlier binaries. Use strict agreement for count-mode
+comparisons; the switch changes inclusion checks, not output semantics.
 Checksums pin both binaries, VF source provenance and the current IPPV source lock.
 
 Process time and peak RSS come from the native child's `wait4` record. Validation

@@ -283,6 +283,19 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   141 pytest checks pass. Source copies contain observation-only timer insertions;
   production and papers remain unchanged. This profiles a counting bottleneck,
   without implementing its optimization or completing P12.1/M5.
+  D038 [count optimization](../evidence/m5/counting-20261007/REPORT.md) implements
+  optional exact membership counting while retaining the sorted default/control.
+  Debug/Release/ASan+UBSan each pass 16/16 CTest; 144 pytest checks and all 14
+  unchanged M2/M4 corpus campaigns pass. All 1,392,496 saved responses equal the
+  earlier sorted-count corpus excluding only measured core time, with actual
+  automatic arbitrary-precision execution in every campaign. All 12 frozen
+  h=3,k=5 calls complete and pass separate structural checks; all six pairs match
+  strict output, and all completed per-case counters agree. Sorted/member native
+  medians are 0.349554/0.250145 s on GrQc and 38.791546/1.709334 s on CondMat
+  (ratios 1.40x and 22.69x). One GrQc pair is slower with membership; all runs are
+  retained. This completes one targeted change and limited comparison, not
+  broader h/k/dataset coverage or M5. Next: freeze final experiment scope;
+  no additional optimization cycle or baseline rerun follows automatically.
 - [ ] P14.1 Review conclusions against available direct baselines and validation/timing scope.
   2026-10-06: [local pilot review](../evidence/m5/pilot-membership-20261006/REPORT.md)
   checks pins, serial execution and separate validation boundaries. IPPV has
@@ -297,6 +310,9 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   D037 distinguishes complete GrQc times from the censored CondMat query prefix;
   neither one-pair overhead nor historical query-counter agreement establishes
   a general speedup or complete CondMat correctness/performance result.
+  D038 reports the count-mode medians and full ranges separately from historical
+  VF/IPPV times; strict output/counter agreement is implementation evidence.
+  No general-h, larger-k, real-graph maximality or new VF/IPPV speedup claim follows.
 - [ ] P15.1 Regenerate results from immutable manifests; clean-machine smoke; reproducibility package.
   2026-10-06: [local regeneration](../evidence/m5/pilot-membership-20261006/regeneration.json)
   reproduces all seven aggregate artifacts byte-for-byte from 461 verified raw
@@ -308,5 +324,8 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   D037 regenerates its diagnostic aggregate identically, checks 18 raw native/
   validator process records and preserves 5,243 historical evidence files. No
   clean-machine run or full reproducibility release is added.
+  D038 verifies 113 raw campaign inventory entries and regenerates nine aggregate
+  artifacts byte-for-byte. Papers/reference, historical evidence and old binaries
+  remain unchanged; clean-machine/final release gates remain open.
 
 Gate: traceable evidence, not a predetermined speedup or SOTA outcome.

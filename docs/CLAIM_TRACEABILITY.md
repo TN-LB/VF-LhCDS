@@ -651,3 +651,37 @@ native/validator process records and 5,243 unchanged historical evidence files.
 Eight native calls complete, two time out, none remain unrun. No production
 optimization, full C++ correctness/numeric-fallback campaign, clean-machine run,
 new baseline comparison or DCLDS work is added; M5 remains incomplete.
+
+## M5 exact count optimization — 2026-10-07
+
+P12.1/O01/O04/O08/O11/O12 gain [D038 executed evidence](../evidence/m5/counting-20261007/REPORT.md).
+`CliqueCounting::Membership` changes only the clique-in-set predicate inside
+`MaterializedCliques::count`; the immutable tuples and BigInt accumulation stay
+unchanged. Sorted counting remains the default and explicit control. The
+[preservation argument](COUNTING_IMPLEMENTATION.md) covers equal integer counts,
+chain parameters, ranked outputs and counter semantics; it is separate from tests.
+
+T04-COUNT checks all subsets, unrelated repeated sets, invalid sets/modes, huge h,
+isolates, both enumerators and a real automatic big-integer flow. T04-COUNT-CLI
+checks 217 calls per build across count/enumeration/core/footprint choices, output
+scopes, defaults and argument errors. Debug, Release and ASan/UBSan each pass
+16/16 CTest. Python passes 144 checks. The existing M2/M4 corpus runs through
+membership-counting probes in all 14 Debug/sanitizer campaigns; every campaign
+exercises automatic fallback. Every case manifest and all 1,392,496 saved responses
+match the earlier sorted-count corpus, excluding only `core_reduction_seconds`.
+
+The same new Release binary executes twelve predeclared count-mode calls on two
+graphs at h=3,k=5, three repeats, with prior serial/60-second/resource policies.
+All twelve complete and pass separate structural validation; all six strict pairs
+match. Completed outputs and full counters match within each case and all three
+earlier corresponding core-off runs. There is no historical timing pooling.
+Sorted/member medians: GrQc 0.349554/0.250145 s (1.40x), CondMat
+38.791546/1.709334 s (22.69x). One GrQc pair is slower with membership. These
+measurements include marker allocation/initialization and support only this local
+count-mode comparison, not a new VF/IPPV result or general performance guarantee.
+
+P14.1 gains that scoped interpretation. P15.1 gains nine byte-identically
+regenerated aggregates from 113 checked raw campaign inventory entries. Papers,
+reference, old binaries and historical evidence remain unchanged. No theorem is
+proved by finite agreement; final benchmark settings, broader experiments and
+clean-machine/release work remain open. DCLDS remains deferred; M5 is incomplete.

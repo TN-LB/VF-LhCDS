@@ -1,0 +1,30 @@
+MATCH debug-m4-smoke 10897
+MATCH debug-m4-exhaustive-small 411602
+MATCH debug-m4-seeded 175300
+MATCH debug-m4-higher-h 11410
+MATCH debug-m2-exhaustive-small 63437
+MATCH debug-m2-seeded 21981
+MATCH debug-m2-higher-h 1621
+MATCH sanitize-m4-smoke 10897
+MATCH sanitize-m4-exhaustive-small 411602
+MATCH sanitize-m4-seeded 175300
+MATCH sanitize-m4-higher-h 11410
+MATCH sanitize-m2-exhaustive-small 63437
+MATCH sanitize-m2-seeded 21981
+MATCH sanitize-m2-higher-h 1621
+{
+  "status": "passed",
+  "ctest": {
+    "Debug": "16/16",
+    "ASan_UBSan": "16/16",
+    "Release": "16/16"
+  },
+  "pytest": "144 passed in 6.66s",
+  "campaigns_passed": 14,
+  "previous_response_records_matched": 1392496,
+  "exclusion": "core_reduction_seconds only",
+  "automatic_big_flows_in_every_campaign": true,
+  "protected_files_unchanged": 5404,
+  "old_binaries_unchanged": true,
+  "scope": "finite independent-reference and old/new equivalence evidence; not a theorem proof"
+}

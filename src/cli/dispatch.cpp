@@ -22,7 +22,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
     for (std::size_t i = 1; i < args.size();) {
         const std::string key(args[i++]);
         const bool flag = solving && key == "--all";
-        const bool known = key == "--graph" || ((oracle || solving) && (key == "--h" || key == "--output" || key == "--footprint-scan" || key == "--clique-enumeration"))
+        const bool known = key == "--graph" || ((oracle || solving) && (key == "--h" || key == "--output" || key == "--footprint-scan" || key == "--clique-enumeration" || key == "--clique-count"))
             || (oracle && (key == "--lambda" || key == "--x" || key == "--y"))
             || (solving && (key == "--k" || key == "--core-reduction" || flag));
         if (!known || (!flag && i == args.size())) throw std::invalid_argument("unknown or missing option");
@@ -38,6 +38,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
     std::optional<BigInt> k;
     OracleOptions execution;
     CliqueEnumeration enumeration = CliqueEnumeration::Combinations;
+    CliqueCounting counting = CliqueCounting::Sorted;
     if (oracle || solving) {
         h = parse_integer(options.at("--h"));
         if (h < 2) throw std::invalid_argument("h < 2");
@@ -52,6 +53,11 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
         const auto& value = options.at("--footprint-scan");
         if (value == "membership") execution.footprints = FootprintMode::Membership;
         else if (value != "sorted") throw std::invalid_argument("unknown footprint scan");
+    }
+    if (options.count("--clique-count") != 0) {
+        const auto& value = options.at("--clique-count");
+        if (value == "membership") counting = CliqueCounting::Membership;
+        else if (value != "sorted") throw std::invalid_argument("unknown clique counting mode");
     }
     if (solving) {
         if (options.count("--k") != 0) {
@@ -84,7 +90,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
     bool k_reached = false;
     std::optional<Clock::time_point> postindex;
     if (oracle || solving) {
-        const MaterializedCliques index(graph, h, enumeration);
+        const MaterializedCliques index(graph, h, enumeration, counting);
         postindex = Clock::now();
         cancelled();
         if (solving) {
@@ -134,6 +140,7 @@ int run_cli(const std::vector<std::string_view>& args, std::ostream& out, std::o
                "       vflhcds solve --graph G --h H (--k K | --all) [--core-reduction off|safe] [--footprint-scan sorted|membership] [--output P]\n"
                "       vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--footprint-scan sorted|membership] [--output P]\n"
                "       solve/oracle: [--clique-enumeration combinations|adjacency] (default combinations)\n"
+               "       solve/oracle: [--clique-count sorted|membership] (default sorted)\n"
                "Contracts: docs/INTERFACE_CONTRACT.md\n";
         return exit_code(RunStatus::completed);
     }

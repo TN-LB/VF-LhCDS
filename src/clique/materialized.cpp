@@ -3,11 +3,14 @@
 #include <numeric>
 
 namespace vflhcds {
-MaterializedCliques::MaterializedCliques(const Graph& graph, BigInt h, CliqueEnumeration enumeration)
-    : graph_(graph), h_(std::move(h)), incidence_(graph.size()) {
+MaterializedCliques::MaterializedCliques(const Graph& graph, BigInt h, CliqueEnumeration enumeration,
+                                       CliqueCounting counting)
+    : graph_(graph), h_(std::move(h)), counting_(counting), incidence_(graph.size()) {
     if (h_ < 2) throw std::invalid_argument("h must be at least 2");
     if (enumeration != CliqueEnumeration::Combinations && enumeration != CliqueEnumeration::Adjacency)
         throw std::invalid_argument("unknown clique enumeration");
+    if (counting != CliqueCounting::Sorted && counting != CliqueCounting::Membership)
+        throw std::invalid_argument("unknown clique counting mode");
     if (h_ > graph.size()) return;
     const auto k = to_size(h_);
     if (enumeration == CliqueEnumeration::Adjacency) enumerate_adjacency(k);
@@ -70,7 +73,15 @@ void MaterializedCliques::enumerate_adjacency(const std::size_t k) {
 BigInt MaterializedCliques::count(const VertexSet& set) const {
     graph_.validate_set(set);
     BigInt result = 0;
-    for (const auto& clique : cliques_) if (subset(clique, set)) ++result;
+    if (counting_ == CliqueCounting::Membership) {
+        Membership members(graph_.size());
+        members.assign(set);
+        for (const auto& clique : cliques_)
+            if (std::all_of(clique.begin(), clique.end(),
+                            [&](const VertexId vertex) { return members.contains(vertex); })) ++result;
+    } else {
+        for (const auto& clique : cliques_) if (subset(clique, set)) ++result;
+    }
     return result;
 }
 }  // namespace vflhcds

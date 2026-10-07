@@ -160,6 +160,37 @@ def test_enumeration_config_and_native_command(tmp_path, enumeration):
         load_config(path)
 
 
+@pytest.mark.parametrize('counting', [None, 'sorted', 'membership'])
+def test_counting_config_and_native_command(tmp_path, counting):
+    algorithm = fake_binary(tmp_path, 'print("partial")\n')
+    algorithm.update(kind='vf', sha256=sha256(algorithm['executable']))
+    save(Path(algorithm['executable']).with_suffix('.provenance.json'),
+         {'executable_sha256': algorithm['sha256'], 'source_sha256': {}})
+    if counting is not None:
+        algorithm['options']['counting'] = counting
+    graph_path = tmp_path / 'input.graph'
+    graph_path.write_text('vflhcds-graph 1\nn 2\nv 0\nv 1\nm 1\ne 0 1\n')
+    config = {'schema_version': 1, 'name': 'count-test', 'scope': 'diagnostic', 'seed': 0,
+              'repeats': 1, 'threads': 1, 'timeout_seconds': 5, 'memory_limit_bytes': None,
+              'cache_policy': 'uncontrolled', 'algorithms': [algorithm],
+              'cases': [{'name': 'edge', 'graph': str(graph_path), 'sha256': sha256(graph_path),
+                         'h': 2, 'k': 1, 'definition': True}]}
+    path = tmp_path / 'config.json'
+    save(path, config)
+    assert load_config(path) == config
+    result = run_vf(algorithm, Graph((0, 1), ((0, 1),)), config['cases'][0], tmp_path / 'run', 5)
+    command = result['native']['command']
+    if counting is None:
+        assert '--clique-count' not in command
+    else:
+        assert command[-2:] == ['--clique-count', counting]
+    for invalid in ('automatic', None):
+        algorithm['options']['counting'] = invalid
+        save(path, config)
+        with pytest.raises(ValueError, match='invalid VF switches'):
+            load_config(path)
+
+
 def execute_fixture(tmp_path, monkeypatch, outcome, *, stop_on_failure, continue_on_timeout=False,
                     require_strict_agreement=False):
     """Exercise scheduling/evidence control with deterministic injected outcomes."""

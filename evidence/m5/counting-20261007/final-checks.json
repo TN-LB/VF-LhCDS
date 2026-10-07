@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "production_files_changed": [
+    "CMakeLists.txt",
+    "include/vflhcds/clique/materialized.hpp",
+    "src/cli/dispatch.cpp",
+    "src/clique/materialized.cpp"
+  ],
+  "protected_files_unchanged": 5404,
+  "old_binaries_unchanged": true,
+  "ctest": {
+    "Debug": "16/16",
+    "ASan_UBSan": "16/16",
+    "Release": "16/16"
+  },
+  "pytest": "144 passed in 6.66s",
+  "differential_campaigns": 14,
+  "matched_old_responses": 1392496,
+  "native_completed": 12,
+  "native_unrun": 0,
+  "strict_pairs": 6,
+  "structural_validators_passed": 12,
+  "raw_inventory_entries": 113,
+  "regenerated_artifacts": 9,
+  "changed_inventory_entries": 324,
+  "files_changed_sha256": "50a7461fc71e335bb367be9f9cc26dc318c7560d222838a04b0bed19e6938baa",
+  "scope": "one exact count optimization and bounded mode comparison; M5 remains open"
+}

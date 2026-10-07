@@ -47,7 +47,11 @@ def load_config(path):
             raise ValueError('binary provenance mismatch')
         options = algorithm['options']
         if algorithm['kind'] == 'vf':
-            if set(options) not in ({'core', 'footprints'}, {'core', 'footprints', 'enumeration'}) or options['core'] not in ('off', 'safe') or options['footprints'] not in ('sorted', 'membership') or options.get('enumeration', 'combinations') not in ('combinations', 'adjacency'):
+            if (not {'core', 'footprints'} <= set(options)
+                    or not set(options) <= {'core', 'footprints', 'enumeration', 'counting'}
+                    or options['core'] not in ('off', 'safe') or options['footprints'] not in ('sorted', 'membership')
+                    or options.get('enumeration', 'combinations') not in ('combinations', 'adjacency')
+                    or options.get('counting', 'sorted') not in ('sorted', 'membership')):
                 raise ValueError('invalid VF switches')
             for name, digest in provenance['source_sha256'].items():
                 if sha256(ROOT / name) != digest:
@@ -96,6 +100,8 @@ def run_vf(algorithm, graph, case, output, timeout):
                '--core-reduction', options['core'], '--footprint-scan', options['footprints']]
     if 'enumeration' in options:
         command += ['--clique-enumeration', options['enumeration']]
+    if 'counting' in options:
+        command += ['--clique-count', options['counting']]
     native = capture(command, output, timeout)
     manifest = {'algorithm': algorithm, 'build_provenance': json.loads(binary.with_suffix('.provenance.json').read_text()),
                 'graph_sha256': graph_sha256(graph), 'h': case['h'], 'k': case['k'], 'native': native,

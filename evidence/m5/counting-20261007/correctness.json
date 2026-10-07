@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "ctest": {
+    "Debug": "16/16",
+    "ASan_UBSan": "16/16",
+    "Release": "16/16"
+  },
+  "pytest": "144 passed in 6.66s",
+  "campaigns_passed": 14,
+  "previous_response_records_matched": 1392496,
+  "exclusion": "core_reduction_seconds only",
+  "automatic_big_flows_in_every_campaign": true,
+  "protected_files_unchanged": 5404,
+  "old_binaries_unchanged": true,
+  "scope": "finite independent-reference and old/new equivalence evidence; not a theorem proof"
+}

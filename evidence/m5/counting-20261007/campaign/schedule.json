@@ -1,0 +1,50 @@
+[
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 0,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 1,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "ca-grqc-h3-k5",
+    "repeat": 2,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "case": "ca-condmat-h3-k5",
+    "repeat": 0,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "ca-condmat-h3-k5",
+    "repeat": 1,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "case": "ca-condmat-h3-k5",
+    "repeat": 2,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  }
+]

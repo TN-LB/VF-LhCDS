@@ -1,0 +1,50 @@
+RUN 0 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake -S /Users/nost/Documents/VF-LhCDS -B /Users/nost/Documents/VF-LhCDS/build-counting-debug -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS= -DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python -DVFLHCDS_ENABLE_SANITIZERS=OFF -DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON
+EXIT 0
+RUN 1 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake --build /Users/nost/Documents/VF-LhCDS/build-counting-debug -j2
+EXIT 0
+RUN 2 /Users/nost/Documents/VF-LhCDS/.venv/bin/ctest --test-dir /Users/nost/Documents/VF-LhCDS/build-counting-debug --output-on-failure -V
+EXIT 0
+RUN 3 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m3_probe --tier smoke --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m4-smoke
+EXIT 0
+RUN 4 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m3_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m4-exhaustive-small
+EXIT 0
+RUN 5 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m3_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m4-seeded
+EXIT 0
+RUN 6 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m3_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m4-higher-h
+EXIT 0
+RUN 7 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m2_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m2-exhaustive-small
+EXIT 0
+RUN 8 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m2_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m2-seeded
+EXIT 0
+RUN 9 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-debug/vflhcds_m2_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/debug-m2-higher-h
+EXIT 0
+RUN 10 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake -S /Users/nost/Documents/VF-LhCDS -B /Users/nost/Documents/VF-LhCDS/build-counting-sanitize -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS= -DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python -DVFLHCDS_ENABLE_SANITIZERS=ON -DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON
+EXIT 0
+RUN 11 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake --build /Users/nost/Documents/VF-LhCDS/build-counting-sanitize -j2
+EXIT 0
+RUN 12 /Users/nost/Documents/VF-LhCDS/.venv/bin/ctest --test-dir /Users/nost/Documents/VF-LhCDS/build-counting-sanitize --output-on-failure -V
+EXIT 0
+RUN 13 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m3_probe --tier smoke --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m4-smoke
+EXIT 0
+RUN 14 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m3_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m4-exhaustive-small
+EXIT 0
+RUN 15 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m3_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m4-seeded
+EXIT 0
+RUN 16 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/m4_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m3_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m4-higher-h
+EXIT 0
+RUN 17 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m2_probe --tier exhaustive-small --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m2-exhaustive-small
+EXIT 0
+RUN 18 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m2_probe --tier seeded --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m2-seeded
+EXIT 0
+RUN 19 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/validation/oracle_campaign.py --probe /Users/nost/Documents/VF-LhCDS/build-counting-sanitize/vflhcds_m2_probe --tier higher-h --output /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/sanitize-m2-higher-h
+EXIT 0
+RUN 20 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake -S /Users/nost/Documents/VF-LhCDS -B /Users/nost/Documents/VF-LhCDS/build-counting-release -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS= -DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python -DVFLHCDS_ENABLE_SANITIZERS=OFF -DVFLHCDS_TEST_COUNT_MEMBERSHIP=OFF
+EXIT 0
+RUN 21 /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake --build /Users/nost/Documents/VF-LhCDS/build-counting-release -j2
+EXIT 0
+RUN 22 /Users/nost/Documents/VF-LhCDS/.venv/bin/ctest --test-dir /Users/nost/Documents/VF-LhCDS/build-counting-release --output-on-failure -V
+EXIT 0
+RUN 23 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/experiments/build_vf.py --build /Users/nost/Documents/VF-LhCDS/build-m5-counting-release --evidence /Users/nost/Documents/VF-LhCDS/evidence/m5/counting-20261007/checks/production-build --cmake /Users/nost/Documents/VF-LhCDS/.venv/bin/cmake
+EXIT 0
+RUN 24 /Users/nost/Documents/VF-LhCDS/.venv/bin/python /Users/nost/Documents/VF-LhCDS/scripts/verify_papers.py
+EXIT 0

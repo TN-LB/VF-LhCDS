@@ -104,6 +104,11 @@ clique/incidence representation; adjacency uses common-neighbor prefix extension
 This selector changes no output, ID, counter, timing-boundary or semantic-hash
 contract. Unsupported/duplicate/missing values are invalid arguments.
 See [enumeration preservation](ENUMERATION_IMPLEMENTATION.md).
+Both also accept `--clique-count sorted|membership`, default `sorted`. Membership
+counting changes only exact induced-clique inclusion checks; it preserves output,
+status, IDs, counts, semantic hashes and existing counter meanings. The option is
+invalid for inspect-graph; missing/duplicate/unsupported values are invalid
+arguments. See [counting preservation and costs](COUNTING_IMPLEMENTATION.md).
 
 Solve emits exactly the first min(k,q) LhCDSes, or all q with `--all`. Compare
 density fractions exactly, decreasing; equal densities compare sorted original-ID
