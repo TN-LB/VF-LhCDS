@@ -8,9 +8,10 @@ Current position (2026-10-08): **M5, final-scope preparation**. M0–M4 and the
 D038 targeted counting change are complete at their recorded scopes; no further
 optimization cycle is planned. The [current completion plan](M5_COMPLETION_PLAN.md)
 sets three remaining packages: freeze/prepare, execute/aggregate, review/reproduce.
-D040 proposes 360 native calls with five fixed repeats; the proposal is unrun and
-does not complete P11.2/P12.1 or any other M5 gate. Draft pins, schedule/count checks
-and readiness findings are in [the review pack](../evidence/m5/final-scope-20261008/checks.json).
+D040 selects 360 native calls with five fixed repeats. Accepted configs and
+[executed harness readiness](../evidence/m5/final-evaluation-20261008/REPORT.md)
+are separate from the immutable draft pack. Preparation does not complete P12.1
+or the final evaluation; status/results will be recorded after actual execution.
 
 ## M0 - Freeze contracts and bootstrap (prompt 00)
 

@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-07T16:53:17.064880+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "head": "e20f82df22dc01b4713d9e742cb9fd6ef0904088",
+  "dirty_tree": " M docs/DECISIONS.md\n M docs/M5_COMPLETION_PLAN.md\n M experiments/README.md\n M experiments/run.py\n M experiments/test_harness.py\n M experiments/validate.py\n?? evidence/m5/final-evaluation-20261008/\n?? experiments/environment.py\n",
+  "script_sha256": {
+    "experiments/__init__.py": "f4b5ce0232d6d690302c7a91c59066637f93e8b2b426ae356137f5ab83464548",
+    "experiments/build_vf.py": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "experiments/environment.py": "3fef194b9e1d6ca19cd5c465793caf3e0ed13e1fcd2d365c45c48da2c890a017",
+    "experiments/prepare_input.py": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "experiments/run.py": "ee9fd125b8b38d14fedfd19181594144bb2d87f3a31a043cd203c8ca5e0a4cf3",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/test_harness.py": "b2f2014cfb32c8aac167806d3de5d697ad4461958ecd5364b26e7712725fd654",
+    "experiments/validate.py": "722bff0ba6650a2be8894bf770efd119b47bff7fcec7815fbffd7a5bf86e62bc"
+  },
+  "configuration_sha256": "fcaf580179fee6b120b53696a2a9647d6b9bb500b494df7f418fba1c5a168546",
+  "schedule_sha256": "50b6233975d31702b619b6f81256a1713b1d424de717a3b30627d23051192463",
+  "execution_policy_sha256": "d6b4409398e60ade6ce760218ce6ac9400461865e8f77ef4df73fb94938f4c3f"
+}

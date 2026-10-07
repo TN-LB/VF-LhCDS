@@ -192,7 +192,8 @@ def test_counting_config_and_native_command(tmp_path, counting):
 
 
 def execute_fixture(tmp_path, monkeypatch, outcome, *, stop_on_failure, continue_on_timeout=False,
-                    require_strict_agreement=False):
+                    require_strict_agreement=False, require_prefix_agreement=False,
+                    environment_samples=None, interrupt_after=None):
     """Exercise scheduling/evidence control with deterministic injected outcomes."""
     import experiments.run as runner
 
@@ -208,6 +209,14 @@ def execute_fixture(tmp_path, monkeypatch, outcome, *, stop_on_failure, continue
               'cases': [{'name': 'two-triangles', 'graph': str(graph), 'sha256': sha256(graph),
                          'h': 2, 'k': 1, 'definition': False}]}
     calls = []
+    if require_prefix_agreement:
+        config['algorithms'][1]['options']['output'] = 'all'
+    baseline_path = None
+    if environment_samples is not None:
+        baseline_path = tmp_path / 'environment-baseline.json'
+        save(baseline_path, environment_samples[0])
+        samples = iter(environment_samples)
+        monkeypatch.setattr(runner, 'snapshot', lambda: next(samples))
 
     def fake_run(algorithm, graph, case, output, timeout):
         calls.append(algorithm['name'])
@@ -226,7 +235,10 @@ def execute_fixture(tmp_path, monkeypatch, outcome, *, stop_on_failure, continue
     output = tmp_path / 'campaign'
     code = runner.execute(tmp_path / 'unused-config.json', output, stop_on_failure=stop_on_failure,
                           continue_on_timeout=continue_on_timeout,
-                          require_strict_agreement=require_strict_agreement)
+                          require_strict_agreement=require_strict_agreement,
+                          require_prefix_agreement=require_prefix_agreement,
+                          environment_baseline=baseline_path,
+                          interrupted=(lambda: len(calls) >= interrupt_after) if interrupt_after is not None else None)
     inventory = json.loads((output / 'checksums.json').read_text())
     assert all(sha256(output / name) == digest for name, digest in inventory.items())
     return code, output, calls, json.loads((output / 'summary.json').read_text())
@@ -359,3 +371,134 @@ def test_ablation_strict_policy_all_equal_completes(tmp_path, monkeypatch):
     assert code == 0 and len(calls) == 6
     assert all(p['strict_match'] for p in summary['comparisons'])
     assert not (output / 'stopped.json').exists()
+
+
+def test_full_definition_includes_isolates_and_rejects_missing_tail():
+    graph = Graph((0, 1, 2), ((0, 1),))
+    first = record([0, 1])
+    last = dict(record([2], 0, 0, 1), rank=2)
+    full = json_line(first) + json_line(last)
+    checked, _ = validate(graph, 2, None, full, definition=True, strict=True)
+    assert checked['passed'] and checked['completeness_certified']
+    assert 'at_most_k' not in checked['checks']
+    assert not validate(graph, 2, None, json_line(first), definition=True, strict=True)[0]['passed']
+    assert validate(graph, 2, 1, json_line(first), definition=True, strict=True)[0]['passed']
+
+
+@pytest.mark.parametrize('k', [1, 2, 5])
+def test_prefix_including_exhaustion_and_cutoff_order(k):
+    from experiments.validate import compare_prefix
+    full = [record([0, 1]), dict(record([2, 3]), rank=2)]
+    result = compare_prefix(full[:k], full, k)
+    assert result['prefix_match'] and not result['completeness_certified']
+    assert result['expected_prefix_count'] == min(k, 2)
+    assert not compare_prefix([record([2, 3])], full, k)['prefix_match']
+    assert not compare_prefix([], full, k)['prefix_match']
+
+
+@pytest.mark.parametrize('bad', [False, 0, -1, '5', None])
+def test_prefix_rejects_invalid_length(bad):
+    from experiments.validate import compare_prefix
+    with pytest.raises(ValueError, match='positive prefix'):
+        compare_prefix([], [], bad)
+
+
+def test_full_native_and_external_validator_scope(tmp_path):
+    graph = Graph((0, 1, 2), ((0, 1),))
+    rows = [record([0, 1]), dict(record([2], 0, 0, 1), rank=2)]
+    text = ''.join(map(json_line, rows))
+    status = {'schema_version': 1, 'status': 'completed', 'complete': True, 'output_count': 2,
+              'semantic_sha256': semantic_hash(graph, 2, rows)}
+    body = 'import sys\nsys.stdout.write(' + repr(text) + ')\nsys.stderr.write(' + repr(json.dumps(status)) + ')\n'
+    algorithm = fake_binary(tmp_path, body)
+    algorithm['options']['output'] = 'all'
+    result = run_vf(algorithm, graph, {'h': 2, 'k': 1, 'definition': True}, tmp_path / 'run', 5)
+    assert result['status'] == 'completed' and result['validation']['completeness_certified']
+    assert result['k'] is None
+    for item in ('native', 'external_validation'):
+        assert '--all' in result[item]['command'] and '--k' not in result[item]['command']
+    assert result['native']['finished_utc'] <= result['external_validation']['started_utc']
+
+
+@pytest.mark.parametrize('variant', ['no-prefix', 'both-flags', 'different-core', 'different-binary', 'both-full'])
+def test_prefix_scope_guard(variant):
+    import copy
+    from experiments.run import validate_comparison
+    a = {'name': 'a', 'kind': 'vf', 'executable': 'same', 'sha256': 'pin', 'options': {'core': 'off'}}
+    b = copy.deepcopy(a)
+    b.update(name='b', options={'core': 'off', 'output': 'all'})
+    if variant == 'different-core': b['options']['core'] = 'safe'
+    if variant == 'different-binary': b['executable'] = 'another'
+    if variant == 'both-full': a['options']['output'] = 'all'
+    with pytest.raises(ValueError):
+        validate_comparison({'algorithms': [a, b]}, variant == 'both-flags', variant != 'no-prefix')
+
+
+@pytest.mark.parametrize('mismatch', [False, True])
+def test_prefix_campaign_is_order_independent_and_stops_mismatch(tmp_path, monkeypatch, mismatch):
+    first, second = record([0, 1]), dict(record([3, 4]), rank=2)
+    def outcome(name, index):
+        if name == 'b': return [first, second]
+        return [record([3, 4])] if mismatch else [first]
+    code, output, calls, summary = execute_fixture(tmp_path, monkeypatch, outcome,
+        stop_on_failure=True, require_prefix_agreement=True)
+    assert code == int(mismatch) and len(calls) == (2 if mismatch else 6)
+    assert all(p['prefix_match'] is not mismatch for p in summary['comparisons'])
+    assert all('strict_match' not in p for p in summary['comparisons'])
+    if mismatch:
+        assert json.loads((output / 'stopped.json').read_text())['reason']['required_agreement'] == 'prefix_match'
+    else:
+        assert len({tuple(p['algorithms']) for p in summary['comparisons']}) == 2
+
+
+def test_prefix_timeout_retains_uncomparable_pair(tmp_path, monkeypatch):
+    code, output, calls, summary = execute_fixture(tmp_path, monkeypatch,
+        lambda name, index: 'timeout' if index == 1 else [record([0, 1])],
+        stop_on_failure=True, continue_on_timeout=True, require_prefix_agreement=True)
+    assert code == 1 and len(calls) == 6
+    assert summary['comparisons'][0]['level'] == 'not_compared'
+    assert all(p['prefix_match'] for p in summary['comparisons'][1:])
+
+
+def test_power_guard_retains_completed_block_and_stops_before_next(tmp_path, monkeypatch):
+    normal = {'power_state': {'source': 'AC Power', 'settings_sha256': 'one'}}
+    changed = {'power_state': {'source': 'Battery Power', 'settings_sha256': 'one'}}
+    code, output, calls, summary = execute_fixture(tmp_path, monkeypatch,
+        lambda name, index: [record([0, 1])], stop_on_failure=True,
+        environment_samples=[normal, changed])
+    assert code == 1 and len(calls) == 2 and summary['comparisons'][0]['strict_match']
+    stopped = json.loads((output / 'stopped.json').read_text())
+    assert stopped['reason']['kind'] == 'power_condition_changed' and len(stopped['unrun']) == 4
+    assert json.loads((output / 'block-0000-after.json').read_text()) == changed
+
+
+def test_missing_power_evidence_stops_without_native_run(tmp_path, monkeypatch):
+    missing = {'power_state': {'source': None, 'settings_sha256': None}}
+    code, output, calls, summary = execute_fixture(tmp_path, monkeypatch,
+        lambda name, index: [record([0, 1])], stop_on_failure=True, environment_samples=[missing])
+    assert code == 1 and not calls and not summary['runs']
+    assert len(json.loads((output / 'stopped.json').read_text())['unrun']) == 6
+
+
+@pytest.mark.parametrize('after', [0, 1, 2])
+def test_external_interruption_preserves_records_without_next_child(tmp_path, monkeypatch, after):
+    code, output, calls, summary = execute_fixture(tmp_path, monkeypatch,
+        lambda name, index: [record([0, 1])], stop_on_failure=True, interrupt_after=after)
+    assert code == 1 and len(calls) == len(summary['runs']) == after
+    stopped = json.loads((output / 'stopped.json').read_text())
+    assert stopped['reason']['kind'] == 'external_interruption' and len(stopped['unrun']) == 6 - after
+
+
+def test_readonly_environment_unavailable_probes_and_power_mode(monkeypatch):
+    import subprocess
+    from experiments import environment
+    monkeypatch.setattr(environment.subprocess, 'run', lambda *a, **k: (_ for _ in ()).throw(OSError('denied')))
+    assert environment.probe(['unavailable'])['available'] is False
+    monkeypatch.setattr(environment.subprocess, 'run', lambda *a, **k: (_ for _ in ()).throw(subprocess.TimeoutExpired('probe', 5)))
+    assert environment.probe(['unavailable'])['available'] is False
+    observations = {'power_source': {'available': True, 'stdout': "Now drawing from 'AC Power'\n"},
+                    'power_settings': {'available': True, 'stdout': 'AC Power:\n lowpowermode 0\n'}}
+    normal = {'power_state': environment.power_state(observations)}
+    assert environment.power_change(normal, normal) is None
+    observations['power_settings']['stdout'] = 'AC Power:\n lowpowermode 1\n'
+    assert environment.power_change(normal, {'power_state': environment.power_state(observations)})['kind'] == 'power_condition_changed'

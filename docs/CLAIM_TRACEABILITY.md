@@ -706,3 +706,20 @@ are added. O12's reporting scope is clarified, not newly proved or algorithmical
 validated. Full-mode/prefix and per-block observation support, final configuration,
 all 360 proposed native calls and release work remain unrun. No M5 task is newly
 completed; DCLDS remains deferred.
+
+## D040 execution readiness — 2026-10-08
+
+P11.1/P11.2/P12.1 gain [external-harness readiness](../evidence/m5/final-evaluation-20261008/REPORT.md).
+The selected five-repeat scope has three executable configs with unchanged
+draft graph/binary pins and schedule order. `validate_comparison` rejects mixed
+binary/feature prefix comparisons; `compare_prefix` requires the exact ranked
+fixed-k prefix, including exhaustion/zero-density tails. Full external validation
+uses explicit all scope. Read-only block observations are excluded from native
+timing; power changes, missing required power observations and interruption retain
+completed records and an explicit unrun ledger. No load-based filtering exists.
+
+Final reference/adapter/harness pytest passes 164 tests. Six tiny VF calls and
+definition validators pass; three strict prefix comparisons pass. These exercise
+O09/O12 contracts without modifying or reproving the solver. Production/reference/
+baseline algorithm sources and papers stay unchanged. C++/sanitizer rebuilds,
+the 360 native measurements and release work are not completed by readiness.

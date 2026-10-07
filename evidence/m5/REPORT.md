@@ -1,26 +1,25 @@
 # M5 status — 2026-10-08
 
-M5 is at **final-scope preparation**. Development optimization is closed; the
+M5 is at **final experiment readiness**. Development optimization is closed; the
 [current completion plan](../../docs/M5_COMPLETION_PLAN.md) orders the remaining
 work as scope/readiness, one coordinated batch, then conclusion/reproduction
 review. Earlier measurements remain separate development evidence.
 
-The [scope review pack](final-scope-20261008/REPORT.md) proposes two graphs,
+The [final evaluation](final-evaluation-20261008/REPORT.md) uses two graphs,
 h={3,4,5}, the existing k grid, B-core and B-stop, with five fixed repetitions:
-360 native calls. It is a non-executable draft; no final batch has run. Checks
-verify both input/binary pins, 40 production-source hashes, seven baseline patches,
-four unchanged papers and 113 prior raw inventory entries. Existing harness tests
-pass 49/49. Full-mode/prefix harness support and per-block environment observations
-remain to be prepared; source algorithms are unchanged.
+360 native calls. Accepted configs preserve the immutable draft pins/schedule.
+Full-mode/prefix support and block environment recording are implemented;
+164 Python checks, six tiny definition validators and three strict prefix pairs
+pass. Source algorithms are unchanged. Final measurements have not yet started.
 
 The preparation snapshot records AC power with low-power mode off and about
 6,082 MiB of allocated swap. This does not establish active swapping, an idle
 host or its effect on any earlier measurement. Recheck before measurement and
 retain load/power observations; temperature and frequency were not measured.
 
-No M5 gate is newly completed by this planning work. Final scope/resources,
-IPPV's full-domain limitation, claim-dependent baseline exclusions and
-clean-machine reproduction remain explicit in the completion plan.
+Readiness does not complete P12.1/M5. IPPV's full-domain limitation,
+claim-dependent baseline exclusions and clean-machine reproduction remain explicit
+in the completion plan.
 
 ## Latest executed algorithm work — 2026-10-07
 

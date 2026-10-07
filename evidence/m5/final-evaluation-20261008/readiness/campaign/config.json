@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "name": "full-prefix-readiness",
+  "scope": "diagnostic",
+  "seed": 20261003,
+  "repeats": 1,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "algorithms": [
+    {
+      "name": "vf-count-membership-core-off",
+      "kind": "vf",
+      "executable": "build-m5-counting-release/vflhcds",
+      "sha256": "e6b78dc8a1fc979b03da64f4939cbf160c090f7055737e671bf0453bdafc984b",
+      "options": {
+        "core": "off",
+        "footprints": "membership",
+        "enumeration": "adjacency",
+        "counting": "membership"
+      }
+    },
+    {
+      "name": "vf-count-membership-all",
+      "kind": "vf",
+      "executable": "build-m5-counting-release/vflhcds",
+      "sha256": "e6b78dc8a1fc979b03da64f4939cbf160c090f7055737e671bf0453bdafc984b",
+      "options": {
+        "core": "off",
+        "footprints": "membership",
+        "enumeration": "adjacency",
+        "counting": "membership",
+        "output": "all"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "triangle_and_isolate-h3-k1",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 3,
+      "k": 1,
+      "definition": true
+    },
+    {
+      "name": "bridged_triangles-h3-k5",
+      "graph": "reference/fixtures/bridged_triangles.graph",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "h": 3,
+      "k": 5,
+      "definition": true
+    },
+    {
+      "name": "triangle_and_isolate-h5-k5",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 5,
+      "k": 5,
+      "definition": true
+    }
+  ]
+}

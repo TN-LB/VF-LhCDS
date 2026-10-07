@@ -1,0 +1,129 @@
+{
+  "runs": [
+    {
+      "case": "triangle_and_isolate-h3-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "status": "completed",
+      "output_scope": "all",
+      "directory": "runs/0000-1",
+      "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "semantic_sha256": "6996e5a4862c60477167ec31a22669c4e9090d843603ecfe6c097e1859dbc586",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "triangle_and_isolate-h3-k1",
+      "h": 3,
+      "k": 1,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0000-0",
+      "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "semantic_sha256": "19206e3468fb7cd8758fc558fa271c840b64df364891b2349b66b267447437aa",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged_triangles-h3-k5",
+      "h": 3,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "status": "completed",
+      "output_scope": "all",
+      "directory": "runs/0001-1",
+      "graph_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "semantic_sha256": "feedfaf525b40551fd02ca870fe7de038332999c61b5c74e7d66df7187d7766c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "bridged_triangles-h3-k5",
+      "h": 3,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0001-0",
+      "graph_sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "semantic_sha256": "feedfaf525b40551fd02ca870fe7de038332999c61b5c74e7d66df7187d7766c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "triangle_and_isolate-h5-k5",
+      "h": 5,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0002-0",
+      "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "semantic_sha256": "49970a94e31bc2f123994469803ff74c695066d388773e27513095e04e838120",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "triangle_and_isolate-h5-k5",
+      "h": 5,
+      "k": 5,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "status": "completed",
+      "output_scope": "all",
+      "directory": "runs/0002-1",
+      "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "semantic_sha256": "49970a94e31bc2f123994469803ff74c695066d388773e27513095e04e838120",
+      "rank_latency_seconds": null
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "triangle_and_isolate-h3-k1",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-all",
+        "vf-count-membership-core-off"
+      ],
+      "level": "fixed_full_prefix_agreement",
+      "prefix_match": true,
+      "fixed_count": 1,
+      "full_count": 2,
+      "expected_prefix_count": 1,
+      "completeness_certified": false,
+      "note": "strict prefix agreement only; full-run maximality/completeness is not certified"
+    },
+    {
+      "case": "bridged_triangles-h3-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-all",
+        "vf-count-membership-core-off"
+      ],
+      "level": "fixed_full_prefix_agreement",
+      "prefix_match": true,
+      "fixed_count": 1,
+      "full_count": 1,
+      "expected_prefix_count": 1,
+      "completeness_certified": false,
+      "note": "strict prefix agreement only; full-run maximality/completeness is not certified"
+    },
+    {
+      "case": "triangle_and_isolate-h5-k5",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-all"
+      ],
+      "level": "fixed_full_prefix_agreement",
+      "prefix_match": true,
+      "fixed_count": 2,
+      "full_count": 2,
+      "expected_prefix_count": 2,
+      "completeness_certified": false,
+      "note": "strict prefix agreement only; full-run maximality/completeness is not certified"
+    }
+  ]
+}

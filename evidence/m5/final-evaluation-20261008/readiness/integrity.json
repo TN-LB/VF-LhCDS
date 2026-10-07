@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "production_source_hashes_match": true,
+  "papers_unchanged": 4,
+  "harness_matches_final_test_hashes": true,
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  "benchmark_calls": 0
+}

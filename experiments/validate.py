@@ -52,18 +52,19 @@ def parse_records(text, graph, h):
 
 
 def validate(graph, h, k, text, *, definition=False, strict=False):
-    if type(h) is not int or h < 2 or type(k) is not int or k < 1:
-        raise ValueError('h>=2,k>=1 required')
+    if type(h) is not int or h < 2 or (k is not None and (type(k) is not int or k < 1)):
+        raise ValueError('h>=2 and k>=1 or explicit full output required')
     records = parse_records(text, graph, h)
     masks = [graph.mask(r['vertices']) for r in records]
     counts = [count_cliques(graph, mask, h) for mask in masks]
     densities = [Fraction(count, mask.bit_count()) for count, mask in zip(counts, masks)]
-    checks = {'at_most_k': len(records) <= k,
-              'connected': all(graph.connected(mask) for mask in masks),
+    checks = {'connected': all(graph.connected(mask) for mask in masks),
               'exact_counts': all(int(r['clique_count']) == count for r, count in zip(records, counts)),
               'exact_densities': all(Fraction(int(r['density_num']), int(r['density_den'])) == density
                                      for r, density in zip(records, densities)),
               'density_order': all(a >= b for a, b in zip(densities, densities[1:]))}
+    if k is not None:
+        checks['at_most_k'] = len(records) <= k
     if strict:
         checks['lexicographic_ties'] = all(a != b or x['vertices'] < y['vertices']
                                           for a, b, x, y in zip(densities, densities[1:], records, records[1:]))
@@ -103,18 +104,30 @@ def compare(left, right, k):
             'note': 'agreement only; input runs retain their own structural/definition evidence'}
 
 
+def compare_prefix(fixed, full, k):
+    """Compare an already validated fixed-k run with its exact full-output prefix."""
+    if type(k) is not int or k < 1:
+        raise ValueError('positive prefix length required')
+    return {'level': 'fixed_full_prefix_agreement', 'prefix_match': fixed == full[:k],
+            'fixed_count': len(fixed), 'full_count': len(full),
+            'expected_prefix_count': min(k, len(full)), 'completeness_certified': False,
+            'note': 'strict prefix agreement only; full-run maximality/completeness is not certified'}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--graph', type=Path, required=True)
     parser.add_argument('--records', type=Path, required=True)
     parser.add_argument('--status', type=Path)
     parser.add_argument('--h', type=int, required=True)
-    parser.add_argument('--k', type=int, required=True)
+    scope = parser.add_mutually_exclusive_group(required=True)
+    scope.add_argument('--k', type=int)
+    scope.add_argument('--all', action='store_true')
     parser.add_argument('--definition', action='store_true')
     parser.add_argument('--strict', action='store_true')
     args = parser.parse_args()
     try:
-        if args.h < 2 or args.k < 1:
+        if args.h < 2 or (not args.all and args.k < 1):
             raise ValueError('h>=2,k>=1 required')
         graph = parse_graph(args.graph.read_text())
         result, records = validate(graph, args.h, args.k, args.records.read_text(), definition=args.definition, strict=args.strict)

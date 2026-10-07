@@ -4,6 +4,14 @@ Plan revision: 2026-09-09; execution notes appended below. This is a plan and
 audit checklist; only the dated notes linked to logs report executed work.
 No baseline has yet passed its complete build and validation gate.
 
+D040 scope (2026-10-08): the final local batch compares the existing seven-patch
+IPPV with VF on two bundled graphs at h=3/4/5. No further baseline acquisition is
+part of this batch. DCLDS remains deferred; h=2 is unmeasured. LDS-Opt/LDScvx and
+LTDScvx/flow specializations are excluded from this bounded VF-versus-IPPV study,
+not established unavailable or inferior. Accordingly no h=3 specialization/SOTA
+claim is made. P10.1's broader audit and IPPV's zero-density coverage gap remain
+open; see [the completion plan](M5_COMPLETION_PLAN.md).
+
 Current scope under owner decision D029 (2026-10-02): further DCLDS reading,
 acquisition, comparison and integration are deferred. Continue independent
 VF-LhCDS/IPPV work. The DCLDS stop record below is historical and does not block

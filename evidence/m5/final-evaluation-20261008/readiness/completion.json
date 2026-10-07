@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "pytest": "........................................................................ [ 44%]\n........................................................................ [ 89%]\n.................                                                        [100%]\n161 passed in 5.14s",
+  "tiny_native_calls": 6,
+  "definition_checks_passed": 6,
+  "strict_prefix_pairs": 3,
+  "fixture_manifest": [
+    {
+      "name": "triangle_and_isolate-h3-k1",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 3,
+      "k": 1,
+      "definition": true
+    },
+    {
+      "name": "bridged_triangles-h3-k5",
+      "graph": "reference/fixtures/bridged_triangles.graph",
+      "sha256": "dec63ac51cf31230c388d475722ebcce31ebd30eb155b3a35a9e455ca0672fb6",
+      "h": 3,
+      "k": 5,
+      "definition": true
+    },
+    {
+      "name": "triangle_and_isolate-h5-k5",
+      "graph": "reference/fixtures/triangle_and_isolate.graph",
+      "sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+      "h": 5,
+      "k": 5,
+      "definition": true
+    }
+  ],
+  "benchmark_native_calls": 0,
+  "config_sha256": {
+    "main": "2885b687568f7f59354e00ac0d7365ecec57f564515f6555f5f28a4c3336406a",
+    "core": "aa94e279829ebc1e202174ca671211163d5f157d01841dbbde00d1417263fc85",
+    "stop": "69cc0416d1b19a77b5219868f19cf7aa1fffff11377da8c6bb0dad1f0907108e"
+  }
+}

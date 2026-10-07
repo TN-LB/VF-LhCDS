@@ -1,0 +1,45 @@
+{
+  "stop_on_failure": true,
+  "require_strict_agreement": false,
+  "require_prefix_agreement": true,
+  "environment_baseline": null,
+  "continue_on_timeout": false,
+  "planned_runs": [
+    {
+      "case": "triangle_and_isolate-h3-k1",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "directory": "runs/0000-1"
+    },
+    {
+      "case": "triangle_and_isolate-h3-k1",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0000-0"
+    },
+    {
+      "case": "bridged_triangles-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "directory": "runs/0001-1"
+    },
+    {
+      "case": "bridged_triangles-h3-k5",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0001-0"
+    },
+    {
+      "case": "triangle_and_isolate-h5-k5",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0002-0"
+    },
+    {
+      "case": "triangle_and_isolate-h5-k5",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-all",
+      "directory": "runs/0002-1"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "triangle_and_isolate-h3-k1",
+    "repeat": 0,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "bridged_triangles-h3-k5",
+    "repeat": 0,
+    "algorithm_indices": [
+      1,
+      0
+    ]
+  },
+  {
+    "case": "triangle_and_isolate-h5-k5",
+    "repeat": 0,
+    "algorithm_indices": [
+      0,
+      1
+    ]
+  }
+]

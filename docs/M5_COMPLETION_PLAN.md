@@ -10,7 +10,7 @@ This file is the current execution plan; earlier campaign records remain histori
 | Work package | Status | Evidence / next deliverable |
 |---|---|---|
 | One targeted count optimization | Complete | [D038 report](../evidence/m5/counting-20261007/REPORT.md); implementation commit `0315c5d` |
-| Freeze evaluation scope and prepare execution | In progress | Concrete D040 proposal below; graph/binary pins and draft schedules in [review pack](../evidence/m5/final-scope-20261008/plan.json) |
+| Freeze evaluation scope and prepare execution | Scope selected; readiness passes | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); final environment recorded at launch |
 | Execute and aggregate the frozen suite | Unrun | All scheduled successes, failures and timeouts; separate validators; median and spread; no historical timing pooling |
 | Review conclusions and reproduce release | Open | P14.1/P15.1: claim audit, aggregate regeneration, fresh build/smoke and explicit clean-machine status |
 
@@ -46,16 +46,16 @@ which affected measurements must be repeated. Never pool different executable
 versions or silently substitute a repaired result. D028 still governs routine
 IPPV defect repairs; a new problem/output-policy conflict stops its affected path.
 
-## Proposed final local evaluation — D040, not yet frozen
+## Final local evaluation — D040, five repetitions selected
 
-The recommended scope uses the two already normalized IPPV-bundled artifacts,
+The selected scope uses the two already normalized IPPV-bundled artifacts,
 selected by local availability. It extends h coverage without new data acquisition.
 It is a bounded local evaluation, not the full candidate dataset pool or a broad
-specialization/SOTA comparison. Final scope/resource choices require a decision
-under AGENTS.md; preparation does not turn the following proposal into an accepted
-campaign. Every generated configuration retains `scope: draft`.
+specialization/SOTA comparison. D040 now records the selected five-repeat scope.
+The original review-pack drafts remain immutable; executable configs and actual
+readiness/results are stored separately in [final evaluation evidence](../evidence/m5/final-evaluation-20261008/).
 
-| Setting | Proposed value |
+| Setting | Selected value |
 |---|---|
 | Graphs | CA-GrQc: n=5,242, m=14,484; CA-CondMat: n=23,133, m=93,439; exact hashes in review pack |
 | Main comparison | VF versus seven-patch IPPV; h={3,4,5}, k={5,10,15,20} |
@@ -79,11 +79,8 @@ cause system pressure; the current runner does not enforce a safe physical-RAM c
 
 Five fixed repeats make the spread more visible than the pilot's three; they do
 not eliminate load/thermal bias or justify small differences as significant.
-Alternative A retains three repeats: **216 native calls**, 3.6 hours of native
-guards plus at most 3.6 hours of validator guards, with less repetition evidence.
-Alternative B first chooses a dedicated host/larger dataset program; that needs
-new resource/data pins and postpones this local final batch. No alternative is
-silently selected on the basis of performance.
+The earlier three-repeat and dedicated-host alternatives remain in the immutable
+review pack. Neither is selected for this batch.
 
 ## Environment and measurement protocol
 
@@ -145,7 +142,8 @@ remain separately identified unless subsequently resolved or explicitly rescoped
    pins and counts without launching algorithms; record current readiness gaps.
 2. Reuse the existing runner. Add only full-mode validation/prefix comparison and
    observation records needed above; test those failure paths and tiny fixtures.
-   These harness additions are still unimplemented in this planning update.
+   Implemented and tested: 164 pytest checks, six tiny definition checks and three
+   strict prefix pairs pass. Production sources and binaries stay unchanged.
 3. Freeze the accepted config, actual environment, runner/source hashes and whole
    schedule before any measured call. Drafts cannot launch; readiness checks are
    not performance measurements. Recheck pins at launch.

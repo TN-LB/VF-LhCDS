@@ -6,12 +6,14 @@ import math
 from pathlib import Path
 import platform
 import random
+import signal
 import subprocess
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from experiments.support import ROOT, canonical_graph, capture, file_hashes, graph_sha256, parse_graph, run_ippv, save, semantic_hash, sha256
-from experiments.validate import compare, parse_records
+from experiments.validate import compare, compare_prefix, parse_records
+from experiments.environment import snapshot, power_change
 
 
 def load_config(path):
@@ -48,10 +50,11 @@ def load_config(path):
         options = algorithm['options']
         if algorithm['kind'] == 'vf':
             if (not {'core', 'footprints'} <= set(options)
-                    or not set(options) <= {'core', 'footprints', 'enumeration', 'counting'}
+                    or not set(options) <= {'core', 'footprints', 'enumeration', 'counting', 'output'}
                     or options['core'] not in ('off', 'safe') or options['footprints'] not in ('sorted', 'membership')
                     or options.get('enumeration', 'combinations') not in ('combinations', 'adjacency')
-                    or options.get('counting', 'sorted') not in ('sorted', 'membership')):
+                    or options.get('counting', 'sorted') not in ('sorted', 'membership')
+                    or options.get('output', 'fixed') not in ('fixed', 'all')):
                 raise ValueError('invalid VF switches')
             for name, digest in provenance['source_sha256'].items():
                 if sha256(ROOT / name) != digest:
@@ -96,7 +99,9 @@ def run_vf(algorithm, graph, case, output, timeout):
     (output / 'graph.txt').write_text(canonical_graph(graph))
     binary = (ROOT / algorithm['executable']).resolve()
     options = algorithm['options']
-    command = [str(binary), 'solve', '--graph', str(output / 'graph.txt'), '--h', str(case['h']), '--k', str(case['k']),
+    full = options.get('output', 'fixed') == 'all'
+    scope_args = ['--all'] if full else ['--k', str(case['k'])]
+    command = [str(binary), 'solve', '--graph', str(output / 'graph.txt'), '--h', str(case['h']), *scope_args,
                '--core-reduction', options['core'], '--footprint-scan', options['footprints']]
     if 'enumeration' in options:
         command += ['--clique-enumeration', options['enumeration']]
@@ -104,7 +109,7 @@ def run_vf(algorithm, graph, case, output, timeout):
         command += ['--clique-count', options['counting']]
     native = capture(command, output, timeout)
     manifest = {'algorithm': algorithm, 'build_provenance': json.loads(binary.with_suffix('.provenance.json').read_text()),
-                'graph_sha256': graph_sha256(graph), 'h': case['h'], 'k': case['k'], 'native': native,
+                'graph_sha256': graph_sha256(graph), 'h': case['h'], 'k': None if full else case['k'], 'native': native,
                 'status': native['status'], 'validation': {'level': 'not_run'},
                 'phase_wall_seconds': {'postload': None, 'postindex': None}}
     try:
@@ -122,7 +127,7 @@ def run_vf(algorithm, graph, case, output, timeout):
             validation_dir.mkdir()
             cmd = [sys.executable, str(ROOT / 'experiments/validate.py'), '--graph', str(output / 'graph.txt'),
                    '--records', str(output / 'stdout.txt'), '--status', str(output / 'stderr.txt'),
-                   '--h', str(case['h']), '--k', str(case['k']), '--strict']
+                   '--h', str(case['h']), *scope_args, '--strict']
             if case['definition']:
                 cmd.append('--definition')
             external = capture(cmd, validation_dir, timeout)
@@ -146,11 +151,29 @@ def run_vf(algorithm, graph, case, output, timeout):
     return manifest
 
 
+def validate_comparison(config, require_strict_agreement, require_prefix_agreement):
+    algorithms = config['algorithms']
+    full = [a for a in algorithms if a['options'].get('output', 'fixed') == 'all']
+    if require_prefix_agreement:
+        if require_strict_agreement or len(algorithms) != 2 or len(full) != 1 or any(a['kind'] != 'vf' for a in algorithms):
+            raise ValueError('prefix agreement requires exactly one fixed/full VF pair, without whole-output strict mode')
+        normalized = [{k: v for k, v in a.items() if k != 'name'} for a in algorithms]
+        normalized = [{**a, 'options': {k: v for k, v in a['options'].items() if k != 'output'}} for a in normalized]
+        if normalized[0] != normalized[1]:
+            raise ValueError('prefix pair must differ only in output scope')
+    elif full:
+        raise ValueError('full-output runs require explicit prefix agreement')
+
+
 def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=False,
-            require_strict_agreement=False):
+            require_strict_agreement=False, require_prefix_agreement=False, environment_baseline=None,
+            interrupted=None):
     if continue_on_timeout and not stop_on_failure:
         raise ValueError('continue_on_timeout requires stop_on_failure')
     config = load_config(config_path)
+    validate_comparison(config, require_strict_agreement, require_prefix_agreement)
+    baseline = json.loads(Path(environment_baseline).read_text()) if environment_baseline is not None else None
+    agreement_key = 'prefix_match' if require_prefix_agreement else ('strict_match' if require_strict_agreement else 'tie_aware_match')
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
     save(output / 'config.json', config)
@@ -161,6 +184,8 @@ def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=F
                for block_id, block in enumerate(blocks) for index in block['algorithm_indices']]
     save(output / 'execution-policy.json', {'stop_on_failure': stop_on_failure,
                                           'require_strict_agreement': require_strict_agreement,
+                                          'require_prefix_agreement': require_prefix_agreement,
+                                          'environment_baseline': baseline,
                                           'continue_on_timeout': continue_on_timeout, 'planned_runs': planned})
     save(output / 'environment.json', {
         'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'platform': platform.platform(),
@@ -170,15 +195,37 @@ def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=F
         'configuration_sha256': sha256(output / 'config.json'), 'schedule_sha256': sha256(output / 'schedule.json'),
         'execution_policy_sha256': sha256(output / 'execution-policy.json')})
     cases = {case['name']: case for case in config['cases']}
+    full_names = {a['name'] for a in config['algorithms'] if a['options'].get('output') == 'all'}
     rows, comparisons = [], []
+    save(output / 'summary.json', {'runs': rows, 'comparisons': comparisons})
+
+    def stop(reason):
+        recorded = {row['directory'] for row in rows}
+        save(output / 'stopped.json', {'reason': reason, 'planned_count': len(planned),
+                                      'recorded_count': len(rows),
+                                      'unrun': [run for run in planned if run['directory'] not in recorded]})
+        save(output / 'checksums.json', file_hashes(output))
+        return 1
+
     for block_id, block in enumerate(blocks):
         stop_reason = None
+        if interrupted is not None and interrupted():
+            return stop({'kind': 'external_interruption'})
+        if baseline is not None:
+            before = snapshot()
+            save(output / f'block-{block_id:04d}-before.json', before)
+            reason = power_change(baseline, before)
+            if reason is not None:
+                return stop(reason)
         case = cases[block['case']]
         graph = parse_graph((ROOT / case['graph']).read_text())
         if graph_sha256(graph) != case['sha256']:
             raise RuntimeError('input changed after configuration was frozen')
         done = []
         for index in block['algorithm_indices']:
+            if interrupted is not None and interrupted():
+                stop_reason = {'kind': 'external_interruption'}
+                break
             algorithm = config['algorithms'][index]
             run_dir = output / 'runs' / f'{block_id:04d}-{index}'
             # Recheck before every child; provenance mutation cannot silently change a campaign.
@@ -197,6 +244,7 @@ def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=F
                 save(run_dir / 'driver-error.json', manifest)
             row = {'case': case['name'], 'h': case['h'], 'k': case['k'], 'repeat': block['repeat'],
                    'algorithm': algorithm['name'], 'status': manifest['status'],
+                   'output_scope': algorithm['options'].get('output', 'fixed'),
                    'directory': str(run_dir.relative_to(output)), 'graph_sha256': graph_sha256(graph),
                    'semantic_sha256': None, 'rank_latency_seconds': None}
             if manifest['status'] == 'completed':
@@ -218,8 +266,11 @@ def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=F
                 if ma['status'] == mb['status'] == 'completed' and ma['validation'].get('passed') and mb['validation'].get('passed'):
                     left = parse_records((pa / 'canonical_output.jsonl').read_text(), graph, case['h'])
                     right = parse_records((pb / 'canonical_output.jsonl').read_text(), graph, case['h'])
-                    record.update(compare(left, right, case['k']))
-                    agreement_key = 'strict_match' if require_strict_agreement else 'tie_aware_match'
+                    if require_prefix_agreement:
+                        fixed, full = (right, left) if a['algorithm'] in full_names else (left, right)
+                        record.update(compare_prefix(fixed, full, case['k']))
+                    else:
+                        record.update(compare(left, right, case['k']))
                     if stop_on_failure and not record[agreement_key]:
                         stop_reason = {'kind': 'output_disagreement', 'case': case['name'],
                                        'repeat': block['repeat'], 'algorithms': record['algorithms'],
@@ -228,16 +279,18 @@ def execute(config_path, output, *, stop_on_failure=False, continue_on_timeout=F
                     record.update(level='not_compared', reason='one or both runs failed or lacked validation')
                 comparisons.append(record)
         save(output / 'summary.json', {'runs': rows, 'comparisons': comparisons})
+        if interrupted is not None and interrupted():
+            stop_reason = stop_reason or {'kind': 'external_interruption'}
+        if baseline is not None:
+            after = snapshot()
+            save(output / f'block-{block_id:04d}-after.json', after)
+            reason = power_change(baseline, after)
+            if reason is not None:
+                stop_reason = stop_reason or reason
         if stop_reason is not None:
-            recorded = {row['directory'] for row in rows}
-            save(output / 'stopped.json', {'reason': stop_reason, 'planned_count': len(planned),
-                                          'recorded_count': len(rows),
-                                          'unrun': [run for run in planned if run['directory'] not in recorded]})
-            save(output / 'checksums.json', file_hashes(output))
-            return 1
+            return stop(stop_reason)
     # Final inventory is written once after all outputs; individual run manifests are immutable.
     save(output / 'checksums.json', file_hashes(output))
-    agreement_key = 'strict_match' if require_strict_agreement else 'tie_aware_match'
     return 0 if all(r['status'] == 'completed' for r in rows) and all(c.get(agreement_key) for c in comparisons) else 1
 
 
@@ -251,7 +304,19 @@ if __name__ == '__main__':
                         help='With --stop-on-failure, retain native timeouts and continue the frozen schedule; no retries')
     parser.add_argument('--require-strict-agreement', action='store_true',
                         help='Require identical canonical records for equivalent solver modes; default permits cutoff ties')
+    parser.add_argument('--require-prefix-agreement', action='store_true',
+                        help='Require fixed-k output to equal the strict prefix of the same VF full run')
+    parser.add_argument('--environment-baseline', type=Path,
+                        help='Record before/after block observations and stop on power-condition changes')
     args = parser.parse_args()
+    interruption = {'requested': False}
+    def request_stop(signum, frame):
+        interruption['requested'] = True
+    signal.signal(signal.SIGINT, request_stop)
+    signal.signal(signal.SIGTERM, request_stop)
     raise SystemExit(execute(args.config, args.evidence, stop_on_failure=args.stop_on_failure,
                             continue_on_timeout=args.continue_on_timeout,
-                            require_strict_agreement=args.require_strict_agreement))
+                            require_strict_agreement=args.require_strict_agreement,
+                            require_prefix_agreement=args.require_prefix_agreement,
+                            environment_baseline=args.environment_baseline,
+                            interrupted=lambda: interruption['requested']))

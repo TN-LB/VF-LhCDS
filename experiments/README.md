@@ -63,6 +63,25 @@ Optional `counting` accepts `sorted` or `membership` and emits `--clique-count`
 only when explicitly present. Omission retains the old sorted-count behavior
 and compatibility with earlier binaries. Use strict agreement for count-mode
 comparisons; the switch changes inclusion checks, not output semantics.
+Optional VF `output` is `fixed` (default) or `all`; the latter passes explicit
+`--all` to both native solver and external validator. Case `k` stays the target
+prefix length. Full-output configs require `--require-prefix-agreement`, exactly
+two VF modes with identical binary/options except output scope, and no simultaneous
+whole-output strict flag. The comparator checks `fixed == full[:k]`, including
+exhaustion and the accepted tie order. It does not compare their full hashes or
+claim real-graph completeness from agreement. Manifest k is null for the full run;
+summary `output_scope` records which task was executed.
+
+`--environment-baseline PATH` enables D040's before/after block observations via
+`environment.py`. Save an AC-power snapshot before launch and reuse it across all
+three suites. Power-source/settings changes or missing required power evidence
+stop subsequent calls and retain an unrun ledger; unavailable VM/swap probes are
+recorded without fabrication. Load never triggers filtering or retries. Probes
+run outside native timing; they are not continuous monitoring or host reservation.
+The default without this flag preserves the historical runner behavior.
+CLI SIGINT/SIGTERM requests retain the current guarded run and stop before the
+next child; completed records and every unrun call remain in the ledger. These
+signals do not initiate retries or accept partial output.
 Checksums pin both binaries, VF source provenance and the current IPPV source lock.
 
 Process time and peak RSS come from the native child's `wait4` record. Validation
