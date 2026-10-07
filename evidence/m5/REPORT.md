@@ -1,4 +1,28 @@
-# M5 status — 2026-10-07
+# M5 status — 2026-10-08
+
+M5 is at **final-scope preparation**. Development optimization is closed; the
+[current completion plan](../../docs/M5_COMPLETION_PLAN.md) orders the remaining
+work as scope/readiness, one coordinated batch, then conclusion/reproduction
+review. Earlier measurements remain separate development evidence.
+
+The [scope review pack](final-scope-20261008/REPORT.md) proposes two graphs,
+h={3,4,5}, the existing k grid, B-core and B-stop, with five fixed repetitions:
+360 native calls. It is a non-executable draft; no final batch has run. Checks
+verify both input/binary pins, 40 production-source hashes, seven baseline patches,
+four unchanged papers and 113 prior raw inventory entries. Existing harness tests
+pass 49/49. Full-mode/prefix harness support and per-block environment observations
+remain to be prepared; source algorithms are unchanged.
+
+The preparation snapshot records AC power with low-power mode off and about
+6,082 MiB of allocated swap. This does not establish active swapping, an idle
+host or its effect on any earlier measurement. Recheck before measurement and
+retain load/power observations; temperature and frequency were not measured.
+
+No M5 gate is newly completed by this planning work. Final scope/resources,
+IPPV's full-domain limitation, claim-dependent baseline exclusions and
+clean-machine reproduction remain explicit in the completion plan.
+
+## Latest executed algorithm work — 2026-10-07
 
 M5 remains **in progress**. The [targeted count optimization](counting-20261007/REPORT.md)
 is implemented and validated. `--clique-count membership` uses exact vertex
@@ -24,11 +48,9 @@ earlier corpus after excluding only measured core time. Production optimization
 changes no mathematical semantics; papers/reference and historical records remain
 unchanged. Finite tests do not prove the theorem.
 
-The next work package is to freeze the final experiment scope: datasets/h/k,
-resource limits, applicable baseline comparisons and IPPV's known zero-density
-coverage limitation. Then execute that suite and finish conclusion/reproduction
-checks. This count change does not complete P12.1 or M5; no further optimization
-loop is launched. DCLDS remains deferred.
+The count change does not complete P12.1 or M5. Follow the current completion
+plan above for the next work; no further optimization loop is launched. DCLDS
+remains deferred.
 
 Earlier [core ablation](core-ablation-20261006/REPORT.md) and
 [VF/IPPV pilot](pilot-membership-20261006/REPORT.md) remain separate historical

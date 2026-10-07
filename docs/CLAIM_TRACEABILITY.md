@@ -685,3 +685,24 @@ regenerated aggregates from 113 checked raw campaign inventory entries. Papers,
 reference, old binaries and historical evidence remain unchanged. No theorem is
 proved by finite agreement; final benchmark settings, broader experiments and
 clean-machine/release work remain open. DCLDS remains deferred; M5 is incomplete.
+
+## M5 scope/readiness preparation — 2026-10-08
+
+P11.2/P14.1 gain a [concrete proposed scope and remaining-gate map](M5_COMPLETION_PLAN.md),
+with [executed preparation checks](../evidence/m5/final-scope-20261008/REPORT.md).
+D039 closes development optimization; D040 is only a proposal. The review pack
+checks two graph and two executable pins, 40 production-source hashes, seven
+baseline patch hashes, the four paper hashes and 113 prior raw inventory entries.
+Both supported-schema drafts are rejected for execution and pass separate read-only
+schema/pin checks; deterministic schedule counts are 240 main, 60 core and 60 stop.
+The stop specification is explicitly not supported by the current runner.
+
+Existing harness tests pass 49/49. A preparation-time hardware/load/VM/power
+snapshot and successful read-only hardware/swap retry are recorded, without
+changing system settings. This is not continuous monitoring or a controlled-load
+benchmark. No production/reference/experimental-harness source changes, native
+solver/baseline runs, C++ builds, sanitizer campaigns or new mathematical evidence
+are added. O12's reporting scope is clarified, not newly proved or algorithmically
+validated. Full-mode/prefix and per-block observation support, final configuration,
+all 360 proposed native calls and release work remain unrun. No M5 task is newly
+completed; DCLDS remains deferred.

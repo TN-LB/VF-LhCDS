@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "utc": "2026-10-07T16:33:31.611076+00:00",
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "local_markdown_links_checked": 194,
+  "changed_files_sha256": {
+    "docs/CLAIM_TRACEABILITY.md": "9f036189661762de2bd4e7ade4017b0b3efd3ccde1cd2a009f4347fde585efe6",
+    "docs/DECISIONS.md": "db6af7f6edb28d10cf24bbf3ba44b59cf61234d8b50fca8918ada9fd1cebb04a",
+    "docs/EXPERIMENT_PLAN.md": "4e4d819725a527aa70464bd31d7ed76193cec9c1bb1b2658aa6503f0cc9b5fb1",
+    "docs/IMPLEMENTATION_PLAN.md": "753b4bc066aab74c378494d9ae0137bcc264d23e2662dc2ddec02365fc4d35ce",
+    "docs/M5_COMPLETION_PLAN.md": "4238d4d652ebc381cfb03dd97a7c638ad1091c6f83bbff813610b91165012a83",
+    "docs/TASKS.md": "f9c5c8419049bf9f85964a08659ee46372d1df9128392905f257367d33cc82a3",
+    "evidence/m5/REPORT.md": "9b37f4766876706485beab49b57e7ad6dd180840a9febd9a88e1f668a9b55f31",
+    "evidence/m5/final-scope-20261008/REPORT.md": "2c3765549a7037c917d49269630ebef79a114dda5ba0c615cbf49d8bd9a7c3cf",
+    "evidence/m5/final-scope-20261008/checks.json": "0dd918a6184741f2696f836f9918707a1273842b6fad87b576fd36097fb67b40",
+    "evidence/m5/final-scope-20261008/core.draft.json": "cd5fa39cb3ac8e76a86f31b590cfb7aa73cde8299d2a1cd7fb99718de022ea9a",
+    "evidence/m5/final-scope-20261008/environment.json": "b080e2c720b9783d409bf902eb87c9ac3c13933195c232bf2a0f319a1b5ca9fa",
+    "evidence/m5/final-scope-20261008/hardware-retry.json": "38db83add137e433e9a39afc8c9958c873e62d312be5a77e457f99f884b89b09",
+    "evidence/m5/final-scope-20261008/main.draft.json": "1d2423bcc27aec647181c9d0619112ada12d023f535bb34eaa11ff4ef73e6c97",
+    "evidence/m5/final-scope-20261008/plan.json": "825ad8c2e4db1eae8b4463676d83acdcdd0906e3ad50fe082c3f9c092658f6fa",
+    "evidence/m5/final-scope-20261008/prepare-command.json": "209c160ef0bf8676b488940bd40e1a2461d80422d821241b0dc1d9a1dc52060a",
+    "evidence/m5/final-scope-20261008/prepare.py": "d438a6ffe126aa49819c08284435492892182089e7e2634ee2a798c7e74ec7d7",
+    "evidence/m5/final-scope-20261008/prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/m5/final-scope-20261008/prepare.stdout": "0dd918a6184741f2696f836f9918707a1273842b6fad87b576fd36097fb67b40",
+    "evidence/m5/final-scope-20261008/pytest-command.json": "d121d29dc43ed45ec4015cad4afd809843879f397a302c1ce96b73661badfee0",
+    "evidence/m5/final-scope-20261008/pytest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/m5/final-scope-20261008/pytest.stdout": "e347917f606b090e51510eed6cc2c9abd00f5d084accff75f8c8ab976059da40",
+    "evidence/m5/final-scope-20261008/schedules.json": "67e5caa24017b03b5a05c14c674a4eaf7ac916a3836ef58bb4aa3ccfed13360c",
+    "evidence/m5/final-scope-20261008/stop.draft.json": "b4ae2714046e72404feaa6190792125ff188b390eac94c3079363aab9e4d6937"
+  },
+  "self_excluded": [
+    "evidence/m5/final-scope-20261008/final-checks.json"
+  ],
+  "production_reference_harness_changes": 0,
+  "new_native_benchmark_calls": 0,
+  "pytest": "49 passed in 4.74s",
+  "scope": "documentation/review pack; final precommit check, not milestone completion"
+}

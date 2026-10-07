@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "scope": "draft",
+  "name": "final-local-stop-draft-20261008",
+  "runner_ready": false,
+  "algorithm": {
+    "name": "vf-count-membership-core-off",
+    "kind": "vf",
+    "executable": "build-m5-counting-release/vflhcds",
+    "sha256": "e6b78dc8a1fc979b03da64f4939cbf160c090f7055737e671bf0453bdafc984b",
+    "options": {
+      "core": "off",
+      "footprints": "membership",
+      "enumeration": "adjacency",
+      "counting": "membership"
+    }
+  },
+  "cases": [
+    {
+      "name": "ca-grqc-h3-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-grqc-h4-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 4,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-grqc-h5-k5",
+      "graph": "evidence/m5/harness-20261003/data/ca-grqc/graph.txt",
+      "sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "h": 5,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h3-k5",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 3,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h4-k5",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 4,
+      "k": 5,
+      "definition": false
+    },
+    {
+      "name": "ca-condmat-h5-k5",
+      "graph": "evidence/m5/campaign-proposal-20261005/data/ca-condmat/graph.txt",
+      "sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "h": 5,
+      "k": 5,
+      "definition": false
+    }
+  ],
+  "repeats": 5,
+  "seed": 20261003,
+  "threads": 1,
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "cache_policy": "uncontrolled",
+  "modes": [
+    "fixed-k",
+    "all"
+  ],
+  "native_scope_arguments": {
+    "fixed-k": [
+      "--k",
+      "5"
+    ],
+    "all": [
+      "--all"
+    ]
+  },
+  "comparison": "strict fixed output equals full_output[:5], including exhaustion/ties",
+  "missing_support": [
+    "explicit full-output config/validator support",
+    "strict fixed/full prefix comparator in existing runner"
+  ]
+}

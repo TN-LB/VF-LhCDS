@@ -4,6 +4,13 @@ Revision: 2026-09-09. Required scope is M5 in `IMPLEMENTATION_PLAN.md`.
 Dataset lists below are candidate pools, not a requirement to run every combination.
 Freeze the actual machine/configuration before measurement; no results are assumed.
 
+Execution update, D039 (2026-10-08): the development optimization cycle is closed.
+Use [the current M5 completion plan](M5_COMPLETION_PLAN.md) for progress, remaining
+gates and the concrete D040 final-local-scope proposal. Earlier pilots remain
+development evidence; do not pool their timings with the final batch. D040 is a
+proposal, not a frozen campaign. The candidate lists and optional figures below
+do not automatically enlarge its workload or establish completed evidence.
+
 Execution update, D029 (2026-10-02): the owner deferred further DCLDS reading and
 integration. For the current stage, proceed with independent VF-LhCDS/IPPV
 preparation and validation. References to DCLDS below remain future comparison
@@ -228,7 +235,7 @@ The primary comparison remains T_e2e and algorithm-process peak RSS.
 2. Build all algorithms with documented compilers and release flags.
 3. Validate every wrapper on toy instances.
 4. Randomize algorithm run order within each `(dataset,h,k,repeat)` block.
-5. Run at least three measured repetitions for feasible cases; use more when variance is high.
+5. Freeze repetition count and any variance-triggered extension rule before launch. Run at least three measured repetitions for feasible cases; report observed spread, without post-hoc favorable selection. D040 proposes five fixed repeats and no adaptive extension.
 6. Record one immutable manifest and full stdout/stderr per run.
 7. Use `/usr/bin/time -v` or an equivalent wrapper for wall time and peak RSS.
 8. Do not reuse a partially written result after timeout.

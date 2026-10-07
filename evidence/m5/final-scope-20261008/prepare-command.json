@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-scope-20261008/prepare.py"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-07T16:29:25.039587+00:00",
+  "finished_utc": "2026-10-07T16:29:31.119176+00:00",
+  "exit_code": 0,
+  "stdout": "prepare.stdout",
+  "stderr": "prepare.stderr"
+}

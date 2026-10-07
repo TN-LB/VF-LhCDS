@@ -1,0 +1,97 @@
+{
+  "utc": "2026-10-07T16:29:30.984534+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "load_average": [
+    2.1826171875,
+    2.09228515625,
+    1.9521484375
+  ],
+  "observations": [
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "utc": "2026-10-07T16:29:31.010637+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "available": false
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "utc": "2026-10-07T16:29:31.017907+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "available": false
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "utc": "2026-10-07T16:29:31.022412+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "available": false
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "vm.swapusage"
+      ],
+      "utc": "2026-10-07T16:29:31.027748+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "available": false
+    },
+    {
+      "command": [
+        "/usr/bin/vm_stat"
+      ],
+      "utc": "2026-10-07T16:29:31.033412+00:00",
+      "exit_code": 0,
+      "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                               11649.\nPages active:                            253388.\nPages inactive:                          253788.\nPages speculative:                          971.\nPages throttled:                              0.\nPages wired down:                        158306.\nPages purgeable:                             91.\n\"Translation faults\":               12382927620.\nPages copy-on-write:                  345036038.\nPages zero filled:                   6415814135.\nPages reactivated:                   2127558170.\nPages purged:                         590763639.\nFile-backed pages:                       187358.\nAnonymous pages:                         320789.\nPages stored in compressor:             1904018.\nPages occupied by compressor:            334741.\nDecompressions:                      2069948572.\nCompressions:                        2513250949.\nPageins:                              349864072.\nPageouts:                               8158795.\nSwapins:                                3283759.\nSwapouts:                               4639741.\n",
+      "stderr": "",
+      "available": true
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "batt"
+      ],
+      "utc": "2026-10-07T16:29:31.038921+00:00",
+      "exit_code": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35192931)\t75%; AC attached; not charging present: true\n",
+      "stderr": "",
+      "available": true
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "custom"
+      ],
+      "utc": "2026-10-07T16:29:31.051747+00:00",
+      "exit_code": 0,
+      "stdout": "AC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         20\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n",
+      "stderr": "",
+      "available": true
+    }
+  ],
+  "scope": "one preparation-time snapshot; not benchmark monitoring or a reserved/idle host",
+  "temperature": null,
+  "cpu_frequency": null,
+  "system_settings_changed": false
+}

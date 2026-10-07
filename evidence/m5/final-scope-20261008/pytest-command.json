@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "-m",
+    "pytest",
+    "experiments/test_harness.py",
+    "-q"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "started_utc": "2026-10-07T16:30:32.177728+00:00",
+  "finished_utc": "2026-10-07T16:30:37.313792+00:00",
+  "exit_code": 0,
+  "stdout": "pytest.stdout",
+  "stderr": "pytest.stderr",
+  "scope": "existing harness guard/failure/validation tests; no VF or IPPV benchmark run"
+}

@@ -4,6 +4,14 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
+Current position (2026-10-08): **M5, final-scope preparation**. M0–M4 and the
+D038 targeted counting change are complete at their recorded scopes; no further
+optimization cycle is planned. The [current completion plan](M5_COMPLETION_PLAN.md)
+sets three remaining packages: freeze/prepare, execute/aggregate, review/reproduce.
+D040 proposes 360 native calls with five fixed repeats; the proposal is unrun and
+does not complete P11.2/P12.1 or any other M5 gate. Draft pins, schedule/count checks
+and readiness findings are in [the review pack](../evidence/m5/final-scope-20261008/checks.json).
+
 ## M0 - Freeze contracts and bootstrap (prompt 00)
 
 - [x] P00.1 Preserve the four proof/reference files and record SHA-256 snapshots; retain D005 and D012. [Evidence](../evidence/m0/REPORT.md): owner confirmed no earlier snapshot existed; initial snapshot now recorded, all four match HEAD and pass before/after SHA-256 verification. D006 also unchanged.
@@ -152,6 +160,12 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   12 native runs; repeat hashes are stable. Full campaign metadata integration
   and final experiment scope remain unfinished.
 - [ ] P11.2 Freeze graph checksums, parameter grid, timeout/memory/thread policy and phase timing in config.
+  2026-10-08: D039 closes development optimization. D040's [concrete proposal](M5_COMPLETION_PLAN.md)
+  specifies the candidate source/builds, two graphs, h/k grid, five repetitions,
+  resources, load/power observations, B-core/B-stop and claim exclusions. Draft
+  hashes/schedules are checked without running native algorithms. Final selection,
+  full-mode/prefix runner support and per-block observations remain open; no
+  final campaign has launched.
   Local diagnostic configurations were frozen before execution; they are not
   final benchmark settings. CA-GrQc normalization preserves 5,242 declared vertices
   and 14,484 edges. Hardware/read failures, successful metadata retry, compiler

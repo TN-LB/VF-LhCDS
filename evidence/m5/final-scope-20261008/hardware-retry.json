@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-07T16:30:12.564151+00:00",
+  "scope": "read-only metadata retry outside sandbox; no system settings changed",
+  "observations": [
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple M1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 0,
+      "stdout": "17179869184\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 0,
+      "stdout": "8\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "vm.swapusage"
+      ],
+      "exit_code": 0,
+      "stdout": "total = 7168.00M  used = 6082.19M  free = 1085.81M  (encrypted)\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "draft_guards": [
+    {
+      "config": "main.draft.json",
+      "rejected_as_draft": true,
+      "remaining_schema_and_pins_validated_without_execution": true
+    },
+    {
+      "config": "core.draft.json",
+      "rejected_as_draft": true,
+      "remaining_schema_and_pins_validated_without_execution": true
+    }
+  ],
+  "native_calls_checked": {
+    "main": 240,
+    "core": 60,
+    "stop": 60
+  },
+  "schedules_reproducible_and_complete": true,
+  "graphs_checked": 2,
+  "binaries_checked": 2,
+  "production_source_hashes_checked": 40,
+  "baseline_patch_hashes_checked": 7,
+  "papers_unchanged": 4,
+  "prior_raw_inventory_entries_checked": 113,
+  "native_algorithms_executed": 0,
+  "performance_claims_added": false,
+  "plan_sha256": "825ad8c2e4db1eae8b4463676d83acdcdd0906e3ad50fe082c3f9c092658f6fa",
+  "ready_to_launch": false
+}
