@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_CXX_FLAGS=-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    },
+    "started_utc": "2026-10-07T23:16:45.047673+00:00",
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-07T23:16:46.497733+00:00",
+    "stdout_sha256": "65ca40b3639147df2a9295d8e81bc3ed8ed521cf138497663f0d10a40b8acfbf",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG"
+    },
+    "started_utc": "2026-10-07T23:16:46.499266+00:00",
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-07T23:17:03.253332+00:00",
+    "stdout_sha256": "b40a364d47307e8e38aa07f057d2397bede9b033b1bfec91531e44e6bcdd861e",
+    "stderr_sha256": "3721829fd04084c00bc665683751b7871bb5df25d9dc9ca18cbf26cdabcf096d"
+  }
+]

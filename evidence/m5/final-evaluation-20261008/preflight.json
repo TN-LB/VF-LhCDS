@@ -1,0 +1,40 @@
+{
+  "script_sha256": {
+    "baselines/ippv/adapter.py": "f027a62cb824334a661a9d4fd81917e0322816355ab92175dd385a7dfd0405d1",
+    "baselines/ippv/build.py": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6",
+    "baselines/ippv/check_fractional.py": "9485beb3c29f0daab59953e1d3074a537ca7635bc1759275816036d8a9705141",
+    "baselines/ippv/check_toys.py": "17c11111d57db251d58d0824b03817f83f3332ac148b2955832010d294bab9af",
+    "baselines/ippv/process.py": "89758a82f75d0c0756e1268dbd86250c6ceef4aacd2c64e3a06e3b06abcfdd14",
+    "baselines/ippv/test_adapter.py": "87b0a7de86b271fbef2007e34c1209e528a6a5ea6bd7a20b3e8ae9fa76554294",
+    "experiments/__init__.py": "f4b5ce0232d6d690302c7a91c59066637f93e8b2b426ae356137f5ab83464548",
+    "experiments/build_vf.py": "545acab27a025bf9556b2b3f91a55cae3af5ff5abd3b864ba0ca59fc6f389076",
+    "experiments/environment.py": "3fef194b9e1d6ca19cd5c465793caf3e0ed13e1fcd2d365c45c48da2c890a017",
+    "experiments/prepare_input.py": "2bba10f65ecd48ae47a7aa84acb479e7f6982a3c4020e1e01a3fcb99e1e976b5",
+    "experiments/run.py": "68f13a00281d0c065af83d872a707f835376f1886380b035b17a3ed2e2fe8967",
+    "experiments/support.py": "bdd67b562539b4fbc0cd49e4c9d46c5040cce53c0371969ff646c7cfa360d6e7",
+    "experiments/test_harness.py": "4b7836fb2199064b418a3496f1f240052f4510c0ecf58f7a23c580713e537c59",
+    "experiments/validate.py": "722bff0ba6650a2be8894bf770efd119b47bff7fcec7815fbffd7a5bf86e62bc"
+  },
+  "driver_sha256": "65373133ab1171bcaa3b9f65589ad59366167b6ec7a15c0d7edcf3be4a800414",
+  "papers_sha256": {
+    "papers/2023-icde-lds.md": "6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4",
+    "papers/2408.14022v1.md": "9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c",
+    "papers/2504.10937v1.md": "95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908",
+    "papers/veri_free_lhcds_v3_1_submit.md": "85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700"
+  },
+  "decision_log_sha256": "403aef29c0ca6524ca39a4b6817949df336f09782d588f94e2848dfc4d6c9c94",
+  "baseline_sha256": "234305d2ad086c464ababe6997928722902959c89c60a99e476e5a204cf1a282",
+  "hardware_sha256": "c63c81c61fa3c9d0eb777f582deb897e25f24488ab48de6457628eab5d8687b7",
+  "readiness_sha256": "e6c16a2c81aba8d286ab5c0e7abc3731112a803b6e36ee8188a2558e749ad995",
+  "final_tests_sha256": "a54f314ef850daca50b6cdc8e17a684fe0c20fdf8402e966fe366040add52b8e",
+  "configs_sha256": {
+    "main": "2885b687568f7f59354e00ac0d7365ecec57f564515f6555f5f28a4c3336406a",
+    "core": "aa94e279829ebc1e202174ca671211163d5f157d01841dbbde00d1417263fc85",
+    "stop": "69cc0416d1b19a77b5219868f19cf7aa1fffff11377da8c6bb0dad1f0907108e"
+  },
+  "schedules_sha256": {
+    "main": "5fd58a31cad4939c8d9e8950bf058ecb629872b6499bfd21ea6e6f2bb5744e2e",
+    "core": "bcf815ddef8365b4598aea1d349a7f15d3ffae3097e4265e05094a3eabe579d5",
+    "stop": "43fdfa13e0eb85db5d21ed500310f6b3fd9467637a9af3f83241adad350d739c"
+  }
+}

@@ -1,0 +1,1 @@
+{"checks": {"at_most_k": true, "connected": true, "density_nonincreasing": true, "rounded_density_consistent": true, "stdout_count_matches_file": true}, "completeness_certified": false, "level": "structural_checked", "native_rounded_densities": ["630.5333", "385.0000", "204.0000", "140.0000", "137.2222"], "output_count": 5, "passed": true, "strict_order_compatible": false}

@@ -1,0 +1,18 @@
+{
+  "vertices": 13,
+  "h": 3,
+  "max_vertices": 13,
+  "method": "unchanged direct reference, all deletion subsets and proper supersets",
+  "solutions": [
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "density": "2"
+    }
+  ]
+}

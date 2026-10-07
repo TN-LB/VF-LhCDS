@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/check_equality.py",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release/IPPV",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize/IPPV",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-equality"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/checks/equality",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:19:05.656941+00:00",
+  "timeout_seconds": 180,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.6216882094740868,
+  "user_seconds": 0.421905,
+  "system_seconds": 0.306179,
+  "peak_rss_bytes": 25133056,
+  "finished_utc": "2026-10-07T23:19:07.279650+00:00",
+  "sha256": {
+    "stdout.txt": "7a7c464975c71b58227e0c26a280ad2b39e30626ea9809316e59863ad2e92b3c",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

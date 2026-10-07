@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "equality_definition_checks": 2,
+  "fractional_definition_checks": 2,
+  "toy_definition_passes": 32,
+  "known_zero_density_mismatches": 16,
+  "original_case_replays": 2,
+  "original_case_tie_aware_matches": 2,
+  "benchmark_reruns": 0,
+  "production_vf_changed": false
+}

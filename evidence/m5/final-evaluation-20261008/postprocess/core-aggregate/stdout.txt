@@ -1,0 +1,25 @@
+{
+  "suite": "core",
+  "planned_native_runs": 60,
+  "recorded_native_runs": 60,
+  "native_statuses": {
+    "completed": 60
+  },
+  "external_validators_completed": 60,
+  "structural_passes": 60,
+  "unrun_native_runs": 0,
+  "paired_comparisons": 30,
+  "strict_matches": 30,
+  "tie_aware_matches": 30,
+  "strict_disagreements": 0,
+  "tie_aware_disagreements": 0,
+  "pairs_not_compared": 0,
+  "required_agreement": "strict_match",
+  "required_matches": 30,
+  "required_disagreements": 0,
+  "stop_reason": null,
+  "completeness_certified": false,
+  "raw_inventory_entries_verified": 605,
+  "campaign_exit_code": 0,
+  "campaign_wall_seconds": 394.20087066758424
+}

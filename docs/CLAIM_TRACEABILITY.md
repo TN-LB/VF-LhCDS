@@ -723,3 +723,28 @@ definition validators pass; three strict prefix comparisons pass. These exercise
 O09/O12 contracts without modifying or reproving the solver. Production/reference/
 baseline algorithm sources and papers stay unchanged. C++/sanitizer rebuilds,
 the 360 native measurements and release work are not completed by readiness.
+
+## D040 evidence and IPPV-B09 repair — 2026-10-08
+
+[P11.1/P11.2 execution](../evidence/m5/final-evaluation-20261008/REPORT.md) freezes
+configuration before measurement and keeps validation levels/time boundaries
+separate. Of 360 planned native calls, 302 execute and pass separate structural
+checks. The main suite stops after 182 at a genuine h=4,k=15 disagreement; 58
+stay unrun. Core completes 30 strict pairs and B-stop completes 30 strict prefix
+pairs. Main has 90/91 tie-aware matches (35 strict). Counters and timings remain
+observations, not theorem evidence or a real-graph completeness certificate.
+
+The [B09 exact witness and regression](../evidence/m5/ippv/equality-20261008/REPORT.md)
+disprove one IPPV candidate's maximality via a connected 21-compact proper
+superset. This corroborates VF's exclusion of that set without certifying all
+original top-15 outputs. An independent 13-vertex full-superset reference confirms
+the smaller equality-bridge failure. Patch 0008 fixes two baseline verification
+boundaries; both build profiles pass the named new/old regressions and original
+repair replay, retaining 16 known zero-density failures in the 48-run corpus.
+No proof, reference or production VF change occurs. P09.1 remains limited by the
+known full-domain gap. D041 uses fresh paired measurements for the repaired
+version; all old main timings and failed/unrun records remain separate.
+
+P14.1/P15.1 gain scoped interpretation, 6 aggregation tests, verification of
+3,309 raw inventory entries and byte-identical regeneration of 22 artifacts.
+Broad final conclusions and clean-machine release remain unfinished.

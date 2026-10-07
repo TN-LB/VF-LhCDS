@@ -1,0 +1,62 @@
+{
+  "original_graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+  "h": 4,
+  "candidate": [
+    18251,
+    18833,
+    18834,
+    18835,
+    18836,
+    18837,
+    18838,
+    18839,
+    18840,
+    18841
+  ],
+  "extension": [
+    1748,
+    8265,
+    13625,
+    16856,
+    16859,
+    21904,
+    21905,
+    21906,
+    21907,
+    21908
+  ],
+  "proper_superset": [
+    1748,
+    8265,
+    13625,
+    16856,
+    16859,
+    18251,
+    18833,
+    18834,
+    18835,
+    18836,
+    18837,
+    18838,
+    18839,
+    18840,
+    18841,
+    21904,
+    21905,
+    21906,
+    21907,
+    21908
+  ],
+  "candidate_density": "21",
+  "superset_density": "21",
+  "crossing_edges": [
+    [
+      1748,
+      18841
+    ]
+  ],
+  "superset_connected": true,
+  "candidate_is_lhcds": false,
+  "reason": "proper connected superset is 21-compact",
+  "scope": "exact nonmaximality witness for this IPPV output; not full original top-k truth or a new theorem proof"
+}

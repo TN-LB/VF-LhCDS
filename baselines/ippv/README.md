@@ -147,3 +147,15 @@ capacity rejection boundaries. The broad baseline remains limited: other
 floating pruning/bounds and unused legacy verifiers are not upgraded by this
 patch, and zero-density omission remains. Do not silently substitute new binaries
 into the stopped D030 campaign or merge its old/new timing samples.
+
+The [2026-10-08 equality repair](../../evidence/m5/ippv/equality-20261008/REPORT.md)
+adds patch 0008. Two ordinary-neighbor verification bounds now include equality
+within the existing DELTA tolerance. A K5–K4–K4 bridge fixture at h=3 has exact
+all-superset truth consisting only of the K5; the seven-patch binary incorrectly
+also emitted the final K4. `check_equality.py` checks both repaired profiles under
+the existing local size-13 reference guard. Both original CA-CondMat h=4,k=15
+correctness replays remove the certified nonmaximal K10 and pass tie-aware
+comparison. Old binaries/campaigns remain historical. Current eight-patch builds
+are `build-ippv-equality-release` and `build-ippv-equality-sanitize`; no old/new
+benchmark timings may be pooled. Zero-density and other floating-bound/legacy
+limitations remain; this is not a complete numerical correctness audit.

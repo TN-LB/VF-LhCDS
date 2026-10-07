@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "4",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:19:10.435434+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.007886333391070366,
+  "user_seconds": 0.001059,
+  "system_seconds": 0.001364,
+  "peak_rss_bytes": 1310720,
+  "finished_utc": "2026-10-07T23:19:10.443755+00:00",
+  "sha256": {
+    "stdout.txt": "b828d9a3a83482892c4e8cc70a47e96d04b9d69c447e48de16c90e3ca91ca981",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

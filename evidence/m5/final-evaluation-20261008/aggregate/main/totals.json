@@ -1,0 +1,33 @@
+{
+  "planned_native_runs": 240,
+  "recorded_native_runs": 182,
+  "native_statuses": {
+    "completed": 182
+  },
+  "external_validators_completed": 182,
+  "structural_passes": 182,
+  "unrun_native_runs": 58,
+  "paired_comparisons": 91,
+  "strict_matches": 35,
+  "tie_aware_matches": 90,
+  "strict_disagreements": 56,
+  "tie_aware_disagreements": 1,
+  "pairs_not_compared": 0,
+  "required_agreement": "tie_aware_match",
+  "required_matches": 90,
+  "required_disagreements": 1,
+  "stop_reason": {
+    "kind": "output_disagreement",
+    "case": "ca-condmat-h4-k15",
+    "repeat": 0,
+    "algorithms": [
+      "ippv-seven-patches",
+      "vf-count-membership-core-off"
+    ],
+    "required_agreement": "tie_aware_match"
+  },
+  "completeness_certified": false,
+  "raw_inventory_entries_verified": 2099,
+  "campaign_exit_code": 1,
+  "campaign_wall_seconds": 842.29979158286
+}

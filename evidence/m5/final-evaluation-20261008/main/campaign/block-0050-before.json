@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-07T17:04:08.141038+00:00",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "load_average": [
+    2.62841796875,
+    3.03759765625,
+    2.5556640625
+  ],
+  "temperature": null,
+  "cpu_frequency": null,
+  "scope": "before/after block observations, outside native timing; not continuous monitoring",
+  "observations": {
+    "vm": {
+      "command": [
+        "/usr/bin/vm_stat"
+      ],
+      "exit_code": 0,
+      "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                              118002.\nPages active:                            183391.\nPages inactive:                          177527.\nPages speculative:                         5181.\nPages throttled:                              0.\nPages wired down:                        160253.\nPages purgeable:                           1197.\n\"Translation faults\":               12404098938.\nPages copy-on-write:                  345669692.\nPages zero filled:                   6427555944.\nPages reactivated:                   2130518143.\nPages purged:                         590910684.\nFile-backed pages:                       152259.\nAnonymous pages:                         213840.\nPages stored in compressor:             1897398.\nPages occupied by compressor:            368503.\nDecompressions:                      2072543052.\nCompressions:                        2516145434.\nPageins:                              350198874.\nPageouts:                               8162895.\nSwapins:                                3290396.\nSwapouts:                               4639741.\n",
+      "stderr": "",
+      "available": true
+    },
+    "swap": {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "vm.swapusage"
+      ],
+      "exit_code": 0,
+      "stdout": "total = 7168.00M  used = 5986.19M  free = 1181.81M  (encrypted)\n",
+      "stderr": "",
+      "available": true
+    },
+    "power_source": {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "batt"
+      ],
+      "exit_code": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35192931)\t75%; AC attached; not charging present: true\n",
+      "stderr": "",
+      "available": true
+    },
+    "power_settings": {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "custom"
+      ],
+      "exit_code": 0,
+      "stdout": "Battery Power:\n Sleep On Power Button 1\n lowpowermode         1\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         10\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         20\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n",
+      "stderr": "",
+      "available": true
+    }
+  },
+  "power_state": {
+    "source": "AC Power",
+    "settings_sha256": "575ec1b91cf3946766dea53d34d918fba55ba666fb97040989cef5faeb31a84a"
+  }
+}

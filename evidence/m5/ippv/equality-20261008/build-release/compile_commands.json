@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/main.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/main.cpp",
+  "output": "CMakeFiles/IPPV.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/Graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Graph.cpp",
+  "output": "CMakeFiles/IPPV.dir/Graph.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/FlowNetwork.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/FlowNetwork.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/FlowNetwork.cpp",
+  "output": "CMakeFiles/IPPV.dir/FlowNetwork.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/EdgeFN.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/EdgeFN.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/EdgeFN.cpp",
+  "output": "CMakeFiles/IPPV.dir/EdgeFN.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/Args.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Args.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/Args.cpp",
+  "output": "CMakeFiles/IPPV.dir/Args.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/KClistCore.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/KClistCore.cpp",
+  "output": "CMakeFiles/IPPV.dir/KClistCore.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release",
+  "command": "/usr/bin/c++   -O3 -I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/MaxFlow.cpp.o -c /Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/MaxFlow.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/.deps/baselines/ippv/MaxFlow.cpp",
+  "output": "CMakeFiles/IPPV.dir/MaxFlow.cpp.o"
+}
+]

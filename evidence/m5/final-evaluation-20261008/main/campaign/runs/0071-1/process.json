@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-fixed-release/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "15",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-evaluation-20261008/main/campaign/runs/0071-1",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T17:09:39.981230+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "573d24e3bb189f3cacd86e2f7ee50441eb6c927e5ce60c5654f372485abf3879",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 5.801950499415398,
+  "user_seconds": 5.553684,
+  "system_seconds": 0.22791599999999998,
+  "peak_rss_bytes": 199688192,
+  "finished_utc": "2026-10-07T17:09:45.783713+00:00",
+  "sha256": {
+    "stdout.txt": "ae0eeddd3a8cc4400918a10854a4c52c613de6e2e63416fcee859147591bb424",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

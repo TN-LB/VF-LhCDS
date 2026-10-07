@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "identical_artifact_sha256": {
+    "core/TABLE.md": "e891c2b96008ec515f1a109bbd26be5fa21e5b17be7656cd7f04510e2ba5b9a7",
+    "core/cells.json": "a70a5bd84d58c0621b77bf53e155ef1e23f851e84bad3a13ed3f1b4a1bfc3696",
+    "core/provenance.json": "07d70bcb7babbc27dd4aab19043885ad67acef6e1a3711904452fa9b59bad784",
+    "core/runs.json": "0c051b9e258f212fbff13715d039d9c943e6be29da349be76b49a0821be14045",
+    "core/telemetry.json": "66de88092729d7399256c7a7f4dc70bee4957da0ed140d882d3f9d2fbd9e1103",
+    "core/totals.json": "68181acad091ced1c5dad223503e5763e602dd9124826e2453d19ac6c5378051",
+    "core/unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "main/TABLE.md": "e1f84555300165cd7f2cbcf13b99737b261922097be65f45cea90c7f018375b2",
+    "main/cells.json": "c23e2233e699a012885db57e1f90b31e667ab69d2cbb93b21c116f6d33673d4e",
+    "main/provenance.json": "8d38f24410f0675fb5148142aeb9cad008eb911664a8a9bc17a0af5834f5adfd",
+    "main/runs.json": "f06acf7ed8f70f23ff7a950124529e42fcb90466259977af61e2781d235ba5cb",
+    "main/stop-context.json": "ce3f2bfda5ab3a3a8306c019b7e089ad3ec87c27b1d8657be4ee82e7da95e045",
+    "main/telemetry.json": "cd05bce1f4fe9901f09e07dc3d719a63798036f5dd894ef9814c8d9525f037a6",
+    "main/totals.json": "33acd913ff203805a0f56061d2a22431bbdc661ab756bac1e25cf71374f701d0",
+    "main/unrun.json": "c9cb62bf25514e91f8adf18c8cd8acbac224180b16e53c162f6d7e07d03093df",
+    "stop/TABLE.md": "3950d528a0f29ccc0568ec51e85a8b959a18d7c17065c415026a6098cef09be0",
+    "stop/cells.json": "e9efecd84f3757269c70d25b373c8fb977188af95f6ab81c18060a9cb4ba6e14",
+    "stop/provenance.json": "25f8b4861e4057027342af68eb057ea65dc07e1a1f6bb1036fbdb037a199f6e4",
+    "stop/runs.json": "923fe56bceb4a124dcdb74bb79249e51f26a2ca04cf4dd2dbb865fd9dbd82087",
+    "stop/telemetry.json": "60c544364257af5943264bc8d025b2a9c32b6b8330510eec5bbb5452d8411c61",
+    "stop/totals.json": "ecfe44d0e19a81ce56536cc66b17ff5d5e6c12a17d5d9e17f4d11c0598ed0521",
+    "stop/unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "native_algorithm_reruns": 0,
+  "historical_timing_pooling": false
+}

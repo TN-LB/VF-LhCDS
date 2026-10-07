@@ -1,0 +1,22 @@
+./dataset/input.txt
+output/input-1.txt
+Reading edgelist from file ./dataset/input.txt
+Graph construction
+kclist time is:0.000166
+#slt node 3 #slt edge 3 #h_cliques 1
+max_d 1
+#slt node 3 #slt edge 3 #slt_h_cliques 1
+#active nodes 3
+compute core and prune time: 0.0000
+#node 3 #edge 3
+fw time: 0.0000
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0000
+lhcdses candidate: #nodes 3 #edges 3 #h-cliques 1
+0 1 2 nodes_num:3 edges_num:3 cli-den:0.333333 density: 1
+Average Clustering Coefficient: 1
+fw 0.0000 sec, sg 0.0000 sec, pr 0.0000 sec, mf 0.0000 sec
+num of LhCDS 1
+io time: 0.0002, total time: 0.0012

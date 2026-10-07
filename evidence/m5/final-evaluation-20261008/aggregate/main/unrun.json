@@ -1,0 +1,350 @@
+[
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0091-1"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0091-0"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0092-0"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0092-1"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0093-0"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0093-1"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0094-1"
+  },
+  {
+    "case": "ca-condmat-h4-k15",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0094-0"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 0,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0095-1"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 0,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0095-0"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0096-1"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0096-0"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0097-0"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0097-1"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0098-0"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0098-1"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0099-1"
+  },
+  {
+    "case": "ca-condmat-h4-k20",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0099-0"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 0,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0100-0"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 0,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0100-1"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0101-1"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0101-0"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0102-1"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0102-0"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0103-0"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0103-1"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0104-1"
+  },
+  {
+    "case": "ca-condmat-h5-k5",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0104-0"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 0,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0105-0"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 0,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0105-1"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0106-1"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0106-0"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0107-1"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0107-0"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0108-0"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0108-1"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0109-1"
+  },
+  {
+    "case": "ca-condmat-h5-k10",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0109-0"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 0,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0110-1"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 0,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0110-0"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0111-0"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0111-1"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0112-1"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0112-0"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0113-1"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0113-0"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0114-1"
+  },
+  {
+    "case": "ca-condmat-h5-k15",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0114-0"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 0,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0115-0"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 0,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0115-1"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 1,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0116-1"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 1,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0116-0"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 2,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0117-1"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 2,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0117-0"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 3,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0118-1"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 3,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0118-0"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 4,
+    "algorithm": "ippv-seven-patches",
+    "directory": "runs/0119-1"
+  },
+  {
+    "case": "ca-condmat-h5-k20",
+    "repeat": 4,
+    "algorithm": "vf-count-membership-core-off",
+    "directory": "runs/0119-0"
+  }
+]

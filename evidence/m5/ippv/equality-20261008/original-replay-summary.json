@@ -1,0 +1,20 @@
+[
+  {
+    "profile": 0,
+    "level": "cross_implementation_agreement",
+    "strict_match": false,
+    "tie_aware_match": true,
+    "completeness_certified": false,
+    "note": "agreement only; input runs retain their own structural/definition evidence",
+    "invalid_candidate_removed": true
+  },
+  {
+    "profile": 1,
+    "level": "cross_implementation_agreement",
+    "strict_match": false,
+    "tie_aware_match": true,
+    "completeness_certified": false,
+    "note": "agreement only; input runs retain their own structural/definition evidence",
+    "invalid_candidate_removed": true
+  }
+]

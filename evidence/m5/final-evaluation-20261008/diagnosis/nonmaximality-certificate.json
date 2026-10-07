@@ -1,0 +1,790 @@
+{
+  "original_graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+  "h": 4,
+  "candidate": [
+    18251,
+    18833,
+    18834,
+    18835,
+    18836,
+    18837,
+    18838,
+    18839,
+    18840,
+    18841
+  ],
+  "extension": [
+    1748,
+    8265,
+    13625,
+    16856,
+    16859,
+    21904,
+    21905,
+    21906,
+    21907,
+    21908
+  ],
+  "proper_superset": [
+    1748,
+    8265,
+    13625,
+    16856,
+    16859,
+    18251,
+    18833,
+    18834,
+    18835,
+    18836,
+    18837,
+    18838,
+    18839,
+    18840,
+    18841,
+    21904,
+    21905,
+    21906,
+    21907,
+    21908
+  ],
+  "candidate_density": "21",
+  "superset_density": "21",
+  "crossing_edges": [
+    [
+      1748,
+      18841
+    ]
+  ],
+  "superset_connected": true,
+  "candidate_is_lhcds": false,
+  "reason": "proper connected superset is 21-compact",
+  "cardinality_classes_checked": [
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 0,
+      "clique_loss": 0,
+      "required_loss": 0
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 1,
+      "clique_loss": 84,
+      "required_loss": 21
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 2,
+      "clique_loss": 140,
+      "required_loss": 42
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 3,
+      "clique_loss": 175,
+      "required_loss": 63
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 4,
+      "clique_loss": 195,
+      "required_loss": 84
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 5,
+      "clique_loss": 205,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 6,
+      "clique_loss": 209,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 7,
+      "clique_loss": 210,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 8,
+      "clique_loss": 210,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 9,
+      "clique_loss": 210,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 0,
+      "deleted_from_extension": 10,
+      "clique_loss": 210,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 0,
+      "clique_loss": 84,
+      "required_loss": 21
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 1,
+      "clique_loss": 168,
+      "required_loss": 42
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 2,
+      "clique_loss": 224,
+      "required_loss": 63
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 3,
+      "clique_loss": 259,
+      "required_loss": 84
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 4,
+      "clique_loss": 279,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 5,
+      "clique_loss": 289,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 6,
+      "clique_loss": 293,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 7,
+      "clique_loss": 294,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 8,
+      "clique_loss": 294,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 9,
+      "clique_loss": 294,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 1,
+      "deleted_from_extension": 10,
+      "clique_loss": 294,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 0,
+      "clique_loss": 140,
+      "required_loss": 42
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 1,
+      "clique_loss": 224,
+      "required_loss": 63
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 2,
+      "clique_loss": 280,
+      "required_loss": 84
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 3,
+      "clique_loss": 315,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 4,
+      "clique_loss": 335,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 5,
+      "clique_loss": 345,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 6,
+      "clique_loss": 349,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 7,
+      "clique_loss": 350,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 8,
+      "clique_loss": 350,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 9,
+      "clique_loss": 350,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 2,
+      "deleted_from_extension": 10,
+      "clique_loss": 350,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 0,
+      "clique_loss": 175,
+      "required_loss": 63
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 1,
+      "clique_loss": 259,
+      "required_loss": 84
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 2,
+      "clique_loss": 315,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 3,
+      "clique_loss": 350,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 4,
+      "clique_loss": 370,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 5,
+      "clique_loss": 380,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 6,
+      "clique_loss": 384,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 7,
+      "clique_loss": 385,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 8,
+      "clique_loss": 385,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 9,
+      "clique_loss": 385,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 3,
+      "deleted_from_extension": 10,
+      "clique_loss": 385,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 0,
+      "clique_loss": 195,
+      "required_loss": 84
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 1,
+      "clique_loss": 279,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 2,
+      "clique_loss": 335,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 3,
+      "clique_loss": 370,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 4,
+      "clique_loss": 390,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 5,
+      "clique_loss": 400,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 6,
+      "clique_loss": 404,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 7,
+      "clique_loss": 405,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 8,
+      "clique_loss": 405,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 9,
+      "clique_loss": 405,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 4,
+      "deleted_from_extension": 10,
+      "clique_loss": 405,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 0,
+      "clique_loss": 205,
+      "required_loss": 105
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 1,
+      "clique_loss": 289,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 2,
+      "clique_loss": 345,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 3,
+      "clique_loss": 380,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 4,
+      "clique_loss": 400,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 5,
+      "clique_loss": 410,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 6,
+      "clique_loss": 414,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 7,
+      "clique_loss": 415,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 8,
+      "clique_loss": 415,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 9,
+      "clique_loss": 415,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 5,
+      "deleted_from_extension": 10,
+      "clique_loss": 415,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 0,
+      "clique_loss": 209,
+      "required_loss": 126
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 1,
+      "clique_loss": 293,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 2,
+      "clique_loss": 349,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 3,
+      "clique_loss": 384,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 4,
+      "clique_loss": 404,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 5,
+      "clique_loss": 414,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 6,
+      "clique_loss": 418,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 7,
+      "clique_loss": 419,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 8,
+      "clique_loss": 419,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 9,
+      "clique_loss": 419,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 6,
+      "deleted_from_extension": 10,
+      "clique_loss": 419,
+      "required_loss": 336
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 0,
+      "clique_loss": 210,
+      "required_loss": 147
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 1,
+      "clique_loss": 294,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 2,
+      "clique_loss": 350,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 3,
+      "clique_loss": 385,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 4,
+      "clique_loss": 405,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 5,
+      "clique_loss": 415,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 6,
+      "clique_loss": 419,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 7,
+      "clique_loss": 420,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 8,
+      "clique_loss": 420,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 9,
+      "clique_loss": 420,
+      "required_loss": 336
+    },
+    {
+      "deleted_from_candidate": 7,
+      "deleted_from_extension": 10,
+      "clique_loss": 420,
+      "required_loss": 357
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 0,
+      "clique_loss": 210,
+      "required_loss": 168
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 1,
+      "clique_loss": 294,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 2,
+      "clique_loss": 350,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 3,
+      "clique_loss": 385,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 4,
+      "clique_loss": 405,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 5,
+      "clique_loss": 415,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 6,
+      "clique_loss": 419,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 7,
+      "clique_loss": 420,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 8,
+      "clique_loss": 420,
+      "required_loss": 336
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 9,
+      "clique_loss": 420,
+      "required_loss": 357
+    },
+    {
+      "deleted_from_candidate": 8,
+      "deleted_from_extension": 10,
+      "clique_loss": 420,
+      "required_loss": 378
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 0,
+      "clique_loss": 210,
+      "required_loss": 189
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 1,
+      "clique_loss": 294,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 2,
+      "clique_loss": 350,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 3,
+      "clique_loss": 385,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 4,
+      "clique_loss": 405,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 5,
+      "clique_loss": 415,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 6,
+      "clique_loss": 419,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 7,
+      "clique_loss": 420,
+      "required_loss": 336
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 8,
+      "clique_loss": 420,
+      "required_loss": 357
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 9,
+      "clique_loss": 420,
+      "required_loss": 378
+    },
+    {
+      "deleted_from_candidate": 9,
+      "deleted_from_extension": 10,
+      "clique_loss": 420,
+      "required_loss": 399
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 0,
+      "clique_loss": 210,
+      "required_loss": 210
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 1,
+      "clique_loss": 294,
+      "required_loss": 231
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 2,
+      "clique_loss": 350,
+      "required_loss": 252
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 3,
+      "clique_loss": 385,
+      "required_loss": 273
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 4,
+      "clique_loss": 405,
+      "required_loss": 294
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 5,
+      "clique_loss": 415,
+      "required_loss": 315
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 6,
+      "clique_loss": 419,
+      "required_loss": 336
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 7,
+      "clique_loss": 420,
+      "required_loss": 357
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 8,
+      "clique_loss": 420,
+      "required_loss": 378
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 9,
+      "clique_loss": 420,
+      "required_loss": 399
+    },
+    {
+      "deleted_from_candidate": 10,
+      "deleted_from_extension": 10,
+      "clique_loss": 420,
+      "required_loss": 420
+    }
+  ],
+  "scope": "exact nonmaximality witness for this IPPV output; not full original top-k truth or a new theorem proof"
+}

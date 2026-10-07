@@ -1,0 +1,1176 @@
+{
+  "runs": [
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0000-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0000-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0001-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0001-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0002-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0002-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0003-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0003-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0004-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0004-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "dbb4369598645c10a24128288a993a758e9dd11d36856c161068e6f829d3603c",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0005-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0005-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0006-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0006-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0007-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0007-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0008-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0008-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0009-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0009-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "05127684ac497ad2ea815192fd8b616835cddc3cdaed4cc3ff4ec3ea10511d3b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0010-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0010-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0011-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0011-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0012-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0012-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0013-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0013-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0014-1",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0014-0",
+      "graph_sha256": "85333a05c5d752357d711748909f184f739487b1af2cb1745a7fe2a363620f32",
+      "semantic_sha256": "59481bb7b4e48b69e00c217ffc26a8daa42eb16d323937be750149d970b90c35",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0015-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0015-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0016-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0016-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0017-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0017-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0018-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0018-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0019-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "h": 3,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0019-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "9478ea6e34b1e3572db4587fd7e099145f008b2651a90f7dc8f51ae54fb4f098",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0020-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0020-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0021-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0021-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0022-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0022-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0023-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0023-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0024-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "h": 4,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0024-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "394bf62e410b48e3a3237b7f62485508ff75359357d54663f059f2b26a1866c8",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0025-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0025-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0026-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0026-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0027-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0027-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0028-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0028-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0029-0",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "h": 5,
+      "k": 20,
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "status": "completed",
+      "output_scope": "fixed",
+      "directory": "runs/0029-1",
+      "graph_sha256": "5e48ff6e02d4015364788f606f59adb4dafcc4dbdc92ce33a209a4eeb50c8adb",
+      "semantic_sha256": "6f004ad6be7fb87476827498daa76d21fbe62f87c98b581038f678f4d221078b",
+      "rank_latency_seconds": null
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 0,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 1,
+      "algorithms": [
+        "vf-count-membership-core-safe",
+        "vf-count-membership-core-off"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 2,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 3,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 4,
+      "algorithms": [
+        "vf-count-membership-core-off",
+        "vf-count-membership-core-safe"
+      ],
+      "level": "cross_implementation_agreement",
+      "strict_match": true,
+      "tie_aware_match": true,
+      "completeness_certified": false,
+      "note": "agreement only; input runs retain their own structural/definition evidence"
+    }
+  ]
+}

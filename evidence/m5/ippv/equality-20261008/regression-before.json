@@ -1,0 +1,49 @@
+{
+  "definition_match": false,
+  "expected": [
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "density": "2"
+    }
+  ],
+  "actual": [
+    {
+      "rank": 1,
+      "h": 3,
+      "vertex_count": 5,
+      "clique_count": "10",
+      "density_num": "2",
+      "density_den": "1",
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "rank": 2,
+      "h": 3,
+      "vertex_count": 4,
+      "clique_count": "4",
+      "density_num": "1",
+      "density_den": "1",
+      "vertices": [
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "scope": "original seven-patch output versus independent all-proper-superset truth",
+  "old_native_status": "completed",
+  "old_structural_validation_passed": true
+}

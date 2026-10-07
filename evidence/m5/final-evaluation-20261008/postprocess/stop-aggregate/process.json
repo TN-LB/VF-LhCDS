@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-evaluation-20261008/summarize.py",
+    "--suite",
+    "stop",
+    "--output",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-evaluation-20261008/aggregate/stop"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-evaluation-20261008/postprocess/stop-aggregate",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:13:15.101621+00:00",
+  "timeout_seconds": 180,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.29651958402246237,
+  "user_seconds": 0.160669,
+  "system_seconds": 0.058268999999999994,
+  "peak_rss_bytes": 33800192,
+  "finished_utc": "2026-10-07T23:13:15.398603+00:00",
+  "sha256": {
+    "stdout.txt": "f50753ab70aa368a16189e4c269f587424f5a2e4424179423f134ce5319d19b2",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

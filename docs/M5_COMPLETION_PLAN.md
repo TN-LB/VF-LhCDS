@@ -11,7 +11,7 @@ This file is the current execution plan; earlier campaign records remain histori
 |---|---|---|
 | One targeted count optimization | Complete | [D038 report](../evidence/m5/counting-20261007/REPORT.md); implementation commit `0315c5d` |
 | Freeze evaluation scope and prepare execution | Scope selected; readiness passes | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); final environment recorded at launch |
-| Execute and aggregate the frozen suite | Unrun | All scheduled successes, failures and timeouts; separate validators; median and spread; no historical timing pooling |
+| Execute and aggregate the frozen suite | D040 retained; repaired main follows | 302 calls and both ablations complete; main stops at IPPV-B09, with 58 unrun. D041 repeats the affected 240-call main suite using eight patches and fresh controls |
 | Review conclusions and reproduce release | Open | P14.1/P15.1: claim audit, aggregate regeneration, fresh build/smoke and explicit clean-machine status |
 
 D038's existing evidence is 16/16 CTest in each of Debug, Release and ASan/UBSan,
@@ -21,8 +21,8 @@ are prior results, not checks rerun by this planning update. They do not prove
 the theorem or establish a new VF/IPPV speedup.
 
 P11.3 shared smoke is complete. P09.1 retains IPPV's zero-density coverage gap;
-P09b.1 remains deferred under D029. P10.1 and P11.1/P11.2/P12.1/P14.1/P15.1 are
-not newly checked off by a plan, configuration or source hash check.
+P09b.1 remains deferred under D029. P11.1/P11.2 now have executed level/timing
+separation and configuration-freeze evidence. P10.1/P12.1/P14.1/P15.1 remain open.
 
 ## Stop adding performance optimizations
 
@@ -32,7 +32,8 @@ tested production source at `0315c5d`; the candidate Release binary is the exist
 The proposed measured VF mode is adjacency enumeration, membership footprints,
 membership counting, exact automatic capacity dispatch and core off. Core safe
 is an ablation, not a mode selected after seeing final results. IPPV remains the
-separately patched seven-patch build with iterations=10 and native p=0.
+separately patched baseline with iterations=10 and native p=0: D040 records seven
+patches; the independently validated B09 repair produces eight for D041.
 
 Do not start another optimization/profile/parameter-search cycle because results
 are slow, mixed or negative. Routine preparation is limited to existing-harness
@@ -58,7 +59,7 @@ readiness/results are stored separately in [final evaluation evidence](../eviden
 | Setting | Selected value |
 |---|---|
 | Graphs | CA-GrQc: n=5,242, m=14,484; CA-CondMat: n=23,133, m=93,439; exact hashes in review pack |
-| Main comparison | VF versus seven-patch IPPV; h={3,4,5}, k={5,10,15,20} |
+| Main comparison | VF versus IPPV (D040 seven patches, D041 eight); h={3,4,5}, k={5,10,15,20} |
 | B-core | Same VF binary, core off versus safe; both graphs, h={3,4,5}, k=20 |
 | B-stop | Same VF mode, k=5 versus explicit full-chain `--all`; both graphs, h={3,4,5}; compare the first min(5,q) records strictly |
 | Repetitions | Exactly five per setting and mode, fixed before results; no warmup calls, adaptive extra repeats or retries |

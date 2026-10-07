@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "algorithm": "IPPV-author-with-disclosed-patches",
+  "build_provenance": {
+    "repository": "https://github.com/Elssky/IPPV",
+    "commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+    "license": "not identified; project use authorized by D027",
+    "patch_authorization": "D028",
+    "patches": [
+      {
+        "path": "baselines/ippv/patches/0001-remove-unused-openmp-header.patch",
+        "sha256": "b0501215f6debf9bfe59d95de692fc9fb8f76d1a7a3c57b9e4c2b7d06c4452f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0002-initialize-clique-count.patch",
+        "sha256": "d3512cdfb458e2be753050bf0244e62bbf19036a02eafc59d493c75b8241d8f5"
+      },
+      {
+        "path": "baselines/ippv/patches/0003-preserve-selection-storage.patch",
+        "sha256": "74cc301e689c74afb067d3ee0d109b7975b7566c4b4f3f28c89f2888980e3d4a"
+      },
+      {
+        "path": "baselines/ippv/patches/0004-h2-enumeration-base-case.patch",
+        "sha256": "5133cfce7824c1979779e23118b90b7cdc666f6168fc3a358ea2ca5067278ac2"
+      },
+      {
+        "path": "baselines/ippv/patches/0005-include-final-single-edge-component.patch",
+        "sha256": "198959f649c1ea4a2053908dc0b0a21f9450f4c05367ebc7141457514915d3a9"
+      },
+      {
+        "path": "baselines/ippv/patches/0006-exact-verification-capacities.patch",
+        "sha256": "b78e41d99841f1ec4d34af0fd2b4c94311bcb3f3a158c37e93bab42a347a1b12"
+      },
+      {
+        "path": "baselines/ippv/patches/0007-restore-pava-workspace.patch",
+        "sha256": "dc70c616e4d27171c78557c90a04f7cff2a3afd2f230f4ab983963cd54f5107d"
+      },
+      {
+        "path": "baselines/ippv/patches/0008-include-equal-density-verification-neighbors.patch",
+        "sha256": "419ca7d9e34ef78cde6b841fb051089b05b594b81c487ab3d96c983e64ce9d7a"
+      }
+    ],
+    "patched_source_sha256": {
+      "Args.cpp": "3ef455ca8be5633bd0d2bd6af784e36d4c6726f9474130b441f40c200a3d2e37",
+      "Args.h": "8889c0ee0e73aae79f83289bf4cec52d3f4be584487f16a85677ab3f985deb04",
+      "CMakeLists.txt": "81133e3d0fda97c835bb89cd3d88f04217f3d83c6cf9edbd62226b3a7e7a78d5",
+      "EdgeFN.cpp": "4eddbb43830b4d825695bc0d4324d34b79bade6cc00a9f6bd2079e230e326edc",
+      "EdgeFN.h": "5cc460366ed6cdeba4ba283ea5d33fa62e0745bbdcccb87cf01168e7eb00adc6",
+      "FlowNetwork.cpp": "cd7e7246f2af2ce2509ee87dd34dd24d023a3cf53977626e388e593e6831a333",
+      "FlowNetwork.h": "add8c81ad3cfa1f72dd84620f99d3db503929916d834e53c5259f152902080c5",
+      "Graph.cpp": "829203af0e6fdba802e6dd4f9d38442fd362e95b0a1146880686caedd36f2c9e",
+      "Graph.h": "714a6d6d5f130148d3b86433862e487e6f1b70882ee5084f116c951094e3d8c5",
+      "KClistCore.cpp": "8994671abed431be3ec6b1b6e8c5d51a1a71ad3f9331c6277e67c689312bc132",
+      "KClistCore.h": "83693572e75329968c00ed94422da6bc9b59f771fdf663084645f7af32b94157",
+      "MaxFlow.cpp": "0b03bd6d1b77a061bd9aa52dd368b47ef04392349478621c4f87b76e86181823",
+      "MaxFlow.h": "208fbe4da94fb2bec3be031779ddfe6ed39cb1cb718b835a11cb97364435c88a",
+      "README.md": "1ede08be3ccfdca39368c165d8a568b3847f2de207fba4568d86c068c15f4709",
+      "dataset/CA-CondMat.txt": "0521b9a50d7606a8990a3621a2a6a2a908b3473ca50507b287b2e6cc2e46717d",
+      "dataset/CA-GrQc.txt": "729bc8ed7cd185cdbeb77709ad232ba94291acdacb78ae94f5445dad5988b616",
+      "main.cpp": "e1df82b7fdf3392b7e0404e2679e17e0d8ddb10eec7360082fc82062fe819bc6",
+      "ExactVerification.h": "9918d4c01e08a4583b4c7d8ffefde7c57ef156be68c088fb33998d195baf2b8f"
+    },
+    "executable_sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738",
+    "sanitizers": false,
+    "environment": "macOS-15.7.7-arm64-arm-64bit",
+    "commands_manifest": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/build-release/commands.json",
+    "commands_manifest_sha256": "34b9ef67a346f897f325b4f0637300ca572fa580cf99676b8c3a737f21f67459",
+    "compile_commands_sha256": "f963418100238501ed5f5104b4c552cdf1ce7ce43282f581c87043754a825a25",
+    "build_script_sha256": "f044a0cb058f754710efd35c7a7262cfec6321205335f38c913b652c9ac11dd6"
+  },
+  "native": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release/IPPV",
+      "-g",
+      "./dataset/input.txt",
+      "-h",
+      "4",
+      "-t",
+      "10",
+      "-k",
+      "1",
+      "-p",
+      "0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-07T23:19:10.435434+00:00",
+    "timeout_seconds": 60.0,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.007886333391070366,
+    "user_seconds": 0.001059,
+    "system_seconds": 0.001364,
+    "peak_rss_bytes": 1310720,
+    "finished_utc": "2026-10-07T23:19:10.443755+00:00",
+    "sha256": {
+      "stdout.txt": "b828d9a3a83482892c4e8cc70a47e96d04b9d69c447e48de16c90e3ca91ca981",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "graph_sha256": "29d0768b25c2324a6b8f8a73a06954ffb1731fb97e0d715ac9d8c86213b3ec42",
+  "normalized_input_sha256": "29d0768b25c2324a6b8f8a73a06954ffb1731fb97e0d715ac9d8c86213b3ec42",
+  "converted_input_sha256": "9c3528d98663acb8787c1f08381b6591c46b657d1c4c0061ae09a1e908653f00",
+  "vertex_map_sha256": "b0ae462940dee8c5d2efe221939200e9fc70b23b50996689de0de4d7e912aace",
+  "h": 4,
+  "k": 1,
+  "iterations": 10,
+  "pattern": 0,
+  "status": "completed",
+  "validation": {
+    "checks": {
+      "at_most_k": true,
+      "connected": true,
+      "cutoff_respected": true,
+      "density_nonincreasing": true,
+      "every_set_definition_valid": true,
+      "higher_density_complete": true,
+      "required_count": true,
+      "rounded_density_consistent": true,
+      "stdout_count_matches_file": true
+    },
+    "completeness_certified": true,
+    "expected": [
+      [
+        -7,
+        6,
+        19,
+        32
+      ]
+    ],
+    "level": "definition_checked",
+    "native_rounded_densities": [
+      "0.2500"
+    ],
+    "output_count": 1,
+    "passed": true,
+    "strict_match": true,
+    "strict_order_compatible": false,
+    "truth_count": 1
+  },
+  "phase_wall_seconds": {
+    "postload": null,
+    "postindex": null
+  },
+  "phase_note": "Author prints clock() CPU times; not comparable wall phases",
+  "evidence_scope": "single reproduction/validation run; no benchmark claim",
+  "native_output_sha256": "aba3df4461a622da195d7aab4fd027f19d82df2263d1bbf0f3fe503098a89e29",
+  "external_validation": {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+      "validate",
+      "--graph",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0/graph.txt",
+      "--native-output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0/output/input-1.txt",
+      "--h",
+      "4",
+      "--k",
+      "1",
+      "--records",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0/canonical_output.jsonl",
+      "--declared-count",
+      "1",
+      "--definition"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h4-clique-profile0/validation",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "started_utc": "2026-10-07T23:19:10.444788+00:00",
+    "timeout_seconds": 60.0,
+    "memory_limit_bytes": null,
+    "environment_overrides": {},
+    "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+    "timing_scope": "native process launch through wait4 completion; validation excluded",
+    "rss_scope": "native child peak RSS; no external validator or compiler included",
+    "native_exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.06903091724961996,
+    "user_seconds": 0.047939999999999997,
+    "system_seconds": 0.011488,
+    "peak_rss_bytes": 21135360,
+    "finished_utc": "2026-10-07T23:19:10.514301+00:00",
+    "sha256": {
+      "stdout.txt": "d3ac84f34f1a243af8248f735152b33688244d1269702939c3d0ad4169b21cd2",
+      "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "sha256": {
+    "canonical_output.jsonl": "317273d016ab65b77766db9f63953df5f11a4abb862dffea8cffc3784377b1ec",
+    "dataset/input.txt": "9c3528d98663acb8787c1f08381b6591c46b657d1c4c0061ae09a1e908653f00",
+    "graph.txt": "29d0768b25c2324a6b8f8a73a06954ffb1731fb97e0d715ac9d8c86213b3ec42",
+    "output/input-1.txt": "aba3df4461a622da195d7aab4fd027f19d82df2263d1bbf0f3fe503098a89e29",
+    "process.json": "092c0076dba8e8c16cbfb8917bc308f90c1d1f0daec88d23369c4d4ee3d257eb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "b828d9a3a83482892c4e8cc70a47e96d04b9d69c447e48de16c90e3ca91ca981",
+    "validation/process.json": "7732de15603e2455381f2ec9dfcfeb053376499d92603f85abc7404057e3dc59",
+    "validation/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/stdout.txt": "d3ac84f34f1a243af8248f735152b33688244d1269702939c3d0ad4169b21cd2",
+    "vertex_map.json": "b0ae462940dee8c5d2efe221939200e9fc70b23b50996689de0de4d7e912aace"
+  }
+}

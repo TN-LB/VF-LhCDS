@@ -1,0 +1,129 @@
+./dataset/input.txt
+output/input-5.txt
+Reading edgelist from file ./dataset/input.txt
+Graph construction
+kclist time is:0.138875
+#slt node 17551 #slt edge 85866 #h_cliques 294008
+max_d 7505
+#slt node 4896 #slt edge 16291 #slt_h_cliques 115007
+#active nodes 1721
+compute core and prune time: 0.0321
+#node 4896 #edge 16291
+fw time: 0.0770
+nsg 35
+pava time: 0.0007
+updated nsg 2
+check sg time: 0.0085
+pruning time: 0.0133
+verifyLhCDS time: 0.2671
+#node 3576 #edge 14397
+fw time: 0.0880
+nsg 66
+pava time: 0.0007
+updated nsg 18
+check sg time: 0.0208
+17
+sg 17 17 397 603
+16
+sg 16 16 153 291
+15
+sg 15 15 9 20
+14
+sg 14 14 8 19
+13
+sg 13 13 158 388
+12
+sg 12 12 18 49
+6
+sg 6 6 147 435
+5
+sg 5 5 14 41
+4
+sg 4 4 292 1116
+3
+sg 3 3 13 58
+1
+sg 1 1 1053 7275
+pruning time: 0.0123
+lhcdses candidate: #nodes 30 #edges 401 #h-cliques 18916
+verifyLhCDS time: 0.0283
+#node 1053 #edge 7275
+fw time: 0.0543
+nsg 45
+pava time: 0.0004
+updated nsg 11
+check sg time: 0.0189
+10
+sg 10 10 51 223
+2
+sg 2 2 390 2205
+pruning time: 0.0083
+verifyLhCDS time: 0.1094
+#node 259 #edge 2511
+fw time: 0.0274
+nsg 11
+pava time: 0.0002
+updated nsg 8
+check sg time: 0.0042
+3
+sg 3 3 16 120
+2
+sg 2 2 16 112
+1
+sg 1 1 49 374
+pruning time: 0.0045
+verifyLhCDS time: 0.0816
+#node 128 #edge 1427
+fw time: 0.0187
+nsg 4
+pava time: 0.0001
+updated nsg 3
+check sg time: 0.0018
+1
+sg 1 1 19 171
+pruning time: 0.0036
+verifyLhCDS time: 0.0453
+#node 77 #edge 929
+fw time: 0.0131
+nsg 2
+pava time: 0.0001
+updated nsg 2
+check sg time: 0.0028
+pruning time: 0.0020
+lhcdses candidate: #nodes 23 #edges 253 #h-cliques 8855
+verifyLhCDS time: 0.1475
+#node 19 #edge 171
+fw time: 0.0016
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0003
+lhcdses candidate: #nodes 19 #edges 171 #h-cliques 3876
+verifyLhCDS time: 0.0053
+#node 49 #edge 374
+fw time: 0.0026
+nsg 3
+pava time: 0.0000
+updated nsg 3
+check sg time: 0.0001
+1
+sg 1 1 18 147
+pruning time: 0.0004
+lhcdses candidate: #nodes 17 #edges 136 #h-cliques 2380
+verifyLhCDS time: 0.0034
+#node 18 #edge 147
+fw time: 0.0011
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0002
+lhcdses candidate: #nodes 18 #edges 147 #h-cliques 2470
+634 2683 2752 2807 3572 3578 5328 7712 8128 10081 10082 10083 10085 10088 10089 10091 11521 11614 11615 11616 11617 11618 11619 11620 11621 11622 11623 11624 11625 11626 nodes_num:30 edges_num:401 cli-den:630.533 density: 13.3667
+2092 3073 3880 3948 4068 4915 5209 5211 7870 8041 9882 10522 13956 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 nodes_num:23 edges_num:253 cli-den:385 density: 11
+20030 20031 20032 20033 20035 20036 20037 20038 20039 20040 20042 20043 20044 20045 20046 20047 20048 20049 20050 nodes_num:19 edges_num:171 cli-den:204 density: 9
+18079 18080 21923 21924 21925 21926 21927 21928 21929 21930 21931 21932 21933 21934 21935 21936 21937 nodes_num:17 edges_num:136 cli-den:140 density: 8
+5151 5169 5174 5543 8196 8672 10069 13122 15420 15421 15422 15424 15425 20881 20882 20883 20884 20885 nodes_num:18 edges_num:147 cli-den:137.222 density: 8.16667
+Average Clustering Coefficient: 0.980279
+fw 0.2838 sec, sg 0.0594 sec, pr 0.0450 sec, mf 0.6878 sec
+num of LhCDS 5
+io time: 0.0118, total time: 1.5784

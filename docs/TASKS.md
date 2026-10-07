@@ -152,7 +152,10 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   precedes source acquisition/build, detailed comparison or adaptation. Existing
   D027/D028 apply specifically to IPPV; no DCLDS use authorization is invented.
 - [ ] P10.1 Audit only specialization baselines relevant to intended h=2/h=3 claims; record unavailable/excluded methods.
-- [ ] P11.1 Separate definition-checked, structural-checked and cross-implementation-agreement evidence.
+- [x] P11.1 Separate definition-checked, structural-checked and cross-implementation-agreement evidence.
+  D040 executes all three evidence levels with separate native/external timing;
+  the B09 structural-pass/definition-failure witness explicitly preserves that
+  distinction. [Harness and executed records](../evidence/m5/final-evaluation-20261008/REPORT.md).
   2026-10-03: [shared harness evidence](../evidence/m5/harness-20261003/REPORT.md)
   implements separate validation processes, canonical exact-output checks, strict/
   tie-aware comparison, random within-block order, and preserved native failures.
@@ -160,7 +163,11 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   retain 10 completed outputs and two known IPPV zero-density mismatches across
   12 native runs; repeat hashes are stable. Full campaign metadata integration
   and final experiment scope remain unfinished.
-- [ ] P11.2 Freeze graph checksums, parameter grid, timeout/memory/thread policy and phase timing in config.
+- [x] P11.2 Freeze graph checksums, parameter grid, timeout/memory/thread policy and phase timing in config.
+  D040 freezes the selected five-repeat scope, pins, timing, power/load observation
+  and stop policies before 302 actual native calls. The first main suite stops
+  on B09; D041 pins its repaired version in a separate full main campaign.
+  This gate records configuration, not successful comparison or M5 completion.
   2026-10-08: D039 closes development optimization. D040's [concrete proposal](M5_COMPLETION_PLAN.md)
   specifies the candidate source/builds, two graphs, h/k grid, five repetitions,
   resources, load/power observations, B-core/B-stop and claim exclusions. Draft
@@ -344,3 +351,27 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   remain unchanged; clean-machine/final release gates remain open.
 
 Gate: traceable evidence, not a predetermined speedup or SOTA outcome.
+
+### D040 execution and B09 repair — 2026-10-08
+
+P12.1: the [frozen batch](../evidence/m5/final-evaluation-20261008/REPORT.md)
+executes 302/360 native calls and 302 separate structural validators. Main stops
+after 182 calls at CA-CondMat h=4,k=15: 90/91 tie-aware pairs pass (35 strict);
+58 calls stay unrun. Both VF ablations complete 60 calls each, with 30 strict
+core pairs and 30 strict fixed/full-prefix pairs. No native timeout/crash occurs.
+Core has mixed/slower time effects; early stop has lower medians in all six tested
+cells. Full ranges/RSS/CPU times are retained; no O(k) or universal speed claim.
+
+P09.1: [IPPV-B09](../evidence/m5/ippv/equality-20261008/REPORT.md) is a false
+positive caused by excluded equal-density verification neighbors. The original
+20-vertex exact nonmaximality witness and 13-vertex all-superset regression
+establish the failure. Patch 0008 repairs two boundary tests; Release/ASan+UBSan
+pass 2 equality + 2 prior fractional checks, 32 toy definition checks and 2
+original-case tie-aware replays. The same 16 zero-density omissions remain;
+91 adapter/reference pytest checks pass. VF/reference/papers are unchanged.
+
+P14.1/P15.1: scoped failure interpretation and all 3,309 raw inventory entries
+verify; 22 aggregates regenerate identically. Six aggregation checks pass.
+D041 repeats the affected 240-call main comparison with the repaired baseline
+and fresh VF controls under unchanged settings; no historical timing pooling or
+rerun of the 120 unaffected VF ablation calls. Final conclusions/release remain open.

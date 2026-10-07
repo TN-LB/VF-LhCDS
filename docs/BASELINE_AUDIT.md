@@ -380,3 +380,26 @@ All 24 sanitizer toy stderr files and final regression sanitizer logs are empty.
 Combined pytest: 123 passed. Old binaries, failed runs and the stopped pilot are
 preserved; corrected binaries have new paths/hashes. No timings are pooled across
 versions and no benchmark campaign is resumed. DCLDS remains deferred.
+
+## IPPV-B09 — equal-density neighbor exclusion (2026-10-08)
+
+The D040 main comparison stops at CA-CondMat h=4,k=15 after 182 native calls.
+IPPV emits a nonmaximal density-21 K10. An independent exact witness joins it to
+another K10 by an ordinary edge; their 20-vertex induced union is 21-compact.
+Thus the omission by VF is correct for this disputed set. Structural validation
+alone had passed the invalid candidate; maximality is a separate condition.
+
+`verify_LhCDS_small` excluded equality at two ordinary-neighbor bound tests.
+Patch 0008 changes the existing tolerance directions to include the equality
+boundary, preserving the existing verifier/parameters. A 13-vertex K5–K4–K4
+fixture with ordinary bridges reproduces the false positive at h=3,k=3, and
+unchanged exhaustive all-superset truth rejects it. New Release and ASan/UBSan
+builds pass two equality and two prior fractional definition checks, plus the
+48-case h=2..5 corpus (32 passes, 16 retained zero-density mismatches). Both
+original-case repair replays pass structural/tie-aware checks and remove the
+invalid set. Adapter/reference pytest: 91 passed. [Repair report and logs](../evidence/m5/ippv/equality-20261008/REPORT.md).
+
+The baseline now has eight recorded patches; old binaries and D040 measurements
+remain intact. D041 repeats only the main comparison as fresh paired measurements
+under unchanged D040 settings. It is not a performance optimization, a new output
+policy or a claim of full-domain baseline correctness.

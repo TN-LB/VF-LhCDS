@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "2",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-toys/runs/h2-singleton-profile1",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:19:09.050645+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "9db299b86e357255f6dcf0cf9a613a9fed20987c7b7359df933c1c1a436f1271",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.0450582904741168,
+  "user_seconds": 0.0072039999999999995,
+  "system_seconds": 0.034115,
+  "peak_rss_bytes": 17760256,
+  "finished_utc": "2026-10-07T23:19:09.096925+00:00",
+  "sha256": {
+    "stdout.txt": "3b44362f1dc83d817fe445bed0d4e3d4f0bb5e52a3a9ec475ab1d07b19b3d8c3",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

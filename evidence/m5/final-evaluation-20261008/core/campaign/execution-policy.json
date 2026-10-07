@@ -1,0 +1,428 @@
+{
+  "stop_on_failure": true,
+  "require_strict_agreement": true,
+  "require_prefix_agreement": false,
+  "environment_baseline": {
+    "utc": "2026-10-07T16:58:29.584863+00:00",
+    "platform": "macOS-15.7.7-arm64-arm-64bit",
+    "load_average": [
+      2.46337890625,
+      2.134765625,
+      2.07958984375
+    ],
+    "temperature": null,
+    "cpu_frequency": null,
+    "scope": "before/after block observations, outside native timing; not continuous monitoring",
+    "observations": {
+      "vm": {
+        "command": [
+          "/usr/bin/vm_stat"
+        ],
+        "exit_code": 0,
+        "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                8826.\nPages active:                            275364.\nPages inactive:                          274704.\nPages speculative:                          177.\nPages throttled:                              0.\nPages wired down:                        162952.\nPages purgeable:                           2405.\n\"Translation faults\":               12390873940.\nPages copy-on-write:                  345428423.\nPages zero filled:                   6419041897.\nPages reactivated:                   2128744102.\nPages purged:                         590869574.\nFile-backed pages:                       193561.\nAnonymous pages:                         356684.\nPages stored in compressor:             1796869.\nPages occupied by compressor:            290860.\nDecompressions:                      2071179290.\nCompressions:                        2514567555.\nPageins:                              350131544.\nPageouts:                               8161498.\nSwapins:                                3286484.\nSwapouts:                               4639741.\n",
+        "stderr": "",
+        "available": true
+      },
+      "swap": {
+        "command": [
+          "/usr/sbin/sysctl",
+          "-n",
+          "vm.swapusage"
+        ],
+        "exit_code": 0,
+        "stdout": "total = 7168.00M  used = 6050.19M  free = 1117.81M  (encrypted)\n",
+        "stderr": "",
+        "available": true
+      },
+      "power_source": {
+        "command": [
+          "/usr/bin/pmset",
+          "-g",
+          "batt"
+        ],
+        "exit_code": 0,
+        "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35192931)\t75%; AC attached; not charging present: true\n",
+        "stderr": "",
+        "available": true
+      },
+      "power_settings": {
+        "command": [
+          "/usr/bin/pmset",
+          "-g",
+          "custom"
+        ],
+        "exit_code": 0,
+        "stdout": "Battery Power:\n Sleep On Power Button 1\n lowpowermode         1\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         10\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         20\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n",
+        "stderr": "",
+        "available": true
+      }
+    },
+    "power_state": {
+      "source": "AC Power",
+      "settings_sha256": "575ec1b91cf3946766dea53d34d918fba55ba666fb97040989cef5faeb31a84a"
+    }
+  },
+  "continue_on_timeout": true,
+  "planned_runs": [
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0000-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0000-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0001-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0001-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0002-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0002-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0003-1"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0003-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0004-0"
+    },
+    {
+      "case": "ca-grqc-h3-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0004-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0005-0"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0005-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0006-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0006-0"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0007-0"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0007-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0008-0"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0008-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0009-1"
+    },
+    {
+      "case": "ca-grqc-h4-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0009-0"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0010-1"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0010-0"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0011-0"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0011-1"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0012-0"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0012-1"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0013-1"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0013-0"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0014-1"
+    },
+    {
+      "case": "ca-grqc-h5-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0014-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0015-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0015-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0016-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0016-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0017-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0017-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0018-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0018-0"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0019-1"
+    },
+    {
+      "case": "ca-condmat-h3-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0019-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0020-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0020-1"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0021-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0021-1"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0022-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0022-1"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0023-1"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0023-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0024-0"
+    },
+    {
+      "case": "ca-condmat-h4-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0024-1"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0025-1"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 0,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0025-0"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0026-1"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 1,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0026-0"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0027-0"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 2,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0027-1"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0028-0"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 3,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0028-1"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-off",
+      "directory": "runs/0029-0"
+    },
+    {
+      "case": "ca-condmat-h5-k20",
+      "repeat": 4,
+      "algorithm": "vf-count-membership-core-safe",
+      "directory": "runs/0029-1"
+    }
+  ]
+}

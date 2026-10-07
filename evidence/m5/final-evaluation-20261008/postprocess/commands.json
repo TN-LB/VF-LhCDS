@@ -1,0 +1,37 @@
+[
+  {
+    "name": "tests",
+    "process": "postprocess/tests/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "main-aggregate",
+    "process": "postprocess/main-aggregate/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "main-aggregate-replay",
+    "process": "postprocess/main-aggregate-replay/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "core-aggregate",
+    "process": "postprocess/core-aggregate/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "core-aggregate-replay",
+    "process": "postprocess/core-aggregate-replay/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "stop-aggregate",
+    "process": "postprocess/stop-aggregate/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "stop-aggregate-replay",
+    "process": "postprocess/stop-aggregate-replay/process.json",
+    "exit_code": 0
+  }
+]

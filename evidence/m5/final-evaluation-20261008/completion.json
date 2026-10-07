@@ -1,0 +1,9 @@
+{
+  "completed_suites": [
+    "main",
+    "core",
+    "stop"
+  ],
+  "unlaunched_suites": [],
+  "scope": "suite completion does not imply every native call succeeded; see per-suite ledgers"
+}

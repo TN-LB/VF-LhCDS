@@ -1,0 +1,32 @@
+[
+  {
+    "name": "equality",
+    "process": "checks/equality/process.json",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "fractional",
+    "process": "checks/fractional/process.json",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "toys",
+    "process": "checks/toys/process.json",
+    "exit_code": 1,
+    "expected_exit": 1
+  },
+  {
+    "name": "pytest",
+    "process": "checks/pytest/process.json",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "certificate",
+    "process": "checks/certificate/process.json",
+    "exit_code": 0,
+    "expected_exit": 0
+  }
+]

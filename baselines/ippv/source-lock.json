@@ -31,6 +31,10 @@
     {
       "path": "baselines/ippv/patches/0007-restore-pava-workspace.patch",
       "sha256": "dc70c616e4d27171c78557c90a04f7cff2a3afd2f230f4ab983963cd54f5107d"
+    },
+    {
+      "path": "baselines/ippv/patches/0008-include-equal-density-verification-neighbors.patch",
+      "sha256": "419ca7d9e34ef78cde6b841fb051089b05b594b81c487ab3d96c983e64ce9d7a"
     }
   ],
   "patched_source_sha256": {
@@ -41,7 +45,7 @@
     "EdgeFN.h": "5cc460366ed6cdeba4ba283ea5d33fa62e0745bbdcccb87cf01168e7eb00adc6",
     "FlowNetwork.cpp": "cd7e7246f2af2ce2509ee87dd34dd24d023a3cf53977626e388e593e6831a333",
     "FlowNetwork.h": "add8c81ad3cfa1f72dd84620f99d3db503929916d834e53c5259f152902080c5",
-    "Graph.cpp": "3dfab9e08dbdbcdbf5b79b777abc7a262cfa7f6b4453f0476415c5c9805f9eac",
+    "Graph.cpp": "829203af0e6fdba802e6dd4f9d38442fd362e95b0a1146880686caedd36f2c9e",
     "Graph.h": "714a6d6d5f130148d3b86433862e487e6f1b70882ee5084f116c951094e3d8c5",
     "KClistCore.cpp": "8994671abed431be3ec6b1b6e8c5d51a1a71ad3f9331c6277e67c689312bc132",
     "KClistCore.h": "83693572e75329968c00ed94422da6bc9b59f771fdf663084645f7af32b94157",

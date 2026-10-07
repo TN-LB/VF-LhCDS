@@ -1,0 +1,17 @@
+--- a/Graph.cpp
++++ b/Graph.cpp
+@@ -1664,12 +1664,12 @@
+                 }
+             }
+             for (auto w : adj[v]) {
+-                if (rho_gu[w] - DELTA >= g) {
++                if (rho_gu[w] + DELTA >= g) {
+                     if (veri_vtx[w] != num_verify) {
+                         if (lhcds_num[w] != -1 && lhcds_num[w] < lhcds_num[u]) {
+                             flag = false;
+                         }
+-                        if (rho_l[w] + DELTA <= g) {
++                        if (rho_l[w] <= g + DELTA) {
+                             veri_vtx[w] = num_verify;
+                             q.push(w);
+                             if (vis_tmp_nodes.find(w) == vis_tmp_nodes.end()) {

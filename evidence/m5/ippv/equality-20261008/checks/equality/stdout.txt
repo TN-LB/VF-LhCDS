@@ -1,0 +1,2 @@
+{"profile": 0, "passed": true, "level": "definition_checked", "all_proper_supersets_checked_by_reference": true, "native_exit_code": 0, "manifest": "profile-0/manifest.json"}
+{"profile": 1, "passed": true, "level": "definition_checked", "all_proper_supersets_checked_by_reference": true, "native_exit_code": 0, "manifest": "profile-1/manifest.json"}

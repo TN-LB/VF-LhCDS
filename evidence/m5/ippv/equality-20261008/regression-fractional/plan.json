@@ -1,0 +1,52 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/check_fractional.py",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release/IPPV",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize/IPPV",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/ippv/equality-20261008/regression-fractional"
+  ],
+  "script_sha256": "9485beb3c29f0daab59953e1d3074a537ca7635bc1759275816036d8a9705141",
+  "fixture": "baselines/ippv/fixtures/fractional-bridge.graph",
+  "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+  "h": 2,
+  "k": 2,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "scope": "fixed correctness regression, not benchmark continuation",
+  "reference_max_vertices": 13,
+  "reference_wall_seconds": 0.23843999952077866,
+  "expected": [
+    {
+      "vertices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "density": "3/2"
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "density": "5/4"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-release/IPPV",
+      "sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738"
+    },
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-ippv-equality-sanitize/IPPV",
+      "sha256": "9db299b86e357255f6dcf0cf9a613a9fed20987c7b7359df933c1c1a436f1271"
+    }
+  ]
+}
