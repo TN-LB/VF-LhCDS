@@ -1,0 +1,22 @@
+{
+  "checked_markdown": [
+    "README.md",
+    "baselines/ippv/README.md",
+    "docs/BUILD.md",
+    "docs/CLAIM_TRACEABILITY.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/M5_COMPLETION_PLAN.md",
+    "docs/M5_REPRODUCTION.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/TASKS.md",
+    "evidence/m5/REPORT.md",
+    "evidence/m5/final-main-repaired-20261008/REPORT.md",
+    "evidence/m5/final-main-repaired-20261008/aggregate-replay/main/TABLE.md",
+    "evidence/m5/final-main-repaired-20261008/aggregate/main/TABLE.md",
+    "evidence/m5/final-main-repaired-20261008/review-replay/TABLE.md",
+    "evidence/m5/final-main-repaired-20261008/review/TABLE.md",
+    "evidence/m5/reproduction-20261008/REPORT.md",
+    "experiments/README.md"
+  ],
+  "broken_local_links": []
+}

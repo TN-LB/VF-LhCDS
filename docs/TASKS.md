@@ -4,14 +4,13 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
-Current position (2026-10-08): **M5, final-scope preparation**. M0–M4 and the
-D038 targeted counting change are complete at their recorded scopes; no further
-optimization cycle is planned. The [current completion plan](M5_COMPLETION_PLAN.md)
-sets three remaining packages: freeze/prepare, execute/aggregate, review/reproduce.
-D040 selects 360 native calls with five fixed repeats. Accepted configs and
-[executed harness readiness](../evidence/m5/final-evaluation-20261008/REPORT.md)
-are separate from the immutable draft pack. Preparation does not complete P12.1
-or the final evaluation; status/results will be recorded after actual execution.
+Current position (2026-10-08): **M5, selected local evaluation and review complete;
+clean-machine release outstanding**. The five-repeat suite has 240 repaired-main
+calls plus 120 retained VF ablation calls. All required comparisons pass.
+[Results and limits](../evidence/m5/final-main-repaired-20261008/REPORT.md),
+[fresh local rebuild](../evidence/m5/reproduction-20261008/REPORT.md), and
+[remaining gates](M5_COMPLETION_PLAN.md) distinguish this completed scope from
+the broader original M5 requirements. No further optimization cycle is planned.
 
 ## M0 - Freeze contracts and bootstrap (prompt 00)
 
@@ -318,7 +317,12 @@ stays deferred and incomplete, and no full-competitor/SOTA claim follows.
   retained. This completes one targeted change and limited comparison, not
   broader h/k/dataset coverage or M5. Next: freeze final experiment scope;
   no additional optimization cycle or baseline rerun follows automatically.
-- [ ] P14.1 Review conclusions against available direct baselines and validation/timing scope.
+- [x] P14.1 Review conclusions against available direct baselines and validation/timing scope.
+  D041: [completed selected-scope review](../evidence/m5/final-main-repaired-20261008/REPORT.md)
+  retains all 24 five-repeat settings, mixed timing/RSS outcomes, actual load/swap,
+  native-verification costs, cutoff ties and failed prior-version evidence.
+  DCLDS/specialization/broader-data exclusions limit conclusions; this review does
+  not complete those excluded experiments, P12.1, clean-machine release or M5.
   2026-10-06: [local pilot review](../evidence/m5/pilot-membership-20261006/REPORT.md)
   checks pins, serial execution and separate validation boundaries. IPPV has
   lower median native time in all four completed CA-GrQc cells; CA-CondMat has
@@ -375,3 +379,24 @@ verify; 22 aggregates regenerate identically. Six aggregation checks pass.
 D041 repeats the affected 240-call main comparison with the repaired baseline
 and fresh VF controls under unchanged settings; no historical timing pooling or
 rerun of the 120 unaffected VF ablation calls. Final conclusions/release remain open.
+
+### D041 final local results and reproduction — 2026-10-08
+
+P12.1/O12: [repaired main](../evidence/m5/final-main-repaired-20261008/REPORT.md)
+completes 240 native calls and separate structural validators; 120/120 tie-aware
+pairs pass, including 40 strict matches. No timeout/OOM/error/unrun remains in
+D041. The final selected suite contains 360 runs including D040's valid ablations;
+all 182 prior main runs and 58 unrun entries remain separate. VF has lower wall
+medians in 11/24 settings, IPPV in 13/24, with full ranges and CPU/RSS retained.
+No universal advantage, SOTA, real-graph completeness or O(k) claim follows.
+P12.1 stays open for its broader scope and unavailable rank/detailed-phase metrics.
+
+P14.1/P15.1: 2,765 D041 raw entries verify and 12 aggregate/review artifacts
+regenerate identically. The [local reproduction](../evidence/m5/reproduction-20261008/REPORT.md)
+executes 23 successful commands: new VF Release build, 16/16 CTest, 164 pytest,
+fresh local IPPV checkout with all eight patches applied, baseline Release build,
+three IPPV and one VF definition-checked fixtures. Both rebuilt executables match
+the measured binary hashes. The first script-path failure is preserved separately;
+it never entered a build. Four paper hashes match; solver/reference stay unchanged.
+P15.1 remains open: existing host/Python/Boost are reused, no clean-machine run.
+No new performance campaign or production optimization follows. DCLDS is deferred.

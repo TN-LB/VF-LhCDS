@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/usr/bin/c++",
+    "--version"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/compiler-version",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:43:19.011785+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "7f30f076d0e9c38f772a76449fca9da8cf97f6a3d43b94c90a00e4f9ce7ad39e",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.11945124994963408,
+  "user_seconds": 0.0077339999999999996,
+  "system_seconds": 0.067702,
+  "peak_rss_bytes": 15908864,
+  "finished_utc": "2026-10-08T07:43:19.131988+00:00",
+  "sha256": {
+    "stdout.txt": "6ea00c29cd488d365b3461e5dd1d92bc6792fed347a3370edc2b349a8f7660a5",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

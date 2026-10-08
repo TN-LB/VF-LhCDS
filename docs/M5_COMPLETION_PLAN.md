@@ -1,8 +1,9 @@
 # M5 completion plan — 2026-10-08
 
 M0–M4 are complete at their recorded gates. M5 remains in progress. D039 closes
-the development optimization cycle; the next deliverable is a frozen evaluation
-configuration, followed by one coordinated evaluation and a reproducibility review.
+the development optimization cycle. The selected evaluation, conclusion review,
+table regeneration and fresh local rebuild are complete; clean-machine and the
+separately listed broader coverage gates remain open.
 This file is the current execution plan; earlier campaign records remain historical.
 
 ## Progress and remaining gates
@@ -10,9 +11,9 @@ This file is the current execution plan; earlier campaign records remain histori
 | Work package | Status | Evidence / next deliverable |
 |---|---|---|
 | One targeted count optimization | Complete | [D038 report](../evidence/m5/counting-20261007/REPORT.md); implementation commit `0315c5d` |
-| Freeze evaluation scope and prepare execution | Scope selected; readiness passes | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); final environment recorded at launch |
-| Execute and aggregate the frozen suite | D040 retained; repaired main follows | 302 calls and both ablations complete; main stops at IPPV-B09, with 58 unrun. D041 repeats the affected 240-call main suite using eight patches and fresh controls |
-| Review conclusions and reproduce release | Open | P14.1/P15.1: claim audit, aggregate regeneration, fresh build/smoke and explicit clean-machine status |
+| Freeze evaluation scope and prepare execution | Complete | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); environment recorded at each launch |
+| Execute and aggregate the frozen suite | Complete for selected local scope | [D041 main](../evidence/m5/final-main-repaired-20261008/REPORT.md): 240 runs, 120 tie-aware matches; retained VF ablations: 120 runs, 60 required matches. Stopped D040 main remains separate |
+| Review conclusions and reproduce release | Local review/rebuild complete; clean machine open | P14.1 reviewed; [P15.1 local reproduction](../evidence/m5/reproduction-20261008/REPORT.md): new builds, 16 CTest, 164 pytest and four definition fixtures pass; [reproduction instructions](M5_REPRODUCTION.md) |
 
 D038's existing evidence is 16/16 CTest in each of Debug, Release and ASan/UBSan,
 144 pytest passes, 14 differential campaigns and 1,392,496 matching saved responses.
@@ -22,7 +23,10 @@ the theorem or establish a new VF/IPPV speedup.
 
 P11.3 shared smoke is complete. P09.1 retains IPPV's zero-density coverage gap;
 P09b.1 remains deferred under D029. P11.1/P11.2 now have executed level/timing
-separation and configuration-freeze evidence. P10.1/P12.1/P14.1/P15.1 remain open.
+separation and configuration-freeze evidence. P14.1 is complete for the selected
+claims. P10.1/P12.1/P15.1 remain open at their broader gates. Remaining work is a
+clean-machine run and explicit treatment of broader coverage/missing metrics,
+not another local optimization or automatic benchmark cycle.
 
 ## Stop adding performance optimizations
 

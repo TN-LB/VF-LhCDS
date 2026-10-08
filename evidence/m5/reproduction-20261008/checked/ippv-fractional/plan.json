@@ -1,0 +1,46 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/check_fractional.py",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv/IPPV",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/ippv-fractional"
+  ],
+  "script_sha256": "9485beb3c29f0daab59953e1d3074a537ca7635bc1759275816036d8a9705141",
+  "fixture": "baselines/ippv/fixtures/fractional-bridge.graph",
+  "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+  "h": 2,
+  "k": 2,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "scope": "fixed correctness regression, not benchmark continuation",
+  "reference_max_vertices": 13,
+  "reference_wall_seconds": 0.22833541687577963,
+  "expected": [
+    {
+      "vertices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "density": "3/2"
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "density": "5/4"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv/IPPV",
+      "sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738"
+    }
+  ]
+}

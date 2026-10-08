@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "identical_artifact_sha256": {
+    "main/TABLE.md": "08b24fb42d6f52ec0a0e4f9ce491ece3fc335c4bfe75e3327683429337dcf8ab",
+    "main/cells.json": "1335dd2bd474da9a214faffa436c658daf0d6ef27974ce776dc4d5d2a1597d5f",
+    "main/provenance.json": "e67af576fefbbcc521b89c44b65d25ea2bb04a8918f08470b944f8906a20fd1c",
+    "main/runs.json": "93ead317b07e4b3106085729753a87129a7e987eb1b64cc44d5a7050c019481e",
+    "main/telemetry.json": "b0313129228dfe888d4fb440fd7a22e26e2a77532ebaffb3498d1430a2d633d0",
+    "main/totals.json": "1deee7478bedb5d9ae4f7a2bed087acf486c7c55def43afeaf3e2c2d34fb4d95",
+    "main/unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "identical_review_sha256": {
+    "TABLE.md": "d39094254e251174e320223a9645a8dd88940f14dbc6038e503e22574625656f",
+    "coverage.json": "cb0894f62209af4fc84374f6de1770bd1ee03faf268c0af777e1c3315e417f52",
+    "environment.json": "f24a911decb2762bbd4de89829039c9500786a94400f3907439d359ce97e2dcd",
+    "paired.json": "6c719f619ed107402da395527030e3bd775a530c63675f757e4da568c626979d",
+    "provenance.json": "72a3c572ba25fa2af7bf658f767d43e8edec3a9228295decdfa30893c23f414e"
+  },
+  "native_algorithm_reruns": 0,
+  "historical_timing_pooling": false
+}

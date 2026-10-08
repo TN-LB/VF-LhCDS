@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+    "--version"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/cmake-version",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:43:18.782304+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "f8a5199521afaf1e7485ed20db5ab097cd70ed0ef80981de001e15196a506d8e",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.22803916689008474,
+  "user_seconds": 0.087923,
+  "system_seconds": 0.051944,
+  "peak_rss_bytes": 7929856,
+  "finished_utc": "2026-10-08T07:43:19.010966+00:00",
+  "sha256": {
+    "stdout.txt": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

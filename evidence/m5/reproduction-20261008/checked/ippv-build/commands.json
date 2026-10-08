@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv-source",
+      "-B",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_CXX_FLAGS=-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0"
+    },
+    "started_utc": "2026-10-08T07:44:00.829647+00:00",
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-08T07:44:01.716345+00:00",
+    "stdout_sha256": "8847321a25879352ff9d315671ab99479acbb9acff032b5a7e592d2b39c7729f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv",
+      "-j2"
+    ],
+    "cwd": "/Users/nost/Documents/VF-LhCDS",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0"
+    },
+    "started_utc": "2026-10-08T07:44:01.717028+00:00",
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-08T07:44:06.513957+00:00",
+    "stdout_sha256": "1d912a03a7205d355651be994f0a6b018b980ac92153b095d30e699341a842d7",
+    "stderr_sha256": "70d21e9fb53f011626dd9c722c5426dd233f6d07a7ca2840de50442e475af1c3"
+  }
+]

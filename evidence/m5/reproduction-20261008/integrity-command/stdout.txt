@@ -1,0 +1,2 @@
+Verified inventory entries: 6074
+Unchanged source/test/fixture files: 114

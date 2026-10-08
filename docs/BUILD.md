@@ -1,4 +1,4 @@
-# Build and test instructions (through M4)
+# Build and test instructions (through the M5 local evaluation)
 
 Requires CMake >=3.16, GCC/Clang C++17 with native unsigned __int128 on a POSIX
 system, and Python >=3.10 with pytest >=7,<9 for testing. M2 uses header-only
@@ -44,13 +44,20 @@ Only the native 128-bit typedef uses a localized extension. MSVC/no-128/non-POSI
 configurations fail explicitly; GCC/Linux support is intended but not yet tested.
 No parallel code exists, so TSan is deferred. No performance claim uses these runs.
 
-CTest contains fourteen tests: retained library argument checks; M2 primitives, oracle
+CTest contains sixteen tests: retained library argument checks; M2 primitives, oracle
 smoke and CLI regressions; M3 solver, solver smoke, solve CLI and synthetic failure
 reduction; M4 core invariants, four-mode smoke and CLI equivalence; and the 74 independent M1 pytest checks. The M0 reference
 test name is historical. The enumeration extension adds T04-ADJ/T04-EDGE and
 T04-CLI checks; the existing M2/M3 probes compare both builders and use adjacency
 for query execution. `-DBUILD_TESTING=OFF` omits Python discovery, test executables
 and the exhaustive test-only probe; the production library still needs Boost.
+
+The count extension adds exact membership-count and CLI tests. Production keeps
+sorted counting by default; `--clique-count membership` selects the measured M5
+mode. `-DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON` selects membership counting in test-only
+oracle/solver probes. See [the fresh local build and reproduction steps](M5_REPRODUCTION.md);
+that smoke run is distinct from a clean-machine installation and from prior full
+sanitizer/differential acceptance campaigns.
 
 Full M2 differential campaigns (each output directory must be new):
 

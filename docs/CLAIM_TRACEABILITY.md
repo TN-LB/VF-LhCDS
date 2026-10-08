@@ -748,3 +748,30 @@ version; all old main timings and failed/unrun records remain separate.
 P14.1/P15.1 gain scoped interpretation, 6 aggregation tests, verification of
 3,309 raw inventory entries and byte-identical regeneration of 22 artifacts.
 Broad final conclusions and clean-machine release remain unfinished.
+
+## D041 selected-scope conclusion and local rebuild — 2026-10-08
+
+P12.1/O12 gain [240 repaired-main records](../evidence/m5/final-main-repaired-20261008/REPORT.md):
+240 structural checks, 120/120 tie-aware pairs, 40 strict pairs, no failed/censored/
+unrun D041 calls. D040's 120 VF-only ablation records remain valid; its stopped
+182-call seven-patch main and 58 unrun calls remain separate. Every final setting
+has five repeats; prior-version and development timings are not pooled.
+
+P14.1's selected-scope review is complete. VF's wall median is lower in 11/24
+settings, IPPV's in 13/24; VF RSS medians are lower in 10/24. Observed load/swap,
+full ranges, CPU time, native IPPV verification and output-tie differences stay
+visible. These descriptive results do not establish a universal speed/memory
+advantage, real-graph maximality/completeness, SOTA or a new mathematical claim.
+The main raw inventory verifies 2,765 entries and all 12 derived artifacts
+regenerate byte-identically, without native algorithm reruns.
+
+P15.1 gains [fresh local builds and smoke](../evidence/m5/reproduction-20261008/REPORT.md):
+23 commands exit 0, 16/16 CTest and 164 pytest pass; all eight IPPV patches apply
+to a fresh pinned local checkout before its Release build. Three baseline fixtures
+and the VF triangle/isolate full-output fixture pass independent definition checks.
+Rebuilt VF and IPPV executables match their measured hashes on this host. The
+initial wrapper-path failure and its source/log are preserved; no build began in
+that attempt. This is same-host reuse of installed dependencies, not a clean-machine
+run or a repeated sanitizer/differential acceptance campaign. All four paper
+hashes match and production/reference remain unchanged. P09.1/P10.1/P12.1/P15.1
+broader gates remain open; DCLDS is deferred and M5 is not marked complete.

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-08T07:44:08.536860+00:00",
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/vf/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/triangle_and_isolate.graph",
+    "--h",
+    "3",
+    "--all",
+    "--clique-enumeration",
+    "adjacency",
+    "--footprint-scan",
+    "membership",
+    "--clique-count",
+    "membership",
+    "--core-reduction",
+    "off"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/vf-definition",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "executable_sha256": "e6b78dc8a1fc979b03da64f4939cbf160c090f7055737e671bf0453bdafc984b",
+  "validation": {
+    "level": "definition_checked",
+    "passed": true,
+    "expected": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 3,
+        "clique_count": "1",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          1,
+          4,
+          9
+        ]
+      },
+      {
+        "rank": 2,
+        "h": 3,
+        "vertex_count": 1,
+        "clique_count": "0",
+        "density_num": "0",
+        "density_den": "1",
+        "vertices": [
+          -2
+        ]
+      }
+    ],
+    "actual": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 3,
+        "clique_count": "1",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          1,
+          4,
+          9
+        ]
+      },
+      {
+        "rank": 2,
+        "h": 3,
+        "vertex_count": 1,
+        "clique_count": "0",
+        "density_num": "0",
+        "density_den": "1",
+        "vertices": [
+          -2
+        ]
+      }
+    ]
+  },
+  "evidence_type": "single process run; no performance comparison",
+  "input_file_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "native_exit_code": 0,
+  "T_e2e": 0.00369254220277071,
+  "native_status": {
+    "schema_version": 1,
+    "status": "completed",
+    "complete": true,
+    "output_count": 2,
+    "semantic_sha256": "6996e5a4862c60477167ec31a22669c4e9090d843603ecfe6c097e1859dbc586",
+    "termination": "exhausted",
+    "counters": {
+      "logical_interval_queries": 3,
+      "mincut_calls": 2,
+      "cliques_scanned": 2,
+      "cliques_enumerated": 1,
+      "queries": [
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 4,
+          "oracle_interval_size": 4,
+          "cliques_scanned": 1,
+          "unique_footprints": 1,
+          "forward_nodes": 7,
+          "forward_arcs": 8,
+          "residual_arcs": 16,
+          "capacity_bit_length": 6,
+          "capacity_backend": "uint128",
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        },
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 3,
+          "oracle_interval_size": 3,
+          "cliques_scanned": 1,
+          "unique_footprints": 1,
+          "forward_nodes": 6,
+          "forward_arcs": 7,
+          "residual_arcs": 14,
+          "capacity_bit_length": 5,
+          "capacity_backend": "uint128",
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        },
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 0,
+          "original_interval_size": 1,
+          "oracle_interval_size": 1,
+          "cliques_scanned": null,
+          "unique_footprints": null,
+          "forward_nodes": null,
+          "forward_arcs": null,
+          "residual_arcs": null,
+          "capacity_bit_length": null,
+          "capacity_backend": null,
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        }
+      ]
+    },
+    "timing": {
+      "T_e2e": null,
+      "T_postload": 0.000181375,
+      "T_core": 0.000179459
+    }
+  },
+  "status": "completed",
+  "complete": true,
+  "T_external_validation": 0.0003875410184264183,
+  "sha256": {
+    "stdout.jsonl": "c96712188c16c24cc25f59ca8aa47fbe4c194bd3e732e596218767012c8e861c",
+    "stderr.jsonl": "9a9e2fe94168a50a438973066bbc7d6feaed8c347585236c118bf08e626d2c56"
+  }
+}

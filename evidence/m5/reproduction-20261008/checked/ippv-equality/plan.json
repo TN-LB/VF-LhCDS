@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/check_equality.py",
+    "--binary",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv/IPPV",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/ippv-equality"
+  ],
+  "script_sha256": "edf3edd6f17253bcfc65bd0de90c6dd8e8b5340bbec330e840bebae4623b257b",
+  "fixture": "baselines/ippv/fixtures/equal-density-bridge.graph",
+  "graph_sha256": "3ab7700bdc0f8cc27fe51171ddf8bf3a7d34bcc85546dad41c8b1fd9859b4c15",
+  "h": 3,
+  "k": 3,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "scope": "independent all-superset correctness regression, not a benchmark",
+  "reference_max_vertices": 13,
+  "expected_vertices": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  ],
+  "binaries": [
+    {
+      "path": "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv/IPPV",
+      "sha256": "791b6f732ff357cc77e4bfebfe8700d3d8adc2a3dc6b9a55cdc1040eefd9e738"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/experiments/run.py",
+    "--config",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/config.json",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign",
+    "--stop-on-failure",
+    "--continue-on-timeout",
+    "--environment-baseline",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/environment-baseline.json"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS",
+  "utc": "2026-10-07T23:29:22.787989+00:00",
+  "preflight_sha256": "e3ce0a6d2bb8553d68389e8a471744eb6e9e5ddb7a6a2b198dfb5509dfa72876",
+  "planned_native_calls": 240
+}

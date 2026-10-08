@@ -1,0 +1,42 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+    "run",
+    "--executable",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv/IPPV",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/reference/fixtures/bridged_triangles.graph",
+    "--h",
+    "3",
+    "--k",
+    "1",
+    "--iterations",
+    "10",
+    "--timeout",
+    "60",
+    "--definition",
+    "--evidence",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/ippv-bridge"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/ippv-bridge",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:44:08.167655+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.31772983353585005,
+  "user_seconds": 0.101861,
+  "system_seconds": 0.036622999999999996,
+  "peak_rss_bytes": 22757376,
+  "finished_utc": "2026-10-08T07:44:08.485789+00:00",
+  "sha256": {
+    "stdout.txt": "be487d86c5f1520dff65a829c6226d00b28988f6752f5b8210946899b0407c8e",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

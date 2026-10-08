@@ -1,0 +1,22 @@
+[
+  {
+    "name": "aggregate",
+    "process": "postprocess/aggregate/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "aggregate-replay",
+    "process": "postprocess/aggregate-replay/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "review",
+    "process": "postprocess/review/process.json",
+    "exit_code": 0
+  },
+  {
+    "name": "review-replay",
+    "process": "postprocess/review-replay/process.json",
+    "exit_code": 0
+  }
+]

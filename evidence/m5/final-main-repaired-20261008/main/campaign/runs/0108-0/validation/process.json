@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/experiments/validate.py",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0108-0/graph.txt",
+    "--records",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0108-0/stdout.txt",
+    "--status",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0108-0/stderr.txt",
+    "--h",
+    "5",
+    "--k",
+    "10",
+    "--strict"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0108-0/validation",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:47:57.266003+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.6695477496832609,
+  "user_seconds": 0.509771,
+  "system_seconds": 0.043515,
+  "peak_rss_bytes": 138002432,
+  "finished_utc": "2026-10-07T23:47:57.936189+00:00",
+  "sha256": {
+    "stdout.txt": "b7f447c7432b83afeab1c2998671253c5bd53c3e6e93b83ce8511e4f66ba1c93",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

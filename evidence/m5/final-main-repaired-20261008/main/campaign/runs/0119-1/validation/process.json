@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/adapter.py",
+    "validate",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0119-1/graph.txt",
+    "--native-output",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0119-1/output/input-20.txt",
+    "--h",
+    "5",
+    "--k",
+    "20",
+    "--records",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0119-1/canonical_output.jsonl",
+    "--declared-count",
+    "20"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0119-1/validation",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:52:10.154876+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.4542090417817235,
+  "user_seconds": 0.410505,
+  "system_seconds": 0.027479999999999997,
+  "peak_rss_bytes": 130564096,
+  "finished_utc": "2026-10-07T23:52:10.609778+00:00",
+  "sha256": {
+    "stdout.txt": "4ffde7d7a0e5c7caeda531f897207a0abaf5d42a741c9ad604adc23e40bddad5",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

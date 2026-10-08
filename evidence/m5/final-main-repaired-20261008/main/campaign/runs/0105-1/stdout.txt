@@ -1,0 +1,297 @@
+./dataset/input.txt
+output/input-10.txt
+Reading edgelist from file ./dataset/input.txt
+Graph construction
+kclist time is:0.146666
+#slt node 14643 #slt edge 78728 #h_cliques 511088
+max_d 25244
+#slt node 3864 #slt edge 13336 #slt_h_cliques 258802
+#active nodes 1757
+compute core and prune time: 0.0592
+#node 3864 #edge 13336
+fw time: 0.1869
+nsg 40
+pava time: 0.0013
+updated nsg 7
+check sg time: 0.0245
+5
+sg 5 5 152 309
+2
+sg 2 2 1876 8581
+1
+sg 1 1 54 595
+pruning time: 0.0232
+verifyLhCDS time: 0.2269
+#node 30 #edge 401
+fw time: 0.0404
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0059
+verifyLhCDS time: 0.2297
+#node 30 #edge 401
+fw time: 0.0406
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0056
+verifyLhCDS time: 0.2298
+#node 30 #edge 401
+fw time: 0.0421
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0058
+verifyLhCDS time: 0.2153
+#node 30 #edge 401
+fw time: 0.0403
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0057
+verifyLhCDS time: 0.2338
+#node 30 #edge 401
+fw time: 0.0406
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0058
+verifyLhCDS time: 0.2226
+#node 30 #edge 401
+fw time: 0.0406
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0059
+verifyLhCDS time: 0.2376
+#node 30 #edge 401
+fw time: 0.0404
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0060
+verifyLhCDS time: 0.2334
+#node 30 #edge 401
+fw time: 0.0405
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0057
+verifyLhCDS time: 0.2274
+#node 30 #edge 401
+fw time: 0.0403
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0059
+verifyLhCDS time: 0.2329
+#node 30 #edge 401
+fw time: 0.0407
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0060
+verifyLhCDS time: 0.2414
+#node 30 #edge 401
+fw time: 0.0511
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0058
+verifyLhCDS time: 0.2091
+#node 30 #edge 401
+fw time: 0.0391
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0053
+verifyLhCDS time: 0.1988
+#node 30 #edge 401
+fw time: 0.0391
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0056
+verifyLhCDS time: 0.1964
+#node 30 #edge 401
+fw time: 0.0391
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0056
+verifyLhCDS time: 0.1966
+#node 30 #edge 401
+fw time: 0.0392
+nsg 1
+pava time: 0.0003
+check sg time: 0.0000
+pruning time: 0.0056
+verifyLhCDS time: 0.1976
+#node 30 #edge 401
+fw time: 0.0394
+nsg 2
+pava time: 0.0003
+updated nsg 1
+check sg time: 0.0145
+pruning time: 0.0072
+verifyLhCDS time: 0.1971
+#node 30 #edge 401
+fw time: 0.1062
+nsg 2
+pava time: 0.0004
+updated nsg 2
+check sg time: 0.0037
+pruning time: 0.0071
+lhcdses candidate: #nodes 28 #edges 366 #h-cliques 76610
+verifyLhCDS time: 0.1652
+#node 54 #edge 595
+fw time: 0.0356
+nsg 3
+pava time: 0.0002
+updated nsg 1
+check sg time: 0.0191
+pruning time: 0.0054
+verifyLhCDS time: 0.1225
+#node 54 #edge 595
+fw time: 0.0568
+nsg 3
+pava time: 0.0003
+updated nsg 2
+check sg time: 0.0042
+pruning time: 0.0054
+verifyLhCDS time: 0.0919
+#node 38 #edge 423
+fw time: 0.0432
+nsg 2
+pava time: 0.0002
+updated nsg 2
+check sg time: 0.0046
+pruning time: 0.0051
+lhcdses candidate: #nodes 23 #edges 253 #h-cliques 33649
+verifyLhCDS time: 0.4504
+#node 1876 #edge 8581
+fw time: 0.0651
+nsg 47
+pava time: 0.0005
+updated nsg 39
+check sg time: 0.0051
+38
+sg 38 38 144 345
+37
+sg 37 37 11 30
+32
+sg 32 32 144 423
+31
+sg 31 31 8 26
+29
+sg 29 29 16 52
+28
+sg 28 28 11 42
+27
+sg 27 27 82 288
+26
+sg 26 26 9 34
+19
+sg 19 19 66 266
+17
+sg 17 17 11 49
+16
+sg 16 16 13 58
+15
+sg 15 15 37 154
+14
+sg 14 14 14 69
+11
+sg 11 11 18 99
+10
+sg 10 10 225 1226
+9
+sg 9 9 44 286
+4
+sg 4 4 16 120
+3
+sg 3 3 14 91
+2
+sg 2 2 18 147
+1
+sg 1 1 17 136
+pruning time: 0.0078
+lhcdses candidate: #nodes 19 #edges 171 #h-cliques 11628
+verifyLhCDS time: 0.0172
+#node 17 #edge 136
+fw time: 0.0032
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0004
+lhcdses candidate: #nodes 17 #edges 136 #h-cliques 6188
+verifyLhCDS time: 0.0089
+#node 18 #edge 147
+fw time: 0.0033
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0004
+lhcdses candidate: #nodes 18 #edges 147 #h-cliques 6084
+verifyLhCDS time: 0.5245
+#node 14 #edge 91
+fw time: 0.0013
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0002
+verifyLhCDS time: 0.0000
+#node 16 #edge 120
+fw time: 0.0024
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0005
+lhcdses candidate: #nodes 16 #edges 120 #h-cliques 4368
+verifyLhCDS time: 0.0070
+#node 44 #edge 286
+fw time: 0.0031
+nsg 3
+pava time: 0.0000
+updated nsg 3
+check sg time: 0.0002
+pruning time: 0.0004
+lhcdses candidate: #nodes 17 #edges 121 #h-cliques 2487
+1018 349verifyLhCDS time: 0.6259
+#node 225 #edge 1226
+fw time: 0.0075
+nsg 7
+pava time: 0.0001
+updated nsg 5
+check sg time: 0.0003
+2
+sg 2 2 57 288
+1
+sg 1 1 24 132
+pruning time: 0.0009
+lhcdses candidate: #nodes 13 #edges 78 #h-cliques 1287
+lhcdses candidate: #nodes 13 #edges 78 #h-cliques 1287
+lhcdses candidate: #nodes 13 #edges 78 #h-cliques 1287
+verifyLhCDS time: 1.2167
+#node 24 #edge 132
+fw time: 0.0009
+nsg 1
+pava time: 0.0000
+check sg time: 0.0000
+pruning time: 0.0001
+lhcdses candidate: #nodes 12 #edges 66 #h-cliques 792
+5353 10527lhcdses candidate: #nodes 12 #edges 66 #h-cliques 792
+634 2683 2752 2807 3572 3578 5328 8128 10081 10082 10083 10085 10088 10089 10091 11521 11614 11615 11616 11617 11618 11619 11621 11622 11623 11624 11625 11626 nodes_num:28 edges_num:366 cli-den:2736.07 density: 13.0714
+2092 3073 3880 3948 4068 4915 5209 5211 7870 8041 9882 10522 13956 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 nodes_num:23 edges_num:253 cli-den:1463 density: 11
+20030 20031 20032 20033 20035 20036 20037 20038 20039 20040 20042 20043 20044 20045 20046 20047 20048 20049 20050 nodes_num:19 edges_num:171 cli-den:612 density: 9
+18079 18080 21923 21924 21925 21926 21927 21928 21929 21930 21931 21932 21933 21934 21935 21936 21937 nodes_num:17 edges_num:136 cli-den:364 density: 8
+5151 5169 5174 5543 8196 8672 10069 13122 15420 15421 15422 15424 15425 20881 20882 20883 20884 20885 nodes_num:18 edges_num:147 cli-den:338 density: 8.16667
+8984 16184 16187 16188 16189 16191 16640 20448 21038 21039 21040 21041 21042 21043 21044 21045 nodes_num:16 edges_num:120 cli-den:273 density: 7.5
+8146 12288 13784 13785 13786 13787 13788 13789 13790 13791 13792 13793 13794 nodes_num:13 edges_num:78 cli-den:99 density: 6
+3099 13549 13550 13551 13552 13553 13554 13555 13556 13557 13558 13559 13560 nodes_num:13 edges_num:78 cli-den:99 density: 6
+2348 9025 9027 9030 9031 9032 9037 9038 9040 9042 9045 9047 9049 nodes_num:13 edges_num:78 cli-den:99 density: 6
+2442 2443 2444 2447 2448 2450 2453 2454 2458 2459 2460 2463 nodes_num:12 edges_num:66 cli-den:66 density: 5.5
+Average Clustering Coefficient: 0.99269
+fw 1.1691 sec, sg 0.0839 sec, pr 0.1502 sec, mf 6.9564 sec
+num of LhCDS 10
+io time: 0.0117, total time: 9.1132

@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+    "-S",
+    "/Users/nost/Documents/VF-LhCDS",
+    "-B",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/vf",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DBUILD_TESTING=ON",
+    "-DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON",
+    "-DVFLHCDS_ENABLE_SANITIZERS=OFF",
+    "-DCMAKE_CXX_FLAGS=",
+    "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/vf-configure",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:43:19.574227+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "f8a5199521afaf1e7485ed20db5ab097cd70ed0ef80981de001e15196a506d8e",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.4406477492302656,
+  "user_seconds": 0.690124,
+  "system_seconds": 0.5063639999999999,
+  "peak_rss_bytes": 38633472,
+  "finished_utc": "2026-10-08T07:43:21.015045+00:00",
+  "sha256": {
+    "stdout.txt": "b6131896b095c1897b5f2c297c57bb9b0d4ee2cbe5de090636fc5764f405a1c8",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

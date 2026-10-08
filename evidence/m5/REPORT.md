@@ -1,24 +1,32 @@
 # M5 status — 2026-10-08
 
-M5 remains in progress. The [D040 five-repeat batch](final-evaluation-20261008/REPORT.md)
-executes 302 of 360 native calls. The main comparison stops on an IPPV correctness
-error after 182 calls, retaining 58 unrun; both 60-call VF ablations complete, with
-30/30 strict core pairs and 30/30 strict early-stop prefix pairs. Native calls and
-separate structural validators all complete, but one IPPV candidate fails maximality.
+The selected five-repeat local evaluation is complete: **360 native runs**,
+comprising 240 repaired VF/IPPV main calls plus 60 core and 60 early-stop calls.
+All complete with separate structural checks. Main has **120/120 tie-aware
+matches** (40 strict); core has **30/30 strict matches**; early stop has
+**30/30 strict prefix matches**. No timeout/OOM/error occurs in this final set.
+[Final main results and all timing/RSS ranges](final-main-repaired-20261008/REPORT.md).
 
-The [B09 repair](ippv/equality-20261008/REPORT.md) corrects two equal-density
-verification boundaries. An exact original-graph witness and independent small
-all-superset truth identify the error. Release and ASan/UBSan checks pass the new
-and previous regressions and both original-case replays; the known zero-density
-gap remains. Production VF, reference and papers are unchanged.
+VF has lower wall-time medians in **11/24** settings, IPPV in **13/24**.
+IPPV is faster on every tested GrQc setting; VF is faster on CondMat except
+h=4,k=5. RSS outcomes are mixed. Safe core lowers RSS medians but usually adds
+runtime; fixed-k early stop lowers completion-time medians in all six cells.
+These shared-host observations support no universal speedup or SOTA claim.
 
-D041 now repeats only the affected main comparison: 240 fresh paired calls with
-the eight-patch baseline, the same five repetitions/grid/resources and fresh VF
-controls. The completed VF-only ablations remain valid; old/new baseline timings
-are not pooled. No further performance optimization is planned.
+The [stopped seven-patch main](final-evaluation-20261008/REPORT.md) remains separate:
+182 calls, one genuine IPPV maximality failure, 58 unrun. The
+[B09 repair](ippv/equality-20261008/REPORT.md) and fresh eight-patch measurements
+preserve all old records; timings are never pooled across baseline versions.
+Across both benchmark attempts, 542 native calls were executed.
 
-P11.1/P11.2 evidence-level and configuration gates are met for the selected scope.
-P12.1/final conclusions/release remain open. The first batch's 3,309 raw inventory
-entries verify and its 22 aggregates regenerate identically; 164 harness/reference/
-adapter checks and six aggregation checks pass. Tests are implementation evidence,
-not theorem proofs. [Current plan](../../docs/M5_COMPLETION_PLAN.md).
+All final tables regenerate identically. [Fresh local reproduction](reproduction-20261008/REPORT.md)
+passes new VF/IPPV builds, **16/16 CTest**, **164 pytest**, and four additional
+independent definition fixtures. Both rebuilt binaries match measured hashes.
+The initial wrapper-path failure is retained. Papers/reference/solver stay unchanged.
+
+**M5 remains open.** The selected-scope P14.1 review is complete; P15.1 still
+needs a clean-machine run. Broader baseline/data coverage, IPPV's zero-density
+gap and unavailable rank/detailed-phase metrics remain explicit; DCLDS stays
+deferred. No further optimization or automatic measurement cycle is planned.
+[Current plan](../../docs/M5_COMPLETION_PLAN.md) ·
+[Reproduction instructions](../../docs/M5_REPRODUCTION.md).

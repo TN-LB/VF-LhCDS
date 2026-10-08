@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/git",
+    "-C",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/ippv-source",
+    "apply",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/patches/0008-include-equal-density-verification-neighbors.patch"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/ippv-patch-08",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:44:00.747422+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "7f30f076d0e9c38f772a76449fca9da8cf97f6a3d43b94c90a00e4f9ce7ad39e",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.020110624842345715,
+  "user_seconds": 0.007644,
+  "system_seconds": 0.0047799999999999995,
+  "peak_rss_bytes": 4014080,
+  "finished_utc": "2026-10-08T07:44:00.767942+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

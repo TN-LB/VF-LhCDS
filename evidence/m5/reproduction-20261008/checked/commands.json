@@ -1,0 +1,140 @@
+[
+  {
+    "name": "papers",
+    "process": "commands/papers/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "cmake-version",
+    "process": "commands/cmake-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "compiler-version",
+    "process": "commands/compiler-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "pytest-version",
+    "process": "commands/pytest-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-configure",
+    "process": "commands/vf-configure/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-build",
+    "process": "commands/vf-build/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-ctest",
+    "process": "commands/vf-ctest/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "python-tests",
+    "process": "commands/python-tests/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-local-clone",
+    "process": "commands/ippv-local-clone/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-checkout",
+    "process": "commands/ippv-checkout/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-01",
+    "process": "commands/ippv-patch-01/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-02",
+    "process": "commands/ippv-patch-02/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-03",
+    "process": "commands/ippv-patch-03/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-04",
+    "process": "commands/ippv-patch-04/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-05",
+    "process": "commands/ippv-patch-05/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-06",
+    "process": "commands/ippv-patch-06/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-07",
+    "process": "commands/ippv-patch-07/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-patch-08",
+    "process": "commands/ippv-patch-08/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-build",
+    "process": "commands/ippv-build/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-fractional",
+    "process": "commands/ippv-fractional/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-equality",
+    "process": "commands/ippv-equality/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "ippv-bridge",
+    "process": "commands/ippv-bridge/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-definition",
+    "process": "commands/vf-definition/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  }
+]

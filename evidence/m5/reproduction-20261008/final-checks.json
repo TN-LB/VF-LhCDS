@@ -1,0 +1,16 @@
+{
+  "source_document_whitespace_command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    "*.py",
+    "*.md"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "full_staged_whitespace_check_exit_code": 2,
+  "full_check_reason": "Original IPPV output and captured compiler stderr contain trailing whitespace. Preserve raw evidence byte-for-byte; do not normalize it to satisfy a whitespace-only check."
+}

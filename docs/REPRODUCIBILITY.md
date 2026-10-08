@@ -3,6 +3,9 @@
 Revision: 2026-09-09. Commands are targets until their actual execution logs exist.
 The plan-review evidence under `review/` is not a production release.
 
+For the executed bounded M5 scope, use [M5 reproduction instructions](M5_REPRODUCTION.md).
+Its fresh local rebuild does not close the clean-machine gates below.
+
 ## 1. Reproduction levels
 
 ### Level 1 — correctness smoke

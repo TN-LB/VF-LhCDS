@@ -5,10 +5,10 @@ The four files under `papers/` are preserved unchanged.
 
 Execution status (2026-10-08): M0–M4 have recorded completion gates. M5 is in
 progress; D039 closes further performance optimization for the current release.
-Follow [M5_COMPLETION_PLAN.md](M5_COMPLETION_PLAN.md): freeze the final scope and
-environment protocol, execute one coordinated batch, then audit conclusions and
-reproduction. Slow results alone do not reopen optimization. The original gates
-below remain separate from the proposed bounded local evaluation.
+Follow [M5_COMPLETION_PLAN.md](M5_COMPLETION_PLAN.md): the selected local batch,
+conclusion review and fresh local rebuild are complete; clean-machine and broader
+coverage gates remain open. Slow results alone do not reopen optimization. The
+original gates below remain separate from the completed bounded local evaluation.
 
 ## 1. Deliverable and proof spine
 

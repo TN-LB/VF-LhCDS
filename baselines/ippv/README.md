@@ -31,6 +31,10 @@ Apply the patches in order to the pinned author tree:
 7. `0007-restore-pava-workspace.patch`: restore `nag` to the selected-vertex count
    at each PAVA entry after `check_sg` shrinks it to a block count. The previous
    subsequent writes exceeded vector size, reproduced by libc++ bounds checks.
+8. `0008-include-equal-density-verification-neighbors.patch`: include equal-density
+   ordinary neighbors in the existing verification expansion; otherwise a candidate
+   can survive despite a connected compact proper superset. Keep the existing
+   DELTA tolerance and verify against the independent bridge regression.
 
 `source-lock.json` records the pin, every patch hash and expected patched file
 hash. The build script refuses other source bytes. It does not download or modify
@@ -46,13 +50,16 @@ git -C .deps/baselines/ippv apply ../../../baselines/ippv/patches/0004-h2-enumer
 git -C .deps/baselines/ippv apply ../../../baselines/ippv/patches/0005-include-final-single-edge-component.patch
 git -C .deps/baselines/ippv apply ../../../baselines/ippv/patches/0006-exact-verification-capacities.patch
 git -C .deps/baselines/ippv apply ../../../baselines/ippv/patches/0007-restore-pava-workspace.patch
-.venv/bin/python baselines/ippv/build.py --source .deps/baselines/ippv --build build-ippv-fixed-release --evidence evidence/m5/ippv/new-build --cmake .venv/bin/cmake --boost .deps/boost_1_86_0
-.venv/bin/python baselines/ippv/build.py --source .deps/baselines/ippv --build build-ippv-fixed-sanitize --evidence evidence/m5/ippv/new-sanitizer-build --cmake .venv/bin/cmake --boost .deps/boost_1_86_0 --sanitizers
+git -C .deps/baselines/ippv apply ../../../baselines/ippv/patches/0008-include-equal-density-verification-neighbors.patch
+.venv/bin/python baselines/ippv/build.py --source .deps/baselines/ippv --build build-ippv-new-release --evidence evidence/m5/ippv/new-build --cmake .venv/bin/cmake --boost .deps/boost_1_86_0
+.venv/bin/python baselines/ippv/build.py --source .deps/baselines/ippv --build build-ippv-new-sanitize --evidence evidence/m5/ippv/new-sanitizer-build --cmake .venv/bin/cmake --boost .deps/boost_1_86_0 --sanitizers
 ```
 
 The historical `build-ippv-original`/`build-ippv-sanitize` binaries retain five
-patches. Current seven-patch binaries use the separate `build-ippv-fixed-*` paths;
+patches. Historical seven-patch binaries use the separate `build-ippv-fixed-*` paths;
 intermediate `build-ippv-exact-*` binaries have six patches and retain the PAVA bug.
+The measured eight-patch binaries use `build-ippv-equality-*`. Build into a new
+directory to preserve every previous executable/provenance pair.
 No global OpenMP installation is needed. Author C++14/Release flags are retained;
 the diagnostic sanitizer profile adds ASan/UBSan and macOS libc++ bounds checks.
 Remaining author warnings are retained, not suppressed. Build provenance beside
@@ -62,7 +69,7 @@ The adapter requires a matching executable/provenance pair.
 ## Adapter contract
 
 ```sh
-.venv/bin/python baselines/ippv/adapter.py run --executable build-ippv-fixed-release/IPPV --graph reference/fixtures/bridged_triangles.graph --h 3 --k 1 --iterations 10 --timeout 60 --definition --evidence evidence/m5/ippv/new-toy
+.venv/bin/python baselines/ippv/adapter.py run --executable build-ippv-new-release/IPPV --graph reference/fixtures/bridged_triangles.graph --h 3 --k 1 --iterations 10 --timeout 60 --definition --evidence evidence/m5/ippv/new-toy
 .venv/bin/python -m pytest baselines/ippv/test_adapter.py reference/tests -q
 ```
 
@@ -102,8 +109,9 @@ execution, stops on a new failure, and preserves known zero-density mismatches a
 failures. For both existing build profiles:
 
 ```sh
-.venv/bin/python baselines/ippv/check_toys.py --binary build-ippv-fixed-release/IPPV --binary build-ippv-fixed-sanitize/IPPV --h 2 3 4 5 --iterations 10 --timeout 60 --evidence evidence/m5/ippv/new-toy-coverage
-.venv/bin/python baselines/ippv/check_fractional.py --binary build-ippv-fixed-release/IPPV --binary build-ippv-fixed-sanitize/IPPV --evidence evidence/m5/ippv/new-fractional-regression
+.venv/bin/python baselines/ippv/check_toys.py --binary build-ippv-new-release/IPPV --binary build-ippv-new-sanitize/IPPV --h 2 3 4 5 --iterations 10 --timeout 60 --evidence evidence/m5/ippv/new-toy-coverage
+.venv/bin/python baselines/ippv/check_fractional.py --binary build-ippv-new-release/IPPV --binary build-ippv-new-sanitize/IPPV --evidence evidence/m5/ippv/new-fractional-regression
+.venv/bin/python baselines/ippv/check_equality.py --binary build-ippv-new-release/IPPV --binary build-ippv-new-sanitize/IPPV --evidence evidence/m5/ippv/new-equality-regression
 ```
 
 These are correctness diagnostics, not accepted final experiment settings. A

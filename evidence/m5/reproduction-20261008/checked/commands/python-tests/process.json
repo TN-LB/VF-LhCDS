@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-m",
+    "pytest",
+    "/Users/nost/Documents/VF-LhCDS/reference/tests",
+    "/Users/nost/Documents/VF-LhCDS/experiments/test_harness.py",
+    "/Users/nost/Documents/VF-LhCDS/baselines/ippv/test_adapter.py",
+    "-q"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/python-tests",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:43:47.278837+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "0d065b161d6a12b853689570dc972bd75c72e5f76807a76cecdd0657adb60f9b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 13.22589712496847,
+  "user_seconds": 2.431787,
+  "system_seconds": 3.235399,
+  "peak_rss_bytes": 39452672,
+  "finished_utc": "2026-10-08T07:44:00.504480+00:00",
+  "sha256": {
+    "stdout.txt": "320154fa6f4d5ae01ae3e37df82c954ae192b0f413c39467cd8f4a87cc1bf675",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

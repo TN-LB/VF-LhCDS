@@ -1,8 +1,10 @@
 # Shared VF-LhCDS / IPPV evidence tools
 
 These tools are external to both algorithms. DCLDS work remains deferred by D029.
-Current evidence includes diagnostics and the limited D030 approved pilot;
-the broader final benchmark configuration remains open.
+The selected D040/D041 five-repeat local evaluation is complete; broader coverage
+and clean-machine release remain open. [Current results](../evidence/m5/REPORT.md)
+and [reproduction instructions](../docs/M5_REPRODUCTION.md) supersede the status of
+the historical diagnostics described below.
 
 `build_vf.py` builds an unchanged Release solver with recorded source/compiler/
 binary hashes. `prepare_input.py` converts an explicit-n edge list, preserving the

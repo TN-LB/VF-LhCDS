@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+    "--build",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/vf",
+    "-j2"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/reproduction-20261008/checked/commands/vf-build",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T07:43:21.015907+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "f8a5199521afaf1e7485ed20db5ab097cd70ed0ef80981de001e15196a506d8e",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 12.8570875832811,
+  "user_seconds": 21.478922,
+  "system_seconds": 2.044386,
+  "peak_rss_bytes": 213385216,
+  "finished_utc": "2026-10-08T07:43:33.872425+00:00",
+  "sha256": {
+    "stdout.txt": "5b05657eaa70af69d25cbcec8cd45c371e44e1cf69614c0041fb3d3d01589c14",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

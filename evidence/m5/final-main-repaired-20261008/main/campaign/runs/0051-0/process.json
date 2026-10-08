@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/build-m5-counting-release/vflhcds",
+    "solve",
+    "--graph",
+    "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0051-0/graph.txt",
+    "--h",
+    "5",
+    "--k",
+    "15",
+    "--core-reduction",
+    "off",
+    "--footprint-scan",
+    "membership",
+    "--clique-enumeration",
+    "adjacency",
+    "--clique-count",
+    "membership"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/final-main-repaired-20261008/main/campaign/runs/0051-0",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-07T23:35:37.223850+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "e6b78dc8a1fc979b03da64f4939cbf160c090f7055737e671bf0453bdafc984b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 14.931798375211656,
+  "user_seconds": 13.573767,
+  "system_seconds": 1.249715,
+  "peak_rss_bytes": 1982709760,
+  "finished_utc": "2026-10-07T23:35:52.155965+00:00",
+  "sha256": {
+    "stdout.txt": "2a319a3921f07f0fc35d03032b57211673b4eaee91ca4bc02e6878ae90bbe5f0",
+    "stderr.txt": "19cccf1e893ef45d2a713bc2a5456bef3f51fa2ab55176661a5e516a44ab5f3b"
+  }
+}

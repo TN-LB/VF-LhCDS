@@ -3,6 +3,11 @@
 Revised 2026-09-29. This repository contains the exact basic solver, independent
 reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
+Current status (2026-10-08): M0–M4 are complete. The selected M5 five-repeat local
+evaluation and fresh local rebuild are complete; M5's clean-machine/broader gates
+remain open. [Measured results and limitations](evidence/m5/REPORT.md),
+[remaining plan](docs/M5_COMPLETION_PLAN.md), [reproduction](docs/M5_REPRODUCTION.md).
+
 ## Start here
 
 1. `docs/IMPLEMENTATION_PLAN.md`: six milestones M0-M5 and minimal correct scope.
@@ -71,7 +76,9 @@ unchanged. M4 mode acceptance is tracked in TASKS; baseline/benchmark work remai
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external
 `baselines/` and immutable `results/`.
-Keep large raw datasets, binaries and logs out of source control.
+Keep external source trees, build products and dependency archives in ignored
+directories. Curated executed evidence and normalized comparison inputs are
+tracked under `evidence/` with their provenance; no new raw dataset is bundled.
 
 Use `prompts/README.md` to select the next task. Each completion report names task
 and obligation IDs, changed code, executed commands, seeds, actual evidence and

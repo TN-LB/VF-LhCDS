@@ -1,0 +1,10 @@
+{
+  "planned_cases": 24,
+  "complete_agreeing_five_repeat_cases": 24,
+  "lower_vf_wall_median_cases": 11,
+  "equal_wall_median_cases": 0,
+  "lower_ippv_wall_median_cases": 13,
+  "geometric_mean_ippv_over_vf_median_wall": 0.9381464764554579,
+  "geometric_mean_scope": "common completed and validated five-repeat cases, no historical pooling",
+  "interpretation": "descriptive observed medians, no significance threshold or significance claim"
+}
