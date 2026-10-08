@@ -1,6 +1,6 @@
 # Reproducing the bounded M5 evaluation
 
-The selected scope is [D040/D041](M5_COMPLETION_PLAN.md): two pinned graphs,
+The completed bounded scope is [D040/D041/D042](M5_COMPLETION_PLAN.md): two pinned graphs,
 h=3/4/5, k=5/10/15/20, five repeats, serial execution. Reproduction has three
 separate levels: regenerate saved numbers, rebuild/check on the current host,
 and install/build/check in a clean software environment. A fresh local directory

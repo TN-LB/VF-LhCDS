@@ -796,3 +796,20 @@ Read-only integrity checks verify 6,074 historical raw entries, four papers,
 40 production hashes, 112 unchanged source/test/fixture files and whitespace-only
 changes in the two probes. Original broad M5 gates remain open pending explicit
 scope closure; no new sanitizer/full differential campaign or DCLDS work is claimed.
+
+## Bounded M5 closure — 2026-10-09
+
+D042 closes the explicitly bounded M5 stage using the existing D040/D041 and
+fresh Ubuntu evidence above. The [current acceptance checklist](TASKS.md) covers
+P09.1/P11.3 in the selected baseline scope, P11.1/P11.2, the executed P12.1 grid,
+P14.1's restricted conclusions and P15.1's local package/clean-userspace reproduction.
+The original broader checklist remains visible with unperformed coverage and
+stronger release levels deferred or limited. IPPV zero-density/license limitations
+and D029's DCLDS deferral remain unchanged.
+
+This closure changes documentation/status only. No new algorithm, experiment,
+fixture, seed, build/test result or mathematical obligation is introduced.
+Prior counts remain 360 final native calls, 120 main tie-aware matches, 30 core
+matches, 30 early-stop prefix matches, and 26 identically regenerated artifacts.
+Failed/censored historical evidence remains separate. Finite agreement does not
+prove the theorem, certify real-graph completeness or establish universal speedup.

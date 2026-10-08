@@ -3,10 +3,13 @@
 Revised 2026-09-29. This repository contains the exact basic solver, independent
 reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
-Current status (2026-10-08): M0–M4 are complete. The selected M5 five-repeat local
-evaluation and fresh local rebuild are complete; M5's clean-machine/broader gates
-remain open. [Measured results and limitations](evidence/m5/REPORT.md),
-[remaining plan](docs/M5_COMPLETION_PLAN.md), [reproduction](docs/M5_REPRODUCTION.md).
+Current status (2026-10-09): M0–M4 and the bounded M5 stage are complete. M5 covers
+the two-graph, five-repeat VF/IPPV evaluation, core/early-stop ablations and fresh
+Ubuntu software-environment reproduction. Broader coverage and missing metrics
+remain explicitly deferred or limited under D042; this is not a full SOTA study.
+[Measured results and limitations](evidence/m5/REPORT.md),
+[completed scope and follow-up boundaries](docs/M5_COMPLETION_PLAN.md),
+[reproduction](docs/M5_REPRODUCTION.md).
 
 ## Start here
 
@@ -71,7 +74,7 @@ build/vflhcds solve --graph reference/fixtures/bridged_triangles.graph --h 3 --a
 
 For direct-definition truth and independent principal chains, see
 [reference usage](reference/README.md). The M1 reference remains independent and
-unchanged. M4 mode acceptance is tracked in TASKS; baseline/benchmark work remains M5.
+unchanged. M4 mode acceptance and bounded M5 completion are tracked in TASKS.
 
 Plan material lives in `papers/`, `docs/` and `prompts/`; the initial paper hash
 snapshot is in `review/`. Future work may add `tools/`, `configs/`, external

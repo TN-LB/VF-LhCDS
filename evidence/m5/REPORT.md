@@ -1,4 +1,8 @@
-# M5 status — 2026-10-08
+# M5 completed bounded evaluation — 2026-10-09
+
+**M5 is complete for the two-graph, five-repeat evaluation and documented
+software-environment reproduction scope.** Broader study/release work remains
+separately identified below.
 
 The selected five-repeat local evaluation is complete: **360 native runs**,
 comprising 240 repaired VF/IPPV main calls plus 60 core and 60 early-stop calls.
@@ -31,10 +35,11 @@ interpreter-path defect and two GCC test-formatting warnings were repaired; fail
 attempts are preserved. The environment uses OrbStack on the same Mac, with no
 independent-hardware performance rerun. Production and measured binaries are unchanged.
 
-**M5 remains open.** The selected-scope P14.1 review is complete; P15.1 still
-has a release-scope boundary beyond the completed clean-userspace checks. Broader
-baseline/data coverage, IPPV's zero-density gap and unavailable rank/detailed-phase
-metrics remain explicit; DCLDS stays deferred. No further optimization or automatic
-measurement cycle is planned.
-[Current plan](../../docs/M5_COMPLETION_PLAN.md) ·
+The selected-scope conclusion review and reproduction package are complete.
+Broader baseline/data coverage and stronger replication/publication levels are
+deferred. IPPV's zero-density gap, unidentified upstream license and unavailable
+rank/detailed-phase metrics remain explicit; DCLDS stays deferred. No universal
+speedup, real-graph completeness or theorem proof follows from these finite checks.
+No further optimization or automatic measurement cycle is planned.
+[Completed scope and limits](../../docs/M5_COMPLETION_PLAN.md) ·
 [Reproduction instructions](../../docs/M5_REPRODUCTION.md).

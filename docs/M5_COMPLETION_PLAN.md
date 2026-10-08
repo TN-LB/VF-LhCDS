@@ -1,20 +1,20 @@
-# M5 completion plan — 2026-10-08
+# M5 completion scope — 2026-10-09
 
-M0–M4 are complete at their recorded gates. M5 remains in progress. D039 closes
-the development optimization cycle. The selected evaluation, conclusion review,
-table regeneration, fresh local rebuild and fresh Ubuntu software-environment
-reproduction are complete. Final scope closure and the separately listed broader
-coverage gates remain open.
-This file is the current execution plan; earlier campaign records remain historical.
+M0–M4 and **bounded M5 are complete** at their recorded gates. D042 closes the
+selected evaluation, conclusion review, table regeneration, local rebuild and
+fresh Ubuntu software-environment reproduction. Original broader coverage and
+stronger release levels remain explicitly deferred or limited below. D039 still
+ends the development optimization cycle. This file records the completed scope;
+earlier campaign records remain historical.
 
-## Progress and remaining gates
+## Completed work and scope boundaries
 
 | Work package | Status | Evidence / next deliverable |
 |---|---|---|
 | One targeted count optimization | Complete | [D038 report](../evidence/m5/counting-20261007/REPORT.md); implementation commit `0315c5d` |
 | Freeze evaluation scope and prepare execution | Complete | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); environment recorded at each launch |
 | Execute and aggregate the frozen suite | Complete for selected local scope | [D041 main](../evidence/m5/final-main-repaired-20261008/REPORT.md): 240 runs, 120 tie-aware matches; retained VF ablations: 120 runs, 60 required matches. Stopped D040 main remains separate |
-| Review conclusions and reproduce release | Review, local rebuild and fresh Linux userspace checks complete; scope closure open | [P15.1 Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md): new dependency installation/builds, 16 CTest, 164 pytest, four definition fixtures and 26 identical derived artifacts; shared kernel/physical host disclosed |
+| Review conclusions and reproduce release | Complete at D042's bounded gate | [P15.1 Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md): new dependency installation/builds, 16 CTest, 164 pytest, four definition fixtures and 26 identical derived artifacts; shared kernel/physical host disclosed |
 
 D038's existing evidence is 16/16 CTest in each of Debug, Release and ASan/UBSan,
 144 pytest passes, 14 differential campaigns and 1,392,496 matching saved responses.
@@ -25,9 +25,8 @@ the theorem or establish a new VF/IPPV speedup.
 P11.3 shared smoke is complete. P09.1 retains IPPV's zero-density coverage gap;
 P09b.1 remains deferred under D029. P11.1/P11.2 now have executed level/timing
 separation and configuration-freeze evidence. P14.1 is complete for the selected
-claims. P10.1/P12.1/P15.1 remain open at their broader gates. Remaining work is a
-explicit treatment of broader coverage/missing metrics and release scope,
-not another local optimization or automatic benchmark cycle.
+claims. P10.1/P12.1/P15.1's broader portions are deferred under D042, not falsely
+completed. No further local optimization or automatic benchmark cycle is planned.
 
 ## Stop adding performance optimizations
 
@@ -163,9 +162,9 @@ evidence; shared-kernel/hardware limits and unrerun raw measurements remain expl
 
 ## Final scope closure
 
-The fresh Ubuntu reproduction is complete. No new mathematical conflict or
-unresolved build/test failure remains. The next choice concerns the scope of the
-M5 completion claim, not another repair or performance optimization.
+**D042 completes the bounded M5 stage.** The fresh Ubuntu reproduction is complete;
+no new mathematical conflict or unresolved build/test failure remains. The following
+limits stay explicit and do not become completed experiments through scope closure.
 
 | Item | Evidence now available | Remaining boundary |
 |---|---|---|
@@ -175,19 +174,10 @@ M5 completion claim, not another repair or performance optimization.
 | P15.1 reproduction | Fresh Ubuntu dependencies and Release builds; 16 CTest, 164 pytest, four definition fixtures; 26 identical regenerated artifacts | Same physical Mac/shared OrbStack kernel; no raw benchmark replication on independent hardware, no published archive/tag |
 | P09b.1 DCLDS | Existing records retained | Deferred under D029; no new reading/integration |
 
-**Recommended choice:** close the explicitly bounded M5 evaluation/reproduction
-stage, keeping the original broader tasks labelled deferred or limited rather
-than falsely completed. Use only the tested VF-versus-IPPV claims and the recorded
-clean-userspace reproduction level. Keep negative results, coverage gaps and all
-failed/censored evidence. Do not add an experiment grid or change algorithm semantics.
-
-**Alternative:** retain the original broad M5 acceptance scope and leave M5 open;
-prepare a separate prioritized work package for missing coverage/metrics and any
-stronger reproduction requirement. Record resources before further measurements.
-DCLDS still remains deferred unless separately changed. This option requires more
-work and cannot be completed by renaming current evidence.
-
-No completion-policy choice is applied yet. AGENTS.md requires a decision before
-changing final experimental conclusions/scope; routine repairs and evidence
-preparation are complete. Independent hardware is a possible stronger check, not
-an additional automatic prerequisite invented by this reproduction.
+Use only the tested VF-versus-IPPV claims and recorded clean-userspace reproduction
+level. Keep negative results, coverage gaps and all failed/censored evidence.
+The original broader tasks remain labelled deferred or limited, not completed.
+There is no new experiment grid, algorithm change, public release or automatic
+next milestone. Any later broader campaign needs a separate scope/resource plan;
+DCLDS remains deferred unless separately changed. Independent hardware is a
+possible stronger check, not a prerequisite added to this bounded completion.

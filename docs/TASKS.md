@@ -4,12 +4,12 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
-Current position (2026-10-08): **M5, selected evaluation, review and fresh Linux
-userspace reproduction complete; final scope closure outstanding**. The five-repeat suite has 240 repaired-main
+Current position (2026-10-09): **M0–M4 and bounded M5 complete under D042**.
+The five-repeat suite has 240 repaired-main
 calls plus 120 retained VF ablation calls. All required comparisons pass.
 [Results and limits](../evidence/m5/final-main-repaired-20261008/REPORT.md),
 [fresh Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md), and
-[remaining gates](M5_COMPLETION_PLAN.md) distinguish this completed scope from
+[completed scope and deferred boundaries](M5_COMPLETION_PLAN.md) distinguish this completed scope from
 the broader original M5 requirements. No further optimization cycle is planned.
 
 ## M0 - Freeze contracts and bootstrap (prompt 00)
@@ -95,10 +95,20 @@ oracle-result caches, component scheduling, parallel enumeration, tie-inclusive 
 
 ## M5 - Baselines, experiments and release (prompts 09, 09b, 10-12, 14-15)
 
-Current execution scope: D029 defers further DCLDS reading/integration at the
-owner's request. Continue independent VF-LhCDS/IPPV validation and experiment
-preparation. The earlier DCLDS license stop no longer blocks this scope; P09b.1
-stays deferred and incomplete, and no full-competitor/SOTA claim follows.
+**Bounded M5 gate met on 2026-10-09 (D042).** The current acceptance checklist is:
+
+- [x] P09.1/P11.3 selected IPPV source/build/audit and shared smoke, with known domain/license limits retained. [Baseline records](../evidence/m5/ippv/equality-20261008/REPORT.md), [shared smoke](../evidence/m5/paired-smoke-20261005/REPORT.md).
+- [x] P11.1/P11.2 validation levels, native/external timing and five-repeat configuration frozen before measurement. [D040 records](../evidence/m5/final-evaluation-20261008/REPORT.md).
+- [x] P12.1 selected two-graph main/core/early-stop suite: 360 completed native calls and all required comparisons. [D041 results](../evidence/m5/final-main-repaired-20261008/REPORT.md).
+- [x] P14.1 conclusions restricted to measured cases, with negative results and previous failures preserved. [Final report](../evidence/m5/REPORT.md).
+- [x] P15.1 local reproduction package and fresh Ubuntu userspace checks; 26 saved artifacts regenerate identically. [Linux evidence](../evidence/m5/clean-env-20261008/REPORT.md), [reproduction instructions](M5_REPRODUCTION.md).
+
+The original task checklist/history below remains intact. Its unchecked broader
+items are **deferred or limited under D042**, not outstanding prerequisites for
+this bounded completion: P09.1's full-domain IPPV gap, P10.1's specialty comparisons,
+P12.1's wider coverage/missing metrics and P15.1's stronger replication/publication
+levels. P09b.1 remains deferred under D029. No full-competitor/SOTA claim follows.
+See the [item-by-item boundary](M5_COMPLETION_PLAN.md#final-scope-closure).
 
 - [ ] P09.1 IPPV: pin commit/license; build; audit output, parameters, preprocessing and timing.
   2026-10-01: [preflight evidence](../evidence/m5/preflight-20261001.json) confirms
@@ -423,3 +433,12 @@ new optimization, benchmark, full sanitizer/differential rerun or DCLDS work.
 P15.1 gains clean software-environment smoke and saved-table regeneration;
 the original broader M5 checkboxes stay open pending the concrete
 [scope closure choices](M5_COMPLETION_PLAN.md#final-scope-closure).
+
+### D042 bounded completion — 2026-10-09
+
+The current bounded acceptance checklist at the start of M5 is complete. The
+earlier pending-scope statements above are historical; the broader unchecked
+tasks remain deferred or limited, rather than being counted as executed work.
+This update changes documentation/status only. [Closure checks](../evidence/m5/closure-20261009/checks.json)
+record valid local links and unchanged prior completion evidence; no new
+build, test, benchmark or algorithm change is claimed.

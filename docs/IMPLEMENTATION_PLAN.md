@@ -3,12 +3,13 @@
 Revision: 2026-09-09. This is a plan revision, not an implementation or benchmark result.
 The four files under `papers/` are preserved unchanged.
 
-Execution status (2026-10-08): M0–M4 have recorded completion gates. M5 is in
-progress; D039 closes further performance optimization for the current release.
-Follow [M5_COMPLETION_PLAN.md](M5_COMPLETION_PLAN.md): the selected local batch,
-conclusion review and fresh local rebuild are complete; clean-machine and broader
-coverage gates remain open. Slow results alone do not reopen optimization. The
-original gates below remain separate from the completed bounded local evaluation.
+Execution status (2026-10-09): M0–M4 and bounded M5 are complete at their recorded
+gates. D042 closes the two-graph/five-repeat evaluation, conclusion review and
+fresh Ubuntu userspace reproduction in [M5_COMPLETION_PLAN.md](M5_COMPLETION_PLAN.md).
+Original broader coverage, unavailable metrics and stronger release/replication
+levels remain deferred or limited, not falsely checked off. D039 still ends the
+optimization cycle; negative performance results do not reopen it. The original
+plan below is retained alongside the explicit D042 completion boundary.
 
 ## 1. Deliverable and proof spine
 

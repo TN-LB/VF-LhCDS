@@ -1,0 +1,40 @@
+{
+  "scope": "D042 bounded M5 documentation closure; no new implementation or experimental evidence",
+  "base_commit": "45aada3c64cf770c80cc38fafdd331e810a13067",
+  "environment": "macOS-15.7.7-arm64-arm-64bit",
+  "checks": {
+    "tracked_changes_documentation_only": true,
+    "git_diff_check": true,
+    "local_document_links_valid": 247,
+    "referenced_completion_records_passed_and_unchanged": 6
+  },
+  "changed_documents_sha256": {
+    "README.md": "3b0b71d10ee20f65bf36ca48192df3f8a866ffe0b445126b46c42a6e5b578c96",
+    "docs/CLAIM_TRACEABILITY.md": "473343f493873208e638dc5f2426cec52a5dc0ad08f2e83b1fc0367c17a89cc3",
+    "docs/DECISIONS.md": "91255484185c997a12fac7c25f17373e19e1a67ee2aee7aa104180a9fae98737",
+    "docs/IMPLEMENTATION_PLAN.md": "e74b8e12d3535192d16d64b5cafeae7c8a3fd2d20fe8adcb221d7228abb00b79",
+    "docs/M5_COMPLETION_PLAN.md": "0323150948aa599898dfb2cf037ab1a597edaf2f0f6e8aaed307f58a3aca3614",
+    "docs/M5_REPRODUCTION.md": "95060e99e1038db0857f45ff466a5cb3abbbb18ea6461573bd3586170bada668",
+    "docs/REPRODUCIBILITY.md": "96aea22945214489e6d282eda372e089039b32e520099de129a04bc463f2fea7",
+    "docs/TASKS.md": "00ff9a8f4f97ddaf7172f5b9fb97c47dc055d955ea1cc34251981d22377e42ab",
+    "evidence/m5/REPORT.md": "7550e0046eba0147779734cf5057edad45c7b7e559eec05fa16f3339f53dfd5d"
+  },
+  "existing_evidence_sha256": {
+    "evidence/m5/final-main-repaired-20261008/main/completion.json": "2a8008d73a9ba3d904110050bda673c825f511fb3bd860f961d60d4b4dd9c968",
+    "evidence/m5/final-evaluation-20261008/core/completion.json": "ffacad31bd13c74f88e24989b0bb6ba96be2aba512e0e2ea5f1e0a5a03ac2468",
+    "evidence/m5/final-evaluation-20261008/stop/completion.json": "0b7a3baa38d0b2054355b7c8fb00af2fc865215029dfe29ddb52fe975d7ed26f",
+    "evidence/m5/clean-env-20261008/guest-checked/completion.json": "cc1059423fc64e4db63e2f70596979468ecf16fead3c435314d260b73eebeedd",
+    "evidence/m5/clean-env-20261008/guest-derived/completion.json": "da4bc31b2bcf4eb6a55152008a07a573c51f5af0dc417b704fa28f3803c4d64b",
+    "evidence/m5/clean-env-20261008/integrity.json": "94bc7d4eb67899e49ac6cbdbbd25865e145dfeb2966b49fbc057a8a01e5c0a14"
+  },
+  "builds_tests_benchmark_calls_this_closure": 0,
+  "commands": [
+    "git diff --name-only",
+    "git diff --check",
+    "git show HEAD:<each evidence path>",
+    "git rev-parse HEAD"
+  ],
+  "python_checks": "Resolve local Markdown links, parse existing completion records, compare each record with committed HEAD bytes, hash changed documents and referenced evidence",
+  "unrun": "Broader baseline/data/metric coverage, independent hardware performance replication and publication; existing historical build/test results are not rerun",
+  "unresolved_blocking_conflict": null
+}
