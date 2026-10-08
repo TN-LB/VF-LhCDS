@@ -58,7 +58,8 @@ int main() {
                     std::cout << "{\"scanned\":" << footprints.scanned << ",\"total_weight\":" << footprints.total_weight << ",\"footprints\":[";
                     bool first = true;
                     for (const auto& footprint : footprints.records) {
-                        if (!first) std::cout << ','; first = false;
+                        if (!first) std::cout << ',';
+                        first = false;
                         std::cout << "{\"vertices\":" << vertices_json(graph, footprint.vertices) << ",\"weight\":" << footprint.weight << '}';
                     }
                     std::cout << "]}\n";

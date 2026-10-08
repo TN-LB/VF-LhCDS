@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+    "--test-dir",
+    "/Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/vf",
+    "--output-on-failure",
+    "-R",
+    "^(m2_oracle_smoke|m3_solver_smoke|m4_modes_smoke)$"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/clean-env-20261008/host-commands/21-mac-probe-smoke",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T10:54:42.412748+00:00",
+  "timeout_seconds": 300,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "407f7c74008eede0def33177e09a3646d45ab67d6fc1ce70b71e8b89a62a737a",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 2.9976547081023455,
+  "user_seconds": 2.1791679999999998,
+  "system_seconds": 0.23834999999999998,
+  "peak_rss_bytes": 23920640,
+  "finished_utc": "2026-10-08T10:54:45.411383+00:00",
+  "sha256": {
+    "stdout.txt": "45e5f9048510ff0e4461b8ff868bab8fb8d99da1aeef6cd02ecbd1b65e0c0bdb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "fresh-smoke",
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "/home/repro/vf-lhcds-fixed/scripts/reproduce_release.py",
+    "--build",
+    "/home/repro/clean-build-fixed",
+    "--evidence",
+    "/home/repro/clean-evidence-fixed/smoke"
+  ],
+  "cwd": "/home/repro/vf-lhcds-fixed",
+  "started_utc": "2026-10-08T10:48:08.487419+00:00",
+  "timeout_seconds": 1800,
+  "exit_code": 1,
+  "status": "error",
+  "wall_seconds": 10.842879701000015,
+  "finished_utc": "2026-10-08T10:48:19.330308+00:00",
+  "stdout_sha256": "3ef052d4b6b02f79c8b9ecae56a564f4ec1dec95e3736203cbf24d921d9aad93",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

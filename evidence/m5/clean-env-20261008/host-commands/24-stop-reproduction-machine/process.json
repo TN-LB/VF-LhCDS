@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/opt/homebrew/bin/orbctl",
+    "stop",
+    "vf-lhcds-repro-20261008"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/clean-env-20261008/host-commands/24-stop-reproduction-machine",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T10:57:08.879463+00:00",
+  "timeout_seconds": 120,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "2aab9e5e0d76daac6942667dea8e597ab94f838fa62e1bd47c08c302ba638807",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.2949580829590559,
+  "user_seconds": 0.0068969999999999995,
+  "system_seconds": 0.00915,
+  "peak_rss_bytes": 20758528,
+  "finished_utc": "2026-10-08T10:57:09.191493+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

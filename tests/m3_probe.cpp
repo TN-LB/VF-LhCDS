@@ -80,7 +80,9 @@ int main() {
                     },{},options);
                     std::string canonical; std::cout<<"{\"records\":["; bool first=true; BigInt rank=0;
                     for(const auto& s:result.solutions) {
-                        if(!first)std::cout<<','; first=false; const auto line=solution_json(index,s,++rank);
+                        if(!first)std::cout<<',';
+                        first=false;
+                        const auto line=solution_json(index,s,++rank);
                         canonical+=line; std::cout<<without_lf(line);
                     }
                     std::cout<<"],\"termination\":\""<<(result.k_reached?"k_reached":"exhausted")<<"\",\"semantic_sha256\":\""

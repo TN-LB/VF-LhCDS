@@ -4,11 +4,11 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
-Current position (2026-10-08): **M5, selected local evaluation and review complete;
-clean-machine release outstanding**. The five-repeat suite has 240 repaired-main
+Current position (2026-10-08): **M5, selected evaluation, review and fresh Linux
+userspace reproduction complete; final scope closure outstanding**. The five-repeat suite has 240 repaired-main
 calls plus 120 retained VF ablation calls. All required comparisons pass.
 [Results and limits](../evidence/m5/final-main-repaired-20261008/REPORT.md),
-[fresh local rebuild](../evidence/m5/reproduction-20261008/REPORT.md), and
+[fresh Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md), and
 [remaining gates](M5_COMPLETION_PLAN.md) distinguish this completed scope from
 the broader original M5 requirements. No further optimization cycle is planned.
 
@@ -400,3 +400,26 @@ the measured binary hashes. The first script-path failure is preserved separatel
 it never entered a build. Four paper hashes match; solver/reference stay unchanged.
 P15.1 remains open: existing host/Python/Boost are reused, no clean-machine run.
 No new performance campaign or production optimization follows. DCLDS is deferred.
+
+### Fresh Ubuntu userspace reproduction — 2026-10-08
+
+P15.1/O12: [new Ubuntu/GCC evidence](../evidence/m5/clean-env-20261008/REPORT.md)
+passes both Release builds, 23 smoke commands, 16/16 CTest, 164 pytest and four
+independent definition fixtures. All four canonical outputs match macOS; all
+26 saved aggregate/review artifacts regenerate identically. Dependencies and
+the pinned IPPV checkout were newly acquired in a fresh Ubuntu root filesystem.
+OrbStack shares its kernel/physical Mac; no independent hardware or performance
+rerun is claimed. The dedicated guest is stopped after saving the evidence.
+
+Two reproducibility defects were repaired: resolving the virtualenv interpreter
+symlink bypassed pytest, and GCC rejected adjacent statements in two test probes
+under strict warnings. The new driver preserves the interpreter path; probe
+changes are whitespace-only. Both failed attempts remain intact. The changed
+probes rebuild on macOS and pass all three affected CTest smoke tests.
+Four papers, 40 frozen production hashes, 112 other source/test/fixture hashes
+and 6,074 benchmark inventory entries verify unchanged. No semantic conflict,
+new optimization, benchmark, full sanitizer/differential rerun or DCLDS work.
+
+P15.1 gains clean software-environment smoke and saved-table regeneration;
+the original broader M5 checkboxes stay open pending the concrete
+[scope closure choices](M5_COMPLETION_PLAN.md#final-scope-closure).

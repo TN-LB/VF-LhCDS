@@ -1,0 +1,203 @@
+[
+  {
+    "name": "source-init",
+    "command": [
+      "/usr/bin/git",
+      "init",
+      "/home/repro/vf-lhcds-fixed"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:28.773187+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.008465923000017028,
+    "finished_utc": "2026-10-08T10:44:28.781675+00:00",
+    "stdout_sha256": "e76de92cf948acc01f20398b7c30e8b726913ce7b324f8108c14e535b63ff24b",
+    "stderr_sha256": "7cc74f74cc8a8f9938bd00571e2c171ce3c59d048f2242a836ccca722182d430"
+  },
+  {
+    "name": "source-fetch",
+    "command": [
+      "/usr/bin/git",
+      "fetch",
+      "/home/repro/source.bundle",
+      "HEAD"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:28.782015+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 1.160626547999982,
+    "finished_utc": "2026-10-08T10:44:29.942649+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "db88ed43b9fa559021798705ecaff5cf50d8b30e9f5ad8c98c787ad239acb24b"
+  },
+  {
+    "name": "source-checkout",
+    "command": [
+      "/usr/bin/git",
+      "checkout",
+      "--detach",
+      "5cc0a76f2e9838db2757a97e5f5d60b76dcdc1d8"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:29.943026+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 3.0198990199999116,
+    "finished_utc": "2026-10-08T10:44:32.962987+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "69ca22cc69309ac5e8d356aee0a5c334d54ca2c84a9c1040a6003ac0af04a204"
+  },
+  {
+    "name": "system-packages",
+    "command": [
+      "/usr/bin/dpkg-query",
+      "-W"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:32.967517+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.009275266000031479,
+    "finished_utc": "2026-10-08T10:44:32.976807+00:00",
+    "stdout_sha256": "c2490edbfd17f8fd7a4aef60e7ce6a2666863717cce6f2de74d4ff6f9ec97aa0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "venv-create",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "venv",
+      "/home/repro/vf-lhcds-fixed/.venv"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:32.977259+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 3.4355770180000036,
+    "finished_utc": "2026-10-08T10:44:36.412846+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "python-install",
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "pytest==8.4.2",
+      "cmake==4.4.3"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:36.414277+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 2.023286624999969,
+    "finished_utc": "2026-10-08T10:44:38.437578+00:00",
+    "stdout_sha256": "aa532addba4a049bdc4f6b0fd5b90a87a9becb501ee3a5478665ac20e59246bc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "python-freeze",
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:38.438291+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.17520509600001333,
+    "finished_utc": "2026-10-08T10:44:38.613504+00:00",
+    "stdout_sha256": "71d79c7eedbe64b3f1491dc3c5a941ec952b8cd670ff72e761d62d6aeda42cb0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "boost-fetch",
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+      "/home/repro/vf-lhcds-fixed/scripts/fetch_boost.py"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:44:38.613921+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 208.54605867299995,
+    "finished_utc": "2026-10-08T10:48:07.160073+00:00",
+    "stdout_sha256": "f76bb191ab0329f696bff598da836f33ee0cf8be7f1e05e4afabbed467c63a5e",
+    "stderr_sha256": "f04273fe13190932095abd92b7e8bc2489e6f7edcb8915cfb5c9d76ca8d30783"
+  },
+  {
+    "name": "ippv-acquire",
+    "command": [
+      "/usr/bin/git",
+      "clone",
+      "--no-checkout",
+      "https://github.com/Elssky/IPPV",
+      "/home/repro/vf-lhcds-fixed/.deps/baselines/ippv"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:48:07.165891+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 1.3111686329999657,
+    "finished_utc": "2026-10-08T10:48:08.477069+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "d6d0e1c57a31271e0da93c63ae47563dc99d37b1c97c0030c4f9578394f797bf"
+  },
+  {
+    "name": "ippv-pin",
+    "command": [
+      "/usr/bin/git",
+      "-C",
+      "/home/repro/vf-lhcds-fixed/.deps/baselines/ippv",
+      "checkout",
+      "--detach",
+      "f61881d4752170c03585e4281f0c49d7ef14aa1e"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:48:08.477576+00:00",
+    "timeout_seconds": 900,
+    "exit_code": 0,
+    "status": "completed",
+    "wall_seconds": 0.009284060000027239,
+    "finished_utc": "2026-10-08T10:48:08.486866+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "cb5dcd577097bc716a43a9548598a01a9d81464cc46b6e7c4a23bab77f2df2ee"
+  },
+  {
+    "name": "fresh-smoke",
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+      "/home/repro/vf-lhcds-fixed/scripts/reproduce_release.py",
+      "--build",
+      "/home/repro/clean-build-fixed",
+      "--evidence",
+      "/home/repro/clean-evidence-fixed/smoke"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "started_utc": "2026-10-08T10:48:08.487419+00:00",
+    "timeout_seconds": 1800,
+    "exit_code": 1,
+    "status": "error",
+    "wall_seconds": 10.842879701000015,
+    "finished_utc": "2026-10-08T10:48:19.330308+00:00",
+    "stdout_sha256": "3ef052d4b6b02f79c8b9ecae56a564f4ec1dec95e3736203cbf24d921d9aad93",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

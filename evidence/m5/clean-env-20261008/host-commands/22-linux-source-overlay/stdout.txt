@@ -1,0 +1,18 @@
+{
+  "head": "5cc0a76f2e9838db2757a97e5f5d60b76dcdc1d8",
+  "status": " M tests/m2_probe.cpp\n M tests/m3_probe.cpp\n?? scripts/reproduce_release.py\n",
+  "diff": "diff --git a/tests/m2_probe.cpp b/tests/m2_probe.cpp\nindex 502291e..d3a7cd8 100644\n--- a/tests/m2_probe.cpp\n+++ b/tests/m2_probe.cpp\n@@ -58,7 +58,8 @@ int main() {\n                     std::cout << \"{\\\"scanned\\\":\" << footprints.scanned << \",\\\"total_weight\\\":\" << footprints.total_weight << \",\\\"footprints\\\":[\";\n                     bool first = true;\n                     for (const auto& footprint : footprints.records) {\n-                        if (!first) std::cout << ','; first = false;\n+                        if (!first) std::cout << ',';\n+                        first = false;\n                         std::cout << \"{\\\"vertices\\\":\" << vertices_json(graph, footprint.vertices) << \",\\\"weight\\\":\" << footprint.weight << '}';\n                     }\n                     std::cout << \"]}\\n\";\ndiff --git a/tests/m3_probe.cpp b/tests/m3_probe.cpp\nindex a180cb8..b47388c 100644\n--- a/tests/m3_probe.cpp\n+++ b/tests/m3_probe.cpp\n@@ -80,7 +80,9 @@ int main() {\n                     },{},options);\n                     std::string canonical; std::cout<<\"{\\\"records\\\":[\"; bool first=true; BigInt rank=0;\n                     for(const auto& s:result.solutions) {\n-                        if(!first)std::cout<<','; first=false; const auto line=solution_json(index,s,++rank);\n+                        if(!first)std::cout<<',';\n+                        first=false;\n+                        const auto line=solution_json(index,s,++rank);\n                         canonical+=line; std::cout<<without_lf(line);\n                     }\n                     std::cout<<\"],\\\"termination\\\":\\\"\"<<(result.k_reached?\"k_reached\":\"exhausted\")<<\"\\\",\\\"semantic_sha256\\\":\\\"\"\n",
+  "overlay_sha256": {
+    "scripts/reproduce_release.py": "275d24d64c8d5c4284dcb9e10936678ea59ce266d1ff497b50853e838d63cec5",
+    "tests/m2_probe.cpp": "0340828c65b8ba94c2b1858cd51b0ba9b8e910a7146043324fe490ada067e250",
+    "tests/m3_probe.cpp": "d1aff3333189578a7e251771e22fb9b3b76bcbad9d55c2e86c083e8c76af3c22"
+  },
+  "environment": {
+    "PATH": "/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "OMP_NUM_THREADS": null,
+    "CXX": null,
+    "CXXFLAGS": null
+  }
+}

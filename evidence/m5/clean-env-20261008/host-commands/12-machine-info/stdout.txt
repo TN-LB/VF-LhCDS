@@ -1,0 +1,21 @@
+{
+  "record": {
+    "id": "01M4DH8NY40JDCH7N371QKBHJ1",
+    "name": "vf-lhcds-repro-20261008",
+    "image": {
+      "distro": "ubuntu",
+      "version": "noble",
+      "arch": "arm64",
+      "variant": "default"
+    },
+    "config": {
+      "isolated": false,
+      "default_username": "repro"
+    },
+    "builtin": false,
+    "state": "running"
+  },
+  "disk_size": 4266053632,
+  "ip4": "192.168.139.186",
+  "ip6": "fd07:b51a:cc66:0:b0c8:f4ff:fe3a:d977"
+}

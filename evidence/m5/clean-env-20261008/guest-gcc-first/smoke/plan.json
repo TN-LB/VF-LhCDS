@@ -1,0 +1,321 @@
+{
+  "scope": "fresh local build/source directories on the same host; existing Python/Boost and local Git object source reused",
+  "clean_machine": false,
+  "new_benchmark_measurements": 0,
+  "base_commit": "5cc0a76f2e9838db2757a97e5f5d60b76dcdc1d8",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "driver_sha256": "275d24d64c8d5c4284dcb9e10936678ea59ce266d1ff497b50853e838d63cec5",
+  "production_source_sha256": {
+    "CMakeLists.txt": "dc5758db51d26f1af8046f0c3a579662c8b7476605d39ee23d2273cc0de1a97d",
+    "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
+    "include/vflhcds/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+    "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
+    "include/vflhcds/clique/materialized.hpp": "f38b0fd48337948e7cb826c0f407f4052dca900644626982c80eed4e1e663608",
+    "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+    "include/vflhcds/core/exact.hpp": "232bb07cbc20da7438e54eeceb13e9c792e4f9fdbb9f4ade24461e198eac6111",
+    "include/vflhcds/core/graph.hpp": "77c8201442f52cb52365956f0c8306e5185c04a7cc1cb4511905aecb7a071964",
+    "include/vflhcds/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+    "include/vflhcds/flow/dinic.hpp": "f903d13f57fcc99adc4ff4ab09f634cac3e997f1b5a3613e1287eb12dd1adf0f",
+    "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
+    "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
+    "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+    "include/vflhcds/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+    "include/vflhcds/oracle/closure.hpp": "6a042d0423bcacc3ca531f1ca027809ef3b0251b7d07fc7c1ba02f34c221172e",
+    "include/vflhcds/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+    "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
+    "include/vflhcds/solver/solver.hpp": "3959a9ff3dccdde742b5e4a6cb04e9b4c2327cadad9fdc5e3632ee7f5da55528",
+    "include/vflhcds/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+    "include/vflhcds/telemetry/query.hpp": "528312311c071d51b54f9b4159a228dc3fe76dc7c793ea0cea0f0240dcc487de",
+    "src/cli/dispatch.cpp": "7523d3550bbfc290b1a6ac144cdbc4bdf57fa0e482df78fa6d3c27fa51c640e6",
+    "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
+    "src/clique/README.md": "9c4a8f295e14de4ded42feaf63fcafc9b161cec767b3995eb7a81fec2997a567",
+    "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
+    "src/clique/materialized.cpp": "682f6a0f443954aebda04c3870e30191faf49e186c180f4dbf650c7f17bef49d",
+    "src/core/README.md": "64ce14c00614f02282a647ba332dbe659a34619f71f767af59b250cea39e1793",
+    "src/core/exact.cpp": "77a91da3f2dd666ce1aca55a062359f1317cb29894a5e48e79a955f478e455bc",
+    "src/core/graph.cpp": "e691e4cb42a8a0c30e099bd04cd097e90e310567e179db2c69fbf1094b242144",
+    "src/flow/README.md": "51b59b59ab73708606d9a127f8dc20a2daa7ec657f7779c63d600ad6ed593e32",
+    "src/io/graph.cpp": "d280a1376514e2e7d85f87aa3885c00ffdc3b9d8e208210dfe7cc5f78910b46d",
+    "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
+    "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
+    "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+    "src/oracle/README.md": "7bc1673a11d114dab353efc4898d0637ad24b74c2eb8c33792b3075f80f45ea6",
+    "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
+    "src/solver/README.md": "c2b29aef124913f1ff75cbbdbe90de00e6aa31366b2ae11c8e301eed2a9fe409",
+    "src/solver/solver.cpp": "d07f0831f8edb63c085db0d7111295cb5c4de10cf0787c6cd73e715bb4e19464",
+    "src/telemetry/README.md": "71368a3a39e4302bff734bd0f88efd7880d11eecdfb27c6b03fb540d5f5065e4",
+    "src/telemetry/query.cpp": "cdec53acad34b0b3b9a5989f044081bc28c44ff8b3e7cc30eb19760c7e874837",
+    "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2"
+  },
+  "ippv_lock_sha256": "4f777b728f51afc0abf5e3a9a5536cf8c9f32739279d753b2f24823b4d87cccc",
+  "commands": [
+    {
+      "name": "papers",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/scripts/verify_papers.py"
+      ]
+    },
+    {
+      "name": "cmake-version",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+        "--version"
+      ]
+    },
+    {
+      "name": "compiler-version",
+      "command": [
+        "/usr/bin/c++",
+        "--version"
+      ]
+    },
+    {
+      "name": "pytest-version",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--version"
+      ]
+    },
+    {
+      "name": "vf-configure",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+        "-S",
+        "/home/repro/vf-lhcds-fixed",
+        "-B",
+        "/home/repro/clean-build-fixed/vf",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_TESTING=ON",
+        "-DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON",
+        "-DVFLHCDS_ENABLE_SANITIZERS=OFF",
+        "-DCMAKE_CXX_FLAGS=",
+        "-DPython3_EXECUTABLE=/home/repro/vf-lhcds-fixed/.venv/bin/python"
+      ]
+    },
+    {
+      "name": "vf-build",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+        "--build",
+        "/home/repro/clean-build-fixed/vf",
+        "-j2"
+      ]
+    },
+    {
+      "name": "vf-ctest",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/ctest",
+        "--test-dir",
+        "/home/repro/clean-build-fixed/vf",
+        "--output-on-failure"
+      ]
+    },
+    {
+      "name": "python-tests",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "-m",
+        "pytest",
+        "/home/repro/vf-lhcds-fixed/reference/tests",
+        "/home/repro/vf-lhcds-fixed/experiments/test_harness.py",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/test_adapter.py",
+        "-q"
+      ]
+    },
+    {
+      "name": "ippv-local-clone",
+      "command": [
+        "/usr/bin/git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/home/repro/vf-lhcds-fixed/.deps/baselines/ippv",
+        "/home/repro/clean-build-fixed/ippv-source"
+      ]
+    },
+    {
+      "name": "ippv-checkout",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "checkout",
+        "--detach",
+        "f61881d4752170c03585e4281f0c49d7ef14aa1e"
+      ]
+    },
+    {
+      "name": "ippv-patch-01",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0001-remove-unused-openmp-header.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-02",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0002-initialize-clique-count.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-03",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0003-preserve-selection-storage.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-04",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0004-h2-enumeration-base-case.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-05",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0005-include-final-single-edge-component.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-06",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0006-exact-verification-capacities.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-07",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0007-restore-pava-workspace.patch"
+      ]
+    },
+    {
+      "name": "ippv-patch-08",
+      "command": [
+        "/usr/bin/git",
+        "-C",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "apply",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0008-include-equal-density-verification-neighbors.patch"
+      ]
+    },
+    {
+      "name": "ippv-build",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/build.py",
+        "--source",
+        "/home/repro/clean-build-fixed/ippv-source",
+        "--build",
+        "/home/repro/clean-build-fixed/ippv",
+        "--evidence",
+        "/home/repro/clean-evidence-fixed/smoke/ippv-build",
+        "--cmake",
+        "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+        "--boost",
+        "/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0"
+      ]
+    },
+    {
+      "name": "ippv-fractional",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/check_fractional.py",
+        "--binary",
+        "/home/repro/clean-build-fixed/ippv/IPPV",
+        "--evidence",
+        "/home/repro/clean-evidence-fixed/smoke/ippv-fractional"
+      ]
+    },
+    {
+      "name": "ippv-equality",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/check_equality.py",
+        "--binary",
+        "/home/repro/clean-build-fixed/ippv/IPPV",
+        "--evidence",
+        "/home/repro/clean-evidence-fixed/smoke/ippv-equality"
+      ]
+    },
+    {
+      "name": "ippv-bridge",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/baselines/ippv/adapter.py",
+        "run",
+        "--executable",
+        "/home/repro/clean-build-fixed/ippv/IPPV",
+        "--graph",
+        "/home/repro/vf-lhcds-fixed/reference/fixtures/bridged_triangles.graph",
+        "--h",
+        "3",
+        "--k",
+        "1",
+        "--iterations",
+        "10",
+        "--timeout",
+        "60",
+        "--definition",
+        "--evidence",
+        "/home/repro/clean-evidence-fixed/smoke/ippv-bridge"
+      ]
+    },
+    {
+      "name": "vf-definition",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/validation/run_solver.py",
+        "--executable",
+        "/home/repro/clean-build-fixed/vf/vflhcds",
+        "--evidence",
+        "/home/repro/clean-evidence-fixed/smoke/vf-definition",
+        "--check-reference",
+        "--",
+        "solve",
+        "--graph",
+        "/home/repro/vf-lhcds-fixed/reference/fixtures/triangle_and_isolate.graph",
+        "--h",
+        "3",
+        "--all",
+        "--clique-enumeration",
+        "adjacency",
+        "--footprint-scan",
+        "membership",
+        "--clique-count",
+        "membership",
+        "--core-reduction",
+        "off"
+      ]
+    }
+  ]
+}

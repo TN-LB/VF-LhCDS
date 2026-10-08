@@ -1,0 +1,19 @@
+Running source-init
+Running source-fetch
+Running source-checkout
+Running system-packages
+Running venv-create
+Running python-install
+Running python-freeze
+Running boost-fetch
+Running ippv-acquire
+Running ippv-pin
+Running fresh-smoke
+Running papers
+Running cmake-version
+Running compiler-version
+Running pytest-version
+/usr/bin/python3.12: No module named pytest
+
+
+

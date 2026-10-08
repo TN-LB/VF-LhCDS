@@ -1,0 +1,12 @@
+/home/repro/vf-lhcds-fixed/tests/m2_probe.cpp: In function ‘int main()’:
+/home/repro/vf-lhcds-fixed/tests/m2_probe.cpp:61:25: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   61 |                         if (!first) std::cout << ','; first = false;
+      |                         ^~
+/home/repro/vf-lhcds-fixed/tests/m2_probe.cpp:61:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   61 |                         if (!first) std::cout << ','; first = false;
+      |                                                       ^~~~~
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/vflhcds_m2_probe.dir/build.make:79: CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:1169: CMakeFiles/vflhcds_m2_probe.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:101: all] Error 2

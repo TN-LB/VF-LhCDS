@@ -1,0 +1,158 @@
+[
+  {
+    "name": "01-create",
+    "process": "host-commands/01-create/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "02-bundle",
+    "process": "host-commands/02-bundle/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "03-initial-environment",
+    "process": "host-commands/03-initial-environment/process.json",
+    "status": "error",
+    "exit_code": 1
+  },
+  {
+    "name": "04-initial-environment",
+    "process": "host-commands/04-initial-environment/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "05-install-system-dependencies",
+    "process": "host-commands/05-install-system-dependencies/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "06-copy-source-bundle",
+    "process": "host-commands/06-copy-source-bundle/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "07-copy-bootstrap",
+    "process": "host-commands/07-copy-bootstrap/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "08-guest-reproduction",
+    "process": "host-commands/08-guest-reproduction/process.json",
+    "status": "error",
+    "exit_code": 1
+  },
+  {
+    "name": "09-retain-first-guest-attempt",
+    "process": "host-commands/09-retain-first-guest-attempt/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "10-copy-fixed-drivers",
+    "process": "host-commands/10-copy-fixed-drivers/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "11-fixed-guest-reproduction",
+    "process": "host-commands/11-fixed-guest-reproduction/process.json",
+    "status": "error",
+    "exit_code": 1
+  },
+  {
+    "name": "12-machine-info",
+    "process": "host-commands/12-machine-info/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "13-retain-gcc-attempt",
+    "process": "host-commands/13-retain-gcc-attempt/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "14-copy-test-portability-fix",
+    "process": "host-commands/14-copy-test-portability-fix/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "15-portable-guest-reproduction",
+    "process": "host-commands/15-portable-guest-reproduction/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "16-copy-regeneration-driver",
+    "process": "host-commands/16-copy-regeneration-driver/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "17-linux-regeneration",
+    "process": "host-commands/17-linux-regeneration/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "18-retain-linux-smoke",
+    "process": "host-commands/18-retain-linux-smoke/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "19-mac-probe-build",
+    "process": "host-commands/19-mac-probe-build/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "20-retain-linux-tables",
+    "process": "host-commands/20-retain-linux-tables/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "21-mac-probe-smoke",
+    "process": "host-commands/21-mac-probe-smoke/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "22-linux-source-overlay",
+    "process": "host-commands/22-linux-source-overlay/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "23-final-integrity",
+    "process": "host-commands/23-final-integrity/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "24-stop-reproduction-machine",
+    "process": "host-commands/24-stop-reproduction-machine/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "25-machine-stopped-state",
+    "process": "host-commands/25-machine-stopped-state/process.json",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "26-document-and-record-check",
+    "process": "host-commands/26-document-and-record-check/process.json",
+    "status": "completed",
+    "exit_code": 0
+  }
+]

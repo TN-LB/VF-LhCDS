@@ -1,0 +1,10 @@
+ID: 01M4DH8NY40JDCH7N371QKBHJ1
+Name: vf-lhcds-repro-20261008
+State: stopped
+
+Distro: ubuntu
+Version: noble
+Architecture: arm64
+
+Disk usage: 4.5 GB
+

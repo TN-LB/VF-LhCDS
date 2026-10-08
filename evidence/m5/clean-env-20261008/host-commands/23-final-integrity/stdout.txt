@@ -1,0 +1,2 @@
+6074 raw inventory entries verified; 112 source/test/fixture files unchanged
+40 frozen production hashes match; 4 cross-platform fixture outputs match; 26 tables verified

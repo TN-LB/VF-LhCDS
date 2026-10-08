@@ -1,0 +1,6 @@
+Running papers
+Running cmake-version
+Running compiler-version
+Running pytest-version
+/usr/bin/python3.12: No module named pytest
+

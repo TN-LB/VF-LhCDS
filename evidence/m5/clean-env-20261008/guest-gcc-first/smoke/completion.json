@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "failed_command": "vf-build",
+  "clean_machine": false
+}

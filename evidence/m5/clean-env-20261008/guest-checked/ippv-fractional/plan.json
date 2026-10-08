@@ -1,0 +1,46 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "/home/repro/vf-lhcds-fixed/baselines/ippv/check_fractional.py",
+    "--binary",
+    "/home/repro/clean-build-checked/ippv/IPPV",
+    "--evidence",
+    "/home/repro/clean-evidence-checked/ippv-fractional"
+  ],
+  "script_sha256": "9485beb3c29f0daab59953e1d3074a537ca7635bc1759275816036d8a9705141",
+  "fixture": "baselines/ippv/fixtures/fractional-bridge.graph",
+  "graph_sha256": "8af68146d42734788785cf972078c6e29fa23fa66af8a8cd4b4c23283b806259",
+  "h": 2,
+  "k": 2,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "scope": "fixed correctness regression, not benchmark continuation",
+  "reference_max_vertices": 13,
+  "reference_wall_seconds": 0.1592352719999326,
+  "expected": [
+    {
+      "vertices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "density": "3/2"
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "density": "5/4"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/home/repro/clean-build-checked/ippv/IPPV",
+      "sha256": "4a42a331d666763b13b5ec417ae30c33da546e04a5d0579ef05f54ec33740499"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/opt/homebrew/bin/orbctl",
+    "run",
+    "--machine",
+    "vf-lhcds-repro-20261008",
+    "--user",
+    "repro",
+    "--workdir",
+    "/home/repro",
+    "--",
+    "/bin/sh",
+    "-c",
+    "cat /etc/os-release; uname -a; id; command -v python3 g++ cmake git curl; dpkg-query -W -f=\"${Package} ${Version}\\n\" build-essential python3 python3-venv cmake git curl ca-certificates bzip2 2>&1; exit 0"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/clean-env-20261008/host-commands/03-initial-environment",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T10:35:53.049748+00:00",
+  "timeout_seconds": 60,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "2aab9e5e0d76daac6942667dea8e597ab94f838fa62e1bd47c08c302ba638807",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 1,
+  "status": "error",
+  "wall_seconds": 0.02382008358836174,
+  "user_seconds": 0.006474,
+  "system_seconds": 0.007384,
+  "peak_rss_bytes": 18644992,
+  "finished_utc": "2026-10-08T10:35:53.090225+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "75d90a1d18d0f466b103f1c5e9886076a19c68680d5513cbd153ce08d3ef6297"
+  }
+}

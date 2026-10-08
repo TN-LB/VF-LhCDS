@@ -1,0 +1,12 @@
+{
+  "problem": "Historical local reproduction driver resolves .venv/bin/python symlink to system Python, bypassing virtualenv packages. Fresh Ubuntu system Python has no pytest; old smoke stops before configuration.",
+  "failed_attempt": "guest-first",
+  "repair": "scripts/reproduce_release.py keeps executable paths absolute without resolving interpreter symlinks; retains the existing command sequence",
+  "driver_sha256": "275d24d64c8d5c4284dcb9e10936678ea59ce266d1ff497b50853e838d63cec5",
+  "bootstrap_sha256": "d75b483021eef950c29e1bfa8493c42c91eebdc9a6622c441e060db57817b7cc",
+  "retry_scope": "fresh repo/venv/Boost acquisition, new build and evidence directories in the same newly created Ubuntu machine; no benchmark retry",
+  "production_reference_and_papers_modified": false,
+  "source_overlay": [
+    "scripts/reproduce_release.py"
+  ]
+}

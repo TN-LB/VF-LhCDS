@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/main.cpp.o -c /home/repro/clean-build-checked/ippv-source/main.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/main.cpp",
+  "output": "CMakeFiles/IPPV.dir/main.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/Graph.cpp.o -c /home/repro/clean-build-checked/ippv-source/Graph.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/Graph.cpp",
+  "output": "CMakeFiles/IPPV.dir/Graph.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/FlowNetwork.cpp.o -c /home/repro/clean-build-checked/ippv-source/FlowNetwork.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/FlowNetwork.cpp",
+  "output": "CMakeFiles/IPPV.dir/FlowNetwork.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/EdgeFN.cpp.o -c /home/repro/clean-build-checked/ippv-source/EdgeFN.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/EdgeFN.cpp",
+  "output": "CMakeFiles/IPPV.dir/EdgeFN.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/Args.cpp.o -c /home/repro/clean-build-checked/ippv-source/Args.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/Args.cpp",
+  "output": "CMakeFiles/IPPV.dir/Args.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/KClistCore.cpp.o -c /home/repro/clean-build-checked/ippv-source/KClistCore.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/KClistCore.cpp",
+  "output": "CMakeFiles/IPPV.dir/KClistCore.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/ippv",
+  "command": "/usr/bin/c++   -O3 -I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -Wall -std=gnu++14 -o CMakeFiles/IPPV.dir/MaxFlow.cpp.o -c /home/repro/clean-build-checked/ippv-source/MaxFlow.cpp",
+  "file": "/home/repro/clean-build-checked/ippv-source/MaxFlow.cpp",
+  "output": "CMakeFiles/IPPV.dir/MaxFlow.cpp.o"
+}
+]

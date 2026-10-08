@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "-m",
+    "pytest",
+    "/home/repro/vf-lhcds-fixed/reference/tests",
+    "/home/repro/vf-lhcds-fixed/experiments/test_harness.py",
+    "/home/repro/vf-lhcds-fixed/baselines/ippv/test_adapter.py",
+    "-q"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/commands/python-tests",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:52:53.687122+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "c86f21d0da9290ece2d7d49a3f7ed52aed59cb029abdf0ea25c79634f6cbe960",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 3.125736060999998,
+  "user_seconds": 2.064241,
+  "system_seconds": 1.088444,
+  "peak_rss_bytes": 46473216,
+  "finished_utc": "2026-10-08T10:52:56.820186+00:00",
+  "sha256": {
+    "stdout.txt": "c1aa70901920c2197b3499c1fb22eec15e8f43f122ea7c63d44d94a4d2e6f2b6",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

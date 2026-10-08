@@ -1,0 +1,45 @@
+[  2%] Building CXX object CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o
+[  5%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o
+[  8%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o
+[ 11%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o
+[ 14%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o
+[ 17%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o
+[ 20%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o
+[ 23%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[ 26%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o
+[ 29%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o
+[ 32%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o
+[ 35%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 38%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o
+[ 41%] Linking CXX static library libvflhcds_lib.a
+[ 41%] Built target vflhcds_lib
+[ 47%] Building CXX object CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o
+[ 47%] Building CXX object CMakeFiles/vflhcds.dir/src/cli/main.cpp.o
+[ 50%] Linking CXX executable vflhcds_skeleton_test
+[ 52%] Linking CXX executable vflhcds
+[ 52%] Built target vflhcds_skeleton_test
+[ 55%] Building CXX object CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o
+[ 55%] Built target vflhcds
+[ 58%] Building CXX object CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o
+[ 61%] Linking CXX executable vflhcds_m2_probe
+[ 61%] Built target vflhcds_m2_probe
+[ 64%] Building CXX object CMakeFiles/vflhcds_enumeration_test.dir/tests/clique_enumeration.cpp.o
+[ 67%] Linking CXX executable vflhcds_primitives_test
+[ 67%] Built target vflhcds_primitives_test
+[ 70%] Building CXX object CMakeFiles/vflhcds_solver_test.dir/tests/m3_solver.cpp.o
+[ 73%] Linking CXX executable vflhcds_enumeration_test
+[ 73%] Built target vflhcds_enumeration_test
+[ 76%] Building CXX object CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o
+[ 79%] Linking CXX executable vflhcds_solver_test
+[ 79%] Built target vflhcds_solver_test
+[ 82%] Building CXX object CMakeFiles/vflhcds_counting_test.dir/tests/clique_counting.cpp.o
+[ 85%] Linking CXX executable vflhcds_counting_test
+[ 85%] Built target vflhcds_counting_test
+[ 88%] Building CXX object CMakeFiles/vflhcds_core_test.dir/tests/m4_core.cpp.o
+[ 91%] Linking CXX executable vflhcds_m3_probe
+[ 91%] Built target vflhcds_m3_probe
+[ 94%] Building CXX object CMakeFiles/vflhcds_m4_profile.dir/tests/m4_profile.cpp.o
+[ 97%] Linking CXX executable vflhcds_core_test
+[ 97%] Built target vflhcds_core_test
+[100%] Linking CXX executable vflhcds_m4_profile
+[100%] Built target vflhcds_m4_profile

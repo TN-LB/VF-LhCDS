@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/usr/bin/python3.12",
+    "-m",
+    "pytest",
+    "--version"
+  ],
+  "cwd": "/home/repro/clean-evidence/smoke/commands/pytest-version",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:41:44.010003+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "c86f21d0da9290ece2d7d49a3f7ed52aed59cb029abdf0ea25c79634f6cbe960",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 1,
+  "status": "error",
+  "wall_seconds": 0.012921640999934425,
+  "user_seconds": 0.005567,
+  "system_seconds": 0.003711,
+  "peak_rss_bytes": 27877376,
+  "finished_utc": "2026-10-08T10:41:44.029369+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "831c746f8e50091a8aaa5c2429fe33d5ba9c874218a36d914cf18a3153327ad3"
+  }
+}

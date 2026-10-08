@@ -1,0 +1,24 @@
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Linux vf-lhcds-repro-20261008 6.15.11-orbstack-00539-g9885ebd8e3f4 #1 SMP PREEMPT Fri Aug 22 08:24:56 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+uid=502(repro) gid=502(repro) groups=502(repro),4(adm),27(sudo),44(video),50(staff),67278(orbstack)
+/usr/bin/python3
+dpkg-query: no packages found matching build-essential
+dpkg-query: no packages found matching cmake
+dpkg-query: no packages found matching git
+bzip2	
+ca-certificates	20260601~24.04.1
+curl	8.5.0-2ubuntu10.15
+python3	3.12.3-0ubuntu2.1
+python3-venv	

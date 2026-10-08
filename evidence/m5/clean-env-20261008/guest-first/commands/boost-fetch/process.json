@@ -1,0 +1,16 @@
+{
+  "name": "boost-fetch",
+  "command": [
+    "/home/repro/vf-lhcds/.venv/bin/python",
+    "/home/repro/vf-lhcds/scripts/fetch_boost.py"
+  ],
+  "cwd": "/home/repro/vf-lhcds",
+  "started_utc": "2026-10-08T10:40:10.540358+00:00",
+  "timeout_seconds": 900,
+  "exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 91.90106326900008,
+  "finished_utc": "2026-10-08T10:41:42.441476+00:00",
+  "stdout_sha256": "ddfa7ea704484d1a2b3856f3c8772ab3d1f6b92922535239d1e680c24ebbc53b",
+  "stderr_sha256": "c39a6a4a7e23e7e85035d95e7d70109a80968a87a2baa62a9d83cf32753bc891"
+}

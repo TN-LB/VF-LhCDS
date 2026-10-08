@@ -1,0 +1,24 @@
+Running papers
+Running cmake-version
+Running compiler-version
+Running pytest-version
+Running vf-configure
+Running vf-build
+Running vf-ctest
+Running python-tests
+Running ippv-local-clone
+Running ippv-checkout
+Running ippv-patch-01
+Running ippv-patch-02
+Running ippv-patch-03
+Running ippv-patch-04
+Running ippv-patch-05
+Running ippv-patch-06
+Running ippv-patch-07
+Running ippv-patch-08
+Running ippv-build
+Running ippv-fractional
+Running ippv-equality
+Running ippv-bridge
+Running vf-definition
+Fresh local smoke completed; clean-machine gate remains open.

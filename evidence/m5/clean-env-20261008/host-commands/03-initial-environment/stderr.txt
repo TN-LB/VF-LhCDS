@@ -1,0 +1,18 @@
+Error: unknown flag --
+Usage:
+  orbctl run [flags] -- [COMMAND] [ARGS]...
+
+Aliases:
+  run, exec, shell
+
+Examples:
+  orbctl run ls
+
+Flags:
+  -h, --help             help for run
+  -m, --machine string   Use a specific machine
+  -p, --path             Translate absolute macOS paths to Linux paths
+  -s, --shell            Use the login shell instead of running command directly
+  -u, --user string      Run as a specific user
+  -w, --workdir string   Set the working directory
+

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/ctest",
+    "--test-dir",
+    "/home/repro/clean-build-checked/vf",
+    "--output-on-failure"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/commands/vf-ctest",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:52:50.400255+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "f8f7b3f02699f840f621594815b213b2cf125322d9cfdfab9575c183f9227d9f",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 3.285971294999854,
+  "user_seconds": 3.073104,
+  "system_seconds": 0.222794,
+  "peak_rss_bytes": 33562624,
+  "finished_utc": "2026-10-08T10:52:53.686389+00:00",
+  "sha256": {
+    "stdout.txt": "aa096ccaf980f5cc00cd294c5a1f32b81e6412cf0ff95897f0333943b613b62b",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -3,10 +3,14 @@
 The selected scope is [D040/D041](M5_COMPLETION_PLAN.md): two pinned graphs,
 h=3/4/5, k=5/10/15/20, five repeats, serial execution. Reproduction has three
 separate levels: regenerate saved numbers, rebuild/check on the current host,
-and run on a genuinely clean machine. A fresh local directory does not establish
-the third level. [Executed local checks](../evidence/m5/reproduction-20261008/REPORT.md)
+and install/build/check in a clean software environment. A fresh local directory
+alone does not establish the third level. [Executed local checks](../evidence/m5/reproduction-20261008/REPORT.md)
 pass 16/16 CTest, 164 pytest and four separate definition fixtures. Both newly
 built binary hashes match D041; this remains a same-host result.
+[Fresh Ubuntu checks](../evidence/m5/clean-env-20261008/REPORT.md) also pass 16 CTest,
+164 pytest and four definition fixtures, with all 26 saved aggregate/review files
+regenerated identically. This is a new Linux root filesystem and dependency
+installation under OrbStack on the same Mac, not independent hardware/kernel.
 
 ## Versions, inputs and contracts
 
@@ -62,7 +66,7 @@ After preparing the existing local Python/Boost installation and pinned IPPV
 checkout, run with unused build/evidence paths:
 
 ```sh
-.venv/bin/python evidence/m5/reproduction-20261008/run.py --build build-m5-reproduction-new --evidence evidence/m5/reproduction-new
+.venv/bin/python scripts/reproduce_release.py --build build-m5-reproduction-new --evidence evidence/m5/reproduction-new
 ```
 
 This performs a new VF Release configure/build, all configured CTest smoke tests,
@@ -72,6 +76,9 @@ hash before compiling. New IPPV fractional/equal-density/ordinary-bridge checks
 and a VF definition-checked full-output fixture follow. Every actual command,
 exit status, tool version and log is saved; a failed step stops this script.
 It does not measure a new performance grid or overwrite benchmark executables.
+The current driver preserves the virtualenv interpreter path. The historical
+driver resolved its symlink to system Python, which fails on a fresh Linux system
+without globally installed pytest; that failed attempt remains in the evidence.
 
 The local IPPV clone comes from already acquired objects; Python/Boost, OS and
 compiler are reused. This is an offline local rebuild, not a clean-machine
@@ -80,6 +87,30 @@ Debug/Release/ASan/UBSan and differential tiers remain linked from
 [counting acceptance](../evidence/m5/counting-20261007/REPORT.md) and
 [IPPV-B09 acceptance](../evidence/m5/ippv/equality-20261008/REPORT.md); a smoke run
 does not silently rerun those tiers.
+
+## Fresh Linux software environment
+
+The executed [setup plan and command logs](../evidence/m5/clean-env-20261008/plan.json)
+create Ubuntu Noble arm64 under OrbStack 2.0.1, install `build-essential`, Python
+and venv support, Git, curl, CA certificates and bzip2, then install pytest 8.4.2
+and CMake 4.4.3 in a new venv. `scripts/fetch_boost.py` downloads/checks Boost
+1.86.0; the baseline is newly acquired at the locked commit. No Mac dependency
+or binary is copied. See the [baseline setup](../baselines/ippv/README.md) before
+running the release driver above in a fresh source checkout.
+
+The successful tree is base `5cc0a76` plus the recorded reproduction driver and
+two whitespace-only test-probe repairs. The source bundle hash, overlays, full
+package inventory, compiler versions, emitted flags and every failed/successful
+command are preserved. After installation repairs, the final attempt reuses those
+new Linux dependencies with unused build/evidence directories. Three IPPV fixtures
+and one VF fixture produce byte-identical canonical outputs on macOS and Linux;
+binary hashes are platform-specific. The measured Mac binaries remain unchanged.
+
+This verifies clean userspace installation and selected correctness/table
+reproduction. It does not repeat the raw performance grid, full differential or
+sanitizer campaigns, nor establish portability to every Linux system. OrbStack
+shares its Linux kernel and the physical host; it is not an independent-machine
+performance replication. Final M5 scope remains separately listed in the plan.
 
 ## Interpreting and repeating performance runs
 
@@ -96,5 +127,5 @@ not exhaustive maximality/completeness. Tiny reference checks are finite
 implementation evidence, not theorem proofs. Keep zero-density IPPV omissions,
 cutoff-tie differences, host load/cache limitations and all unavailable metrics
 explicit. Rank latency, a final detailed flow-phase breakdown, broad scalability,
-specialization/SOTA comparisons and a clean-machine run are not supplied by this
-bounded evaluation.
+specialization/SOTA comparisons and independent-machine performance replication
+are not supplied by this bounded evaluation.

@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+      "-S",
+      "/home/repro/clean-build-checked/ippv-source",
+      "-B",
+      "/home/repro/clean-build-checked/ippv",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_CXX_FLAGS=-I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0"
+    },
+    "started_utc": "2026-10-08T10:52:56.967058+00:00",
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-08T10:52:57.246534+00:00",
+    "stdout_sha256": "4cbd131a2f697c3246636d0b1f9afc8dfc56754ca335c8be2f112a3652f8112d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+      "--build",
+      "/home/repro/clean-build-checked/ippv",
+      "-j2"
+    ],
+    "cwd": "/home/repro/vf-lhcds-fixed",
+    "environment_overrides": {
+      "CXXFLAGS": "-I/home/repro/vf-lhcds-fixed/.deps/boost_1_86_0"
+    },
+    "started_utc": "2026-10-08T10:52:57.246705+00:00",
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "exit_code": 0,
+    "finished_utc": "2026-10-08T10:53:02.451686+00:00",
+    "stdout_sha256": "1d912a03a7205d355651be994f0a6b018b980ac92153b095d30e699341a842d7",
+    "stderr_sha256": "87e501177d9332146547edf68e8da85d9d37ef42d2c66e279635e05a62fe5718"
+  }
+]

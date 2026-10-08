@@ -775,3 +775,24 @@ that attempt. This is same-host reuse of installed dependencies, not a clean-mac
 run or a repeated sanitizer/differential acceptance campaign. All four paper
 hashes match and production/reference remain unchanged. P09.1/P10.1/P12.1/P15.1
 broader gates remain open; DCLDS is deferred and M5 is not marked complete.
+
+## Fresh Ubuntu software-environment reproduction — 2026-10-08
+
+P15.1/O12 gain [executed Linux evidence](../evidence/m5/clean-env-20261008/REPORT.md):
+fresh Ubuntu 24.04.5 arm64 userspace/dependency installation, GCC 13.3 strict
+Release builds of VF and pinned eight-patch IPPV, 23 successful smoke commands,
+16/16 CTest, 164 pytest and four separate definition checks. All four fixture
+outputs equal the macOS outputs; 26 aggregate/review artifacts regenerate
+byte-identically. This is shared-kernel OrbStack on the same Mac, not independent
+hardware or repeated performance measurements. Finite agreement is implementation
+evidence, not proof or real-graph completeness.
+
+`scripts/reproduce_release.py::main` preserves the virtualenv interpreter path;
+`tests/m2_probe.cpp::main` and `tests/m3_probe.cpp::main` split adjacent statements
+to satisfy GCC's existing warnings. No production/reference/theory change occurs.
+The failed interpreter/build attempts and their source hashes remain preserved.
+The two modified probes rebuild under AppleClang and pass 3/3 affected smoke tests.
+Read-only integrity checks verify 6,074 historical raw entries, four papers,
+40 production hashes, 112 unchanged source/test/fixture files and whitespace-only
+changes in the two probes. Original broad M5 gates remain open pending explicit
+scope closure; no new sanitizer/full differential campaign or DCLDS work is claimed.

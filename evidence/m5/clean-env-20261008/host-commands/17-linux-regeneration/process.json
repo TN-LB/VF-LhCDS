@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/opt/homebrew/bin/orbctl",
+    "run",
+    "-m",
+    "vf-lhcds-repro-20261008",
+    "-u",
+    "repro",
+    "-w",
+    "/home/repro",
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "/home/repro/guest_finish.py",
+    "--repo",
+    "/home/repro/vf-lhcds-fixed",
+    "--smoke",
+    "/home/repro/clean-evidence-checked",
+    "--output",
+    "/home/repro/clean-derived"
+  ],
+  "cwd": "/Users/nost/Documents/VF-LhCDS/evidence/m5/clean-env-20261008/host-commands/17-linux-regeneration",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "started_utc": "2026-10-08T10:53:48.868800+00:00",
+  "timeout_seconds": 1200,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "2aab9e5e0d76daac6942667dea8e597ab94f838fa62e1bd47c08c302ba638807",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 1.73447429202497,
+  "user_seconds": 0.008461999999999999,
+  "system_seconds": 0.004696,
+  "peak_rss_bytes": 21692416,
+  "finished_utc": "2026-10-08T10:53:50.616144+00:00",
+  "sha256": {
+    "stdout.txt": "fba99734cf8b8e2f0669d81e33c9893e24890a76570d7669d61c08d53a0488eb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

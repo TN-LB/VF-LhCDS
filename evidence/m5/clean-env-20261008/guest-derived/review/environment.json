@@ -1,0 +1,35 @@
+{
+  "observations": 240,
+  "load_1_5_15_minute_ranges": [
+    {
+      "median": 3.3994140625,
+      "min": 2.2861328125,
+      "max": 14.69384765625
+    },
+    {
+      "median": 3.09375,
+      "min": 2.7490234375,
+      "max": 6.02880859375
+    },
+    {
+      "median": 3.174560546875,
+      "min": 2.96240234375,
+      "max": 4.23779296875
+    }
+  ],
+  "swap_used_reported_M": {
+    "median": 6045.56,
+    "min": 5989.56,
+    "max": 6109.56
+  },
+  "swap_available_observations": 240,
+  "power_sources": {
+    "AC Power": 240
+  },
+  "power_setting_hashes": [
+    "575ec1b91cf3946766dea53d34d918fba55ba666fb97040989cef5faeb31a84a"
+  ],
+  "temperature": null,
+  "cpu_frequency": null,
+  "scope": "before/after blocks, not continuous monitoring; nonzero host load and swap are retained, no exclusions"
+}

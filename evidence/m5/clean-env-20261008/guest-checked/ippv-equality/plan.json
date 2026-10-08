@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "/home/repro/vf-lhcds-fixed/baselines/ippv/check_equality.py",
+    "--binary",
+    "/home/repro/clean-build-checked/ippv/IPPV",
+    "--evidence",
+    "/home/repro/clean-evidence-checked/ippv-equality"
+  ],
+  "script_sha256": "edf3edd6f17253bcfc65bd0de90c6dd8e8b5340bbec330e840bebae4623b257b",
+  "fixture": "baselines/ippv/fixtures/equal-density-bridge.graph",
+  "graph_sha256": "3ab7700bdc0f8cc27fe51171ddf8bf3a7d34bcc85546dad41c8b1fd9859b4c15",
+  "h": 3,
+  "k": 3,
+  "iterations": 10,
+  "timeout_seconds": 60,
+  "scope": "independent all-superset correctness regression, not a benchmark",
+  "reference_max_vertices": 13,
+  "expected_vertices": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  ],
+  "binaries": [
+    {
+      "path": "/home/repro/clean-build-checked/ippv/IPPV",
+      "sha256": "4a42a331d666763b13b5ec417ae30c33da546e04a5d0579ef05f54ec33740499"
+    }
+  ]
+}

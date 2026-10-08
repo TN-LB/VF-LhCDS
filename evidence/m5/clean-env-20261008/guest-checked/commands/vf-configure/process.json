@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+    "-S",
+    "/home/repro/vf-lhcds-fixed",
+    "-B",
+    "/home/repro/clean-build-checked/vf",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DBUILD_TESTING=ON",
+    "-DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON",
+    "-DVFLHCDS_ENABLE_SANITIZERS=OFF",
+    "-DCMAKE_CXX_FLAGS=",
+    "-DPython3_EXECUTABLE=/home/repro/vf-lhcds-fixed/.venv/bin/python"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/commands/vf-configure",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:52:34.332893+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "52a43cf023dc4822776c2e198718bc29188ae8a704b7baabedd1b83eb04ebb5a",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.3900462779999998,
+  "user_seconds": 0.30644299999999997,
+  "system_seconds": 0.077068,
+  "peak_rss_bytes": 27377664,
+  "finished_utc": "2026-10-08T10:52:34.723108+00:00",
+  "sha256": {
+    "stdout.txt": "bc40058fb571268315f2d712597d6b8a1e4b67e5ad94df4e2bc88bf6ad680126",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

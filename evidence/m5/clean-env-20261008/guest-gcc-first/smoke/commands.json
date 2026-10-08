@@ -1,0 +1,38 @@
+[
+  {
+    "name": "papers",
+    "process": "commands/papers/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "cmake-version",
+    "process": "commands/cmake-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "compiler-version",
+    "process": "commands/compiler-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "pytest-version",
+    "process": "commands/pytest-version/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-configure",
+    "process": "commands/vf-configure/process.json",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "name": "vf-build",
+    "process": "commands/vf-build/process.json",
+    "exit_code": 2,
+    "status": "error"
+  }
+]

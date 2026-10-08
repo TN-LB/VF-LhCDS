@@ -1,0 +1,395 @@
+/home/repro/clean-build-checked/ippv-source/main.cpp: In function ‘int main(int, char**)’:
+/home/repro/clean-build-checked/ippv-source/main.cpp:6:15: warning: unused variable ‘el’ [-Wunused-variable]
+    6 |     EdgeList* el;
+      |               ^~
+In file included from /home/repro/clean-build-checked/ippv-source/EdgeFN.cpp:1:
+/home/repro/clean-build-checked/ippv-source/EdgeFN.h: In constructor ‘EdgeFN::EdgeFN(int, int, double, double, double)’:
+/home/repro/clean-build-checked/ippv-source/EdgeFN.h:8:17: warning: ‘EdgeFN::flow’ will be initialized after [-Wreorder]
+    8 |     double cap, flow;
+      |                 ^~~~
+/home/repro/clean-build-checked/ippv-source/EdgeFN.h:7:19: warning:   ‘int EdgeFN::index’ [-Wreorder]
+    7 |     int from, to, index;
+      |                   ^~~~~
+/home/repro/clean-build-checked/ippv-source/EdgeFN.cpp:3:1: warning:   when initialized here [-Wreorder]
+    3 | EdgeFN::EdgeFN(int from, int to, double cap, double flow, double index) : from(from), to(to), cap(cap), flow(flow), index(index) {
+      | ^~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void update(bheap*, unsigned int)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:93:15: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+   93 |         if (i != -1) {
+      |             ~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘sparse* getEdgeList(std::vector<std::vector<int> >, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:184:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  184 |         for (int i = 0; i < adj.size(); i++)
+      |                         ~~^~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:187:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  187 |                 for (int j = 0; j < adj[i].size(); j++)
+      |                                 ~~^~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘sparse* getEdgeList_hash(std::vector<std::vector<int> >, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:219:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  219 |         for (int i = 0; i < adj.size(); i++)
+      |                         ~~^~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:222:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  222 |                 for (int j = 0; j < adj[i].size(); j++)
+      |                                 ~~^~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void getrankloop(sparse*, unsigned int)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:312:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  312 |         for (int i = 0; i < g->n; i++)
+      |                         ~~^~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void relabelnodes(sparse*)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:364:28: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  364 |                 if (source == -1 || target == -1) {
+      |                     ~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:364:44: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  364 |                 if (source == -1 || target == -1) {
+      |                                     ~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void recursion(unsigned int, unsigned int, unsigned int*, unsigned int*, sparse*, unsigned int*, long long unsigned int*, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:519:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  519 |                 for (int i = 0; i < kmax - 1; i++)
+      |                                 ~~^~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:522:43: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  522 |                         for (int j = 0; j < size[k - 3]; j++)
+      |                                         ~~^~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:527:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  527 |                 for (int i = 0; i < size[k - 3]; i++)
+      |                                 ~~^~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:508:21: warning: unused variable ‘u’ [-Wunused-variable]
+  508 |         unsigned i, u;
+      |                     ^
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘long long unsigned int* onepass(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:551:21: warning: unused variable ‘i’ [-Wunused-variable]
+  551 |         unsigned e, i;
+      |                     ^
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void onepassforloop(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:598:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  598 |         for (int i = 0; i < g->n2; i++)
+      |                         ~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:604:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  604 |                 for (int u = 0; u < g->d[i]; u++)
+      |                                 ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:608:47: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  608 |                         for (int v = u + 1; v < g->d[i]; v++)
+      |                                             ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:613:51: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  613 |                                 for (int w = 0; w < size[0]; w++)
+      |                                                 ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:601:21: warning: unused variable ‘degi’ [-Wunused-variable]
+  601 |                 int degi = g->d[i];
+      |                     ^~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void onepassfordoubletri(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:649:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  649 |         for (int e = 0; e < g->e2; e++) {
+      |                         ~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:657:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  657 |                 for (int w = 0; w < size[0]; w++)
+      |                                 ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:661:49: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  661 |                         for (int ww = w + 1; ww < size[0]; ww++)
+      |                                              ~~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void dfsstar(unsigned int*, unsigned int*, int, int, std::vector<int>&, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:696:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  696 |         for (int i = start; i < size[0]; ++i) {
+      |                             ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void dfsctri(unsigned int*, unsigned int*, int, int, std::vector<int>&, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:736:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  736 |         for (int i = start; i < size[0]; ++i) {
+      |                             ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void onepassforstar(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:752:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  752 |         for (int i = 0; i < g->n2; i++)
+      |                         ~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:758:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  758 |                 for (int u = 0; u < g->d0[i]; u++)
+      |                                 ~~^~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void onepassforctri(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:781:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  781 |         for (int i = 0; i < g->n2; i++)
+      |                         ~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:787:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  787 |                 for (int u = 0; u < g->d0[i]; u++)
+      |                                 ~~^~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void onepassfortritri(sparse*, unsigned int, std::vector<std::vector<int> >&, std::vector<std::vector<int> >&)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:809:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  809 |         for (int e = 0; e < g->e2; e++) {
+      |                         ~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:817:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  817 |                 for (int w = 0; w < size[0]; w++)
+      |                                 ~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:821:49: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  821 |                         for (int ww = w + 1; ww < size[0]; ww++)
+      |                                              ~~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:825:60: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+  825 |                                 for (int www = ww + 1; www < size[0]; www++)
+      |                                                        ~~~~^~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void updateLLU(bheapLLU*, unsigned int, long long unsigned int)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:935:15: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  935 |         if (i != -1) {
+      |             ~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘void oneshortpass(sparse*, bheapLLU*, unsigned int, unsigned int, long long unsigned int*)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1021:33: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+ 1021 |                 if (heap->pt[v] != -1) {
+      |                     ~~~~~~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘densest* kcliquecore(unsigned int, long long unsigned int*, long long unsigned int, sparse*)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1068:41: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+ 1068 |                         if (heap->pt[v] != -1) {
+      |                             ~~~~~~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_kloops(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1115:29: warning: unused variable ‘nck’ [-Wunused-variable]
+ 1115 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1116:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1116 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1117:18: warning: unused variable ‘ds’ [-Wunused-variable]
+ 1117 |         densest* ds;
+      |                  ^~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_kcliques(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1145:29: warning: variable ‘nck’ set but not used [-Wunused-but-set-variable]
+ 1145 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1146:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1146 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1147:18: warning: unused variable ‘ds’ [-Wunused-variable]
+ 1147 |         densest* ds;
+      |                  ^~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_kstar(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1175:29: warning: unused variable ‘nck’ [-Wunused-variable]
+ 1175 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1176:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1176 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_ctriangle(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1194:29: warning: unused variable ‘nck’ [-Wunused-variable]
+ 1194 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1195:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1195 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_doubletriangle(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1221:29: warning: unused variable ‘nck’ [-Wunused-variable]
+ 1221 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1222:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1222 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1223:18: warning: unused variable ‘ds’ [-Wunused-variable]
+ 1223 |         densest* ds;
+      |                  ^~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp: In function ‘std::vector<std::vector<int> > get_tritriangle(std::vector<std::vector<int> >, std::vector<std::vector<int> >&, unsigned int, std::vector<bool>)’:
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1251:29: warning: unused variable ‘nck’ [-Wunused-variable]
+ 1251 |         unsigned long long* nck;
+      |                             ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1252:28: warning: unused variable ‘tot’ [-Wunused-variable]
+ 1252 |         unsigned long long tot;
+      |                            ^~~
+/home/repro/clean-build-checked/ippv-source/KClistCore.cpp:1253:18: warning: unused variable ‘ds’ [-Wunused-variable]
+ 1253 |         densest* ds;
+      |                  ^~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘double SmallGraph::clusteringCoefficient(int)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:32:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   32 |         for (int i = 0; i < adj[v].size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:33:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   33 |             for (int j = i + 1; j < adj[v].size(); ++j) {
+      |                                 ~~^~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In constructor ‘Graph::Graph(FILE*, int, int, int, int)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:78:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+   78 |     for (int i = 0; i < m; i++) {
+      |                     ~~^~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::enumerateKCliques(int)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:147:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  147 |     for (int i = 0; i < h_cliques.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::backtrack(int, int, std::vector<int>&)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:158:30: warning: comparison of integer expressions of different signedness: ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  158 |     if (currentClique.size() == k) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::frank_wolfe()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:194:22: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 2 has type ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  194 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                   ~~~^                ~~~~~~~~~~~~~~~~
+      |                      |                              |
+      |                      long long int                  std::vector<int>::size_type {aka long unsigned int}
+      |                   %ld
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:194:33: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 3 has type ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  194 |     printf("#node %lld #edge %lld\n", slt_nodes.size(), slt_edges.size());
+      |                              ~~~^                       ~~~~~~~~~~~~~~~~
+      |                                 |                                     |
+      |                                 long long int                         std::vector<int>::size_type {aka long unsigned int}
+      |                              %ld
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::frank_wolfe_h_clique()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:259:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  259 |         for (int i = 0; i < slt_h_cliques.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::frank_wolfe_h_clique_new()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:304:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  304 |         for (int i = 0; i < slt_h_cliques.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::pava()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:453:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  453 |     for (int i = 0; i < slt_nodes.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:471:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  471 |     for (int i = 1; i < slt_nodes.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::pava_h_clique()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:542:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  542 |     for (int i = 0; i < slt_nodes.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:562:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  562 |     for (int i = 1; i < slt_nodes.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::check_sg_h_clique()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:699:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<double>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  699 |             for (int j = i + 1; j < max_r.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:734:17: warning: unused variable ‘cur_t’ [-Wunused-variable]
+  734 |         clock_t cur_t = clock();
+      |                 ^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:637:13: warning: unused variable ‘start’ [-Wunused-variable]
+  637 |     clock_t start = clock();
+      |             ^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::check_sg()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:799:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  799 |     for (int i = 0; i < slt_edges.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:888:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<double>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  888 |             for (int j = i + 1; j < max_r.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:904:17: warning: unused variable ‘cur_t’ [-Wunused-variable]
+  904 |         clock_t cur_t = clock();
+      |                 ^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:831:13: warning: unused variable ‘start’ [-Wunused-variable]
+  831 |     clock_t start = clock();
+      |             ^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::pruning()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:997:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  997 |     for (int i = 0; i < slt_nodes.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1033:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1033 |     for (int i = 0; i < slt_h_cliques.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1038:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1038 |         for (int i = 0; i < v2cliques[u].size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1042:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1042 |             for (int j = 0; j < hc.size(); j++) {
+      |                             ~~^~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::findLhCDS()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1191:31: warning: comparison of integer expressions of different signedness: ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1191 |             if (adj[i].size() < h-1)
+      |                 ~~~~~~~~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1200:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1200 |     for (int i = 0; i < m; i++) {
+      |                     ~~^~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1203:44: warning: comparison of integer expressions of different signedness: ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1203 |             if (adj[edges[i].first].size() < h - 1 || adj[edges[i].second].size() < h-1)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1203:83: warning: comparison of integer expressions of different signedness: ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1203 |             if (adj[edges[i].first].size() < h - 1 || adj[edges[i].second].size() < h-1)
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1290:44: warning: comparison of integer expressions of different signedness: ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1290 |                         if (lhcdses.size() >= topk)
+      |                             ~~~~~~~~~~~~~~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1299:36: warning: comparison of integer expressions of different signedness: ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1299 |                 if (lhcdses.size() >= topk)
+      |                     ~~~~~~~~~~~~~~~^~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1310:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1310 |     for (int i = 0; i < lhcdses.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1312:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1312 |         for (int j = 0; j < lhcdses[i].size(); j++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1323:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1323 |     for (int i = 0; i < lhcdses.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1324:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1324 |         for (int j = 0; j < lhcds_edge[i].size(); j++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1216:9: warning: unused variable ‘i’ [-Wunused-variable]
+ 1216 |     int i = 0;
+      |         ^
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1217:13: warning: unused variable ‘start’ [-Wunused-variable]
+ 1217 |     clock_t start = clock();
+      |             ^~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::compute_h_clique_core()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1367:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1367 |         for (int k = 0; k < v2cliques[u].size(); k++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1371:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1371 |             for (int j = 0; j < hc.size(); j++) {
+      |                             ~~^~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::prune_by_core()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1415:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1415 |         for (int i = 0; i < v2cliques[u].size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1417:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1417 |             for (int j = 0; j < hc.size(); j++) {
+      |                             ~~^~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1437:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1437 |             for (int j = 0; j < v2cliques[i].size(); j++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1442:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1442 |     for (int i = 0; i < m; i++) {
+      |                     ~~^~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1448:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1448 |     for (int i = 0; i < h_cliques.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘bool Graph::verify_by_maxflow(std::vector<int>&, double)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1485:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ 1485 | }
+      | ^
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘bool Graph::verify_LhCDS(std::vector<int>, std::vector<int>&, double)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1531:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<bool>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1531 |     for (int i = 0; i < visited.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1539:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1539 |     for (int i = 0; i < temp_nodes.size(); i++)
+      |                     ~~^~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1543:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1543 |     for (int i = 0; i < temp_nodes.size(); i++)
+      |                     ~~^~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1500:24: warning: unused variable ‘m’ [-Wunused-variable]
+ 1500 |     unsigned long long m = 0;
+      |                        ^
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘bool Graph::verify_LhCDS_small(std::vector<int>&, double, std::vector<int>&)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1748:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<bool>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1748 |     for (int i = 0; i < visited.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1755:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1755 |     for (int i = 0; i < nodes.size(); i++)
+      |                     ~~^~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1759:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1759 |     for (int i = 0; i < nodes.size(); i++)
+      |                     ~~^~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1694:24: warning: unused variable ‘m’ [-Wunused-variable]
+ 1694 |     unsigned long long m = 0;
+      |                        ^
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::output(char*)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1879:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1879 |     for (int i = 0; i < lhcdses.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In member function ‘void Graph::connected_components()’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1931:14: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1931 |     while (x < slt_nodes.size() && y <= slt_edges.size()) {
+      |            ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1931:38: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1931 |     while (x < slt_nodes.size() && y <= slt_edges.size()) {
+      |                                    ~~^~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1932:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1932 |         while (x < slt_nodes.size() && fa[slt_nodes[x]] == fa[slt_nodes[x - 1]]) x++;
+      |                ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1933:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1933 |         while (y < slt_edges.size() && fa[edges[slt_edges[y]].first] == fa[edges[slt_edges[y - 1]].first]) y++;
+      |                ~~^~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:1934:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1934 |         while (z < slt_h_cliques.size() && fa[h_cliques[slt_h_cliques[z]][0]] == fa[h_cliques[slt_h_cliques[z - 1]][0]]) z++;
+      |                ~~^~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp: In constructor ‘Graph::Graph(FILE*, int, int, int, int)’:
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:55:11: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   55 |     fscanf(file, "%d%lu", &n, &m);
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/home/repro/clean-build-checked/ippv-source/Graph.cpp:80:15: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   80 |         fscanf(file, "%d%d", &u, &v);
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~

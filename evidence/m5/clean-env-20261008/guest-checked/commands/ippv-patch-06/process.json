@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/git",
+    "-C",
+    "/home/repro/clean-build-checked/ippv-source",
+    "apply",
+    "/home/repro/vf-lhcds-fixed/baselines/ippv/patches/0006-exact-verification-capacities.patch"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/commands/ippv-patch-06",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:52:56.907188+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "aa6540695d076182256dd6e96c8b302e4d56381e3000bbfd5c71bbdfe94a4942",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.007520880999891233,
+  "user_seconds": 0.000811,
+  "system_seconds": 0.0,
+  "peak_rss_bytes": 27377664,
+  "finished_utc": "2026-10-08T10:52:56.917514+00:00",
+  "sha256": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

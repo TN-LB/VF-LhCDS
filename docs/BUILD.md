@@ -41,7 +41,9 @@ Release / RelWithDebInfo for the other required profiles. Use a single-configura
 generator so `print-build-info` records the profile. Strict warnings remain errors:
 `-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror`.
 Only the native 128-bit typedef uses a localized extension. MSVC/no-128/non-POSIX
-configurations fail explicitly; GCC/Linux support is intended but not yet tested.
+configurations fail explicitly. The [fresh Ubuntu 24.04.5 arm64/GCC 13.3 check](../evidence/m5/clean-env-20261008/REPORT.md)
+passes the Release build and all sixteen CTest tests; Linux sanitizer and other
+build profiles were not rerun in that reproduction.
 No parallel code exists, so TSan is deferred. No performance claim uses these runs.
 
 CTest contains sixteen tests: retained library argument checks; M2 primitives, oracle

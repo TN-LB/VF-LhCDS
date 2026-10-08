@@ -1,0 +1,19 @@
+{
+  "name": "python-freeze",
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "-m",
+    "pip",
+    "freeze",
+    "--all"
+  ],
+  "cwd": "/home/repro/vf-lhcds-fixed",
+  "started_utc": "2026-10-08T10:44:38.438291+00:00",
+  "timeout_seconds": 900,
+  "exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.17520509600001333,
+  "finished_utc": "2026-10-08T10:44:38.613504+00:00",
+  "stdout_sha256": "71d79c7eedbe64b3f1491dc3c5a941ec952b8cd670ff72e761d62d6aeda42cb0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -2,8 +2,9 @@
 
 M0–M4 are complete at their recorded gates. M5 remains in progress. D039 closes
 the development optimization cycle. The selected evaluation, conclusion review,
-table regeneration and fresh local rebuild are complete; clean-machine and the
-separately listed broader coverage gates remain open.
+table regeneration, fresh local rebuild and fresh Ubuntu software-environment
+reproduction are complete. Final scope closure and the separately listed broader
+coverage gates remain open.
 This file is the current execution plan; earlier campaign records remain historical.
 
 ## Progress and remaining gates
@@ -13,7 +14,7 @@ This file is the current execution plan; earlier campaign records remain histori
 | One targeted count optimization | Complete | [D038 report](../evidence/m5/counting-20261007/REPORT.md); implementation commit `0315c5d` |
 | Freeze evaluation scope and prepare execution | Complete | Five repetitions; [accepted configs and readiness](../evidence/m5/final-evaluation-20261008/REPORT.md); environment recorded at each launch |
 | Execute and aggregate the frozen suite | Complete for selected local scope | [D041 main](../evidence/m5/final-main-repaired-20261008/REPORT.md): 240 runs, 120 tie-aware matches; retained VF ablations: 120 runs, 60 required matches. Stopped D040 main remains separate |
-| Review conclusions and reproduce release | Local review/rebuild complete; clean machine open | P14.1 reviewed; [P15.1 local reproduction](../evidence/m5/reproduction-20261008/REPORT.md): new builds, 16 CTest, 164 pytest and four definition fixtures pass; [reproduction instructions](M5_REPRODUCTION.md) |
+| Review conclusions and reproduce release | Review, local rebuild and fresh Linux userspace checks complete; scope closure open | [P15.1 Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md): new dependency installation/builds, 16 CTest, 164 pytest, four definition fixtures and 26 identical derived artifacts; shared kernel/physical host disclosed |
 
 D038's existing evidence is 16/16 CTest in each of Debug, Release and ASan/UBSan,
 144 pytest passes, 14 differential campaigns and 1,392,496 matching saved responses.
@@ -25,7 +26,7 @@ P11.3 shared smoke is complete. P09.1 retains IPPV's zero-density coverage gap;
 P09b.1 remains deferred under D029. P11.1/P11.2 now have executed level/timing
 separation and configuration-freeze evidence. P14.1 is complete for the selected
 claims. P10.1/P12.1/P15.1 remain open at their broader gates. Remaining work is a
-clean-machine run and explicit treatment of broader coverage/missing metrics,
+explicit treatment of broader coverage/missing metrics and release scope,
 not another local optimization or automatic benchmark cycle.
 
 ## Stop adding performance optimizations
@@ -138,8 +139,9 @@ No earlier pilot/profiler timing is pooled into this batch.
 
 This bounded scope can yield a final local evaluation with negative results.
 It does not silently complete every original M5 gate: broader baseline coverage,
-unavailable metrics, the full-domain IPPV gap and a true clean-machine run must
-remain separately identified unless subsequently resolved or explicitly rescoped.
+unavailable metrics and the full-domain IPPV gap remain separately identified.
+The subsequent fresh Ubuntu installation supplies clean software-environment
+evidence; shared-kernel/hardware limits and unrerun raw measurements remain explicit.
 
 ## Preparation and execution checklist
 
@@ -158,3 +160,34 @@ remain separately identified unless subsequently resolved or explicitly rescoped
    and state whether the environment is a fresh local directory or a genuinely
    clean machine. The former does not satisfy a claim about the latter. Review
    each remaining M5 gate individually before changing task checkboxes.
+
+## Final scope closure
+
+The fresh Ubuntu reproduction is complete. No new mathematical conflict or
+unresolved build/test failure remains. The next choice concerns the scope of the
+M5 completion claim, not another repair or performance optimization.
+
+| Item | Evidence now available | Remaining boundary |
+|---|---|---|
+| P09.1 IPPV | Pinned source, eight disclosed patches, native/validation timing audit, shared real-graph results and tiny definition checks | Known zero-density omissions and unidentified upstream license remain; no output synthesis or source redistribution |
+| P10.1 specialization | No h=2 benchmark or h=3 SOTA/specialization claim in selected scope | No specialty-baseline implementation/comparison |
+| P12.1 measurements | Two graphs, h=3/4/5, k=5/10/15/20, five repeats, runtime/RSS, core and early-stop ablations | No broad scalability grid, per-rank latency or final detailed flow-phase timing |
+| P15.1 reproduction | Fresh Ubuntu dependencies and Release builds; 16 CTest, 164 pytest, four definition fixtures; 26 identical regenerated artifacts | Same physical Mac/shared OrbStack kernel; no raw benchmark replication on independent hardware, no published archive/tag |
+| P09b.1 DCLDS | Existing records retained | Deferred under D029; no new reading/integration |
+
+**Recommended choice:** close the explicitly bounded M5 evaluation/reproduction
+stage, keeping the original broader tasks labelled deferred or limited rather
+than falsely completed. Use only the tested VF-versus-IPPV claims and the recorded
+clean-userspace reproduction level. Keep negative results, coverage gaps and all
+failed/censored evidence. Do not add an experiment grid or change algorithm semantics.
+
+**Alternative:** retain the original broad M5 acceptance scope and leave M5 open;
+prepare a separate prioritized work package for missing coverage/metrics and any
+stronger reproduction requirement. Record resources before further measurements.
+DCLDS still remains deferred unless separately changed. This option requires more
+work and cannot be completed by renaming current evidence.
+
+No completion-policy choice is applied yet. AGENTS.md requires a decision before
+changing final experimental conclusions/scope; routine repairs and evidence
+preparation are complete. Independent hardware is a possible stronger check, not
+an additional automatic prerequisite invented by this reproduction.

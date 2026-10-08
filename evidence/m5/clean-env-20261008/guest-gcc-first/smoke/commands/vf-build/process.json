@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/cmake",
+    "--build",
+    "/home/repro/clean-build-fixed/vf",
+    "-j2"
+  ],
+  "cwd": "/home/repro/clean-evidence-fixed/smoke/commands/vf-build",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:48:09.230851+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "52a43cf023dc4822776c2e198718bc29188ae8a704b7baabedd1b83eb04ebb5a",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 2,
+  "status": "error",
+  "wall_seconds": 10.078629868999997,
+  "user_seconds": 17.951109,
+  "system_seconds": 0.5471119999999999,
+  "peak_rss_bytes": 307482624,
+  "finished_utc": "2026-10-08T10:48:19.309558+00:00",
+  "sha256": {
+    "stdout.txt": "f8cd750df3b9716580fd417f920e2e4d3b65814b910ae59ce77c2160a83fdae1",
+    "stderr.txt": "4d98080d8d68827c3a8613a2cf0dc745e80856b3fd549ac44fcd37301eea47bf"
+  }
+}

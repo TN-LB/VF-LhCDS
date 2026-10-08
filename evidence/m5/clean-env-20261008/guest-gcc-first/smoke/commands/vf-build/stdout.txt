@@ -1,0 +1,25 @@
+[  2%] Building CXX object CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o
+[  5%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o
+[  8%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o
+[ 11%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o
+[ 14%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o
+[ 17%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o
+[ 20%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o
+[ 23%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[ 26%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o
+[ 29%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o
+[ 32%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o
+[ 35%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 38%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o
+[ 41%] Linking CXX static library libvflhcds_lib.a
+[ 41%] Built target vflhcds_lib
+[ 44%] Building CXX object CMakeFiles/vflhcds.dir/src/cli/main.cpp.o
+[ 47%] Building CXX object CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o
+[ 50%] Linking CXX executable vflhcds_skeleton_test
+[ 52%] Linking CXX executable vflhcds
+[ 52%] Built target vflhcds_skeleton_test
+[ 55%] Building CXX object CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o
+[ 55%] Built target vflhcds
+[ 58%] Building CXX object CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o
+[ 61%] Linking CXX executable vflhcds_primitives_test
+[ 61%] Built target vflhcds_primitives_test

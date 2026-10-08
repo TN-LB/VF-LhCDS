@@ -1,0 +1,140 @@
+[
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /home/repro/clean-build-checked/vf/generated/build_info.cpp",
+  "file": "/home/repro/clean-build-checked/vf/generated/build_info.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /home/repro/vf-lhcds-fixed/src/cli/dispatch.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/cli/dispatch.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /home/repro/vf-lhcds-fixed/src/io/status.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/io/status.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /home/repro/vf-lhcds-fixed/src/core/exact.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/core/exact.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /home/repro/vf-lhcds-fixed/src/core/graph.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/core/graph.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /home/repro/vf-lhcds-fixed/src/clique/materialized.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/clique/materialized.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o -c /home/repro/vf-lhcds-fixed/src/clique/core.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/clique/core.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /home/repro/vf-lhcds-fixed/src/oracle/closure.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/oracle/closure.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /home/repro/vf-lhcds-fixed/src/telemetry/query.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/telemetry/query.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /home/repro/vf-lhcds-fixed/src/io/graph.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/io/graph.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o -c /home/repro/vf-lhcds-fixed/src/io/solution.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/io/solution.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o -c /home/repro/vf-lhcds-fixed/src/solver/solver.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/solver/solver.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /home/repro/vf-lhcds-fixed/src/io/sha256.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/io/sha256.cpp",
+  "output": "CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /home/repro/vf-lhcds-fixed/src/cli/main.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/src/cli/main.cpp",
+  "output": "CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o -c /home/repro/vf-lhcds-fixed/tests/skeleton_test.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/skeleton_test.cpp",
+  "output": "CMakeFiles/vflhcds_skeleton_test.dir/tests/skeleton_test.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m2_primitives.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m2_primitives.cpp",
+  "output": "CMakeFiles/vflhcds_primitives_test.dir/tests/m2_primitives.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m2_probe.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m2_probe.cpp",
+  "output": "CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_enumeration_test.dir/tests/clique_enumeration.cpp.o -c /home/repro/vf-lhcds-fixed/tests/clique_enumeration.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/clique_enumeration.cpp",
+  "output": "CMakeFiles/vflhcds_enumeration_test.dir/tests/clique_enumeration.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_solver_test.dir/tests/m3_solver.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m3_solver.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m3_solver.cpp",
+  "output": "CMakeFiles/vflhcds_solver_test.dir/tests/m3_solver.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m3_probe.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m3_probe.cpp",
+  "output": "CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_counting_test.dir/tests/clique_counting.cpp.o -c /home/repro/vf-lhcds-fixed/tests/clique_counting.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/clique_counting.cpp",
+  "output": "CMakeFiles/vflhcds_counting_test.dir/tests/clique_counting.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_core_test.dir/tests/m4_core.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m4_core.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m4_core.cpp",
+  "output": "CMakeFiles/vflhcds_core_test.dir/tests/m4_core.cpp.o"
+},
+{
+  "directory": "/home/repro/clean-build-checked/vf",
+  "command": "/usr/bin/c++  -I/home/repro/vf-lhcds-fixed/include -isystem /home/repro/vf-lhcds-fixed/.deps/boost_1_86_0 -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -o CMakeFiles/vflhcds_m4_profile.dir/tests/m4_profile.cpp.o -c /home/repro/vf-lhcds-fixed/tests/m4_profile.cpp",
+  "file": "/home/repro/vf-lhcds-fixed/tests/m4_profile.cpp",
+  "output": "CMakeFiles/vflhcds_m4_profile.dir/tests/m4_profile.cpp.o"
+}
+]

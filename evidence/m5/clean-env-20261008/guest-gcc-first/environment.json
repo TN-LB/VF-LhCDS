@@ -1,0 +1,26 @@
+{
+  "scope": "fresh Ubuntu userspace/dependencies under shared-kernel OrbStack",
+  "independent_kernel_or_hardware": false,
+  "new_benchmark_calls": 0,
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "uname": [
+    "Linux",
+    "vf-lhcds-repro-20261008",
+    "6.15.11-orbstack-00539-g9885ebd8e3f4",
+    "#1 SMP PREEMPT Fri Aug 22 08:24:56 UTC 2025",
+    "aarch64",
+    "aarch64"
+  ],
+  "bootstrap_python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "script_sha256": "d75b483021eef950c29e1bfa8493c42c91eebdc9a6622c441e060db57817b7cc",
+  "reproduction_driver_sha256": "275d24d64c8d5c4284dcb9e10936678ea59ce266d1ff497b50853e838d63cec5",
+  "base_commit": "5cc0a76f2e9838db2757a97e5f5d60b76dcdc1d8",
+  "bundle_sha256": "c2c1eb1d63c519e589c2b75470c236e5db907db37ec39063dfbc2851b508bcf6",
+  "environment_passed_to_children": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/home/repro",
+    "LANG": "C.UTF-8"
+  },
+  "source_workdir": "/home/repro/vf-lhcds-fixed",
+  "host_venv_boost_or_binaries_copied": false
+}

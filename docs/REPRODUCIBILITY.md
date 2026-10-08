@@ -4,7 +4,9 @@ Revision: 2026-09-09. Commands are targets until their actual execution logs exi
 The plan-review evidence under `review/` is not a production release.
 
 For the executed bounded M5 scope, use [M5 reproduction instructions](M5_REPRODUCTION.md).
-Its fresh local rebuild does not close the clean-machine gates below.
+Its fresh local rebuild and subsequent fresh Ubuntu userspace reproduction are
+reported separately; the latter uses OrbStack on the same Mac. This does not
+claim independent-machine performance replication or completion of all release gates.
 
 ## 1. Reproduction levels
 

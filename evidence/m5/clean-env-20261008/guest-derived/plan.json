@@ -1,0 +1,48 @@
+{
+  "driver_sha256": "8ff73c5de14fd9c77236a4b4026980361088b9cd676cffe4c927a4f0f874b6cb",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "commands": [
+    {
+      "name": "main",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/evidence/m5/final-main-repaired-20261008/postprocess.py",
+        "--aggregate",
+        "/home/repro/clean-derived/aggregate/main"
+      ]
+    },
+    {
+      "name": "core",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/evidence/m5/final-evaluation-20261008/summarize.py",
+        "--suite",
+        "core",
+        "--output",
+        "/home/repro/clean-derived/aggregate/core"
+      ]
+    },
+    {
+      "name": "stop",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/evidence/m5/final-evaluation-20261008/summarize.py",
+        "--suite",
+        "stop",
+        "--output",
+        "/home/repro/clean-derived/aggregate/stop"
+      ]
+    },
+    {
+      "name": "review",
+      "command": [
+        "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+        "/home/repro/vf-lhcds-fixed/evidence/m5/final-main-repaired-20261008/review.py",
+        "--output",
+        "/home/repro/clean-derived/review"
+      ]
+    }
+  ],
+  "smoke_completion_sha256": "cc1059423fc64e4db63e2f70596979468ecf16fead3c435314d260b73eebeedd",
+  "new_benchmark_calls": 0
+}

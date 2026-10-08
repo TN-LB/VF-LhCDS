@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/home/repro/clean-build-checked/ippv/IPPV",
+    "-g",
+    "./dataset/input.txt",
+    "-h",
+    "3",
+    "-t",
+    "10",
+    "-k",
+    "1",
+    "-p",
+    "0"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/ippv-bridge",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:53:03.023760+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "4a42a331d666763b13b5ec417ae30c33da546e04a5d0579ef05f54ec33740499",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.0063548410000748845,
+  "user_seconds": 0.0,
+  "system_seconds": 0.000699,
+  "peak_rss_bytes": 20127744,
+  "finished_utc": "2026-10-08T10:53:03.030397+00:00",
+  "sha256": {
+    "stdout.txt": "0ede49e2f82dcf753fa973a85543b4977a351f74bfe0e4739cd424f747bb9a6e",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

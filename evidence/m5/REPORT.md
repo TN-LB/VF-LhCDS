@@ -24,9 +24,17 @@ passes new VF/IPPV builds, **16/16 CTest**, **164 pytest**, and four additional
 independent definition fixtures. Both rebuilt binaries match measured hashes.
 The initial wrapper-path failure is retained. Papers/reference/solver stay unchanged.
 
+The subsequent [fresh Ubuntu reproduction](clean-env-20261008/REPORT.md) installs
+new Linux dependencies and passes both Release builds, **16/16 CTest**, **164 pytest**,
+four definition fixtures and **26 byte-identical regenerated artifacts**. A venv
+interpreter-path defect and two GCC test-formatting warnings were repaired; failed
+attempts are preserved. The environment uses OrbStack on the same Mac, with no
+independent-hardware performance rerun. Production and measured binaries are unchanged.
+
 **M5 remains open.** The selected-scope P14.1 review is complete; P15.1 still
-needs a clean-machine run. Broader baseline/data coverage, IPPV's zero-density
-gap and unavailable rank/detailed-phase metrics remain explicit; DCLDS stays
-deferred. No further optimization or automatic measurement cycle is planned.
+has a release-scope boundary beyond the completed clean-userspace checks. Broader
+baseline/data coverage, IPPV's zero-density gap and unavailable rank/detailed-phase
+metrics remain explicit; DCLDS stays deferred. No further optimization or automatic
+measurement cycle is planned.
 [Current plan](../../docs/M5_COMPLETION_PLAN.md) ·
 [Reproduction instructions](../../docs/M5_REPRODUCTION.md).

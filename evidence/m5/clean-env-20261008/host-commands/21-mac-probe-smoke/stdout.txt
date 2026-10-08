@@ -1,0 +1,11 @@
+Test project /Users/nost/Documents/VF-LhCDS/build-m5-reproduction-fixed-20261008/vf
+    Start  7: m3_solver_smoke
+1/3 Test  #7: m3_solver_smoke ..................   Passed    0.92 sec
+    Start 11: m4_modes_smoke
+2/3 Test #11: m4_modes_smoke ...................   Passed    1.54 sec
+    Start 14: m2_oracle_smoke
+3/3 Test #14: m2_oracle_smoke ..................   Passed    0.39 sec
+
+100% tests passed out of 3
+
+Total Test time (real) =   2.85 sec

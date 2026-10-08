@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds/.venv/bin/cmake",
+    "--version"
+  ],
+  "cwd": "/home/repro/clean-evidence/smoke/commands/cmake-version",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:41:43.919564+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "d30754660a82f9601202f4f710e9a600082bb0af49b81fd908dcd39f48c96ec0",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.08060167600001478,
+  "user_seconds": 0.053076,
+  "system_seconds": 0.023936,
+  "peak_rss_bytes": 27877376,
+  "finished_utc": "2026-10-08T10:41:44.000260+00:00",
+  "sha256": {
+    "stdout.txt": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

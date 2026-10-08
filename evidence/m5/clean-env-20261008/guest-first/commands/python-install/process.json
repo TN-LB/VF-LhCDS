@@ -1,0 +1,20 @@
+{
+  "name": "python-install",
+  "command": [
+    "/home/repro/vf-lhcds/.venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "pytest==8.4.2",
+    "cmake==4.4.3"
+  ],
+  "cwd": "/home/repro/vf-lhcds",
+  "started_utc": "2026-10-08T10:40:04.317355+00:00",
+  "timeout_seconds": 900,
+  "exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 6.036848453999994,
+  "finished_utc": "2026-10-08T10:40:10.354227+00:00",
+  "stdout_sha256": "19b180088fad5923dcdfb7e73a1541b57dd2bef9479304d60f12da2d4c6e025f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

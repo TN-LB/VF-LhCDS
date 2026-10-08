@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/usr/bin/aarch64-linux-gnu-g++-13",
+    "--version"
+  ],
+  "cwd": "/home/repro/clean-evidence/smoke/commands/compiler-version",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:41:44.000688+00:00",
+  "timeout_seconds": 900,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "fc02363794280f404c6ca6f5da1c8fe469be902e9de140d35d8573bb3393f53b",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.00579833899996629,
+  "user_seconds": 0.0,
+  "system_seconds": 0.000856,
+  "peak_rss_bytes": 27877376,
+  "finished_utc": "2026-10-08T10:41:44.009650+00:00",
+  "sha256": {
+    "stdout.txt": "c8068b4d4de057a822aeef8e756d4bdb49e91f0f0e649c0c3cdfb81c3967b28e",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

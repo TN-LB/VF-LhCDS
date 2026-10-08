@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "commands_completed": 23,
+  "clean_machine": false,
+  "new_benchmark_measurements": 0,
+  "all_eight_patches_applied_to_fresh_local_checkout": true,
+  "production_source_unchanged": true,
+  "vf_executable_sha256": "146702ad254408ed4a520fba46ece15842cdaef6b68bd2640b856de46b18eaac",
+  "ippv_executable_sha256": "4a42a331d666763b13b5ec417ae30c33da546e04a5d0579ef05f54ec33740499"
+}

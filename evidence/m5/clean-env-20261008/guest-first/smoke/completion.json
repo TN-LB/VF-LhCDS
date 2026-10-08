@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "failed_command": "pytest-version",
+  "clean_machine": false
+}

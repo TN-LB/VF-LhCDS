@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/home/repro/vf-lhcds-fixed/.venv/bin/python",
+    "/home/repro/vf-lhcds-fixed/baselines/ippv/adapter.py",
+    "validate",
+    "--graph",
+    "/home/repro/clean-evidence-checked/ippv-bridge/graph.txt",
+    "--native-output",
+    "/home/repro/clean-evidence-checked/ippv-bridge/output/input-1.txt",
+    "--h",
+    "3",
+    "--k",
+    "1",
+    "--records",
+    "/home/repro/clean-evidence-checked/ippv-bridge/canonical_output.jsonl",
+    "--declared-count",
+    "1",
+    "--definition"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/ippv-bridge/validation",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "started_utc": "2026-10-08T10:53:03.030830+00:00",
+  "timeout_seconds": 60.0,
+  "memory_limit_bytes": null,
+  "environment_overrides": {},
+  "executable_sha256": "c86f21d0da9290ece2d7d49a3f7ed52aed59cb029abdf0ea25c79634f6cbe960",
+  "timing_scope": "native process launch through wait4 completion; validation excluded",
+  "rss_scope": "native child peak RSS; no external validator or compiler included",
+  "native_exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.03721454200012886,
+  "user_seconds": 0.028478,
+  "system_seconds": 0.002946,
+  "peak_rss_bytes": 27992064,
+  "finished_utc": "2026-10-08T10:53:03.072771+00:00",
+  "sha256": {
+    "stdout.txt": "f6887e85f5130f7d87420b29cbac710672fa45b8f0998575aa0920d4de31a1fc",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

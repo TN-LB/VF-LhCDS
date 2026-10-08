@@ -1,0 +1,22 @@
+[
+  {
+    "name": "main",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "core",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "stop",
+    "status": "completed",
+    "exit_code": 0
+  },
+  {
+    "name": "review",
+    "status": "completed",
+    "exit_code": 0
+  }
+]

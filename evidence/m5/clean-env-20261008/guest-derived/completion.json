@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "artifact_sha256": {
+    "main": {
+      "runs.json": "93ead317b07e4b3106085729753a87129a7e987eb1b64cc44d5a7050c019481e",
+      "cells.json": "1335dd2bd474da9a214faffa436c658daf0d6ef27974ce776dc4d5d2a1597d5f",
+      "unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "totals.json": "1deee7478bedb5d9ae4f7a2bed087acf486c7c55def43afeaf3e2c2d34fb4d95",
+      "telemetry.json": "b0313129228dfe888d4fb440fd7a22e26e2a77532ebaffb3498d1430a2d633d0",
+      "TABLE.md": "08b24fb42d6f52ec0a0e4f9ce491ece3fc335c4bfe75e3327683429337dcf8ab",
+      "provenance.json": "e67af576fefbbcc521b89c44b65d25ea2bb04a8918f08470b944f8906a20fd1c"
+    },
+    "core": {
+      "runs.json": "0c051b9e258f212fbff13715d039d9c943e6be29da349be76b49a0821be14045",
+      "cells.json": "a70a5bd84d58c0621b77bf53e155ef1e23f851e84bad3a13ed3f1b4a1bfc3696",
+      "unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "totals.json": "68181acad091ced1c5dad223503e5763e602dd9124826e2453d19ac6c5378051",
+      "telemetry.json": "66de88092729d7399256c7a7f4dc70bee4957da0ed140d882d3f9d2fbd9e1103",
+      "TABLE.md": "e891c2b96008ec515f1a109bbd26be5fa21e5b17be7656cd7f04510e2ba5b9a7",
+      "provenance.json": "07d70bcb7babbc27dd4aab19043885ad67acef6e1a3711904452fa9b59bad784"
+    },
+    "stop": {
+      "runs.json": "923fe56bceb4a124dcdb74bb79249e51f26a2ca04cf4dd2dbb865fd9dbd82087",
+      "cells.json": "e9efecd84f3757269c70d25b373c8fb977188af95f6ab81c18060a9cb4ba6e14",
+      "unrun.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "totals.json": "ecfe44d0e19a81ce56536cc66b17ff5d5e6c12a17d5d9e17f4d11c0598ed0521",
+      "telemetry.json": "60c544364257af5943264bc8d025b2a9c32b6b8330510eec5bbb5452d8411c61",
+      "TABLE.md": "3950d528a0f29ccc0568ec51e85a8b959a18d7c17065c415026a6098cef09be0",
+      "provenance.json": "25f8b4861e4057027342af68eb057ea65dc07e1a1f6bb1036fbdb037a199f6e4"
+    },
+    "review": {
+      "paired.json": "6c719f619ed107402da395527030e3bd775a530c63675f757e4da568c626979d",
+      "coverage.json": "cb0894f62209af4fc84374f6de1770bd1ee03faf268c0af777e1c3315e417f52",
+      "environment.json": "f24a911decb2762bbd4de89829039c9500786a94400f3907439d359ce97e2dcd",
+      "TABLE.md": "d39094254e251174e320223a9645a8dd88940f14dbc6038e503e22574625656f",
+      "provenance.json": "72a3c572ba25fa2af7bf658f767d43e8edec3a9228295decdfa30893c23f414e"
+    }
+  },
+  "total_artifacts": 26,
+  "new_benchmark_calls": 0,
+  "fresh_userspace": true,
+  "independent_kernel_or_hardware": false
+}

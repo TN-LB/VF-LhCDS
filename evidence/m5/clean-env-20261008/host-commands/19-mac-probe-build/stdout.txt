@@ -1,0 +1,8 @@
+[ 87%] Built target vflhcds_lib
+[ 93%] Building CXX object CMakeFiles/vflhcds_m2_probe.dir/tests/m2_probe.cpp.o
+[100%] Linking CXX executable vflhcds_m2_probe
+[100%] Built target vflhcds_m2_probe
+[ 87%] Built target vflhcds_lib
+[ 93%] Building CXX object CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o
+[100%] Linking CXX executable vflhcds_m3_probe
+[100%] Built target vflhcds_m3_probe

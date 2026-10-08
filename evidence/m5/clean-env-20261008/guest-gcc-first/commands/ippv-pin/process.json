@@ -1,0 +1,20 @@
+{
+  "name": "ippv-pin",
+  "command": [
+    "/usr/bin/git",
+    "-C",
+    "/home/repro/vf-lhcds-fixed/.deps/baselines/ippv",
+    "checkout",
+    "--detach",
+    "f61881d4752170c03585e4281f0c49d7ef14aa1e"
+  ],
+  "cwd": "/home/repro/vf-lhcds-fixed",
+  "started_utc": "2026-10-08T10:48:08.477576+00:00",
+  "timeout_seconds": 900,
+  "exit_code": 0,
+  "status": "completed",
+  "wall_seconds": 0.009284060000027239,
+  "finished_utc": "2026-10-08T10:48:08.486866+00:00",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "cb5dcd577097bc716a43a9548598a01a9d81464cc46b6e7c4a23bab77f2df2ee"
+}

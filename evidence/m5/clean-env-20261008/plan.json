@@ -1,0 +1,43 @@
+{
+  "recorded_utc": "2026-10-08T10:34:37.910409+00:00",
+  "task": "P15.1/O12 clean software environment reproduction",
+  "base_commit": "5cc0a76f2e9838db2757a97e5f5d60b76dcdc1d8",
+  "machine_name": "vf-lhcds-repro-20261008",
+  "distribution": "ubuntu:noble",
+  "architecture": "arm64",
+  "guest_user": "repro",
+  "provider": "existing OrbStack 2.0.1; shared Linux kernel, same physical Mac",
+  "scope": "fresh guest root filesystem and newly installed Linux toolchain/Python/Boost; not independent hardware/kernel or a performance campaign",
+  "benchmarks": 0,
+  "fresh_guest_packages": [
+    "build-essential",
+    "python3",
+    "python3-venv",
+    "git",
+    "curl",
+    "ca-certificates",
+    "bzip2"
+  ],
+  "python_packages": [
+    "pytest==8.4.2",
+    "cmake==4.4.3"
+  ],
+  "boost_version": "1.86.0",
+  "ippv_commit": "f61881d4752170c03585e4281f0c49d7ef14aa1e",
+  "ippv_patches": 8,
+  "source_transfer": "local tracked Git source/bundle only; no host .venv/.deps/build products",
+  "build_jobs": 2,
+  "checks": [
+    "paper hashes",
+    "fresh VF Release build and configured CTest",
+    "reference/harness/adapter pytest",
+    "fresh pinned IPPV acquisition and all eight patches",
+    "IPPV fractional/equality/ordinary-bridge definition checks",
+    "VF full triangle/isolate definition check",
+    "main/core/stop saved aggregate regeneration"
+  ],
+  "failure_policy": "preserve failed setup/build/test records; routine reproducibility repairs use new paths; semantic conflicts stop affected path",
+  "preflight_observed": "OrbStack initially stopped; installed CLI found; first sandboxed list failed starting daemon, escalated list then returned no existing Linux machines. No existing machines are modified.",
+  "architecture_documentation": "https://docs.orbstack.dev/architecture",
+  "acceptance_limit": "Do not silently equate shared-kernel clean userspace with an independent VM. Record actual results before deciding final M5 scope."
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-08T10:53:03.115764+00:00",
+  "command": [
+    "/home/repro/clean-build-checked/vf/vflhcds",
+    "solve",
+    "--graph",
+    "/home/repro/vf-lhcds-fixed/reference/fixtures/triangle_and_isolate.graph",
+    "--h",
+    "3",
+    "--all",
+    "--clique-enumeration",
+    "adjacency",
+    "--footprint-scan",
+    "membership",
+    "--clique-count",
+    "membership",
+    "--core-reduction",
+    "off"
+  ],
+  "cwd": "/home/repro/clean-evidence-checked/commands/vf-definition",
+  "platform": "Linux-6.15.11-orbstack-00539-g9885ebd8e3f4-aarch64-with-glibc2.39",
+  "executable_sha256": "146702ad254408ed4a520fba46ece15842cdaef6b68bd2640b856de46b18eaac",
+  "validation": {
+    "level": "definition_checked",
+    "passed": true,
+    "expected": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 3,
+        "clique_count": "1",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          1,
+          4,
+          9
+        ]
+      },
+      {
+        "rank": 2,
+        "h": 3,
+        "vertex_count": 1,
+        "clique_count": "0",
+        "density_num": "0",
+        "density_den": "1",
+        "vertices": [
+          -2
+        ]
+      }
+    ],
+    "actual": [
+      {
+        "rank": 1,
+        "h": 3,
+        "vertex_count": 3,
+        "clique_count": "1",
+        "density_num": "1",
+        "density_den": "3",
+        "vertices": [
+          1,
+          4,
+          9
+        ]
+      },
+      {
+        "rank": 2,
+        "h": 3,
+        "vertex_count": 1,
+        "clique_count": "0",
+        "density_num": "0",
+        "density_den": "1",
+        "vertices": [
+          -2
+        ]
+      }
+    ]
+  },
+  "evidence_type": "single process run; no performance comparison",
+  "input_file_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "graph_sha256": "4f59ea1bf45488c6b71f760cc36a08e074bf540b97d7328b11b34e93881f6f3c",
+  "native_exit_code": 0,
+  "T_e2e": 0.0006270169999424979,
+  "native_status": {
+    "schema_version": 1,
+    "status": "completed",
+    "complete": true,
+    "output_count": 2,
+    "semantic_sha256": "6996e5a4862c60477167ec31a22669c4e9090d843603ecfe6c097e1859dbc586",
+    "termination": "exhausted",
+    "counters": {
+      "logical_interval_queries": 3,
+      "mincut_calls": 2,
+      "cliques_scanned": 2,
+      "cliques_enumerated": 1,
+      "queries": [
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 4,
+          "oracle_interval_size": 4,
+          "cliques_scanned": 1,
+          "unique_footprints": 1,
+          "forward_nodes": 7,
+          "forward_arcs": 8,
+          "residual_arcs": 16,
+          "capacity_bit_length": 6,
+          "capacity_backend": "uint128",
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        },
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 1,
+          "original_interval_size": 3,
+          "oracle_interval_size": 3,
+          "cliques_scanned": 1,
+          "unique_footprints": 1,
+          "forward_nodes": 6,
+          "forward_arcs": 7,
+          "residual_arcs": 14,
+          "capacity_bit_length": 5,
+          "capacity_backend": "uint128",
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        },
+        {
+          "logical_interval_queries": 1,
+          "mincut_calls": 0,
+          "original_interval_size": 1,
+          "oracle_interval_size": 1,
+          "cliques_scanned": null,
+          "unique_footprints": null,
+          "forward_nodes": null,
+          "forward_arcs": null,
+          "residual_arcs": null,
+          "capacity_bit_length": null,
+          "capacity_backend": null,
+          "core_threshold": null,
+          "core": null,
+          "core_reduction_seconds": null
+        }
+      ]
+    },
+    "timing": {
+      "T_e2e": null,
+      "T_postload": 3.8832e-05,
+      "T_core": 3.7499e-05
+    }
+  },
+  "status": "completed",
+  "complete": true,
+  "T_external_validation": 0.00015228500001285283,
+  "sha256": {
+    "stdout.jsonl": "c96712188c16c24cc25f59ca8aa47fbe4c194bd3e732e596218767012c8e861c",
+    "stderr.jsonl": "a61d6ed00bce7c673f2d83ce44cf576a49e2924266f7a91298393daa7caea5f4"
+  }
+}
