@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "purpose": "Chinese owner-review report; no new algorithm evidence",
+  "base_commit": "174d33e1a311a4d3a83b517d855d28f13dd7da02",
+  "environment": "macOS-15.7.7-arm64-arm-64bit",
+  "document": "docs/PROJECT_REPORT_ZH.md",
+  "document_sha256": "fb6b59e3ce58779f874c8ccb9dda3790106117b91ee28b495c3dcaa677b8402a",
+  "main_table_rows_verified": 24,
+  "ablation_table_rows_verified": 6,
+  "derived_claims": {
+    "vf_lower_wall": 11,
+    "ippv_lower_wall": 13,
+    "vf_lower_rss": 10,
+    "core_lower_rss": 6,
+    "core_higher_wall": 5,
+    "early_stop_lower_wall": 6
+  },
+  "source_sha256": {
+    "evidence/m5/final-main-repaired-20261008/review/paired.json": "6c719f619ed107402da395527030e3bd775a530c63675f757e4da568c626979d",
+    "evidence/m5/final-evaluation-20261008/aggregate/core/cells.json": "a70a5bd84d58c0621b77bf53e155ef1e23f851e84bad3a13ed3f1b4a1bfc3696",
+    "evidence/m5/final-evaluation-20261008/aggregate/stop/cells.json": "e9efecd84f3757269c70d25b373c8fb977188af95f6ab81c18060a9cb4ba6e14",
+    "evidence/m5/final-main-repaired-20261008/aggregate/main/totals.json": "1deee7478bedb5d9ae4f7a2bed087acf486c7c55def43afeaf3e2c2d34fb4d95",
+    "evidence/m5/final-evaluation-20261008/aggregate/core/totals.json": "68181acad091ced1c5dad223503e5763e602dd9124826e2453d19ac6c5378051",
+    "evidence/m5/final-evaluation-20261008/aggregate/stop/totals.json": "ecfe44d0e19a81ce56536cc66b17ff5d5e6c12a17d5d9e17f4d11c0598ed0521"
+  },
+  "local_links_verified": 33,
+  "paper_snapshot_hashes_match": true,
+  "code_and_existing_evidence_unchanged": true,
+  "commands": [
+    "git diff --exit-code HEAD -- <protected paths>",
+    "git diff --check",
+    "git rev-parse HEAD"
+  ],
+  "python_checks": "Compare every displayed table cell and aggregate count with saved JSON; resolve local links; verify paper hashes",
+  "new_build_test_benchmark_runs": 0,
+  "unresolved_blocking_conflict": null
+}

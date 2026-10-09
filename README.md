@@ -11,6 +11,9 @@ remain explicitly deferred or limited under D042; this is not a full SOTA study.
 [completed scope and follow-up boundaries](docs/M5_COMPLETION_PLAN.md),
 [reproduction](docs/M5_REPRODUCTION.md).
 
+For a plain-language Chinese overview of the milestones, results and limits, see
+[项目总体报告（中文核对版）](docs/PROJECT_REPORT_ZH.md).
+
 ## Start here
 
 1. `docs/IMPLEMENTATION_PLAN.md`: six milestones M0-M5 and minimal correct scope.
