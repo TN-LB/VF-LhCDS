@@ -136,10 +136,14 @@ enumeration evidence uses separate `build-enumeration-debug`,
 `build-enumeration-sanitize`, `build-enumeration-release` and
 `build-m5-adjacency-release` directories so old diagnostic binaries remain intact.
 
-## Planned final-source diagnostic builds
+## M6 diagnostic/control builds and final-source refresh
 
-M6's [new diagnostic/control protocol](M6_DIAGNOSTICS_PLAN.md) remains planned.
+M6's [diagnostic/control tooling](../experiments/final_profile/README.md) is
+implemented and accepted at `de25116`; [executed Release and sanitizer evidence](../evidence/m6/final-profile-20261014/REPORT.md).
+It builds `vflhcds_final_profile` and an unchanged `production/vflhcds` in a separate
+CMake tree. `VF_PROFILE_OUTPUT` selects a new diagnostic JSONL path; the production
+CLI and canonical output remain unchanged. See the tooling README for commands.
 Preserve the old `experiments/fine_profile/` source pins and historical evidence.
 P18.4 must build and validate a diagnostic and uninstrumented control from the
 same final M7 source/toolchain/options; old profiler commands do not satisfy it.
-No new executable or build flag is claimed to exist until implemented and checked.
+M7 work-mode flags and final optimized-source diagnostics remain unimplemented.

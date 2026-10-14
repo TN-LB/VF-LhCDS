@@ -52,9 +52,11 @@ T17 runs only when core reduction is implemented. Streaming, additional flow
 algorithms and tie-inclusive output acquire backend/mode equivalence tests when
 implemented; their absence does not block the first correct version.
 
-## Planned M6 through M8 test contracts
+## M6 through M8 test contracts
 
-T18–T27 are new requirements under D045, **not executed tests**. Existing T01–T17
+T18–T20 and the M6 part of T27 have [executed initial-source acceptance](../evidence/m6/final-profile-20261014/REPORT.md)
+at `de25116` (2026-10-15). T19's future M7 partition events, T21–T26, formal M8/T27
+coverage and the P18.4 source refresh remain unexecuted. Existing T01–T17
 remain in force. Use the detailed [M6](M6_DIAGNOSTICS_PLAN.md),
 [M7](M7_INTERVAL_CLIQUES_PLAN.md) and [M8](M8_EXPERIMENT_PLAN.md) preconditions.
 

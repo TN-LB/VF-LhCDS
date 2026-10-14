@@ -4,8 +4,9 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
-Current position (2026-10-14): **M0–M4 and bounded M5 complete under D042;
-M6–M8 planned under D045**. M6 implements diagnostics/work accounting, M7 implements
+Current position (2026-10-15): **M0–M4 and bounded M5 complete under D042;
+M6 initial-source tooling complete at `de25116`; M7/M8 planned under D045**.
+[M6 acceptance](../evidence/m6/final-profile-20261014/REPORT.md). M7 implements
 interval-local clique propagation/count reuse, and M8 owns fresh formal experiments.
 [Current execution plan](M6_M8_EXECUTION_PLAN.md). Acceptance is based on delivered
 results; thesis chapters and writing are not tasks. D029 still defers DCLDS.
@@ -455,16 +456,18 @@ D045 replaces the previous unexecuted P16/P17 task meanings. The old planning
 check at commit `4c0b6aa` is historical, not acceptance of these tasks.
 Use [M6 diagnostics](M6_DIAGNOSTICS_PLAN.md), T18–T20/T27 and O09/O11/O12.
 
-- [ ] P16.1 Specify exclusive phases, counter units/call sites, partial-event schema and source-matched diagnostic/control builds.
-- [ ] P16.2 Implement exclusive phase scopes including real cleanup, exception unwinding and partial snapshots; keep observer code out of the uninstrumented control.
-- [ ] P16.3 Implement separate count/footprint/core/partition counters, footprint histograms, depth, non-output layers and prefix snapshots; preserve legacy cliques_scanned meaning.
-- [ ] P16.4 Implement deterministic report builders for VF/IPPV cost associations, core tradeoffs and early-stop saved/unavoidable work.
-- [ ] P16.5 Execute named/independent observer-counter tests, diagnostic/control semantic equivalence, exact fallback and ASan/UBSan checks with fixture/seed evidence.
-- [ ] P16.6 Freeze accepted initial tooling and development diagnostic/control evidence; document the mandatory final optimized-source refresh at P18.4.
+- [x] P16.1 Specify exclusive phases, counter units/call sites, partial-event schema and source-matched diagnostic/control builds. [Schema/build protocol](../experiments/final_profile/README.md), [matched build identities](../evidence/m6/final-profile-20261014/checks.json); `de25116`.
+- [x] P16.2 Implement exclusive phase scopes including real cleanup, exception unwinding and partial snapshots; keep observer code out of the uninstrumented control. `fp::Scope`, cleanup guards and native interruption tests; [T18 evidence](../evidence/m6/final-profile-20261014/REPORT.md); `de25116`.
+- [x] P16.3 Implement separate count/footprint/core counters, footprint histograms, depth, non-output layers and prefix snapshots; preserve legacy cliques_scanned meaning. [Independent T19 checks](../evidence/m6/final-profile-20261014/accepted-release-v3/checks.json); `de25116`. Partition/reuse fields are explicitly unavailable until the planned P17.6 events exist.
+- [x] P16.4 Implement deterministic report builders for VF/IPPV cost associations, core tradeoffs and early-stop saved/unavoidable work. [Reports](../evidence/m6/final-profile-20261014/accepted-release-v3/reports.json), [builders](../experiments/final_profile/reports.py); `de25116`. Missing IPPV pairs remain unavailable; no new baseline experiment is claimed.
+- [x] P16.5 Execute named/independent observer-counter tests, diagnostic/control semantic equivalence, exact fallback and ASan/UBSan checks with fixture/seed evidence. [Acceptance](../evidence/m6/final-profile-20261014/REPORT.md): 28 fixtures, 448 CLI calls, 224 separate control-trace calls, both builds 7/7 CTest; `de25116`.
+- [x] P16.6 Freeze accepted initial tooling and development diagnostic/control evidence; document the mandatory final optimized-source refresh at P18.4. [Source/environment/checks](../evidence/m6/final-profile-20261014/checks.json), [handoff and preserved failures](../evidence/m6/final-profile-20261014/REPORT.md); `de25116`.
 
 Gate: observation tooling and reports work without semantic changes; measured
 phases/counters have defined units and coverage. M6 development timings are not
 formal results. Initial tooling acceptance does not substitute for P18.4.
+Gate met 2026-10-15 for the current pre-M7 source. T27's M8 resource/campaign
+requirements and M7 partition/reuse measurements remain outstanding in their tasks.
 
 ## M7 - Interval-local clique propagation and exact count reuse
 

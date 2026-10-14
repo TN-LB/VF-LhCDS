@@ -3,8 +3,10 @@
 Revised 2026-09-29. This repository contains the exact basic solver, independent
 reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
-Current status (2026-10-14): M0–M4 and bounded M5 remain complete under D042.
-D045 schedules **M6 cost diagnostics, M7 interval-local clique propagation and
+Current status (2026-10-15): M0–M4 and bounded M5 remain complete under D042.
+**M6 initial-source cost diagnostics are accepted at `de25116`**;
+[implementation and evidence](evidence/m6/final-profile-20261014/REPORT.md).
+D045 schedules **M7 interval-local clique propagation and
 exact count reuse, and M8 unified formal experiments on eight real graphs**.
 [Current deliverables and dependencies](docs/M6_M8_EXECUTION_PLAN.md).
 Acceptance follows completed implementation, preservation arguments, executed
@@ -24,7 +26,7 @@ For a plain-language Chinese overview of the milestones, results and limits, see
 
 ## Start here
 
-1. `docs/IMPLEMENTATION_PLAN.md`: completed M0–M5 and planned M6–M8; `docs/M6_M8_EXECUTION_PLAN.md`: current deliverables and detailed plan links.
+1. `docs/IMPLEMENTATION_PLAN.md`: completed M0–M6 scope and planned M7/M8; `docs/M6_M8_EXECUTION_PLAN.md`: current deliverables and detailed plan links.
 2. `docs/ALGORITHM_SPEC.md`: executable mathematical contracts.
 3. `docs/THEORY_TO_CODE_AUDIT.md`: exact theorem numbers, proof obligations and clarifications.
 4. `docs/TASKS.md`: dependency-aware tasks and executed milestone gates.

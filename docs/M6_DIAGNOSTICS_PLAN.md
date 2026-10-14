@@ -1,14 +1,18 @@
 # M6 cost diagnostics and work accounting
 
-Status: planned under D045; tasks P16.1–P16.6. This milestone implements observation
+Status: initial-source tooling accepted 2026-10-15 at `de25116`, P16.1–P16.6.
+[Executed evidence and limitations](../evidence/m6/final-profile-20261014/REPORT.md),
+[implemented schema and commands](../experiments/final_profile/README.md).
+M7 partition events and P18.4 final-source refresh remain pending.
+This milestone implements observation
 and machine-generated reports for the three questions in the
 [execution plan](M6_M8_EXECUTION_PLAN.md). It does not write thesis analysis.
 
 ## Source identity and control builds
 
 `experiments/fine_profile/` is pinned to the source **before** the M5 counting
-optimization. Preserve it and its evidence. Build a new diagnostic target, proposed
-as `experiments/final_profile/`, using a manifest of exact production, observer,
+optimization. Preserve it and its evidence. The separate implemented target
+`experiments/final_profile/` uses a manifest of exact production, observer,
 schema and build hashes. Generate instrumented copies or use compile-time hooks
 that disappear from the uninstrumented build; do not silently retarget historical
 source anchors. Fail closed on a changed source hash or ambiguous insertion point.
@@ -133,7 +137,7 @@ and output costs, so suffix time is not an exact prediction of runtime savings.
 |---|---|---|
 | P16.1 | Phase/counter schema, call-site inventory, final-source/control build protocol | T18, O09/O12 |
 | P16.2 | Exclusive observer, actual cleanup boundaries, partial-event handling and compiled-out control | T18/T20, O11/O12 |
-| P16.3 | Separate count/footprint/core/partition counters, histograms, depth/non-output/prefix records | T19, O09/O12 |
+| P16.3 | Separate count/footprint/core counters, reserved M7 partition/reuse schema, histograms and depth/non-output/prefix records; P17.6 supplies actual partition events | T19, O09/O12 |
 | P16.4 | Three deterministic report builders with input identities and coverage labels | T19/T27, O12 |
 | P16.5 | Independent small fixtures and diagnostic/control semantic/trace equivalence; numeric fallback and ASan/UBSan checks | T18–T20 plus T05/T16, O01/O08/O11/O12 |
 | P16.6 | Initial source-pinned development diagnostic/control run and reproducible artifacts; explicit final-refresh handoff to P18.4 | T20/T27, O12 |

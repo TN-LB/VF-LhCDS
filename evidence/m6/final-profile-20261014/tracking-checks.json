@@ -1,0 +1,75 @@
+{
+  "scope": "documentation and completion tracking only",
+  "implementation_commit": "de251168a8d42368e834ee224cdd0b3bb84412dd",
+  "local_date": "2026-10-15",
+  "local_links_checked": 324,
+  "broken_links": [],
+  "tasks_completed": [
+    "P16.1",
+    "P16.2",
+    "P16.3",
+    "P16.4",
+    "P16.5",
+    "P16.6"
+  ],
+  "M7_M8_tasks_still_unchecked": true,
+  "changed_document_hashes": {
+    "README.md": "e2a6c38fab301d8fe0f72be6c0a4bbf4006d43490d1e2aee15ef33864804e11a",
+    "docs/ARCHITECTURE.md": "009021b36d255977871348b26d51c0ab00911043f23acc42de10b9ae302fba46",
+    "docs/BUILD.md": "af1ea0d4fbcde84f74afa0d8a73d3cb4abbbc16c7e2053901ebfc4b1e3e5b67b",
+    "docs/CLAIM_TRACEABILITY.md": "d3946cf25842cc99e94c799a4c91829fd588a0a87250b42f6c6a52644f54854c",
+    "docs/CORRECTNESS_TEST_PLAN.md": "50560fa378dea480050528e2781c646fa7dd934004259a01f9207a5c85dfe51a",
+    "docs/IMPLEMENTATION_PLAN.md": "5729aeaa6cd1c1415bdf02f6225492af506e2f795c8541d8f47bc7cd359bc6f0",
+    "docs/INTERFACE_CONTRACT.md": "c27c8ade272acf2f978e4004e449ee9e01c1fec8fa8a9192487de75982bf4ea0",
+    "docs/M6_DIAGNOSTICS_PLAN.md": "f2f8fb0c62212cd2f339abd15bedf016b99d04bca5d7f7816e2e61ca18e14dd6",
+    "docs/M6_M8_EXECUTION_PLAN.md": "3f1a6a812196ea5e751d54398b5b566a5119888f2ef8eb4de83b00947f03f315",
+    "docs/PROJECT_REPORT_ZH.md": "5848d06b8b5cb992206354ef38935032bd4406e93e30a275310fac55887d22e4",
+    "docs/TASKS.md": "6b6c8bb7bb872c8b9aee2ca51e4e803a27f35d6658d57c2c15b3214e0bd7c65a",
+    "docs/THEORY_TO_CODE_AUDIT.md": "8e230e85daa79c6fd01504b6fe14647757a0d51ad05c49d2177ce94a9c48bc22",
+    "experiments/README.md": "849ece8da9625cede63dc7914981a654f12f08109c590160744ff8e707f2e96f",
+    "experiments/final_profile/README.md": "d833d6bc42e70b3a830a8472a03b3b8227a7bde41f7857ddc76be44b125311d0",
+    "evidence/m6/final-profile-20261014/REPORT.md": "a4bb9ff56ac340501b57430bfc2b3448b91d289caa789fb8defdb03df25ef8c5"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify_papers.py"
+      ],
+      "exit_code": 0,
+      "stdout": "OK papers/2023-icde-lds.md 6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4\nOK papers/2408.14022v1.md 9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c\nOK papers/2504.10937v1.md 95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908\nOK papers/veri_free_lhcds_v3_1_submit.md 85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "35961a6",
+        "--name-only",
+        "--",
+        "papers",
+        "src",
+        "include",
+        "reference",
+        "tests",
+        "validation",
+        "baselines",
+        "experiments/fine_profile",
+        "evidence/m5"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

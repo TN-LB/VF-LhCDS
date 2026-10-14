@@ -9,6 +9,12 @@ M8 统一执行八张真实图的正式实验。分析章节和 thesis 写作不
 详见 [M6–M8 总计划](M6_M8_EXECUTION_PLAN.md)、[M6 诊断](M6_DIAGNOSTICS_PLAN.md)、
 [M7 算法增量](M7_INTERVAL_CLIQUES_PLAN.md)和[M8 正式实验](M8_EXPERIMENT_PLAN.md)。
 
+**2026 年 10 月 15 日执行更新：** M6 当前源码版本的诊断工具已验收，代码提交
+`de25116`。28 个确定性小图在 Release 和 ASan/UBSan 下共完成 448 次 CLI 运行、
+224 次独立控制轨迹调用；输出、独立定义/全局最优解/链、工作量计数和报告检查通过。
+三类报告程序已实现；未运行的新 IPPV 配对明确标为不可用。详见
+[M6 实现与验收记录](../evidence/m6/final-profile-20261014/REPORT.md)。
+
 诊断围绕三个问题：VF 与 IPPV 的差异和团数、查询数、网络规模的关系；core 的
 内存与时间取舍；提前停止节省的后续工作及无法避免的初始成本。最终优化版本
 必须重新生成诊断/未插桩控制组。局部团优化保留 global、interval-scan、
@@ -17,7 +23,7 @@ interval-reuse 三条路径，分别检验局部扫描和端点计数复用的�
 八张图为 CA-GrQc、CA-CondMat、soc-hamsterster、fb-pages-politician、
 fb-pages-company、web-webbase-2001、Amazon 和 Email-Enron。
 **下文的性能数字属于历史 M5 本地预实验，不进入 M8 正式结果。** 下文“最终”
-仅指当时的 M5 批次；旧记录、失败和正确性证据保留。M6–M8 尚未执行，正式
+仅指当时的 M5 批次；旧记录、失败和正确性证据保留。M7/M8 尚未执行，正式
 主实验、消融及诊断均需新测；最终数据版本、机器和资源配置仍需冻结。
 
 本项目已完成从算法契约、独立参考实现、C++ 求解器，到正确性测试、可选优化、IPPV 对比实验和复现检查的完整流程。M0–M4 已完成；M5 按“两张图、五次重复、VF/IPPV 对比及两项消融、全新 Linux 软件环境复现”的限定范围完成。

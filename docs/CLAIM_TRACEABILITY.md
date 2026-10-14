@@ -7,10 +7,40 @@ A code symbol, test command, evidence path and commit are needed before marking
 
 Evidence scope update (2026-10-14, D045): prior M5/M6/M7 development timings are
 excluded from M8 formal performance results. Existing correctness evidence remains.
-[M6–M8](M6_M8_EXECUTION_PLAN.md), P16.1–P18.8 and T18–T27 are planned; this plan
-revision adds no implementation-tested code or experimental result to O01–O12.
+[M6–M8](M6_M8_EXECUTION_PLAN.md): P16.1–P16.6 now have initial-source acceptance
+at `de25116`; see the 2026-10-15 record below. P17/P18 and T21–T26 remain planned;
+T27's formal M8 campaign/resource coverage is not completed by the M6 checks.
 M6 maps principally to O09/O11/O12; M7 refines O03–O11 under the stated invariants;
 M8 governs O12 and honest work/resource attribution. See the detailed task mappings.
+
+## M6 observation tooling — 2026-10-15
+
+Implementation checkpoint `de25116`; production source remains identical to
+`35961a6`. [Acceptance report](../evidence/m6/final-profile-20261014/REPORT.md)
+and [source/environment/checks](../evidence/m6/final-profile-20261014/checks.json)
+add finite implementation-tested observation evidence to O09/O11/O12:
+
+- `instrument.generate`, `verify_build.verify`: pinned reversible generated
+  changes, matched options for 13 translation units and no observer in control.
+- `fp::Scope`, `CleanupBegin/End`, `QueryScope`, `Session`: T18 exclusive fake
+  clocks, real owner cleanup, partial events, native SIGKILL/cancellation coverage.
+- `validate.check_events`: T19 independent count/footprint work and H/W histograms,
+  network identities, non-output layers, depth two and prefix/suffix reconciliation.
+- T20/O01/O08/O11: 448 CLI runs plus 224 native control-trace calls across Release
+  and Debug ASan/UBSan; 28 fixtures, seed 20261014. Direct outputs, exhaustive global
+  F, independent line-envelope terminals and diagnostic/control traces agree.
+  Existing numeric/core suites and actual automatic arbitrary-precision flow pass;
+  both configurations pass all seven CTest entries.
+- `cost_associations`, `core_cost`, `early_stop`: deterministic M6/T27 reports,
+  wrong-pin/duplicate/mixed-scope/censored/missing-input handling and byte-identical
+  regeneration from hash-checked raw archives. Earlier verifier/join failures remain.
+
+This does not prove observation invariance mathematically, establish real-graph
+performance, supply missing IPPV measurements, implement M7 partition/reuse, or
+satisfy P18.4. Phase peak RSS and before-core histograms remain unavailable.
+The accepted execution scope and cleanup/timer boundaries are explicit in the report.
+
+## Existing obligation ledger
 
 | Obligation | Exact source | Planned owner / symbol | Tests | Evidence / commit | Status |
 |---|---|---|---|---|---|

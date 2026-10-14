@@ -2,7 +2,9 @@
 
 Revision: 2026-10-14, D045. Completion is governed by delivered functionality,
 mathematical preservation arguments, executed validation and reproducible evidence.
-M0–M5 retain their recorded completion status. M6–M8 are **planned, not executed**.
+M0–M5 retain their recorded completion status. M6 initial-source observation tooling
+is **accepted at `de25116`** ([evidence](../evidence/m6/final-profile-20261014/REPORT.md));
+M7/M8 remain **planned, not executed**. P18.4 still requires a final-source refresh.
 Thesis chapters and prose analysis are not repository milestones; the code and
 measurements needed to support those analyses are required deliverables.
 

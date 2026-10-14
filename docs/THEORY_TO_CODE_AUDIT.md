@@ -4,7 +4,8 @@ Revision 2026-09-09. Sources below refer to the unchanged
 `papers/veri_free_lhcds_v3_1_submit.md`. This document records reasoning obligations;
 `CLAIM_TRACEABILITY.md` separately records executed implementation evidence.
 Status: obligation specification; accepted M0–M5 evidence is recorded separately
-in `CLAIM_TRACEABILITY.md`. The M6–M8 refinements below remain planned.
+in `CLAIM_TRACEABILITY.md`. M6 observation tooling has finite initial-source
+acceptance at `de25116`; M7/M8 refinements and final-source refresh remain planned.
 
 | ID | Source | Obligation / precondition | Observable implementation contract | Tests |
 |---|---|---|---|---|

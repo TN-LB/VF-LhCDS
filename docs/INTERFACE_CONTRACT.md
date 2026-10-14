@@ -278,11 +278,13 @@ still be measured on a positive query whose reduced domain is empty. All counter
 remain exact; failures retain whatever stage information was actually recorded.
 See [preservation arguments](M4_IMPLEMENTATION.md) and [M4 evidence](../evidence/m4/REPORT.md).
 
-## Planned observability and work-mode extension
+## M6 observability and planned work-mode extension
 
-D045's [M6 diagnostic schema](M6_DIAGNOSTICS_PLAN.md) and
-[M7 work-mode interface](M7_INTERVAL_CLIQUES_PLAN.md) are planned extensions, not
-currently supported CLI flags or implemented telemetry. Preserve canonical solution
+D045's [M6 diagnostic schema and usage](../experiments/final_profile/README.md) are
+implemented in `vflhcds_final_profile`, with a separate JSONL file selected by
+`VF_PROFILE_OUTPUT`; acceptance is recorded at `de25116`. The production executable,
+flags and output bytes are unchanged. The [M7 work-mode interface](M7_INTERVAL_CLIQUES_PLAN.md)
+remains planned; its flags are not yet supported. Preserve canonical solution
 bytes, exact arithmetic/output policy and legacy cliques_scanned semantics.
 Detailed phase/work records are separate from semantic hashes and canonical stdout.
 The proposed work modes are global, interval-scan and interval-reuse; global stays

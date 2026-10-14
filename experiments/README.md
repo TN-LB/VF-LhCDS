@@ -8,9 +8,11 @@ measurements remain preliminary and excluded from M8. Preserve
 [historical results](../evidence/m5/REPORT.md) and
 [reproduction instructions](../docs/M5_REPRODUCTION.md).
 
-The tools below describe the implemented M5 behavior. The new final-source profiler,
-work modes, Linux enforcement, explicit formal-purpose allowlists and expanded
-outcome handling are planned in M6–M8, not implemented by this documentation change.
+The tools below describe the implemented M5 behavior. M6's separate
+[`final_profile`](final_profile/README.md) now implements source-pinned diagnostic/
+control builds, work accounting and reports, accepted at `de25116`
+([evidence](../evidence/m6/final-profile-20261014/REPORT.md)). M7 work modes, final-source
+refresh, Linux enforcement and formal M8 campaign gates remain planned.
 The old `fine_profile` pins precede the count optimization and must not be relabeled
 as final-source diagnostics. M8 requires matching final diagnostic/control builds.
 
