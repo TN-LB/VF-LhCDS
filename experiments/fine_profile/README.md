@@ -1,5 +1,8 @@
 # Exclusive phase diagnostic
 
+D045 schedules a separate [M6 observer](../../docs/M6_DIAGNOSTICS_PLAN.md) and
+final optimized-source refresh in M8. This historical target is not that observer.
+
 This diagnostic is pinned to the source before the counting optimization. Its
 tests use the retained enumeration source snapshot; rebuilding it requires those
 pinned source bytes. It intentionally rejects later production source changes.

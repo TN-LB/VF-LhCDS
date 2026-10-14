@@ -1,0 +1,157 @@
+{
+  "scope": "M6-M8 detailed plan validation only; no solver/harness implementation, build, sanitizer campaign or benchmark executed",
+  "utc": "2026-10-14T09:36:58.280857+00:00",
+  "base_commit": "4c0b6aa0758051cf293144152dc934d51f04dd1d",
+  "environment": {
+    "platform": "macOS-15.8.1-arm64-arm-64bit",
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "changed_documents": [
+    "AGENTS.md",
+    "README.md",
+    "docs/ARCHITECTURE.md",
+    "docs/BUILD.md",
+    "docs/CLAIM_TRACEABILITY.md",
+    "docs/CORRECTNESS_TEST_PLAN.md",
+    "docs/DECISIONS.md",
+    "docs/EXPERIMENT_PLAN.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/INTERFACE_CONTRACT.md",
+    "docs/M5_COMPLETION_PLAN.md",
+    "docs/M6_DIAGNOSTICS_PLAN.md",
+    "docs/M6_M7_EXECUTION_PLAN.md",
+    "docs/M6_M8_EXECUTION_PLAN.md",
+    "docs/M7_INTERVAL_CLIQUES_PLAN.md",
+    "docs/M8_EXPERIMENT_PLAN.md",
+    "docs/PROJECT_REPORT_ZH.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/TASKS.md",
+    "docs/THEORY_TO_CODE_AUDIT.md",
+    "experiments/README.md",
+    "experiments/fine_profile/README.md",
+    "prompts/README.md"
+  ],
+  "document_sha256": {
+    "AGENTS.md": "25a91184059293eacc418c811c297dc4ef40f9c6efc9fffc6408b2f9eee73558",
+    "README.md": "094abea9148ca3cc58ed3883cd0d720b089092aebc338a6808d8ed83f8c0314d",
+    "docs/ARCHITECTURE.md": "79675a9395bb1af9b2391d4ae8e66001df485a77e7f5a04e75aa2afef7f072c0",
+    "docs/BUILD.md": "af05c297e7eb60e2518e188431bd843afc1f62e7112654e6de0d43f592f0e31c",
+    "docs/CLAIM_TRACEABILITY.md": "a0cccf3f61a26f83931a5097c0ab62ec6cc33354778e3cf671ed35405798e96e",
+    "docs/CORRECTNESS_TEST_PLAN.md": "57896152dcdd641189a9d8c8fcdfba5e76e234ea963faf2fdeb355c4f448d0f9",
+    "docs/DECISIONS.md": "49398041707d89feb943c6a3a2ea418e731e5d60d86d343a029488c2fd88a377",
+    "docs/EXPERIMENT_PLAN.md": "a37f825c0aecc55c71f5fc51182e30c7ead2de6f61742d23d836cf35d26f6765",
+    "docs/IMPLEMENTATION_PLAN.md": "5e300c2c0dbdaf6bccd31d2ac25bc6ff0383cb29a1d98e0c4d29105a1f77cc82",
+    "docs/INTERFACE_CONTRACT.md": "b07cdb387f355acc5f13535547c6479b5db0c33610cdcfc40861e7ae2e499310",
+    "docs/M5_COMPLETION_PLAN.md": "ad5ba920128ca9f21bd9fc3c55012f47a3bba0d2238da408dc3a74c2feccf9e5",
+    "docs/M6_DIAGNOSTICS_PLAN.md": "4b007d21dc16b3f3056701309cf08a434dfe4b6e3ae0127783f2c730799e6365",
+    "docs/M6_M7_EXECUTION_PLAN.md": "f9e92eaeeda69c2e5d63df69827338f58340117c06799ca209f7957eb0150937",
+    "docs/M6_M8_EXECUTION_PLAN.md": "cf0392205f6254519944300c376c8a681fd0983a8f837b513c5950e1694c3fa3",
+    "docs/M7_INTERVAL_CLIQUES_PLAN.md": "d524297917a1a55946324a342ec4596ee7afee869b8d3b52d94bf2fa14d4ae61",
+    "docs/M8_EXPERIMENT_PLAN.md": "4c2df12bfe91dadc0ea1404d344c2ef93eb6b5b159dbfbdfa9889671157ec6f8",
+    "docs/PROJECT_REPORT_ZH.md": "4fb8883afbbf854a990434ea1d4881587c9e09ee11eabfe7a5a5e1d630578cb1",
+    "docs/REPRODUCIBILITY.md": "0423457c69454b40f10ddcb30fa85bba0259097d3af9cfd7eccb33666521d059",
+    "docs/TASKS.md": "48ccb17eb4a92eee7c69a3416e0c7ab25dc0a55a01a0a40011d95757b44009a7",
+    "docs/THEORY_TO_CODE_AUDIT.md": "386880a1cebfbc21cea8a08a3024d727febd3d5a49adf0092daec61b4e639ac2",
+    "experiments/README.md": "48d8415460cf9a440e9f125bb19917b716d2680714994e99c59fd5c40b26ccbd",
+    "experiments/fine_profile/README.md": "9a495d6e8d01043341185bbc2b8a16bfa764db8a4c9f06502fe1f50328f18bf0",
+    "prompts/README.md": "5a1b2696d179a8b651bda5623c9ddaeb4060a16cd599f6331c57d2f1f2e58333"
+  },
+  "local_links": {
+    "checked": 327,
+    "broken": [],
+    "scope": "file/directory targets only; fragments and external URLs not checked"
+  },
+  "tasks": {
+    "P16.1": "planned/unchecked",
+    "P16.2": "planned/unchecked",
+    "P16.3": "planned/unchecked",
+    "P16.4": "planned/unchecked",
+    "P16.5": "planned/unchecked",
+    "P16.6": "planned/unchecked",
+    "P17.1": "planned/unchecked",
+    "P17.2": "planned/unchecked",
+    "P17.3": "planned/unchecked",
+    "P17.4": "planned/unchecked",
+    "P17.5": "planned/unchecked",
+    "P17.6": "planned/unchecked",
+    "P17.7": "planned/unchecked",
+    "P18.1": "planned/unchecked",
+    "P18.2": "planned/unchecked",
+    "P18.3": "planned/unchecked",
+    "P18.4": "planned/unchecked",
+    "P18.5": "planned/unchecked",
+    "P18.6": "planned/unchecked",
+    "P18.7": "planned/unchecked",
+    "P18.8": "planned/unchecked"
+  },
+  "test_contracts": {
+    "T18": "planned/unexecuted",
+    "T19": "planned/unexecuted",
+    "T20": "planned/unexecuted",
+    "T21": "planned/unexecuted",
+    "T22": "planned/unexecuted",
+    "T23": "planned/unexecuted",
+    "T24": "planned/unexecuted",
+    "T25": "planned/unexecuted",
+    "T26": "planned/unexecuted",
+    "T27": "planned/unexecuted"
+  },
+  "decisions": {
+    "D043": "accepted eight graphs and old-result separation",
+    "D044": "superseded proposal",
+    "D045": "accepted increment plan",
+    "D046": "proposed numerical campaign configuration"
+  },
+  "workload_arithmetic": {
+    "suites": {
+      "Main": 960,
+      "B-local": 720,
+      "B-core": 240,
+      "B-stop": 240,
+      "D-final": 576
+    },
+    "main_and_ablations": 2160,
+    "diagnostic_and_controls": 576,
+    "total_native": 2736,
+    "status": "proposed, not executed"
+  },
+  "retired_calendar_constraint_matches": 0,
+  "preserved": {
+    "papers": "unchanged from base commit",
+    "src": "unchanged from base commit",
+    "include": "unchanged from base commit",
+    "reference": "unchanged from base commit",
+    "tests": "unchanged from base commit",
+    "validation": "unchanged from base commit",
+    "baselines": "unchanged from base commit",
+    "evidence": "unchanged from base commit",
+    "review/m6-m7-plan-20261014": "unchanged from base commit"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify_papers.py"
+      ],
+      "exit_code": 0,
+      "stdout": "OK papers/2023-icde-lds.md 6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4\nOK papers/2408.14022v1.md 9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c\nOK papers/2504.10937v1.md 95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908\nOK papers/veri_free_lhcds_v3_1_submit.md 85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700\n",
+      "stderr": ""
+    }
+  ],
+  "limitations": [
+    "Actual final data/source/host/resource freeze remains outstanding",
+    "No new task or production proof obligation marked complete",
+    "No runtime tests rerun for documentation-only edits",
+    "Historical plan checks retain their original recorded-revision meaning"
+  ]
+}

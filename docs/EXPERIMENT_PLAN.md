@@ -1,24 +1,25 @@
 # Experimental Evaluation Plan
 
-Current execution scope (2026-10-14): [M6/M7 execution plan](M6_M7_EXECUTION_PLAN.md)
-under D043. The selected graphs are CA-GrQc, CA-CondMat, soc-hamsterster,
-fb-pages-politician, fb-pages-company, web-webbase-2001, Amazon and Email-Enron.
-M6 prepares the data and tooling; M7 is the unified formal experimental milestone.
-The combined additional budget is four weeks, excluding thesis writing/analysis.
-All earlier local timings, including D040/D041's completed M5 suite, remain
-preliminary records and are excluded from M7 performance results and ablations.
-M7 reruns both algorithms and the included ablations on the same recorded host.
+Current execution scope (2026-10-14): [M6–M8 plan](M6_M8_EXECUTION_PLAN.md), D045.
+M6 implements detailed cost/work observation; M7 implements interval-local clique
+propagation and exact count reuse; M8 owns unified formal measurements. The eight
+selected graphs are GrQc, CondMat, hamsterster, Facebook politician/company,
+Webbase, Amazon and Enron, with exact versions pinned before execution.
 
-D044 proposes the eight-graph main grid, bounded two-graph ablations, five repeats
-and resource settings. Exact artifacts, host and enforced limits still need
-preparation and a concrete freeze before launch. D042's historical M5 completion
-is unchanged; D039 still closes solver optimization.
+The mandatory implementation/evidence questions are: (1) how VF/IPPV differences
+relate to clique count, queries and network size; (2) why core may trade lower RSS
+for extra runtime; (3) which suffix work early stopping saves and which initialization
+remains. Use [M6 phase/counter definitions](M6_DIAGNOSTICS_PLAN.md),
+[M7 preservation and work bounds](M7_INTERVAL_CLIQUES_PLAN.md) and
+[M8 suites](M8_EXPERIMENT_PLAN.md). Detailed final-source profiling and the local
+scan/count-reuse ablation are required; thesis prose is not a milestone.
 
-The original 2026-09-09 research questions, dataset pools and optional metrics
-below are background specifications, not extra M6/M7 tasks. In particular,
-per-rank latency, detailed phase profiling, synthetic scalability and specialized
-baselines are not required by the current four-week plan. The active task list
-is P16.1–P17.4 in [TASKS.md](TASKS.md).
+All earlier local measurements remain preliminary and excluded from M8 formal
+results, including ablations. D046 proposes the new matrix and resource settings;
+D044 is superseded. D045 authorizes this selected optimization beyond D039; D042's
+historical closure is preserved. Older candidate datasets/baselines/metrics below
+are background, not implicit additions. Per-rank public streaming and new specialized
+baselines remain outside scope; internal rank-ready observation is included.
 
 Execution update, D029 (2026-10-02): the owner deferred further DCLDS reading and
 integration. For the current stage, proceed with independent VF-LhCDS/IPPV
@@ -244,7 +245,7 @@ The primary comparison remains T_e2e and algorithm-process peak RSS.
 2. Build all algorithms with documented compilers and release flags.
 3. Validate every wrapper on toy instances.
 4. Randomize algorithm run order within each `(dataset,h,k,repeat)` block.
-5. Freeze repetition count and any variance-triggered extension rule before launch. Run at least three measured repetitions for feasible cases; report observed spread, without post-hoc favorable selection. Historical D040 used five fixed repeats; D044 proposes five for M7 with no adaptive extension.
+5. Freeze repetition count and any variance-triggered extension rule before launch. Run at least three measured repetitions for feasible cases; report observed spread, without post-hoc favorable selection. Historical D040 used five fixed repeats; D046 proposes five for M8 main/ablations and three diagnostic/control pairs, with no adaptive extension.
 6. Record one immutable manifest and full stdout/stderr per run.
 7. Use `/usr/bin/time -v` or an equivalent wrapper for wall time and peak RSS.
 8. Do not reuse a partially written result after timeout.
@@ -339,8 +340,9 @@ Negative or mixed results should be reported. In particular, the exact closure n
 
 ## 13. Minimal execution order
 
-For the current stage, follow M6's VF/IPPV data/tool/readiness gates and then M7's
-formal schedule. DCLDS remains deferred under D029. Freeze exact artifacts and
+For the current stage, implement M6 observation tooling and M7's exact increment,
+prepare M8 inputs/environment, refresh diagnostics against final source, then freeze
+and execute M8's formal schedule. DCLDS remains deferred under D029. Freeze exact artifacts and
 resource settings before measurement; do not select a favorable subset from the
 eight graphs after seeing outcomes. Record excluded methods and censored runs.
 Neither a speedup nor every optional figure is a completion condition; a fair

@@ -52,6 +52,31 @@ T17 runs only when core reduction is implemented. Streaming, additional flow
 algorithms and tie-inclusive output acquire backend/mode equivalence tests when
 implemented; their absence does not block the first correct version.
 
+## Planned M6 through M8 test contracts
+
+T18–T27 are new requirements under D045, **not executed tests**. Existing T01–T17
+remain in force. Use the detailed [M6](M6_DIAGNOSTICS_PLAN.md),
+[M7](M7_INTERVAL_CLIQUES_PLAN.md) and [M8](M8_EXPERIMENT_PLAN.md) preconditions.
+
+| ID | Required assertion / witness |
+|---|---|
+| T18 | Deterministic fake-clock tests for exclusive nested phases, transitions, actual cleanup scopes, exception unwinding and partial snapshots; no double counting and explicit outer residual. |
+| T19 | Independently counted count-function/footprint/partition visits; unique and multiplicity-weighted footprint histograms and arc identities; root-zero depth, non-output terminal layers and exact prefix/suffix work reconciliation. Do not relabel legacy cliques_scanned as total work. |
+| T20 | Matched-source instrumented/control canonical output and semantic query-trace equality, exact numeric fallback and observer overhead/partial-coverage records. Repeat after final M7 source changes; historical profiler tests do not substitute. |
+| T21 | For all labelled graphs n<=4, h={2,3}, and all nested X subseteq Z subseteq Y, compare local IDs with independent clique enumeration, prove finite partition equality/disjointness and compare weighted residual footprints. Include crossing-Z singleton residuals and named higher-h cases; arbitrary set fixtures do not mint chain certificates. |
+| T22 | Exact mu(Z)=mu(X)+left-size and interval count-difference checks, empty partitions, stored original-Y terminal counts and exact conversion/accumulation. Verify a ChainPoint cannot be minted with an unverified count or foreign index. |
+| T23 | global/interval-scan/interval-reuse crossed with core off/safe against independent direct truth and envelope chains across existing exhaustive-small, seeded and higher-h tiers; all k prefixes, canonical query traces, ties, isolates, h>n and input reorder. Work counters may differ; semantic traces may not. |
+| T24 | Query-local core filtering never shrinks inherited original interval IDs; audit C's lower-threshold recovery and boundary-clique regressions; original lambda/Y terminal test/extraction graph preserved. |
+| T25 | Range disjointness, single ownership, actual ID capacity and pending-frame cleanup under splits, terminal exits, k stop, cancellation and exceptions; ASan/UBSan and real numeric fallback. No use-after-partition or ancestor-sized copied lists hidden by logical-size counters. |
+| T26 | Eight-input converter/manifest round trips including text IDs, headers, loops/duplicates/isolates; Linux integration confirms native/validator cap enforcement, timeout cleanup and evidence-based OOM classification. |
+| T27 | Reject preliminary/mixed-version/wrong-pin/duplicate result rows; validate frozen schedule counts, missing/censored outcomes and strict/prefix comparisons; deterministic report joins and byte-identical regeneration; diagnose unavailable suffix/phase data rather than fabricate them. |
+
+M7 T23 uses the declared M3/M4 tiers in Debug and ASan/UBSan. Enumerators and
+sorted/membership footprint/count predicates receive named/all-subset cross-mode
+checks; capacity limits and fallback retain T05/T16. Every executed campaign saves
+its exact fixture/seed/mode manifest and failures. M6/M7 development measurements
+are excluded from formal M8; P18.4 refreshes T18–T20/T25 on final-source binaries.
+
 ## 3. Oracle request generation
 
 Global requests always use `[empty,V]` and may return empty. For bounded global

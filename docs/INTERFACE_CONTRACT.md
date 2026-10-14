@@ -277,3 +277,14 @@ Zero/equal-reduced-bound shortcuts keep network/backend fields null. Core work c
 still be measured on a positive query whose reduced domain is empty. All counters
 remain exact; failures retain whatever stage information was actually recorded.
 See [preservation arguments](M4_IMPLEMENTATION.md) and [M4 evidence](../evidence/m4/REPORT.md).
+
+## Planned observability and work-mode extension
+
+D045's [M6 diagnostic schema](M6_DIAGNOSTICS_PLAN.md) and
+[M7 work-mode interface](M7_INTERVAL_CLIQUES_PLAN.md) are planned extensions, not
+currently supported CLI flags or implemented telemetry. Preserve canonical solution
+bytes, exact arithmetic/output policy and legacy cliques_scanned semantics.
+Detailed phase/work records are separate from semantic hashes and canonical stdout.
+The proposed work modes are global, interval-scan and interval-reuse; global stays
+the default and untrusted restricted bounds do not gain certificates from a mode.
+Update implemented interface documentation only with actual code and acceptance.

@@ -95,6 +95,15 @@ code/theory comparison and integration. Continue the independently planned
 VF-LhCDS/IPPV work; DCLDS is not a prerequisite for this current execution stage.
 Preserve its existing snapshots and historical records; do not mark P09b.1 complete.
 
+Current owner direction (2026-10-14, D045): the selected follow-up plan is
+`docs/M6_M8_EXECUTION_PLAN.md`: M6 cost diagnostics, M7 interval-local
+clique propagation/count reuse, and M8 unified formal experiments. This supersedes
+D039's optimization stop only for that increment. Preserve the original interval
+clique set across query-local core filtering. Rebuild diagnostic/control binaries
+against final optimized source. Earlier local timings remain preliminary and are
+excluded from M8; final resource/data/variant settings still require freezing.
+Completion follows delivered implementation, validation and reproducible evidence.
+
 Use common normalized graphs. Distinguish definition-checked, structural-checked
 and cross-implementation-agreement evidence. Density/connectivity checks do not
 prove LhCDS maximality. Keep external validation outside algorithm timing; include

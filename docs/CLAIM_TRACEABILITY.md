@@ -5,11 +5,12 @@ Revision 2026-09-29. Proof obligations and their arguments live in
 A code symbol, test command, evidence path and commit are needed before marking
 `implementation-tested`. Passing tests do not prove a theorem.
 
-Evidence scope update (2026-10-14, D043): the M5 timing records below remain
-historical local/preliminary evidence and are excluded from the new formal M7
-performance results. Existing definition/correctness evidence is retained.
-[M6/M7](M6_M7_EXECUTION_PLAN.md) and P16.1–P17.4 are planned; this documentation
-revision adds no tested code symbols or new experimental evidence to O01–O12.
+Evidence scope update (2026-10-14, D045): prior M5/M6/M7 development timings are
+excluded from M8 formal performance results. Existing correctness evidence remains.
+[M6–M8](M6_M8_EXECUTION_PLAN.md), P16.1–P18.8 and T18–T27 are planned; this plan
+revision adds no implementation-tested code or experimental result to O01–O12.
+M6 maps principally to O09/O11/O12; M7 refines O03–O11 under the stated invariants;
+M8 governs O12 and honest work/resource attribution. See the detailed task mappings.
 
 | Obligation | Exact source | Planned owner / symbol | Tests | Evidence / commit | Status |
 |---|---|---|---|---|---|

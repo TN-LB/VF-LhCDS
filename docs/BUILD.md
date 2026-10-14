@@ -135,3 +135,11 @@ is needed; see [the enumeration contract](ENUMERATION_IMPLEMENTATION.md). New
 enumeration evidence uses separate `build-enumeration-debug`,
 `build-enumeration-sanitize`, `build-enumeration-release` and
 `build-m5-adjacency-release` directories so old diagnostic binaries remain intact.
+
+## Planned final-source diagnostic builds
+
+M6's [new diagnostic/control protocol](M6_DIAGNOSTICS_PLAN.md) remains planned.
+Preserve the old `experiments/fine_profile/` source pins and historical evidence.
+P18.4 must build and validate a diagnostic and uninstrumented control from the
+same final M7 source/toolchain/options; old profiler commands do not satisfy it.
+No new executable or build flag is claimed to exist until implemented and checked.

@@ -1,17 +1,18 @@
 # M5 completion scope — 2026-10-09
 
-Subsequent direction (2026-10-14, D043): [M6/M7](M6_M7_EXECUTION_PLAN.md) now cover
-eight-graph preparation and a new unified formal campaign. Every M5 measurement
-below is historical local/preliminary evidence relative to M7 and is excluded
-from its formal results, including ablations. M5's bounded completion and raw
-records remain intact. New data/tool work does not reopen D039's solver
-optimization cycle or D029's DCLDS deferral.
+Subsequent direction (2026-10-14, D045): [M6–M8](M6_M8_EXECUTION_PLAN.md) add
+cost diagnostics, the selected interval-local clique/count-reuse increment and
+unified formal real-graph evaluation. All M5 timings below remain historical local
+preliminary evidence and are excluded from M8 formal main/ablation/diagnostic
+results. D042 completion and raw records stay intact. D045 supersedes D039's stop
+only for this selected work; D029's DCLDS deferral is unchanged.
 
 M0–M4 and **bounded M5 are complete** at their recorded gates. D042 closes the
 selected evaluation, conclusion review, table regeneration, local rebuild and
 fresh Ubuntu software-environment reproduction. Original broader coverage and
-stronger release levels remain explicitly deferred or limited below. D039 still
-ends the development optimization cycle. This file records the completed scope;
+stronger release levels remain explicitly deferred or limited below. D039 ended
+the M5 development optimization cycle; D045 now authorizes the selected follow-up.
+This file records the completed scope;
 earlier campaign records remain historical.
 
 ## Completed work and scope boundaries

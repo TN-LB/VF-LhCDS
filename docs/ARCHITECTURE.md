@@ -142,3 +142,19 @@ claims use a recorded release build. TSan/parallel backends are deferred until
 parallel implementation exists. Tests compare reference versus production,
 128-bit versus arbitrary precision on their shared domain, and later off/on core.
 No second clique backend is needed for the first correctness tag.
+
+## Planned M6 through M8 extension
+
+D045 adds [cost observation](M6_DIAGNOSTICS_PLAN.md) and
+[interval-local clique work](M7_INTERVAL_CLIQUES_PLAN.md); these are not implemented
+by the plan revision. Keep immutable ChainPoints/ChainIntervals. An internal frame
+adds a certified range in one root ID permutation, depth and traversal identity.
+Disjoint child ranges reference immutable global tuples; temporary core eligibility
+does not mutate inherited ranges. Derive exact split counts before minting a new
+ChainPoint. Standalone arbitrary restricted requests keep the complete global path.
+
+The proposed work-mode switch is separate from existing inclusion predicates and
+core mode. Global remains the default/control. Diagnostic observations have a
+separate schema and compile out of the uninstrumented control; semantic hashes
+exclude them. Final source alignment, Linux limits and formal result allowlists
+are [M8 readiness gates](M8_EXPERIMENT_PLAN.md), not assumptions of the current code.

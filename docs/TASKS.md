@@ -5,18 +5,18 @@ Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
 Current position (2026-10-14): **M0–M4 and bounded M5 complete under D042;
-M6 and M7 planned under D043**. M6 prepares eight graph inputs and experiment
-tooling; M7 owns all new formal measurements. The combined budget is four weeks,
-excluding thesis writing and analysis chapters. [Current plan](M6_M7_EXECUTION_PLAN.md).
-The historical M5 five-repeat suite has 240 repaired-main
-calls plus 120 retained VF ablation calls. All its required comparisons pass.
-[Results and limits](../evidence/m5/final-main-repaired-20261008/REPORT.md),
-[fresh Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md), and
-[completed scope and deferred boundaries](M5_COMPLETION_PLAN.md) distinguish this completed scope from
-the broader original M5 requirements. All prior local timing rows are preliminary
-relative to M7 and excluded from its formal results; preserve their records.
-No further solver optimization cycle is planned. M6/M7 task details follow the
-unchanged M5 history below; none is complete merely because this plan was written.
+M6–M8 planned under D045**. M6 implements diagnostics/work accounting, M7 implements
+interval-local clique propagation/count reuse, and M8 owns fresh formal experiments.
+[Current execution plan](M6_M8_EXECUTION_PLAN.md). Acceptance is based on delivered
+results; thesis chapters and writing are not tasks. D029 still defers DCLDS.
+D045 authorizes the selected increment beyond D039's historical optimization stop.
+
+Historical M5 has 240 repaired-main and 120 retained ablation calls with its
+required comparisons passed. [Historical results](../evidence/m5/final-main-repaired-20261008/REPORT.md),
+[Linux software reproduction](../evidence/m5/clean-env-20261008/REPORT.md) and
+[M5 completion scope](M5_COMPLETION_PLAN.md) remain intact. All earlier local
+timings are preliminary and excluded from M8 formal results. None of the new
+implementation tasks is complete merely because its plan has been written.
 
 ## M0 - Freeze contracts and bootstrap (prompt 00)
 
@@ -449,35 +449,55 @@ This update changes documentation/status only. [Closure checks](../evidence/m5/c
 record valid local links and unchanged prior completion evidence; no new
 build, test, benchmark or algorithm change is claimed.
 
-## M6 - Eight graph inputs and experiment tooling (needs bounded M5)
+## M6 - Cost diagnostics and work accounting
 
-Planned 2026-10-14, D043. Weeks 1–2 of the combined four-week budget.
-Use [M6/M7 execution plan](M6_M7_EXECUTION_PLAN.md), not the broader historical
-candidate program. The eight selected graphs are CA-GrQc, CA-CondMat,
-soc-hamsterster, fb-pages-politician, fb-pages-company, web-webbase-2001,
-Amazon and Email-Enron. O12 governs evidence scope; O09 also covers resource counters.
+D045 replaces the previous unexecuted P16/P17 task meanings. The old planning
+check at commit `4c0b6aa` is historical, not acceptance of these tasks.
+Use [M6 diagnostics](M6_DIAGNOSTICS_PLAN.md), T18–T20/T27 and O09/O11/O12.
 
-- [ ] P16.1 Pin all eight source/normalized inputs and implement the needed source-format adapters; retain declared vertices, reversible IDs and exact provenance; test normalization and canonical round trips.
-- [ ] P16.2 Implement/test Linux environment capture, actual process-group resource limits and timeout/OOM/error handling; record unavailable sensors honestly; retain historical manifest compatibility.
-- [ ] P16.3 Implement/test campaign identity and explicit formal aggregation allowlists; reject old/diagnostic/mixed-version rows, duplicate repeats and pin mismatches; retain missing/censored outcomes.
-- [ ] P16.4 Build both algorithms on the chosen host, pass applicable build/reference/harness/adapter and definition-smoke checks, and prepare the complete freeze package. Record the remaining concrete machine/resource decision after preparation; D044 defaults alone are not launch approval.
+- [ ] P16.1 Specify exclusive phases, counter units/call sites, partial-event schema and source-matched diagnostic/control builds.
+- [ ] P16.2 Implement exclusive phase scopes including real cleanup, exception unwinding and partial snapshots; keep observer code out of the uninstrumented control.
+- [ ] P16.3 Implement separate count/footprint/core/partition counters, footprint histograms, depth, non-output layers and prefix snapshots; preserve legacy cliques_scanned meaning.
+- [ ] P16.4 Implement deterministic report builders for VF/IPPV cost associations, core tradeoffs and early-stop saved/unavoidable work.
+- [ ] P16.5 Execute named/independent observer-counter tests, diagnostic/control semantic equivalence, exact fallback and ASan/UBSan checks with fixture/seed evidence.
+- [ ] P16.6 Freeze accepted initial tooling and development diagnostic/control evidence; document the mandatory final optimized-source refresh at P18.4.
 
-Gate: eight identified artifacts, tested tooling and a frozen approved concrete
-configuration. M6 diagnostics never become M7 timing samples. No solver optimization,
-new baseline or thesis chapter is required. All four tasks remain unexecuted.
+Gate: observation tooling and reports work without semantic changes; measured
+phases/counters have defined units and coverage. M6 development timings are not
+formal results. Initial tooling acceptance does not substitute for P18.4.
 
-## M7 - Unified formal real graph experiments (needs M6)
+## M7 - Interval-local clique propagation and exact count reuse
 
-Planned 2026-10-14, D043. Week 3 through week 4 including repair/reproduction reserve.
-D044 proposes 960 main calls plus 60 core and 60 stop calls, all freshly measured
-on one machine. Detailed host/limits/pins must be frozen before execution.
+Use [M7 detailed plan](M7_INTERVAL_CLIQUES_PLAN.md), T21–T25 and O03–O12 as mapped
+there. The global, interval-scan and interval-reuse modes remain comparable.
 
-- [ ] P17.1 Execute the fresh eight-graph VF/IPPV main campaign from the frozen schedule; account for every completed, timeout, confirmed OOM, error and unrun entry; keep validation outcomes separate.
-- [ ] P17.2 Rerun the bounded GrQc/CondMat core and early-stop ablations on the same formal host; require strict and prefix equality respectively; import no M5 timings.
-- [ ] P17.3 Generate raw inventories, outcome tables, paired summaries and comparison records using only the explicit M7 campaign allowlist; preserve all failed/stopped/superseded attempts separately.
-- [ ] P17.4 Verify raw hashes and regenerate formal tables in a clean software environment; provide tested reproduction commands and actual environment/source/input manifests.
+- [ ] P17.1 Write the set partition/count identities, footprint/core preservation argument, certification preconditions and depth-dependent work/storage bounds.
+- [ ] P17.2 Implement sealed root ID ranges and in-place child partitioning; retain crossing cliques on the right without duplicate/missing IDs.
+- [ ] P17.3 Implement interval-scan aggregation/traversal and the preserved global control; require identical canonical query/output behavior.
+- [ ] P17.4 Derive exact separator endpoint counts from the left partition before minting immutable ChainPoints; retain emitted-component and standalone counts.
+- [ ] P17.5 Integrate safe core as a temporary query view of original interval IDs; preserve original endpoints/lambda and lower-threshold clique recovery.
+- [ ] P17.6 Add explicit CLI/config work modes and M6 partition/reuse telemetry; run three modes with core off/safe through independent tiers, numeric limits, fallback and sanitizers.
+- [ ] P17.7 Freeze validated source, preservation and traceability evidence; record actual work/storage effects and hand off final-source profiling/ablations to M8.
 
-Gate: executed and accounted scope, no unresolved semantic disagreement, correct
-censoring/comparison handling and reproducible artifacts. A speedup or universal
-completion within resource limits is not required. A stopped/unrun ledger alone
-does not close M7. No analysis chapter or thesis writing task belongs here.
+Gate: written argument plus actual independent correctness/mode/lifetime evidence.
+No candidate verifier, changed tie policy, unconditional logarithmic-depth claim
+or speedup requirement. Preserve failures and minimized reproducers.
+
+## M8 - Unified formal experiments on eight real graphs
+
+Use [M8 protocol](M8_EXPERIMENT_PLAN.md), T26/T27 and O12. P18.1/P18.2 preparation
+can begin before M7 finishes. Formal runs wait for final-source acceptance and a
+concrete host/resource/input/schedule freeze. D046 remains proposed.
+
+- [ ] P18.1 Acquire/verify all eight selected graph artifacts and implement needed conversion adapters; retain original IDs/vertices and complete provenance.
+- [ ] P18.2 Implement/test Linux environment capture and actual native/validator limits, cleanup and confirmed OOM classification.
+- [ ] P18.3 Implement/test formal purpose/allowlists, schedule generation and stop policy; reject preliminary/mixed/duplicate rows and prepare a concrete freeze package.
+- [ ] P18.4 Rebuild final M7 diagnostic/control binaries, rerun observation equivalence and shared baseline/definition smoke, and freeze exact toolchain/source/options.
+- [ ] P18.5 Record the remaining concrete resource/configuration decision and execute the fresh eight-graph Main suite, retaining all scheduled outcomes and separate validators.
+- [ ] P18.6 Execute fresh B-local, B-core, B-stop and final-source D-final suites with strict/prefix/observer comparisons and full censored coverage.
+- [ ] P18.7 Generate automatic result tables/joins for the three questions and separate scanning/reuse effects; report uncertainty/coverage without importing old timings.
+- [ ] P18.8 Verify raw hashes and regenerate formal tables in a clean software environment; supply actually tested commands and source/data/environment manifests.
+
+Gate: executed declared scope, trustworthy comparison handling, full outcome
+accounting and reproducible artifacts. A stopped/unrun ledger alone is not
+completion. Earlier M5/M6/M7 measurements cannot fill gaps in M8.

@@ -3,7 +3,8 @@
 Revision 2026-09-09. Sources below refer to the unchanged
 `papers/veri_free_lhcds_v3_1_submit.md`. This document records reasoning obligations;
 `CLAIM_TRACEABILITY.md` separately records executed implementation evidence.
-Status: plan-level review. No production implementation has been accepted.
+Status: obligation specification; accepted M0–M5 evidence is recorded separately
+in `CLAIM_TRACEABILITY.md`. The M6–M8 refinements below remain planned.
 
 | ID | Source | Obligation / precondition | Observable implementation contract | Tests |
 |---|---|---|---|---|
@@ -101,3 +102,22 @@ Likewise, reduced/full equality on tested graphs does not prove a new reduction.
 `review/math_sanity.py` is an independent, review-only check of these mathematical
 contracts. It uses exhaustive F, not a flow implementation, and must not be cited
 as production max-flow, overflow-fallback, sanitizer, or benchmark validation.
+
+## Planned refinement G: interval-local clique work and observation
+
+D045 selects [M7's refinement](M7_INTERVAL_CLIQUES_PLAN.md), without changing
+manuscript semantics. The set/count identities and their elementary arguments
+are written there; their production implementation and tests remain outstanding.
+This table extends code obligations, not the theorem numbering in the papers.
+
+| Obligations | Refinement precondition / required argument | Planned checks |
+|---|---|---|
+| O04/O06 | Stored IDs are exactly C(X,Y), partitioned by containment in certified Z; crossing cliques remain on the right and produce C\Z. Exact child weights equal global aggregation. | T21/T23 |
+| O03/O04/O11 | mu(Z)=mu(X)+left partition size is exact; compute it before constructing immutable certified endpoints. Lambda still uses original endpoint counts. | T22/T23/T25 |
+| O05/O10 | Local aggregation filters by temporary Y_oracle but ownership remains for original Y; global containment comes from existing certificates, never from a caller-supplied ID list. | T22/T24 |
+| O07/O08 | Original-Y terminal test, ordinary original-graph components, adjacency to all X, left-first traversal and fixed-k ties remain unchanged; no candidate verifier. | T23/T24 plus T11/T12/T15/T16 |
+| O09 | Local visits are bounded by per-clique visited path depth; include partition, remaining count/core and initialization costs. Logarithmic depth requires an additional balance condition; O(M) extra IDs excludes other memory owners. | T19/T21/T25 |
+| O11/O12 | Observation preserves decisions and exact backends; source-matched final diagnostic/control builds, exclusive clocks and separate work units; finite tests and diagnostic associations are not proofs. | T18–T20/T27 |
+
+Any invariant or proof/specification conflict stops the affected local path. Do
+not repair the manuscript or hide a discrepancy through output validation.
