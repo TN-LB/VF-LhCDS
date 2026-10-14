@@ -4,13 +4,19 @@ Revision: 2026-09-29. `[ ]` means implementation evidence is still outstanding.
 Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
-Current position (2026-10-09): **M0–M4 and bounded M5 complete under D042**.
-The five-repeat suite has 240 repaired-main
-calls plus 120 retained VF ablation calls. All required comparisons pass.
+Current position (2026-10-14): **M0–M4 and bounded M5 complete under D042;
+M6 and M7 planned under D043**. M6 prepares eight graph inputs and experiment
+tooling; M7 owns all new formal measurements. The combined budget is four weeks,
+excluding thesis writing and analysis chapters. [Current plan](M6_M7_EXECUTION_PLAN.md).
+The historical M5 five-repeat suite has 240 repaired-main
+calls plus 120 retained VF ablation calls. All its required comparisons pass.
 [Results and limits](../evidence/m5/final-main-repaired-20261008/REPORT.md),
 [fresh Linux reproduction](../evidence/m5/clean-env-20261008/REPORT.md), and
 [completed scope and deferred boundaries](M5_COMPLETION_PLAN.md) distinguish this completed scope from
-the broader original M5 requirements. No further optimization cycle is planned.
+the broader original M5 requirements. All prior local timing rows are preliminary
+relative to M7 and excluded from its formal results; preserve their records.
+No further solver optimization cycle is planned. M6/M7 task details follow the
+unchanged M5 history below; none is complete merely because this plan was written.
 
 ## M0 - Freeze contracts and bootstrap (prompt 00)
 
@@ -442,3 +448,36 @@ tasks remain deferred or limited, rather than being counted as executed work.
 This update changes documentation/status only. [Closure checks](../evidence/m5/closure-20261009/checks.json)
 record valid local links and unchanged prior completion evidence; no new
 build, test, benchmark or algorithm change is claimed.
+
+## M6 - Eight graph inputs and experiment tooling (needs bounded M5)
+
+Planned 2026-10-14, D043. Weeks 1–2 of the combined four-week budget.
+Use [M6/M7 execution plan](M6_M7_EXECUTION_PLAN.md), not the broader historical
+candidate program. The eight selected graphs are CA-GrQc, CA-CondMat,
+soc-hamsterster, fb-pages-politician, fb-pages-company, web-webbase-2001,
+Amazon and Email-Enron. O12 governs evidence scope; O09 also covers resource counters.
+
+- [ ] P16.1 Pin all eight source/normalized inputs and implement the needed source-format adapters; retain declared vertices, reversible IDs and exact provenance; test normalization and canonical round trips.
+- [ ] P16.2 Implement/test Linux environment capture, actual process-group resource limits and timeout/OOM/error handling; record unavailable sensors honestly; retain historical manifest compatibility.
+- [ ] P16.3 Implement/test campaign identity and explicit formal aggregation allowlists; reject old/diagnostic/mixed-version rows, duplicate repeats and pin mismatches; retain missing/censored outcomes.
+- [ ] P16.4 Build both algorithms on the chosen host, pass applicable build/reference/harness/adapter and definition-smoke checks, and prepare the complete freeze package. Record the remaining concrete machine/resource decision after preparation; D044 defaults alone are not launch approval.
+
+Gate: eight identified artifacts, tested tooling and a frozen approved concrete
+configuration. M6 diagnostics never become M7 timing samples. No solver optimization,
+new baseline or thesis chapter is required. All four tasks remain unexecuted.
+
+## M7 - Unified formal real graph experiments (needs M6)
+
+Planned 2026-10-14, D043. Week 3 through week 4 including repair/reproduction reserve.
+D044 proposes 960 main calls plus 60 core and 60 stop calls, all freshly measured
+on one machine. Detailed host/limits/pins must be frozen before execution.
+
+- [ ] P17.1 Execute the fresh eight-graph VF/IPPV main campaign from the frozen schedule; account for every completed, timeout, confirmed OOM, error and unrun entry; keep validation outcomes separate.
+- [ ] P17.2 Rerun the bounded GrQc/CondMat core and early-stop ablations on the same formal host; require strict and prefix equality respectively; import no M5 timings.
+- [ ] P17.3 Generate raw inventories, outcome tables, paired summaries and comparison records using only the explicit M7 campaign allowlist; preserve all failed/stopped/superseded attempts separately.
+- [ ] P17.4 Verify raw hashes and regenerate formal tables in a clean software environment; provide tested reproduction commands and actual environment/source/input manifests.
+
+Gate: executed and accounted scope, no unresolved semantic disagreement, correct
+censoring/comparison handling and reproducible artifacts. A speedup or universal
+completion within resource limits is not required. A stopped/unrun ledger alone
+does not close M7. No analysis chapter or thesis writing task belongs here.

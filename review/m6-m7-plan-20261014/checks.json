@@ -1,0 +1,111 @@
+{
+  "scope": "M6/M7 documentation plan checks only; no implementation, build or benchmark execution",
+  "utc": "2026-10-14T06:08:31.807788+00:00",
+  "base_commit": "a215e3a61a645606066fe5ad18cecf4851f8e357",
+  "environment": {
+    "platform": "macOS-15.8.1-arm64-arm-64bit",
+    "python": "3.12.2 (v3.12.2:6abddd9f6a, Feb  6 2024, 17:02:06) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "changed_documents": [
+    "README.md",
+    "docs/CLAIM_TRACEABILITY.md",
+    "docs/DECISIONS.md",
+    "docs/EXPERIMENT_PLAN.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/M5_COMPLETION_PLAN.md",
+    "docs/M6_M7_EXECUTION_PLAN.md",
+    "docs/PROJECT_REPORT_ZH.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/TASKS.md",
+    "experiments/README.md",
+    "prompts/README.md"
+  ],
+  "document_sha256": {
+    "README.md": "4d88fcf851f2c811f6d4614f6e4167a1c452e9fbc05d8b0466754a567e3673e4",
+    "docs/CLAIM_TRACEABILITY.md": "8e63d492203cc9308a09bab4893094fc8ff81645ef36fea57acefe51dda464bc",
+    "docs/DECISIONS.md": "f839c5d7d723429865680e024878bcec4701c64b43636cb8d9fbd1b6f57b247d",
+    "docs/EXPERIMENT_PLAN.md": "5e21772a16595498e6544cd85d772c13095f6fd0297e5ca31aafbabb2778d887",
+    "docs/IMPLEMENTATION_PLAN.md": "a85b6f297726ee8d730579b480fa0b8598470166afb93b8d09049fc3ece55320",
+    "docs/M5_COMPLETION_PLAN.md": "50c0559cbd564952c8f7ff1cc04aa217e747d7ac01bfa0f9f98e6a027c03d5c9",
+    "docs/M6_M7_EXECUTION_PLAN.md": "7608eaa73aefcac975f38f96060d50ce474228faf81e50409252392eca990e3a",
+    "docs/PROJECT_REPORT_ZH.md": "a4bdb2297e2900ad82c1032e049d90df0f59e0f0f8bed8a9cab114f5bb40d886",
+    "docs/REPRODUCIBILITY.md": "48220e3ee832d81e18c819cbc94ec5fc81575c7f1d850f605bd74fdd7ed3edc6",
+    "docs/TASKS.md": "4be7f1b814e5632b33ba7c6285627d3fdd5d6de7a9dad5c99ce8ec6c9f721f94",
+    "experiments/README.md": "ff66553e19149c40eac8d76d7bcc5262f7f5888616fe1eef145f58b47904158e",
+    "prompts/README.md": "f0fde04ceaab3b7897a83141a9142025263bb4a446d2e60dc6582ed32edd85d0"
+  },
+  "local_link_check": {
+    "checked": 276,
+    "broken": [],
+    "method": "existing local file/directory targets; fragments and external URLs not checked"
+  },
+  "selected_datasets": [
+    "CA-GrQc",
+    "CA-CondMat",
+    "soc-hamsterster",
+    "fb-pages-politician",
+    "fb-pages-company",
+    "web-webbase-2001",
+    "Amazon",
+    "Email-Enron"
+  ],
+  "task_states": {
+    "P16.1": "planned/unchecked",
+    "P16.2": "planned/unchecked",
+    "P16.3": "planned/unchecked",
+    "P16.4": "planned/unchecked",
+    "P17.1": "planned/unchecked",
+    "P17.2": "planned/unchecked",
+    "P17.3": "planned/unchecked",
+    "P17.4": "planned/unchecked"
+  },
+  "decision_states": {
+    "D043": "accepted scope",
+    "D044": "proposed numerical configuration; not launch approval"
+  },
+  "workload_arithmetic": {
+    "main": 960,
+    "core": 60,
+    "stop": 60,
+    "total_native": 1080,
+    "native_guard_hours": 90,
+    "external_validator_guard_hours": 90,
+    "total_guard_days": 7.5
+  },
+  "preservation": {
+    "papers": "no tracked changes from pre-edit HEAD",
+    "src": "no tracked changes from pre-edit HEAD",
+    "include": "no tracked changes from pre-edit HEAD",
+    "reference": "no tracked changes from pre-edit HEAD",
+    "tests": "no tracked changes from pre-edit HEAD",
+    "evidence": "no tracked changes from pre-edit HEAD"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify_papers.py"
+      ],
+      "exit_code": 0,
+      "stdout": "OK papers/2023-icde-lds.md 6cddbb0a8baad40b08ad2d95b90b1b1646a4ed13ecc68f370258d215e5f7b1c4\nOK papers/2408.14022v1.md 9c6aff174828d158d1c48b74b96c5a44458a05a2680c30c2fcfcdf4ba0d1ed5c\nOK papers/2504.10937v1.md 95a1b82a5e378307f53073a1673334290d6773d4aaafc5651aa19470b5af3908\nOK papers/veri_free_lhcds_v3_1_submit.md 85972b0be92950ba01d8f618f7911bdbc0a1542b9914cb00b29840e397319700\n",
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "Six new graph artifacts not acquired",
+    "Formal host/resources not frozen",
+    "P16.1-P17.4 unexecuted",
+    "Historical implementation correctness evidence unchanged",
+    "No runtime tests required or rerun for documentation-only changes"
+  ]
+}

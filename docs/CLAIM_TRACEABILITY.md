@@ -5,6 +5,12 @@ Revision 2026-09-29. Proof obligations and their arguments live in
 A code symbol, test command, evidence path and commit are needed before marking
 `implementation-tested`. Passing tests do not prove a theorem.
 
+Evidence scope update (2026-10-14, D043): the M5 timing records below remain
+historical local/preliminary evidence and are excluded from the new formal M7
+performance results. Existing definition/correctness evidence is retained.
+[M6/M7](M6_M7_EXECUTION_PLAN.md) and P16.1–P17.4 are planned; this documentation
+revision adds no tested code symbols or new experimental evidence to O01–O12.
+
 | Obligation | Exact source | Planned owner / symbol | Tests | Evidence / commit | Status |
 |---|---|---|---|---|---|
 | O01 Definition-level truth | Defs. 1.1-1.3 | reference: direct_compact, direct_maximal_compact, direct_lhcds | T01,T02; unchanged 74 pytest | [M1](../evidence/m1/REPORT.md); `1a4829a9348dae299ae074717928909598b11af6`; [M3 regression](../evidence/m3/accepted/commands.json) | implementation-tested (independent reference scope) |

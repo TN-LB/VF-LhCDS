@@ -3,20 +3,27 @@
 Revised 2026-09-29. This repository contains the exact basic solver, independent
 reference and staged implementation/evaluation plan. The four supplied files under `papers/` are unchanged.
 
-Current status (2026-10-09): M0–M4 and the bounded M5 stage are complete. M5 covers
-the two-graph, five-repeat VF/IPPV evaluation, core/early-stop ablations and fresh
-Ubuntu software-environment reproduction. Broader coverage and missing metrics
-remain explicitly deferred or limited under D042; this is not a full SOTA study.
-[Measured results and limitations](evidence/m5/REPORT.md),
-[completed scope and follow-up boundaries](docs/M5_COMPLETION_PLAN.md),
-[reproduction](docs/M5_REPRODUCTION.md).
+Current status (2026-10-14): M0–M4 and bounded M5 remain complete under D042.
+D043 schedules **M6 data/tool preparation and M7 unified formal experiments on
+eight real graphs**, within four additional weeks excluding thesis writing.
+[Current M6/M7 plan and selected graphs](docs/M6_M7_EXECUTION_PLAN.md).
+Both new milestones are planned; exact artifacts, host/resources and the executable
+campaign package still need freezing before measurement. D039's solver optimization
+stop and D029's DCLDS deferral remain in force.
+
+The two-graph M5 timings and all other earlier local measurements are now
+development/preliminary evidence relative to M7. They remain preserved, but cannot
+enter M7 formal performance results or ablations. See
+[historical measurements and limits](evidence/m5/REPORT.md),
+[M5 completed scope](docs/M5_COMPLETION_PLAN.md) and
+[historical reproduction](docs/M5_REPRODUCTION.md).
 
 For a plain-language Chinese overview of the milestones, results and limits, see
 [项目总体报告（中文核对版）](docs/PROJECT_REPORT_ZH.md).
 
 ## Start here
 
-1. `docs/IMPLEMENTATION_PLAN.md`: six milestones M0-M5 and minimal correct scope.
+1. `docs/IMPLEMENTATION_PLAN.md`: completed M0–M5 and planned M6/M7; `docs/M6_M7_EXECUTION_PLAN.md`: current four-week scope.
 2. `docs/ALGORITHM_SPEC.md`: executable mathematical contracts.
 3. `docs/THEORY_TO_CODE_AUDIT.md`: exact theorem numbers, proof obligations and clarifications.
 4. `docs/TASKS.md`: dependency-aware tasks and executed milestone gates.
@@ -37,6 +44,8 @@ M0 contracts and skeleton
  -> M3 left-first fixed-k solver + correctness freeze
  -> M4 optional safe query-local core/profiled optimization
  -> M5 validated baselines + fair experiments + reproducible release
+ -> M6 eight-graph data + Linux experiment tooling + configuration freeze
+ -> M7 unified formal measurements + reproducible result artifacts
 ```
 
 M3 requires one materialized clique backend, aggregated footprints, and one generic
@@ -50,10 +59,10 @@ Preserve all declared vertices and zero-density solutions.
 
 ## Baselines and evidence
 
-DCLDS and IPPV are primary general-h comparison targets. h=2/h=3 specializations
-are included for claims in their actual scope. DCLDS independence is already
-recorded; commit/license/build/output/timing validation remains work. Preserve the
-supplied snapshot before detailed comparison and do not import its techniques.
+DCLDS and IPPV are the original general-h comparison targets. D029 currently
+defers all further DCLDS reading/acquisition/integration; M6/M7 compare VF with IPPV.
+h=2/h=3 specialization comparisons remain outside this bounded plan. Preserve
+D012's independent-development boundary and historical snapshots.
 
 Small-graph direct-definition truth, structural output checks and agreement between
 implementations are distinct evidence levels. No test campaign alone is a proof,

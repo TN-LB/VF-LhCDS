@@ -1,5 +1,12 @@
 # M5 completion scope — 2026-10-09
 
+Subsequent direction (2026-10-14, D043): [M6/M7](M6_M7_EXECUTION_PLAN.md) now cover
+eight-graph preparation and a new unified formal campaign. Every M5 measurement
+below is historical local/preliminary evidence relative to M7 and is excluded
+from its formal results, including ablations. M5's bounded completion and raw
+records remain intact. New data/tool work does not reopen D039's solver
+optimization cycle or D029's DCLDS deferral.
+
 M0–M4 and **bounded M5 are complete** at their recorded gates. D042 closes the
 selected evaluation, conclusion review, table regeneration, local rebuild and
 fresh Ubuntu software-environment reproduction. Original broader coverage and

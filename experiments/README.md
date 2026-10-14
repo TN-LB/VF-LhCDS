@@ -1,10 +1,18 @@
 # Shared VF-LhCDS / IPPV evidence tools
 
 These tools are external to both algorithms. DCLDS work remains deferred by D029.
-The selected D040/D041 five-repeat local evaluation is complete; broader coverage
-and clean-machine release remain open. [Current results](../evidence/m5/REPORT.md)
-and [reproduction instructions](../docs/M5_REPRODUCTION.md) supersede the status of
-the historical diagnostics described below.
+The selected D040/D041 five-repeat local evaluation is complete at D042's bounded
+scope. D043 now schedules [M6/M7](../docs/M6_M7_EXECUTION_PLAN.md): eight-graph
+preparation followed by fresh formal main/ablation measurements on one host.
+All existing local measurements are preliminary and excluded from M7 aggregates.
+[Historical results](../evidence/m5/REPORT.md) and
+[reproduction instructions](../docs/M5_REPRODUCTION.md) remain available.
+
+The code described below is the current M5 implementation. M6's Linux environment
+support, enforced resource limits, formal campaign allowlist and extended failure
+handling are **planned**, not implemented by the documentation update. In
+particular, changing a JSON cap or renaming a directory does not implement those
+guarantees. No M7 campaign is ready to launch from this plan alone.
 
 `build_vf.py` builds an unchanged Release solver with recorded source/compiler/
 binary hashes. `prepare_input.py` converts an explicit-n edge list, preserving the

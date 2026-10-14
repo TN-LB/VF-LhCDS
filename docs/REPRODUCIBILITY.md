@@ -3,6 +3,14 @@
 Revision: 2026-09-09. Commands are targets until their actual execution logs exist.
 The plan-review evidence under `review/` is not a production release.
 
+Current formal evaluation target (2026-10-14, D043) is
+[M7 after M6 preparation](M6_M7_EXECUTION_PLAN.md). Formal aggregates must accept
+only an explicit allowlist of freshly measured M7 campaign IDs and their pinned
+inputs/binaries/configurations. Reject every M5/M6 timing row, including the old
+`final-*` batches. Earlier input artifacts and correctness fixtures may be reused
+with hashes/provenance; old timing samples and repeat counts may not. M7 raw
+hash verification and table regeneration are P17.3/P17.4, both still planned.
+
 For the executed bounded M5 scope, use [M5 reproduction instructions](M5_REPRODUCTION.md).
 Its fresh local rebuild and subsequent fresh Ubuntu userspace reproduction are
 reported separately; the latter uses OrbStack on the same Mac. This does not

@@ -1,15 +1,24 @@
 # Experimental Evaluation Plan
 
-Revision: 2026-09-09. Required scope is M5 in `IMPLEMENTATION_PLAN.md`.
-Dataset lists below are candidate pools, not a requirement to run every combination.
-Freeze the actual machine/configuration before measurement; no results are assumed.
+Current execution scope (2026-10-14): [M6/M7 execution plan](M6_M7_EXECUTION_PLAN.md)
+under D043. The selected graphs are CA-GrQc, CA-CondMat, soc-hamsterster,
+fb-pages-politician, fb-pages-company, web-webbase-2001, Amazon and Email-Enron.
+M6 prepares the data and tooling; M7 is the unified formal experimental milestone.
+The combined additional budget is four weeks, excluding thesis writing/analysis.
+All earlier local timings, including D040/D041's completed M5 suite, remain
+preliminary records and are excluded from M7 performance results and ablations.
+M7 reruns both algorithms and the included ablations on the same recorded host.
 
-Execution update, D039 (2026-10-08): the development optimization cycle is closed.
-Use [the current M5 completion plan](M5_COMPLETION_PLAN.md) for progress, remaining
-gates and the concrete D040 final-local-scope proposal. Earlier pilots remain
-development evidence; do not pool their timings with the final batch. D040 is a
-proposal, not a frozen campaign. The candidate lists and optional figures below
-do not automatically enlarge its workload or establish completed evidence.
+D044 proposes the eight-graph main grid, bounded two-graph ablations, five repeats
+and resource settings. Exact artifacts, host and enforced limits still need
+preparation and a concrete freeze before launch. D042's historical M5 completion
+is unchanged; D039 still closes solver optimization.
+
+The original 2026-09-09 research questions, dataset pools and optional metrics
+below are background specifications, not extra M6/M7 tasks. In particular,
+per-rank latency, detailed phase profiling, synthetic scalability and specialized
+baselines are not required by the current four-week plan. The active task list
+is P16.1–P17.4 in [TASKS.md](TASKS.md).
 
 Execution update, D029 (2026-10-02): the owner deferred further DCLDS reading and
 integration. For the current stage, proceed with independent VF-LhCDS/IPPV
@@ -235,7 +244,7 @@ The primary comparison remains T_e2e and algorithm-process peak RSS.
 2. Build all algorithms with documented compilers and release flags.
 3. Validate every wrapper on toy instances.
 4. Randomize algorithm run order within each `(dataset,h,k,repeat)` block.
-5. Freeze repetition count and any variance-triggered extension rule before launch. Run at least three measured repetitions for feasible cases; report observed spread, without post-hoc favorable selection. D040 proposes five fixed repeats and no adaptive extension.
+5. Freeze repetition count and any variance-triggered extension rule before launch. Run at least three measured repetitions for feasible cases; report observed spread, without post-hoc favorable selection. Historical D040 used five fixed repeats; D044 proposes five for M7 with no adaptive extension.
 6. Record one immutable manifest and full stdout/stderr per run.
 7. Use `/usr/bin/time -v` or an equivalent wrapper for wall time and peak RSS.
 8. Do not reuse a partially written result after timeout.
@@ -330,9 +339,9 @@ Negative or mixed results should be reported. In particular, the exact closure n
 
 ## 13. Minimal execution order
 
-First freeze one shared small/real smoke configuration with DCLDS and IPPV where
-available. Then expand to the claimed h strata and a resource-feasible candidate
-dataset subset using preregistered criteria. Final timeout/memory/thread/repeat
-values remain configuration work, not invented facts in this revision. Record
-excluded methods and censored runs. Neither a speedup nor every optional figure is
-a completion condition; a fair negative result remains a valid result.
+For the current stage, follow M6's VF/IPPV data/tool/readiness gates and then M7's
+formal schedule. DCLDS remains deferred under D029. Freeze exact artifacts and
+resource settings before measurement; do not select a favorable subset from the
+eight graphs after seeing outcomes. Record excluded methods and censored runs.
+Neither a speedup nor every optional figure is a completion condition; a fair
+negative result remains a valid result.

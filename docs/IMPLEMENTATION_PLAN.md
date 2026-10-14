@@ -3,13 +3,15 @@
 Revision: 2026-09-09. This is a plan revision, not an implementation or benchmark result.
 The four files under `papers/` are preserved unchanged.
 
-Execution status (2026-10-09): M0–M4 and bounded M5 are complete at their recorded
-gates. D042 closes the two-graph/five-repeat evaluation, conclusion review and
-fresh Ubuntu userspace reproduction in [M5_COMPLETION_PLAN.md](M5_COMPLETION_PLAN.md).
-Original broader coverage, unavailable metrics and stronger release/replication
-levels remain deferred or limited, not falsely checked off. D039 still ends the
-optimization cycle; negative performance results do not reopen it. The original
-plan below is retained alongside the explicit D042 completion boundary.
+Execution status (2026-10-14): M0–M4 and bounded M5 remain complete under D042.
+D043 adds [M6/M7](M6_M7_EXECUTION_PLAN.md): eight-graph data/tool preparation followed
+by one unified formal experimental milestone, together bounded to four weeks of
+additional work excluding thesis writing. All previous local timings, including
+the completed M5 batches, are preliminary evidence and excluded from M7 results.
+M6/M7 are planned; the concrete host/resource/artifact freeze remains outstanding.
+D039 still ends the solver optimization cycle; D029 still defers DCLDS.
+Other original broader coverage and unavailable metrics remain deferred, rather
+than becoming implicit prerequisites of this new bounded plan.
 
 ## 1. Deliverable and proof spine
 
@@ -59,9 +61,14 @@ These are not prerequisites for validating the proof-to-code path.
 | M3: exact solver and freeze | Left-first traversal, structural extraction, fixed-k output, minimal CLI/telemetry, regression corpus | Direct-definition output agreement, all tested prefixes, `2r-1` logical calls on full tiny runs, no candidate-verification dependency, sanitizers clean | 04, 05, 06, 13 |
 | M4: safe optional optimization | First query-local clique-core restriction; then only measured bottleneck fixes | Written equivalence argument + named preconditions + off/on regression + cost measurements, one change at a time | 07, 08 |
 | M5: comparison and release | Validated required baselines, frozen experiment configuration, immutable run records, release instructions | Comparable outputs/scopes; reproducible completed and failed runs; conclusions restricted to measured cases | 09, 09b, 10 as applicable, 11, 12, 14, 15 |
+| M6: data and experiment tooling | Eight identified graph artifacts; Linux resource/environment support; formal campaign separation; common builds and freeze package | P16.1–P16.4: tested normalization and enforcement, rejection of mixed evidence, pinned and approved concrete run configuration | Current M6/M7 plan |
+| M7: unified formal experiments | Fresh eight-graph main campaign and bounded new ablations on one host; raw records and reproducible aggregation | P17.1–P17.4: full outcome accounting, comparison checks, only M7 measurements, regenerated artifacts | Current M6/M7 plan |
 
 M3 is independently releasable. M4 can be skipped if it does not improve the
 measured workload. M5 never retroactively changes mathematical semantics.
+M6/M7 share one four-week budget; thesis analysis/writing and new solver
+optimizations are not scheduled milestones. D044 records proposed campaign
+settings separately from the accepted D043 scope.
 
 ## 4. The critical implementation obligations
 
