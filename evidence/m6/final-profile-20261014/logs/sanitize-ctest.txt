@@ -1,0 +1,19 @@
+Test project /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+    Start 1: T18_exclusive_cleanup
+1/7 Test #1: T18_exclusive_cleanup ............   Passed    0.09 sec
+    Start 2: T18_T20_T27_artifact_contracts
+2/7 Test #2: T18_T20_T27_artifact_contracts ...   Passed    0.07 sec
+    Start 3: T18_T20_native_boundaries
+3/7 Test #3: T18_T20_native_boundaries ........   Passed    0.20 sec
+    Start 4: T20_control_numeric
+4/7 Test #4: T20_control_numeric ..............   Passed    0.20 sec
+    Start 5: T20_control_core
+5/7 Test #5: T20_control_core .................   Passed    0.05 sec
+    Start 6: T20_diagnostic_numeric
+6/7 Test #6: T20_diagnostic_numeric ...........   Passed    0.19 sec
+    Start 7: T20_diagnostic_core
+7/7 Test #7: T20_diagnostic_core ..............   Passed    0.06 sec
+
+100% tests passed out of 7
+
+Total Test time (real) =   0.87 sec

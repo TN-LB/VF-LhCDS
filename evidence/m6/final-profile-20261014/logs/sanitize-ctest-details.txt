@@ -1,0 +1,124 @@
+Start testing: Oct 15 00:01 AEDT
+----------------------------------------------------------
+1/7 Testing: T18_exclusive_cleanup
+1/7 Test: T18_exclusive_cleanup
+Command: "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_profile_timer_test"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T18_exclusive_cleanup" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"T18_exclusive_cleanup" end time: Oct 15 00:01 AEDT
+"T18_exclusive_cleanup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: T18_T20_T27_artifact_contracts
+2/7 Test: T18_T20_T27_artifact_contracts
+Command: "/Users/nost/Documents/VF-LhCDS/.venv/bin/python" "-m" "unittest" "discover" "-s" "/Users/nost/Documents/VF-LhCDS/experiments/final_profile" "-p" "test_*.py" "-v"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T18_T20_T27_artifact_contracts" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+test_T18_partial_and_malformed_stream (test_reports.Contracts.test_T18_partial_and_malformed_stream) ... ok
+test_T20_reversible_generation_and_anchor_rejection (test_reports.Contracts.test_T20_reversible_generation_and_anchor_rejection) ... ok
+test_T27_core_disagreement_rejected (test_reports.Contracts.test_T27_core_disagreement_rejected) ... ok
+test_T27_identical_graphs_in_distinct_fixtures_do_not_cross_join (test_reports.Contracts.test_T27_identical_graphs_in_distinct_fixtures_do_not_cross_join) ... ok
+test_T27_pins_duplicates_scope_missing_and_censored (test_reports.Contracts.test_T27_pins_duplicates_scope_missing_and_censored) ... ok
+test_T27_suffix_is_after_rank_not_after_query (test_reports.Contracts.test_T27_suffix_is_after_rank_not_after_query) ... ok
+test_T27_vf_ippv_positive_join_preserves_unavailable_internal_phases (test_reports.Contracts.test_T27_vf_ippv_positive_join_preserves_unavailable_internal_phases) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.006s
+
+OK
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"T18_T20_T27_artifact_contracts" end time: Oct 15 00:01 AEDT
+"T18_T20_T27_artifact_contracts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: T18_T20_native_boundaries
+3/7 Test: T18_T20_native_boundaries
+Command: "/Users/nost/Documents/VF-LhCDS/.venv/bin/python" "/Users/nost/Documents/VF-LhCDS/experiments/final_profile/test_native_boundaries.py" "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_profile_boundary_test"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T18_T20_native_boundaries" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"T18_T20_native_boundaries" end time: Oct 15 00:01 AEDT
+"T18_T20_native_boundaries" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: T20_control_numeric
+4/7 Test: T20_control_numeric
+Command: "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_control_primitives"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T20_control_numeric" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+T01/T04-T09 primitives: 1458 checks passed; 135 tiny cut/backend runs; 20000-node path
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"T20_control_numeric" end time: Oct 15 00:01 AEDT
+"T20_control_numeric" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: T20_control_core
+5/7 Test: T20_control_core
+Command: "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_control_core"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T20_control_core" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+M4 T17/P08: 30 checks passed
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"T20_control_core" end time: Oct 15 00:01 AEDT
+"T20_control_core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: T20_diagnostic_numeric
+6/7 Test: T20_diagnostic_numeric
+Command: "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_diagnostic_primitives"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T20_diagnostic_numeric" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+T01/T04-T09 primitives: 1458 checks passed; 135 tiny cut/backend runs; 20000-node path
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"T20_diagnostic_numeric" end time: Oct 15 00:01 AEDT
+"T20_diagnostic_numeric" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: T20_diagnostic_core
+7/7 Test: T20_diagnostic_core
+Command: "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/final_diagnostic_core"
+Directory: /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize
+"T20_diagnostic_core" start time: Oct 15 00:01 AEDT
+Output:
+----------------------------------------------------------
+M4 T17/P08: 30 checks passed
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"T20_diagnostic_core" end time: Oct 15 00:01 AEDT
+"T20_diagnostic_core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 15 00:01 AEDT

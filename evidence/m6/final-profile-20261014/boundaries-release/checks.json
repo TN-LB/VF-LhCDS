@@ -1,0 +1,23 @@
+[
+  {
+    "mode": "kill",
+    "returncode": -9,
+    "events": 2,
+    "complete": false,
+    "passed": true
+  },
+  {
+    "mode": "cancel",
+    "returncode": 7,
+    "events": 13,
+    "complete": false,
+    "passed": true
+  },
+  {
+    "mode": "fallback",
+    "returncode": 0,
+    "events": 8,
+    "complete": true,
+    "passed": true
+  }
+]

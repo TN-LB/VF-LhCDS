@@ -1,0 +1,8 @@
+{
+  "status": "failed-check-retained",
+  "command": ".venv/bin/python experiments/final_profile/verify_build.py build-final-profile-release --output evidence/m6/final-profile-20261014/release-build-identity.json",
+  "error": "AssertionError: complete production source list",
+  "cause": "The new verifier keyed translation units by basename, conflating src/core/graph.cpp and src/io/graph.cpp. No native solver or observation-equivalence failure occurred.",
+  "repair": "Key by complete source-relative paths and recognize the generated build-info translation unit explicitly.",
+  "rerun_evidence": "release-build-identity.json and sanitize-build-identity.json"
+}

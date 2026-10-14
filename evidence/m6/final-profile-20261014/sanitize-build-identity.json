@@ -1,0 +1,8 @@
+{
+  "source_pin_checks": 29,
+  "observer_pin_checks": 14,
+  "matched_translation_units": 13,
+  "control_has_observer_symbols": false,
+  "build_directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "compile_commands_sha256": "32ae78d3fbc1109a6d5184b3a4a16e906cea417065caf6326b52061de098b441"
+}

@@ -1,0 +1,12 @@
+[ 29%] Built target final_profile_lib
+[ 58%] Built target vflhcds_lib
+[ 62%] Built target vflhcds_final_profile
+[ 66%] Built target final_profile_timer_test
+[ 70%] Built target final_profile_boundary_test
+[ 75%] Built target final_control_primitives
+[ 79%] Built target final_control_solver_probe
+[ 83%] Built target final_control_core
+[ 87%] Built target final_diagnostic_solver_probe
+[ 91%] Built target final_diagnostic_primitives
+[ 95%] Built target final_diagnostic_core
+[100%] Built target vflhcds

@@ -1,0 +1,65 @@
+{
+  "scope": "M6 development tooling acceptance; no formal M8 measurements",
+  "started_evidence_directory": "20261014",
+  "completion_local_date": "2026-10-15",
+  "timezone": "Australia/Sydney",
+  "recorded_utc": "2026-10-14T22:37:29.148821+00:00",
+  "platform": "macOS-15.8.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.2",
+  "base_commit": "35961a65874defcaa688266e15a8c5f9d5ad7c31",
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/cmake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/c++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple clang version 17.0.0 (clang-1700.6.3.2)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    }
+  ],
+  "build_cache": {
+    "release": [
+      "CMAKE_BUILD_TYPE:STRING=Release",
+      "CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++",
+      "VFLHCDS_BOOST_ROOT:PATH=/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0",
+      "VFLHCDS_ENABLE_SANITIZERS:BOOL=OFF"
+    ],
+    "sanitize": [
+      "CMAKE_BUILD_TYPE:STRING=Debug",
+      "CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++",
+      "VFLHCDS_BOOST_ROOT:PATH=/Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0",
+      "VFLHCDS_ENABLE_SANITIZERS:BOOL=ON"
+    ]
+  }
+}

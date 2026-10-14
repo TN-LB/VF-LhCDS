@@ -1,0 +1,1435 @@
+{
+  "cache_policy": "uncontrolled",
+  "fixtures": [
+    {
+      "edges": [],
+      "h": 3,
+      "name": "isolates",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 2,
+      "name": "split_nonoutput",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 2,
+      "name": "tied_layer",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "ordinary_bridge",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "core_restore",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 2,
+      "name": "core_cascade",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "h": 1606938044258990275541962092341162602522202993782792835301376,
+      "name": "h_above_n",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 3,
+      "name": "repeated_footprints",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_4",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_5",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_1",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_2",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_1",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_2",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          2,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_0",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_1",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 4,
+      "name": "seed_20261014_2",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_3",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_4",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 4,
+      "name": "seed_20261014_5",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_6",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_7",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "memory_limit_bytes": null,
+  "native_timeout_seconds": 30,
+  "repeats": 1,
+  "resource_rationale": "small deterministic validation; no real-graph or M8 performance claim",
+  "schedule": [
+    "isolates-off-all-control",
+    "isolates-off-all-diagnostic",
+    "isolates-off-1-control",
+    "isolates-off-1-diagnostic",
+    "isolates-safe-all-control",
+    "isolates-safe-all-diagnostic",
+    "isolates-safe-1-control",
+    "isolates-safe-1-diagnostic",
+    "split_nonoutput-off-all-control",
+    "split_nonoutput-off-all-diagnostic",
+    "split_nonoutput-off-1-control",
+    "split_nonoutput-off-1-diagnostic",
+    "split_nonoutput-safe-all-control",
+    "split_nonoutput-safe-all-diagnostic",
+    "split_nonoutput-safe-1-control",
+    "split_nonoutput-safe-1-diagnostic",
+    "tied_layer-off-all-control",
+    "tied_layer-off-all-diagnostic",
+    "tied_layer-off-1-control",
+    "tied_layer-off-1-diagnostic",
+    "tied_layer-safe-all-control",
+    "tied_layer-safe-all-diagnostic",
+    "tied_layer-safe-1-control",
+    "tied_layer-safe-1-diagnostic",
+    "ordinary_bridge-off-all-control",
+    "ordinary_bridge-off-all-diagnostic",
+    "ordinary_bridge-off-1-control",
+    "ordinary_bridge-off-1-diagnostic",
+    "ordinary_bridge-safe-all-control",
+    "ordinary_bridge-safe-all-diagnostic",
+    "ordinary_bridge-safe-1-control",
+    "ordinary_bridge-safe-1-diagnostic",
+    "core_restore-off-all-control",
+    "core_restore-off-all-diagnostic",
+    "core_restore-off-1-control",
+    "core_restore-off-1-diagnostic",
+    "core_restore-safe-all-control",
+    "core_restore-safe-all-diagnostic",
+    "core_restore-safe-1-control",
+    "core_restore-safe-1-diagnostic",
+    "core_cascade-off-all-control",
+    "core_cascade-off-all-diagnostic",
+    "core_cascade-off-1-control",
+    "core_cascade-off-1-diagnostic",
+    "core_cascade-safe-all-control",
+    "core_cascade-safe-all-diagnostic",
+    "core_cascade-safe-1-control",
+    "core_cascade-safe-1-diagnostic",
+    "h_above_n-off-all-control",
+    "h_above_n-off-all-diagnostic",
+    "h_above_n-off-1-control",
+    "h_above_n-off-1-diagnostic",
+    "h_above_n-safe-all-control",
+    "h_above_n-safe-all-diagnostic",
+    "h_above_n-safe-1-control",
+    "h_above_n-safe-1-diagnostic",
+    "repeated_footprints-off-all-control",
+    "repeated_footprints-off-all-diagnostic",
+    "repeated_footprints-off-1-control",
+    "repeated_footprints-off-1-diagnostic",
+    "repeated_footprints-safe-all-control",
+    "repeated_footprints-safe-all-diagnostic",
+    "repeated_footprints-safe-1-control",
+    "repeated_footprints-safe-1-diagnostic",
+    "concentration_3-off-all-control",
+    "concentration_3-off-all-diagnostic",
+    "concentration_3-off-1-control",
+    "concentration_3-off-1-diagnostic",
+    "concentration_3-safe-all-control",
+    "concentration_3-safe-all-diagnostic",
+    "concentration_3-safe-1-control",
+    "concentration_3-safe-1-diagnostic",
+    "concentration_4-off-all-control",
+    "concentration_4-off-all-diagnostic",
+    "concentration_4-off-1-control",
+    "concentration_4-off-1-diagnostic",
+    "concentration_4-safe-all-control",
+    "concentration_4-safe-all-diagnostic",
+    "concentration_4-safe-1-control",
+    "concentration_4-safe-1-diagnostic",
+    "concentration_5-off-all-control",
+    "concentration_5-off-all-diagnostic",
+    "concentration_5-off-1-control",
+    "concentration_5-off-1-diagnostic",
+    "concentration_5-safe-all-control",
+    "concentration_5-safe-all-diagnostic",
+    "concentration_5-safe-1-control",
+    "concentration_5-safe-1-diagnostic",
+    "equal_regions_1-off-all-control",
+    "equal_regions_1-off-all-diagnostic",
+    "equal_regions_1-off-1-control",
+    "equal_regions_1-off-1-diagnostic",
+    "equal_regions_1-safe-all-control",
+    "equal_regions_1-safe-all-diagnostic",
+    "equal_regions_1-safe-1-control",
+    "equal_regions_1-safe-1-diagnostic",
+    "equal_regions_2-off-all-control",
+    "equal_regions_2-off-all-diagnostic",
+    "equal_regions_2-off-1-control",
+    "equal_regions_2-off-1-diagnostic",
+    "equal_regions_2-safe-all-control",
+    "equal_regions_2-safe-all-diagnostic",
+    "equal_regions_2-safe-1-control",
+    "equal_regions_2-safe-1-diagnostic",
+    "equal_regions_3-off-all-control",
+    "equal_regions_3-off-all-diagnostic",
+    "equal_regions_3-off-1-control",
+    "equal_regions_3-off-1-diagnostic",
+    "equal_regions_3-safe-all-control",
+    "equal_regions_3-safe-all-diagnostic",
+    "equal_regions_3-safe-1-control",
+    "equal_regions_3-safe-1-diagnostic",
+    "peeling_tail_1-off-all-control",
+    "peeling_tail_1-off-all-diagnostic",
+    "peeling_tail_1-off-1-control",
+    "peeling_tail_1-off-1-diagnostic",
+    "peeling_tail_1-safe-all-control",
+    "peeling_tail_1-safe-all-diagnostic",
+    "peeling_tail_1-safe-1-control",
+    "peeling_tail_1-safe-1-diagnostic",
+    "peeling_tail_2-off-all-control",
+    "peeling_tail_2-off-all-diagnostic",
+    "peeling_tail_2-off-1-control",
+    "peeling_tail_2-off-1-diagnostic",
+    "peeling_tail_2-safe-all-control",
+    "peeling_tail_2-safe-all-diagnostic",
+    "peeling_tail_2-safe-1-control",
+    "peeling_tail_2-safe-1-diagnostic",
+    "peeling_tail_3-off-all-control",
+    "peeling_tail_3-off-all-diagnostic",
+    "peeling_tail_3-off-1-control",
+    "peeling_tail_3-off-1-diagnostic",
+    "peeling_tail_3-safe-all-control",
+    "peeling_tail_3-safe-all-diagnostic",
+    "peeling_tail_3-safe-1-control",
+    "peeling_tail_3-safe-1-diagnostic",
+    "seed_20261014_0-off-all-control",
+    "seed_20261014_0-off-all-diagnostic",
+    "seed_20261014_0-off-1-control",
+    "seed_20261014_0-off-1-diagnostic",
+    "seed_20261014_0-safe-all-control",
+    "seed_20261014_0-safe-all-diagnostic",
+    "seed_20261014_0-safe-1-control",
+    "seed_20261014_0-safe-1-diagnostic",
+    "seed_20261014_1-off-all-control",
+    "seed_20261014_1-off-all-diagnostic",
+    "seed_20261014_1-off-1-control",
+    "seed_20261014_1-off-1-diagnostic",
+    "seed_20261014_1-safe-all-control",
+    "seed_20261014_1-safe-all-diagnostic",
+    "seed_20261014_1-safe-1-control",
+    "seed_20261014_1-safe-1-diagnostic",
+    "seed_20261014_2-off-all-control",
+    "seed_20261014_2-off-all-diagnostic",
+    "seed_20261014_2-off-1-control",
+    "seed_20261014_2-off-1-diagnostic",
+    "seed_20261014_2-safe-all-control",
+    "seed_20261014_2-safe-all-diagnostic",
+    "seed_20261014_2-safe-1-control",
+    "seed_20261014_2-safe-1-diagnostic",
+    "seed_20261014_3-off-all-control",
+    "seed_20261014_3-off-all-diagnostic",
+    "seed_20261014_3-off-1-control",
+    "seed_20261014_3-off-1-diagnostic",
+    "seed_20261014_3-safe-all-control",
+    "seed_20261014_3-safe-all-diagnostic",
+    "seed_20261014_3-safe-1-control",
+    "seed_20261014_3-safe-1-diagnostic",
+    "seed_20261014_4-off-all-control",
+    "seed_20261014_4-off-all-diagnostic",
+    "seed_20261014_4-off-1-control",
+    "seed_20261014_4-off-1-diagnostic",
+    "seed_20261014_4-safe-all-control",
+    "seed_20261014_4-safe-all-diagnostic",
+    "seed_20261014_4-safe-1-control",
+    "seed_20261014_4-safe-1-diagnostic",
+    "seed_20261014_5-off-all-control",
+    "seed_20261014_5-off-all-diagnostic",
+    "seed_20261014_5-off-1-control",
+    "seed_20261014_5-off-1-diagnostic",
+    "seed_20261014_5-safe-all-control",
+    "seed_20261014_5-safe-all-diagnostic",
+    "seed_20261014_5-safe-1-control",
+    "seed_20261014_5-safe-1-diagnostic",
+    "seed_20261014_6-off-all-control",
+    "seed_20261014_6-off-all-diagnostic",
+    "seed_20261014_6-off-1-control",
+    "seed_20261014_6-off-1-diagnostic",
+    "seed_20261014_6-safe-all-control",
+    "seed_20261014_6-safe-all-diagnostic",
+    "seed_20261014_6-safe-1-control",
+    "seed_20261014_6-safe-1-diagnostic",
+    "seed_20261014_7-off-all-control",
+    "seed_20261014_7-off-all-diagnostic",
+    "seed_20261014_7-off-1-control",
+    "seed_20261014_7-off-1-diagnostic",
+    "seed_20261014_7-safe-all-control",
+    "seed_20261014_7-safe-all-diagnostic",
+    "seed_20261014_7-safe-1-control",
+    "seed_20261014_7-safe-1-diagnostic"
+  ],
+  "scope": "development-only",
+  "source_manifest": {
+    "generated": {
+      "src/cli/dispatch.cpp": {
+        "reversible_edits": 11,
+        "sha256": "63fe8696bf21585dfd4e2412a7ff86717621118a34e13bde1b105f1475eb21d4"
+      },
+      "src/cli/main.cpp": {
+        "reversible_edits": 2,
+        "sha256": "595a3ba372554cc1a34f07310d89ad0ef12f79970dca34cc135e10d412fa580d"
+      },
+      "src/clique/core.cpp": {
+        "reversible_edits": 10,
+        "sha256": "bd6bbcdde6626ee312cb9ae081e64998868de22212c291456e37318722df84e6"
+      },
+      "src/clique/materialized.cpp": {
+        "reversible_edits": 9,
+        "sha256": "05806530218c83f547caaca5417d8b23809ece644b6649915d5c28725b2416c1"
+      },
+      "src/oracle/closure.cpp": {
+        "reversible_edits": 30,
+        "sha256": "13126365e8d23e92d8691c1fbf39d222676478db5f6e91d382a9006e0360fcee"
+      },
+      "src/solver/solver.cpp": {
+        "reversible_edits": 20,
+        "sha256": "5a90670254a137a3ea93cd971d1e99e7c61746065ee708ced9413c5f1e100970"
+      }
+    },
+    "observer": {
+      "CMakeLists.txt": "50783b6ff29efb5c6995cceec65e4439f978cc52368b3afca33fe5f9520f88e9",
+      "README.md": "d15a6e9a5cf1ed015da3a118ce83d4b1b2cd3744cad491e9f13f9829acc93d5d",
+      "boundary_test.cpp": "fbb40ab4748ce224fb5d2fc39897e3864e2381b0898f0ef789b1bf8b8ed39ef1",
+      "fixtures.py": "f6c68e7b765e36be106d69a3c2e6832c9c34970b8e211c188488383a31124ed6",
+      "instrument.py": "a5bfee40c1f0319b732cf9df1b36d6407f1f7b64674f99fcab45b0a4815928f9",
+      "observer.hpp": "d4ba458ea605e5dfa5ec56092e9222726d3a49a71af1776f5a6e90818a720c11",
+      "pack_evidence.py": "f76c303fc1dd2a6175dee11405812ed33c68c7e9e160144a9c990031667caee4",
+      "reports.py": "f83385e8394851a2e38b56ae9e0638447d2f22a468759eb57b623897bc4def22",
+      "source_pins.json": "2725bec53ff2f05e54a4ae40df52c46744ce0b32bed6970c83910f8165129f0b",
+      "test_native_boundaries.py": "0ffa74f99755c29b221bb698e6a8f6a3d3270c81baecfe544eab39de9c98ab6b",
+      "test_reports.py": "cc4d5582679ed168dec4e5f0c48116c28c2e1956995c43f62775265498a30c05",
+      "timer_test.cpp": "fcb8d32c4cb285ac9d8ab6945bc5f654de84329b93adc5cd58780a5761424fe1",
+      "validate.py": "74c15970c550894e63a9208ec69e0cbc1fe95309e0d6ab8cb4ea345abc597b6a",
+      "verify_build.py": "cab974d43106df2b8235f018ce67ff9a1f9d56b0322a2b0a8eee5742ccfba82f"
+    },
+    "production": {
+      "CMakeLists.txt": "dc5758db51d26f1af8046f0c3a579662c8b7476605d39ee23d2273cc0de1a97d",
+      "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2",
+      "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
+      "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
+      "include/vflhcds/clique/materialized.hpp": "f38b0fd48337948e7cb826c0f407f4052dca900644626982c80eed4e1e663608",
+      "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+      "include/vflhcds/core/exact.hpp": "232bb07cbc20da7438e54eeceb13e9c792e4f9fdbb9f4ade24461e198eac6111",
+      "include/vflhcds/core/graph.hpp": "77c8201442f52cb52365956f0c8306e5185c04a7cc1cb4511905aecb7a071964",
+      "include/vflhcds/flow/dinic.hpp": "f903d13f57fcc99adc4ff4ab09f634cac3e997f1b5a3613e1287eb12dd1adf0f",
+      "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
+      "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
+      "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+      "include/vflhcds/oracle/closure.hpp": "6a042d0423bcacc3ca531f1ca027809ef3b0251b7d07fc7c1ba02f34c221172e",
+      "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
+      "include/vflhcds/solver/solver.hpp": "3959a9ff3dccdde742b5e4a6cb04e9b4c2327cadad9fdc5e3632ee7f5da55528",
+      "include/vflhcds/telemetry/query.hpp": "528312311c071d51b54f9b4159a228dc3fe76dc7c793ea0cea0f0240dcc487de",
+      "src/cli/dispatch.cpp": "7523d3550bbfc290b1a6ac144cdbc4bdf57fa0e482df78fa6d3c27fa51c640e6",
+      "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
+      "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
+      "src/clique/materialized.cpp": "682f6a0f443954aebda04c3870e30191faf49e186c180f4dbf650c7f17bef49d",
+      "src/core/exact.cpp": "77a91da3f2dd666ce1aca55a062359f1317cb29894a5e48e79a955f478e455bc",
+      "src/core/graph.cpp": "e691e4cb42a8a0c30e099bd04cd097e90e310567e179db2c69fbf1094b242144",
+      "src/io/graph.cpp": "d280a1376514e2e7d85f87aa3885c00ffdc3b9d8e208210dfe7cc5f78910b46d",
+      "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
+      "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
+      "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+      "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
+      "src/solver/solver.cpp": "d07f0831f8edb63c085db0d7111295cb5c4de10cf0787c6cd73e715bb4e19464",
+      "src/telemetry/query.cpp": "cdec53acad34b0b3b9a5989f044081bc28c44ff8b3e7cc30eb19760c7e874837"
+    },
+    "schema": 1
+  },
+  "workers": 1
+}

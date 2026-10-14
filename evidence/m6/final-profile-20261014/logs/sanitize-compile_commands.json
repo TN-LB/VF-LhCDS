@@ -1,0 +1,218 @@
+[
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/production/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production/generated/build_info.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production/generated/build_info.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/production/generated/build_info.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/instrumented/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/cli/dispatch.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/cli/dispatch.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/instrumented/src/cli/dispatch.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/status.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/instrumented/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/clique/materialized.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/clique/materialized.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/instrumented/src/clique/materialized.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/instrumented/src/clique/core.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/clique/core.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/clique/core.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/instrumented/src/clique/core.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/instrumented/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/oracle/closure.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/oracle/closure.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/instrumented/src/oracle/closure.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/solution.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/solution.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/solution.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/solution.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/instrumented/src/solver/solver.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/solver/solver.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/solver/solver.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/instrumented/src/solver/solver.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+  "output": "CMakeFiles/final_profile_lib.dir/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_final_profile.dir/instrumented/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/cli/main.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/instrumented/src/cli/main.cpp",
+  "output": "CMakeFiles/vflhcds_final_profile.dir/instrumented/src/cli/main.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_timer_test.dir/timer_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/experiments/final_profile/timer_test.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/experiments/final_profile/timer_test.cpp",
+  "output": "CMakeFiles/final_profile_timer_test.dir/timer_test.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_profile_boundary_test.dir/boundary_test.cpp.o -c /Users/nost/Documents/VF-LhCDS/experiments/final_profile/boundary_test.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/experiments/final_profile/boundary_test.cpp",
+  "output": "CMakeFiles/final_profile_boundary_test.dir/boundary_test.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_control_primitives.dir/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+  "output": "CMakeFiles/final_control_primitives.dir/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_control_solver_probe.dir/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp",
+  "output": "CMakeFiles/final_control_solver_probe.dir/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_control_core.dir/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp",
+  "output": "CMakeFiles/final_control_core.dir/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_diagnostic_primitives.dir/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp",
+  "output": "CMakeFiles/final_diagnostic_primitives.dir/Users/nost/Documents/VF-LhCDS/tests/m2_primitives.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_diagnostic_solver_probe.dir/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp",
+  "output": "CMakeFiles/final_diagnostic_solver_probe.dir/Users/nost/Documents/VF-LhCDS/tests/m3_probe.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize",
+  "command": "/usr/bin/c++ -DVFLHCDS_TEST_COUNT_MEMBERSHIP -I/Users/nost/Documents/VF-LhCDS/include -I/Users/nost/Documents/VF-LhCDS/experiments/final_profile -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/final_diagnostic_core.dir/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp.o -c /Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp",
+  "output": "CMakeFiles/final_diagnostic_core.dir/Users/nost/Documents/VF-LhCDS/tests/m4_core.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o -c /Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production/generated/build_info.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production/generated/build_info.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/generated/build_info.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/cli/dispatch.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/cli/dispatch.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/status.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/io/status.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/core/exact.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/core/exact.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/core/graph.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/core/graph.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/clique/materialized.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/clique/materialized.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/clique/core.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/clique/core.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/clique/core.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/oracle/closure.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/telemetry/query.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/telemetry/query.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/graph.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/io/graph.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/solution.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/solution.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/io/solution.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/solver/solver.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/solver/solver.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/io/sha256.cpp",
+  "output": "production/CMakeFiles/vflhcds_lib.dir/src/io/sha256.cpp.o"
+},
+{
+  "directory": "/Users/nost/Documents/VF-LhCDS/build-final-profile-sanitize/production",
+  "command": "/usr/bin/c++  -I/Users/nost/Documents/VF-LhCDS/include -isystem /Users/nost/Documents/VF-LhCDS/.deps/boost_1_86_0 -g -std=c++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all -o CMakeFiles/vflhcds.dir/src/cli/main.cpp.o -c /Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+  "file": "/Users/nost/Documents/VF-LhCDS/src/cli/main.cpp",
+  "output": "production/CMakeFiles/vflhcds.dir/src/cli/main.cpp.o"
+}
+]
