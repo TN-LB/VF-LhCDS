@@ -6,6 +6,7 @@ from pathlib import Path
 import tarfile
 
 SCHEMA = 'vflhcds.final_profile'
+INVENTORY = {'clique_id_capacity', 'clique_id_bytes', 'frontier_peak_size', 'frontier_peak_capacity'}
 STATUSES = {'completed', 'timeout', 'oom', 'error', 'not_run'}
 
 
@@ -80,7 +81,7 @@ def semantic_trace(events):
 def difference(after, before):
     # Maxima/depth histogram are retained as separately named statistics, not sums.
     return {key: after.get(key, 0) - before.get(key, 0) for key in sorted(set(after) | set(before))
-            if not key.endswith('_max') and key != 'maximum_depth'}
+            if not key.endswith('_max') and key != 'maximum_depth' and key not in INVENTORY}
 
 
 def load_bundle(path, *, formal=False):
@@ -215,6 +216,8 @@ def early_stop(bundle):
             if boundary:
                 end = next(e for e in d_full['events_data'] if e['event'] == 'solve_end')
                 index = next(e for e in d_full['events_data'] if e['event'] == 'index')
+                initial = next((e for e in d_full['events_data']
+                                if e['event'] == 'worklist' and e['query_id'] == 0), index)
                 fixed_work = d_fixed['events_data'][-1]['work']
                 if any(fixed_work.get(key, 0) != boundary['work'].get(key, 0)
                        for key in set(fixed_work) | set(boundary['work'])):
@@ -222,8 +225,8 @@ def early_stop(bundle):
                 item.update(coverage='executed_full_suffix',
                             suffix_work=difference(end['work'], boundary['work']),
                             suffix_phase_ns=difference(end['phases_ns'], boundary['phases_ns']),
-                            unavoidable_initial_work=index['work'],
-                            initial_phase_ns=index['phases_ns'], pending_at_rank=boundary['pending_intervals'],
+                            unavoidable_initial_work=initial['work'],
+                            initial_phase_ns=initial['phases_ns'], pending_at_rank=boundary['pending_intervals'],
                             measured_process_saving_seconds=full['wall_seconds'] - fixed['wall_seconds'],
                             interpretation='full-run suffix; not a prediction of end-to-end savings or streaming latency')
             else:
@@ -249,11 +252,41 @@ def overhead(bundle):
     return result
 
 
+def local_cliques(bundle):
+    rows = bundle['rows']; result = []
+    for control in rows:
+        if control['algorithm'] != 'VF' or control['role'] != 'control' or control['work_mode'] != 'global':
+            continue
+        d_control = match(rows, control, role='diagnostic')
+        for mode in ('interval-scan', 'interval-reuse'):
+            local = match(rows, control, work_mode=mode)
+            d_local = match(rows, control, role='diagnostic', work_mode=mode)
+            good = usable(control, local, d_control, d_local)
+            item = {'global': control['run_id'], 'local': local['run_id'] if local else None,
+                    'work_mode': mode, 'coverage': 'paired' if good else 'unavailable_pair'}
+            if good:
+                if control['output_data'] != local['output_data'] or semantic_trace(d_control['events_data']) != semantic_trace(d_local['events_data']):
+                    raise ValueError('local clique semantic disagreement')
+                a, b = profile(d_control), profile(d_local)
+                item.update(work_delta=difference(b['work'], a['work']),
+                            inventory={key: b['work'].get(key) for key in sorted(INVENTORY)},
+                            phase_delta_ns=difference(b['phases_ns'], a['phases_ns']),
+                            process_rss_delta_bytes=local['peak_rss_bytes']-control['peak_rss_bytes'],
+                            process_time_delta_seconds=local['wall_seconds']-control['wall_seconds'],
+                            interpretation='Includes partition/setup and remaining counts/core; no guaranteed speedup')
+            result.append(item)
+    return result
+
+
 def build(bundle):
-    return {'schema': 1, 'scope': bundle['scope'], 'missing_run_ids': bundle['missing_run_ids'],
+    result = {'schema': 1, 'scope': bundle['scope'], 'missing_run_ids': bundle['missing_run_ids'],
             'outcomes': {status: sum(r['status'] == status for r in bundle['rows']) for status in sorted(STATUSES)},
             'vf_ippv': cost_associations(bundle), 'core': core_cost(bundle),
             'early_stop': early_stop(bundle), 'overhead': overhead(bundle)}
+    # Keep historical global-only M6 report bytes reproducible.
+    if any(row['work_mode'] != 'global' for row in bundle['rows']):
+        result['local_cliques'] = local_cliques(bundle)
+    return result
 
 
 def main():

@@ -24,7 +24,7 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
         const bool flag = solving && key == "--all";
         const bool known = key == "--graph" || ((oracle || solving) && (key == "--h" || key == "--output" || key == "--footprint-scan" || key == "--clique-enumeration" || key == "--clique-count"))
             || (oracle && (key == "--lambda" || key == "--x" || key == "--y"))
-            || (solving && (key == "--k" || key == "--core-reduction" || flag));
+            || (solving && (key == "--k" || key == "--core-reduction" || key == "--clique-work" || flag));
         if (!known || (!flag && i == args.size())) throw std::invalid_argument("unknown or missing option");
         const std::string value = flag ? "" : std::string(args[i++]);
         if (!options.emplace(key, value).second) throw std::invalid_argument("duplicate option");
@@ -60,6 +60,12 @@ int operation(const std::vector<std::string_view>& args, std::ostream& out,
         else if (value != "sorted") throw std::invalid_argument("unknown clique counting mode");
     }
     if (solving) {
+        if (options.count("--clique-work") != 0) {
+            const auto& value = options.at("--clique-work");
+            if (value == "interval-scan") execution.clique_work = CliqueWork::IntervalScan;
+            else if (value == "interval-reuse") execution.clique_work = CliqueWork::IntervalReuse;
+            else if (value != "global") throw std::invalid_argument("unknown clique work mode");
+        }
         if (options.count("--k") != 0) {
             k = parse_integer(options.at("--k"));
             if (*k < 1) throw std::invalid_argument("k < 1");
@@ -141,6 +147,7 @@ int run_cli(const std::vector<std::string_view>& args, std::ostream& out, std::o
                "       vflhcds oracle --graph G --h H --lambda A/B [--x X --y Y] [--footprint-scan sorted|membership] [--output P]\n"
                "       solve/oracle: [--clique-enumeration combinations|adjacency] (default combinations)\n"
                "       solve/oracle: [--clique-count sorted|membership] (default sorted)\n"
+               "       solve: [--clique-work global|interval-scan|interval-reuse] (default global)\n"
                "Contracts: docs/INTERFACE_CONTRACT.md\n";
         return exit_code(RunStatus::completed);
     }

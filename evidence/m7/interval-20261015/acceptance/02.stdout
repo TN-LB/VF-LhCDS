@@ -1,0 +1,12 @@
+[ 40%] Built target vflhcds_lib
+[ 51%] Built target vflhcds
+[ 51%] Built target vflhcds_skeleton_test
+[ 59%] Built target vflhcds_primitives_test
+[ 62%] Built target vflhcds_m2_probe
+[ 72%] Built target vflhcds_interval_test
+[ 72%] Built target vflhcds_enumeration_test
+[ 81%] Built target vflhcds_m3_probe
+[ 83%] Built target vflhcds_solver_test
+[ 94%] Built target vflhcds_counting_test
+[ 94%] Built target vflhcds_core_test
+[100%] Built target vflhcds_m4_profile

@@ -1,4 +1,5 @@
 #include "vflhcds/solver/solver.hpp"
+#include "vflhcds/solver/traversal.hpp"
 #include <algorithm>
 #include <iterator>
 #include <sstream>
@@ -20,27 +21,28 @@ SolveResult solve(const MaterializedCliques& index, const std::optional<BigInt>&
     const auto cancelled = [&] { if (stop && stop()) throw Incomplete("controlled cancellation"); };
     cancelled();
     const ClosureOracle oracle(index);
-    std::vector<ChainInterval> stack{oracle.root_interval()};
+    IntervalTraversal traversal(oracle, options.clique_work);
+    stats.clique_work = options.clique_work;
+    stats.clique_id_size = traversal.id_size(); stats.clique_id_capacity = traversal.id_capacity();
     SolveResult result;
     Membership lower(index.graph().size());
-    while (!stack.empty()) {
+    while (!traversal.empty()) {
         cancelled();
-        const auto interval = std::move(stack.back()); stack.pop_back();
         ++stats.logical_interval_queries;
         QueryStats query;
         // The oracle resets its own standalone logical counter. Interval entries
         // belong to this orchestration, including zero-lambda queries and failures.
-        const auto z = [&] {
-            try { return oracle.separate(interval, policy, &query, options); }
+        const auto step = [&] {
+            try { return traversal.next(policy, query, options); }
             catch (...) { query.logical_interval_queries = 1; stats.record(query); throw; }
         }();
+        const auto& interval = step.interval; const auto& z = step.z;
+        stats.frontier_peak_size = std::max(stats.frontier_peak_size, BigInt(traversal.frontier_size()));
+        stats.frontier_peak_capacity = std::max(stats.frontier_peak_capacity, BigInt(traversal.frontier_capacity()));
         query.logical_interval_queries = 1; stats.record(query);
         if (trace) trace(interval, z, query);
         const auto& x = interval.x().vertices(); const auto& y = interval.y().vertices();
         if (z.vertices() != y) {
-            // Stack order guarantees no eager right-child oracle execution.
-            stack.push_back(oracle.chain_interval(z, interval.y()));
-            stack.push_back(oracle.chain_interval(interval.x(), z));
             continue;
         }
         VertexSet added;
@@ -73,7 +75,13 @@ SolveResult solve(const MaterializedCliques& index, const std::optional<BigInt>&
 }
 std::string solve_stats_json(const SolveStats& stats) {
     std::ostringstream out;
-    out << "{\"logical_interval_queries\":" << stats.logical_interval_queries
+    const char* work = stats.clique_work == CliqueWork::Global ? "global"
+        : stats.clique_work == CliqueWork::IntervalScan ? "interval-scan" : "interval-reuse";
+    out << "{\"clique_work\":\"" << work << "\",\"clique_id_size\":" << stats.clique_id_size
+        << ",\"clique_id_capacity\":" << stats.clique_id_capacity
+        << ",\"frontier_peak_size\":" << stats.frontier_peak_size
+        << ",\"frontier_peak_capacity\":" << stats.frontier_peak_capacity
+        << ",\"logical_interval_queries\":" << stats.logical_interval_queries
         << ",\"mincut_calls\":" << stats.mincut_calls << ",\"cliques_scanned\":" << stats.cliques_scanned
         << ",\"cliques_enumerated\":" << stats.cliques_enumerated
         << ",\"queries\":[";

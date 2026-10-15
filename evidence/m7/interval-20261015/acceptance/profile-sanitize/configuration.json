@@ -1,0 +1,2082 @@
+{
+  "cache_policy": "uncontrolled",
+  "fixtures": [
+    {
+      "edges": [],
+      "h": 3,
+      "name": "isolates",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 2,
+      "name": "split_nonoutput",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 2,
+      "name": "tied_layer",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "ordinary_bridge",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "core_restore",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 2,
+      "name": "core_cascade",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "h": 1606938044258990275541962092341162602522202993782792835301376,
+      "name": "h_above_n",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 3,
+      "name": "repeated_footprints",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_4",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 3,
+      "name": "concentration_5",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_1",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_2",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "h": 3,
+      "name": "equal_regions_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_1",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_2",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "peeling_tail_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "nested_density_layers_2",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "h": 2,
+      "name": "nested_density_layers_3",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "h": 2,
+      "name": "nested_density_layers_4",
+      "seed": null,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "edges": [
+        [
+          2,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_0",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_1",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 4,
+      "name": "seed_20261014_2",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_3",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_4",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 4,
+      "name": "seed_20261014_5",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 2,
+      "name": "seed_20261014_6",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "h": 3,
+      "name": "seed_20261014_7",
+      "seed": 20261014,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "memory_limit_bytes": null,
+  "native_timeout_seconds": 30,
+  "repeats": 1,
+  "resource_rationale": "small deterministic validation; no real-graph or M8 performance claim",
+  "schedule": [
+    "isolates-off-global-all-control",
+    "isolates-off-global-all-diagnostic",
+    "isolates-off-global-1-control",
+    "isolates-off-global-1-diagnostic",
+    "isolates-off-interval-scan-all-control",
+    "isolates-off-interval-scan-all-diagnostic",
+    "isolates-off-interval-scan-1-control",
+    "isolates-off-interval-scan-1-diagnostic",
+    "isolates-off-interval-reuse-all-control",
+    "isolates-off-interval-reuse-all-diagnostic",
+    "isolates-off-interval-reuse-1-control",
+    "isolates-off-interval-reuse-1-diagnostic",
+    "isolates-safe-global-all-control",
+    "isolates-safe-global-all-diagnostic",
+    "isolates-safe-global-1-control",
+    "isolates-safe-global-1-diagnostic",
+    "isolates-safe-interval-scan-all-control",
+    "isolates-safe-interval-scan-all-diagnostic",
+    "isolates-safe-interval-scan-1-control",
+    "isolates-safe-interval-scan-1-diagnostic",
+    "isolates-safe-interval-reuse-all-control",
+    "isolates-safe-interval-reuse-all-diagnostic",
+    "isolates-safe-interval-reuse-1-control",
+    "isolates-safe-interval-reuse-1-diagnostic",
+    "split_nonoutput-off-global-all-control",
+    "split_nonoutput-off-global-all-diagnostic",
+    "split_nonoutput-off-global-1-control",
+    "split_nonoutput-off-global-1-diagnostic",
+    "split_nonoutput-off-interval-scan-all-control",
+    "split_nonoutput-off-interval-scan-all-diagnostic",
+    "split_nonoutput-off-interval-scan-1-control",
+    "split_nonoutput-off-interval-scan-1-diagnostic",
+    "split_nonoutput-off-interval-reuse-all-control",
+    "split_nonoutput-off-interval-reuse-all-diagnostic",
+    "split_nonoutput-off-interval-reuse-1-control",
+    "split_nonoutput-off-interval-reuse-1-diagnostic",
+    "split_nonoutput-safe-global-all-control",
+    "split_nonoutput-safe-global-all-diagnostic",
+    "split_nonoutput-safe-global-1-control",
+    "split_nonoutput-safe-global-1-diagnostic",
+    "split_nonoutput-safe-interval-scan-all-control",
+    "split_nonoutput-safe-interval-scan-all-diagnostic",
+    "split_nonoutput-safe-interval-scan-1-control",
+    "split_nonoutput-safe-interval-scan-1-diagnostic",
+    "split_nonoutput-safe-interval-reuse-all-control",
+    "split_nonoutput-safe-interval-reuse-all-diagnostic",
+    "split_nonoutput-safe-interval-reuse-1-control",
+    "split_nonoutput-safe-interval-reuse-1-diagnostic",
+    "tied_layer-off-global-all-control",
+    "tied_layer-off-global-all-diagnostic",
+    "tied_layer-off-global-1-control",
+    "tied_layer-off-global-1-diagnostic",
+    "tied_layer-off-interval-scan-all-control",
+    "tied_layer-off-interval-scan-all-diagnostic",
+    "tied_layer-off-interval-scan-1-control",
+    "tied_layer-off-interval-scan-1-diagnostic",
+    "tied_layer-off-interval-reuse-all-control",
+    "tied_layer-off-interval-reuse-all-diagnostic",
+    "tied_layer-off-interval-reuse-1-control",
+    "tied_layer-off-interval-reuse-1-diagnostic",
+    "tied_layer-safe-global-all-control",
+    "tied_layer-safe-global-all-diagnostic",
+    "tied_layer-safe-global-1-control",
+    "tied_layer-safe-global-1-diagnostic",
+    "tied_layer-safe-interval-scan-all-control",
+    "tied_layer-safe-interval-scan-all-diagnostic",
+    "tied_layer-safe-interval-scan-1-control",
+    "tied_layer-safe-interval-scan-1-diagnostic",
+    "tied_layer-safe-interval-reuse-all-control",
+    "tied_layer-safe-interval-reuse-all-diagnostic",
+    "tied_layer-safe-interval-reuse-1-control",
+    "tied_layer-safe-interval-reuse-1-diagnostic",
+    "ordinary_bridge-off-global-all-control",
+    "ordinary_bridge-off-global-all-diagnostic",
+    "ordinary_bridge-off-global-1-control",
+    "ordinary_bridge-off-global-1-diagnostic",
+    "ordinary_bridge-off-interval-scan-all-control",
+    "ordinary_bridge-off-interval-scan-all-diagnostic",
+    "ordinary_bridge-off-interval-scan-1-control",
+    "ordinary_bridge-off-interval-scan-1-diagnostic",
+    "ordinary_bridge-off-interval-reuse-all-control",
+    "ordinary_bridge-off-interval-reuse-all-diagnostic",
+    "ordinary_bridge-off-interval-reuse-1-control",
+    "ordinary_bridge-off-interval-reuse-1-diagnostic",
+    "ordinary_bridge-safe-global-all-control",
+    "ordinary_bridge-safe-global-all-diagnostic",
+    "ordinary_bridge-safe-global-1-control",
+    "ordinary_bridge-safe-global-1-diagnostic",
+    "ordinary_bridge-safe-interval-scan-all-control",
+    "ordinary_bridge-safe-interval-scan-all-diagnostic",
+    "ordinary_bridge-safe-interval-scan-1-control",
+    "ordinary_bridge-safe-interval-scan-1-diagnostic",
+    "ordinary_bridge-safe-interval-reuse-all-control",
+    "ordinary_bridge-safe-interval-reuse-all-diagnostic",
+    "ordinary_bridge-safe-interval-reuse-1-control",
+    "ordinary_bridge-safe-interval-reuse-1-diagnostic",
+    "core_restore-off-global-all-control",
+    "core_restore-off-global-all-diagnostic",
+    "core_restore-off-global-1-control",
+    "core_restore-off-global-1-diagnostic",
+    "core_restore-off-interval-scan-all-control",
+    "core_restore-off-interval-scan-all-diagnostic",
+    "core_restore-off-interval-scan-1-control",
+    "core_restore-off-interval-scan-1-diagnostic",
+    "core_restore-off-interval-reuse-all-control",
+    "core_restore-off-interval-reuse-all-diagnostic",
+    "core_restore-off-interval-reuse-1-control",
+    "core_restore-off-interval-reuse-1-diagnostic",
+    "core_restore-safe-global-all-control",
+    "core_restore-safe-global-all-diagnostic",
+    "core_restore-safe-global-1-control",
+    "core_restore-safe-global-1-diagnostic",
+    "core_restore-safe-interval-scan-all-control",
+    "core_restore-safe-interval-scan-all-diagnostic",
+    "core_restore-safe-interval-scan-1-control",
+    "core_restore-safe-interval-scan-1-diagnostic",
+    "core_restore-safe-interval-reuse-all-control",
+    "core_restore-safe-interval-reuse-all-diagnostic",
+    "core_restore-safe-interval-reuse-1-control",
+    "core_restore-safe-interval-reuse-1-diagnostic",
+    "core_cascade-off-global-all-control",
+    "core_cascade-off-global-all-diagnostic",
+    "core_cascade-off-global-1-control",
+    "core_cascade-off-global-1-diagnostic",
+    "core_cascade-off-interval-scan-all-control",
+    "core_cascade-off-interval-scan-all-diagnostic",
+    "core_cascade-off-interval-scan-1-control",
+    "core_cascade-off-interval-scan-1-diagnostic",
+    "core_cascade-off-interval-reuse-all-control",
+    "core_cascade-off-interval-reuse-all-diagnostic",
+    "core_cascade-off-interval-reuse-1-control",
+    "core_cascade-off-interval-reuse-1-diagnostic",
+    "core_cascade-safe-global-all-control",
+    "core_cascade-safe-global-all-diagnostic",
+    "core_cascade-safe-global-1-control",
+    "core_cascade-safe-global-1-diagnostic",
+    "core_cascade-safe-interval-scan-all-control",
+    "core_cascade-safe-interval-scan-all-diagnostic",
+    "core_cascade-safe-interval-scan-1-control",
+    "core_cascade-safe-interval-scan-1-diagnostic",
+    "core_cascade-safe-interval-reuse-all-control",
+    "core_cascade-safe-interval-reuse-all-diagnostic",
+    "core_cascade-safe-interval-reuse-1-control",
+    "core_cascade-safe-interval-reuse-1-diagnostic",
+    "h_above_n-off-global-all-control",
+    "h_above_n-off-global-all-diagnostic",
+    "h_above_n-off-global-1-control",
+    "h_above_n-off-global-1-diagnostic",
+    "h_above_n-off-interval-scan-all-control",
+    "h_above_n-off-interval-scan-all-diagnostic",
+    "h_above_n-off-interval-scan-1-control",
+    "h_above_n-off-interval-scan-1-diagnostic",
+    "h_above_n-off-interval-reuse-all-control",
+    "h_above_n-off-interval-reuse-all-diagnostic",
+    "h_above_n-off-interval-reuse-1-control",
+    "h_above_n-off-interval-reuse-1-diagnostic",
+    "h_above_n-safe-global-all-control",
+    "h_above_n-safe-global-all-diagnostic",
+    "h_above_n-safe-global-1-control",
+    "h_above_n-safe-global-1-diagnostic",
+    "h_above_n-safe-interval-scan-all-control",
+    "h_above_n-safe-interval-scan-all-diagnostic",
+    "h_above_n-safe-interval-scan-1-control",
+    "h_above_n-safe-interval-scan-1-diagnostic",
+    "h_above_n-safe-interval-reuse-all-control",
+    "h_above_n-safe-interval-reuse-all-diagnostic",
+    "h_above_n-safe-interval-reuse-1-control",
+    "h_above_n-safe-interval-reuse-1-diagnostic",
+    "repeated_footprints-off-global-all-control",
+    "repeated_footprints-off-global-all-diagnostic",
+    "repeated_footprints-off-global-1-control",
+    "repeated_footprints-off-global-1-diagnostic",
+    "repeated_footprints-off-interval-scan-all-control",
+    "repeated_footprints-off-interval-scan-all-diagnostic",
+    "repeated_footprints-off-interval-scan-1-control",
+    "repeated_footprints-off-interval-scan-1-diagnostic",
+    "repeated_footprints-off-interval-reuse-all-control",
+    "repeated_footprints-off-interval-reuse-all-diagnostic",
+    "repeated_footprints-off-interval-reuse-1-control",
+    "repeated_footprints-off-interval-reuse-1-diagnostic",
+    "repeated_footprints-safe-global-all-control",
+    "repeated_footprints-safe-global-all-diagnostic",
+    "repeated_footprints-safe-global-1-control",
+    "repeated_footprints-safe-global-1-diagnostic",
+    "repeated_footprints-safe-interval-scan-all-control",
+    "repeated_footprints-safe-interval-scan-all-diagnostic",
+    "repeated_footprints-safe-interval-scan-1-control",
+    "repeated_footprints-safe-interval-scan-1-diagnostic",
+    "repeated_footprints-safe-interval-reuse-all-control",
+    "repeated_footprints-safe-interval-reuse-all-diagnostic",
+    "repeated_footprints-safe-interval-reuse-1-control",
+    "repeated_footprints-safe-interval-reuse-1-diagnostic",
+    "concentration_3-off-global-all-control",
+    "concentration_3-off-global-all-diagnostic",
+    "concentration_3-off-global-1-control",
+    "concentration_3-off-global-1-diagnostic",
+    "concentration_3-off-interval-scan-all-control",
+    "concentration_3-off-interval-scan-all-diagnostic",
+    "concentration_3-off-interval-scan-1-control",
+    "concentration_3-off-interval-scan-1-diagnostic",
+    "concentration_3-off-interval-reuse-all-control",
+    "concentration_3-off-interval-reuse-all-diagnostic",
+    "concentration_3-off-interval-reuse-1-control",
+    "concentration_3-off-interval-reuse-1-diagnostic",
+    "concentration_3-safe-global-all-control",
+    "concentration_3-safe-global-all-diagnostic",
+    "concentration_3-safe-global-1-control",
+    "concentration_3-safe-global-1-diagnostic",
+    "concentration_3-safe-interval-scan-all-control",
+    "concentration_3-safe-interval-scan-all-diagnostic",
+    "concentration_3-safe-interval-scan-1-control",
+    "concentration_3-safe-interval-scan-1-diagnostic",
+    "concentration_3-safe-interval-reuse-all-control",
+    "concentration_3-safe-interval-reuse-all-diagnostic",
+    "concentration_3-safe-interval-reuse-1-control",
+    "concentration_3-safe-interval-reuse-1-diagnostic",
+    "concentration_4-off-global-all-control",
+    "concentration_4-off-global-all-diagnostic",
+    "concentration_4-off-global-1-control",
+    "concentration_4-off-global-1-diagnostic",
+    "concentration_4-off-interval-scan-all-control",
+    "concentration_4-off-interval-scan-all-diagnostic",
+    "concentration_4-off-interval-scan-1-control",
+    "concentration_4-off-interval-scan-1-diagnostic",
+    "concentration_4-off-interval-reuse-all-control",
+    "concentration_4-off-interval-reuse-all-diagnostic",
+    "concentration_4-off-interval-reuse-1-control",
+    "concentration_4-off-interval-reuse-1-diagnostic",
+    "concentration_4-safe-global-all-control",
+    "concentration_4-safe-global-all-diagnostic",
+    "concentration_4-safe-global-1-control",
+    "concentration_4-safe-global-1-diagnostic",
+    "concentration_4-safe-interval-scan-all-control",
+    "concentration_4-safe-interval-scan-all-diagnostic",
+    "concentration_4-safe-interval-scan-1-control",
+    "concentration_4-safe-interval-scan-1-diagnostic",
+    "concentration_4-safe-interval-reuse-all-control",
+    "concentration_4-safe-interval-reuse-all-diagnostic",
+    "concentration_4-safe-interval-reuse-1-control",
+    "concentration_4-safe-interval-reuse-1-diagnostic",
+    "concentration_5-off-global-all-control",
+    "concentration_5-off-global-all-diagnostic",
+    "concentration_5-off-global-1-control",
+    "concentration_5-off-global-1-diagnostic",
+    "concentration_5-off-interval-scan-all-control",
+    "concentration_5-off-interval-scan-all-diagnostic",
+    "concentration_5-off-interval-scan-1-control",
+    "concentration_5-off-interval-scan-1-diagnostic",
+    "concentration_5-off-interval-reuse-all-control",
+    "concentration_5-off-interval-reuse-all-diagnostic",
+    "concentration_5-off-interval-reuse-1-control",
+    "concentration_5-off-interval-reuse-1-diagnostic",
+    "concentration_5-safe-global-all-control",
+    "concentration_5-safe-global-all-diagnostic",
+    "concentration_5-safe-global-1-control",
+    "concentration_5-safe-global-1-diagnostic",
+    "concentration_5-safe-interval-scan-all-control",
+    "concentration_5-safe-interval-scan-all-diagnostic",
+    "concentration_5-safe-interval-scan-1-control",
+    "concentration_5-safe-interval-scan-1-diagnostic",
+    "concentration_5-safe-interval-reuse-all-control",
+    "concentration_5-safe-interval-reuse-all-diagnostic",
+    "concentration_5-safe-interval-reuse-1-control",
+    "concentration_5-safe-interval-reuse-1-diagnostic",
+    "equal_regions_1-off-global-all-control",
+    "equal_regions_1-off-global-all-diagnostic",
+    "equal_regions_1-off-global-1-control",
+    "equal_regions_1-off-global-1-diagnostic",
+    "equal_regions_1-off-interval-scan-all-control",
+    "equal_regions_1-off-interval-scan-all-diagnostic",
+    "equal_regions_1-off-interval-scan-1-control",
+    "equal_regions_1-off-interval-scan-1-diagnostic",
+    "equal_regions_1-off-interval-reuse-all-control",
+    "equal_regions_1-off-interval-reuse-all-diagnostic",
+    "equal_regions_1-off-interval-reuse-1-control",
+    "equal_regions_1-off-interval-reuse-1-diagnostic",
+    "equal_regions_1-safe-global-all-control",
+    "equal_regions_1-safe-global-all-diagnostic",
+    "equal_regions_1-safe-global-1-control",
+    "equal_regions_1-safe-global-1-diagnostic",
+    "equal_regions_1-safe-interval-scan-all-control",
+    "equal_regions_1-safe-interval-scan-all-diagnostic",
+    "equal_regions_1-safe-interval-scan-1-control",
+    "equal_regions_1-safe-interval-scan-1-diagnostic",
+    "equal_regions_1-safe-interval-reuse-all-control",
+    "equal_regions_1-safe-interval-reuse-all-diagnostic",
+    "equal_regions_1-safe-interval-reuse-1-control",
+    "equal_regions_1-safe-interval-reuse-1-diagnostic",
+    "equal_regions_2-off-global-all-control",
+    "equal_regions_2-off-global-all-diagnostic",
+    "equal_regions_2-off-global-1-control",
+    "equal_regions_2-off-global-1-diagnostic",
+    "equal_regions_2-off-interval-scan-all-control",
+    "equal_regions_2-off-interval-scan-all-diagnostic",
+    "equal_regions_2-off-interval-scan-1-control",
+    "equal_regions_2-off-interval-scan-1-diagnostic",
+    "equal_regions_2-off-interval-reuse-all-control",
+    "equal_regions_2-off-interval-reuse-all-diagnostic",
+    "equal_regions_2-off-interval-reuse-1-control",
+    "equal_regions_2-off-interval-reuse-1-diagnostic",
+    "equal_regions_2-safe-global-all-control",
+    "equal_regions_2-safe-global-all-diagnostic",
+    "equal_regions_2-safe-global-1-control",
+    "equal_regions_2-safe-global-1-diagnostic",
+    "equal_regions_2-safe-interval-scan-all-control",
+    "equal_regions_2-safe-interval-scan-all-diagnostic",
+    "equal_regions_2-safe-interval-scan-1-control",
+    "equal_regions_2-safe-interval-scan-1-diagnostic",
+    "equal_regions_2-safe-interval-reuse-all-control",
+    "equal_regions_2-safe-interval-reuse-all-diagnostic",
+    "equal_regions_2-safe-interval-reuse-1-control",
+    "equal_regions_2-safe-interval-reuse-1-diagnostic",
+    "equal_regions_3-off-global-all-control",
+    "equal_regions_3-off-global-all-diagnostic",
+    "equal_regions_3-off-global-1-control",
+    "equal_regions_3-off-global-1-diagnostic",
+    "equal_regions_3-off-interval-scan-all-control",
+    "equal_regions_3-off-interval-scan-all-diagnostic",
+    "equal_regions_3-off-interval-scan-1-control",
+    "equal_regions_3-off-interval-scan-1-diagnostic",
+    "equal_regions_3-off-interval-reuse-all-control",
+    "equal_regions_3-off-interval-reuse-all-diagnostic",
+    "equal_regions_3-off-interval-reuse-1-control",
+    "equal_regions_3-off-interval-reuse-1-diagnostic",
+    "equal_regions_3-safe-global-all-control",
+    "equal_regions_3-safe-global-all-diagnostic",
+    "equal_regions_3-safe-global-1-control",
+    "equal_regions_3-safe-global-1-diagnostic",
+    "equal_regions_3-safe-interval-scan-all-control",
+    "equal_regions_3-safe-interval-scan-all-diagnostic",
+    "equal_regions_3-safe-interval-scan-1-control",
+    "equal_regions_3-safe-interval-scan-1-diagnostic",
+    "equal_regions_3-safe-interval-reuse-all-control",
+    "equal_regions_3-safe-interval-reuse-all-diagnostic",
+    "equal_regions_3-safe-interval-reuse-1-control",
+    "equal_regions_3-safe-interval-reuse-1-diagnostic",
+    "peeling_tail_1-off-global-all-control",
+    "peeling_tail_1-off-global-all-diagnostic",
+    "peeling_tail_1-off-global-1-control",
+    "peeling_tail_1-off-global-1-diagnostic",
+    "peeling_tail_1-off-interval-scan-all-control",
+    "peeling_tail_1-off-interval-scan-all-diagnostic",
+    "peeling_tail_1-off-interval-scan-1-control",
+    "peeling_tail_1-off-interval-scan-1-diagnostic",
+    "peeling_tail_1-off-interval-reuse-all-control",
+    "peeling_tail_1-off-interval-reuse-all-diagnostic",
+    "peeling_tail_1-off-interval-reuse-1-control",
+    "peeling_tail_1-off-interval-reuse-1-diagnostic",
+    "peeling_tail_1-safe-global-all-control",
+    "peeling_tail_1-safe-global-all-diagnostic",
+    "peeling_tail_1-safe-global-1-control",
+    "peeling_tail_1-safe-global-1-diagnostic",
+    "peeling_tail_1-safe-interval-scan-all-control",
+    "peeling_tail_1-safe-interval-scan-all-diagnostic",
+    "peeling_tail_1-safe-interval-scan-1-control",
+    "peeling_tail_1-safe-interval-scan-1-diagnostic",
+    "peeling_tail_1-safe-interval-reuse-all-control",
+    "peeling_tail_1-safe-interval-reuse-all-diagnostic",
+    "peeling_tail_1-safe-interval-reuse-1-control",
+    "peeling_tail_1-safe-interval-reuse-1-diagnostic",
+    "peeling_tail_2-off-global-all-control",
+    "peeling_tail_2-off-global-all-diagnostic",
+    "peeling_tail_2-off-global-1-control",
+    "peeling_tail_2-off-global-1-diagnostic",
+    "peeling_tail_2-off-interval-scan-all-control",
+    "peeling_tail_2-off-interval-scan-all-diagnostic",
+    "peeling_tail_2-off-interval-scan-1-control",
+    "peeling_tail_2-off-interval-scan-1-diagnostic",
+    "peeling_tail_2-off-interval-reuse-all-control",
+    "peeling_tail_2-off-interval-reuse-all-diagnostic",
+    "peeling_tail_2-off-interval-reuse-1-control",
+    "peeling_tail_2-off-interval-reuse-1-diagnostic",
+    "peeling_tail_2-safe-global-all-control",
+    "peeling_tail_2-safe-global-all-diagnostic",
+    "peeling_tail_2-safe-global-1-control",
+    "peeling_tail_2-safe-global-1-diagnostic",
+    "peeling_tail_2-safe-interval-scan-all-control",
+    "peeling_tail_2-safe-interval-scan-all-diagnostic",
+    "peeling_tail_2-safe-interval-scan-1-control",
+    "peeling_tail_2-safe-interval-scan-1-diagnostic",
+    "peeling_tail_2-safe-interval-reuse-all-control",
+    "peeling_tail_2-safe-interval-reuse-all-diagnostic",
+    "peeling_tail_2-safe-interval-reuse-1-control",
+    "peeling_tail_2-safe-interval-reuse-1-diagnostic",
+    "peeling_tail_3-off-global-all-control",
+    "peeling_tail_3-off-global-all-diagnostic",
+    "peeling_tail_3-off-global-1-control",
+    "peeling_tail_3-off-global-1-diagnostic",
+    "peeling_tail_3-off-interval-scan-all-control",
+    "peeling_tail_3-off-interval-scan-all-diagnostic",
+    "peeling_tail_3-off-interval-scan-1-control",
+    "peeling_tail_3-off-interval-scan-1-diagnostic",
+    "peeling_tail_3-off-interval-reuse-all-control",
+    "peeling_tail_3-off-interval-reuse-all-diagnostic",
+    "peeling_tail_3-off-interval-reuse-1-control",
+    "peeling_tail_3-off-interval-reuse-1-diagnostic",
+    "peeling_tail_3-safe-global-all-control",
+    "peeling_tail_3-safe-global-all-diagnostic",
+    "peeling_tail_3-safe-global-1-control",
+    "peeling_tail_3-safe-global-1-diagnostic",
+    "peeling_tail_3-safe-interval-scan-all-control",
+    "peeling_tail_3-safe-interval-scan-all-diagnostic",
+    "peeling_tail_3-safe-interval-scan-1-control",
+    "peeling_tail_3-safe-interval-scan-1-diagnostic",
+    "peeling_tail_3-safe-interval-reuse-all-control",
+    "peeling_tail_3-safe-interval-reuse-all-diagnostic",
+    "peeling_tail_3-safe-interval-reuse-1-control",
+    "peeling_tail_3-safe-interval-reuse-1-diagnostic",
+    "nested_density_layers_2-off-global-all-control",
+    "nested_density_layers_2-off-global-all-diagnostic",
+    "nested_density_layers_2-off-global-1-control",
+    "nested_density_layers_2-off-global-1-diagnostic",
+    "nested_density_layers_2-off-interval-scan-all-control",
+    "nested_density_layers_2-off-interval-scan-all-diagnostic",
+    "nested_density_layers_2-off-interval-scan-1-control",
+    "nested_density_layers_2-off-interval-scan-1-diagnostic",
+    "nested_density_layers_2-off-interval-reuse-all-control",
+    "nested_density_layers_2-off-interval-reuse-all-diagnostic",
+    "nested_density_layers_2-off-interval-reuse-1-control",
+    "nested_density_layers_2-off-interval-reuse-1-diagnostic",
+    "nested_density_layers_2-safe-global-all-control",
+    "nested_density_layers_2-safe-global-all-diagnostic",
+    "nested_density_layers_2-safe-global-1-control",
+    "nested_density_layers_2-safe-global-1-diagnostic",
+    "nested_density_layers_2-safe-interval-scan-all-control",
+    "nested_density_layers_2-safe-interval-scan-all-diagnostic",
+    "nested_density_layers_2-safe-interval-scan-1-control",
+    "nested_density_layers_2-safe-interval-scan-1-diagnostic",
+    "nested_density_layers_2-safe-interval-reuse-all-control",
+    "nested_density_layers_2-safe-interval-reuse-all-diagnostic",
+    "nested_density_layers_2-safe-interval-reuse-1-control",
+    "nested_density_layers_2-safe-interval-reuse-1-diagnostic",
+    "nested_density_layers_3-off-global-all-control",
+    "nested_density_layers_3-off-global-all-diagnostic",
+    "nested_density_layers_3-off-global-1-control",
+    "nested_density_layers_3-off-global-1-diagnostic",
+    "nested_density_layers_3-off-interval-scan-all-control",
+    "nested_density_layers_3-off-interval-scan-all-diagnostic",
+    "nested_density_layers_3-off-interval-scan-1-control",
+    "nested_density_layers_3-off-interval-scan-1-diagnostic",
+    "nested_density_layers_3-off-interval-reuse-all-control",
+    "nested_density_layers_3-off-interval-reuse-all-diagnostic",
+    "nested_density_layers_3-off-interval-reuse-1-control",
+    "nested_density_layers_3-off-interval-reuse-1-diagnostic",
+    "nested_density_layers_3-safe-global-all-control",
+    "nested_density_layers_3-safe-global-all-diagnostic",
+    "nested_density_layers_3-safe-global-1-control",
+    "nested_density_layers_3-safe-global-1-diagnostic",
+    "nested_density_layers_3-safe-interval-scan-all-control",
+    "nested_density_layers_3-safe-interval-scan-all-diagnostic",
+    "nested_density_layers_3-safe-interval-scan-1-control",
+    "nested_density_layers_3-safe-interval-scan-1-diagnostic",
+    "nested_density_layers_3-safe-interval-reuse-all-control",
+    "nested_density_layers_3-safe-interval-reuse-all-diagnostic",
+    "nested_density_layers_3-safe-interval-reuse-1-control",
+    "nested_density_layers_3-safe-interval-reuse-1-diagnostic",
+    "nested_density_layers_4-off-global-all-control",
+    "nested_density_layers_4-off-global-all-diagnostic",
+    "nested_density_layers_4-off-global-1-control",
+    "nested_density_layers_4-off-global-1-diagnostic",
+    "nested_density_layers_4-off-interval-scan-all-control",
+    "nested_density_layers_4-off-interval-scan-all-diagnostic",
+    "nested_density_layers_4-off-interval-scan-1-control",
+    "nested_density_layers_4-off-interval-scan-1-diagnostic",
+    "nested_density_layers_4-off-interval-reuse-all-control",
+    "nested_density_layers_4-off-interval-reuse-all-diagnostic",
+    "nested_density_layers_4-off-interval-reuse-1-control",
+    "nested_density_layers_4-off-interval-reuse-1-diagnostic",
+    "nested_density_layers_4-safe-global-all-control",
+    "nested_density_layers_4-safe-global-all-diagnostic",
+    "nested_density_layers_4-safe-global-1-control",
+    "nested_density_layers_4-safe-global-1-diagnostic",
+    "nested_density_layers_4-safe-interval-scan-all-control",
+    "nested_density_layers_4-safe-interval-scan-all-diagnostic",
+    "nested_density_layers_4-safe-interval-scan-1-control",
+    "nested_density_layers_4-safe-interval-scan-1-diagnostic",
+    "nested_density_layers_4-safe-interval-reuse-all-control",
+    "nested_density_layers_4-safe-interval-reuse-all-diagnostic",
+    "nested_density_layers_4-safe-interval-reuse-1-control",
+    "nested_density_layers_4-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_0-off-global-all-control",
+    "seed_20261014_0-off-global-all-diagnostic",
+    "seed_20261014_0-off-global-1-control",
+    "seed_20261014_0-off-global-1-diagnostic",
+    "seed_20261014_0-off-interval-scan-all-control",
+    "seed_20261014_0-off-interval-scan-all-diagnostic",
+    "seed_20261014_0-off-interval-scan-1-control",
+    "seed_20261014_0-off-interval-scan-1-diagnostic",
+    "seed_20261014_0-off-interval-reuse-all-control",
+    "seed_20261014_0-off-interval-reuse-all-diagnostic",
+    "seed_20261014_0-off-interval-reuse-1-control",
+    "seed_20261014_0-off-interval-reuse-1-diagnostic",
+    "seed_20261014_0-safe-global-all-control",
+    "seed_20261014_0-safe-global-all-diagnostic",
+    "seed_20261014_0-safe-global-1-control",
+    "seed_20261014_0-safe-global-1-diagnostic",
+    "seed_20261014_0-safe-interval-scan-all-control",
+    "seed_20261014_0-safe-interval-scan-all-diagnostic",
+    "seed_20261014_0-safe-interval-scan-1-control",
+    "seed_20261014_0-safe-interval-scan-1-diagnostic",
+    "seed_20261014_0-safe-interval-reuse-all-control",
+    "seed_20261014_0-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_0-safe-interval-reuse-1-control",
+    "seed_20261014_0-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_1-off-global-all-control",
+    "seed_20261014_1-off-global-all-diagnostic",
+    "seed_20261014_1-off-global-1-control",
+    "seed_20261014_1-off-global-1-diagnostic",
+    "seed_20261014_1-off-interval-scan-all-control",
+    "seed_20261014_1-off-interval-scan-all-diagnostic",
+    "seed_20261014_1-off-interval-scan-1-control",
+    "seed_20261014_1-off-interval-scan-1-diagnostic",
+    "seed_20261014_1-off-interval-reuse-all-control",
+    "seed_20261014_1-off-interval-reuse-all-diagnostic",
+    "seed_20261014_1-off-interval-reuse-1-control",
+    "seed_20261014_1-off-interval-reuse-1-diagnostic",
+    "seed_20261014_1-safe-global-all-control",
+    "seed_20261014_1-safe-global-all-diagnostic",
+    "seed_20261014_1-safe-global-1-control",
+    "seed_20261014_1-safe-global-1-diagnostic",
+    "seed_20261014_1-safe-interval-scan-all-control",
+    "seed_20261014_1-safe-interval-scan-all-diagnostic",
+    "seed_20261014_1-safe-interval-scan-1-control",
+    "seed_20261014_1-safe-interval-scan-1-diagnostic",
+    "seed_20261014_1-safe-interval-reuse-all-control",
+    "seed_20261014_1-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_1-safe-interval-reuse-1-control",
+    "seed_20261014_1-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_2-off-global-all-control",
+    "seed_20261014_2-off-global-all-diagnostic",
+    "seed_20261014_2-off-global-1-control",
+    "seed_20261014_2-off-global-1-diagnostic",
+    "seed_20261014_2-off-interval-scan-all-control",
+    "seed_20261014_2-off-interval-scan-all-diagnostic",
+    "seed_20261014_2-off-interval-scan-1-control",
+    "seed_20261014_2-off-interval-scan-1-diagnostic",
+    "seed_20261014_2-off-interval-reuse-all-control",
+    "seed_20261014_2-off-interval-reuse-all-diagnostic",
+    "seed_20261014_2-off-interval-reuse-1-control",
+    "seed_20261014_2-off-interval-reuse-1-diagnostic",
+    "seed_20261014_2-safe-global-all-control",
+    "seed_20261014_2-safe-global-all-diagnostic",
+    "seed_20261014_2-safe-global-1-control",
+    "seed_20261014_2-safe-global-1-diagnostic",
+    "seed_20261014_2-safe-interval-scan-all-control",
+    "seed_20261014_2-safe-interval-scan-all-diagnostic",
+    "seed_20261014_2-safe-interval-scan-1-control",
+    "seed_20261014_2-safe-interval-scan-1-diagnostic",
+    "seed_20261014_2-safe-interval-reuse-all-control",
+    "seed_20261014_2-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_2-safe-interval-reuse-1-control",
+    "seed_20261014_2-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_3-off-global-all-control",
+    "seed_20261014_3-off-global-all-diagnostic",
+    "seed_20261014_3-off-global-1-control",
+    "seed_20261014_3-off-global-1-diagnostic",
+    "seed_20261014_3-off-interval-scan-all-control",
+    "seed_20261014_3-off-interval-scan-all-diagnostic",
+    "seed_20261014_3-off-interval-scan-1-control",
+    "seed_20261014_3-off-interval-scan-1-diagnostic",
+    "seed_20261014_3-off-interval-reuse-all-control",
+    "seed_20261014_3-off-interval-reuse-all-diagnostic",
+    "seed_20261014_3-off-interval-reuse-1-control",
+    "seed_20261014_3-off-interval-reuse-1-diagnostic",
+    "seed_20261014_3-safe-global-all-control",
+    "seed_20261014_3-safe-global-all-diagnostic",
+    "seed_20261014_3-safe-global-1-control",
+    "seed_20261014_3-safe-global-1-diagnostic",
+    "seed_20261014_3-safe-interval-scan-all-control",
+    "seed_20261014_3-safe-interval-scan-all-diagnostic",
+    "seed_20261014_3-safe-interval-scan-1-control",
+    "seed_20261014_3-safe-interval-scan-1-diagnostic",
+    "seed_20261014_3-safe-interval-reuse-all-control",
+    "seed_20261014_3-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_3-safe-interval-reuse-1-control",
+    "seed_20261014_3-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_4-off-global-all-control",
+    "seed_20261014_4-off-global-all-diagnostic",
+    "seed_20261014_4-off-global-1-control",
+    "seed_20261014_4-off-global-1-diagnostic",
+    "seed_20261014_4-off-interval-scan-all-control",
+    "seed_20261014_4-off-interval-scan-all-diagnostic",
+    "seed_20261014_4-off-interval-scan-1-control",
+    "seed_20261014_4-off-interval-scan-1-diagnostic",
+    "seed_20261014_4-off-interval-reuse-all-control",
+    "seed_20261014_4-off-interval-reuse-all-diagnostic",
+    "seed_20261014_4-off-interval-reuse-1-control",
+    "seed_20261014_4-off-interval-reuse-1-diagnostic",
+    "seed_20261014_4-safe-global-all-control",
+    "seed_20261014_4-safe-global-all-diagnostic",
+    "seed_20261014_4-safe-global-1-control",
+    "seed_20261014_4-safe-global-1-diagnostic",
+    "seed_20261014_4-safe-interval-scan-all-control",
+    "seed_20261014_4-safe-interval-scan-all-diagnostic",
+    "seed_20261014_4-safe-interval-scan-1-control",
+    "seed_20261014_4-safe-interval-scan-1-diagnostic",
+    "seed_20261014_4-safe-interval-reuse-all-control",
+    "seed_20261014_4-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_4-safe-interval-reuse-1-control",
+    "seed_20261014_4-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_5-off-global-all-control",
+    "seed_20261014_5-off-global-all-diagnostic",
+    "seed_20261014_5-off-global-1-control",
+    "seed_20261014_5-off-global-1-diagnostic",
+    "seed_20261014_5-off-interval-scan-all-control",
+    "seed_20261014_5-off-interval-scan-all-diagnostic",
+    "seed_20261014_5-off-interval-scan-1-control",
+    "seed_20261014_5-off-interval-scan-1-diagnostic",
+    "seed_20261014_5-off-interval-reuse-all-control",
+    "seed_20261014_5-off-interval-reuse-all-diagnostic",
+    "seed_20261014_5-off-interval-reuse-1-control",
+    "seed_20261014_5-off-interval-reuse-1-diagnostic",
+    "seed_20261014_5-safe-global-all-control",
+    "seed_20261014_5-safe-global-all-diagnostic",
+    "seed_20261014_5-safe-global-1-control",
+    "seed_20261014_5-safe-global-1-diagnostic",
+    "seed_20261014_5-safe-interval-scan-all-control",
+    "seed_20261014_5-safe-interval-scan-all-diagnostic",
+    "seed_20261014_5-safe-interval-scan-1-control",
+    "seed_20261014_5-safe-interval-scan-1-diagnostic",
+    "seed_20261014_5-safe-interval-reuse-all-control",
+    "seed_20261014_5-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_5-safe-interval-reuse-1-control",
+    "seed_20261014_5-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_6-off-global-all-control",
+    "seed_20261014_6-off-global-all-diagnostic",
+    "seed_20261014_6-off-global-1-control",
+    "seed_20261014_6-off-global-1-diagnostic",
+    "seed_20261014_6-off-interval-scan-all-control",
+    "seed_20261014_6-off-interval-scan-all-diagnostic",
+    "seed_20261014_6-off-interval-scan-1-control",
+    "seed_20261014_6-off-interval-scan-1-diagnostic",
+    "seed_20261014_6-off-interval-reuse-all-control",
+    "seed_20261014_6-off-interval-reuse-all-diagnostic",
+    "seed_20261014_6-off-interval-reuse-1-control",
+    "seed_20261014_6-off-interval-reuse-1-diagnostic",
+    "seed_20261014_6-safe-global-all-control",
+    "seed_20261014_6-safe-global-all-diagnostic",
+    "seed_20261014_6-safe-global-1-control",
+    "seed_20261014_6-safe-global-1-diagnostic",
+    "seed_20261014_6-safe-interval-scan-all-control",
+    "seed_20261014_6-safe-interval-scan-all-diagnostic",
+    "seed_20261014_6-safe-interval-scan-1-control",
+    "seed_20261014_6-safe-interval-scan-1-diagnostic",
+    "seed_20261014_6-safe-interval-reuse-all-control",
+    "seed_20261014_6-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_6-safe-interval-reuse-1-control",
+    "seed_20261014_6-safe-interval-reuse-1-diagnostic",
+    "seed_20261014_7-off-global-all-control",
+    "seed_20261014_7-off-global-all-diagnostic",
+    "seed_20261014_7-off-global-1-control",
+    "seed_20261014_7-off-global-1-diagnostic",
+    "seed_20261014_7-off-interval-scan-all-control",
+    "seed_20261014_7-off-interval-scan-all-diagnostic",
+    "seed_20261014_7-off-interval-scan-1-control",
+    "seed_20261014_7-off-interval-scan-1-diagnostic",
+    "seed_20261014_7-off-interval-reuse-all-control",
+    "seed_20261014_7-off-interval-reuse-all-diagnostic",
+    "seed_20261014_7-off-interval-reuse-1-control",
+    "seed_20261014_7-off-interval-reuse-1-diagnostic",
+    "seed_20261014_7-safe-global-all-control",
+    "seed_20261014_7-safe-global-all-diagnostic",
+    "seed_20261014_7-safe-global-1-control",
+    "seed_20261014_7-safe-global-1-diagnostic",
+    "seed_20261014_7-safe-interval-scan-all-control",
+    "seed_20261014_7-safe-interval-scan-all-diagnostic",
+    "seed_20261014_7-safe-interval-scan-1-control",
+    "seed_20261014_7-safe-interval-scan-1-diagnostic",
+    "seed_20261014_7-safe-interval-reuse-all-control",
+    "seed_20261014_7-safe-interval-reuse-all-diagnostic",
+    "seed_20261014_7-safe-interval-reuse-1-control",
+    "seed_20261014_7-safe-interval-reuse-1-diagnostic"
+  ],
+  "scope": "development-only",
+  "source_manifest": {
+    "generated": {
+      "src/cli/dispatch.cpp": {
+        "reversible_edits": 11,
+        "sha256": "0de1c1c74ea13eadb276e5e965e63a19d04100d88a857d211eeda7b39c1518f8"
+      },
+      "src/cli/main.cpp": {
+        "reversible_edits": 2,
+        "sha256": "595a3ba372554cc1a34f07310d89ad0ef12f79970dca34cc135e10d412fa580d"
+      },
+      "src/clique/core.cpp": {
+        "reversible_edits": 10,
+        "sha256": "bd6bbcdde6626ee312cb9ae081e64998868de22212c291456e37318722df84e6"
+      },
+      "src/clique/materialized.cpp": {
+        "reversible_edits": 9,
+        "sha256": "05806530218c83f547caaca5417d8b23809ece644b6649915d5c28725b2416c1"
+      },
+      "src/oracle/closure.cpp": {
+        "reversible_edits": 31,
+        "sha256": "0f61810f36d89b9910b7d1d62b3d0a39ee1d6de9ca36064736b3cb764a16b5a9"
+      },
+      "src/solver/solver.cpp": {
+        "reversible_edits": 19,
+        "sha256": "aca771d277568418d790eae121e21610441749285fd48fc1615c8f8904b89627"
+      },
+      "src/solver/traversal.cpp": {
+        "reversible_edits": 13,
+        "sha256": "b3bcd20ebbb4af4f5dbad5bd932398792f93fc370f5e76421b2b61745ad13598"
+      }
+    },
+    "observer": {
+      "CMakeLists.txt": "50783b6ff29efb5c6995cceec65e4439f978cc52368b3afca33fe5f9520f88e9",
+      "README.md": "dc4688dfd2694d59e9597540d482bb7871c5c9a09b410de83ef75b74df69ba3a",
+      "boundary_test.cpp": "fbb40ab4748ce224fb5d2fc39897e3864e2381b0898f0ef789b1bf8b8ed39ef1",
+      "fixtures.py": "1702495d018b294de63029d33a9533cfd6ba80fca1c8c44b8c82092738b4f41e",
+      "instrument.py": "b33e4bb471c949cd25ea5d262b8b39005c0aa668733d70009500882e5cab089a",
+      "observer.hpp": "398afa454d5e0c6dbf463dcde67c8dad7b1e5aa1490f969b97c33cc5c2168960",
+      "pack_evidence.py": "1be53feed1023295a330e80d70816fc145e06183abd1fd1d716c9e1772841cd6",
+      "reports.py": "4054bef44ce8527165b2ff95be8df0b95fcf62f82aae6fa41cac295c02168631",
+      "source_pins.json": "1f923da6c197afdfca7fe4a0a31ff89a13ec1e4863af1712a830bb88f0b725d8",
+      "test_native_boundaries.py": "0ffa74f99755c29b221bb698e6a8f6a3d3270c81baecfe544eab39de9c98ab6b",
+      "test_reports.py": "de627abd3ae26cbded68c09527683043ef027b0a1a23d4dbe8916819c1758254",
+      "timer_test.cpp": "fcb8d32c4cb285ac9d8ab6945bc5f654de84329b93adc5cd58780a5761424fe1",
+      "validate.py": "e94a45bfc43527d998ad0ac055c4048d96f79450f1c1920936934e5d0cb0aa17",
+      "verify_build.py": "4699467bd7e8cc88592d9be7cc34f04d3d758c6661e04690a8f16e16575a97fd"
+    },
+    "production": {
+      "CMakeLists.txt": "21dd0eb54abcf160e09f60e6c5710404f1311cc7baa36d1de7d21165a252bd57",
+      "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2",
+      "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
+      "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
+      "include/vflhcds/clique/materialized.hpp": "f38b0fd48337948e7cb826c0f407f4052dca900644626982c80eed4e1e663608",
+      "include/vflhcds/core/build_info.hpp": "1361ad2ec53376342e4622509ce30a64fe651b160bdc8d922d4e5078808160ba",
+      "include/vflhcds/core/exact.hpp": "232bb07cbc20da7438e54eeceb13e9c792e4f9fdbb9f4ade24461e198eac6111",
+      "include/vflhcds/core/graph.hpp": "77c8201442f52cb52365956f0c8306e5185c04a7cc1cb4511905aecb7a071964",
+      "include/vflhcds/flow/dinic.hpp": "f903d13f57fcc99adc4ff4ab09f634cac3e997f1b5a3613e1287eb12dd1adf0f",
+      "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
+      "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
+      "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
+      "include/vflhcds/oracle/closure.hpp": "23817502535483e11e725784ce37336c8f8865a4458bc98b58bccb7bd5a42135",
+      "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
+      "include/vflhcds/solver/solver.hpp": "32174f9eeb838ed4c8a9907b4a66a29fa393609e05bef922d0fcd039b00354f3",
+      "include/vflhcds/solver/traversal.hpp": "1db167db88a3bfe74fe496addebff08426de3e016181a45769a920f3aa5bf485",
+      "include/vflhcds/telemetry/query.hpp": "f884db9ba8d7a0232895e0880f41ca4cd5c54c18cb71ac80ebafc9880a05c15b",
+      "src/cli/dispatch.cpp": "f60b44b7b72ec499adf51fdcf1ae4c20e8453d1b635b14a79ffb8e51f692e85f",
+      "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
+      "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
+      "src/clique/materialized.cpp": "682f6a0f443954aebda04c3870e30191faf49e186c180f4dbf650c7f17bef49d",
+      "src/core/exact.cpp": "77a91da3f2dd666ce1aca55a062359f1317cb29894a5e48e79a955f478e455bc",
+      "src/core/graph.cpp": "e691e4cb42a8a0c30e099bd04cd097e90e310567e179db2c69fbf1094b242144",
+      "src/io/graph.cpp": "d280a1376514e2e7d85f87aa3885c00ffdc3b9d8e208210dfe7cc5f78910b46d",
+      "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
+      "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
+      "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
+      "src/oracle/closure.cpp": "77c072406a6ff9042f42b770974c21f2ece4b06b17e5c1ab74bc6f972ec2837b",
+      "src/solver/solver.cpp": "a3b73569820601f254b6c7a28040becf2444f6196c23706e5504425ba3913f05",
+      "src/solver/traversal.cpp": "2965b9c766e62f3aea34e8efae8964c060c9620e6952e71f6f9793834b697ede",
+      "src/telemetry/query.cpp": "6d25bf492d4ca3695200ab144aeef2ed710388be426cf8ea49ded19056daa77f"
+    },
+    "schema": 1
+  },
+  "workers": 1
+}

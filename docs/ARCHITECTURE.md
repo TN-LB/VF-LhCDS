@@ -143,20 +143,34 @@ parallel implementation exists. Tests compare reference versus production,
 128-bit versus arbitrary precision on their shared domain, and later off/on core.
 No second clique backend is needed for the first correctness tag.
 
-## M6 observation and planned M7/M8 extension
+## M6 observation and M7 interval ownership
 
-D045's [cost observation](M6_DIAGNOSTICS_PLAN.md) is implemented in a separate
-source-pinned generated build, accepted at `de25116`. Production files are unchanged;
-[tooling and scope](../experiments/final_profile/README.md).
-[Interval-local clique work](M7_INTERVAL_CLIQUES_PLAN.md) remains planned.
-Keep immutable ChainPoints/ChainIntervals. The planned internal frame
-adds a certified range in one root ID permutation, depth and traversal identity.
-Disjoint child ranges reference immutable global tuples; temporary core eligibility
-does not mutate inherited ranges. Derive exact split counts before minting a new
-ChainPoint. Standalone arbitrary restricted requests keep the complete global path.
+[Cost observation](M6_DIAGNOSTICS_PLAN.md) uses source-pinned generated copies and
+an uninstrumented control. Its original M6 acceptance is `de25116`; current M7
+partition/count-reuse observations remain separate from semantic hashes.
 
-The proposed work-mode switch is separate from existing inclusion predicates and
-core mode. Global remains the default/control. Diagnostic observations have a
-separate schema and compile out of the uninstrumented control; semantic hashes
-exclude them. Final source alignment, Linux limits and formal result allowlists
-are [M8 readiness gates](M8_EXPERIMENT_PLAN.md), not assumptions of the current code.
+`IntervalTraversal` owns one ID permutation and private pending frames carrying
+immutable ChainIntervals, disjoint half-open ranges and depth. Only root creation
+and validated oracle separation can create frames. Its `next` advances left-first,
+pushes right before left, and rejects reuse after an exception. No public frame or
+worklist injection exists. Observer query order supplies stable traversal/parent
+identity without storing extra copies of the clique lists.
+
+A query-local `CliqueRange` borrows only its current frame's IDs and original
+endpoints. `ClosureOracle::global_impl` checks ownership and consumes the original
+containment certificate. Safe core modifies the temporary request, never the
+range. `aggregate_impl` shares the exact aggregation/network logic for global and
+local input. `separate_impl` partitions the full original range, including cliques
+filtered by core, and obtains an exact count before constructing a ChainPoint.
+Standalone arbitrary restricted queries retain the global path. Emitted-component
+counts, original-Y terminal comparison and extraction remain unchanged.
+
+The root ID vector requires O(M) extra slots; pending range metadata is O(D+1).
+Endpoint vertex sets, global tuples/incidences, flow networks and observers are
+separate owners. Runtime capacity and peak process RSS are recorded; no root
+network reduction or unconditional logarithmic depth/speedup follows.
+See [M7 identities and preconditions](M7_INTERVAL_CLIQUES_PLAN.md).
+
+Global remains the default/control. [M8 readiness](M8_EXPERIMENT_PLAN.md) still
+requires the final host/input/resource/variant freeze and baseline smoke; local
+M7 tests do not constitute the eight-graph formal campaign.

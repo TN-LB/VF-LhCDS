@@ -1,0 +1,36 @@
+[  4%] Building CXX object production/CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[  4%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/cli/dispatch.cpp.o
+[  6%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/clique/materialized.cpp.o
+[  8%] Building CXX object production/CMakeFiles/vflhcds_lib.dir/src/solver/traversal.cpp.o
+[ 10%] Building CXX object production/CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 12%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/clique/core.cpp.o
+[ 14%] Linking CXX static library libvflhcds_lib.a
+[ 36%] Built target vflhcds_lib
+[ 38%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/oracle/closure.cpp.o
+[ 40%] Linking CXX executable final_control_primitives
+[ 42%] Built target final_control_primitives
+[ 44%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/solver/traversal.cpp.o
+[ 46%] Building CXX object CMakeFiles/final_profile_lib.dir/instrumented/src/solver/solver.cpp.o
+[ 48%] Linking CXX executable final_control_solver_probe
+[ 50%] Built target final_control_solver_probe
+[ 52%] Linking CXX executable final_control_core
+[ 54%] Built target final_control_core
+[ 56%] Linking CXX executable vflhcds
+[ 58%] Built target vflhcds
+[ 60%] Linking CXX static library libfinal_profile_lib.a
+[ 76%] Built target final_profile_lib
+[ 80%] Building CXX object CMakeFiles/final_profile_timer_test.dir/timer_test.cpp.o
+[ 80%] Building CXX object CMakeFiles/vflhcds_final_profile.dir/instrumented/src/cli/main.cpp.o
+[ 82%] Linking CXX executable final_profile_timer_test
+[ 82%] Built target final_profile_timer_test
+[ 84%] Building CXX object CMakeFiles/final_profile_boundary_test.dir/boundary_test.cpp.o
+[ 86%] Linking CXX executable vflhcds_final_profile
+[ 86%] Built target vflhcds_final_profile
+[ 88%] Linking CXX executable final_diagnostic_primitives
+[ 90%] Built target final_diagnostic_primitives
+[ 92%] Linking CXX executable final_diagnostic_solver_probe
+[ 94%] Built target final_diagnostic_solver_probe
+[ 96%] Linking CXX executable final_diagnostic_core
+[ 98%] Built target final_diagnostic_core
+[100%] Linking CXX executable final_profile_boundary_test
+[100%] Built target final_profile_boundary_test

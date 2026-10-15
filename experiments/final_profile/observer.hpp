@@ -1,5 +1,6 @@
 #pragma once
 #include "vflhcds/io/solution.hpp"
+#include "vflhcds/solver/traversal.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cstdlib>
@@ -42,7 +43,10 @@ inline void reset() {
          "core_clique_slots_initialized", "core_incidence_visits", "core_cliques_invalidated",
          "core_degree_decrements", "core_vertices_removed", "logical_queries", "mincuts",
          "internal_intervals", "terminal_layers", "non_output_layers", "accepted_components",
-         "rejected_components", "outputs", "network_nodes_sum", "network_arcs_sum", "network_residual_arcs_sum"})
+         "partition_calls", "partition_clique_visits", "partition_membership_vertex_tests",
+         "partition_left_cliques", "partition_right_cliques", "partition_swap_calls", "partition_marker_slots",
+         "reused_endpoint_counts", "clique_ids_initialized", "clique_id_capacity", "clique_id_bytes",
+         "frontier_peak_size", "frontier_peak_capacity", "rejected_components", "outputs", "network_nodes_sum", "network_arcs_sum", "network_residual_arcs_sum"})
         state.work[key] = 0;
     for (const auto* site : {"", "separator_", "emitted_", "standalone_"})
         for (const auto* field : {"calls", "clique_visits", "membership_vertex_tests", "sorted_operand_visits", "matches"})
@@ -176,6 +180,17 @@ inline void index_summary(const vflhcds::MaterializedCliques& index) {
           + ",\"incidence_slots\":" + vflhcds::decimal(incidence_size)
           + ",\"incidence_capacity\":" + vflhcds::decimal(incidence_capacity));
 }
+inline void worklist_summary(const vflhcds::IntervalTraversal& traversal) {
+    Scope scope("observer");
+    maximum("clique_id_capacity", traversal.id_capacity());
+    maximum("clique_id_bytes", BigInt(traversal.id_capacity()) * sizeof(std::size_t));
+    maximum("frontier_peak_size", traversal.frontier_size());
+    maximum("frontier_peak_capacity", traversal.frontier_capacity());
+    event("worklist", ",\"id_size\":" + std::to_string(traversal.id_size())
+          + ",\"id_capacity\":" + std::to_string(traversal.id_capacity())
+          + ",\"frontier_size\":" + std::to_string(traversal.frontier_size())
+          + ",\"frontier_capacity\":" + std::to_string(traversal.frontier_capacity()));
+}
 inline void oracle_summary(const vflhcds::RestrictedRequest& request, const vflhcds::QueryStats& stats) {
     Scope scope("observer");
     if (stats.forward_nodes) { add("network_nodes_sum", *stats.forward_nodes); maximum("network_nodes_max", *stats.forward_nodes); }
@@ -263,7 +278,7 @@ struct Session {
         vflhcds::reject_input_alias(path, inputs);
         state.stream.open(path, std::ios::out | std::ios::trunc);
         if (!state.stream) throw std::runtime_error("cannot open observer stream");
-        event("start", ",\"coverage\":\"development\",\"partition_reuse\":null");
+        event("start", ",\"coverage\":\"development\",\"partition_reuse\":true");
     }
     ~Session() noexcept {
         try {
@@ -274,7 +289,7 @@ struct Session {
                   + ",\"observer_pending_capacity\":" + std::to_string(state.pending.capacity())
                   + ",\"observer_counter_keys\":" + std::to_string(state.work.size())
                   + ",\"observer_phase_keys\":" + std::to_string(state.phases.size())
-                  + ",\"partition_reuse\":null");
+                  + ",\"partition_reuse\":true");
             state.stream.close();
         } catch (...) { state.failed = true; }
     }

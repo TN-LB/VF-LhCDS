@@ -1,0 +1,80 @@
+{
+  "core": [
+    "off",
+    "safe"
+  ],
+  "diagnostic_fixture_count": 28,
+  "diagnostic_k": [
+    1,
+    "all"
+  ],
+  "diagnostic_modes": [
+    "global",
+    "interval-scan",
+    "interval-reuse"
+  ],
+  "diagnostic_seed": 20261014,
+  "enumerators": "Both in T21/T22 and 594 CLI cases per build; adjacency with ordered-combination cross-check in truth tiers",
+  "solver_counting": {
+    "debug": "sorted",
+    "sanitize": "membership"
+  },
+  "solver_footprints": [
+    "sorted",
+    "membership"
+  ],
+  "solver_tiers": {
+    "debug": {
+      "exhaustive-small": {
+        "cases": 4396,
+        "path": "acceptance/debug-exhaustive-small/cases.jsonl",
+        "seed": null,
+        "sha256": "c2cce6ce3d46f49f12c42ee16c4d7e9ff45ae742a757542a4b78bc37fcac1961"
+      },
+      "higher-h": {
+        "cases": 128,
+        "path": "acceptance/debug-higher-h/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "3b84d6a830c29d2b17c0e5c20c6c4deb764b67d012e73efbbdfb29192011bffc"
+      },
+      "seeded": {
+        "cases": 2040,
+        "path": "acceptance/debug-seeded/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "a907dff7a8ddfc54b196008e83e9acd97bb77d7c798f8d924e20b98c66f9bca2"
+      },
+      "smoke": {
+        "cases": 124,
+        "path": "acceptance/debug-smoke/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "fc65103ce2167cc5ad590c92ae6aa6f574c7814242f38b6678ba3b78e4a2a034"
+      }
+    },
+    "sanitize": {
+      "exhaustive-small": {
+        "cases": 4396,
+        "path": "acceptance/sanitize-exhaustive-small/cases.jsonl",
+        "seed": null,
+        "sha256": "c2cce6ce3d46f49f12c42ee16c4d7e9ff45ae742a757542a4b78bc37fcac1961"
+      },
+      "higher-h": {
+        "cases": 128,
+        "path": "acceptance/sanitize-higher-h/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "3b84d6a830c29d2b17c0e5c20c6c4deb764b67d012e73efbbdfb29192011bffc"
+      },
+      "seeded": {
+        "cases": 2040,
+        "path": "acceptance/sanitize-seeded/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "a907dff7a8ddfc54b196008e83e9acd97bb77d7c798f8d924e20b98c66f9bca2"
+      },
+      "smoke": {
+        "cases": 124,
+        "path": "acceptance/sanitize-smoke/cases.jsonl",
+        "seed": 20260929,
+        "sha256": "fc65103ce2167cc5ad590c92ae6aa6f574c7814242f38b6678ba3b78e4a2a034"
+      }
+    }
+  }
+}

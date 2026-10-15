@@ -38,6 +38,14 @@ int main() {
                              scan=="membership"?FootprintMode::Membership:FootprintMode::Sorted};
                     std::cout<<"{}\n";std::cout.flush();continue;
                 }
+                if(command=="work") {
+                    const auto work=token();
+                    if(work=="global")options.clique_work=CliqueWork::Global;
+                    else if(work=="interval-scan")options.clique_work=CliqueWork::IntervalScan;
+                    else if(work=="interval-reuse")options.clique_work=CliqueWork::IntervalReuse;
+                    else throw std::invalid_argument("clique work");
+                    std::cout<<"{}\n";std::cout.flush();continue;
+                }
                 if(command=="core") {
                     const auto threshold=integer(); CoreStats stats;
                     const auto core_vertices=peel_core(index,threshold,&stats);

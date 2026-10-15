@@ -1,0 +1,31 @@
+-- Configuring done (0.7s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/nost/Documents/VF-LhCDS/build-m7-sanitize
+[  2%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/oracle/closure.cpp.o
+[  5%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/traversal.cpp.o
+[  8%] Building CXX object CMakeFiles/vflhcds_lib.dir/src/solver/solver.cpp.o
+[ 10%] Linking CXX static library libvflhcds_lib.a
+[ 40%] Built target vflhcds_lib
+[ 43%] Linking CXX executable vflhcds
+[ 45%] Linking CXX executable vflhcds_skeleton_test
+[ 51%] Built target vflhcds
+[ 51%] Built target vflhcds_skeleton_test
+[ 56%] Linking CXX executable vflhcds_m2_probe
+[ 56%] Linking CXX executable vflhcds_primitives_test
+[ 62%] Built target vflhcds_primitives_test
+[ 62%] Built target vflhcds_m2_probe
+[ 67%] Building CXX object CMakeFiles/vflhcds_interval_test.dir/tests/m7_interval.cpp.o
+[ 67%] Linking CXX executable vflhcds_enumeration_test
+[ 70%] Built target vflhcds_enumeration_test
+[ 72%] Linking CXX executable vflhcds_solver_test
+[ 75%] Built target vflhcds_solver_test
+[ 78%] Linking CXX executable vflhcds_m3_probe
+[ 81%] Built target vflhcds_m3_probe
+[ 83%] Linking CXX executable vflhcds_counting_test
+[ 86%] Built target vflhcds_counting_test
+[ 89%] Linking CXX executable vflhcds_core_test
+[ 91%] Built target vflhcds_core_test
+[ 94%] Linking CXX executable vflhcds_m4_profile
+[ 97%] Built target vflhcds_m4_profile
+[100%] Linking CXX executable vflhcds_interval_test
+[100%] Built target vflhcds_interval_test

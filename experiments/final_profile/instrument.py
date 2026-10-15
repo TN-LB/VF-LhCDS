@@ -87,7 +87,7 @@ def generate(path, original):
         cleanup('const auto reachable = network.reachable(source);', 'reachable', 'query')
         before('(void)network.max_flow(source, sink);', 'fp_execute.change("max_flow"); fp::checkpoint("max_flow");')
         before('const auto reachable = network.reachable(source);', 'fp_execute.change("cut_extraction"); fp::checkpoint("cut_extraction");')
-        after('Footprints aggregate_footprints(const MaterializedCliques& index, const RestrictedRequest& request, const FootprintMode mode) {',
+        after('const FootprintMode mode, const CliqueRange* range) {',
               '    fp::Scope fp_aggregate("footprint_aggregation"); fp::checkpoint("footprint_aggregation"); fp::add("aggregation_calls");')
         cleanup('std::map<VertexSet, BigInt> weights;', 'weights', 'footprints')
         cleanup('std::optional<Membership> lower, upper;', 'markers', 'footprints')
@@ -102,36 +102,53 @@ def generate(path, original):
         replace('std::back_inserter(residual));', 'std::back_inserter(residual), fp::footprint_less);')
         before('if (!residual.empty()) {', 'fp::add("footprint_eligible_tuples");')
         after('++result.total_weight;', ' fp::add("footprint_contributions");')
-        before('    return result;\n}\nCertifiedGlobalRequest', '    fp::footprint_summary(result);')
+        before('    return result;\n}\n}  // namespace\nFootprints', '    fp::footprint_summary(result);')
         # Identical calls occur in global_chain_point and separate; tag by function body.
         before('auto result = global_F(full_graph_request(std::move(lambda)), policy, progress, options);',
                'fp::CountSite fp_site("standalone");')
-        before('auto result = global_F(separator_request(interval), policy, progress, options);',
+        before('auto result = global_impl(separator_request(interval), policy, &stats, options, range);',
                'fp::CountSite fp_site("separator");')
-        after('QueryStats* progress, const OracleOptions options) const {',
+        after('QueryStats* progress, const OracleOptions options, const CliqueRange* range) const {',
               '    fp::Scope fp_global("oracle_preparation");')
         after('const auto& original = request.request_;', '    fp::OriginalBound fp_bound(original.y_oracle);')
         after('if (options.core == CoreMode::Safe && original.lambda.numerator() > 0) {',
               '        fp::Scope fp_core_scope("core_preparation");')
         cleanup('RestrictedRequest reduced = original;', 'reduced', 'query')
         cleanup('const auto core = peel_core(index_, *stats.core_threshold, &*stats.core);', 'core_result', 'core')
-        after('QueryStats& stats, const FootprintMode mode) const {',
+        after('QueryStats& stats, const FootprintMode mode, const CliqueRange* range) const {',
               '    fp::Scope fp_oracle("oracle_preparation"); fp::OracleEnd fp_oracle_end{request, stats};')
         cleanup('VertexSet interval;', 'interval', 'query')
-        cleanup('const auto footprints = aggregate_footprints(index_, request, mode);', 'footprints', 'footprints')
+        cleanup('const auto footprints = range ? local_footprints(request, mode, *range) : aggregate_footprints(index_, request, mode);', 'footprints', 'footprints')
         cleanup('VertexSet result;', 'oracle_result', 'query')
+        after('if (reuse) {', '            fp::Scope fp_reuse("count_reuse"); fp::add("reused_endpoint_counts");')
+    elif path == 'src/solver/traversal.cpp':
+        after('std::size_t CliqueRange::partition(const VertexSet& z) {',
+              '    fp::Scope fp_partition("clique_partition"); fp::checkpoint("clique_partition"); fp::add("partition_calls");')
+        cleanup('Membership members(index_.graph().size());', 'partition_members', 'partition')
+        after('Membership members(index_.graph().size());', '    fp::add("partition_marker_slots", index_.graph().size());')
+        after('const auto& clique = index_.cliques()[ids_[i]];', '        fp::add("partition_clique_visits");')
+        replace('return members.contains(v);', 'fp::add("partition_membership_vertex_tests"); return members.contains(v);')
+        before('std::swap(ids_[middle], ids_[i]);', 'fp::add("partition_left_cliques"); fp::add("partition_swap_calls");')
+        before('    return middle;', '    fp::add("partition_right_cliques", end_ - middle);')
+        after(': oracle_(oracle), work_(work) {', '    fp::Scope fp_init("clique_id_setup");')
+        after('std::iota(ids_.begin(), ids_.end(), std::size_t{0});', '        fp::add("clique_ids_initialized", ids_.size());')
+        cleanup('const auto frame = std::move(stack_.back());', 'frame', 'interval')
+        replace('stack_.pop_back();', '{ fp::Scope fp_pop("cleanup_pending_intervals"); stack_.pop_back(); }')
+        before('const auto z = oracle_.separate_impl', 'fp::CleanupEnd fp_end_z;')
+        after('work_ == CliqueWork::Global ? nullptr : &range, work_ == CliqueWork::IntervalReuse, &middle);',
+              '    fp::CleanupBegin fp_begin_z(fp_end_z, "cleanup_query");')
     elif path == 'src/solver/solver.cpp':
         after('const TraceSink& trace, const StopRequested& stop, const OracleOptions options) {',
               '    fp::Scope fp_solver("orchestration"); fp::SolveScope fp_solve;')
-        cleanup('std::vector<ChainInterval> stack{oracle.root_interval()};', 'stack', 'pending_intervals')
+        cleanup('IntervalTraversal traversal(oracle, options.clique_work);', 'traversal', 'clique_worklists')
+        after('stats.clique_id_size = traversal.id_size(); stats.clique_id_capacity = traversal.id_capacity();',
+              '    fp::worklist_summary(traversal);')
         cleanup('Membership lower(index.graph().size());', 'lower', 'solver')
-        after('while (!stack.empty()) {\n        cancelled();', '        fp::QueryScope fp_query;')
-        cleanup('const auto interval = std::move(stack.back());', 'interval', 'interval')
-        replace('stack.pop_back();', '{ fp::Scope fp_pop("cleanup_pending_intervals"); stack.pop_back(); }')
+        after('while (!traversal.empty()) {\n        cancelled();', '        fp::QueryScope fp_query;')
         cleanup('QueryStats query;', 'query_stats', 'query')
-        before('const auto z = [&] {', 'fp::CleanupEnd fp_end_z;')
-        after('        }();', '        fp::CleanupBegin fp_begin_z(fp_end_z, "cleanup_query");')
-        after('if (trace) trace(interval, z, query);', '        fp::query_semantics(index.graph(), interval, z);')
+        before('const auto step = [&] {', 'fp::CleanupEnd fp_end_step;')
+        after('        }();', '        fp::CleanupBegin fp_begin_step(fp_end_step, "cleanup_query");')
+        after('if (trace) trace(interval, z, query);', '        fp::query_semantics(index.graph(), interval, z); fp::worklist_summary(traversal);')
         after('if (z.vertices() != y) {', '            fp::split();')
         before('VertexSet added;', 'fp::Scope fp_terminal("terminal_extraction"); fp::checkpoint("terminal_extraction");')
         cleanup('VertexSet added;', 'added', 'terminal')
@@ -159,7 +176,7 @@ def generate(path, original):
 
 
 SOURCES = ['src/cli/main.cpp', 'src/cli/dispatch.cpp', 'src/clique/materialized.cpp',
-           'src/clique/core.cpp', 'src/oracle/closure.cpp', 'src/solver/solver.cpp']
+           'src/clique/core.cpp', 'src/oracle/closure.cpp', 'src/solver/traversal.cpp', 'src/solver/solver.cpp']
 
 
 def main():

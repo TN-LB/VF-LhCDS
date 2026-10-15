@@ -2,6 +2,7 @@
 import argparse
 from collections import Counter
 from fractions import Fraction
+from itertools import product
 import hashlib
 import json
 from pathlib import Path
@@ -26,7 +27,7 @@ def save(path, value):
     path.write_text(json.dumps(value, sort_keys=True, indent=2) + '\n')
 
 
-def check_events(events, ref, records, core, k):
+def check_events(events, ref, records, core, k, work="global"):
     assert complete(events), 'complete observer stream'
     final = events[-1]['work']
     clique_sets = [set(ref.graph.ids(mask)) for mask in ref.cliques]
@@ -43,6 +44,7 @@ def check_events(events, ref, records, core, k):
     count_sets = []; expected_count_members = 0
     upper_rejected = contributions = visits = core_filtered = member_tests = 0
     accepted_count = rejected_count = nonoutput = 0
+    partition_visits = partition_members = partition_left = partition_right = partition_calls = 0
     for q in queries:
         parent, depth, x, y = pending.pop()
         begin = next(e for e in events if e['event'] == 'query_begin' and e['query_id'] == q['query_id'])
@@ -63,6 +65,8 @@ def check_events(events, ref, records, core, k):
                 eligible -= remove
         bound = y & eligible if core == 'safe' and lam else y
         assert stats['oracle_interval_size'] == len(bound-x)
+        local_cliques = [c for c in clique_sets if c <= y and not c <= x]
+        scanned_cliques = clique_sets if work == 'global' else local_cliques
         if o['shortcut'] == 'none':
             residuals = Counter(tuple(sorted(c-x)) for c in clique_sets if c <= bound and c-x)
             h = histograms[q['query_id']]
@@ -75,12 +79,12 @@ def check_events(events, ref, records, core, k):
             assert stats['forward_nodes'] == n+p+2
             assert stats['forward_arcs'] == n+p+sum(len(c) for c in residuals)
             assert stats['residual_arcs'] == 2 * stats['forward_arcs']
-            assert stats['cliques_scanned'] == m
-            visits += m
-            upper_rejected += sum(not c <= bound for c in clique_sets)
-            core_filtered += sum(c <= y and not c <= bound for c in clique_sets)
+            assert stats['cliques_scanned'] == len(scanned_cliques)
+            visits += len(scanned_cliques)
+            upper_rejected += sum(not c <= bound for c in scanned_cliques)
+            core_filtered += sum(c <= y and not c <= bound for c in scanned_cliques)
             contributions += sum(residuals.values())
-            for c in clique_sets:
+            for c in scanned_cliques:
                 for v in sorted(c):
                     member_tests += 1
                     if v not in bound: break
@@ -88,7 +92,16 @@ def check_events(events, ref, records, core, k):
         else:
             assert q['query_id'] not in histograms and stats['forward_nodes'] is None
         if z != y:
-            count_sets.append(z)
+            if work != 'interval-reuse': count_sets.append(z)
+            if work != 'global':
+                partition_calls += 1
+                partition_visits += len(local_cliques)
+                partition_left += sum(c <= z for c in local_cliques)
+                partition_right += sum(not c <= z for c in local_cliques)
+                for c in local_cliques:
+                    for v in sorted(c):
+                        partition_members += 1
+                        if v not in z: break
             pending.extend([(q['query_id'], depth+1, z, y), (q['query_id'], depth+1, x, z)])
         else:
             accepted = 0
@@ -119,7 +132,17 @@ def check_events(events, ref, records, core, k):
     assert final.get('non_output_layers', 0) == nonoutput
     assert final['logical_queries'] == len(queries)
     assert final.get('outputs', 0) == len(records)
-    assert final.get('count_separator_calls', 0) == sum(q['z'] != q['y'] for q in queries)
+    assert final.get('count_separator_calls', 0) == (0 if work == 'interval-reuse' else sum(q['z'] != q['y'] for q in queries))
+    assert final['partition_calls'] == partition_calls
+    assert final['partition_clique_visits'] == partition_visits
+    assert final['partition_membership_vertex_tests'] == partition_members
+    assert final['partition_left_cliques'] == final['partition_swap_calls'] == partition_left
+    assert final['partition_right_cliques'] == partition_right
+    assert final['partition_marker_slots'] == partition_calls * ref.graph.n
+    assert final['reused_endpoint_counts'] == (partition_calls if work == 'interval-reuse' else 0)
+    assert final['clique_ids_initialized'] == (0 if work == 'global' else m)
+    assert final['clique_id_capacity'] >= final['clique_ids_initialized']
+    assert final['clique_id_bytes'] == final['clique_id_capacity'] * 8
     assert final.get('count_emitted_calls', 0) == len(records)
     for field in ('incidence_visits', 'cliques_invalidated', 'degree_decrements', 'vertices_removed'):
         assert final.get('core_' + field, 0) == sum(o['stats']['core'][field] for o in oracles.values() if o['stats']['core'])
@@ -129,7 +152,8 @@ def check_events(events, ref, records, core, k):
         assert len(queries) == 2 * (len(chain.sets) - 1) - 1
     return {'queries': len(queries), 'maximum_depth': final.get('maximum_depth', 0),
             'non_output_layers': nonoutput, 'cliques': m, 'footprint_visits': visits,
-            'count_visits': m * len(count_sets)}
+            'count_visits': m * len(count_sets), 'partition_visits': partition_visits,
+            'reused_counts': final['reused_endpoint_counts'], 'id_capacity': final['clique_id_capacity']}
 
 
 def main():
@@ -137,6 +161,7 @@ def main():
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--small', action='store_true')
+    parser.add_argument('--work-modes', nargs='+', choices=['global','interval-scan','interval-reuse'], default=['global'])
     args = parser.parse_args()
     args.build = args.build.resolve(); args.output = args.output.resolve()
     args.output.mkdir(parents=True, exist_ok=False)
@@ -146,7 +171,7 @@ def main():
     observer_hash = hashlib.sha256(json.dumps(source['observer'], sort_keys=True).encode()).hexdigest()
     cases = list(fixtures())
     if args.small: cases = cases[:8]
-    schedule = [f'{c["name"]}-{core}-{k}-{role}' for c in cases for core in ('off', 'safe')
+    schedule = [f'{c["name"]}-{core}-{work}-{k}-{role}' for c in cases for core, work in product(('off', 'safe'), args.work_modes)
                 for k in ('all', 1) for role in binaries]
     bundle = {'schema': 1, 'scope': 'development', 'freeze_approved': False,
               'host': platform.platform(), 'schedule': schedule, 'rows': [],
@@ -164,21 +189,21 @@ def main():
             ref = Reference(graph, case['h'])
             truth = solution_records(ref, direct_lhcds(ref))
             graph_path = args.output / (case['name'] + '.graph'); graph_path.write_text(canonical_graph(graph))
-            for core in ('off', 'safe'):
+            for core, work in product(('off', 'safe'), args.work_modes):
                 for k in ('all', 1):
                     by_role = {}
                     for role, binary in binaries.items():
-                        run_id = f'{case["name"]}-{core}-{k}-{role}'
+                        run_id = f'{case["name"]}-{core}-{work}-{k}-{role}'
                         directory = args.output / run_id; directory.mkdir()
                         command = [str(binary), 'solve', '--graph', str(graph_path), '--h', str(case['h']),
                                    '--clique-enumeration', 'adjacency', '--clique-count', 'membership',
-                                   '--footprint-scan', 'membership', '--core-reduction', core]
+                                   '--footprint-scan', 'membership', '--core-reduction', core, '--clique-work', work]
                         command += ['--all'] if k == 'all' else ['--k', str(k)]
                         env = {'VF_PROFILE_OUTPUT': str(directory / 'events.jsonl')} if role == 'diagnostic' else {}
                         outcome = capture(command, directory, 30, environment=env)
                         row = dict(run_id=run_id, scope='development', algorithm='VF', role=role,
                                    suite='development:' + case['name'], graph_sha256=graph_sha256(graph), h=case['h'], k=k,
-                                   core=core, work_mode='global', host=bundle['host'], repeat=0,
+                                   core=core, work_mode=work, host=bundle['host'], repeat=0,
                                    source_sha256=source_hash, binary_sha256=sha256(binary), status=outcome['status'],
                                    observer_sha256=observer_hash if role == 'diagnostic' else None,
                                    wall_seconds=outcome['wall_seconds'], peak_rss_bytes=outcome['peak_rss_bytes'],
@@ -194,11 +219,11 @@ def main():
                         by_role[role] = records
                         if role == 'diagnostic':
                             events = read_events(directory / 'events.jsonl')
-                            structure = check_events(events, ref, records, core, k)
+                            structure = check_events(events, ref, records, core, k, work)
                             # Existing production TraceSink adapter is an independent control observation.
-                            request = 'case {} {} {} {} {}\nconfig {} membership\nsolve auto {}\nend\n'.format(
+                            request = 'case {} {} {} {} {}\nconfig {} membership\nwork {}\nsolve auto {}\nend\n'.format(
                                 graph.n, len(graph.edges), case['h'], ' '.join(map(str, graph.vertices)),
-                                ' '.join(f'{u} {v}' for u, v in graph.edges), core, k)
+                                ' '.join(f'{u} {v}' for u, v in graph.edges), core, work, k)
                             probe = args.build / 'final_control_solver_probe'
                             trace_run = subprocess.run([str(probe)], input=request, text=True, capture_output=True, timeout=30)
                             (directory / 'control-trace-input.txt').write_text(request)

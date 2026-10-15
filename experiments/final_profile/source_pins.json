@@ -1,5 +1,5 @@
 {
-  "CMakeLists.txt": "dc5758db51d26f1af8046f0c3a579662c8b7476605d39ee23d2273cc0de1a97d",
+  "CMakeLists.txt": "21dd0eb54abcf160e09f60e6c5710404f1311cc7baa36d1de7d21165a252bd57",
   "cmake/build_info.cpp.in": "e0821e879364ce100323231faaa2b8f037a8ba296d01e74cafcc457e4efc54f2",
   "include/vflhcds/cli/dispatch.hpp": "32f911069232971be3982497b3c69b5cb5618005957043836f1a77991855cc0f",
   "include/vflhcds/clique/core.hpp": "19a4e049609803d3fea43525e2b7a064b2cbeeddb213f280d6e1c8d65f4ad1f1",
@@ -11,11 +11,12 @@
   "include/vflhcds/io/graph.hpp": "d15f16aa9cdba18c6107fc5ffb25ee51c5f1ab71c561ba9dd594ad0a49ae64ef",
   "include/vflhcds/io/solution.hpp": "979b788fd6ba02aae25ded28aad10c12fe35ca5fc85f88b7e7bc360c8724bbeb",
   "include/vflhcds/io/status.hpp": "759da75dcd6888bf02d3f7108efa82354e7169f1459d5f7e3630c9a7465ed040",
-  "include/vflhcds/oracle/closure.hpp": "6a042d0423bcacc3ca531f1ca027809ef3b0251b7d07fc7c1ba02f34c221172e",
+  "include/vflhcds/oracle/closure.hpp": "23817502535483e11e725784ce37336c8f8865a4458bc98b58bccb7bd5a42135",
   "include/vflhcds/solver/interval.hpp": "6a2e0ef677d1395d7a386b78934e9f7c2f76482669141b373a92f162f23807f2",
-  "include/vflhcds/solver/solver.hpp": "3959a9ff3dccdde742b5e4a6cb04e9b4c2327cadad9fdc5e3632ee7f5da55528",
-  "include/vflhcds/telemetry/query.hpp": "528312311c071d51b54f9b4159a228dc3fe76dc7c793ea0cea0f0240dcc487de",
-  "src/cli/dispatch.cpp": "7523d3550bbfc290b1a6ac144cdbc4bdf57fa0e482df78fa6d3c27fa51c640e6",
+  "include/vflhcds/solver/solver.hpp": "32174f9eeb838ed4c8a9907b4a66a29fa393609e05bef922d0fcd039b00354f3",
+  "include/vflhcds/solver/traversal.hpp": "1db167db88a3bfe74fe496addebff08426de3e016181a45769a920f3aa5bf485",
+  "include/vflhcds/telemetry/query.hpp": "f884db9ba8d7a0232895e0880f41ca4cd5c54c18cb71ac80ebafc9880a05c15b",
+  "src/cli/dispatch.cpp": "f60b44b7b72ec499adf51fdcf1ae4c20e8453d1b635b14a79ffb8e51f692e85f",
   "src/cli/main.cpp": "e06271e4408fc056ab3425a7541782f1a5dcb1e8297da3783cd13d689bb09639",
   "src/clique/core.cpp": "2cbfcaac229defefa4339d02bf93def0fa038edf008a80a47f8617f50465f359",
   "src/clique/materialized.cpp": "682f6a0f443954aebda04c3870e30191faf49e186c180f4dbf650c7f17bef49d",
@@ -25,7 +26,8 @@
   "src/io/sha256.cpp": "09ca0b46b5825f9d15d80df051a16df8f049db2bd80395af7b63fadb2f9bf0c4",
   "src/io/solution.cpp": "941c60c58735ac4d988a00cd3c989089491ad2eccddc70fdc9a6a3e6507da0fb",
   "src/io/status.cpp": "4c48445bbe4cdc2ff6a1894ec0c545a3dc9064086893a17ac6a8ac8c317a7414",
-  "src/oracle/closure.cpp": "adca32d55b37756a6f44addb06f70c1d92a467e0aff78f35382a7099284e94d0",
-  "src/solver/solver.cpp": "d07f0831f8edb63c085db0d7111295cb5c4de10cf0787c6cd73e715bb4e19464",
-  "src/telemetry/query.cpp": "cdec53acad34b0b3b9a5989f044081bc28c44ff8b3e7cc30eb19760c7e874837"
+  "src/oracle/closure.cpp": "77c072406a6ff9042f42b770974c21f2ece4b06b17e5c1ab74bc6f972ec2837b",
+  "src/solver/solver.cpp": "a3b73569820601f254b6c7a28040becf2444f6196c23706e5504425ba3913f05",
+  "src/solver/traversal.cpp": "2965b9c766e62f3aea34e8efae8964c060c9620e6952e71f6f9793834b697ede",
+  "src/telemetry/query.cpp": "6d25bf492d4ca3695200ab144aeef2ed710388be426cf8ea49ded19056daa77f"
 }

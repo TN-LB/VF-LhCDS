@@ -1,0 +1,39 @@
+Test project /Users/nost/Documents/VF-LhCDS/build-m7-debug
+      Start  1: m0_cpp_skeleton
+ 1/17 Test  #1: m0_cpp_skeleton ..................   Passed    0.27 sec
+      Start  2: m2_primitives
+ 2/17 Test  #2: m2_primitives ....................   Passed    0.30 sec
+      Start  3: m5_clique_enumeration
+ 3/17 Test  #3: m5_clique_enumeration ............   Passed    0.24 sec
+      Start  4: m7_interval
+ 4/17 Test  #4: m7_interval ......................   Passed   17.67 sec
+      Start  5: m5_clique_counting
+ 5/17 Test  #5: m5_clique_counting ...............   Passed    0.37 sec
+      Start  6: m5_counting_cli
+ 6/17 Test  #6: m5_counting_cli ..................   Passed    2.52 sec
+      Start  7: m3_solver
+ 7/17 Test  #7: m3_solver ........................   Passed    0.27 sec
+      Start  8: m3_solver_smoke
+ 8/17 Test  #8: m3_solver_smoke ..................   Passed    1.91 sec
+      Start  9: m3_cli_contract
+ 9/17 Test  #9: m3_cli_contract ..................   Passed    0.86 sec
+      Start 10: m3_failure_reducer
+10/17 Test #10: m3_failure_reducer ...............   Passed    0.12 sec
+      Start 11: m4_core
+11/17 Test #11: m4_core ..........................   Passed    0.26 sec
+      Start 12: m4_modes_smoke
+12/17 Test #12: m4_modes_smoke ...................   Passed    5.12 sec
+      Start 13: m4_cli_contract
+13/17 Test #13: m4_cli_contract ..................   Passed    0.46 sec
+      Start 14: m5_enumeration_cli
+14/17 Test #14: m5_enumeration_cli ...............   Passed    1.13 sec
+      Start 15: m2_oracle_smoke
+15/17 Test #15: m2_oracle_smoke ..................   Passed    0.72 sec
+      Start 16: m2_cli_contract
+16/17 Test #16: m2_cli_contract ..................   Passed    0.61 sec
+      Start 17: m0_reference_skeleton
+17/17 Test #17: m0_reference_skeleton ............   Passed    2.74 sec
+
+100% tests passed out of 17
+
+Total Test time (real) =  35.58 sec

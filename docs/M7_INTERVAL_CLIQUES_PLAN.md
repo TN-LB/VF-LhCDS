@@ -1,6 +1,6 @@
 # M7 interval-local clique propagation and exact count reuse
 
-Status: planned under D045; P17.1–P17.7. This is an implementation refinement of
+Status: implementation in progress under D045; P17.1–P17.7. This is an implementation refinement of
 the unchanged manuscript, not a new output policy or a manuscript revision.
 It adds one selected algorithm increment and retains global scanning as a control.
 No claim of first publication or comparison with deferred DCLDS follows.
@@ -177,3 +177,39 @@ forced-big run as automatic fallback.
 Record exact fixture/seed manifests, outputs and mode combinations, not just a
 command list. A mismatch retains original/minimized reproducers and blocks the
 affected path. No finite agreement is called a proof.
+
+## Implementation preconditions (P17.1, 2026-10-15)
+
+`IntervalTraversal` owns the root permutation and all pending frames. Its public
+operation advances the existing left-first traversal; callers cannot insert frames,
+supply IDs or change endpoints. It is noncopyable/nonmovable and bound to one
+`ClosureOracle` and its immutable index. Frames never escape. A temporary private
+`CliqueRange` borrows that permutation only during a query and partition; no view
+survives a mutation. An internal test friend may inspect or corrupt ranges to test
+rejection, but is not a production certification API. Arbitrary restricted queries
+continue through the whole index.
+
+Induction starts with the iota permutation of all materialized IDs. At a proper
+certified split the one-pass partition tests each parent ID once, swapping only
+inside that range. Membership in Z chooses the left side; every other ID stays on
+the right. Thus the partition preserves the parent multiset, disjoint siblings and
+all pending ranges. Frames for the right and then left children are created only
+after the existing progress checks and exact point-count construction. Terminal
+queries do not partition or recount Y. Exceptions invalidate the traversal for
+further use; destruction releases its sole permutation and pending frames.
+
+The shared aggregation loop receives either all IDs or the active range. It still
+filters against Y_oracle and computes C minus the original X. Range completeness
+and X subseteq Y_oracle subseteq Y imply identical nonempty weighted footprints.
+Core peeling remains whole-index work; it never partitions or erases inherited
+IDs. The exact arithmetic/network and largest-set tie mechanism are unchanged.
+Count reuse converts the left size to BigInt before adding mu(X); the oracle mints
+the immutable point only afterward. Neither cardinality arithmetic nor a worklist
+is allowed to certify an arbitrary global point.
+
+T21/T22 tests compare arbitrary nested-set partitions and footprint multisets;
+they do not use those sets as chain certificates. T23 independently checks actual
+separator chains and outputs. T24 retains the pendant recovery witness. T25 checks
+foreign ownership, malformed IDs, capacity/frontier lifetimes, early stop,
+cancellation, exceptions and both exact numeric backends. These finite checks
+support implementation validation, not a proof of the manuscript.

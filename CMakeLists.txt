@@ -54,6 +54,7 @@ add_library(vflhcds_lib STATIC
   src/telemetry/query.cpp
   src/io/graph.cpp
   src/io/solution.cpp
+  src/solver/traversal.cpp
   src/solver/solver.cpp
   src/io/sha256.cpp)
 add_library(vflhcds::lib ALIAS vflhcds_lib)
@@ -82,6 +83,10 @@ if(BUILD_TESTING)
   add_executable(vflhcds_enumeration_test tests/clique_enumeration.cpp)
   target_link_libraries(vflhcds_enumeration_test PRIVATE vflhcds::lib vflhcds_build_options)
   add_test(NAME m5_clique_enumeration COMMAND vflhcds_enumeration_test)
+  add_executable(vflhcds_interval_test tests/m7_interval.cpp)
+  target_link_libraries(vflhcds_interval_test PRIVATE vflhcds::lib vflhcds_build_options)
+  add_test(NAME m7_interval COMMAND vflhcds_interval_test)
+  add_test(NAME m7_cli COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m7_cli.py" "$<TARGET_FILE:vflhcds>")
   add_executable(vflhcds_solver_test tests/m3_solver.cpp)
   target_link_libraries(vflhcds_solver_test PRIVATE vflhcds::lib vflhcds_build_options)
   add_executable(vflhcds_m3_probe tests/m3_probe.cpp)

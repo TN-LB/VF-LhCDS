@@ -1,0 +1,511 @@
+[
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-m7-debug",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "-DVFLHCDS_ENABLE_SANITIZERS=OFF",
+      "-DVFLHCDS_TEST_COUNT_MEMBERSHIP=OFF"
+    ],
+    "started_utc": "2026-10-14T23:27:58.385594+00:00",
+    "finished_utc": "2026-10-14T23:27:59.294447+00:00",
+    "exit_code": 0,
+    "stdout": "01.stdout",
+    "stderr": "01.stderr",
+    "stdout_sha256": "7b517fdf5631f34450febd4d271cc6ef3282cb8a9f9f89fcb3c9629576ef8864",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "build-m7-debug",
+      "-j2"
+    ],
+    "started_utc": "2026-10-14T23:27:59.295179+00:00",
+    "finished_utc": "2026-10-14T23:28:00.710740+00:00",
+    "exit_code": 0,
+    "stdout": "02.stdout",
+    "stderr": "02.stderr",
+    "stdout_sha256": "ef1936e6d94005229c4e925245abb478f1545becf3136e10859badbae20334e2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+      "--test-dir",
+      "build-m7-debug",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-10-14T23:28:00.711581+00:00",
+    "finished_utc": "2026-10-14T23:28:32.296497+00:00",
+    "exit_code": 0,
+    "stdout": "03.stdout",
+    "stderr": "03.stderr",
+    "stdout_sha256": "7b56eb87c69824b93a4429c09df6f0dc5867ac8c91c91d6ec87befa05e6bf55b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-debug/vflhcds_m3_probe",
+      "--tier",
+      "smoke",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/debug-smoke"
+    ],
+    "started_utc": "2026-10-14T23:28:32.297120+00:00",
+    "finished_utc": "2026-10-14T23:28:41.293747+00:00",
+    "exit_code": 0,
+    "stdout": "04.stdout",
+    "stderr": "04.stderr",
+    "stdout_sha256": "d9c9a576d713b812518cefec6b1554f667a4b4299300919876575a867a192753",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-debug/vflhcds_m3_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/debug-exhaustive-small"
+    ],
+    "started_utc": "2026-10-14T23:28:41.294551+00:00",
+    "finished_utc": "2026-10-14T23:33:16.743072+00:00",
+    "exit_code": 0,
+    "stdout": "05.stdout",
+    "stderr": "05.stderr",
+    "stdout_sha256": "fa6cf91b1313206bce07d69b970d89bec4f0abc01d323d4322b1b1e9bd386625",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-debug/vflhcds_m3_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/debug-seeded"
+    ],
+    "started_utc": "2026-10-14T23:33:16.745078+00:00",
+    "finished_utc": "2026-10-14T23:35:44.473646+00:00",
+    "exit_code": 0,
+    "stdout": "06.stdout",
+    "stderr": "06.stderr",
+    "stdout_sha256": "91a3bd61bb7cfa3e58ce5a46d941ccb6ef1e5c7751411c21dac98c6bfe30f0bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-debug/vflhcds_m3_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/debug-higher-h"
+    ],
+    "started_utc": "2026-10-14T23:35:44.474889+00:00",
+    "finished_utc": "2026-10-14T23:35:50.697971+00:00",
+    "exit_code": 0,
+    "stdout": "07.stdout",
+    "stderr": "07.stderr",
+    "stdout_sha256": "02223cab2a7a79c53f2e5f5af7e866734c475e030a81eb0f9dcc00e8710c4f6f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      ".",
+      "-B",
+      "build-m7-sanitize",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "-DVFLHCDS_ENABLE_SANITIZERS=ON",
+      "-DVFLHCDS_TEST_COUNT_MEMBERSHIP=ON"
+    ],
+    "started_utc": "2026-10-14T23:35:50.698805+00:00",
+    "finished_utc": "2026-10-14T23:35:51.685902+00:00",
+    "exit_code": 0,
+    "stdout": "08.stdout",
+    "stderr": "08.stderr",
+    "stdout_sha256": "b0c0a50f707c45a520a6eabcc5da08bf30b4c1d683ce8e785da57c4c991c06a0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "build-m7-sanitize",
+      "-j2"
+    ],
+    "started_utc": "2026-10-14T23:35:51.686706+00:00",
+    "finished_utc": "2026-10-14T23:35:58.047507+00:00",
+    "exit_code": 0,
+    "stdout": "09.stdout",
+    "stderr": "09.stderr",
+    "stdout_sha256": "de441386035432cc5075ce9f31bb9ce44f55a1f9216dbd122ec9f20326fc862a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+      "--test-dir",
+      "build-m7-sanitize",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-10-14T23:35:58.048783+00:00",
+    "finished_utc": "2026-10-14T23:38:08.249552+00:00",
+    "exit_code": 0,
+    "stdout": "10.stdout",
+    "stderr": "10.stderr",
+    "stdout_sha256": "27d2d87392d7b3a82bcad3d7d26b62da666ed999bcad174f92d7c136c56fbd54",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "smoke",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/sanitize-smoke"
+    ],
+    "started_utc": "2026-10-14T23:38:08.250932+00:00",
+    "finished_utc": "2026-10-14T23:38:29.432207+00:00",
+    "exit_code": 0,
+    "stdout": "11.stdout",
+    "stderr": "11.stderr",
+    "stdout_sha256": "ff3e7b185b774e1646f2636648ab90fb95546945f255273b4790a67a649c2b0b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "exhaustive-small",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/sanitize-exhaustive-small"
+    ],
+    "started_utc": "2026-10-14T23:38:29.433141+00:00",
+    "finished_utc": "2026-10-14T23:53:27.061521+00:00",
+    "exit_code": 0,
+    "stdout": "12.stdout",
+    "stderr": "12.stderr",
+    "stdout_sha256": "042c332adba062bdb73d3e1fdfde442654c3203415d09a9392383865eefe6cad",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "seeded",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/sanitize-seeded"
+    ],
+    "started_utc": "2026-10-14T23:53:27.062904+00:00",
+    "finished_utc": "2026-10-15T04:23:16.244939+00:00",
+    "exit_code": 0,
+    "stdout": "13.stdout",
+    "stderr": "13.stderr",
+    "stdout_sha256": "c899ebbb6f829431caf7ce72482e8cc1baec1ea1def0062ec0ed1996a76f7e7a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "validation/m7_campaign.py",
+      "--probe",
+      "build-m7-sanitize/vflhcds_m3_probe",
+      "--tier",
+      "higher-h",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/sanitize-higher-h"
+    ],
+    "started_utc": "2026-10-15T04:23:16.246261+00:00",
+    "finished_utc": "2026-10-15T04:23:26.858776+00:00",
+    "exit_code": 0,
+    "stdout": "14.stdout",
+    "stderr": "14.stderr",
+    "stdout_sha256": "d397b39ad65dacb72356ccbc04543130808b24fa224658e78ce4611be6456d2d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "experiments/final_profile",
+      "-B",
+      "build-m7-profile-release",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "-DVFLHCDS_ENABLE_SANITIZERS=OFF"
+    ],
+    "started_utc": "2026-10-15T04:23:26.859814+00:00",
+    "finished_utc": "2026-10-15T04:23:27.573198+00:00",
+    "exit_code": 0,
+    "stdout": "15.stdout",
+    "stderr": "15.stderr",
+    "stdout_sha256": "c8580046d1d9b75cea0e26145fde15df71fbbdeda3c4fbd867fe443c625526cc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "build-m7-profile-release",
+      "-j2"
+    ],
+    "started_utc": "2026-10-15T04:23:27.573808+00:00",
+    "finished_utc": "2026-10-15T04:23:28.325266+00:00",
+    "exit_code": 0,
+    "stdout": "16.stdout",
+    "stderr": "16.stderr",
+    "stdout_sha256": "9d9542aac988fb617f45521eb0ede21f169eaefe769f0fb03c14b09f63d3a296",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+      "--test-dir",
+      "build-m7-profile-release",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-10-15T04:23:28.326024+00:00",
+    "finished_utc": "2026-10-15T04:23:32.510761+00:00",
+    "exit_code": 0,
+    "stdout": "17.stdout",
+    "stderr": "17.stderr",
+    "stdout_sha256": "081432a8b5be5aa047dd72b1d730c94c643fe4de41c2f3cbaea5e2bf804c3ecc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/verify_build.py",
+      "build-m7-profile-release",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-release-identity.json"
+    ],
+    "started_utc": "2026-10-15T04:23:32.511708+00:00",
+    "finished_utc": "2026-10-15T04:23:32.663629+00:00",
+    "exit_code": 0,
+    "stdout": "18.stdout",
+    "stderr": "18.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/validate.py",
+      "--build",
+      "build-m7-profile-release",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-release",
+      "--work-modes",
+      "global",
+      "interval-scan",
+      "interval-reuse"
+    ],
+    "started_utc": "2026-10-15T04:23:32.665821+00:00",
+    "finished_utc": "2026-10-15T04:23:49.817405+00:00",
+    "exit_code": 0,
+    "stdout": "19.stdout",
+    "stderr": "19.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/pack_evidence.py",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-release"
+    ],
+    "started_utc": "2026-10-15T04:23:49.818672+00:00",
+    "finished_utc": "2026-10-15T04:23:54.813603+00:00",
+    "exit_code": 0,
+    "stdout": "20.stdout",
+    "stderr": "20.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "-S",
+      "experiments/final_profile",
+      "-B",
+      "build-m7-profile-sanitize",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "-DVFLHCDS_ENABLE_SANITIZERS=ON"
+    ],
+    "started_utc": "2026-10-15T04:23:54.814487+00:00",
+    "finished_utc": "2026-10-15T04:23:56.223346+00:00",
+    "exit_code": 0,
+    "stdout": "21.stdout",
+    "stderr": "21.stderr",
+    "stdout_sha256": "84f65f7bd8ee19d34a84cd1e57e1a2597fe1231d7c406f647bd6d6b7c372e081",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--build",
+      "build-m7-profile-sanitize",
+      "-j2"
+    ],
+    "started_utc": "2026-10-15T04:23:56.224211+00:00",
+    "finished_utc": "2026-10-15T04:24:18.133912+00:00",
+    "exit_code": 0,
+    "stdout": "22.stdout",
+    "stderr": "22.stderr",
+    "stdout_sha256": "69fc8916583bb41d2bc5ad9a47cf03871e8bde3e9f549a22c78f226edc1f6e02",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+      "--test-dir",
+      "build-m7-profile-sanitize",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started_utc": "2026-10-15T04:24:18.134888+00:00",
+    "finished_utc": "2026-10-15T04:24:20.778077+00:00",
+    "exit_code": 0,
+    "stdout": "23.stdout",
+    "stderr": "23.stderr",
+    "stdout_sha256": "0ea1e09e5dbe061cac03a0eb10c2c99bf40f0b5b74fe41944beb94e9bf183c8a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/verify_build.py",
+      "build-m7-profile-sanitize",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-sanitize-identity.json"
+    ],
+    "started_utc": "2026-10-15T04:24:20.778697+00:00",
+    "finished_utc": "2026-10-15T04:24:20.908590+00:00",
+    "exit_code": 0,
+    "stdout": "24.stdout",
+    "stderr": "24.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/validate.py",
+      "--build",
+      "build-m7-profile-sanitize",
+      "--output",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-sanitize",
+      "--work-modes",
+      "global",
+      "interval-scan",
+      "interval-reuse"
+    ],
+    "started_utc": "2026-10-15T04:24:20.909262+00:00",
+    "finished_utc": "2026-10-15T04:25:54.207267+00:00",
+    "exit_code": 0,
+    "stdout": "25.stdout",
+    "stderr": "25.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "experiments/final_profile/pack_evidence.py",
+      "/Users/nost/Documents/VF-LhCDS/evidence/m7/interval-20261015/acceptance/profile-sanitize"
+    ],
+    "started_utc": "2026-10-15T04:25:54.208600+00:00",
+    "finished_utc": "2026-10-15T04:26:00.891637+00:00",
+    "exit_code": 0,
+    "stdout": "26.stdout",
+    "stderr": "26.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/python",
+      "scripts/verify_papers.py"
+    ],
+    "started_utc": "2026-10-15T04:26:00.892596+00:00",
+    "finished_utc": "2026-10-15T04:26:00.959782+00:00",
+    "exit_code": 0,
+    "stdout": "27.stdout",
+    "stderr": "27.stderr",
+    "stdout_sha256": "c3cbc61dcbff40db76d0bca60ce82019bf064c57e5905de4d76f1e7995a565a0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started_utc": "2026-10-15T04:26:00.960509+00:00",
+    "finished_utc": "2026-10-15T04:26:01.019297+00:00",
+    "exit_code": 0,
+    "stdout": "28.stdout",
+    "stderr": "28.stderr",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "c++",
+      "--version"
+    ],
+    "started_utc": "2026-10-15T04:26:01.020136+00:00",
+    "finished_utc": "2026-10-15T04:26:01.147667+00:00",
+    "exit_code": 0,
+    "stdout": "29.stdout",
+    "stderr": "29.stderr",
+    "stdout_sha256": "6ea00c29cd488d365b3461e5dd1d92bc6792fed347a3370edc2b349a8f7660a5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+      "--version"
+    ],
+    "started_utc": "2026-10-15T04:26:01.148318+00:00",
+    "finished_utc": "2026-10-15T04:26:01.312774+00:00",
+    "exit_code": 0,
+    "stdout": "30.stdout",
+    "stderr": "30.stderr",
+    "stdout_sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

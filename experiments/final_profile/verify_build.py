@@ -35,7 +35,7 @@ def verify(directory):
             if token == '-I' + str(HERE): continue
             flags.append(token)
         by_source.setdefault(source, {})[role] = flags
-    assert len(by_source) == 13, 'complete production source list'
+    assert len(by_source) == 14, 'complete production source list'
     for source, roles in by_source.items():
         assert roles.get('control') == roles.get('diagnostic'), (source, roles)
     nm = subprocess.run(['nm', '-g', str(directory / 'production/libvflhcds_lib.a')],

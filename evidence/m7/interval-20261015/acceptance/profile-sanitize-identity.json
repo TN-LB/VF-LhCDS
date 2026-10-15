@@ -1,0 +1,8 @@
+{
+  "source_pin_checks": 31,
+  "observer_pin_checks": 14,
+  "matched_translation_units": 14,
+  "control_has_observer_symbols": false,
+  "build_directory": "/Users/nost/Documents/VF-LhCDS/build-m7-profile-sanitize",
+  "compile_commands_sha256": "735e746d68387985708b865334828d46bb7a3c681007f72f8bacf7ef6c81a13f"
+}

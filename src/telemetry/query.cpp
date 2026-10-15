@@ -7,6 +7,12 @@ std::string query_stats_json(const QueryStats& s) {
     const auto optional = [](const std::optional<BigInt>& x) { return x ? decimal(*x) : "null"; };
     std::ostringstream out;
     out << "{\"logical_interval_queries\":" << s.logical_interval_queries
+        << ",\"interval_cliques\":" << optional(s.interval_cliques)
+        << ",\"partition_clique_visits\":" << optional(s.partition_clique_visits)
+        << ",\"partition_left_cliques\":" << optional(s.partition_left_cliques)
+        << ",\"partition_right_cliques\":" << optional(s.partition_right_cliques)
+        << ",\"reused_endpoint_counts\":" << optional(s.reused_endpoint_counts)
+        << ",\"depth\":" << optional(s.depth)
         << ",\"mincut_calls\":" << s.mincut_calls
         << ",\"original_interval_size\":" << s.original_interval_size
         << ",\"oracle_interval_size\":" << s.oracle_interval_size

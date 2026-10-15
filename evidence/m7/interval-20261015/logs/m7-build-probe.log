@@ -1,0 +1,14 @@
+[ 40%] Built target vflhcds_lib
+[ 51%] Built target vflhcds_skeleton_test
+[ 51%] Built target vflhcds
+[ 62%] Built target vflhcds_primitives_test
+[ 62%] Built target vflhcds_m2_probe
+[ 67%] Built target vflhcds_interval_test
+[ 72%] Built target vflhcds_enumeration_test
+[ 75%] Building CXX object CMakeFiles/vflhcds_m3_probe.dir/tests/m3_probe.cpp.o
+[ 81%] Built target vflhcds_solver_test
+[ 86%] Built target vflhcds_counting_test
+[ 91%] Built target vflhcds_core_test
+[ 97%] Built target vflhcds_m4_profile
+[100%] Linking CXX executable vflhcds_m3_probe
+[100%] Built target vflhcds_m3_probe

@@ -1,0 +1,8 @@
+{
+  "source_pin_checks": 31,
+  "observer_pin_checks": 14,
+  "matched_translation_units": 14,
+  "control_has_observer_symbols": false,
+  "build_directory": "/Users/nost/Documents/VF-LhCDS/build-m7-profile-release",
+  "compile_commands_sha256": "bdc2d39aca7fba905787952ac138edd3abb2ccd45f96c4cefb2fe1442dd53788"
+}

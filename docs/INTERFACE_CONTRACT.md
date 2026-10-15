@@ -278,15 +278,35 @@ still be measured on a positive query whose reduced domain is empty. All counter
 remain exact; failures retain whatever stage information was actually recorded.
 See [preservation arguments](M4_IMPLEMENTATION.md) and [M4 evidence](../evidence/m4/REPORT.md).
 
-## M6 observability and planned work-mode extension
+## M6 observability and M7 work modes
 
-D045's [M6 diagnostic schema and usage](../experiments/final_profile/README.md) are
-implemented in `vflhcds_final_profile`, with a separate JSONL file selected by
-`VF_PROFILE_OUTPUT`; acceptance is recorded at `de25116`. The production executable,
-flags and output bytes are unchanged. The [M7 work-mode interface](M7_INTERVAL_CLIQUES_PLAN.md)
-remains planned; its flags are not yet supported. Preserve canonical solution
-bytes, exact arithmetic/output policy and legacy cliques_scanned semantics.
-Detailed phase/work records are separate from semantic hashes and canonical stdout.
-The proposed work modes are global, interval-scan and interval-reuse; global stays
-the default and untrusted restricted bounds do not gain certificates from a mode.
-Update implemented interface documentation only with actual code and acceptance.
+D045's [M6 diagnostic schema](../experiments/final_profile/README.md) uses a
+separate JSONL file selected by `VF_PROFILE_OUTPUT`. Its original acceptance is
+recorded at `de25116`; M7 updates its source pins and adds partition/reuse events.
+Canonical solution bytes and semantic hashes exclude all work/timing fields.
+
+`solve` accepts `--clique-work global|interval-scan|interval-reuse` independently
+of core, enumeration, footprint and counting options. The default is `global`.
+Missing, duplicate or unknown values are invalid arguments. `oracle` and
+`inspect-graph` reject this solve-only option. C++ standalone oracle methods always
+use the whole index even if an OracleOptions value carries a solver work mode.
+
+- `global`: whole-index footprints and existing exact separator counts.
+- `interval-scan`: original interval ID range for footprints; whole-index count(Z).
+- `interval-reuse`: the same local scan plus mu(X)+left partition size for count(Z).
+
+Both local modes partition only after a proper separator and preserve core-filtered
+IDs for descendants. A terminal query returns the original immutable Y token;
+emitted components retain independent exact count calls. Root IDs, frame ownership
+and immutable point construction follow [M7's preservation argument](M7_INTERVAL_CLIQUES_PLAN.md).
+A mode or caller-supplied bounds cannot mint a certificate.
+
+Production run counters add `clique_work`, `clique_id_size`, `clique_id_capacity`,
+`frontier_peak_size` and `frontier_peak_capacity`. Query counters add root-zero
+`depth`, `interval_cliques`, `partition_clique_visits`, `partition_left_cliques`,
+`partition_right_cliques` and `reused_endpoint_counts`. Local terminal queries have
+zero partition visits/reuses and null split sizes; global queries have null local
+fields. Standalone queries have null depth. `cliques_scanned` remains footprint
+visits only; partition and exact counting are different work. Slot capacity is
+actual vector capacity, not process RSS or allocator overhead. Acceptance records
+are maintained in [TASKS](TASKS.md).

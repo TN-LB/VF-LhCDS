@@ -5,6 +5,8 @@
 
 namespace vflhcds {
 struct QueryStats {
+    std::optional<BigInt> interval_cliques, partition_clique_visits, partition_left_cliques,
+        partition_right_cliques, reused_endpoint_counts, depth;
     BigInt logical_interval_queries = 0, mincut_calls = 0;
     BigInt original_interval_size = 0, oracle_interval_size = 0;
     std::optional<BigInt> cliques_scanned, unique_footprints, forward_nodes,

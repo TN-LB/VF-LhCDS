@@ -1,4 +1,4 @@
-# Current-source M6 observer
+# Current-source M6/M7 observer
 
 Implementation for P16.1–P16.6 (T18–T20/T27, O09/O11/O12). Executed acceptance
 status belongs in [the task ledger](../../docs/TASKS.md), not this usage contract.
@@ -41,8 +41,12 @@ X/Y, Z, exact endpoint counts/lambda, root-zero depth/parent, bound sizes, backe
 shortcuts and counters. Rank snapshots are internal ready events, not streaming
 output latency. A query-end snapshot includes terminal extraction and cleanup.
 
-M7 partition/reuse fields are unavailable in this source version, not measured
-zero. Global enumeration/index construction remains before the first rank.
+M7 adds `clique_id_setup`, `clique_partition` and `count_reuse` phases, exact
+partition ID/membership visits, left/right sizes, swap calls, marker slots and
+reused counts. `partition_reuse: true` identifies this coverage; original M6 streams
+retain null. `worklist` events record actual ID/frontier sizes and capacities.
+Cleanup of the sole ID vector and pending frames is measured together as
+`cleanup_clique_worklists`; container-internal reallocation stays in orchestration. Global enumeration/index construction remains before the first rank.
 All accepted components of a terminal layer are extracted/sorted before its first
 rank, even when fixed-k later stops part-way through the layer.
 
@@ -50,23 +54,26 @@ No diagnostic clock removes instrumentation overhead. Record paired control RSS
 and runtime separately. Serialized observer bytes and metadata high-water marks
 describe observer volume; they do not claim exact allocator or phase peak RSS.
 This tooling's fixtures and timings are development evidence, excluded from M8.
-P18.4 must refresh pins, rebuild both targets and repeat equivalence after M7.
+M7 refreshes pins and checks local source equivalence. P18.4 must repeat final
+host/build readiness and shared baseline smoke before M8; this local evidence
+does not complete that gate.
 
 ## Build, validate and regenerate
 
 From the repository root (use the installed CMake/Python paths on your host):
 
 ```sh
-.venv/bin/cmake -S experiments/final_profile -B build-final-profile-release -DCMAKE_BUILD_TYPE=Release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
-.venv/bin/cmake --build build-final-profile-release -j2
-.venv/bin/ctest --test-dir build-final-profile-release --output-on-failure
-.venv/bin/python experiments/final_profile/verify_build.py build-final-profile-release --output /tmp/final-profile-build.json
-.venv/bin/python experiments/final_profile/validate.py --build build-final-profile-release --output evidence/m6/new-release
-.venv/bin/python experiments/final_profile/reports.py evidence/m6/new-release/bundle.json --output /tmp/final-profile-reports.json
+.venv/bin/cmake -S experiments/final_profile -B build-m7-profile-release -DCMAKE_BUILD_TYPE=Release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
+.venv/bin/cmake --build build-m7-profile-release -j2
+.venv/bin/ctest --test-dir build-m7-profile-release --output-on-failure
+.venv/bin/python experiments/final_profile/verify_build.py build-m7-profile-release --output /tmp/final-profile-build.json
+.venv/bin/python experiments/final_profile/validate.py --build build-m7-profile-release --output evidence/m7/new-profile-release --work-modes global interval-scan interval-reuse
+.venv/bin/python experiments/final_profile/reports.py evidence/m7/new-profile-release/bundle.json --output /tmp/final-profile-reports.json
 ```
 
 `validate.py` requires a new destination, freezes 28 named/family/seeded fixtures
-and the 224-call schedule before native execution, and stops on any failed check.
+and its schedule before native execution (224 calls for default global;
+672 with `--work-modes global interval-scan interval-reuse`), and stops on any failed check.
 Each fixture runs core off/safe and k=1/all, with one control and one diagnostic.
 Seed 20261014 generates eight of the fixtures. The independent exhaustive reference
 checks every expected output, global separator and line-envelope chain; a separate uninstrumented TraceSink adapter supplies
@@ -85,7 +92,7 @@ and core suites against both libraries. There is no parallel solver or TSan clai
 For a standalone diagnostic use the ordinary production CLI, for example:
 
 ```sh
-VF_PROFILE_OUTPUT=/tmp/new-events.jsonl build-final-profile-release/vflhcds_final_profile solve --graph reference/fixtures/triangle_and_isolate.graph --h 3 --all --clique-enumeration adjacency --clique-count membership --footprint-scan membership
+VF_PROFILE_OUTPUT=/tmp/new-events.jsonl build-m7-profile-release/vflhcds_final_profile solve --graph reference/fixtures/triangle_and_isolate.graph --h 3 --all --clique-enumeration adjacency --clique-count membership --footprint-scan membership
 ```
 
 The observer path must be new and cannot alias graph/set/result paths. Session
@@ -115,20 +122,26 @@ results and their caller-owned values are not double-counted.
 | `core_*` | Calls; initialized logical vertex/clique records; actual incidence visits, invalidations, decrements and removals; whole-index initialization remains visible |
 | `network_*` | Node, forward-arc and residual-arc sums and separate maxima; maximum capacity bit length; per-oracle backend and shortcuts stay in `stats` |
 | Traversal | Logical queries, internal/terminal/non-output layers, accepted/rejected components, mincuts, outputs, `depth_d` histogram and maximum visited depth |
+| `partition_*` / `reused_endpoint_counts` | Actual ID predicate visits, membership tests, left/right totals, swap calls, marker initialization slots and eliminated separator count calls; no core-filtered ID is erased |
+| ID/frontier storage | Root initialized slots, actual reserved ID capacity and payload bytes (`sizeof(size_t)` per slot), frame size/capacity peaks; excludes endpoint sets and allocator overhead |
 | Enumeration/storage | Appended tuples/incidences, stored and reserved tuple/incidence slots; explicit enumeration/index and incidence-append phases |
 
-Counters with observed no work are zero. Unavailable M7 partition/reuse and
-before-core histograms are null; an unbuilt network's per-query fields are null.
+Counters with observed no work are zero. Before-core histograms remain null; an unbuilt network's per-query fields are null.
 Storage slots are element counts, not allocator bytes. Observer output byte volume,
 pending-stack size/capacity and map key counts are recorded; diagnostic RSS still
 includes all observer allocations. There is no phase-specific peak RSS measurement.
 
-The three report builders are `cost_associations`, `core_cost` and `early_stop`.
+Report builders include `cost_associations`, `core_cost`, `early_stop` and M7
+`local_cliques`, plus paired observer overhead. Local comparisons require strict
+output/trace equality and include partition/setup/count costs. Capacity/peak
+inventories are reported separately, never summed as suffix work.
 They expose unavailable IPPV/diagnostic/full-suffix data instead of inventing it.
 Core pairs require strict outputs and original interval trace equality. Stopping
 pairs additionally reconcile fixed-k counters against the executed full-run rank
 snapshot, before computing suffix work. Rank events already include full-layer
-extraction/sorting. Pending intervals are not an estimate of their unexecuted work.
+extraction/sorting. The initial snapshot includes root ID setup when the new
+worklist event is present; original M6 streams fall back to their index snapshot.
+Pending intervals are not an estimate of their unexecuted work.
 
 Bundle schema 1 records a frozen schedule, scope, host, source/observer/binary pins,
 unique run IDs, graph/h/k/mode/repeat, outcomes, artifact hashes and process metrics.

@@ -1,0 +1,104 @@
+{
+  "standalone_global_requests": 29545,
+  "automatic_big_flows": 2198,
+  "certified_separator_requests": 8280,
+  "chain_pairs": 4140,
+  "solver_runs": 38480,
+  "solver_logical_queries": 69848,
+  "solver_mincuts": 50172,
+  "all_runs": 4396,
+  "fixed_k_prefixes": 14844,
+  "checked_variants": 4396,
+  "base_graph_h_cases": 2198,
+  "family_all-labelled": 2198,
+  "distinct_base_graphs": 1099,
+  "mode_checks": {
+    "core_definition_requests": 22054,
+    "footprint_executions": 84328,
+    "footprint_bound_pairs": 42164,
+    "point_executions": 118180,
+    "core_executions": 367346,
+    "oracle_vertices_removed": 253802,
+    "big_flows": 320556,
+    "separator_executions": 33120,
+    "solve_executions": 461760,
+    "local_partition_id_visits": 382368,
+    "reused_counts": 70624,
+    "max_depth": 1
+  },
+  "tier": "exhaustive-small",
+  "status": "passed",
+  "seed": null,
+  "modes": [
+    [
+      "off",
+      "sorted",
+      "global"
+    ],
+    [
+      "off",
+      "sorted",
+      "interval-scan"
+    ],
+    [
+      "off",
+      "sorted",
+      "interval-reuse"
+    ],
+    [
+      "off",
+      "membership",
+      "global"
+    ],
+    [
+      "off",
+      "membership",
+      "interval-scan"
+    ],
+    [
+      "off",
+      "membership",
+      "interval-reuse"
+    ],
+    [
+      "safe",
+      "sorted",
+      "global"
+    ],
+    [
+      "safe",
+      "sorted",
+      "interval-scan"
+    ],
+    [
+      "safe",
+      "sorted",
+      "interval-reuse"
+    ],
+    [
+      "safe",
+      "membership",
+      "global"
+    ],
+    [
+      "safe",
+      "membership",
+      "interval-scan"
+    ],
+    [
+      "safe",
+      "membership",
+      "interval-reuse"
+    ]
+  ],
+  "wall_seconds": 669.6690677909937,
+  "probe_sha256": "6669c7a6b01b811b95d0d69baa5667f600ccf507d4aaed7c3cb73f3869b7416f",
+  "evidence_scope": "Independent finite definition checks and work accounting; not theorem or performance proof",
+  "sha256": {
+    "named_traces.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cases.jsonl": "c2cce6ce3d46f49f12c42ee16c4d7e9ff45ae742a757542a4b78bc37fcac1961",
+    "results.jsonl.gz": "08c9506806849528c785758887e7993028ef40e2a3bd1a54115253e7f6179f26",
+    "probe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode_results.jsonl.gz": "20a257a52c0504e479b724698ee79a08f28f9b5339f428885895169632d20803"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "recorded_utc": "2026-10-15T04:29:13.847357+00:00",
+  "commands": [
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "-S",
+        ".",
+        "-B",
+        "build-m7-relwithdebinfo",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DPython3_EXECUTABLE=/Users/nost/Documents/VF-LhCDS/.venv/bin/python"
+      ],
+      "exit_code": 0,
+      "combined_output": "logs/relwithdebinfo-configure.log",
+      "sha256": "ecbba601d567820ec85a14258daa38d0e56b5d06a7c207aca44e453f73e419e4"
+    },
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/cmake",
+        "--build",
+        "build-m7-relwithdebinfo",
+        "-j2"
+      ],
+      "exit_code": 0,
+      "combined_output": "logs/relwithdebinfo-build.log",
+      "sha256": "e413dbc51ffc2062b8a46c42e7783da5d6ca47729bf45704aa754dbc0c268090"
+    },
+    {
+      "command": [
+        "/Users/nost/Documents/VF-LhCDS/.venv/bin/ctest",
+        "--test-dir",
+        "build-m7-relwithdebinfo",
+        "--output-on-failure",
+        "-V"
+      ],
+      "exit_code": 0,
+      "combined_output": "logs/relwithdebinfo-ctest.log",
+      "sha256": "465f108ffadbe03689fcd5cac3fdd6c884146d9439658d73194fc52a528a4c5f"
+    }
+  ],
+  "ctest_passed": 18,
+  "m6_release_report_byte_identical": true,
+  "m6_sanitize_report_byte_identical": true
+}

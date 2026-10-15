@@ -1,0 +1,12 @@
+test_T18_partial_and_malformed_stream (test_reports.Contracts.test_T18_partial_and_malformed_stream) ... ok
+test_T20_reversible_generation_and_anchor_rejection (test_reports.Contracts.test_T20_reversible_generation_and_anchor_rejection) ... ok
+test_T27_core_disagreement_rejected (test_reports.Contracts.test_T27_core_disagreement_rejected) ... ok
+test_T27_identical_graphs_in_distinct_fixtures_do_not_cross_join (test_reports.Contracts.test_T27_identical_graphs_in_distinct_fixtures_do_not_cross_join) ... ok
+test_T27_pins_duplicates_scope_missing_and_censored (test_reports.Contracts.test_T27_pins_duplicates_scope_missing_and_censored) ... ok
+test_T27_suffix_is_after_rank_not_after_query (test_reports.Contracts.test_T27_suffix_is_after_rank_not_after_query) ... ok
+test_T27_vf_ippv_positive_join_preserves_unavailable_internal_phases (test_reports.Contracts.test_T27_vf_ippv_positive_join_preserves_unavailable_internal_phases) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.010s
+
+OK

@@ -146,4 +146,15 @@ CLI and canonical output remain unchanged. See the tooling README for commands.
 Preserve the old `experiments/fine_profile/` source pins and historical evidence.
 P18.4 must build and validate a diagnostic and uninstrumented control from the
 same final M7 source/toolchain/options; old profiler commands do not satisfy it.
-M7 work-mode flags and final optimized-source diagnostics remain unimplemented.
+M7 adds the solve-only work modes. Build/validate the increment with:
+
+```sh
+.venv/bin/python scripts/run_m7_checks.py evidence/m7/new-acceptance
+build-m7-debug/vflhcds solve --graph reference/fixtures/bridged_triangles.graph --h 3 --all --clique-work interval-reuse
+```
+
+The acceptance runner requires a new destination. It runs Debug and ASan/UBSan
+truth tiers, CLI/capacity regressions, and matched Release/ASan diagnostic-control
+builds with all three work modes. It records commands, source hashes, fixtures,
+seeds and raw outcomes. These are development tests, excluded from M8. The M8
+final-host freeze and shared baseline smoke remain separate requirements.

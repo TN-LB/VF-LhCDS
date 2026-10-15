@@ -10,7 +10,15 @@ struct Footprint { VertexSet vertices; BigInt weight; };
 struct Footprints { std::vector<Footprint> records; BigInt scanned = 0, total_weight = 0; };
 enum class CoreMode { Off, Safe };
 enum class FootprintMode { Sorted, Membership };
-struct OracleOptions { CoreMode core = CoreMode::Off; FootprintMode footprints = FootprintMode::Sorted; };
+enum class CliqueWork { Global, IntervalScan, IntervalReuse };
+struct OracleOptions {
+    CoreMode core = CoreMode::Off;
+    FootprintMode footprints = FootprintMode::Sorted;
+    CliqueWork clique_work = CliqueWork::Global; // solve only; standalone queries always scan globally
+};
+class CliqueRange;
+class IntervalTraversal;
+struct IntervalTestAccess;
 Footprints aggregate_footprints(const MaterializedCliques& index, const RestrictedRequest& request,
                                FootprintMode mode = FootprintMode::Sorted);
 enum class CapacityPolicy { Auto, ForceUInt128, ForceBig };
@@ -30,6 +38,8 @@ private:
     const RestrictedRequest request_;
 };
 class ClosureOracle {
+    friend class IntervalTraversal;
+    friend struct IntervalTestAccess;
 public:
     explicit ClosureOracle(const MaterializedCliques& index) : index_(index) {}
     ClosureOracle(const ClosureOracle&) = delete;
@@ -47,8 +57,13 @@ public:
     OracleResult largest_restricted(const RestrictedRequest& request, CapacityPolicy policy = CapacityPolicy::Auto,
                                     QueryStats* progress = nullptr, FootprintMode mode = FootprintMode::Sorted) const;
 private:
+    ChainPoint separate_impl(const ChainInterval& interval, CapacityPolicy policy, QueryStats* progress,
+                             OracleOptions options, CliqueRange* range, bool reuse, std::size_t* middle) const;
+    OracleResult global_impl(const CertifiedGlobalRequest& request, CapacityPolicy policy,
+                             QueryStats* progress, OracleOptions options, const CliqueRange* range) const;
+    Footprints local_footprints(const RestrictedRequest& request, FootprintMode mode, const CliqueRange& range) const;
     OracleResult restricted_impl(const RestrictedRequest& request, CapacityPolicy policy,
-                                 QueryStats& stats, FootprintMode mode) const;
+                                 QueryStats& stats, FootprintMode mode, const CliqueRange* range = nullptr) const;
     const MaterializedCliques& index_;
 };
 }  // namespace vflhcds

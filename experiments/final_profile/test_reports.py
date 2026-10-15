@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 from instrument import generate, SOURCES
-from reports import read_events, complete, load_bundle, build, early_stop, core_cost, match, cost_associations
+from reports import read_events, complete, load_bundle, build, early_stop, core_cost, match, cost_associations, local_cliques
 
 
 def event(kind, seq=1, **fields):
@@ -89,6 +89,36 @@ class Contracts(unittest.TestCase):
         self.assertEqual(report['unavoidable_initial_work'], {'cliques_appended': 3})
         rows[0]['output_data'] = [{'vertices': [2]}]
         with self.assertRaises(ValueError): early_stop({'rows': rows})
+
+    def test_T19_local_costs_and_root_setup_are_not_hidden(self):
+        rows = []
+        for role in ('control', 'diagnostic'):
+            for mode in ('global', 'interval-scan', 'interval-reuse'):
+                local = mode != 'global'
+                work = {'footprint_clique_visits': 12 if local else 20,
+                        'partition_clique_visits': 7 if local else 0,
+                        'clique_id_capacity': 10 if local else 0}
+                rows.append(dict(self.bundle()['rows'][0], run_id=role+mode, role=role,
+                    work_mode=mode, status='completed', wall_seconds=2, peak_rss_bytes=100,
+                    output_data=[{'vertices':[0]}], events_data=[event('finish',complete=True,work=work)]))
+        comparison=local_cliques({'rows':rows})
+        self.assertEqual(len(comparison),2)
+        self.assertEqual(comparison[0]['work_delta']['footprint_clique_visits'],-8)
+        self.assertEqual(comparison[0]['work_delta']['partition_clique_visits'],7)
+        self.assertNotIn('clique_id_capacity',comparison[0]['work_delta'])
+        self.assertEqual(comparison[0]['inventory']['clique_id_capacity'],10)
+        rows[1]['output_data']=[{'vertices':[1]}]
+        with self.assertRaises(ValueError):local_cliques({'rows':rows})
+        rows=[]
+        for role in ('control','diagnostic'):
+            for k in (1,'all'):
+                work={'clique_ids_initialized':10}
+                rows.append(dict(self.bundle()['rows'][0],run_id=f'{role}{k}',role=role,k=k,
+                    status='completed',wall_seconds=1,peak_rss_bytes=100,output_data=[{'vertices':[0]}],
+                    events_data=[event('index',work={}),event('worklist',query_id=0,work=work),
+                        event('rank_ready',rank=1,pending_intervals=0,work=work),
+                        event('solve_end',work=work),event('finish',complete=True,work=work)]))
+        self.assertEqual(early_stop({'rows':rows})[0]['unavoidable_initial_work'],{'clique_ids_initialized':10})
 
     def test_T27_core_disagreement_rejected(self):
         rows = []
