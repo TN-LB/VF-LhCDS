@@ -5,7 +5,8 @@ Revision 2026-09-09. Sources below refer to the unchanged
 `CLAIM_TRACEABILITY.md` separately records executed implementation evidence.
 Status: obligation specification; accepted M0–M5 evidence is recorded separately
 in `CLAIM_TRACEABILITY.md`. M6 observation tooling has finite initial-source
-acceptance at `de25116`; M7/M8 refinements and final-source refresh remain planned.
+acceptance at `de25116`; M7 has [finite implementation evidence](../evidence/m7/interval-20261015/REPORT.md).
+M8 final-host/resource/campaign gates remain planned.
 
 | ID | Source | Obligation / precondition | Observable implementation contract | Tests |
 |---|---|---|---|---|
@@ -104,11 +105,12 @@ Likewise, reduced/full equality on tested graphs does not prove a new reduction.
 contracts. It uses exhaustive F, not a flow implementation, and must not be cited
 as production max-flow, overflow-fallback, sanitizer, or benchmark validation.
 
-## Planned refinement G: interval-local clique work and observation
+## Refinement G: interval-local clique work and observation
 
 D045 selects [M7's refinement](M7_INTERVAL_CLIQUES_PLAN.md), without changing
 manuscript semantics. The set/count identities and their elementary arguments
-are written there; their production implementation and tests remain outstanding.
+are written there; production implementation and finite tests are recorded in
+[the M7 evidence](../evidence/m7/interval-20261015/REPORT.md).
 This table extends code obligations, not the theorem numbering in the papers.
 
 | Obligations | Refinement precondition / required argument | Planned checks |

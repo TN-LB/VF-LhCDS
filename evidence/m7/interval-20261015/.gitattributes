@@ -1,0 +1,3 @@
+# Preserve exact CTest output, including its "2: " empty-line prefixes.
+acceptance/17.stdout whitespace=-blank-at-eol
+acceptance/23.stdout whitespace=-blank-at-eol

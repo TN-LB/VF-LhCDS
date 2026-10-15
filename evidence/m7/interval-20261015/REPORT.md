@@ -3,7 +3,7 @@
 Accepted 2026-10-15 for P17.1–P17.7, after executed implementation, preservation,
 independent correctness, lifetime/numeric and observation checks. This is finite
 development evidence, not a proof of the manuscript or a formal M8 benchmark.
-Implementation checkpoint: pending local commit; the starting commit was `046c553`.
+Implementation checkpoint: `34d68fb`; the starting commit was `046c553`.
 
 ## Implementation and mathematical boundary
 
@@ -167,3 +167,13 @@ negative tests, cancellation and native partial-stream SIGKILL are contract test
 not excluded benchmark failures. No real graph, baseline or formal M8 campaign ran.
 M8 still needs input acquisition/provenance, Linux enforcement, exact final machine
 and schedule decisions, shared baseline smoke and fresh formal measurements.
+
+## Raw-log whitespace review
+
+The first staged diff check reported four trailing-space lines in CTest's exact
+`2: ` empty-line prefixes in `acceptance/17.stdout` and `acceptance/23.stdout`.
+The raw bytes and their recorded hashes are preserved. A directory-local
+`.gitattributes` exempts only those two stdout files from blank-at-EOL lint;
+source/document whitespace checks remain enabled. This is an evidence-format
+check, not an algorithm/test failure. The final review reruns the complete diff
+check with that narrow raw-log rule and records it in `tracking-checks.json`.

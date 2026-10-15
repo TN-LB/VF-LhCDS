@@ -1,6 +1,7 @@
 # M7 interval-local clique propagation and exact count reuse
 
-Status: implementation in progress under D045; P17.1–P17.7. This is an implementation refinement of
+Status: implemented and validated under D045; P17.1–P17.7 complete.
+[Executed source/commands/fixtures/evidence](../evidence/m7/interval-20261015/REPORT.md). This is an implementation refinement of
 the unchanged manuscript, not a new output policy or a manuscript revision.
 It adds one selected algorithm increment and retains global scanning as a control.
 No claim of first publication or comparison with deferred DCLDS follows.
@@ -47,8 +48,8 @@ formula. They are not counts of cliques induced by Y\X or Z\X.
 ## Representation and control modes
 
 Use one root vector of clique IDs and disjoint half-open index ranges for interval
-frames. A planned internal frame carries the existing immutable `ChainInterval`,
-its ID range, depth and traversal identity. Tuple storage is never copied. Partition
+frames. The private internal frame carries the existing immutable `ChainInterval`,
+its ID range and depth; the observer derives traversal/parent identity from query order. Tuple storage is never copied. Partition
 the active range in place by `C subseteq Z`; children receive its left/right ranges.
 Pending siblings occupy disjoint ranges, so their contents must remain untouched.
 Do not reserve a full parent-sized vector for every child or retain ancestor copies.
@@ -59,9 +60,9 @@ assertion cannot certify completeness or global containment. Test invalid owners
 missing/duplicate/out-of-range IDs through internal test probes. Keep the standalone
 arbitrary restricted-oracle API on its existing complete global-index path.
 
-Proposed CLI option: `--clique-work global|interval-scan|interval-reuse`, independent
-of existing enumeration, footprint, counting and core switches. These names are
-planned, not currently accepted CLI arguments.
+Implemented solve-only CLI option: `--clique-work global|interval-scan|interval-reuse`,
+independent of enumeration, footprint, counting and core switches. Global remains
+the default; standalone oracle commands retain complete global scanning.
 
 | Mode | Footprint input | New separator-point count | Purpose |
 |---|---|---|---|

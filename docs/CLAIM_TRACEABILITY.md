@@ -8,7 +8,7 @@ A code symbol, test command, evidence path and commit are needed before marking
 Evidence scope update (2026-10-14, D045): prior M5/M6/M7 development timings are
 excluded from M8 formal performance results. Existing correctness evidence remains.
 [M6–M8](M6_M8_EXECUTION_PLAN.md): P16.1–P16.6 now have initial-source acceptance
-at `de25116`; see the 2026-10-15 record below. P17/P18 and T21–T26 remain planned;
+at `de25116`; see the 2026-10-15 record below. P17/T21–T25 now have the M7 acceptance below; P18/T26 remain planned;
 T27's formal M8 campaign/resource coverage is not completed by the M6 checks.
 M6 maps principally to O09/O11/O12; M7 refines O03–O11 under the stated invariants;
 M8 governs O12 and honest work/resource attribution. See the detailed task mappings.
@@ -39,6 +39,33 @@ This does not prove observation invariance mathematically, establish real-graph
 performance, supply missing IPPV measurements, implement M7 partition/reuse, or
 satisfy P18.4. Phase peak RSS and before-core histograms remain unavailable.
 The accepted execution scope and cleanup/timer boundaries are explicit in the report.
+
+## M7 interval clique propagation and count reuse — 2026-10-15
+
+[Acceptance report](../evidence/m7/interval-20261015/REPORT.md), [frozen source/observer checks](../evidence/m7/interval-20261015/checks.json)
+and [fixture/seed manifest](../evidence/m7/interval-20261015/fixture_manifest.json)
+record executed P17.1–P17.7 evidence for O03–O12 at implementation checkpoint
+`34d68fb`; earlier ledgers remain historical.
+
+- `IntervalTraversal`, `CliqueRange::partition`: sealed sole permutation, original
+  endpoints, complete disjoint child ranges and crossing cliques; T21/T24/T25.
+- `ClosureOracle::separate_impl/global_impl/local_footprints`, `aggregate_impl`:
+  unchanged certified oracle/network, temporary core bounds and exact left-size
+  count before immutable point construction; T21–T24, O03/O04/O05/O06/O10/O11.
+- `solve`, `OracleOptions::clique_work`, CLI dispatch and query/run telemetry:
+  global/scan/reuse, left-first trace, fixed-k/zero/tie behavior and actual capacity;
+  T23/T25 plus existing numeric, cancellation, exception and CLI regressions.
+- Debug/ASan: 140,576 nested-set combinations and 1,850,979 native assertions per
+  build; 1,461,216 mode solve executions across the independent M3/M4 tiers.
+  Exact backend checks include real automatic fallback on suitable standalone
+  requests; forced-big tiny separators are not relabeled as automatic fallback.
+- Final local observer/control: 1,344 CLI calls and 672 trace calls, 31 production
+  pins and 14 matched library translation units; partition/setup/reuse costs and
+  root storage preserved in reports. The observation stream is separate from output.
+
+This is finite implementation/evidence-tool acceptance. It does not establish
+first publication, logarithmic tree depth, real-graph speedup, or M8 completion.
+P18.4 final-host readiness and baseline smoke remain required.
 
 ## Existing obligation ledger
 

@@ -6,8 +6,9 @@ reference and staged implementation/evaluation plan. The four supplied files und
 Current status (2026-10-15): M0–M4 and bounded M5 remain complete under D042.
 **M6 initial-source cost diagnostics are accepted at `de25116`**;
 [implementation and evidence](evidence/m6/final-profile-20261014/REPORT.md).
-D045 schedules **M7 interval-local clique propagation and
-exact count reuse, and M8 unified formal experiments on eight real graphs**.
+**M7 interval-local clique propagation and exact count reuse are complete**;
+[implementation and finite validation](evidence/m7/interval-20261015/REPORT.md).
+M8 unified formal experiments on eight real graphs remain planned.
 [Current deliverables and dependencies](docs/M6_M8_EXECUTION_PLAN.md).
 Acceptance follows completed implementation, preservation arguments, executed
 validation and reproducible evidence. Thesis analysis/writing are not milestones.
@@ -26,7 +27,7 @@ For a plain-language Chinese overview of the milestones, results and limits, see
 
 ## Start here
 
-1. `docs/IMPLEMENTATION_PLAN.md`: completed M0–M6 scope and planned M7/M8; `docs/M6_M8_EXECUTION_PLAN.md`: current deliverables and detailed plan links.
+1. `docs/IMPLEMENTATION_PLAN.md`: completed M0–M7 scope and planned M8; `docs/M6_M8_EXECUTION_PLAN.md`: current deliverables and detailed plan links.
 2. `docs/ALGORITHM_SPEC.md`: executable mathematical contracts.
 3. `docs/THEORY_TO_CODE_AUDIT.md`: exact theorem numbers, proof obligations and clarifications.
 4. `docs/TASKS.md`: dependency-aware tasks and executed milestone gates.

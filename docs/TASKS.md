@@ -5,7 +5,7 @@ Document review and `review/math_sanity.py` do not complete these tasks.
 Each task must link its command/log/seed evidence before being checked off.
 
 Current position (2026-10-15): **M0–M4 and bounded M5 complete under D042;
-M6 initial-source tooling complete at `de25116`; M7/M8 planned under D045**.
+M6 initial-source tooling complete at `de25116`; M7 complete; M8 planned under D045**.
 [M6 acceptance](../evidence/m6/final-profile-20261014/REPORT.md). M7 implements
 interval-local clique propagation/count reuse, and M8 owns fresh formal experiments.
 [Current execution plan](M6_M8_EXECUTION_PLAN.md). Acceptance is based on delivered
@@ -474,15 +474,19 @@ requirements and M7 partition/reuse measurements remain outstanding in their tas
 Use [M7 detailed plan](M7_INTERVAL_CLIQUES_PLAN.md), T21–T25 and O03–O12 as mapped
 there. The global, interval-scan and interval-reuse modes remain comparable.
 
-- [ ] P17.1 Write the set partition/count identities, footprint/core preservation argument, certification preconditions and depth-dependent work/storage bounds.
-- [ ] P17.2 Implement sealed root ID ranges and in-place child partitioning; retain crossing cliques on the right without duplicate/missing IDs.
-- [ ] P17.3 Implement interval-scan aggregation/traversal and the preserved global control; require identical canonical query/output behavior.
-- [ ] P17.4 Derive exact separator endpoint counts from the left partition before minting immutable ChainPoints; retain emitted-component and standalone counts.
-- [ ] P17.5 Integrate safe core as a temporary query view of original interval IDs; preserve original endpoints/lambda and lower-threshold clique recovery.
-- [ ] P17.6 Add explicit CLI/config work modes and M6 partition/reuse telemetry; run three modes with core off/safe through independent tiers, numeric limits, fallback and sanitizers.
-- [ ] P17.7 Freeze validated source, preservation and traceability evidence; record actual work/storage effects and hand off final-source profiling/ablations to M8.
+- [x] P17.1 Write the set partition/count identities, footprint/core preservation argument, certification preconditions and depth-dependent work/storage bounds. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.2 Implement sealed root ID ranges and in-place child partitioning; retain crossing cliques on the right without duplicate/missing IDs. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.3 Implement interval-scan aggregation/traversal and the preserved global control; require identical canonical query/output behavior. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.4 Derive exact separator endpoint counts from the left partition before minting immutable ChainPoints; retain emitted-component and standalone counts. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.5 Integrate safe core as a temporary query view of original interval IDs; preserve original endpoints/lambda and lower-threshold clique recovery. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.6 Add explicit CLI/config work modes and M6 partition/reuse telemetry; run three modes with core off/safe through independent tiers, numeric limits, fallback and sanitizers. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
+- [x] P17.7 Freeze validated source, preservation and traceability evidence; record actual work/storage effects and hand off final-source profiling/ablations to M8. [Executed evidence](../evidence/m7/interval-20261015/REPORT.md).
 
-Gate: written argument plus actual independent correctness/mode/lifetime evidence.
+Gate met 2026-10-15: written preservation argument, T21–T25 independent
+correctness/mode/lifetime evidence, and final local M6 observation refresh. Source
+and observer pins, exact commands/fixtures/seeds and work/storage examples are in
+[the acceptance record](../evidence/m7/interval-20261015/REPORT.md).
+P18.4's final host/configuration and shared baseline smoke remain outstanding.
 No candidate verifier, changed tie policy, unconditional logarithmic-depth claim
 or speedup requirement. Preserve failures and minimized reproducers.
 

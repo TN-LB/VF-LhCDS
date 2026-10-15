@@ -1,0 +1,13 @@
+{
+  "implementation_commit": "34d68fb",
+  "local_links": 330,
+  "changed_markdown_files": 15,
+  "P17_complete": 7,
+  "P18_pending": 8,
+  "full_diff_check_passed": true,
+  "raw_stdout_whitespace_rule": "Only acceptance/17.stdout and acceptance/23.stdout preserve CTest blank-line prefixes",
+  "raw_log_hashes_preserved": true,
+  "papers_unchanged": true,
+  "historical_m6_reports_regenerated_byte_identically": true,
+  "supplemental_relwithdebinfo_ctest_passed": 18
+}

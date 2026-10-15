@@ -5,7 +5,7 @@ The four files under `papers/` are preserved unchanged.
 
 Execution status (2026-10-15): M0–M4 and bounded M5 remain complete under D042;
 M6 initial-source tooling is accepted at `de25116`
-([evidence](../evidence/m6/final-profile-20261014/REPORT.md)). M7/M8 remain planned.
+([evidence](../evidence/m6/final-profile-20261014/REPORT.md)). M7 is implemented and validated ([evidence](../evidence/m7/interval-20261015/REPORT.md)); M8 remains planned.
 D045 replaces the unexecuted follow-up layout with [M6–M8](M6_M8_EXECUTION_PLAN.md):
 cost diagnostics, interval-local clique propagation/count reuse, then unified
 formal real-graph evaluation. Completion is deliverable-based. All prior local

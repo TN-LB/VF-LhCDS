@@ -11,8 +11,9 @@ measurements remain preliminary and excluded from M8. Preserve
 The tools below describe the implemented M5 behavior. M6's separate
 [`final_profile`](final_profile/README.md) now implements source-pinned diagnostic/
 control builds, work accounting and reports, accepted at `de25116`
-([evidence](../evidence/m6/final-profile-20261014/REPORT.md)). M7 work modes, final-source
-refresh, Linux enforcement and formal M8 campaign gates remain planned.
+([evidence](../evidence/m6/final-profile-20261014/REPORT.md)). M7 work modes and their local matched-source diagnostic refresh are
+[validated](../evidence/m7/interval-20261015/REPORT.md). Linux enforcement, final-host/source alignment, shared
+baseline smoke and formal M8 campaign gates remain planned.
 The old `fine_profile` pins precede the count optimization and must not be relabeled
 as final-source diagnostics. M8 requires matching final diagnostic/control builds.
 
